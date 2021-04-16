@@ -1,157 +1,214 @@
-#!/usr/bin/python
+#!/usr/usr/env python3
 
-import os
-import sys
-import json
-import getopt
+import argparse
 import glob
-import subprocess
-
-MAP_PATH='maps'
-OUT_PATH='output'
-land_polygons_file='land-polygons-split-4326/land_polygons.shp'
-
-filtered_tags=['access', 'admin_level', 'aerialway', 'aeroway', 'barrier',
-               'boundary', 'bridge', 'highway', 'natural', 'oneway', 'place',
-               'railway', 'tracktype', 'tunnel', 'waterway']
-
-if len(sys.argv) != 2:
-    print(f'Usage: {sys.argv[0]} splitted.json')
-    sys.exit()
-
-print('# read json file')
-with open(sys.argv[1]) as f:
-    country = json.load(f)
-
-print('# check land_polygons.shp file')
-if not os.path.isfile(land_polygons_file):
-    print(f'failed to find {land_polygons_file}')
-    sys.exit()
+import json
+import sys
+from xml.dom import minidom
 
 
-print('# check countries .osm.pbf files')
-border_countries = {}
-for tile in country:
-    outdir = os.path.join(OUT_PATH, f'{tile["x"]}', f'{tile["y"]}')
-    if not os.path.isdir(outdir):
-        os.makedirs(outdir)
+geofabrik_names = { # TODO: find and add more
+    'bosnia-and-herzegovina':           'bosnia-herzegovina',
+    'cote-divoire':                     'ivory-coast',
+    'democratic-republic-of-the-congo': 'congo-democratic-republic',
+    'gambia':                           'senegal-and-gambia',
+    'gibraltar':                        'spain',
+    'israel':                           'israel-and-palestine',
+    'palestina':                        'israel-and-palestine',
+    'republic-of-congo':                'congo-brazzaville',
+    'saint-helena':                     'saint-helena-ascension-and-tristan-da-cunha',
+    'saudi-arabia':                     'gcc-states',
+    'senegal':                          'senegal-and-gambia',
+    'united-kingdom':                   'great-britain',
+    'western-sahara':                   'morocco',
+    'åland':                            'finland',
+    'guernsey':                         'guernsey-jersey',
+    'jersey':                           'guernsey-jersey',
+    'ireland':                          'ireland-and-northern-ireland',
+    'san-marino':                       'italy',
+    'vatican-city':                     'italy',
+    'svalbard-and-jan-mayen':           'norway',
+    'anguilla':                         'central-america', # fix this?
+    'virgin-islands-us':                'central-america', # too many central-america!
+    'british-virgin-islands':           'central-america', # and the .osm.pbf is only 440MB
+    'united-states-virgin-islands':     'central-america', # just use it for all of them
+    'saint-martin':                     'central-america',
+    'sint-maarten':                     'central-america',
+}
 
-    for c in tile['countries']:
-        if c not in border_countries:
-            map_files = glob.glob(f'{MAP_PATH}/**/{c}*.osm.pbf')
-            if len(map_files) != 1 or not os.path.isfile(map_files[0]):
-                print(f'failed to find country: {c}')
-                sys.exit()
-            border_countries[c] = {'map_file':map_files[0]}
+def clean_country_name(name):
+    name = name.lower()
+    name = name.replace(' ','-')
+    name = name.replace(',','')
+    name = name.replace('.','')
+    name = name.replace('\'','')
+    name = name.replace('é','e')
 
+    if name in geofabrik_names:
+        return geofabrik_names[name]
 
-print('# filter tags from country osm.pbf files')
-for key, val  in border_countries.items():
-    # print(key, val)
-    outFile = os.path.join(OUT_PATH, f'filtered-{key}.osm.pbf')
-    # print(outFile)
-    if not os.path.isfile(outFile):
-        print('! create filtered country file')
-
-        cmd = ['osmium', 'tags-filter']
-        cmd.append(val['map_file'])
-        cmd.extend(filtered_tags)
-        cmd.extend(['-o', outFile])
-        print(cmd)
-        subprocess.run(cmd)
-    border_countries[key]['filtered_file'] = outFile
-
-print('# generate land')
-for tile in country:
-    landFile = os.path.join(OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'land.shp')
-    outFile = os.path.join(OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'land')
-
-    if not os.path.isfile(landFile):
-        print(f'# generate land for {tile["x"]} {tile["y"]}')
-        cmd = ['ogr2ogr', '-overwrite', '-skipfailures']
-        cmd.extend(['-spat', f'{tile["left"]:.6f}',
-                    f'{tile["bottom"]:.6f}',
-                    f'{tile["right"]:.6f}',
-                    f'{tile["top"]:.6f}'])
-        cmd.append(landFile)
-        cmd.append(land_polygons_file)
-        print(cmd)
-        subprocess.run(cmd)
-
-    if not os.path.isfile(outFile+'1.osm'):
-        cmd = ['python3', 'shape2osm.py', '-l', outFile, landFile]
-        print(cmd)
-        subprocess.run(cmd)
-
-print('# generate sea')
-for tile in country:
-    outFile = os.path.join(OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'sea.osm')
-    if not os.path.isfile(outFile):
-        print(f'# generate sea for {tile["x"]} {tile["y"]}')
-        with open('sea.osm') as f:
-            sea_data = f.read()
-
-            sea_data = sea_data.replace('$LEFT', f'{tile["left"]:.6f}')
-            sea_data = sea_data.replace('$BOTTOM',f'{tile["bottom"]:.6f}')
-            sea_data = sea_data.replace('$RIGHT',f'{tile["right"]:.6f}')
-            sea_data = sea_data.replace('$TOP',f'{tile["top"]:.6f}')
-
-            with open(outFile, 'w') as of:
-                of.write(sea_data)
+    return name
 
 
-print('# split filtered countries')
-for tile in country:
-    for c in tile['countries']:
-        outFile = os.path.join(OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'split-{c}.osm.pbf')
-        if not os.path.isfile(outFile):
-            cmd = ['osmium', 'extract']
-            cmd.extend(['-b',f'{tile["left"]},{tile["bottom"]},{tile["right"]},{tile["top"]}'])
-            cmd.append(border_countries[c]['filtered_file'])
-            cmd.extend(['-s', 'smart'])
-            cmd.extend(['-o', outFile])
-            print(cmd)
-            subprocess.run(cmd)
-            # print(border_countries[c]['filtered_file'])
+def read_tags(path):
+    """Reads tags from a .xml used for filtering"""
+    tags = []
+    xmldoc = minidom.parse(path)
+    for s in xmldoc.getElementsByTagName('osm-tag'):
+        tag = s.attributes['key'].value
+        if tag not in tags:
+            tags.append(tag)
+    tags.sort()
+    return tags
 
-print('# merge splitted, land an sea')
-for tile in country:
-    outFile = os.path.join(OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'merged.osm.pbf')
-    if not os.path.isfile(outFile):
-        cmd = ['osmium', 'merge', '--overwrite']
-        for c in tile['countries']:
-            cmd.append(os.path.join(OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'split-{c}.osm.pbf'))
+def read_mappack(path):
+    packs = {}
+    coords = {}
 
-        cmd.append(os.path.join(OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'land1.osm'))
-        cmd.append(os.path.join(OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'sea.osm'))
-        cmd.extend(['-o', outFile])
-        print(cmd)
-        subprocess.run(cmd)
+    with open(path) as f:
+        data = json.load(f)
+
+    for region in data['tile_packs']:
+        for country in region['sub_packs']:
+            if 'tile_sets' in country:
+                pack = {
+                    'id': country['id'],
+                    'region': region['name'],
+                    'country': country['name'],
+                    'coordinates': country['tile_sets'][0]['tile_coordinates'],
+                    'tiles': []}
+
+                cname = clean_country_name(country['name'])
+                for cord in pack['coordinates']:
+                    nr = cord[0]<<16|cord[1]
+                    if nr not in coords:
+                        coords[nr] = []
+                    if cname not in coords[nr]:
+                        coords[nr].append(cname)
+
+                packs[country["id"]] = pack
+
+            else:
+                for sub in country['sub_packs']:
+                    pack = {
+                    'id': sub['id'],
+                    'region': region['name'],
+                    'country': country['name'],
+                    'sub': sub['name'],
+                    'coordinates': sub['tile_sets'][0]['tile_coordinates'],
+                    'tiles': []}
+
+                    cname = clean_country_name(country['name'])
+                    for cord in pack['coordinates']:
+                        nr = cord[0]<<16|cord[1]
+                        if nr not in coords:
+                            coords[nr] = []
+                        if cname not in coords[nr]:
+                            coords[nr].append(cname)
+
+                    packs[sub["id"]] = pack
+
+    for pack in packs:
+        packs[pack]['countries'] = []
+        for cord in packs[pack]['coordinates']:
+            nr = cord[0]<<16|cord[1]
+            packs[pack]['tiles'].append({
+                'x': cord[0],
+                'y': cord[1],
+                'countries': sorted(coords[nr])})
+            for country in coords[nr]:
+                if country not in packs[pack]['countries']:
+                    packs[pack]['countries'].append(country)
+
+    return packs
 
 
-print('# create .map files')
-for tile in country:
-    outFile = os.path.join(OUT_PATH, f'{tile["x"]}', f'{tile["y"]}.map')
-    if not os.path.isfile(outFile+'.lzma'):
-        mergedFile = os.path.join(OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', 'merged.osm.pbf')
-        cmd = ['osmosis', '--rb', mergedFile, '--mw', 'file='+outFile]
-        cmd.append(f'bbox={tile["bottom"]:.6f},{tile["left"]:.6f},{tile["top"]:.6f},{tile["right"]:.6f}')
-        cmd.append('zoom-interval-conf=10,0,17')
-        cmd.append('tag-conf-file=tag-wahoo.xml')
-        print(cmd)
-        subprocess.run(cmd)
+def show_list(packs):
+    for pack in packs.values():
+        if 'sub' not in pack:
+            print('ID: {:3d} | {} | {}'.format(pack['id'], pack['region'], pack['country']))
+        else:
+            print('ID: {:3d} | {} | {} | {}'.format(pack['id'], pack['region'], pack['country'], pack['sub']))
 
-        print('# compress .map files')
-        cmd = ['lzma', outFile]
-        print(cmd)
-        subprocess.run(cmd)
 
-print('# zip .map.lzma files')
+def search_pack(packs, name):
+    for pack in packs.values():
+        if name not in pack['country'].lower():
+            continue
 
-countryName = os.path.split(sys.argv[1])
-print(countryName[1][:-5])
-cmd = ['zip', '-r', countryName[1][:-5] + '.zip']
-for tile in country:
-    cmd.append(os.path.join(f'{tile["x"]}', f'{tile["y"]}.map.lzma'))
-print(cmd)
-subprocess.run(cmd, cwd=OUT_PATH)
+        if 'sub' not in pack:
+            print('ID: {:3d} | {} | {}'.format(pack['id'], pack['region'], pack['country']))
+        else:
+            print('ID: {:3d} | {} | {} | {}'.format(pack['id'], pack['region'], pack['country'], pack['sub']))
+
+
+def show_info(pack):
+    print('ID:          {}'.format(pack['id']))
+    print('Region:      {}'.format(pack['region']))
+
+    if 'sub' in pack:
+        print('Country:     {} - {}'.format(pack['country'], pack['sub']))
+    else:
+        print('Country:     {}'.format(pack['country']))
+
+    if len(pack['countries']) > 1:
+        print('Border:     ', ' '.join(pack['countries']))
+
+    print('Tiles:       {}'.format(pack['coordinates']))
+
+
+def create_map(args, pack):
+    tags = read_tags(args.tag_file)
+
+    for country in pack['countries']:
+        osmFile = glob.glob(args.maps_dir + '/**/' + country + '-latest.osm.pbf')
+        if len(osmFile) != 1:
+            print(f'OSM file not found for: {country}')
+            return
+
+    # check osm
+    # filter osm
+    # change tunnel layer level
+    # split osm
+    # create land and sea
+    # merge osm, land and sea
+    # create map
+
+def main(args):
+    packs = read_mappack(args.mappack_file)
+
+    if args.list:
+        show_list(packs)
+    elif args.search is not None:
+        search_pack(packs, args.search)
+    elif args.info is not None:
+        if args.info not in packs:
+            print(f'No pack found with ID: {args.info}')
+        else:
+            show_info(packs[args.info])
+    elif args.create is not None:
+        if args.create not in packs:
+            print(f'No pack found with ID: {args.create}')
+        else:
+            create_map(args, packs[args.create])
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--list', action='store_true', help='show list of packs')
+    parser.add_argument('--search', help='search pack by name')
+    parser.add_argument('--info', type=int, help='show info about pack with ID')
+
+    parser.add_argument('--create', type=int, help='create pack for ID')
+    parser.add_argument('--overwrite', action='store_true', help='overwrite all files')
+    parser.add_argument('--tag-file', default='tag-wahoo.xml', help='location of .xml file used for filtering and creating maps')
+    parser.add_argument('--mappack-file', default='mappack-gzip.json', help='location of mappack-gzip.json')
+    parser.add_argument('--land-file', default='land-polygons.shp', help='location of land-polygons.shp')
+    parser.add_argument('--maps-dir', default='maps', help='maps directory')
+    parser.add_argument('--output-dir', default='output', help='output directory')
+    args = parser.parse_args()
+    if args.mappack_file == '' or args.tag_file == '':
+        parser.print_help()
+        sys.exit(0)
+
+    main(args)
