@@ -7,7 +7,7 @@
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
-            "args": ["/Users/benjamin/Documents/osm_maps_wahoo/script/germany.json"]
+            "args": ["--create=337"]
         }
     ]
 }
