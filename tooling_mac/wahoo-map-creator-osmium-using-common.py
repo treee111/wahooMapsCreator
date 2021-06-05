@@ -75,18 +75,13 @@ with open(sys.argv[1]) as f:
 if country == '' :
     print ('! Json file could not be opened.')
     sys.exit()
-
 # logging
 print(f'+ Use json file {f.name} with {len(country)} tiles')
 print('# Read json file: OK')
 
 
-print('\n\n# check land_polygons.shp file')
-if not os.path.isfile(land_polygons_file):
-    print(f'! failed to find {land_polygons_file}')
-    sys.exit()
-# logging
-print('# check land_polygons.shp file: OK')
+# Check for expired land polygons file and download, if too old
+osm_maps_functions.checkAndDownloadLandPoligonsFile(Max_Days_Old, Force_Processing)
 
 
 print('\n\n# Check countries .osm.pbf files')

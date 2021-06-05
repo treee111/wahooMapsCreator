@@ -61,7 +61,8 @@ if len(sys.argv) != 2:
     print(f'Usage: {sys.argv[0]} Country name part of a .json file.')
     sys.exit()
 
-if osm_maps_functions.getRegionOfCountry(sys.argv[1]) == '' :
+region = osm_maps_functions.getRegionOfCountry(sys.argv[1])
+if region == '' :
     print ('Invalid country name.')
     sys.exit()
 
@@ -73,18 +74,8 @@ if country == '' :
     print ('json file could not be opened.')
     sys.exit()
 
-print('\n\n# check land_polygons.shp file')
-# Check for expired land polygons file and delete it
-now = time.time()
-To_Old = now - 60 * 60 * 24 * Max_Days_Old
-try:
-    FileCreation = os.path.getctime(land_polygons_file)
-    if FileCreation < To_Old:
-        print (f'# Deleting old land polygons file')
-        os.remove(os.path.join (CurDir, 'land-polygons-split-4326', 'land_polygons.shp'))
-        Force_Processing = 1
-except:
-    Force_Processing = 1
+# Check for expired land polygons file and download, if too old
+osm_maps_functions.checkAndDownloadLandPoligonsFile(Max_Days_Old, Force_Processing)
 
 if not os.path.exists(land_polygons_file) or not os.path.isfile(land_polygons_file) or Force_Processing == 1:
     print('# Downloading land polygons file')

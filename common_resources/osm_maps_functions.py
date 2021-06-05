@@ -1,3 +1,10 @@
+import os
+import sys
+import time
+import requests
+import subprocess
+import zipfile,os.path
+
 Translate_Country = {
     'alaska':                           'united_states_of_america',
     'anguilla':                         'central-america', 
@@ -173,6 +180,7 @@ italy_subregions_geofabrik = ['Centro', 'Isole', 'Nord-Est', 'Nord-Ovest', 'Sud'
 
 noregion_geofabrik = ['russia','asia']
 
+
 def getRegionOfCountry(county):
     region = ''
     if county in africa :
@@ -193,3 +201,71 @@ def getRegionOfCountry(county):
         region = 'united-states'
 
     return region
+
+
+def unzip(source_filename, dest_dir):
+    with zipfile.ZipFile(source_filename) as zf:
+        for member in zf.infolist():
+            # Path traversal defense copied from
+            # http://hg.python.org/cpython/file/tip/Lib/http/server.py#l789
+            words = member.filename.split('/')
+            path = dest_dir
+            for word in words[:-1]:
+                while True:
+                    drive, word = os.path.splitdrive(word)
+                    head, word = os.path.split(word)
+                    if not drive:
+                        break
+                if word in (os.curdir, os.pardir, ''):
+                    continue
+                path = os.path.join(path, word)
+            if(member.filename.split('/').pop()): member.filename = member.filename.split('/').pop()
+            zf.extract(member, path)
+
+
+def checkAndDownloadLandPoligonsFile(Max_Days_Old, Force_Processing):
+    pathCommon = os.path.join(os.getcwd(), 'common_resources')
+    land_polygons_file = os.path.join(os.getcwd(), 'common_resources', 'land-polygons-split-4326/land_polygons.shp')
+
+    print('\n\n# check land_polygons.shp file')
+    # Check for expired land polygons file and delete it
+    now = time.time()
+    To_Old = now - 60 * 60 * 24 * Max_Days_Old
+    try:
+        FileCreation = os.path.getctime(land_polygons_file)
+        if FileCreation < To_Old:
+            print (f'# Deleting old land polygons file')
+            os.remove(land_polygons_file)
+            Force_Processing = 1
+    except:
+        Force_Processing = 1
+
+    if not os.path.exists(land_polygons_file) or not os.path.isfile(land_polygons_file) or Force_Processing == 1:
+        print('# Downloading land polygons file')
+        url = 'https://osmdata.openstreetmap.de/download/land-polygons-split-4326.zip'
+        r = requests.get(url, allow_redirects=True, stream = True)
+        if r.status_code != 200:
+            print(f'failed to find or download land polygons file')
+            sys.exit()
+        Download=open(os.path.join (pathCommon, 'land-polygons-split-4326.zip'), 'wb')
+        for chunk in r.iter_content(chunk_size=1024*100):
+            Download.write(chunk)
+        Download.close()
+        # unpack it
+        # should work on macOS and Windows
+        unzip(os.path.join (pathCommon, 'land-polygons-split-4326.zip'), pathCommon)
+        # Windows-Version
+        # cmd = ['7za', 'x', '-y', os.path.join (pathCommon, 'land-polygons-split-4326.zip')]
+        #print(cmd)
+        # result = subprocess.run(cmd)
+        os.remove(os.path.join (pathCommon, 'land-polygons-split-4326.zip'))
+        # if result.returncode != 0:
+        #     print(f'Error unpacking land polygons file')
+        #     sys.exit()
+
+    # Check if land polygons file exists
+    if not os.path.isfile(land_polygons_file):
+        print(f'! failed to find {land_polygons_file}')
+        sys.exit()
+    # logging
+    print('# check land_polygons.shp file: OK')
