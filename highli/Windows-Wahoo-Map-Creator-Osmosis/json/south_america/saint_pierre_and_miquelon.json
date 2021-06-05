@@ -1,0 +1,37 @@
+[
+    {
+        "x": 87,
+        "y": 89,
+        "left": -57.65625,
+        "top": 47.989922,
+        "right": -56.25,
+        "bottom": 47.040182,
+        "countries": [
+            "saint_pierre_and_miquelon",
+            "canada"
+        ]
+    },
+    {
+        "x": 88,
+        "y": 90,
+        "left": -56.25,
+        "top": 47.040182,
+        "right": -54.84375,
+        "bottom": 46.073231,
+        "countries": [
+            "saint_pierre_and_miquelon",
+            "canada"
+        ]
+    },
+    {
+        "x": 87,
+        "y": 90,
+        "left": -57.65625,
+        "top": 47.040182,
+        "right": -56.25,
+        "bottom": 46.073231,
+        "countries": [
+            "saint_pierre_and_miquelon"
+        ]
+    }
+]

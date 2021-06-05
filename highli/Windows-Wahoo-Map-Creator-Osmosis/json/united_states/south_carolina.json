@@ -1,0 +1,135 @@
+[
+    {
+        "x": 68,
+        "y": 101,
+        "left": -84.375,
+        "top": 35.46067,
+        "right": -82.96875,
+        "bottom": 34.307144,
+        "countries": [
+            "georgia",
+            "north_carolina",
+            "tennessee",
+            "south_carolina"
+        ]
+    },
+    {
+        "x": 69,
+        "y": 101,
+        "left": -82.96875,
+        "top": 35.46067,
+        "right": -81.5625,
+        "bottom": 34.307144,
+        "countries": [
+            "georgia",
+            "north_carolina",
+            "south_carolina"
+        ]
+    },
+    {
+        "x": 69,
+        "y": 102,
+        "left": -82.96875,
+        "top": 34.307144,
+        "right": -81.5625,
+        "bottom": 33.137551,
+        "countries": [
+            "georgia",
+            "south_carolina"
+        ]
+    },
+    {
+        "x": 69,
+        "y": 103,
+        "left": -82.96875,
+        "top": 33.137551,
+        "right": -81.5625,
+        "bottom": 31.952162,
+        "countries": [
+            "georgia",
+            "south_carolina"
+        ]
+    },
+    {
+        "x": 70,
+        "y": 103,
+        "left": -81.5625,
+        "top": 33.137551,
+        "right": -80.15625,
+        "bottom": 31.952162,
+        "countries": [
+            "georgia",
+            "south_carolina"
+        ]
+    },
+    {
+        "x": 70,
+        "y": 101,
+        "left": -81.5625,
+        "top": 35.46067,
+        "right": -80.15625,
+        "bottom": 34.307144,
+        "countries": [
+            "north_carolina",
+            "south_carolina"
+        ]
+    },
+    {
+        "x": 71,
+        "y": 101,
+        "left": -80.15625,
+        "top": 35.46067,
+        "right": -78.75,
+        "bottom": 34.307144,
+        "countries": [
+            "north_carolina",
+            "south_carolina"
+        ]
+    },
+    {
+        "x": 71,
+        "y": 102,
+        "left": -80.15625,
+        "top": 34.307144,
+        "right": -78.75,
+        "bottom": 33.137551,
+        "countries": [
+            "north_carolina",
+            "south_carolina"
+        ]
+    },
+    {
+        "x": 72,
+        "y": 102,
+        "left": -78.75,
+        "top": 34.307144,
+        "right": -77.34375,
+        "bottom": 33.137551,
+        "countries": [
+            "north_carolina",
+            "south_carolina"
+        ]
+    },
+    {
+        "x": 70,
+        "y": 102,
+        "left": -81.5625,
+        "top": 34.307144,
+        "right": -80.15625,
+        "bottom": 33.137551,
+        "countries": [
+            "south_carolina"
+        ]
+    },
+    {
+        "x": 71,
+        "y": 103,
+        "left": -80.15625,
+        "top": 33.137551,
+        "right": -78.75,
+        "bottom": 31.952162,
+        "countries": [
+            "south_carolina"
+        ]
+    }
+]

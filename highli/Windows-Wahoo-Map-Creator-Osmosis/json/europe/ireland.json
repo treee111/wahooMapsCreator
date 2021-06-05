@@ -1,0 +1,240 @@
+[
+    {
+        "x": 121,
+        "y": 80,
+        "left": -9.84375,
+        "top": 55.776573,
+        "right": -8.4375,
+        "bottom": 54.977614,
+        "countries": [
+            "ireland"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 80,
+        "left": -8.4375,
+        "top": 55.776573,
+        "right": -7.03125,
+        "bottom": 54.977614,
+        "countries": [
+            "united_kingdom",
+            "ireland"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 80,
+        "left": -7.03125,
+        "top": 55.776573,
+        "right": -5.625,
+        "bottom": 54.977614,
+        "countries": [
+            "united_kingdom",
+            "ireland"
+        ]
+    },
+    {
+        "x": 120,
+        "y": 81,
+        "left": -11.25,
+        "top": 54.977614,
+        "right": -9.84375,
+        "bottom": 54.162434,
+        "countries": [
+            "ireland"
+        ]
+    },
+    {
+        "x": 121,
+        "y": 81,
+        "left": -9.84375,
+        "top": 54.977614,
+        "right": -8.4375,
+        "bottom": 54.162434,
+        "countries": [
+            "ireland"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 81,
+        "left": -8.4375,
+        "top": 54.977614,
+        "right": -7.03125,
+        "bottom": 54.162434,
+        "countries": [
+            "united_kingdom",
+            "ireland"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 81,
+        "left": -7.03125,
+        "top": 54.977614,
+        "right": -5.625,
+        "bottom": 54.162434,
+        "countries": [
+            "united_kingdom",
+            "ireland"
+        ]
+    },
+    {
+        "x": 120,
+        "y": 82,
+        "left": -11.25,
+        "top": 54.162434,
+        "right": -9.84375,
+        "bottom": 53.330873,
+        "countries": [
+            "ireland"
+        ]
+    },
+    {
+        "x": 121,
+        "y": 82,
+        "left": -9.84375,
+        "top": 54.162434,
+        "right": -8.4375,
+        "bottom": 53.330873,
+        "countries": [
+            "ireland"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 82,
+        "left": -8.4375,
+        "top": 54.162434,
+        "right": -7.03125,
+        "bottom": 53.330873,
+        "countries": [
+            "united_kingdom",
+            "ireland"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 82,
+        "left": -7.03125,
+        "top": 54.162434,
+        "right": -5.625,
+        "bottom": 53.330873,
+        "countries": [
+            "united_kingdom",
+            "ireland"
+        ]
+    },
+    {
+        "x": 120,
+        "y": 83,
+        "left": -11.25,
+        "top": 53.330873,
+        "right": -9.84375,
+        "bottom": 52.48278,
+        "countries": [
+            "ireland"
+        ]
+    },
+    {
+        "x": 121,
+        "y": 83,
+        "left": -9.84375,
+        "top": 53.330873,
+        "right": -8.4375,
+        "bottom": 52.48278,
+        "countries": [
+            "ireland"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 83,
+        "left": -8.4375,
+        "top": 53.330873,
+        "right": -7.03125,
+        "bottom": 52.48278,
+        "countries": [
+            "ireland"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 83,
+        "left": -7.03125,
+        "top": 53.330873,
+        "right": -5.625,
+        "bottom": 52.48278,
+        "countries": [
+            "ireland"
+        ]
+    },
+    {
+        "x": 120,
+        "y": 84,
+        "left": -11.25,
+        "top": 52.48278,
+        "right": -9.84375,
+        "bottom": 51.618017,
+        "countries": [
+            "ireland"
+        ]
+    },
+    {
+        "x": 121,
+        "y": 84,
+        "left": -9.84375,
+        "top": 52.48278,
+        "right": -8.4375,
+        "bottom": 51.618017,
+        "countries": [
+            "ireland"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 84,
+        "left": -8.4375,
+        "top": 52.48278,
+        "right": -7.03125,
+        "bottom": 51.618017,
+        "countries": [
+            "ireland"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 84,
+        "left": -7.03125,
+        "top": 52.48278,
+        "right": -5.625,
+        "bottom": 51.618017,
+        "countries": [
+            "united_kingdom",
+            "ireland"
+        ]
+    },
+    {
+        "x": 120,
+        "y": 85,
+        "left": -11.25,
+        "top": 51.618017,
+        "right": -9.84375,
+        "bottom": 50.736455,
+        "countries": [
+            "ireland"
+        ]
+    },
+    {
+        "x": 121,
+        "y": 85,
+        "left": -9.84375,
+        "top": 51.618017,
+        "right": -8.4375,
+        "bottom": 50.736455,
+        "countries": [
+            "ireland"
+        ]
+    }
+]

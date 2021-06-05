@@ -1,0 +1,789 @@
+[
+    {
+        "x": 145,
+        "y": 104,
+        "left": 23.90625,
+        "top": 31.952162,
+        "right": 25.3125,
+        "bottom": 30.751278,
+        "countries": [
+            "libya",
+            "egypt"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 104,
+        "left": 25.3125,
+        "top": 31.952162,
+        "right": 26.71875,
+        "bottom": 30.751278,
+        "countries": [
+            "egypt"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 104,
+        "left": 26.71875,
+        "top": 31.952162,
+        "right": 28.125,
+        "bottom": 30.751278,
+        "countries": [
+            "egypt"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 104,
+        "left": 28.125,
+        "top": 31.952162,
+        "right": 29.53125,
+        "bottom": 30.751278,
+        "countries": [
+            "egypt"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 104,
+        "left": 29.53125,
+        "top": 31.952162,
+        "right": 30.9375,
+        "bottom": 30.751278,
+        "countries": [
+            "egypt"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 104,
+        "left": 30.9375,
+        "top": 31.952162,
+        "right": 32.34375,
+        "bottom": 30.751278,
+        "countries": [
+            "egypt"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 104,
+        "left": 32.34375,
+        "top": 31.952162,
+        "right": 33.75,
+        "bottom": 30.751278,
+        "countries": [
+            "egypt"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 104,
+        "left": 33.75,
+        "top": 31.952162,
+        "right": 35.15625,
+        "bottom": 30.751278,
+        "countries": [
+            "egypt",
+            "israel",
+            "palestina"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 105,
+        "left": 23.90625,
+        "top": 30.751278,
+        "right": 25.3125,
+        "bottom": 29.53523,
+        "countries": [
+            "libya",
+            "egypt"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 105,
+        "left": 25.3125,
+        "top": 30.751278,
+        "right": 26.71875,
+        "bottom": 29.53523,
+        "countries": [
+            "egypt"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 105,
+        "left": 26.71875,
+        "top": 30.751278,
+        "right": 28.125,
+        "bottom": 29.53523,
+        "countries": [
+            "egypt"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 105,
+        "left": 28.125,
+        "top": 30.751278,
+        "right": 29.53125,
+        "bottom": 29.53523,
+        "countries": [
+            "egypt"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 105,
+        "left": 29.53125,
+        "top": 30.751278,
+        "right": 30.9375,
+        "bottom": 29.53523,
+        "countries": [
+            "egypt"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 105,
+        "left": 30.9375,
+        "top": 30.751278,
+        "right": 32.34375,
+        "bottom": 29.53523,
+        "countries": [
+            "egypt"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 105,
+        "left": 32.34375,
+        "top": 30.751278,
+        "right": 33.75,
+        "bottom": 29.53523,
+        "countries": [
+            "egypt"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 105,
+        "left": 33.75,
+        "top": 30.751278,
+        "right": 35.15625,
+        "bottom": 29.53523,
+        "countries": [
+            "jordan",
+            "egypt",
+            "israel"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 106,
+        "left": 23.90625,
+        "top": 29.53523,
+        "right": 25.3125,
+        "bottom": 28.304381,
+        "countries": [
+            "libya",
+            "egypt"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 106,
+        "left": 25.3125,
+        "top": 29.53523,
+        "right": 26.71875,
+        "bottom": 28.304381,
+        "countries": [
+            "egypt"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 106,
+        "left": 26.71875,
+        "top": 29.53523,
+        "right": 28.125,
+        "bottom": 28.304381,
+        "countries": [
+            "egypt"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 106,
+        "left": 28.125,
+        "top": 29.53523,
+        "right": 29.53125,
+        "bottom": 28.304381,
+        "countries": [
+            "egypt"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 106,
+        "left": 29.53125,
+        "top": 29.53523,
+        "right": 30.9375,
+        "bottom": 28.304381,
+        "countries": [
+            "egypt"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 106,
+        "left": 30.9375,
+        "top": 29.53523,
+        "right": 32.34375,
+        "bottom": 28.304381,
+        "countries": [
+            "egypt"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 106,
+        "left": 32.34375,
+        "top": 29.53523,
+        "right": 33.75,
+        "bottom": 28.304381,
+        "countries": [
+            "egypt"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 106,
+        "left": 33.75,
+        "top": 29.53523,
+        "right": 35.15625,
+        "bottom": 28.304381,
+        "countries": [
+            "saudi_arabia",
+            "jordan",
+            "egypt",
+            "israel"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 107,
+        "left": 23.90625,
+        "top": 28.304381,
+        "right": 25.3125,
+        "bottom": 27.059126,
+        "countries": [
+            "libya",
+            "egypt"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 107,
+        "left": 25.3125,
+        "top": 28.304381,
+        "right": 26.71875,
+        "bottom": 27.059126,
+        "countries": [
+            "egypt"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 107,
+        "left": 26.71875,
+        "top": 28.304381,
+        "right": 28.125,
+        "bottom": 27.059126,
+        "countries": [
+            "egypt"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 107,
+        "left": 28.125,
+        "top": 28.304381,
+        "right": 29.53125,
+        "bottom": 27.059126,
+        "countries": [
+            "egypt"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 107,
+        "left": 29.53125,
+        "top": 28.304381,
+        "right": 30.9375,
+        "bottom": 27.059126,
+        "countries": [
+            "egypt"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 107,
+        "left": 30.9375,
+        "top": 28.304381,
+        "right": 32.34375,
+        "bottom": 27.059126,
+        "countries": [
+            "egypt"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 107,
+        "left": 32.34375,
+        "top": 28.304381,
+        "right": 33.75,
+        "bottom": 27.059126,
+        "countries": [
+            "egypt"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 107,
+        "left": 33.75,
+        "top": 28.304381,
+        "right": 35.15625,
+        "bottom": 27.059126,
+        "countries": [
+            "saudi_arabia",
+            "egypt"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 108,
+        "left": 23.90625,
+        "top": 27.059126,
+        "right": 25.3125,
+        "bottom": 25.799891,
+        "countries": [
+            "libya",
+            "egypt"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 108,
+        "left": 25.3125,
+        "top": 27.059126,
+        "right": 26.71875,
+        "bottom": 25.799891,
+        "countries": [
+            "egypt"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 108,
+        "left": 26.71875,
+        "top": 27.059126,
+        "right": 28.125,
+        "bottom": 25.799891,
+        "countries": [
+            "egypt"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 108,
+        "left": 28.125,
+        "top": 27.059126,
+        "right": 29.53125,
+        "bottom": 25.799891,
+        "countries": [
+            "egypt"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 108,
+        "left": 29.53125,
+        "top": 27.059126,
+        "right": 30.9375,
+        "bottom": 25.799891,
+        "countries": [
+            "egypt"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 108,
+        "left": 30.9375,
+        "top": 27.059126,
+        "right": 32.34375,
+        "bottom": 25.799891,
+        "countries": [
+            "egypt"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 108,
+        "left": 32.34375,
+        "top": 27.059126,
+        "right": 33.75,
+        "bottom": 25.799891,
+        "countries": [
+            "egypt"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 108,
+        "left": 33.75,
+        "top": 27.059126,
+        "right": 35.15625,
+        "bottom": 25.799891,
+        "countries": [
+            "egypt"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 109,
+        "left": 23.90625,
+        "top": 25.799891,
+        "right": 25.3125,
+        "bottom": 24.527135,
+        "countries": [
+            "libya",
+            "egypt"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 109,
+        "left": 25.3125,
+        "top": 25.799891,
+        "right": 26.71875,
+        "bottom": 24.527135,
+        "countries": [
+            "egypt"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 109,
+        "left": 26.71875,
+        "top": 25.799891,
+        "right": 28.125,
+        "bottom": 24.527135,
+        "countries": [
+            "egypt"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 109,
+        "left": 28.125,
+        "top": 25.799891,
+        "right": 29.53125,
+        "bottom": 24.527135,
+        "countries": [
+            "egypt"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 109,
+        "left": 29.53125,
+        "top": 25.799891,
+        "right": 30.9375,
+        "bottom": 24.527135,
+        "countries": [
+            "egypt"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 109,
+        "left": 30.9375,
+        "top": 25.799891,
+        "right": 32.34375,
+        "bottom": 24.527135,
+        "countries": [
+            "egypt"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 109,
+        "left": 32.34375,
+        "top": 25.799891,
+        "right": 33.75,
+        "bottom": 24.527135,
+        "countries": [
+            "egypt"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 109,
+        "left": 33.75,
+        "top": 25.799891,
+        "right": 35.15625,
+        "bottom": 24.527135,
+        "countries": [
+            "egypt"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 109,
+        "left": 35.15625,
+        "top": 25.799891,
+        "right": 36.5625,
+        "bottom": 24.527135,
+        "countries": [
+            "saudi_arabia",
+            "egypt"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 110,
+        "left": 23.90625,
+        "top": 24.527135,
+        "right": 25.3125,
+        "bottom": 23.241346,
+        "countries": [
+            "libya",
+            "egypt"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 110,
+        "left": 25.3125,
+        "top": 24.527135,
+        "right": 26.71875,
+        "bottom": 23.241346,
+        "countries": [
+            "egypt"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 110,
+        "left": 26.71875,
+        "top": 24.527135,
+        "right": 28.125,
+        "bottom": 23.241346,
+        "countries": [
+            "egypt"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 110,
+        "left": 28.125,
+        "top": 24.527135,
+        "right": 29.53125,
+        "bottom": 23.241346,
+        "countries": [
+            "egypt"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 110,
+        "left": 29.53125,
+        "top": 24.527135,
+        "right": 30.9375,
+        "bottom": 23.241346,
+        "countries": [
+            "egypt"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 110,
+        "left": 30.9375,
+        "top": 24.527135,
+        "right": 32.34375,
+        "bottom": 23.241346,
+        "countries": [
+            "egypt"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 110,
+        "left": 32.34375,
+        "top": 24.527135,
+        "right": 33.75,
+        "bottom": 23.241346,
+        "countries": [
+            "egypt"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 110,
+        "left": 33.75,
+        "top": 24.527135,
+        "right": 35.15625,
+        "bottom": 23.241346,
+        "countries": [
+            "egypt"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 110,
+        "left": 35.15625,
+        "top": 24.527135,
+        "right": 36.5625,
+        "bottom": 23.241346,
+        "countries": [
+            "egypt"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 111,
+        "left": 23.90625,
+        "top": 23.241346,
+        "right": 25.3125,
+        "bottom": 21.943046,
+        "countries": [
+            "libya",
+            "sudan",
+            "egypt"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 111,
+        "left": 25.3125,
+        "top": 23.241346,
+        "right": 26.71875,
+        "bottom": 21.943046,
+        "countries": [
+            "sudan",
+            "egypt"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 111,
+        "left": 26.71875,
+        "top": 23.241346,
+        "right": 28.125,
+        "bottom": 21.943046,
+        "countries": [
+            "sudan",
+            "egypt"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 111,
+        "left": 28.125,
+        "top": 23.241346,
+        "right": 29.53125,
+        "bottom": 21.943046,
+        "countries": [
+            "sudan",
+            "egypt"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 111,
+        "left": 29.53125,
+        "top": 23.241346,
+        "right": 30.9375,
+        "bottom": 21.943046,
+        "countries": [
+            "sudan",
+            "egypt"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 111,
+        "left": 30.9375,
+        "top": 23.241346,
+        "right": 32.34375,
+        "bottom": 21.943046,
+        "countries": [
+            "sudan",
+            "egypt"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 111,
+        "left": 32.34375,
+        "top": 23.241346,
+        "right": 33.75,
+        "bottom": 21.943046,
+        "countries": [
+            "sudan",
+            "egypt"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 111,
+        "left": 33.75,
+        "top": 23.241346,
+        "right": 35.15625,
+        "bottom": 21.943046,
+        "countries": [
+            "sudan",
+            "egypt"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 111,
+        "left": 35.15625,
+        "top": 23.241346,
+        "right": 36.5625,
+        "bottom": 21.943046,
+        "countries": [
+            "sudan",
+            "egypt"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 112,
+        "left": 32.34375,
+        "top": 21.943046,
+        "right": 33.75,
+        "bottom": 20.632784,
+        "countries": [
+            "sudan",
+            "egypt"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 112,
+        "left": 33.75,
+        "top": 21.943046,
+        "right": 35.15625,
+        "bottom": 20.632784,
+        "countries": [
+            "sudan",
+            "egypt"
+        ]
+    }
+]

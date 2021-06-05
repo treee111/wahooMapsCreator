@@ -1,0 +1,110 @@
+[
+    {
+        "x": 91,
+        "y": 124,
+        "left": -52.03125,
+        "top": 5.615986,
+        "right": -50.625,
+        "bottom": 4.214943,
+        "countries": [
+            "brazil",
+            "french_guiana"
+        ]
+    },
+    {
+        "x": 90,
+        "y": 125,
+        "left": -53.4375,
+        "top": 4.214943,
+        "right": -52.03125,
+        "bottom": 2.811371,
+        "countries": [
+            "brazil",
+            "french_guiana"
+        ]
+    },
+    {
+        "x": 91,
+        "y": 125,
+        "left": -52.03125,
+        "top": 4.214943,
+        "right": -50.625,
+        "bottom": 2.811371,
+        "countries": [
+            "brazil",
+            "french_guiana"
+        ]
+    },
+    {
+        "x": 89,
+        "y": 126,
+        "left": -54.84375,
+        "top": 2.811371,
+        "right": -53.4375,
+        "bottom": 1.406109,
+        "countries": [
+            "brazil",
+            "suriname",
+            "french_guiana"
+        ]
+    },
+    {
+        "x": 90,
+        "y": 126,
+        "left": -53.4375,
+        "top": 2.811371,
+        "right": -52.03125,
+        "bottom": 1.406109,
+        "countries": [
+            "brazil",
+            "french_guiana"
+        ]
+    },
+    {
+        "x": 89,
+        "y": 123,
+        "left": -54.84375,
+        "top": 7.013668,
+        "right": -53.4375,
+        "bottom": 5.615986,
+        "countries": [
+            "suriname",
+            "french_guiana"
+        ]
+    },
+    {
+        "x": 89,
+        "y": 124,
+        "left": -54.84375,
+        "top": 5.615986,
+        "right": -53.4375,
+        "bottom": 4.214943,
+        "countries": [
+            "suriname",
+            "french_guiana"
+        ]
+    },
+    {
+        "x": 90,
+        "y": 124,
+        "left": -53.4375,
+        "top": 5.615986,
+        "right": -52.03125,
+        "bottom": 4.214943,
+        "countries": [
+            "french_guiana"
+        ]
+    },
+    {
+        "x": 89,
+        "y": 125,
+        "left": -54.84375,
+        "top": 4.214943,
+        "right": -53.4375,
+        "bottom": 2.811371,
+        "countries": [
+            "suriname",
+            "french_guiana"
+        ]
+    }
+]

@@ -1,0 +1,79 @@
+[
+    {
+        "x": 84,
+        "y": 170,
+        "left": -61.875,
+        "top": -50.736455,
+        "right": -60.46875,
+        "bottom": -51.618017,
+        "countries": [
+            "falkland_islands"
+        ]
+    },
+    {
+        "x": 85,
+        "y": 170,
+        "left": -60.46875,
+        "top": -50.736455,
+        "right": -59.0625,
+        "bottom": -51.618017,
+        "countries": [
+            "falkland_islands"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 170,
+        "left": -59.0625,
+        "top": -50.736455,
+        "right": -57.65625,
+        "bottom": -51.618017,
+        "countries": [
+            "falkland_islands"
+        ]
+    },
+    {
+        "x": 84,
+        "y": 171,
+        "left": -61.875,
+        "top": -51.618017,
+        "right": -60.46875,
+        "bottom": -52.48278,
+        "countries": [
+            "falkland_islands"
+        ]
+    },
+    {
+        "x": 85,
+        "y": 171,
+        "left": -60.46875,
+        "top": -51.618017,
+        "right": -59.0625,
+        "bottom": -52.48278,
+        "countries": [
+            "falkland_islands"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 171,
+        "left": -59.0625,
+        "top": -51.618017,
+        "right": -57.65625,
+        "bottom": -52.48278,
+        "countries": [
+            "falkland_islands"
+        ]
+    },
+    {
+        "x": 85,
+        "y": 172,
+        "left": -60.46875,
+        "top": -52.48278,
+        "right": -59.0625,
+        "bottom": -53.330873,
+        "countries": [
+            "falkland_islands"
+        ]
+    }
+]

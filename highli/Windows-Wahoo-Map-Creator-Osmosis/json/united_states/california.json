@@ -1,0 +1,497 @@
+[
+    {
+        "x": 44,
+        "y": 103,
+        "left": -118.125,
+        "top": 33.137551,
+        "right": -116.71875,
+        "bottom": 31.952162,
+        "countries": [
+            "california",
+            "mexico"
+        ]
+    },
+    {
+        "x": 45,
+        "y": 103,
+        "left": -116.71875,
+        "top": 33.137551,
+        "right": -115.3125,
+        "bottom": 31.952162,
+        "countries": [
+            "california",
+            "mexico"
+        ]
+    },
+    {
+        "x": 46,
+        "y": 103,
+        "left": -115.3125,
+        "top": 33.137551,
+        "right": -113.90625,
+        "bottom": 31.952162,
+        "countries": [
+            "california",
+            "mexico",
+            "arizona"
+        ]
+    },
+    {
+        "x": 46,
+        "y": 100,
+        "left": -115.3125,
+        "top": 36.597889,
+        "right": -113.90625,
+        "bottom": 35.46067,
+        "countries": [
+            "nevada",
+            "california",
+            "arizona"
+        ]
+    },
+    {
+        "x": 46,
+        "y": 101,
+        "left": -115.3125,
+        "top": 35.46067,
+        "right": -113.90625,
+        "bottom": 34.307144,
+        "countries": [
+            "nevada",
+            "california",
+            "arizona"
+        ]
+    },
+    {
+        "x": 46,
+        "y": 102,
+        "left": -115.3125,
+        "top": 34.307144,
+        "right": -113.90625,
+        "bottom": 33.137551,
+        "countries": [
+            "california",
+            "arizona"
+        ]
+    },
+    {
+        "x": 39,
+        "y": 95,
+        "left": -125.15625,
+        "top": 42.032974,
+        "right": -123.75,
+        "bottom": 40.979898,
+        "countries": [
+            "oregon",
+            "california"
+        ]
+    },
+    {
+        "x": 40,
+        "y": 95,
+        "left": -123.75,
+        "top": 42.032974,
+        "right": -122.34375,
+        "bottom": 40.979898,
+        "countries": [
+            "oregon",
+            "california"
+        ]
+    },
+    {
+        "x": 41,
+        "y": 95,
+        "left": -122.34375,
+        "top": 42.032974,
+        "right": -120.9375,
+        "bottom": 40.979898,
+        "countries": [
+            "oregon",
+            "california"
+        ]
+    },
+    {
+        "x": 42,
+        "y": 95,
+        "left": -120.9375,
+        "top": 42.032974,
+        "right": -119.53125,
+        "bottom": 40.979898,
+        "countries": [
+            "nevada",
+            "california",
+            "oregon"
+        ]
+    },
+    {
+        "x": 39,
+        "y": 96,
+        "left": -125.15625,
+        "top": 40.979898,
+        "right": -123.75,
+        "bottom": 39.909736,
+        "countries": [
+            "california"
+        ]
+    },
+    {
+        "x": 40,
+        "y": 96,
+        "left": -123.75,
+        "top": 40.979898,
+        "right": -122.34375,
+        "bottom": 39.909736,
+        "countries": [
+            "california"
+        ]
+    },
+    {
+        "x": 41,
+        "y": 96,
+        "left": -122.34375,
+        "top": 40.979898,
+        "right": -120.9375,
+        "bottom": 39.909736,
+        "countries": [
+            "california"
+        ]
+    },
+    {
+        "x": 42,
+        "y": 96,
+        "left": -120.9375,
+        "top": 40.979898,
+        "right": -119.53125,
+        "bottom": 39.909736,
+        "countries": [
+            "nevada",
+            "california"
+        ]
+    },
+    {
+        "x": 39,
+        "y": 97,
+        "left": -125.15625,
+        "top": 39.909736,
+        "right": -123.75,
+        "bottom": 38.822591,
+        "countries": [
+            "california"
+        ]
+    },
+    {
+        "x": 40,
+        "y": 97,
+        "left": -123.75,
+        "top": 39.909736,
+        "right": -122.34375,
+        "bottom": 38.822591,
+        "countries": [
+            "california"
+        ]
+    },
+    {
+        "x": 41,
+        "y": 97,
+        "left": -122.34375,
+        "top": 39.909736,
+        "right": -120.9375,
+        "bottom": 38.822591,
+        "countries": [
+            "california"
+        ]
+    },
+    {
+        "x": 42,
+        "y": 97,
+        "left": -120.9375,
+        "top": 39.909736,
+        "right": -119.53125,
+        "bottom": 38.822591,
+        "countries": [
+            "nevada",
+            "california"
+        ]
+    },
+    {
+        "x": 40,
+        "y": 98,
+        "left": -123.75,
+        "top": 38.822591,
+        "right": -122.34375,
+        "bottom": 37.71859,
+        "countries": [
+            "california"
+        ]
+    },
+    {
+        "x": 41,
+        "y": 98,
+        "left": -122.34375,
+        "top": 38.822591,
+        "right": -120.9375,
+        "bottom": 37.71859,
+        "countries": [
+            "california"
+        ]
+    },
+    {
+        "x": 42,
+        "y": 98,
+        "left": -120.9375,
+        "top": 38.822591,
+        "right": -119.53125,
+        "bottom": 37.71859,
+        "countries": [
+            "nevada",
+            "california"
+        ]
+    },
+    {
+        "x": 43,
+        "y": 98,
+        "left": -119.53125,
+        "top": 38.822591,
+        "right": -118.125,
+        "bottom": 37.71859,
+        "countries": [
+            "nevada",
+            "california"
+        ]
+    },
+    {
+        "x": 40,
+        "y": 99,
+        "left": -123.75,
+        "top": 37.71859,
+        "right": -122.34375,
+        "bottom": 36.597889,
+        "countries": [
+            "california"
+        ]
+    },
+    {
+        "x": 41,
+        "y": 99,
+        "left": -122.34375,
+        "top": 37.71859,
+        "right": -120.9375,
+        "bottom": 36.597889,
+        "countries": [
+            "california"
+        ]
+    },
+    {
+        "x": 42,
+        "y": 99,
+        "left": -120.9375,
+        "top": 37.71859,
+        "right": -119.53125,
+        "bottom": 36.597889,
+        "countries": [
+            "california"
+        ]
+    },
+    {
+        "x": 43,
+        "y": 99,
+        "left": -119.53125,
+        "top": 37.71859,
+        "right": -118.125,
+        "bottom": 36.597889,
+        "countries": [
+            "nevada",
+            "california"
+        ]
+    },
+    {
+        "x": 44,
+        "y": 99,
+        "left": -118.125,
+        "top": 37.71859,
+        "right": -116.71875,
+        "bottom": 36.597889,
+        "countries": [
+            "nevada",
+            "california"
+        ]
+    },
+    {
+        "x": 45,
+        "y": 99,
+        "left": -116.71875,
+        "top": 37.71859,
+        "right": -115.3125,
+        "bottom": 36.597889,
+        "countries": [
+            "nevada",
+            "california"
+        ]
+    },
+    {
+        "x": 41,
+        "y": 100,
+        "left": -122.34375,
+        "top": 36.597889,
+        "right": -120.9375,
+        "bottom": 35.46067,
+        "countries": [
+            "california"
+        ]
+    },
+    {
+        "x": 42,
+        "y": 100,
+        "left": -120.9375,
+        "top": 36.597889,
+        "right": -119.53125,
+        "bottom": 35.46067,
+        "countries": [
+            "california"
+        ]
+    },
+    {
+        "x": 43,
+        "y": 100,
+        "left": -119.53125,
+        "top": 36.597889,
+        "right": -118.125,
+        "bottom": 35.46067,
+        "countries": [
+            "california"
+        ]
+    },
+    {
+        "x": 44,
+        "y": 100,
+        "left": -118.125,
+        "top": 36.597889,
+        "right": -116.71875,
+        "bottom": 35.46067,
+        "countries": [
+            "california"
+        ]
+    },
+    {
+        "x": 45,
+        "y": 100,
+        "left": -116.71875,
+        "top": 36.597889,
+        "right": -115.3125,
+        "bottom": 35.46067,
+        "countries": [
+            "nevada",
+            "california"
+        ]
+    },
+    {
+        "x": 41,
+        "y": 101,
+        "left": -122.34375,
+        "top": 35.46067,
+        "right": -120.9375,
+        "bottom": 34.307144,
+        "countries": [
+            "california"
+        ]
+    },
+    {
+        "x": 42,
+        "y": 101,
+        "left": -120.9375,
+        "top": 35.46067,
+        "right": -119.53125,
+        "bottom": 34.307144,
+        "countries": [
+            "california"
+        ]
+    },
+    {
+        "x": 43,
+        "y": 101,
+        "left": -119.53125,
+        "top": 35.46067,
+        "right": -118.125,
+        "bottom": 34.307144,
+        "countries": [
+            "california"
+        ]
+    },
+    {
+        "x": 44,
+        "y": 101,
+        "left": -118.125,
+        "top": 35.46067,
+        "right": -116.71875,
+        "bottom": 34.307144,
+        "countries": [
+            "california"
+        ]
+    },
+    {
+        "x": 45,
+        "y": 101,
+        "left": -116.71875,
+        "top": 35.46067,
+        "right": -115.3125,
+        "bottom": 34.307144,
+        "countries": [
+            "california"
+        ]
+    },
+    {
+        "x": 42,
+        "y": 102,
+        "left": -120.9375,
+        "top": 34.307144,
+        "right": -119.53125,
+        "bottom": 33.137551,
+        "countries": [
+            "california"
+        ]
+    },
+    {
+        "x": 43,
+        "y": 102,
+        "left": -119.53125,
+        "top": 34.307144,
+        "right": -118.125,
+        "bottom": 33.137551,
+        "countries": [
+            "california"
+        ]
+    },
+    {
+        "x": 44,
+        "y": 102,
+        "left": -118.125,
+        "top": 34.307144,
+        "right": -116.71875,
+        "bottom": 33.137551,
+        "countries": [
+            "california"
+        ]
+    },
+    {
+        "x": 45,
+        "y": 102,
+        "left": -116.71875,
+        "top": 34.307144,
+        "right": -115.3125,
+        "bottom": 33.137551,
+        "countries": [
+            "california"
+        ]
+    },
+    {
+        "x": 43,
+        "y": 103,
+        "left": -119.53125,
+        "top": 33.137551,
+        "right": -118.125,
+        "bottom": 31.952162,
+        "countries": [
+            "california"
+        ]
+    }
+]

@@ -1,0 +1,255 @@
+[
+    {
+        "x": 248,
+        "y": 117,
+        "left": 168.75,
+        "top": 15.284185,
+        "right": 170.15625,
+        "bottom": 13.923404,
+        "countries": [
+            "marshall_islands"
+        ]
+    },
+    {
+        "x": 245,
+        "y": 119,
+        "left": 164.53125,
+        "top": 12.554564,
+        "right": 165.9375,
+        "bottom": 11.178402,
+        "countries": [
+            "marshall_islands"
+        ]
+    },
+    {
+        "x": 246,
+        "y": 119,
+        "left": 165.9375,
+        "top": 12.554564,
+        "right": 167.34375,
+        "bottom": 11.178402,
+        "countries": [
+            "marshall_islands"
+        ]
+    },
+    {
+        "x": 247,
+        "y": 119,
+        "left": 167.34375,
+        "top": 12.554564,
+        "right": 168.75,
+        "bottom": 11.178402,
+        "countries": [
+            "marshall_islands"
+        ]
+    },
+    {
+        "x": 248,
+        "y": 119,
+        "left": 168.75,
+        "top": 12.554564,
+        "right": 170.15625,
+        "bottom": 11.178402,
+        "countries": [
+            "marshall_islands"
+        ]
+    },
+    {
+        "x": 245,
+        "y": 120,
+        "left": 164.53125,
+        "top": 11.178402,
+        "right": 165.9375,
+        "bottom": 9.795678,
+        "countries": [
+            "marshall_islands"
+        ]
+    },
+    {
+        "x": 246,
+        "y": 120,
+        "left": 165.9375,
+        "top": 11.178402,
+        "right": 167.34375,
+        "bottom": 9.795678,
+        "countries": [
+            "marshall_islands"
+        ]
+    },
+    {
+        "x": 248,
+        "y": 120,
+        "left": 168.75,
+        "top": 11.178402,
+        "right": 170.15625,
+        "bottom": 9.795678,
+        "countries": [
+            "marshall_islands"
+        ]
+    },
+    {
+        "x": 249,
+        "y": 120,
+        "left": 170.15625,
+        "top": 11.178402,
+        "right": 171.5625,
+        "bottom": 9.795678,
+        "countries": [
+            "marshall_islands"
+        ]
+    },
+    {
+        "x": 245,
+        "y": 121,
+        "left": 164.53125,
+        "top": 9.795678,
+        "right": 165.9375,
+        "bottom": 8.407168,
+        "countries": [
+            "marshall_islands"
+        ]
+    },
+    {
+        "x": 246,
+        "y": 121,
+        "left": 165.9375,
+        "top": 9.795678,
+        "right": 167.34375,
+        "bottom": 8.407168,
+        "countries": [
+            "marshall_islands"
+        ]
+    },
+    {
+        "x": 247,
+        "y": 121,
+        "left": 167.34375,
+        "top": 9.795678,
+        "right": 168.75,
+        "bottom": 8.407168,
+        "countries": [
+            "marshall_islands"
+        ]
+    },
+    {
+        "x": 248,
+        "y": 121,
+        "left": 168.75,
+        "top": 9.795678,
+        "right": 170.15625,
+        "bottom": 8.407168,
+        "countries": [
+            "marshall_islands"
+        ]
+    },
+    {
+        "x": 249,
+        "y": 121,
+        "left": 170.15625,
+        "top": 9.795678,
+        "right": 171.5625,
+        "bottom": 8.407168,
+        "countries": [
+            "marshall_islands"
+        ]
+    },
+    {
+        "x": 247,
+        "y": 122,
+        "left": 167.34375,
+        "top": 8.407168,
+        "right": 168.75,
+        "bottom": 7.013668,
+        "countries": [
+            "marshall_islands"
+        ]
+    },
+    {
+        "x": 248,
+        "y": 122,
+        "left": 168.75,
+        "top": 8.407168,
+        "right": 170.15625,
+        "bottom": 7.013668,
+        "countries": [
+            "marshall_islands"
+        ]
+    },
+    {
+        "x": 249,
+        "y": 122,
+        "left": 170.15625,
+        "top": 8.407168,
+        "right": 171.5625,
+        "bottom": 7.013668,
+        "countries": [
+            "marshall_islands"
+        ]
+    },
+    {
+        "x": 250,
+        "y": 122,
+        "left": 171.5625,
+        "top": 8.407168,
+        "right": 172.96875,
+        "bottom": 7.013668,
+        "countries": [
+            "marshall_islands"
+        ]
+    },
+    {
+        "x": 247,
+        "y": 123,
+        "left": 167.34375,
+        "top": 7.013668,
+        "right": 168.75,
+        "bottom": 5.615986,
+        "countries": [
+            "marshall_islands"
+        ]
+    },
+    {
+        "x": 248,
+        "y": 123,
+        "left": 168.75,
+        "top": 7.013668,
+        "right": 170.15625,
+        "bottom": 5.615986,
+        "countries": [
+            "marshall_islands"
+        ]
+    },
+    {
+        "x": 250,
+        "y": 123,
+        "left": 171.5625,
+        "top": 7.013668,
+        "right": 172.96875,
+        "bottom": 5.615986,
+        "countries": [
+            "marshall_islands"
+        ]
+    },
+    {
+        "x": 247,
+        "y": 124,
+        "left": 167.34375,
+        "top": 5.615986,
+        "right": 168.75,
+        "bottom": 4.214943,
+        "countries": [
+            "marshall_islands"
+        ]
+    },
+    {
+        "x": 248,
+        "y": 124,
+        "left": 168.75,
+        "top": 5.615986,
+        "right": 170.15625,
+        "bottom": 4.214943,
+        "countries": [
+            "marshall_islands"
+        ]
+    }
+]

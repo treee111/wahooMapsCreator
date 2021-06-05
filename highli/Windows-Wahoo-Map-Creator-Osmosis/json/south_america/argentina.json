@@ -1,0 +1,2693 @@
+[
+    {
+        "x": 80,
+        "y": 143,
+        "left": -67.5,
+        "top": -20.632784,
+        "right": -66.09375,
+        "bottom": -21.943046,
+        "countries": [
+            "bolivia",
+            "argentina"
+        ]
+    },
+    {
+        "x": 81,
+        "y": 143,
+        "left": -66.09375,
+        "top": -20.632784,
+        "right": -64.6875,
+        "bottom": -21.943046,
+        "countries": [
+            "bolivia",
+            "argentina"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 144,
+        "left": -67.5,
+        "top": -21.943046,
+        "right": -66.09375,
+        "bottom": -23.241346,
+        "countries": [
+            "chile",
+            "bolivia",
+            "argentina"
+        ]
+    },
+    {
+        "x": 81,
+        "y": 144,
+        "left": -66.09375,
+        "top": -21.943046,
+        "right": -64.6875,
+        "bottom": -23.241346,
+        "countries": [
+            "bolivia",
+            "argentina"
+        ]
+    },
+    {
+        "x": 82,
+        "y": 144,
+        "left": -64.6875,
+        "top": -21.943046,
+        "right": -63.28125,
+        "bottom": -23.241346,
+        "countries": [
+            "bolivia",
+            "argentina"
+        ]
+    },
+    {
+        "x": 83,
+        "y": 144,
+        "left": -63.28125,
+        "top": -21.943046,
+        "right": -61.875,
+        "bottom": -23.241346,
+        "countries": [
+            "bolivia",
+            "argentina",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 84,
+        "y": 144,
+        "left": -61.875,
+        "top": -21.943046,
+        "right": -60.46875,
+        "bottom": -23.241346,
+        "countries": [
+            "argentina",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 145,
+        "left": -68.90625,
+        "top": -23.241346,
+        "right": -67.5,
+        "bottom": -24.527135,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 145,
+        "left": -67.5,
+        "top": -23.241346,
+        "right": -66.09375,
+        "bottom": -24.527135,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 81,
+        "y": 145,
+        "left": -66.09375,
+        "top": -23.241346,
+        "right": -64.6875,
+        "bottom": -24.527135,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 82,
+        "y": 145,
+        "left": -64.6875,
+        "top": -23.241346,
+        "right": -63.28125,
+        "bottom": -24.527135,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 83,
+        "y": 145,
+        "left": -63.28125,
+        "top": -23.241346,
+        "right": -61.875,
+        "bottom": -24.527135,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 84,
+        "y": 145,
+        "left": -61.875,
+        "top": -23.241346,
+        "right": -60.46875,
+        "bottom": -24.527135,
+        "countries": [
+            "argentina",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 85,
+        "y": 145,
+        "left": -60.46875,
+        "top": -23.241346,
+        "right": -59.0625,
+        "bottom": -24.527135,
+        "countries": [
+            "argentina",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 146,
+        "left": -68.90625,
+        "top": -24.527135,
+        "right": -67.5,
+        "bottom": -25.799891,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 146,
+        "left": -67.5,
+        "top": -24.527135,
+        "right": -66.09375,
+        "bottom": -25.799891,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 81,
+        "y": 146,
+        "left": -66.09375,
+        "top": -24.527135,
+        "right": -64.6875,
+        "bottom": -25.799891,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 82,
+        "y": 146,
+        "left": -64.6875,
+        "top": -24.527135,
+        "right": -63.28125,
+        "bottom": -25.799891,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 83,
+        "y": 146,
+        "left": -63.28125,
+        "top": -24.527135,
+        "right": -61.875,
+        "bottom": -25.799891,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 84,
+        "y": 146,
+        "left": -61.875,
+        "top": -24.527135,
+        "right": -60.46875,
+        "bottom": -25.799891,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 85,
+        "y": 146,
+        "left": -60.46875,
+        "top": -24.527135,
+        "right": -59.0625,
+        "bottom": -25.799891,
+        "countries": [
+            "argentina",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 146,
+        "left": -59.0625,
+        "top": -24.527135,
+        "right": -57.65625,
+        "bottom": -25.799891,
+        "countries": [
+            "argentina",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 87,
+        "y": 146,
+        "left": -57.65625,
+        "top": -24.527135,
+        "right": -56.25,
+        "bottom": -25.799891,
+        "countries": [
+            "argentina",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 89,
+        "y": 146,
+        "left": -54.84375,
+        "top": -24.527135,
+        "right": -53.4375,
+        "bottom": -25.799891,
+        "countries": [
+            "brazil",
+            "argentina",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 147,
+        "left": -68.90625,
+        "top": -25.799891,
+        "right": -67.5,
+        "bottom": -27.059126,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 147,
+        "left": -67.5,
+        "top": -25.799891,
+        "right": -66.09375,
+        "bottom": -27.059126,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 81,
+        "y": 147,
+        "left": -66.09375,
+        "top": -25.799891,
+        "right": -64.6875,
+        "bottom": -27.059126,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 82,
+        "y": 147,
+        "left": -64.6875,
+        "top": -25.799891,
+        "right": -63.28125,
+        "bottom": -27.059126,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 83,
+        "y": 147,
+        "left": -63.28125,
+        "top": -25.799891,
+        "right": -61.875,
+        "bottom": -27.059126,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 84,
+        "y": 147,
+        "left": -61.875,
+        "top": -25.799891,
+        "right": -60.46875,
+        "bottom": -27.059126,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 85,
+        "y": 147,
+        "left": -60.46875,
+        "top": -25.799891,
+        "right": -59.0625,
+        "bottom": -27.059126,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 147,
+        "left": -59.0625,
+        "top": -25.799891,
+        "right": -57.65625,
+        "bottom": -27.059126,
+        "countries": [
+            "argentina",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 88,
+        "y": 147,
+        "left": -56.25,
+        "top": -25.799891,
+        "right": -54.84375,
+        "bottom": -27.059126,
+        "countries": [
+            "argentina",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 89,
+        "y": 147,
+        "left": -54.84375,
+        "top": -25.799891,
+        "right": -53.4375,
+        "bottom": -27.059126,
+        "countries": [
+            "brazil",
+            "argentina",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 148,
+        "left": -70.3125,
+        "top": -27.059126,
+        "right": -68.90625,
+        "bottom": -28.304381,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 148,
+        "left": -68.90625,
+        "top": -27.059126,
+        "right": -67.5,
+        "bottom": -28.304381,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 148,
+        "left": -67.5,
+        "top": -27.059126,
+        "right": -66.09375,
+        "bottom": -28.304381,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 81,
+        "y": 148,
+        "left": -66.09375,
+        "top": -27.059126,
+        "right": -64.6875,
+        "bottom": -28.304381,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 82,
+        "y": 148,
+        "left": -64.6875,
+        "top": -27.059126,
+        "right": -63.28125,
+        "bottom": -28.304381,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 83,
+        "y": 148,
+        "left": -63.28125,
+        "top": -27.059126,
+        "right": -61.875,
+        "bottom": -28.304381,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 84,
+        "y": 148,
+        "left": -61.875,
+        "top": -27.059126,
+        "right": -60.46875,
+        "bottom": -28.304381,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 85,
+        "y": 148,
+        "left": -60.46875,
+        "top": -27.059126,
+        "right": -59.0625,
+        "bottom": -28.304381,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 148,
+        "left": -59.0625,
+        "top": -27.059126,
+        "right": -57.65625,
+        "bottom": -28.304381,
+        "countries": [
+            "argentina",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 87,
+        "y": 148,
+        "left": -57.65625,
+        "top": -27.059126,
+        "right": -56.25,
+        "bottom": -28.304381,
+        "countries": [
+            "argentina",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 88,
+        "y": 148,
+        "left": -56.25,
+        "top": -27.059126,
+        "right": -54.84375,
+        "bottom": -28.304381,
+        "countries": [
+            "brazil",
+            "argentina",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 89,
+        "y": 148,
+        "left": -54.84375,
+        "top": -27.059126,
+        "right": -53.4375,
+        "bottom": -28.304381,
+        "countries": [
+            "brazil",
+            "argentina"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 149,
+        "left": -70.3125,
+        "top": -28.304381,
+        "right": -68.90625,
+        "bottom": -29.53523,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 149,
+        "left": -68.90625,
+        "top": -28.304381,
+        "right": -67.5,
+        "bottom": -29.53523,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 149,
+        "left": -67.5,
+        "top": -28.304381,
+        "right": -66.09375,
+        "bottom": -29.53523,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 81,
+        "y": 149,
+        "left": -66.09375,
+        "top": -28.304381,
+        "right": -64.6875,
+        "bottom": -29.53523,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 82,
+        "y": 149,
+        "left": -64.6875,
+        "top": -28.304381,
+        "right": -63.28125,
+        "bottom": -29.53523,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 83,
+        "y": 149,
+        "left": -63.28125,
+        "top": -28.304381,
+        "right": -61.875,
+        "bottom": -29.53523,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 84,
+        "y": 149,
+        "left": -61.875,
+        "top": -28.304381,
+        "right": -60.46875,
+        "bottom": -29.53523,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 85,
+        "y": 149,
+        "left": -60.46875,
+        "top": -28.304381,
+        "right": -59.0625,
+        "bottom": -29.53523,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 149,
+        "left": -59.0625,
+        "top": -28.304381,
+        "right": -57.65625,
+        "bottom": -29.53523,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 87,
+        "y": 149,
+        "left": -57.65625,
+        "top": -28.304381,
+        "right": -56.25,
+        "bottom": -29.53523,
+        "countries": [
+            "brazil",
+            "argentina"
+        ]
+    },
+    {
+        "x": 88,
+        "y": 149,
+        "left": -56.25,
+        "top": -28.304381,
+        "right": -54.84375,
+        "bottom": -29.53523,
+        "countries": [
+            "brazil",
+            "argentina"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 150,
+        "left": -70.3125,
+        "top": -29.53523,
+        "right": -68.90625,
+        "bottom": -30.751278,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 150,
+        "left": -68.90625,
+        "top": -29.53523,
+        "right": -67.5,
+        "bottom": -30.751278,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 150,
+        "left": -67.5,
+        "top": -29.53523,
+        "right": -66.09375,
+        "bottom": -30.751278,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 81,
+        "y": 150,
+        "left": -66.09375,
+        "top": -29.53523,
+        "right": -64.6875,
+        "bottom": -30.751278,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 82,
+        "y": 150,
+        "left": -64.6875,
+        "top": -29.53523,
+        "right": -63.28125,
+        "bottom": -30.751278,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 83,
+        "y": 150,
+        "left": -63.28125,
+        "top": -29.53523,
+        "right": -61.875,
+        "bottom": -30.751278,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 84,
+        "y": 150,
+        "left": -61.875,
+        "top": -29.53523,
+        "right": -60.46875,
+        "bottom": -30.751278,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 85,
+        "y": 150,
+        "left": -60.46875,
+        "top": -29.53523,
+        "right": -59.0625,
+        "bottom": -30.751278,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 150,
+        "left": -59.0625,
+        "top": -29.53523,
+        "right": -57.65625,
+        "bottom": -30.751278,
+        "countries": [
+            "uruguay",
+            "argentina"
+        ]
+    },
+    {
+        "x": 87,
+        "y": 150,
+        "left": -57.65625,
+        "top": -29.53523,
+        "right": -56.25,
+        "bottom": -30.751278,
+        "countries": [
+            "brazil",
+            "uruguay",
+            "argentina"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 151,
+        "left": -71.71875,
+        "top": -30.751278,
+        "right": -70.3125,
+        "bottom": -31.952162,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 151,
+        "left": -70.3125,
+        "top": -30.751278,
+        "right": -68.90625,
+        "bottom": -31.952162,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 151,
+        "left": -68.90625,
+        "top": -30.751278,
+        "right": -67.5,
+        "bottom": -31.952162,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 151,
+        "left": -67.5,
+        "top": -30.751278,
+        "right": -66.09375,
+        "bottom": -31.952162,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 81,
+        "y": 151,
+        "left": -66.09375,
+        "top": -30.751278,
+        "right": -64.6875,
+        "bottom": -31.952162,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 82,
+        "y": 151,
+        "left": -64.6875,
+        "top": -30.751278,
+        "right": -63.28125,
+        "bottom": -31.952162,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 83,
+        "y": 151,
+        "left": -63.28125,
+        "top": -30.751278,
+        "right": -61.875,
+        "bottom": -31.952162,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 84,
+        "y": 151,
+        "left": -61.875,
+        "top": -30.751278,
+        "right": -60.46875,
+        "bottom": -31.952162,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 85,
+        "y": 151,
+        "left": -60.46875,
+        "top": -30.751278,
+        "right": -59.0625,
+        "bottom": -31.952162,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 151,
+        "left": -59.0625,
+        "top": -30.751278,
+        "right": -57.65625,
+        "bottom": -31.952162,
+        "countries": [
+            "uruguay",
+            "argentina"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 152,
+        "left": -71.71875,
+        "top": -31.952162,
+        "right": -70.3125,
+        "bottom": -33.137551,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 152,
+        "left": -70.3125,
+        "top": -31.952162,
+        "right": -68.90625,
+        "bottom": -33.137551,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 152,
+        "left": -68.90625,
+        "top": -31.952162,
+        "right": -67.5,
+        "bottom": -33.137551,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 152,
+        "left": -67.5,
+        "top": -31.952162,
+        "right": -66.09375,
+        "bottom": -33.137551,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 81,
+        "y": 152,
+        "left": -66.09375,
+        "top": -31.952162,
+        "right": -64.6875,
+        "bottom": -33.137551,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 82,
+        "y": 152,
+        "left": -64.6875,
+        "top": -31.952162,
+        "right": -63.28125,
+        "bottom": -33.137551,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 83,
+        "y": 152,
+        "left": -63.28125,
+        "top": -31.952162,
+        "right": -61.875,
+        "bottom": -33.137551,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 84,
+        "y": 152,
+        "left": -61.875,
+        "top": -31.952162,
+        "right": -60.46875,
+        "bottom": -33.137551,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 85,
+        "y": 152,
+        "left": -60.46875,
+        "top": -31.952162,
+        "right": -59.0625,
+        "bottom": -33.137551,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 152,
+        "left": -59.0625,
+        "top": -31.952162,
+        "right": -57.65625,
+        "bottom": -33.137551,
+        "countries": [
+            "uruguay",
+            "argentina"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 153,
+        "left": -70.3125,
+        "top": -33.137551,
+        "right": -68.90625,
+        "bottom": -34.307144,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 153,
+        "left": -68.90625,
+        "top": -33.137551,
+        "right": -67.5,
+        "bottom": -34.307144,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 153,
+        "left": -67.5,
+        "top": -33.137551,
+        "right": -66.09375,
+        "bottom": -34.307144,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 81,
+        "y": 153,
+        "left": -66.09375,
+        "top": -33.137551,
+        "right": -64.6875,
+        "bottom": -34.307144,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 82,
+        "y": 153,
+        "left": -64.6875,
+        "top": -33.137551,
+        "right": -63.28125,
+        "bottom": -34.307144,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 83,
+        "y": 153,
+        "left": -63.28125,
+        "top": -33.137551,
+        "right": -61.875,
+        "bottom": -34.307144,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 84,
+        "y": 153,
+        "left": -61.875,
+        "top": -33.137551,
+        "right": -60.46875,
+        "bottom": -34.307144,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 85,
+        "y": 153,
+        "left": -60.46875,
+        "top": -33.137551,
+        "right": -59.0625,
+        "bottom": -34.307144,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 153,
+        "left": -59.0625,
+        "top": -33.137551,
+        "right": -57.65625,
+        "bottom": -34.307144,
+        "countries": [
+            "uruguay",
+            "argentina"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 154,
+        "left": -71.71875,
+        "top": -34.307144,
+        "right": -70.3125,
+        "bottom": -35.46067,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 154,
+        "left": -70.3125,
+        "top": -34.307144,
+        "right": -68.90625,
+        "bottom": -35.46067,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 154,
+        "left": -68.90625,
+        "top": -34.307144,
+        "right": -67.5,
+        "bottom": -35.46067,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 154,
+        "left": -67.5,
+        "top": -34.307144,
+        "right": -66.09375,
+        "bottom": -35.46067,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 81,
+        "y": 154,
+        "left": -66.09375,
+        "top": -34.307144,
+        "right": -64.6875,
+        "bottom": -35.46067,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 82,
+        "y": 154,
+        "left": -64.6875,
+        "top": -34.307144,
+        "right": -63.28125,
+        "bottom": -35.46067,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 83,
+        "y": 154,
+        "left": -63.28125,
+        "top": -34.307144,
+        "right": -61.875,
+        "bottom": -35.46067,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 84,
+        "y": 154,
+        "left": -61.875,
+        "top": -34.307144,
+        "right": -60.46875,
+        "bottom": -35.46067,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 85,
+        "y": 154,
+        "left": -60.46875,
+        "top": -34.307144,
+        "right": -59.0625,
+        "bottom": -35.46067,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 154,
+        "left": -59.0625,
+        "top": -34.307144,
+        "right": -57.65625,
+        "bottom": -35.46067,
+        "countries": [
+            "uruguay",
+            "argentina"
+        ]
+    },
+    {
+        "x": 87,
+        "y": 154,
+        "left": -57.65625,
+        "top": -34.307144,
+        "right": -56.25,
+        "bottom": -35.46067,
+        "countries": [
+            "uruguay",
+            "argentina"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 155,
+        "left": -71.71875,
+        "top": -35.46067,
+        "right": -70.3125,
+        "bottom": -36.597889,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 155,
+        "left": -70.3125,
+        "top": -35.46067,
+        "right": -68.90625,
+        "bottom": -36.597889,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 155,
+        "left": -68.90625,
+        "top": -35.46067,
+        "right": -67.5,
+        "bottom": -36.597889,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 155,
+        "left": -67.5,
+        "top": -35.46067,
+        "right": -66.09375,
+        "bottom": -36.597889,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 81,
+        "y": 155,
+        "left": -66.09375,
+        "top": -35.46067,
+        "right": -64.6875,
+        "bottom": -36.597889,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 82,
+        "y": 155,
+        "left": -64.6875,
+        "top": -35.46067,
+        "right": -63.28125,
+        "bottom": -36.597889,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 83,
+        "y": 155,
+        "left": -63.28125,
+        "top": -35.46067,
+        "right": -61.875,
+        "bottom": -36.597889,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 84,
+        "y": 155,
+        "left": -61.875,
+        "top": -35.46067,
+        "right": -60.46875,
+        "bottom": -36.597889,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 85,
+        "y": 155,
+        "left": -60.46875,
+        "top": -35.46067,
+        "right": -59.0625,
+        "bottom": -36.597889,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 155,
+        "left": -59.0625,
+        "top": -35.46067,
+        "right": -57.65625,
+        "bottom": -36.597889,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 87,
+        "y": 155,
+        "left": -57.65625,
+        "top": -35.46067,
+        "right": -56.25,
+        "bottom": -36.597889,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 156,
+        "left": -71.71875,
+        "top": -36.597889,
+        "right": -70.3125,
+        "bottom": -37.71859,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 156,
+        "left": -70.3125,
+        "top": -36.597889,
+        "right": -68.90625,
+        "bottom": -37.71859,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 156,
+        "left": -68.90625,
+        "top": -36.597889,
+        "right": -67.5,
+        "bottom": -37.71859,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 156,
+        "left": -67.5,
+        "top": -36.597889,
+        "right": -66.09375,
+        "bottom": -37.71859,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 81,
+        "y": 156,
+        "left": -66.09375,
+        "top": -36.597889,
+        "right": -64.6875,
+        "bottom": -37.71859,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 82,
+        "y": 156,
+        "left": -64.6875,
+        "top": -36.597889,
+        "right": -63.28125,
+        "bottom": -37.71859,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 83,
+        "y": 156,
+        "left": -63.28125,
+        "top": -36.597889,
+        "right": -61.875,
+        "bottom": -37.71859,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 84,
+        "y": 156,
+        "left": -61.875,
+        "top": -36.597889,
+        "right": -60.46875,
+        "bottom": -37.71859,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 85,
+        "y": 156,
+        "left": -60.46875,
+        "top": -36.597889,
+        "right": -59.0625,
+        "bottom": -37.71859,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 156,
+        "left": -59.0625,
+        "top": -36.597889,
+        "right": -57.65625,
+        "bottom": -37.71859,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 87,
+        "y": 156,
+        "left": -57.65625,
+        "top": -36.597889,
+        "right": -56.25,
+        "bottom": -37.71859,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 157,
+        "left": -71.71875,
+        "top": -37.71859,
+        "right": -70.3125,
+        "bottom": -38.822591,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 157,
+        "left": -70.3125,
+        "top": -37.71859,
+        "right": -68.90625,
+        "bottom": -38.822591,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 157,
+        "left": -68.90625,
+        "top": -37.71859,
+        "right": -67.5,
+        "bottom": -38.822591,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 157,
+        "left": -67.5,
+        "top": -37.71859,
+        "right": -66.09375,
+        "bottom": -38.822591,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 81,
+        "y": 157,
+        "left": -66.09375,
+        "top": -37.71859,
+        "right": -64.6875,
+        "bottom": -38.822591,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 82,
+        "y": 157,
+        "left": -64.6875,
+        "top": -37.71859,
+        "right": -63.28125,
+        "bottom": -38.822591,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 83,
+        "y": 157,
+        "left": -63.28125,
+        "top": -37.71859,
+        "right": -61.875,
+        "bottom": -38.822591,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 84,
+        "y": 157,
+        "left": -61.875,
+        "top": -37.71859,
+        "right": -60.46875,
+        "bottom": -38.822591,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 85,
+        "y": 157,
+        "left": -60.46875,
+        "top": -37.71859,
+        "right": -59.0625,
+        "bottom": -38.822591,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 157,
+        "left": -59.0625,
+        "top": -37.71859,
+        "right": -57.65625,
+        "bottom": -38.822591,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 87,
+        "y": 157,
+        "left": -57.65625,
+        "top": -37.71859,
+        "right": -56.25,
+        "bottom": -38.822591,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 158,
+        "left": -73.125,
+        "top": -38.822591,
+        "right": -71.71875,
+        "bottom": -39.909736,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 158,
+        "left": -71.71875,
+        "top": -38.822591,
+        "right": -70.3125,
+        "bottom": -39.909736,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 158,
+        "left": -70.3125,
+        "top": -38.822591,
+        "right": -68.90625,
+        "bottom": -39.909736,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 158,
+        "left": -68.90625,
+        "top": -38.822591,
+        "right": -67.5,
+        "bottom": -39.909736,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 158,
+        "left": -67.5,
+        "top": -38.822591,
+        "right": -66.09375,
+        "bottom": -39.909736,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 81,
+        "y": 158,
+        "left": -66.09375,
+        "top": -38.822591,
+        "right": -64.6875,
+        "bottom": -39.909736,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 82,
+        "y": 158,
+        "left": -64.6875,
+        "top": -38.822591,
+        "right": -63.28125,
+        "bottom": -39.909736,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 83,
+        "y": 158,
+        "left": -63.28125,
+        "top": -38.822591,
+        "right": -61.875,
+        "bottom": -39.909736,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 84,
+        "y": 158,
+        "left": -61.875,
+        "top": -38.822591,
+        "right": -60.46875,
+        "bottom": -39.909736,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 85,
+        "y": 158,
+        "left": -60.46875,
+        "top": -38.822591,
+        "right": -59.0625,
+        "bottom": -39.909736,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 159,
+        "left": -73.125,
+        "top": -39.909736,
+        "right": -71.71875,
+        "bottom": -40.979898,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 159,
+        "left": -71.71875,
+        "top": -39.909736,
+        "right": -70.3125,
+        "bottom": -40.979898,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 159,
+        "left": -70.3125,
+        "top": -39.909736,
+        "right": -68.90625,
+        "bottom": -40.979898,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 159,
+        "left": -68.90625,
+        "top": -39.909736,
+        "right": -67.5,
+        "bottom": -40.979898,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 159,
+        "left": -67.5,
+        "top": -39.909736,
+        "right": -66.09375,
+        "bottom": -40.979898,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 81,
+        "y": 159,
+        "left": -66.09375,
+        "top": -39.909736,
+        "right": -64.6875,
+        "bottom": -40.979898,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 82,
+        "y": 159,
+        "left": -64.6875,
+        "top": -39.909736,
+        "right": -63.28125,
+        "bottom": -40.979898,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 83,
+        "y": 159,
+        "left": -63.28125,
+        "top": -39.909736,
+        "right": -61.875,
+        "bottom": -40.979898,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 160,
+        "left": -73.125,
+        "top": -40.979898,
+        "right": -71.71875,
+        "bottom": -42.032974,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 160,
+        "left": -71.71875,
+        "top": -40.979898,
+        "right": -70.3125,
+        "bottom": -42.032974,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 160,
+        "left": -70.3125,
+        "top": -40.979898,
+        "right": -68.90625,
+        "bottom": -42.032974,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 160,
+        "left": -68.90625,
+        "top": -40.979898,
+        "right": -67.5,
+        "bottom": -42.032974,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 160,
+        "left": -67.5,
+        "top": -40.979898,
+        "right": -66.09375,
+        "bottom": -42.032974,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 81,
+        "y": 160,
+        "left": -66.09375,
+        "top": -40.979898,
+        "right": -64.6875,
+        "bottom": -42.032974,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 82,
+        "y": 160,
+        "left": -64.6875,
+        "top": -40.979898,
+        "right": -63.28125,
+        "bottom": -42.032974,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 83,
+        "y": 160,
+        "left": -63.28125,
+        "top": -40.979898,
+        "right": -61.875,
+        "bottom": -42.032974,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 161,
+        "left": -73.125,
+        "top": -42.032974,
+        "right": -71.71875,
+        "bottom": -43.068888,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 161,
+        "left": -71.71875,
+        "top": -42.032974,
+        "right": -70.3125,
+        "bottom": -43.068888,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 161,
+        "left": -70.3125,
+        "top": -42.032974,
+        "right": -68.90625,
+        "bottom": -43.068888,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 161,
+        "left": -68.90625,
+        "top": -42.032974,
+        "right": -67.5,
+        "bottom": -43.068888,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 161,
+        "left": -67.5,
+        "top": -42.032974,
+        "right": -66.09375,
+        "bottom": -43.068888,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 81,
+        "y": 161,
+        "left": -66.09375,
+        "top": -42.032974,
+        "right": -64.6875,
+        "bottom": -43.068888,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 82,
+        "y": 161,
+        "left": -64.6875,
+        "top": -42.032974,
+        "right": -63.28125,
+        "bottom": -43.068888,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 162,
+        "left": -73.125,
+        "top": -43.068888,
+        "right": -71.71875,
+        "bottom": -44.087585,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 162,
+        "left": -71.71875,
+        "top": -43.068888,
+        "right": -70.3125,
+        "bottom": -44.087585,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 162,
+        "left": -70.3125,
+        "top": -43.068888,
+        "right": -68.90625,
+        "bottom": -44.087585,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 162,
+        "left": -68.90625,
+        "top": -43.068888,
+        "right": -67.5,
+        "bottom": -44.087585,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 162,
+        "left": -67.5,
+        "top": -43.068888,
+        "right": -66.09375,
+        "bottom": -44.087585,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 81,
+        "y": 162,
+        "left": -66.09375,
+        "top": -43.068888,
+        "right": -64.6875,
+        "bottom": -44.087585,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 82,
+        "y": 162,
+        "left": -64.6875,
+        "top": -43.068888,
+        "right": -63.28125,
+        "bottom": -44.087585,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 163,
+        "left": -73.125,
+        "top": -44.087585,
+        "right": -71.71875,
+        "bottom": -45.089036,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 163,
+        "left": -71.71875,
+        "top": -44.087585,
+        "right": -70.3125,
+        "bottom": -45.089036,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 163,
+        "left": -70.3125,
+        "top": -44.087585,
+        "right": -68.90625,
+        "bottom": -45.089036,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 163,
+        "left": -68.90625,
+        "top": -44.087585,
+        "right": -67.5,
+        "bottom": -45.089036,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 163,
+        "left": -67.5,
+        "top": -44.087585,
+        "right": -66.09375,
+        "bottom": -45.089036,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 81,
+        "y": 163,
+        "left": -66.09375,
+        "top": -44.087585,
+        "right": -64.6875,
+        "bottom": -45.089036,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 164,
+        "left": -73.125,
+        "top": -45.089036,
+        "right": -71.71875,
+        "bottom": -46.073231,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 164,
+        "left": -71.71875,
+        "top": -45.089036,
+        "right": -70.3125,
+        "bottom": -46.073231,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 164,
+        "left": -70.3125,
+        "top": -45.089036,
+        "right": -68.90625,
+        "bottom": -46.073231,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 164,
+        "left": -68.90625,
+        "top": -45.089036,
+        "right": -67.5,
+        "bottom": -46.073231,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 164,
+        "left": -67.5,
+        "top": -45.089036,
+        "right": -66.09375,
+        "bottom": -46.073231,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 81,
+        "y": 164,
+        "left": -66.09375,
+        "top": -45.089036,
+        "right": -64.6875,
+        "bottom": -46.073231,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 165,
+        "left": -73.125,
+        "top": -46.073231,
+        "right": -71.71875,
+        "bottom": -47.040182,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 165,
+        "left": -71.71875,
+        "top": -46.073231,
+        "right": -70.3125,
+        "bottom": -47.040182,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 165,
+        "left": -70.3125,
+        "top": -46.073231,
+        "right": -68.90625,
+        "bottom": -47.040182,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 165,
+        "left": -68.90625,
+        "top": -46.073231,
+        "right": -67.5,
+        "bottom": -47.040182,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 165,
+        "left": -67.5,
+        "top": -46.073231,
+        "right": -66.09375,
+        "bottom": -47.040182,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 166,
+        "left": -73.125,
+        "top": -47.040182,
+        "right": -71.71875,
+        "bottom": -47.989922,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 166,
+        "left": -71.71875,
+        "top": -47.040182,
+        "right": -70.3125,
+        "bottom": -47.989922,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 166,
+        "left": -70.3125,
+        "top": -47.040182,
+        "right": -68.90625,
+        "bottom": -47.989922,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 166,
+        "left": -68.90625,
+        "top": -47.040182,
+        "right": -67.5,
+        "bottom": -47.989922,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 166,
+        "left": -67.5,
+        "top": -47.040182,
+        "right": -66.09375,
+        "bottom": -47.989922,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 81,
+        "y": 166,
+        "left": -66.09375,
+        "top": -47.040182,
+        "right": -64.6875,
+        "bottom": -47.989922,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 167,
+        "left": -73.125,
+        "top": -47.989922,
+        "right": -71.71875,
+        "bottom": -48.922499,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 167,
+        "left": -71.71875,
+        "top": -47.989922,
+        "right": -70.3125,
+        "bottom": -48.922499,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 167,
+        "left": -70.3125,
+        "top": -47.989922,
+        "right": -68.90625,
+        "bottom": -48.922499,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 167,
+        "left": -68.90625,
+        "top": -47.989922,
+        "right": -67.5,
+        "bottom": -48.922499,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 167,
+        "left": -67.5,
+        "top": -47.989922,
+        "right": -66.09375,
+        "bottom": -48.922499,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 81,
+        "y": 167,
+        "left": -66.09375,
+        "top": -47.989922,
+        "right": -64.6875,
+        "bottom": -48.922499,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 75,
+        "y": 168,
+        "left": -74.53125,
+        "top": -48.922499,
+        "right": -73.125,
+        "bottom": -49.837982,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 168,
+        "left": -73.125,
+        "top": -48.922499,
+        "right": -71.71875,
+        "bottom": -49.837982,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 168,
+        "left": -71.71875,
+        "top": -48.922499,
+        "right": -70.3125,
+        "bottom": -49.837982,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 168,
+        "left": -70.3125,
+        "top": -48.922499,
+        "right": -68.90625,
+        "bottom": -49.837982,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 168,
+        "left": -68.90625,
+        "top": -48.922499,
+        "right": -67.5,
+        "bottom": -49.837982,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 168,
+        "left": -67.5,
+        "top": -48.922499,
+        "right": -66.09375,
+        "bottom": -49.837982,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 75,
+        "y": 169,
+        "left": -74.53125,
+        "top": -49.837982,
+        "right": -73.125,
+        "bottom": -50.736455,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 169,
+        "left": -73.125,
+        "top": -49.837982,
+        "right": -71.71875,
+        "bottom": -50.736455,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 169,
+        "left": -71.71875,
+        "top": -49.837982,
+        "right": -70.3125,
+        "bottom": -50.736455,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 169,
+        "left": -70.3125,
+        "top": -49.837982,
+        "right": -68.90625,
+        "bottom": -50.736455,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 169,
+        "left": -68.90625,
+        "top": -49.837982,
+        "right": -67.5,
+        "bottom": -50.736455,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 75,
+        "y": 170,
+        "left": -74.53125,
+        "top": -50.736455,
+        "right": -73.125,
+        "bottom": -51.618017,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 170,
+        "left": -73.125,
+        "top": -50.736455,
+        "right": -71.71875,
+        "bottom": -51.618017,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 170,
+        "left": -71.71875,
+        "top": -50.736455,
+        "right": -70.3125,
+        "bottom": -51.618017,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 170,
+        "left": -70.3125,
+        "top": -50.736455,
+        "right": -68.90625,
+        "bottom": -51.618017,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 171,
+        "left": -73.125,
+        "top": -51.618017,
+        "right": -71.71875,
+        "bottom": -52.48278,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 171,
+        "left": -71.71875,
+        "top": -51.618017,
+        "right": -70.3125,
+        "bottom": -52.48278,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 171,
+        "left": -70.3125,
+        "top": -51.618017,
+        "right": -68.90625,
+        "bottom": -52.48278,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 171,
+        "left": -68.90625,
+        "top": -51.618017,
+        "right": -67.5,
+        "bottom": -52.48278,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 172,
+        "left": -68.90625,
+        "top": -52.48278,
+        "right": -67.5,
+        "bottom": -53.330873,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 173,
+        "left": -68.90625,
+        "top": -53.330873,
+        "right": -67.5,
+        "bottom": -54.162434,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 173,
+        "left": -67.5,
+        "top": -53.330873,
+        "right": -66.09375,
+        "bottom": -54.162434,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 174,
+        "left": -68.90625,
+        "top": -54.162434,
+        "right": -67.5,
+        "bottom": -54.977614,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 174,
+        "left": -67.5,
+        "top": -54.162434,
+        "right": -66.09375,
+        "bottom": -54.977614,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 81,
+        "y": 174,
+        "left": -66.09375,
+        "top": -54.162434,
+        "right": -64.6875,
+        "bottom": -54.977614,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 82,
+        "y": 174,
+        "left": -64.6875,
+        "top": -54.162434,
+        "right": -63.28125,
+        "bottom": -54.977614,
+        "countries": [
+            "argentina"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 175,
+        "left": -67.5,
+        "top": -54.977614,
+        "right": -66.09375,
+        "bottom": -55.776573,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 81,
+        "y": 175,
+        "left": -66.09375,
+        "top": -54.977614,
+        "right": -64.6875,
+        "bottom": -55.776573,
+        "countries": [
+            "argentina"
+        ]
+    }
+]

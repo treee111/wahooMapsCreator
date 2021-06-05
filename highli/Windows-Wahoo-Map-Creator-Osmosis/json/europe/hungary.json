@@ -1,0 +1,229 @@
+[
+    {
+        "x": 140,
+        "y": 88,
+        "left": 16.875,
+        "top": 48.922499,
+        "right": 18.28125,
+        "bottom": 47.989922,
+        "countries": [
+            "slovakia",
+            "hungary",
+            "czech_republic",
+            "austria"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 89,
+        "left": 15.46875,
+        "top": 47.989922,
+        "right": 16.875,
+        "bottom": 47.040182,
+        "countries": [
+            "hungary",
+            "austria"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 89,
+        "left": 16.875,
+        "top": 47.989922,
+        "right": 18.28125,
+        "bottom": 47.040182,
+        "countries": [
+            "slovakia",
+            "hungary",
+            "austria"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 90,
+        "left": 15.46875,
+        "top": 47.040182,
+        "right": 16.875,
+        "bottom": 46.073231,
+        "countries": [
+            "hungary",
+            "croatia",
+            "slovenia",
+            "austria"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 91,
+        "left": 16.875,
+        "top": 46.073231,
+        "right": 18.28125,
+        "bottom": 45.089036,
+        "countries": [
+            "bosnia_and_herzegovina",
+            "hungary",
+            "croatia"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 91,
+        "left": 18.28125,
+        "top": 46.073231,
+        "right": 19.6875,
+        "bottom": 45.089036,
+        "countries": [
+            "bosnia_and_herzegovina",
+            "serbia",
+            "hungary",
+            "croatia"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 90,
+        "left": 16.875,
+        "top": 47.040182,
+        "right": 18.28125,
+        "bottom": 46.073231,
+        "countries": [
+            "croatia",
+            "hungary"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 88,
+        "left": 18.28125,
+        "top": 48.922499,
+        "right": 19.6875,
+        "bottom": 47.989922,
+        "countries": [
+            "slovakia",
+            "hungary"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 88,
+        "left": 19.6875,
+        "top": 48.922499,
+        "right": 21.09375,
+        "bottom": 47.989922,
+        "countries": [
+            "slovakia",
+            "hungary"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 88,
+        "left": 21.09375,
+        "top": 48.922499,
+        "right": 22.5,
+        "bottom": 47.989922,
+        "countries": [
+            "slovakia",
+            "ukraine",
+            "hungary"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 88,
+        "left": 22.5,
+        "top": 48.922499,
+        "right": 23.90625,
+        "bottom": 47.989922,
+        "countries": [
+            "romania",
+            "ukraine",
+            "hungary"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 89,
+        "left": 18.28125,
+        "top": 47.989922,
+        "right": 19.6875,
+        "bottom": 47.040182,
+        "countries": [
+            "slovakia",
+            "hungary"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 89,
+        "left": 19.6875,
+        "top": 47.989922,
+        "right": 21.09375,
+        "bottom": 47.040182,
+        "countries": [
+            "hungary"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 89,
+        "left": 21.09375,
+        "top": 47.989922,
+        "right": 22.5,
+        "bottom": 47.040182,
+        "countries": [
+            "romania",
+            "hungary"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 89,
+        "left": 22.5,
+        "top": 47.989922,
+        "right": 23.90625,
+        "bottom": 47.040182,
+        "countries": [
+            "romania",
+            "ukraine",
+            "hungary"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 90,
+        "left": 18.28125,
+        "top": 47.040182,
+        "right": 19.6875,
+        "bottom": 46.073231,
+        "countries": [
+            "serbia",
+            "hungary"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 90,
+        "left": 19.6875,
+        "top": 47.040182,
+        "right": 21.09375,
+        "bottom": 46.073231,
+        "countries": [
+            "romania",
+            "serbia",
+            "hungary"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 90,
+        "left": 21.09375,
+        "top": 47.040182,
+        "right": 22.5,
+        "bottom": 46.073231,
+        "countries": [
+            "romania",
+            "hungary"
+        ]
+    }
+]

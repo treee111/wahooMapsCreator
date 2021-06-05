@@ -1,0 +1,3566 @@
+[
+    {
+        "x": 189,
+        "y": 87,
+        "left": 85.78125,
+        "top": 49.837982,
+        "right": 87.1875,
+        "bottom": 48.922499,
+        "countries": [
+            "russia",
+            "kazakhstan",
+            "china"
+        ]
+    },
+    {
+        "x": 190,
+        "y": 87,
+        "left": 87.1875,
+        "top": 49.837982,
+        "right": 88.59375,
+        "bottom": 48.922499,
+        "countries": [
+            "russia",
+            "mongolia",
+            "kazakhstan",
+            "china"
+        ]
+    },
+    {
+        "x": 188,
+        "y": 88,
+        "left": 84.375,
+        "top": 48.922499,
+        "right": 85.78125,
+        "bottom": 47.989922,
+        "countries": [
+            "kazakhstan",
+            "china"
+        ]
+    },
+    {
+        "x": 189,
+        "y": 88,
+        "left": 85.78125,
+        "top": 48.922499,
+        "right": 87.1875,
+        "bottom": 47.989922,
+        "countries": [
+            "kazakhstan",
+            "china"
+        ]
+    },
+    {
+        "x": 187,
+        "y": 89,
+        "left": 82.96875,
+        "top": 47.989922,
+        "right": 84.375,
+        "bottom": 47.040182,
+        "countries": [
+            "kazakhstan",
+            "china"
+        ]
+    },
+    {
+        "x": 188,
+        "y": 89,
+        "left": 84.375,
+        "top": 47.989922,
+        "right": 85.78125,
+        "bottom": 47.040182,
+        "countries": [
+            "kazakhstan",
+            "china"
+        ]
+    },
+    {
+        "x": 186,
+        "y": 90,
+        "left": 81.5625,
+        "top": 47.040182,
+        "right": 82.96875,
+        "bottom": 46.073231,
+        "countries": [
+            "kazakhstan",
+            "china"
+        ]
+    },
+    {
+        "x": 187,
+        "y": 90,
+        "left": 82.96875,
+        "top": 47.040182,
+        "right": 84.375,
+        "bottom": 46.073231,
+        "countries": [
+            "kazakhstan",
+            "china"
+        ]
+    },
+    {
+        "x": 188,
+        "y": 90,
+        "left": 84.375,
+        "top": 47.040182,
+        "right": 85.78125,
+        "bottom": 46.073231,
+        "countries": [
+            "kazakhstan",
+            "china"
+        ]
+    },
+    {
+        "x": 185,
+        "y": 91,
+        "left": 80.15625,
+        "top": 46.073231,
+        "right": 81.5625,
+        "bottom": 45.089036,
+        "countries": [
+            "kazakhstan",
+            "china"
+        ]
+    },
+    {
+        "x": 186,
+        "y": 91,
+        "left": 81.5625,
+        "top": 46.073231,
+        "right": 82.96875,
+        "bottom": 45.089036,
+        "countries": [
+            "kazakhstan",
+            "china"
+        ]
+    },
+    {
+        "x": 184,
+        "y": 92,
+        "left": 78.75,
+        "top": 45.089036,
+        "right": 80.15625,
+        "bottom": 44.087585,
+        "countries": [
+            "kazakhstan",
+            "china"
+        ]
+    },
+    {
+        "x": 185,
+        "y": 92,
+        "left": 80.15625,
+        "top": 45.089036,
+        "right": 81.5625,
+        "bottom": 44.087585,
+        "countries": [
+            "kazakhstan",
+            "china"
+        ]
+    },
+    {
+        "x": 185,
+        "y": 93,
+        "left": 80.15625,
+        "top": 44.087585,
+        "right": 81.5625,
+        "bottom": 43.068888,
+        "countries": [
+            "kazakhstan",
+            "china"
+        ]
+    },
+    {
+        "x": 184,
+        "y": 94,
+        "left": 78.75,
+        "top": 43.068888,
+        "right": 80.15625,
+        "bottom": 42.032974,
+        "countries": [
+            "kazakhstan",
+            "china",
+            "kyrgyzstan"
+        ]
+    },
+    {
+        "x": 185,
+        "y": 94,
+        "left": 80.15625,
+        "top": 43.068888,
+        "right": 81.5625,
+        "bottom": 42.032974,
+        "countries": [
+            "kazakhstan",
+            "china",
+            "kyrgyzstan"
+        ]
+    },
+    {
+        "x": 176,
+        "y": 80,
+        "left": 67.5,
+        "top": 55.776573,
+        "right": 68.90625,
+        "bottom": 54.977614,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 177,
+        "y": 80,
+        "left": 68.90625,
+        "top": 55.776573,
+        "right": 70.3125,
+        "bottom": 54.977614,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 178,
+        "y": 80,
+        "left": 70.3125,
+        "top": 55.776573,
+        "right": 71.71875,
+        "bottom": 54.977614,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 172,
+        "y": 81,
+        "left": 61.875,
+        "top": 54.977614,
+        "right": 63.28125,
+        "bottom": 54.162434,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 173,
+        "y": 81,
+        "left": 63.28125,
+        "top": 54.977614,
+        "right": 64.6875,
+        "bottom": 54.162434,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 174,
+        "y": 81,
+        "left": 64.6875,
+        "top": 54.977614,
+        "right": 66.09375,
+        "bottom": 54.162434,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 175,
+        "y": 81,
+        "left": 66.09375,
+        "top": 54.977614,
+        "right": 67.5,
+        "bottom": 54.162434,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 176,
+        "y": 81,
+        "left": 67.5,
+        "top": 54.977614,
+        "right": 68.90625,
+        "bottom": 54.162434,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 177,
+        "y": 81,
+        "left": 68.90625,
+        "top": 54.977614,
+        "right": 70.3125,
+        "bottom": 54.162434,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 178,
+        "y": 81,
+        "left": 70.3125,
+        "top": 54.977614,
+        "right": 71.71875,
+        "bottom": 54.162434,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 179,
+        "y": 81,
+        "left": 71.71875,
+        "top": 54.977614,
+        "right": 73.125,
+        "bottom": 54.162434,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 181,
+        "y": 81,
+        "left": 74.53125,
+        "top": 54.977614,
+        "right": 75.9375,
+        "bottom": 54.162434,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 182,
+        "y": 81,
+        "left": 75.9375,
+        "top": 54.977614,
+        "right": 77.34375,
+        "bottom": 54.162434,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 171,
+        "y": 82,
+        "left": 60.46875,
+        "top": 54.162434,
+        "right": 61.875,
+        "bottom": 53.330873,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 172,
+        "y": 82,
+        "left": 61.875,
+        "top": 54.162434,
+        "right": 63.28125,
+        "bottom": 53.330873,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 173,
+        "y": 82,
+        "left": 63.28125,
+        "top": 54.162434,
+        "right": 64.6875,
+        "bottom": 53.330873,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 174,
+        "y": 82,
+        "left": 64.6875,
+        "top": 54.162434,
+        "right": 66.09375,
+        "bottom": 53.330873,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 175,
+        "y": 82,
+        "left": 66.09375,
+        "top": 54.162434,
+        "right": 67.5,
+        "bottom": 53.330873,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 176,
+        "y": 82,
+        "left": 67.5,
+        "top": 54.162434,
+        "right": 68.90625,
+        "bottom": 53.330873,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 177,
+        "y": 82,
+        "left": 68.90625,
+        "top": 54.162434,
+        "right": 70.3125,
+        "bottom": 53.330873,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 178,
+        "y": 82,
+        "left": 70.3125,
+        "top": 54.162434,
+        "right": 71.71875,
+        "bottom": 53.330873,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 179,
+        "y": 82,
+        "left": 71.71875,
+        "top": 54.162434,
+        "right": 73.125,
+        "bottom": 53.330873,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 180,
+        "y": 82,
+        "left": 73.125,
+        "top": 54.162434,
+        "right": 74.53125,
+        "bottom": 53.330873,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 181,
+        "y": 82,
+        "left": 74.53125,
+        "top": 54.162434,
+        "right": 75.9375,
+        "bottom": 53.330873,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 182,
+        "y": 82,
+        "left": 75.9375,
+        "top": 54.162434,
+        "right": 77.34375,
+        "bottom": 53.330873,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 183,
+        "y": 82,
+        "left": 77.34375,
+        "top": 54.162434,
+        "right": 78.75,
+        "bottom": 53.330873,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 171,
+        "y": 83,
+        "left": 60.46875,
+        "top": 53.330873,
+        "right": 61.875,
+        "bottom": 52.48278,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 172,
+        "y": 83,
+        "left": 61.875,
+        "top": 53.330873,
+        "right": 63.28125,
+        "bottom": 52.48278,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 173,
+        "y": 83,
+        "left": 63.28125,
+        "top": 53.330873,
+        "right": 64.6875,
+        "bottom": 52.48278,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 174,
+        "y": 83,
+        "left": 64.6875,
+        "top": 53.330873,
+        "right": 66.09375,
+        "bottom": 52.48278,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 175,
+        "y": 83,
+        "left": 66.09375,
+        "top": 53.330873,
+        "right": 67.5,
+        "bottom": 52.48278,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 176,
+        "y": 83,
+        "left": 67.5,
+        "top": 53.330873,
+        "right": 68.90625,
+        "bottom": 52.48278,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 177,
+        "y": 83,
+        "left": 68.90625,
+        "top": 53.330873,
+        "right": 70.3125,
+        "bottom": 52.48278,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 178,
+        "y": 83,
+        "left": 70.3125,
+        "top": 53.330873,
+        "right": 71.71875,
+        "bottom": 52.48278,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 179,
+        "y": 83,
+        "left": 71.71875,
+        "top": 53.330873,
+        "right": 73.125,
+        "bottom": 52.48278,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 180,
+        "y": 83,
+        "left": 73.125,
+        "top": 53.330873,
+        "right": 74.53125,
+        "bottom": 52.48278,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 181,
+        "y": 83,
+        "left": 74.53125,
+        "top": 53.330873,
+        "right": 75.9375,
+        "bottom": 52.48278,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 182,
+        "y": 83,
+        "left": 75.9375,
+        "top": 53.330873,
+        "right": 77.34375,
+        "bottom": 52.48278,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 183,
+        "y": 83,
+        "left": 77.34375,
+        "top": 53.330873,
+        "right": 78.75,
+        "bottom": 52.48278,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 163,
+        "y": 84,
+        "left": 49.21875,
+        "top": 52.48278,
+        "right": 50.625,
+        "bottom": 51.618017,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 164,
+        "y": 84,
+        "left": 50.625,
+        "top": 52.48278,
+        "right": 52.03125,
+        "bottom": 51.618017,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 165,
+        "y": 84,
+        "left": 52.03125,
+        "top": 52.48278,
+        "right": 53.4375,
+        "bottom": 51.618017,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 170,
+        "y": 84,
+        "left": 59.0625,
+        "top": 52.48278,
+        "right": 60.46875,
+        "bottom": 51.618017,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 171,
+        "y": 84,
+        "left": 60.46875,
+        "top": 52.48278,
+        "right": 61.875,
+        "bottom": 51.618017,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 172,
+        "y": 84,
+        "left": 61.875,
+        "top": 52.48278,
+        "right": 63.28125,
+        "bottom": 51.618017,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 173,
+        "y": 84,
+        "left": 63.28125,
+        "top": 52.48278,
+        "right": 64.6875,
+        "bottom": 51.618017,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 174,
+        "y": 84,
+        "left": 64.6875,
+        "top": 52.48278,
+        "right": 66.09375,
+        "bottom": 51.618017,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 175,
+        "y": 84,
+        "left": 66.09375,
+        "top": 52.48278,
+        "right": 67.5,
+        "bottom": 51.618017,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 176,
+        "y": 84,
+        "left": 67.5,
+        "top": 52.48278,
+        "right": 68.90625,
+        "bottom": 51.618017,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 177,
+        "y": 84,
+        "left": 68.90625,
+        "top": 52.48278,
+        "right": 70.3125,
+        "bottom": 51.618017,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 178,
+        "y": 84,
+        "left": 70.3125,
+        "top": 52.48278,
+        "right": 71.71875,
+        "bottom": 51.618017,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 179,
+        "y": 84,
+        "left": 71.71875,
+        "top": 52.48278,
+        "right": 73.125,
+        "bottom": 51.618017,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 180,
+        "y": 84,
+        "left": 73.125,
+        "top": 52.48278,
+        "right": 74.53125,
+        "bottom": 51.618017,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 181,
+        "y": 84,
+        "left": 74.53125,
+        "top": 52.48278,
+        "right": 75.9375,
+        "bottom": 51.618017,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 182,
+        "y": 84,
+        "left": 75.9375,
+        "top": 52.48278,
+        "right": 77.34375,
+        "bottom": 51.618017,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 183,
+        "y": 84,
+        "left": 77.34375,
+        "top": 52.48278,
+        "right": 78.75,
+        "bottom": 51.618017,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 184,
+        "y": 84,
+        "left": 78.75,
+        "top": 52.48278,
+        "right": 80.15625,
+        "bottom": 51.618017,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 162,
+        "y": 85,
+        "left": 47.8125,
+        "top": 51.618017,
+        "right": 49.21875,
+        "bottom": 50.736455,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 163,
+        "y": 85,
+        "left": 49.21875,
+        "top": 51.618017,
+        "right": 50.625,
+        "bottom": 50.736455,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 164,
+        "y": 85,
+        "left": 50.625,
+        "top": 51.618017,
+        "right": 52.03125,
+        "bottom": 50.736455,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 165,
+        "y": 85,
+        "left": 52.03125,
+        "top": 51.618017,
+        "right": 53.4375,
+        "bottom": 50.736455,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 166,
+        "y": 85,
+        "left": 53.4375,
+        "top": 51.618017,
+        "right": 54.84375,
+        "bottom": 50.736455,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 167,
+        "y": 85,
+        "left": 54.84375,
+        "top": 51.618017,
+        "right": 56.25,
+        "bottom": 50.736455,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 168,
+        "y": 85,
+        "left": 56.25,
+        "top": 51.618017,
+        "right": 57.65625,
+        "bottom": 50.736455,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 169,
+        "y": 85,
+        "left": 57.65625,
+        "top": 51.618017,
+        "right": 59.0625,
+        "bottom": 50.736455,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 170,
+        "y": 85,
+        "left": 59.0625,
+        "top": 51.618017,
+        "right": 60.46875,
+        "bottom": 50.736455,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 171,
+        "y": 85,
+        "left": 60.46875,
+        "top": 51.618017,
+        "right": 61.875,
+        "bottom": 50.736455,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 172,
+        "y": 85,
+        "left": 61.875,
+        "top": 51.618017,
+        "right": 63.28125,
+        "bottom": 50.736455,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 173,
+        "y": 85,
+        "left": 63.28125,
+        "top": 51.618017,
+        "right": 64.6875,
+        "bottom": 50.736455,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 174,
+        "y": 85,
+        "left": 64.6875,
+        "top": 51.618017,
+        "right": 66.09375,
+        "bottom": 50.736455,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 175,
+        "y": 85,
+        "left": 66.09375,
+        "top": 51.618017,
+        "right": 67.5,
+        "bottom": 50.736455,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 176,
+        "y": 85,
+        "left": 67.5,
+        "top": 51.618017,
+        "right": 68.90625,
+        "bottom": 50.736455,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 177,
+        "y": 85,
+        "left": 68.90625,
+        "top": 51.618017,
+        "right": 70.3125,
+        "bottom": 50.736455,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 178,
+        "y": 85,
+        "left": 70.3125,
+        "top": 51.618017,
+        "right": 71.71875,
+        "bottom": 50.736455,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 179,
+        "y": 85,
+        "left": 71.71875,
+        "top": 51.618017,
+        "right": 73.125,
+        "bottom": 50.736455,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 180,
+        "y": 85,
+        "left": 73.125,
+        "top": 51.618017,
+        "right": 74.53125,
+        "bottom": 50.736455,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 181,
+        "y": 85,
+        "left": 74.53125,
+        "top": 51.618017,
+        "right": 75.9375,
+        "bottom": 50.736455,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 182,
+        "y": 85,
+        "left": 75.9375,
+        "top": 51.618017,
+        "right": 77.34375,
+        "bottom": 50.736455,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 183,
+        "y": 85,
+        "left": 77.34375,
+        "top": 51.618017,
+        "right": 78.75,
+        "bottom": 50.736455,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 184,
+        "y": 85,
+        "left": 78.75,
+        "top": 51.618017,
+        "right": 80.15625,
+        "bottom": 50.736455,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 185,
+        "y": 85,
+        "left": 80.15625,
+        "top": 51.618017,
+        "right": 81.5625,
+        "bottom": 50.736455,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 186,
+        "y": 85,
+        "left": 81.5625,
+        "top": 51.618017,
+        "right": 82.96875,
+        "bottom": 50.736455,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 187,
+        "y": 85,
+        "left": 82.96875,
+        "top": 51.618017,
+        "right": 84.375,
+        "bottom": 50.736455,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 161,
+        "y": 86,
+        "left": 46.40625,
+        "top": 50.736455,
+        "right": 47.8125,
+        "bottom": 49.837982,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 162,
+        "y": 86,
+        "left": 47.8125,
+        "top": 50.736455,
+        "right": 49.21875,
+        "bottom": 49.837982,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 163,
+        "y": 86,
+        "left": 49.21875,
+        "top": 50.736455,
+        "right": 50.625,
+        "bottom": 49.837982,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 164,
+        "y": 86,
+        "left": 50.625,
+        "top": 50.736455,
+        "right": 52.03125,
+        "bottom": 49.837982,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 165,
+        "y": 86,
+        "left": 52.03125,
+        "top": 50.736455,
+        "right": 53.4375,
+        "bottom": 49.837982,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 166,
+        "y": 86,
+        "left": 53.4375,
+        "top": 50.736455,
+        "right": 54.84375,
+        "bottom": 49.837982,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 167,
+        "y": 86,
+        "left": 54.84375,
+        "top": 50.736455,
+        "right": 56.25,
+        "bottom": 49.837982,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 168,
+        "y": 86,
+        "left": 56.25,
+        "top": 50.736455,
+        "right": 57.65625,
+        "bottom": 49.837982,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 169,
+        "y": 86,
+        "left": 57.65625,
+        "top": 50.736455,
+        "right": 59.0625,
+        "bottom": 49.837982,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 170,
+        "y": 86,
+        "left": 59.0625,
+        "top": 50.736455,
+        "right": 60.46875,
+        "bottom": 49.837982,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 171,
+        "y": 86,
+        "left": 60.46875,
+        "top": 50.736455,
+        "right": 61.875,
+        "bottom": 49.837982,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 172,
+        "y": 86,
+        "left": 61.875,
+        "top": 50.736455,
+        "right": 63.28125,
+        "bottom": 49.837982,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 173,
+        "y": 86,
+        "left": 63.28125,
+        "top": 50.736455,
+        "right": 64.6875,
+        "bottom": 49.837982,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 174,
+        "y": 86,
+        "left": 64.6875,
+        "top": 50.736455,
+        "right": 66.09375,
+        "bottom": 49.837982,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 175,
+        "y": 86,
+        "left": 66.09375,
+        "top": 50.736455,
+        "right": 67.5,
+        "bottom": 49.837982,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 176,
+        "y": 86,
+        "left": 67.5,
+        "top": 50.736455,
+        "right": 68.90625,
+        "bottom": 49.837982,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 177,
+        "y": 86,
+        "left": 68.90625,
+        "top": 50.736455,
+        "right": 70.3125,
+        "bottom": 49.837982,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 178,
+        "y": 86,
+        "left": 70.3125,
+        "top": 50.736455,
+        "right": 71.71875,
+        "bottom": 49.837982,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 179,
+        "y": 86,
+        "left": 71.71875,
+        "top": 50.736455,
+        "right": 73.125,
+        "bottom": 49.837982,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 180,
+        "y": 86,
+        "left": 73.125,
+        "top": 50.736455,
+        "right": 74.53125,
+        "bottom": 49.837982,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 181,
+        "y": 86,
+        "left": 74.53125,
+        "top": 50.736455,
+        "right": 75.9375,
+        "bottom": 49.837982,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 182,
+        "y": 86,
+        "left": 75.9375,
+        "top": 50.736455,
+        "right": 77.34375,
+        "bottom": 49.837982,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 183,
+        "y": 86,
+        "left": 77.34375,
+        "top": 50.736455,
+        "right": 78.75,
+        "bottom": 49.837982,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 184,
+        "y": 86,
+        "left": 78.75,
+        "top": 50.736455,
+        "right": 80.15625,
+        "bottom": 49.837982,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 185,
+        "y": 86,
+        "left": 80.15625,
+        "top": 50.736455,
+        "right": 81.5625,
+        "bottom": 49.837982,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 186,
+        "y": 86,
+        "left": 81.5625,
+        "top": 50.736455,
+        "right": 82.96875,
+        "bottom": 49.837982,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 187,
+        "y": 86,
+        "left": 82.96875,
+        "top": 50.736455,
+        "right": 84.375,
+        "bottom": 49.837982,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 188,
+        "y": 86,
+        "left": 84.375,
+        "top": 50.736455,
+        "right": 85.78125,
+        "bottom": 49.837982,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 161,
+        "y": 87,
+        "left": 46.40625,
+        "top": 49.837982,
+        "right": 47.8125,
+        "bottom": 48.922499,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 162,
+        "y": 87,
+        "left": 47.8125,
+        "top": 49.837982,
+        "right": 49.21875,
+        "bottom": 48.922499,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 163,
+        "y": 87,
+        "left": 49.21875,
+        "top": 49.837982,
+        "right": 50.625,
+        "bottom": 48.922499,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 164,
+        "y": 87,
+        "left": 50.625,
+        "top": 49.837982,
+        "right": 52.03125,
+        "bottom": 48.922499,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 165,
+        "y": 87,
+        "left": 52.03125,
+        "top": 49.837982,
+        "right": 53.4375,
+        "bottom": 48.922499,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 166,
+        "y": 87,
+        "left": 53.4375,
+        "top": 49.837982,
+        "right": 54.84375,
+        "bottom": 48.922499,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 167,
+        "y": 87,
+        "left": 54.84375,
+        "top": 49.837982,
+        "right": 56.25,
+        "bottom": 48.922499,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 168,
+        "y": 87,
+        "left": 56.25,
+        "top": 49.837982,
+        "right": 57.65625,
+        "bottom": 48.922499,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 169,
+        "y": 87,
+        "left": 57.65625,
+        "top": 49.837982,
+        "right": 59.0625,
+        "bottom": 48.922499,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 170,
+        "y": 87,
+        "left": 59.0625,
+        "top": 49.837982,
+        "right": 60.46875,
+        "bottom": 48.922499,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 171,
+        "y": 87,
+        "left": 60.46875,
+        "top": 49.837982,
+        "right": 61.875,
+        "bottom": 48.922499,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 172,
+        "y": 87,
+        "left": 61.875,
+        "top": 49.837982,
+        "right": 63.28125,
+        "bottom": 48.922499,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 173,
+        "y": 87,
+        "left": 63.28125,
+        "top": 49.837982,
+        "right": 64.6875,
+        "bottom": 48.922499,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 174,
+        "y": 87,
+        "left": 64.6875,
+        "top": 49.837982,
+        "right": 66.09375,
+        "bottom": 48.922499,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 175,
+        "y": 87,
+        "left": 66.09375,
+        "top": 49.837982,
+        "right": 67.5,
+        "bottom": 48.922499,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 176,
+        "y": 87,
+        "left": 67.5,
+        "top": 49.837982,
+        "right": 68.90625,
+        "bottom": 48.922499,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 177,
+        "y": 87,
+        "left": 68.90625,
+        "top": 49.837982,
+        "right": 70.3125,
+        "bottom": 48.922499,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 178,
+        "y": 87,
+        "left": 70.3125,
+        "top": 49.837982,
+        "right": 71.71875,
+        "bottom": 48.922499,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 179,
+        "y": 87,
+        "left": 71.71875,
+        "top": 49.837982,
+        "right": 73.125,
+        "bottom": 48.922499,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 180,
+        "y": 87,
+        "left": 73.125,
+        "top": 49.837982,
+        "right": 74.53125,
+        "bottom": 48.922499,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 181,
+        "y": 87,
+        "left": 74.53125,
+        "top": 49.837982,
+        "right": 75.9375,
+        "bottom": 48.922499,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 182,
+        "y": 87,
+        "left": 75.9375,
+        "top": 49.837982,
+        "right": 77.34375,
+        "bottom": 48.922499,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 183,
+        "y": 87,
+        "left": 77.34375,
+        "top": 49.837982,
+        "right": 78.75,
+        "bottom": 48.922499,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 184,
+        "y": 87,
+        "left": 78.75,
+        "top": 49.837982,
+        "right": 80.15625,
+        "bottom": 48.922499,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 185,
+        "y": 87,
+        "left": 80.15625,
+        "top": 49.837982,
+        "right": 81.5625,
+        "bottom": 48.922499,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 186,
+        "y": 87,
+        "left": 81.5625,
+        "top": 49.837982,
+        "right": 82.96875,
+        "bottom": 48.922499,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 187,
+        "y": 87,
+        "left": 82.96875,
+        "top": 49.837982,
+        "right": 84.375,
+        "bottom": 48.922499,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 188,
+        "y": 87,
+        "left": 84.375,
+        "top": 49.837982,
+        "right": 85.78125,
+        "bottom": 48.922499,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 161,
+        "y": 88,
+        "left": 46.40625,
+        "top": 48.922499,
+        "right": 47.8125,
+        "bottom": 47.989922,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 162,
+        "y": 88,
+        "left": 47.8125,
+        "top": 48.922499,
+        "right": 49.21875,
+        "bottom": 47.989922,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 163,
+        "y": 88,
+        "left": 49.21875,
+        "top": 48.922499,
+        "right": 50.625,
+        "bottom": 47.989922,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 164,
+        "y": 88,
+        "left": 50.625,
+        "top": 48.922499,
+        "right": 52.03125,
+        "bottom": 47.989922,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 165,
+        "y": 88,
+        "left": 52.03125,
+        "top": 48.922499,
+        "right": 53.4375,
+        "bottom": 47.989922,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 166,
+        "y": 88,
+        "left": 53.4375,
+        "top": 48.922499,
+        "right": 54.84375,
+        "bottom": 47.989922,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 167,
+        "y": 88,
+        "left": 54.84375,
+        "top": 48.922499,
+        "right": 56.25,
+        "bottom": 47.989922,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 168,
+        "y": 88,
+        "left": 56.25,
+        "top": 48.922499,
+        "right": 57.65625,
+        "bottom": 47.989922,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 169,
+        "y": 88,
+        "left": 57.65625,
+        "top": 48.922499,
+        "right": 59.0625,
+        "bottom": 47.989922,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 170,
+        "y": 88,
+        "left": 59.0625,
+        "top": 48.922499,
+        "right": 60.46875,
+        "bottom": 47.989922,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 171,
+        "y": 88,
+        "left": 60.46875,
+        "top": 48.922499,
+        "right": 61.875,
+        "bottom": 47.989922,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 172,
+        "y": 88,
+        "left": 61.875,
+        "top": 48.922499,
+        "right": 63.28125,
+        "bottom": 47.989922,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 173,
+        "y": 88,
+        "left": 63.28125,
+        "top": 48.922499,
+        "right": 64.6875,
+        "bottom": 47.989922,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 174,
+        "y": 88,
+        "left": 64.6875,
+        "top": 48.922499,
+        "right": 66.09375,
+        "bottom": 47.989922,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 175,
+        "y": 88,
+        "left": 66.09375,
+        "top": 48.922499,
+        "right": 67.5,
+        "bottom": 47.989922,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 176,
+        "y": 88,
+        "left": 67.5,
+        "top": 48.922499,
+        "right": 68.90625,
+        "bottom": 47.989922,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 177,
+        "y": 88,
+        "left": 68.90625,
+        "top": 48.922499,
+        "right": 70.3125,
+        "bottom": 47.989922,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 178,
+        "y": 88,
+        "left": 70.3125,
+        "top": 48.922499,
+        "right": 71.71875,
+        "bottom": 47.989922,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 179,
+        "y": 88,
+        "left": 71.71875,
+        "top": 48.922499,
+        "right": 73.125,
+        "bottom": 47.989922,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 180,
+        "y": 88,
+        "left": 73.125,
+        "top": 48.922499,
+        "right": 74.53125,
+        "bottom": 47.989922,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 181,
+        "y": 88,
+        "left": 74.53125,
+        "top": 48.922499,
+        "right": 75.9375,
+        "bottom": 47.989922,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 182,
+        "y": 88,
+        "left": 75.9375,
+        "top": 48.922499,
+        "right": 77.34375,
+        "bottom": 47.989922,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 183,
+        "y": 88,
+        "left": 77.34375,
+        "top": 48.922499,
+        "right": 78.75,
+        "bottom": 47.989922,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 184,
+        "y": 88,
+        "left": 78.75,
+        "top": 48.922499,
+        "right": 80.15625,
+        "bottom": 47.989922,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 185,
+        "y": 88,
+        "left": 80.15625,
+        "top": 48.922499,
+        "right": 81.5625,
+        "bottom": 47.989922,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 186,
+        "y": 88,
+        "left": 81.5625,
+        "top": 48.922499,
+        "right": 82.96875,
+        "bottom": 47.989922,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 187,
+        "y": 88,
+        "left": 82.96875,
+        "top": 48.922499,
+        "right": 84.375,
+        "bottom": 47.989922,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 161,
+        "y": 89,
+        "left": 46.40625,
+        "top": 47.989922,
+        "right": 47.8125,
+        "bottom": 47.040182,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 162,
+        "y": 89,
+        "left": 47.8125,
+        "top": 47.989922,
+        "right": 49.21875,
+        "bottom": 47.040182,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 163,
+        "y": 89,
+        "left": 49.21875,
+        "top": 47.989922,
+        "right": 50.625,
+        "bottom": 47.040182,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 164,
+        "y": 89,
+        "left": 50.625,
+        "top": 47.989922,
+        "right": 52.03125,
+        "bottom": 47.040182,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 165,
+        "y": 89,
+        "left": 52.03125,
+        "top": 47.989922,
+        "right": 53.4375,
+        "bottom": 47.040182,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 166,
+        "y": 89,
+        "left": 53.4375,
+        "top": 47.989922,
+        "right": 54.84375,
+        "bottom": 47.040182,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 167,
+        "y": 89,
+        "left": 54.84375,
+        "top": 47.989922,
+        "right": 56.25,
+        "bottom": 47.040182,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 168,
+        "y": 89,
+        "left": 56.25,
+        "top": 47.989922,
+        "right": 57.65625,
+        "bottom": 47.040182,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 169,
+        "y": 89,
+        "left": 57.65625,
+        "top": 47.989922,
+        "right": 59.0625,
+        "bottom": 47.040182,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 170,
+        "y": 89,
+        "left": 59.0625,
+        "top": 47.989922,
+        "right": 60.46875,
+        "bottom": 47.040182,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 171,
+        "y": 89,
+        "left": 60.46875,
+        "top": 47.989922,
+        "right": 61.875,
+        "bottom": 47.040182,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 172,
+        "y": 89,
+        "left": 61.875,
+        "top": 47.989922,
+        "right": 63.28125,
+        "bottom": 47.040182,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 173,
+        "y": 89,
+        "left": 63.28125,
+        "top": 47.989922,
+        "right": 64.6875,
+        "bottom": 47.040182,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 174,
+        "y": 89,
+        "left": 64.6875,
+        "top": 47.989922,
+        "right": 66.09375,
+        "bottom": 47.040182,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 175,
+        "y": 89,
+        "left": 66.09375,
+        "top": 47.989922,
+        "right": 67.5,
+        "bottom": 47.040182,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 176,
+        "y": 89,
+        "left": 67.5,
+        "top": 47.989922,
+        "right": 68.90625,
+        "bottom": 47.040182,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 177,
+        "y": 89,
+        "left": 68.90625,
+        "top": 47.989922,
+        "right": 70.3125,
+        "bottom": 47.040182,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 178,
+        "y": 89,
+        "left": 70.3125,
+        "top": 47.989922,
+        "right": 71.71875,
+        "bottom": 47.040182,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 179,
+        "y": 89,
+        "left": 71.71875,
+        "top": 47.989922,
+        "right": 73.125,
+        "bottom": 47.040182,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 180,
+        "y": 89,
+        "left": 73.125,
+        "top": 47.989922,
+        "right": 74.53125,
+        "bottom": 47.040182,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 181,
+        "y": 89,
+        "left": 74.53125,
+        "top": 47.989922,
+        "right": 75.9375,
+        "bottom": 47.040182,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 182,
+        "y": 89,
+        "left": 75.9375,
+        "top": 47.989922,
+        "right": 77.34375,
+        "bottom": 47.040182,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 183,
+        "y": 89,
+        "left": 77.34375,
+        "top": 47.989922,
+        "right": 78.75,
+        "bottom": 47.040182,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 184,
+        "y": 89,
+        "left": 78.75,
+        "top": 47.989922,
+        "right": 80.15625,
+        "bottom": 47.040182,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 185,
+        "y": 89,
+        "left": 80.15625,
+        "top": 47.989922,
+        "right": 81.5625,
+        "bottom": 47.040182,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 186,
+        "y": 89,
+        "left": 81.5625,
+        "top": 47.989922,
+        "right": 82.96875,
+        "bottom": 47.040182,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 162,
+        "y": 90,
+        "left": 47.8125,
+        "top": 47.040182,
+        "right": 49.21875,
+        "bottom": 46.073231,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 163,
+        "y": 90,
+        "left": 49.21875,
+        "top": 47.040182,
+        "right": 50.625,
+        "bottom": 46.073231,
+        "countries": [
+            "russia",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 164,
+        "y": 90,
+        "left": 50.625,
+        "top": 47.040182,
+        "right": 52.03125,
+        "bottom": 46.073231,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 165,
+        "y": 90,
+        "left": 52.03125,
+        "top": 47.040182,
+        "right": 53.4375,
+        "bottom": 46.073231,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 166,
+        "y": 90,
+        "left": 53.4375,
+        "top": 47.040182,
+        "right": 54.84375,
+        "bottom": 46.073231,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 167,
+        "y": 90,
+        "left": 54.84375,
+        "top": 47.040182,
+        "right": 56.25,
+        "bottom": 46.073231,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 168,
+        "y": 90,
+        "left": 56.25,
+        "top": 47.040182,
+        "right": 57.65625,
+        "bottom": 46.073231,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 169,
+        "y": 90,
+        "left": 57.65625,
+        "top": 47.040182,
+        "right": 59.0625,
+        "bottom": 46.073231,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 170,
+        "y": 90,
+        "left": 59.0625,
+        "top": 47.040182,
+        "right": 60.46875,
+        "bottom": 46.073231,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 171,
+        "y": 90,
+        "left": 60.46875,
+        "top": 47.040182,
+        "right": 61.875,
+        "bottom": 46.073231,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 172,
+        "y": 90,
+        "left": 61.875,
+        "top": 47.040182,
+        "right": 63.28125,
+        "bottom": 46.073231,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 173,
+        "y": 90,
+        "left": 63.28125,
+        "top": 47.040182,
+        "right": 64.6875,
+        "bottom": 46.073231,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 174,
+        "y": 90,
+        "left": 64.6875,
+        "top": 47.040182,
+        "right": 66.09375,
+        "bottom": 46.073231,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 175,
+        "y": 90,
+        "left": 66.09375,
+        "top": 47.040182,
+        "right": 67.5,
+        "bottom": 46.073231,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 176,
+        "y": 90,
+        "left": 67.5,
+        "top": 47.040182,
+        "right": 68.90625,
+        "bottom": 46.073231,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 177,
+        "y": 90,
+        "left": 68.90625,
+        "top": 47.040182,
+        "right": 70.3125,
+        "bottom": 46.073231,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 178,
+        "y": 90,
+        "left": 70.3125,
+        "top": 47.040182,
+        "right": 71.71875,
+        "bottom": 46.073231,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 179,
+        "y": 90,
+        "left": 71.71875,
+        "top": 47.040182,
+        "right": 73.125,
+        "bottom": 46.073231,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 180,
+        "y": 90,
+        "left": 73.125,
+        "top": 47.040182,
+        "right": 74.53125,
+        "bottom": 46.073231,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 181,
+        "y": 90,
+        "left": 74.53125,
+        "top": 47.040182,
+        "right": 75.9375,
+        "bottom": 46.073231,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 182,
+        "y": 90,
+        "left": 75.9375,
+        "top": 47.040182,
+        "right": 77.34375,
+        "bottom": 46.073231,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 183,
+        "y": 90,
+        "left": 77.34375,
+        "top": 47.040182,
+        "right": 78.75,
+        "bottom": 46.073231,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 184,
+        "y": 90,
+        "left": 78.75,
+        "top": 47.040182,
+        "right": 80.15625,
+        "bottom": 46.073231,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 185,
+        "y": 90,
+        "left": 80.15625,
+        "top": 47.040182,
+        "right": 81.5625,
+        "bottom": 46.073231,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 164,
+        "y": 91,
+        "left": 50.625,
+        "top": 46.073231,
+        "right": 52.03125,
+        "bottom": 45.089036,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 165,
+        "y": 91,
+        "left": 52.03125,
+        "top": 46.073231,
+        "right": 53.4375,
+        "bottom": 45.089036,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 166,
+        "y": 91,
+        "left": 53.4375,
+        "top": 46.073231,
+        "right": 54.84375,
+        "bottom": 45.089036,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 167,
+        "y": 91,
+        "left": 54.84375,
+        "top": 46.073231,
+        "right": 56.25,
+        "bottom": 45.089036,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 168,
+        "y": 91,
+        "left": 56.25,
+        "top": 46.073231,
+        "right": 57.65625,
+        "bottom": 45.089036,
+        "countries": [
+            "kazakhstan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 169,
+        "y": 91,
+        "left": 57.65625,
+        "top": 46.073231,
+        "right": 59.0625,
+        "bottom": 45.089036,
+        "countries": [
+            "kazakhstan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 170,
+        "y": 91,
+        "left": 59.0625,
+        "top": 46.073231,
+        "right": 60.46875,
+        "bottom": 45.089036,
+        "countries": [
+            "kazakhstan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 171,
+        "y": 91,
+        "left": 60.46875,
+        "top": 46.073231,
+        "right": 61.875,
+        "bottom": 45.089036,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 172,
+        "y": 91,
+        "left": 61.875,
+        "top": 46.073231,
+        "right": 63.28125,
+        "bottom": 45.089036,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 173,
+        "y": 91,
+        "left": 63.28125,
+        "top": 46.073231,
+        "right": 64.6875,
+        "bottom": 45.089036,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 174,
+        "y": 91,
+        "left": 64.6875,
+        "top": 46.073231,
+        "right": 66.09375,
+        "bottom": 45.089036,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 175,
+        "y": 91,
+        "left": 66.09375,
+        "top": 46.073231,
+        "right": 67.5,
+        "bottom": 45.089036,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 176,
+        "y": 91,
+        "left": 67.5,
+        "top": 46.073231,
+        "right": 68.90625,
+        "bottom": 45.089036,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 177,
+        "y": 91,
+        "left": 68.90625,
+        "top": 46.073231,
+        "right": 70.3125,
+        "bottom": 45.089036,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 178,
+        "y": 91,
+        "left": 70.3125,
+        "top": 46.073231,
+        "right": 71.71875,
+        "bottom": 45.089036,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 179,
+        "y": 91,
+        "left": 71.71875,
+        "top": 46.073231,
+        "right": 73.125,
+        "bottom": 45.089036,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 180,
+        "y": 91,
+        "left": 73.125,
+        "top": 46.073231,
+        "right": 74.53125,
+        "bottom": 45.089036,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 181,
+        "y": 91,
+        "left": 74.53125,
+        "top": 46.073231,
+        "right": 75.9375,
+        "bottom": 45.089036,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 182,
+        "y": 91,
+        "left": 75.9375,
+        "top": 46.073231,
+        "right": 77.34375,
+        "bottom": 45.089036,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 183,
+        "y": 91,
+        "left": 77.34375,
+        "top": 46.073231,
+        "right": 78.75,
+        "bottom": 45.089036,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 184,
+        "y": 91,
+        "left": 78.75,
+        "top": 46.073231,
+        "right": 80.15625,
+        "bottom": 45.089036,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 163,
+        "y": 92,
+        "left": 49.21875,
+        "top": 45.089036,
+        "right": 50.625,
+        "bottom": 44.087585,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 164,
+        "y": 92,
+        "left": 50.625,
+        "top": 45.089036,
+        "right": 52.03125,
+        "bottom": 44.087585,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 165,
+        "y": 92,
+        "left": 52.03125,
+        "top": 45.089036,
+        "right": 53.4375,
+        "bottom": 44.087585,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 166,
+        "y": 92,
+        "left": 53.4375,
+        "top": 45.089036,
+        "right": 54.84375,
+        "bottom": 44.087585,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 167,
+        "y": 92,
+        "left": 54.84375,
+        "top": 45.089036,
+        "right": 56.25,
+        "bottom": 44.087585,
+        "countries": [
+            "kazakhstan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 168,
+        "y": 92,
+        "left": 56.25,
+        "top": 45.089036,
+        "right": 57.65625,
+        "bottom": 44.087585,
+        "countries": [
+            "kazakhstan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 171,
+        "y": 92,
+        "left": 60.46875,
+        "top": 45.089036,
+        "right": 61.875,
+        "bottom": 44.087585,
+        "countries": [
+            "kazakhstan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 172,
+        "y": 92,
+        "left": 61.875,
+        "top": 45.089036,
+        "right": 63.28125,
+        "bottom": 44.087585,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 173,
+        "y": 92,
+        "left": 63.28125,
+        "top": 45.089036,
+        "right": 64.6875,
+        "bottom": 44.087585,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 174,
+        "y": 92,
+        "left": 64.6875,
+        "top": 45.089036,
+        "right": 66.09375,
+        "bottom": 44.087585,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 175,
+        "y": 92,
+        "left": 66.09375,
+        "top": 45.089036,
+        "right": 67.5,
+        "bottom": 44.087585,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 176,
+        "y": 92,
+        "left": 67.5,
+        "top": 45.089036,
+        "right": 68.90625,
+        "bottom": 44.087585,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 177,
+        "y": 92,
+        "left": 68.90625,
+        "top": 45.089036,
+        "right": 70.3125,
+        "bottom": 44.087585,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 178,
+        "y": 92,
+        "left": 70.3125,
+        "top": 45.089036,
+        "right": 71.71875,
+        "bottom": 44.087585,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 179,
+        "y": 92,
+        "left": 71.71875,
+        "top": 45.089036,
+        "right": 73.125,
+        "bottom": 44.087585,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 180,
+        "y": 92,
+        "left": 73.125,
+        "top": 45.089036,
+        "right": 74.53125,
+        "bottom": 44.087585,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 181,
+        "y": 92,
+        "left": 74.53125,
+        "top": 45.089036,
+        "right": 75.9375,
+        "bottom": 44.087585,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 182,
+        "y": 92,
+        "left": 75.9375,
+        "top": 45.089036,
+        "right": 77.34375,
+        "bottom": 44.087585,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 183,
+        "y": 92,
+        "left": 77.34375,
+        "top": 45.089036,
+        "right": 78.75,
+        "bottom": 44.087585,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 164,
+        "y": 93,
+        "left": 50.625,
+        "top": 44.087585,
+        "right": 52.03125,
+        "bottom": 43.068888,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 165,
+        "y": 93,
+        "left": 52.03125,
+        "top": 44.087585,
+        "right": 53.4375,
+        "bottom": 43.068888,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 166,
+        "y": 93,
+        "left": 53.4375,
+        "top": 44.087585,
+        "right": 54.84375,
+        "bottom": 43.068888,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 167,
+        "y": 93,
+        "left": 54.84375,
+        "top": 44.087585,
+        "right": 56.25,
+        "bottom": 43.068888,
+        "countries": [
+            "kazakhstan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 171,
+        "y": 93,
+        "left": 60.46875,
+        "top": 44.087585,
+        "right": 61.875,
+        "bottom": 43.068888,
+        "countries": [
+            "kazakhstan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 172,
+        "y": 93,
+        "left": 61.875,
+        "top": 44.087585,
+        "right": 63.28125,
+        "bottom": 43.068888,
+        "countries": [
+            "kazakhstan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 173,
+        "y": 93,
+        "left": 63.28125,
+        "top": 44.087585,
+        "right": 64.6875,
+        "bottom": 43.068888,
+        "countries": [
+            "kazakhstan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 174,
+        "y": 93,
+        "left": 64.6875,
+        "top": 44.087585,
+        "right": 66.09375,
+        "bottom": 43.068888,
+        "countries": [
+            "kazakhstan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 175,
+        "y": 93,
+        "left": 66.09375,
+        "top": 44.087585,
+        "right": 67.5,
+        "bottom": 43.068888,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 176,
+        "y": 93,
+        "left": 67.5,
+        "top": 44.087585,
+        "right": 68.90625,
+        "bottom": 43.068888,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 177,
+        "y": 93,
+        "left": 68.90625,
+        "top": 44.087585,
+        "right": 70.3125,
+        "bottom": 43.068888,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 178,
+        "y": 93,
+        "left": 70.3125,
+        "top": 44.087585,
+        "right": 71.71875,
+        "bottom": 43.068888,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 179,
+        "y": 93,
+        "left": 71.71875,
+        "top": 44.087585,
+        "right": 73.125,
+        "bottom": 43.068888,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 180,
+        "y": 93,
+        "left": 73.125,
+        "top": 44.087585,
+        "right": 74.53125,
+        "bottom": 43.068888,
+        "countries": [
+            "kazakhstan",
+            "kyrgyzstan"
+        ]
+    },
+    {
+        "x": 181,
+        "y": 93,
+        "left": 74.53125,
+        "top": 44.087585,
+        "right": 75.9375,
+        "bottom": 43.068888,
+        "countries": [
+            "kazakhstan",
+            "kyrgyzstan"
+        ]
+    },
+    {
+        "x": 182,
+        "y": 93,
+        "left": 75.9375,
+        "top": 44.087585,
+        "right": 77.34375,
+        "bottom": 43.068888,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 183,
+        "y": 93,
+        "left": 77.34375,
+        "top": 44.087585,
+        "right": 78.75,
+        "bottom": 43.068888,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 184,
+        "y": 93,
+        "left": 78.75,
+        "top": 44.087585,
+        "right": 80.15625,
+        "bottom": 43.068888,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 164,
+        "y": 94,
+        "left": 50.625,
+        "top": 43.068888,
+        "right": 52.03125,
+        "bottom": 42.032974,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 165,
+        "y": 94,
+        "left": 52.03125,
+        "top": 43.068888,
+        "right": 53.4375,
+        "bottom": 42.032974,
+        "countries": [
+            "turkmenistan",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 166,
+        "y": 94,
+        "left": 53.4375,
+        "top": 43.068888,
+        "right": 54.84375,
+        "bottom": 42.032974,
+        "countries": [
+            "turkmenistan",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 167,
+        "y": 94,
+        "left": 54.84375,
+        "top": 43.068888,
+        "right": 56.25,
+        "bottom": 42.032974,
+        "countries": [
+            "kazakhstan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 174,
+        "y": 94,
+        "left": 64.6875,
+        "top": 43.068888,
+        "right": 66.09375,
+        "bottom": 42.032974,
+        "countries": [
+            "kazakhstan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 175,
+        "y": 94,
+        "left": 66.09375,
+        "top": 43.068888,
+        "right": 67.5,
+        "bottom": 42.032974,
+        "countries": [
+            "kazakhstan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 176,
+        "y": 94,
+        "left": 67.5,
+        "top": 43.068888,
+        "right": 68.90625,
+        "bottom": 42.032974,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 177,
+        "y": 94,
+        "left": 68.90625,
+        "top": 43.068888,
+        "right": 70.3125,
+        "bottom": 42.032974,
+        "countries": [
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 178,
+        "y": 94,
+        "left": 70.3125,
+        "top": 43.068888,
+        "right": 71.71875,
+        "bottom": 42.032974,
+        "countries": [
+            "kazakhstan",
+            "uzbekistan",
+            "kyrgyzstan"
+        ]
+    },
+    {
+        "x": 179,
+        "y": 94,
+        "left": 71.71875,
+        "top": 43.068888,
+        "right": 73.125,
+        "bottom": 42.032974,
+        "countries": [
+            "kazakhstan",
+            "kyrgyzstan"
+        ]
+    },
+    {
+        "x": 180,
+        "y": 94,
+        "left": 73.125,
+        "top": 43.068888,
+        "right": 74.53125,
+        "bottom": 42.032974,
+        "countries": [
+            "kazakhstan",
+            "kyrgyzstan"
+        ]
+    },
+    {
+        "x": 181,
+        "y": 94,
+        "left": 74.53125,
+        "top": 43.068888,
+        "right": 75.9375,
+        "bottom": 42.032974,
+        "countries": [
+            "kazakhstan",
+            "kyrgyzstan"
+        ]
+    },
+    {
+        "x": 182,
+        "y": 94,
+        "left": 75.9375,
+        "top": 43.068888,
+        "right": 77.34375,
+        "bottom": 42.032974,
+        "countries": [
+            "kazakhstan",
+            "kyrgyzstan"
+        ]
+    },
+    {
+        "x": 183,
+        "y": 94,
+        "left": 77.34375,
+        "top": 43.068888,
+        "right": 78.75,
+        "bottom": 42.032974,
+        "countries": [
+            "kazakhstan",
+            "kyrgyzstan"
+        ]
+    },
+    {
+        "x": 165,
+        "y": 95,
+        "left": 52.03125,
+        "top": 42.032974,
+        "right": 53.4375,
+        "bottom": 40.979898,
+        "countries": [
+            "turkmenistan",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 166,
+        "y": 95,
+        "left": 53.4375,
+        "top": 42.032974,
+        "right": 54.84375,
+        "bottom": 40.979898,
+        "countries": [
+            "turkmenistan",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 167,
+        "y": 95,
+        "left": 54.84375,
+        "top": 42.032974,
+        "right": 56.25,
+        "bottom": 40.979898,
+        "countries": [
+            "turkmenistan",
+            "kazakhstan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 174,
+        "y": 95,
+        "left": 64.6875,
+        "top": 42.032974,
+        "right": 66.09375,
+        "bottom": 40.979898,
+        "countries": [
+            "kazakhstan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 175,
+        "y": 95,
+        "left": 66.09375,
+        "top": 42.032974,
+        "right": 67.5,
+        "bottom": 40.979898,
+        "countries": [
+            "kazakhstan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 176,
+        "y": 95,
+        "left": 67.5,
+        "top": 42.032974,
+        "right": 68.90625,
+        "bottom": 40.979898,
+        "countries": [
+            "kazakhstan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 177,
+        "y": 95,
+        "left": 68.90625,
+        "top": 42.032974,
+        "right": 70.3125,
+        "bottom": 40.979898,
+        "countries": [
+            "kazakhstan",
+            "uzbekistan",
+            "kyrgyzstan"
+        ]
+    },
+    {
+        "x": 178,
+        "y": 95,
+        "left": 70.3125,
+        "top": 42.032974,
+        "right": 71.71875,
+        "bottom": 40.979898,
+        "countries": [
+            "kazakhstan",
+            "tajikistan",
+            "uzbekistan",
+            "kyrgyzstan"
+        ]
+    },
+    {
+        "x": 176,
+        "y": 96,
+        "left": 67.5,
+        "top": 40.979898,
+        "right": 68.90625,
+        "bottom": 39.909736,
+        "countries": [
+            "kazakhstan",
+            "tajikistan",
+            "uzbekistan"
+        ]
+    }
+]

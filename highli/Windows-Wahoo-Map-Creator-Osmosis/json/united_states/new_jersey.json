@@ -1,0 +1,77 @@
+[
+    {
+        "x": 75,
+        "y": 95,
+        "left": -74.53125,
+        "top": 42.032974,
+        "right": -73.125,
+        "bottom": 40.979898,
+        "countries": [
+            "connecticut",
+            "new_jersey",
+            "new_york"
+        ]
+    },
+    {
+        "x": 74,
+        "y": 97,
+        "left": -75.9375,
+        "top": 39.909736,
+        "right": -74.53125,
+        "bottom": 38.822591,
+        "countries": [
+            "maryland",
+            "pennsylvania",
+            "new_jersey",
+            "delaware"
+        ]
+    },
+    {
+        "x": 74,
+        "y": 95,
+        "left": -75.9375,
+        "top": 42.032974,
+        "right": -74.53125,
+        "bottom": 40.979898,
+        "countries": [
+            "pennsylvania",
+            "new_jersey",
+            "new_york"
+        ]
+    },
+    {
+        "x": 74,
+        "y": 96,
+        "left": -75.9375,
+        "top": 40.979898,
+        "right": -74.53125,
+        "bottom": 39.909736,
+        "countries": [
+            "pennsylvania",
+            "new_jersey"
+        ]
+    },
+    {
+        "x": 75,
+        "y": 96,
+        "left": -74.53125,
+        "top": 40.979898,
+        "right": -73.125,
+        "bottom": 39.909736,
+        "countries": [
+            "new_jersey",
+            "new_york"
+        ]
+    },
+    {
+        "x": 75,
+        "y": 97,
+        "left": -74.53125,
+        "top": 39.909736,
+        "right": -73.125,
+        "bottom": 38.822591,
+        "countries": [
+            "new_jersey"
+        ]
+    }
+]

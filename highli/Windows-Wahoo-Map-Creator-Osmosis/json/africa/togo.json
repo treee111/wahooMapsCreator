@@ -1,0 +1,105 @@
+[
+    {
+        "x": 128,
+        "y": 120,
+        "left": 0.0,
+        "top": 11.178402,
+        "right": 1.40625,
+        "bottom": 9.795678,
+        "countries": [
+            "benin",
+            "togo",
+            "burkina_faso",
+            "ghana"
+        ]
+    },
+    {
+        "x": 128,
+        "y": 121,
+        "left": 0.0,
+        "top": 9.795678,
+        "right": 1.40625,
+        "bottom": 8.407168,
+        "countries": [
+            "benin",
+            "togo",
+            "ghana"
+        ]
+    },
+    {
+        "x": 129,
+        "y": 121,
+        "left": 1.40625,
+        "top": 9.795678,
+        "right": 2.8125,
+        "bottom": 8.407168,
+        "countries": [
+            "benin",
+            "togo",
+            "nigeria"
+        ]
+    },
+    {
+        "x": 129,
+        "y": 122,
+        "left": 1.40625,
+        "top": 8.407168,
+        "right": 2.8125,
+        "bottom": 7.013668,
+        "countries": [
+            "benin",
+            "togo",
+            "nigeria"
+        ]
+    },
+    {
+        "x": 129,
+        "y": 123,
+        "left": 1.40625,
+        "top": 7.013668,
+        "right": 2.8125,
+        "bottom": 5.615986,
+        "countries": [
+            "benin",
+            "togo",
+            "nigeria"
+        ]
+    },
+    {
+        "x": 127,
+        "y": 120,
+        "left": -1.40625,
+        "top": 11.178402,
+        "right": 0.0,
+        "bottom": 9.795678,
+        "countries": [
+            "togo",
+            "burkina_faso",
+            "ghana"
+        ]
+    },
+    {
+        "x": 128,
+        "y": 122,
+        "left": 0.0,
+        "top": 8.407168,
+        "right": 1.40625,
+        "bottom": 7.013668,
+        "countries": [
+            "togo",
+            "ghana"
+        ]
+    },
+    {
+        "x": 128,
+        "y": 123,
+        "left": 0.0,
+        "top": 7.013668,
+        "right": 1.40625,
+        "bottom": 5.615986,
+        "countries": [
+            "togo",
+            "ghana"
+        ]
+    }
+]

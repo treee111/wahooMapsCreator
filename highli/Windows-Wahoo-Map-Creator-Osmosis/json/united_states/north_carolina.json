@@ -1,0 +1,197 @@
+[
+    {
+        "x": 68,
+        "y": 101,
+        "left": -84.375,
+        "top": 35.46067,
+        "right": -82.96875,
+        "bottom": 34.307144,
+        "countries": [
+            "georgia",
+            "north_carolina",
+            "tennessee",
+            "south_carolina"
+        ]
+    },
+    {
+        "x": 69,
+        "y": 101,
+        "left": -82.96875,
+        "top": 35.46067,
+        "right": -81.5625,
+        "bottom": 34.307144,
+        "countries": [
+            "georgia",
+            "north_carolina",
+            "south_carolina"
+        ]
+    },
+    {
+        "x": 68,
+        "y": 100,
+        "left": -84.375,
+        "top": 36.597889,
+        "right": -82.96875,
+        "bottom": 35.46067,
+        "countries": [
+            "north_carolina",
+            "tennessee",
+            "virginia",
+            "kentucky"
+        ]
+    },
+    {
+        "x": 69,
+        "y": 100,
+        "left": -82.96875,
+        "top": 36.597889,
+        "right": -81.5625,
+        "bottom": 35.46067,
+        "countries": [
+            "north_carolina",
+            "tennessee",
+            "virginia"
+        ]
+    },
+    {
+        "x": 70,
+        "y": 100,
+        "left": -81.5625,
+        "top": 36.597889,
+        "right": -80.15625,
+        "bottom": 35.46067,
+        "countries": [
+            "north_carolina",
+            "virginia"
+        ]
+    },
+    {
+        "x": 71,
+        "y": 100,
+        "left": -80.15625,
+        "top": 36.597889,
+        "right": -78.75,
+        "bottom": 35.46067,
+        "countries": [
+            "north_carolina",
+            "virginia"
+        ]
+    },
+    {
+        "x": 72,
+        "y": 100,
+        "left": -78.75,
+        "top": 36.597889,
+        "right": -77.34375,
+        "bottom": 35.46067,
+        "countries": [
+            "north_carolina",
+            "virginia"
+        ]
+    },
+    {
+        "x": 73,
+        "y": 100,
+        "left": -77.34375,
+        "top": 36.597889,
+        "right": -75.9375,
+        "bottom": 35.46067,
+        "countries": [
+            "north_carolina",
+            "virginia"
+        ]
+    },
+    {
+        "x": 74,
+        "y": 100,
+        "left": -75.9375,
+        "top": 36.597889,
+        "right": -74.53125,
+        "bottom": 35.46067,
+        "countries": [
+            "north_carolina",
+            "virginia"
+        ]
+    },
+    {
+        "x": 70,
+        "y": 101,
+        "left": -81.5625,
+        "top": 35.46067,
+        "right": -80.15625,
+        "bottom": 34.307144,
+        "countries": [
+            "north_carolina",
+            "south_carolina"
+        ]
+    },
+    {
+        "x": 71,
+        "y": 101,
+        "left": -80.15625,
+        "top": 35.46067,
+        "right": -78.75,
+        "bottom": 34.307144,
+        "countries": [
+            "north_carolina",
+            "south_carolina"
+        ]
+    },
+    {
+        "x": 72,
+        "y": 101,
+        "left": -78.75,
+        "top": 35.46067,
+        "right": -77.34375,
+        "bottom": 34.307144,
+        "countries": [
+            "north_carolina"
+        ]
+    },
+    {
+        "x": 73,
+        "y": 101,
+        "left": -77.34375,
+        "top": 35.46067,
+        "right": -75.9375,
+        "bottom": 34.307144,
+        "countries": [
+            "north_carolina"
+        ]
+    },
+    {
+        "x": 74,
+        "y": 101,
+        "left": -75.9375,
+        "top": 35.46067,
+        "right": -74.53125,
+        "bottom": 34.307144,
+        "countries": [
+            "north_carolina"
+        ]
+    },
+    {
+        "x": 71,
+        "y": 102,
+        "left": -80.15625,
+        "top": 34.307144,
+        "right": -78.75,
+        "bottom": 33.137551,
+        "countries": [
+            "north_carolina",
+            "south_carolina"
+        ]
+    },
+    {
+        "x": 72,
+        "y": 102,
+        "left": -78.75,
+        "top": 34.307144,
+        "right": -77.34375,
+        "bottom": 33.137551,
+        "countries": [
+            "north_carolina",
+            "south_carolina"
+        ]
+    }
+]

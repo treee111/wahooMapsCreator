@@ -1,0 +1,709 @@
+[
+    {
+        "x": 136,
+        "y": 140,
+        "left": 11.25,
+        "top": -16.636192,
+        "right": 12.65625,
+        "bottom": -17.978733,
+        "countries": [
+            "namibia",
+            "angola"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 140,
+        "left": 12.65625,
+        "top": -16.636192,
+        "right": 14.0625,
+        "bottom": -17.978733,
+        "countries": [
+            "namibia",
+            "angola"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 140,
+        "left": 14.0625,
+        "top": -16.636192,
+        "right": 15.46875,
+        "bottom": -17.978733,
+        "countries": [
+            "namibia",
+            "angola"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 140,
+        "left": 15.46875,
+        "top": -16.636192,
+        "right": 16.875,
+        "bottom": -17.978733,
+        "countries": [
+            "namibia",
+            "angola"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 140,
+        "left": 16.875,
+        "top": -16.636192,
+        "right": 18.28125,
+        "bottom": -17.978733,
+        "countries": [
+            "namibia",
+            "angola"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 140,
+        "left": 18.28125,
+        "top": -16.636192,
+        "right": 19.6875,
+        "bottom": -17.978733,
+        "countries": [
+            "namibia",
+            "angola"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 140,
+        "left": 19.6875,
+        "top": -16.636192,
+        "right": 21.09375,
+        "bottom": -17.978733,
+        "countries": [
+            "namibia",
+            "angola"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 140,
+        "left": 21.09375,
+        "top": -16.636192,
+        "right": 22.5,
+        "bottom": -17.978733,
+        "countries": [
+            "zambia",
+            "namibia",
+            "angola"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 140,
+        "left": 22.5,
+        "top": -16.636192,
+        "right": 23.90625,
+        "bottom": -17.978733,
+        "countries": [
+            "zambia",
+            "namibia",
+            "angola"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 141,
+        "left": 19.6875,
+        "top": -17.978733,
+        "right": 21.09375,
+        "bottom": -19.311143,
+        "countries": [
+            "botswana",
+            "namibia",
+            "angola"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 141,
+        "left": 21.09375,
+        "top": -17.978733,
+        "right": 22.5,
+        "bottom": -19.311143,
+        "countries": [
+            "botswana",
+            "namibia",
+            "angola"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 140,
+        "left": 23.90625,
+        "top": -16.636192,
+        "right": 25.3125,
+        "bottom": -17.978733,
+        "countries": [
+            "zambia",
+            "botswana",
+            "zimbabwe",
+            "namibia"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 141,
+        "left": 22.5,
+        "top": -17.978733,
+        "right": 23.90625,
+        "bottom": -19.311143,
+        "countries": [
+            "botswana",
+            "namibia"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 141,
+        "left": 23.90625,
+        "top": -17.978733,
+        "right": 25.3125,
+        "bottom": -19.311143,
+        "countries": [
+            "botswana",
+            "zimbabwe",
+            "namibia"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 142,
+        "left": 19.6875,
+        "top": -19.311143,
+        "right": 21.09375,
+        "bottom": -20.632784,
+        "countries": [
+            "botswana",
+            "namibia"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 143,
+        "left": 19.6875,
+        "top": -20.632784,
+        "right": 21.09375,
+        "bottom": -21.943046,
+        "countries": [
+            "botswana",
+            "namibia"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 144,
+        "left": 19.6875,
+        "top": -21.943046,
+        "right": 21.09375,
+        "bottom": -23.241346,
+        "countries": [
+            "botswana",
+            "namibia"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 145,
+        "left": 19.6875,
+        "top": -23.241346,
+        "right": 21.09375,
+        "bottom": -24.527135,
+        "countries": [
+            "botswana",
+            "namibia"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 146,
+        "left": 19.6875,
+        "top": -24.527135,
+        "right": 21.09375,
+        "bottom": -25.799891,
+        "countries": [
+            "botswana",
+            "south_africa",
+            "namibia"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 147,
+        "left": 19.6875,
+        "top": -25.799891,
+        "right": 21.09375,
+        "bottom": -27.059126,
+        "countries": [
+            "botswana",
+            "south_africa",
+            "namibia"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 141,
+        "left": 11.25,
+        "top": -17.978733,
+        "right": 12.65625,
+        "bottom": -19.311143,
+        "countries": [
+            "namibia"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 141,
+        "left": 12.65625,
+        "top": -17.978733,
+        "right": 14.0625,
+        "bottom": -19.311143,
+        "countries": [
+            "namibia"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 141,
+        "left": 14.0625,
+        "top": -17.978733,
+        "right": 15.46875,
+        "bottom": -19.311143,
+        "countries": [
+            "namibia"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 141,
+        "left": 15.46875,
+        "top": -17.978733,
+        "right": 16.875,
+        "bottom": -19.311143,
+        "countries": [
+            "namibia"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 141,
+        "left": 16.875,
+        "top": -17.978733,
+        "right": 18.28125,
+        "bottom": -19.311143,
+        "countries": [
+            "namibia"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 141,
+        "left": 18.28125,
+        "top": -17.978733,
+        "right": 19.6875,
+        "bottom": -19.311143,
+        "countries": [
+            "namibia"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 142,
+        "left": 12.65625,
+        "top": -19.311143,
+        "right": 14.0625,
+        "bottom": -20.632784,
+        "countries": [
+            "namibia"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 142,
+        "left": 14.0625,
+        "top": -19.311143,
+        "right": 15.46875,
+        "bottom": -20.632784,
+        "countries": [
+            "namibia"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 142,
+        "left": 15.46875,
+        "top": -19.311143,
+        "right": 16.875,
+        "bottom": -20.632784,
+        "countries": [
+            "namibia"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 142,
+        "left": 16.875,
+        "top": -19.311143,
+        "right": 18.28125,
+        "bottom": -20.632784,
+        "countries": [
+            "namibia"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 142,
+        "left": 18.28125,
+        "top": -19.311143,
+        "right": 19.6875,
+        "bottom": -20.632784,
+        "countries": [
+            "namibia"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 143,
+        "left": 12.65625,
+        "top": -20.632784,
+        "right": 14.0625,
+        "bottom": -21.943046,
+        "countries": [
+            "namibia"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 143,
+        "left": 14.0625,
+        "top": -20.632784,
+        "right": 15.46875,
+        "bottom": -21.943046,
+        "countries": [
+            "namibia"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 143,
+        "left": 15.46875,
+        "top": -20.632784,
+        "right": 16.875,
+        "bottom": -21.943046,
+        "countries": [
+            "namibia"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 143,
+        "left": 16.875,
+        "top": -20.632784,
+        "right": 18.28125,
+        "bottom": -21.943046,
+        "countries": [
+            "namibia"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 143,
+        "left": 18.28125,
+        "top": -20.632784,
+        "right": 19.6875,
+        "bottom": -21.943046,
+        "countries": [
+            "namibia"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 144,
+        "left": 14.0625,
+        "top": -21.943046,
+        "right": 15.46875,
+        "bottom": -23.241346,
+        "countries": [
+            "namibia"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 144,
+        "left": 15.46875,
+        "top": -21.943046,
+        "right": 16.875,
+        "bottom": -23.241346,
+        "countries": [
+            "namibia"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 144,
+        "left": 16.875,
+        "top": -21.943046,
+        "right": 18.28125,
+        "bottom": -23.241346,
+        "countries": [
+            "namibia"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 144,
+        "left": 18.28125,
+        "top": -21.943046,
+        "right": 19.6875,
+        "bottom": -23.241346,
+        "countries": [
+            "namibia"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 145,
+        "left": 14.0625,
+        "top": -23.241346,
+        "right": 15.46875,
+        "bottom": -24.527135,
+        "countries": [
+            "namibia"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 145,
+        "left": 15.46875,
+        "top": -23.241346,
+        "right": 16.875,
+        "bottom": -24.527135,
+        "countries": [
+            "namibia"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 145,
+        "left": 16.875,
+        "top": -23.241346,
+        "right": 18.28125,
+        "bottom": -24.527135,
+        "countries": [
+            "namibia"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 145,
+        "left": 18.28125,
+        "top": -23.241346,
+        "right": 19.6875,
+        "bottom": -24.527135,
+        "countries": [
+            "namibia"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 146,
+        "left": 14.0625,
+        "top": -24.527135,
+        "right": 15.46875,
+        "bottom": -25.799891,
+        "countries": [
+            "namibia"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 146,
+        "left": 15.46875,
+        "top": -24.527135,
+        "right": 16.875,
+        "bottom": -25.799891,
+        "countries": [
+            "namibia"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 146,
+        "left": 16.875,
+        "top": -24.527135,
+        "right": 18.28125,
+        "bottom": -25.799891,
+        "countries": [
+            "namibia"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 146,
+        "left": 18.28125,
+        "top": -24.527135,
+        "right": 19.6875,
+        "bottom": -25.799891,
+        "countries": [
+            "namibia"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 147,
+        "left": 14.0625,
+        "top": -25.799891,
+        "right": 15.46875,
+        "bottom": -27.059126,
+        "countries": [
+            "namibia"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 147,
+        "left": 15.46875,
+        "top": -25.799891,
+        "right": 16.875,
+        "bottom": -27.059126,
+        "countries": [
+            "namibia"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 147,
+        "left": 16.875,
+        "top": -25.799891,
+        "right": 18.28125,
+        "bottom": -27.059126,
+        "countries": [
+            "namibia"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 147,
+        "left": 18.28125,
+        "top": -25.799891,
+        "right": 19.6875,
+        "bottom": -27.059126,
+        "countries": [
+            "namibia"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 148,
+        "left": 14.0625,
+        "top": -27.059126,
+        "right": 15.46875,
+        "bottom": -28.304381,
+        "countries": [
+            "namibia"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 148,
+        "left": 15.46875,
+        "top": -27.059126,
+        "right": 16.875,
+        "bottom": -28.304381,
+        "countries": [
+            "south_africa",
+            "namibia"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 148,
+        "left": 16.875,
+        "top": -27.059126,
+        "right": 18.28125,
+        "bottom": -28.304381,
+        "countries": [
+            "south_africa",
+            "namibia"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 148,
+        "left": 18.28125,
+        "top": -27.059126,
+        "right": 19.6875,
+        "bottom": -28.304381,
+        "countries": [
+            "namibia"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 148,
+        "left": 19.6875,
+        "top": -27.059126,
+        "right": 21.09375,
+        "bottom": -28.304381,
+        "countries": [
+            "south_africa",
+            "namibia"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 149,
+        "left": 15.46875,
+        "top": -28.304381,
+        "right": 16.875,
+        "bottom": -29.53523,
+        "countries": [
+            "south_africa",
+            "namibia"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 149,
+        "left": 16.875,
+        "top": -28.304381,
+        "right": 18.28125,
+        "bottom": -29.53523,
+        "countries": [
+            "south_africa",
+            "namibia"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 149,
+        "left": 18.28125,
+        "top": -28.304381,
+        "right": 19.6875,
+        "bottom": -29.53523,
+        "countries": [
+            "south_africa",
+            "namibia"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 149,
+        "left": 19.6875,
+        "top": -28.304381,
+        "right": 21.09375,
+        "bottom": -29.53523,
+        "countries": [
+            "south_africa",
+            "namibia"
+        ]
+    }
+]

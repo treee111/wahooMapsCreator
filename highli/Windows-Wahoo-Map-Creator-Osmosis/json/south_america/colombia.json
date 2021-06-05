@@ -1,0 +1,906 @@
+[
+    {
+        "x": 72,
+        "y": 121,
+        "left": -78.75,
+        "top": 9.795678,
+        "right": -77.34375,
+        "bottom": 8.407168,
+        "countries": [
+            "panama",
+            "colombia"
+        ]
+    },
+    {
+        "x": 72,
+        "y": 122,
+        "left": -78.75,
+        "top": 8.407168,
+        "right": -77.34375,
+        "bottom": 7.013668,
+        "countries": [
+            "panama",
+            "colombia"
+        ]
+    },
+    {
+        "x": 73,
+        "y": 122,
+        "left": -77.34375,
+        "top": 8.407168,
+        "right": -75.9375,
+        "bottom": 7.013668,
+        "countries": [
+            "panama",
+            "colombia"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 126,
+        "left": -70.3125,
+        "top": 2.811371,
+        "right": -68.90625,
+        "bottom": 1.406109,
+        "countries": [
+            "brazil",
+            "colombia"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 126,
+        "left": -68.90625,
+        "top": 2.811371,
+        "right": -67.5,
+        "bottom": 1.406109,
+        "countries": [
+            "brazil",
+            "venezuela",
+            "colombia"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 126,
+        "left": -67.5,
+        "top": 2.811371,
+        "right": -66.09375,
+        "bottom": 1.406109,
+        "countries": [
+            "brazil",
+            "venezuela",
+            "colombia"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 127,
+        "left": -70.3125,
+        "top": 1.406109,
+        "right": -68.90625,
+        "bottom": 0.0,
+        "countries": [
+            "brazil",
+            "colombia"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 127,
+        "left": -67.5,
+        "top": 1.406109,
+        "right": -66.09375,
+        "bottom": 0.0,
+        "countries": [
+            "brazil",
+            "venezuela",
+            "colombia"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 128,
+        "left": -70.3125,
+        "top": 0.0,
+        "right": -68.90625,
+        "bottom": -1.406109,
+        "countries": [
+            "brazil",
+            "colombia"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 129,
+        "left": -70.3125,
+        "top": -1.406109,
+        "right": -68.90625,
+        "bottom": -2.811371,
+        "countries": [
+            "peru",
+            "brazil",
+            "colombia"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 130,
+        "left": -71.71875,
+        "top": -2.811371,
+        "right": -70.3125,
+        "bottom": -4.214943,
+        "countries": [
+            "peru",
+            "brazil",
+            "colombia"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 130,
+        "left": -70.3125,
+        "top": -2.811371,
+        "right": -68.90625,
+        "bottom": -4.214943,
+        "countries": [
+            "peru",
+            "brazil",
+            "colombia"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 131,
+        "left": -70.3125,
+        "top": -4.214943,
+        "right": -68.90625,
+        "bottom": -5.615986,
+        "countries": [
+            "peru",
+            "brazil",
+            "colombia"
+        ]
+    },
+    {
+        "x": 69,
+        "y": 118,
+        "left": -82.96875,
+        "top": 13.923404,
+        "right": -81.5625,
+        "bottom": 12.554564,
+        "countries": [
+            "colombia"
+        ]
+    },
+    {
+        "x": 70,
+        "y": 118,
+        "left": -81.5625,
+        "top": 13.923404,
+        "right": -80.15625,
+        "bottom": 12.554564,
+        "countries": [
+            "colombia"
+        ]
+    },
+    {
+        "x": 69,
+        "y": 119,
+        "left": -82.96875,
+        "top": 12.554564,
+        "right": -81.5625,
+        "bottom": 11.178402,
+        "countries": [
+            "colombia"
+        ]
+    },
+    {
+        "x": 75,
+        "y": 119,
+        "left": -74.53125,
+        "top": 12.554564,
+        "right": -73.125,
+        "bottom": 11.178402,
+        "countries": [
+            "colombia"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 119,
+        "left": -73.125,
+        "top": 12.554564,
+        "right": -71.71875,
+        "bottom": 11.178402,
+        "countries": [
+            "venezuela",
+            "colombia"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 119,
+        "left": -71.71875,
+        "top": 12.554564,
+        "right": -70.3125,
+        "bottom": 11.178402,
+        "countries": [
+            "venezuela",
+            "colombia"
+        ]
+    },
+    {
+        "x": 74,
+        "y": 120,
+        "left": -75.9375,
+        "top": 11.178402,
+        "right": -74.53125,
+        "bottom": 9.795678,
+        "countries": [
+            "colombia"
+        ]
+    },
+    {
+        "x": 75,
+        "y": 120,
+        "left": -74.53125,
+        "top": 11.178402,
+        "right": -73.125,
+        "bottom": 9.795678,
+        "countries": [
+            "colombia"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 120,
+        "left": -73.125,
+        "top": 11.178402,
+        "right": -71.71875,
+        "bottom": 9.795678,
+        "countries": [
+            "venezuela",
+            "colombia"
+        ]
+    },
+    {
+        "x": 73,
+        "y": 121,
+        "left": -77.34375,
+        "top": 9.795678,
+        "right": -75.9375,
+        "bottom": 8.407168,
+        "countries": [
+            "colombia"
+        ]
+    },
+    {
+        "x": 74,
+        "y": 121,
+        "left": -75.9375,
+        "top": 9.795678,
+        "right": -74.53125,
+        "bottom": 8.407168,
+        "countries": [
+            "colombia"
+        ]
+    },
+    {
+        "x": 75,
+        "y": 121,
+        "left": -74.53125,
+        "top": 9.795678,
+        "right": -73.125,
+        "bottom": 8.407168,
+        "countries": [
+            "venezuela",
+            "colombia"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 121,
+        "left": -73.125,
+        "top": 9.795678,
+        "right": -71.71875,
+        "bottom": 8.407168,
+        "countries": [
+            "venezuela",
+            "colombia"
+        ]
+    },
+    {
+        "x": 74,
+        "y": 122,
+        "left": -75.9375,
+        "top": 8.407168,
+        "right": -74.53125,
+        "bottom": 7.013668,
+        "countries": [
+            "colombia"
+        ]
+    },
+    {
+        "x": 75,
+        "y": 122,
+        "left": -74.53125,
+        "top": 8.407168,
+        "right": -73.125,
+        "bottom": 7.013668,
+        "countries": [
+            "colombia"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 122,
+        "left": -73.125,
+        "top": 8.407168,
+        "right": -71.71875,
+        "bottom": 7.013668,
+        "countries": [
+            "venezuela",
+            "colombia"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 122,
+        "left": -71.71875,
+        "top": 8.407168,
+        "right": -70.3125,
+        "bottom": 7.013668,
+        "countries": [
+            "venezuela",
+            "colombia"
+        ]
+    },
+    {
+        "x": 72,
+        "y": 123,
+        "left": -78.75,
+        "top": 7.013668,
+        "right": -77.34375,
+        "bottom": 5.615986,
+        "countries": [
+            "colombia"
+        ]
+    },
+    {
+        "x": 73,
+        "y": 123,
+        "left": -77.34375,
+        "top": 7.013668,
+        "right": -75.9375,
+        "bottom": 5.615986,
+        "countries": [
+            "colombia"
+        ]
+    },
+    {
+        "x": 74,
+        "y": 123,
+        "left": -75.9375,
+        "top": 7.013668,
+        "right": -74.53125,
+        "bottom": 5.615986,
+        "countries": [
+            "colombia"
+        ]
+    },
+    {
+        "x": 75,
+        "y": 123,
+        "left": -74.53125,
+        "top": 7.013668,
+        "right": -73.125,
+        "bottom": 5.615986,
+        "countries": [
+            "colombia"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 123,
+        "left": -73.125,
+        "top": 7.013668,
+        "right": -71.71875,
+        "bottom": 5.615986,
+        "countries": [
+            "venezuela",
+            "colombia"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 123,
+        "left": -71.71875,
+        "top": 7.013668,
+        "right": -70.3125,
+        "bottom": 5.615986,
+        "countries": [
+            "venezuela",
+            "colombia"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 123,
+        "left": -70.3125,
+        "top": 7.013668,
+        "right": -68.90625,
+        "bottom": 5.615986,
+        "countries": [
+            "venezuela",
+            "colombia"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 123,
+        "left": -68.90625,
+        "top": 7.013668,
+        "right": -67.5,
+        "bottom": 5.615986,
+        "countries": [
+            "venezuela",
+            "colombia"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 123,
+        "left": -67.5,
+        "top": 7.013668,
+        "right": -66.09375,
+        "bottom": 5.615986,
+        "countries": [
+            "venezuela",
+            "colombia"
+        ]
+    },
+    {
+        "x": 72,
+        "y": 124,
+        "left": -78.75,
+        "top": 5.615986,
+        "right": -77.34375,
+        "bottom": 4.214943,
+        "countries": [
+            "colombia"
+        ]
+    },
+    {
+        "x": 73,
+        "y": 124,
+        "left": -77.34375,
+        "top": 5.615986,
+        "right": -75.9375,
+        "bottom": 4.214943,
+        "countries": [
+            "colombia"
+        ]
+    },
+    {
+        "x": 74,
+        "y": 124,
+        "left": -75.9375,
+        "top": 5.615986,
+        "right": -74.53125,
+        "bottom": 4.214943,
+        "countries": [
+            "colombia"
+        ]
+    },
+    {
+        "x": 75,
+        "y": 124,
+        "left": -74.53125,
+        "top": 5.615986,
+        "right": -73.125,
+        "bottom": 4.214943,
+        "countries": [
+            "colombia"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 124,
+        "left": -73.125,
+        "top": 5.615986,
+        "right": -71.71875,
+        "bottom": 4.214943,
+        "countries": [
+            "colombia"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 124,
+        "left": -71.71875,
+        "top": 5.615986,
+        "right": -70.3125,
+        "bottom": 4.214943,
+        "countries": [
+            "colombia"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 124,
+        "left": -70.3125,
+        "top": 5.615986,
+        "right": -68.90625,
+        "bottom": 4.214943,
+        "countries": [
+            "colombia"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 124,
+        "left": -68.90625,
+        "top": 5.615986,
+        "right": -67.5,
+        "bottom": 4.214943,
+        "countries": [
+            "venezuela",
+            "colombia"
+        ]
+    },
+    {
+        "x": 69,
+        "y": 125,
+        "left": -82.96875,
+        "top": 4.214943,
+        "right": -81.5625,
+        "bottom": 2.811371,
+        "countries": [
+            "colombia"
+        ]
+    },
+    {
+        "x": 72,
+        "y": 125,
+        "left": -78.75,
+        "top": 4.214943,
+        "right": -77.34375,
+        "bottom": 2.811371,
+        "countries": [
+            "colombia"
+        ]
+    },
+    {
+        "x": 73,
+        "y": 125,
+        "left": -77.34375,
+        "top": 4.214943,
+        "right": -75.9375,
+        "bottom": 2.811371,
+        "countries": [
+            "colombia"
+        ]
+    },
+    {
+        "x": 74,
+        "y": 125,
+        "left": -75.9375,
+        "top": 4.214943,
+        "right": -74.53125,
+        "bottom": 2.811371,
+        "countries": [
+            "colombia"
+        ]
+    },
+    {
+        "x": 75,
+        "y": 125,
+        "left": -74.53125,
+        "top": 4.214943,
+        "right": -73.125,
+        "bottom": 2.811371,
+        "countries": [
+            "colombia"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 125,
+        "left": -73.125,
+        "top": 4.214943,
+        "right": -71.71875,
+        "bottom": 2.811371,
+        "countries": [
+            "colombia"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 125,
+        "left": -71.71875,
+        "top": 4.214943,
+        "right": -70.3125,
+        "bottom": 2.811371,
+        "countries": [
+            "colombia"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 125,
+        "left": -70.3125,
+        "top": 4.214943,
+        "right": -68.90625,
+        "bottom": 2.811371,
+        "countries": [
+            "colombia"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 125,
+        "left": -68.90625,
+        "top": 4.214943,
+        "right": -67.5,
+        "bottom": 2.811371,
+        "countries": [
+            "venezuela",
+            "colombia"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 125,
+        "left": -67.5,
+        "top": 4.214943,
+        "right": -66.09375,
+        "bottom": 2.811371,
+        "countries": [
+            "venezuela",
+            "colombia"
+        ]
+    },
+    {
+        "x": 71,
+        "y": 126,
+        "left": -80.15625,
+        "top": 2.811371,
+        "right": -78.75,
+        "bottom": 1.406109,
+        "countries": [
+            "ecuador",
+            "colombia"
+        ]
+    },
+    {
+        "x": 72,
+        "y": 126,
+        "left": -78.75,
+        "top": 2.811371,
+        "right": -77.34375,
+        "bottom": 1.406109,
+        "countries": [
+            "colombia"
+        ]
+    },
+    {
+        "x": 73,
+        "y": 126,
+        "left": -77.34375,
+        "top": 2.811371,
+        "right": -75.9375,
+        "bottom": 1.406109,
+        "countries": [
+            "colombia"
+        ]
+    },
+    {
+        "x": 74,
+        "y": 126,
+        "left": -75.9375,
+        "top": 2.811371,
+        "right": -74.53125,
+        "bottom": 1.406109,
+        "countries": [
+            "colombia"
+        ]
+    },
+    {
+        "x": 75,
+        "y": 126,
+        "left": -74.53125,
+        "top": 2.811371,
+        "right": -73.125,
+        "bottom": 1.406109,
+        "countries": [
+            "colombia"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 126,
+        "left": -73.125,
+        "top": 2.811371,
+        "right": -71.71875,
+        "bottom": 1.406109,
+        "countries": [
+            "colombia"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 126,
+        "left": -71.71875,
+        "top": 2.811371,
+        "right": -70.3125,
+        "bottom": 1.406109,
+        "countries": [
+            "colombia"
+        ]
+    },
+    {
+        "x": 71,
+        "y": 127,
+        "left": -80.15625,
+        "top": 1.406109,
+        "right": -78.75,
+        "bottom": 0.0,
+        "countries": [
+            "ecuador",
+            "colombia"
+        ]
+    },
+    {
+        "x": 72,
+        "y": 127,
+        "left": -78.75,
+        "top": 1.406109,
+        "right": -77.34375,
+        "bottom": 0.0,
+        "countries": [
+            "ecuador",
+            "colombia"
+        ]
+    },
+    {
+        "x": 73,
+        "y": 127,
+        "left": -77.34375,
+        "top": 1.406109,
+        "right": -75.9375,
+        "bottom": 0.0,
+        "countries": [
+            "ecuador",
+            "colombia"
+        ]
+    },
+    {
+        "x": 74,
+        "y": 127,
+        "left": -75.9375,
+        "top": 1.406109,
+        "right": -74.53125,
+        "bottom": 0.0,
+        "countries": [
+            "ecuador",
+            "colombia"
+        ]
+    },
+    {
+        "x": 75,
+        "y": 127,
+        "left": -74.53125,
+        "top": 1.406109,
+        "right": -73.125,
+        "bottom": 0.0,
+        "countries": [
+            "colombia"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 127,
+        "left": -73.125,
+        "top": 1.406109,
+        "right": -71.71875,
+        "bottom": 0.0,
+        "countries": [
+            "colombia"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 127,
+        "left": -71.71875,
+        "top": 1.406109,
+        "right": -70.3125,
+        "bottom": 0.0,
+        "countries": [
+            "colombia"
+        ]
+    },
+    {
+        "x": 74,
+        "y": 128,
+        "left": -75.9375,
+        "top": 0.0,
+        "right": -74.53125,
+        "bottom": -1.406109,
+        "countries": [
+            "peru",
+            "ecuador",
+            "colombia"
+        ]
+    },
+    {
+        "x": 75,
+        "y": 128,
+        "left": -74.53125,
+        "top": 0.0,
+        "right": -73.125,
+        "bottom": -1.406109,
+        "countries": [
+            "peru",
+            "colombia"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 128,
+        "left": -73.125,
+        "top": 0.0,
+        "right": -71.71875,
+        "bottom": -1.406109,
+        "countries": [
+            "colombia"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 128,
+        "left": -71.71875,
+        "top": 0.0,
+        "right": -70.3125,
+        "bottom": -1.406109,
+        "countries": [
+            "colombia"
+        ]
+    },
+    {
+        "x": 75,
+        "y": 129,
+        "left": -74.53125,
+        "top": -1.406109,
+        "right": -73.125,
+        "bottom": -2.811371,
+        "countries": [
+            "peru",
+            "colombia"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 129,
+        "left": -73.125,
+        "top": -1.406109,
+        "right": -71.71875,
+        "bottom": -2.811371,
+        "countries": [
+            "peru",
+            "colombia"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 129,
+        "left": -71.71875,
+        "top": -1.406109,
+        "right": -70.3125,
+        "bottom": -2.811371,
+        "countries": [
+            "peru",
+            "colombia"
+        ]
+    }
+]

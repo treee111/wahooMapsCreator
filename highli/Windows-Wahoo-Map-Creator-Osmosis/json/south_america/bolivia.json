@@ -1,0 +1,868 @@
+[
+    {
+        "x": 80,
+        "y": 143,
+        "left": -67.5,
+        "top": -20.632784,
+        "right": -66.09375,
+        "bottom": -21.943046,
+        "countries": [
+            "bolivia",
+            "argentina"
+        ]
+    },
+    {
+        "x": 81,
+        "y": 143,
+        "left": -66.09375,
+        "top": -20.632784,
+        "right": -64.6875,
+        "bottom": -21.943046,
+        "countries": [
+            "bolivia",
+            "argentina"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 144,
+        "left": -67.5,
+        "top": -21.943046,
+        "right": -66.09375,
+        "bottom": -23.241346,
+        "countries": [
+            "chile",
+            "bolivia",
+            "argentina"
+        ]
+    },
+    {
+        "x": 81,
+        "y": 144,
+        "left": -66.09375,
+        "top": -21.943046,
+        "right": -64.6875,
+        "bottom": -23.241346,
+        "countries": [
+            "bolivia",
+            "argentina"
+        ]
+    },
+    {
+        "x": 82,
+        "y": 144,
+        "left": -64.6875,
+        "top": -21.943046,
+        "right": -63.28125,
+        "bottom": -23.241346,
+        "countries": [
+            "bolivia",
+            "argentina"
+        ]
+    },
+    {
+        "x": 83,
+        "y": 144,
+        "left": -63.28125,
+        "top": -21.943046,
+        "right": -61.875,
+        "bottom": -23.241346,
+        "countries": [
+            "bolivia",
+            "argentina",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 134,
+        "left": -67.5,
+        "top": -8.407168,
+        "right": -66.09375,
+        "bottom": -9.795678,
+        "countries": [
+            "brazil",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 81,
+        "y": 134,
+        "left": -66.09375,
+        "top": -8.407168,
+        "right": -64.6875,
+        "bottom": -9.795678,
+        "countries": [
+            "brazil",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 135,
+        "left": -70.3125,
+        "top": -9.795678,
+        "right": -68.90625,
+        "bottom": -11.178402,
+        "countries": [
+            "peru",
+            "brazil",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 135,
+        "left": -68.90625,
+        "top": -9.795678,
+        "right": -67.5,
+        "bottom": -11.178402,
+        "countries": [
+            "brazil",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 135,
+        "left": -67.5,
+        "top": -9.795678,
+        "right": -66.09375,
+        "bottom": -11.178402,
+        "countries": [
+            "brazil",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 81,
+        "y": 135,
+        "left": -66.09375,
+        "top": -9.795678,
+        "right": -64.6875,
+        "bottom": -11.178402,
+        "countries": [
+            "brazil",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 136,
+        "left": -70.3125,
+        "top": -11.178402,
+        "right": -68.90625,
+        "bottom": -12.554564,
+        "countries": [
+            "peru",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 136,
+        "left": -68.90625,
+        "top": -11.178402,
+        "right": -67.5,
+        "bottom": -12.554564,
+        "countries": [
+            "peru",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 136,
+        "left": -67.5,
+        "top": -11.178402,
+        "right": -66.09375,
+        "bottom": -12.554564,
+        "countries": [
+            "bolivia"
+        ]
+    },
+    {
+        "x": 81,
+        "y": 136,
+        "left": -66.09375,
+        "top": -11.178402,
+        "right": -64.6875,
+        "bottom": -12.554564,
+        "countries": [
+            "brazil",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 82,
+        "y": 136,
+        "left": -64.6875,
+        "top": -11.178402,
+        "right": -63.28125,
+        "bottom": -12.554564,
+        "countries": [
+            "brazil",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 137,
+        "left": -70.3125,
+        "top": -12.554564,
+        "right": -68.90625,
+        "bottom": -13.923404,
+        "countries": [
+            "peru",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 137,
+        "left": -68.90625,
+        "top": -12.554564,
+        "right": -67.5,
+        "bottom": -13.923404,
+        "countries": [
+            "peru",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 137,
+        "left": -67.5,
+        "top": -12.554564,
+        "right": -66.09375,
+        "bottom": -13.923404,
+        "countries": [
+            "bolivia"
+        ]
+    },
+    {
+        "x": 81,
+        "y": 137,
+        "left": -66.09375,
+        "top": -12.554564,
+        "right": -64.6875,
+        "bottom": -13.923404,
+        "countries": [
+            "bolivia"
+        ]
+    },
+    {
+        "x": 82,
+        "y": 137,
+        "left": -64.6875,
+        "top": -12.554564,
+        "right": -63.28125,
+        "bottom": -13.923404,
+        "countries": [
+            "brazil",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 83,
+        "y": 137,
+        "left": -63.28125,
+        "top": -12.554564,
+        "right": -61.875,
+        "bottom": -13.923404,
+        "countries": [
+            "brazil",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 84,
+        "y": 137,
+        "left": -61.875,
+        "top": -12.554564,
+        "right": -60.46875,
+        "bottom": -13.923404,
+        "countries": [
+            "brazil",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 85,
+        "y": 137,
+        "left": -60.46875,
+        "top": -12.554564,
+        "right": -59.0625,
+        "bottom": -13.923404,
+        "countries": [
+            "brazil",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 138,
+        "left": -70.3125,
+        "top": -13.923404,
+        "right": -68.90625,
+        "bottom": -15.284185,
+        "countries": [
+            "peru",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 138,
+        "left": -68.90625,
+        "top": -13.923404,
+        "right": -67.5,
+        "bottom": -15.284185,
+        "countries": [
+            "peru",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 138,
+        "left": -67.5,
+        "top": -13.923404,
+        "right": -66.09375,
+        "bottom": -15.284185,
+        "countries": [
+            "bolivia"
+        ]
+    },
+    {
+        "x": 81,
+        "y": 138,
+        "left": -66.09375,
+        "top": -13.923404,
+        "right": -64.6875,
+        "bottom": -15.284185,
+        "countries": [
+            "bolivia"
+        ]
+    },
+    {
+        "x": 82,
+        "y": 138,
+        "left": -64.6875,
+        "top": -13.923404,
+        "right": -63.28125,
+        "bottom": -15.284185,
+        "countries": [
+            "bolivia"
+        ]
+    },
+    {
+        "x": 83,
+        "y": 138,
+        "left": -63.28125,
+        "top": -13.923404,
+        "right": -61.875,
+        "bottom": -15.284185,
+        "countries": [
+            "bolivia"
+        ]
+    },
+    {
+        "x": 84,
+        "y": 138,
+        "left": -61.875,
+        "top": -13.923404,
+        "right": -60.46875,
+        "bottom": -15.284185,
+        "countries": [
+            "brazil",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 85,
+        "y": 138,
+        "left": -60.46875,
+        "top": -13.923404,
+        "right": -59.0625,
+        "bottom": -15.284185,
+        "countries": [
+            "brazil",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 139,
+        "left": -70.3125,
+        "top": -15.284185,
+        "right": -68.90625,
+        "bottom": -16.636192,
+        "countries": [
+            "peru",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 139,
+        "left": -68.90625,
+        "top": -15.284185,
+        "right": -67.5,
+        "bottom": -16.636192,
+        "countries": [
+            "peru",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 139,
+        "left": -67.5,
+        "top": -15.284185,
+        "right": -66.09375,
+        "bottom": -16.636192,
+        "countries": [
+            "bolivia"
+        ]
+    },
+    {
+        "x": 81,
+        "y": 139,
+        "left": -66.09375,
+        "top": -15.284185,
+        "right": -64.6875,
+        "bottom": -16.636192,
+        "countries": [
+            "bolivia"
+        ]
+    },
+    {
+        "x": 82,
+        "y": 139,
+        "left": -64.6875,
+        "top": -15.284185,
+        "right": -63.28125,
+        "bottom": -16.636192,
+        "countries": [
+            "bolivia"
+        ]
+    },
+    {
+        "x": 83,
+        "y": 139,
+        "left": -63.28125,
+        "top": -15.284185,
+        "right": -61.875,
+        "bottom": -16.636192,
+        "countries": [
+            "bolivia"
+        ]
+    },
+    {
+        "x": 84,
+        "y": 139,
+        "left": -61.875,
+        "top": -15.284185,
+        "right": -60.46875,
+        "bottom": -16.636192,
+        "countries": [
+            "bolivia"
+        ]
+    },
+    {
+        "x": 85,
+        "y": 139,
+        "left": -60.46875,
+        "top": -15.284185,
+        "right": -59.0625,
+        "bottom": -16.636192,
+        "countries": [
+            "brazil",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 139,
+        "left": -59.0625,
+        "top": -15.284185,
+        "right": -57.65625,
+        "bottom": -16.636192,
+        "countries": [
+            "brazil",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 140,
+        "left": -70.3125,
+        "top": -16.636192,
+        "right": -68.90625,
+        "bottom": -17.978733,
+        "countries": [
+            "peru",
+            "chile",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 140,
+        "left": -68.90625,
+        "top": -16.636192,
+        "right": -67.5,
+        "bottom": -17.978733,
+        "countries": [
+            "bolivia"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 140,
+        "left": -67.5,
+        "top": -16.636192,
+        "right": -66.09375,
+        "bottom": -17.978733,
+        "countries": [
+            "bolivia"
+        ]
+    },
+    {
+        "x": 81,
+        "y": 140,
+        "left": -66.09375,
+        "top": -16.636192,
+        "right": -64.6875,
+        "bottom": -17.978733,
+        "countries": [
+            "bolivia"
+        ]
+    },
+    {
+        "x": 82,
+        "y": 140,
+        "left": -64.6875,
+        "top": -16.636192,
+        "right": -63.28125,
+        "bottom": -17.978733,
+        "countries": [
+            "bolivia"
+        ]
+    },
+    {
+        "x": 83,
+        "y": 140,
+        "left": -63.28125,
+        "top": -16.636192,
+        "right": -61.875,
+        "bottom": -17.978733,
+        "countries": [
+            "bolivia"
+        ]
+    },
+    {
+        "x": 84,
+        "y": 140,
+        "left": -61.875,
+        "top": -16.636192,
+        "right": -60.46875,
+        "bottom": -17.978733,
+        "countries": [
+            "bolivia"
+        ]
+    },
+    {
+        "x": 85,
+        "y": 140,
+        "left": -60.46875,
+        "top": -16.636192,
+        "right": -59.0625,
+        "bottom": -17.978733,
+        "countries": [
+            "bolivia"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 140,
+        "left": -59.0625,
+        "top": -16.636192,
+        "right": -57.65625,
+        "bottom": -17.978733,
+        "countries": [
+            "brazil",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 87,
+        "y": 140,
+        "left": -57.65625,
+        "top": -16.636192,
+        "right": -56.25,
+        "bottom": -17.978733,
+        "countries": [
+            "brazil",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 141,
+        "left": -70.3125,
+        "top": -17.978733,
+        "right": -68.90625,
+        "bottom": -19.311143,
+        "countries": [
+            "peru",
+            "chile",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 141,
+        "left": -68.90625,
+        "top": -17.978733,
+        "right": -67.5,
+        "bottom": -19.311143,
+        "countries": [
+            "chile",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 141,
+        "left": -67.5,
+        "top": -17.978733,
+        "right": -66.09375,
+        "bottom": -19.311143,
+        "countries": [
+            "bolivia"
+        ]
+    },
+    {
+        "x": 81,
+        "y": 141,
+        "left": -66.09375,
+        "top": -17.978733,
+        "right": -64.6875,
+        "bottom": -19.311143,
+        "countries": [
+            "bolivia"
+        ]
+    },
+    {
+        "x": 82,
+        "y": 141,
+        "left": -64.6875,
+        "top": -17.978733,
+        "right": -63.28125,
+        "bottom": -19.311143,
+        "countries": [
+            "bolivia"
+        ]
+    },
+    {
+        "x": 83,
+        "y": 141,
+        "left": -63.28125,
+        "top": -17.978733,
+        "right": -61.875,
+        "bottom": -19.311143,
+        "countries": [
+            "bolivia"
+        ]
+    },
+    {
+        "x": 84,
+        "y": 141,
+        "left": -61.875,
+        "top": -17.978733,
+        "right": -60.46875,
+        "bottom": -19.311143,
+        "countries": [
+            "bolivia"
+        ]
+    },
+    {
+        "x": 85,
+        "y": 141,
+        "left": -60.46875,
+        "top": -17.978733,
+        "right": -59.0625,
+        "bottom": -19.311143,
+        "countries": [
+            "bolivia",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 141,
+        "left": -59.0625,
+        "top": -17.978733,
+        "right": -57.65625,
+        "bottom": -19.311143,
+        "countries": [
+            "brazil",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 87,
+        "y": 141,
+        "left": -57.65625,
+        "top": -17.978733,
+        "right": -56.25,
+        "bottom": -19.311143,
+        "countries": [
+            "brazil",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 142,
+        "left": -68.90625,
+        "top": -19.311143,
+        "right": -67.5,
+        "bottom": -20.632784,
+        "countries": [
+            "chile",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 142,
+        "left": -67.5,
+        "top": -19.311143,
+        "right": -66.09375,
+        "bottom": -20.632784,
+        "countries": [
+            "bolivia"
+        ]
+    },
+    {
+        "x": 81,
+        "y": 142,
+        "left": -66.09375,
+        "top": -19.311143,
+        "right": -64.6875,
+        "bottom": -20.632784,
+        "countries": [
+            "bolivia"
+        ]
+    },
+    {
+        "x": 82,
+        "y": 142,
+        "left": -64.6875,
+        "top": -19.311143,
+        "right": -63.28125,
+        "bottom": -20.632784,
+        "countries": [
+            "bolivia"
+        ]
+    },
+    {
+        "x": 83,
+        "y": 142,
+        "left": -63.28125,
+        "top": -19.311143,
+        "right": -61.875,
+        "bottom": -20.632784,
+        "countries": [
+            "bolivia",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 84,
+        "y": 142,
+        "left": -61.875,
+        "top": -19.311143,
+        "right": -60.46875,
+        "bottom": -20.632784,
+        "countries": [
+            "bolivia",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 85,
+        "y": 142,
+        "left": -60.46875,
+        "top": -19.311143,
+        "right": -59.0625,
+        "bottom": -20.632784,
+        "countries": [
+            "bolivia",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 142,
+        "left": -59.0625,
+        "top": -19.311143,
+        "right": -57.65625,
+        "bottom": -20.632784,
+        "countries": [
+            "brazil",
+            "bolivia",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 143,
+        "left": -68.90625,
+        "top": -20.632784,
+        "right": -67.5,
+        "bottom": -21.943046,
+        "countries": [
+            "chile",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 82,
+        "y": 143,
+        "left": -64.6875,
+        "top": -20.632784,
+        "right": -63.28125,
+        "bottom": -21.943046,
+        "countries": [
+            "bolivia"
+        ]
+    },
+    {
+        "x": 83,
+        "y": 143,
+        "left": -63.28125,
+        "top": -20.632784,
+        "right": -61.875,
+        "bottom": -21.943046,
+        "countries": [
+            "bolivia",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 144,
+        "left": -68.90625,
+        "top": -21.943046,
+        "right": -67.5,
+        "bottom": -23.241346,
+        "countries": [
+            "chile",
+            "bolivia"
+        ]
+    }
+]

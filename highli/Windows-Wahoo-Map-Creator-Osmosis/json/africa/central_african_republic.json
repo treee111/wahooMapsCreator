@@ -1,0 +1,513 @@
+[
+    {
+        "x": 138,
+        "y": 122,
+        "left": 14.0625,
+        "top": 8.407168,
+        "right": 15.46875,
+        "bottom": 7.013668,
+        "countries": [
+            "cameroon",
+            "central_african_republic",
+            "chad"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 122,
+        "left": 15.46875,
+        "top": 8.407168,
+        "right": 16.875,
+        "bottom": 7.013668,
+        "countries": [
+            "cameroon",
+            "central_african_republic",
+            "chad"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 123,
+        "left": 14.0625,
+        "top": 7.013668,
+        "right": 15.46875,
+        "bottom": 5.615986,
+        "countries": [
+            "cameroon",
+            "central_african_republic"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 124,
+        "left": 14.0625,
+        "top": 5.615986,
+        "right": 15.46875,
+        "bottom": 4.214943,
+        "countries": [
+            "cameroon",
+            "central_african_republic"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 125,
+        "left": 14.0625,
+        "top": 4.214943,
+        "right": 15.46875,
+        "bottom": 2.811371,
+        "countries": [
+            "cameroon",
+            "central_african_republic"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 125,
+        "left": 15.46875,
+        "top": 4.214943,
+        "right": 16.875,
+        "bottom": 2.811371,
+        "countries": [
+            "cameroon",
+            "republic_of_congo",
+            "central_african_republic"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 126,
+        "left": 15.46875,
+        "top": 2.811371,
+        "right": 16.875,
+        "bottom": 1.406109,
+        "countries": [
+            "cameroon",
+            "republic_of_congo",
+            "central_african_republic"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 120,
+        "left": 21.09375,
+        "top": 11.178402,
+        "right": 22.5,
+        "bottom": 9.795678,
+        "countries": [
+            "chad",
+            "central_african_republic"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 120,
+        "left": 22.5,
+        "top": 11.178402,
+        "right": 23.90625,
+        "bottom": 9.795678,
+        "countries": [
+            "chad",
+            "sudan",
+            "central_african_republic"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 121,
+        "left": 18.28125,
+        "top": 9.795678,
+        "right": 19.6875,
+        "bottom": 8.407168,
+        "countries": [
+            "chad",
+            "central_african_republic"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 121,
+        "left": 19.6875,
+        "top": 9.795678,
+        "right": 21.09375,
+        "bottom": 8.407168,
+        "countries": [
+            "chad",
+            "central_african_republic"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 121,
+        "left": 21.09375,
+        "top": 9.795678,
+        "right": 22.5,
+        "bottom": 8.407168,
+        "countries": [
+            "chad",
+            "central_african_republic"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 121,
+        "left": 22.5,
+        "top": 9.795678,
+        "right": 23.90625,
+        "bottom": 8.407168,
+        "countries": [
+            "sudan",
+            "central_african_republic"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 121,
+        "left": 23.90625,
+        "top": 9.795678,
+        "right": 25.3125,
+        "bottom": 8.407168,
+        "countries": [
+            "sudan",
+            "central_african_republic"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 122,
+        "left": 16.875,
+        "top": 8.407168,
+        "right": 18.28125,
+        "bottom": 7.013668,
+        "countries": [
+            "chad",
+            "central_african_republic"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 122,
+        "left": 18.28125,
+        "top": 8.407168,
+        "right": 19.6875,
+        "bottom": 7.013668,
+        "countries": [
+            "chad",
+            "central_african_republic"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 122,
+        "left": 19.6875,
+        "top": 8.407168,
+        "right": 21.09375,
+        "bottom": 7.013668,
+        "countries": [
+            "central_african_republic"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 122,
+        "left": 21.09375,
+        "top": 8.407168,
+        "right": 22.5,
+        "bottom": 7.013668,
+        "countries": [
+            "central_african_republic"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 122,
+        "left": 22.5,
+        "top": 8.407168,
+        "right": 23.90625,
+        "bottom": 7.013668,
+        "countries": [
+            "central_african_republic"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 122,
+        "left": 23.90625,
+        "top": 8.407168,
+        "right": 25.3125,
+        "bottom": 7.013668,
+        "countries": [
+            "sudan",
+            "central_african_republic"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 122,
+        "left": 25.3125,
+        "top": 8.407168,
+        "right": 26.71875,
+        "bottom": 7.013668,
+        "countries": [
+            "sudan",
+            "central_african_republic"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 123,
+        "left": 15.46875,
+        "top": 7.013668,
+        "right": 16.875,
+        "bottom": 5.615986,
+        "countries": [
+            "central_african_republic"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 123,
+        "left": 16.875,
+        "top": 7.013668,
+        "right": 18.28125,
+        "bottom": 5.615986,
+        "countries": [
+            "central_african_republic"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 123,
+        "left": 18.28125,
+        "top": 7.013668,
+        "right": 19.6875,
+        "bottom": 5.615986,
+        "countries": [
+            "central_african_republic"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 123,
+        "left": 19.6875,
+        "top": 7.013668,
+        "right": 21.09375,
+        "bottom": 5.615986,
+        "countries": [
+            "central_african_republic"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 123,
+        "left": 21.09375,
+        "top": 7.013668,
+        "right": 22.5,
+        "bottom": 5.615986,
+        "countries": [
+            "central_african_republic"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 123,
+        "left": 22.5,
+        "top": 7.013668,
+        "right": 23.90625,
+        "bottom": 5.615986,
+        "countries": [
+            "central_african_republic"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 123,
+        "left": 23.90625,
+        "top": 7.013668,
+        "right": 25.3125,
+        "bottom": 5.615986,
+        "countries": [
+            "central_african_republic"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 123,
+        "left": 25.3125,
+        "top": 7.013668,
+        "right": 26.71875,
+        "bottom": 5.615986,
+        "countries": [
+            "sudan",
+            "central_african_republic"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 123,
+        "left": 26.71875,
+        "top": 7.013668,
+        "right": 28.125,
+        "bottom": 5.615986,
+        "countries": [
+            "sudan",
+            "central_african_republic"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 124,
+        "left": 15.46875,
+        "top": 5.615986,
+        "right": 16.875,
+        "bottom": 4.214943,
+        "countries": [
+            "central_african_republic"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 124,
+        "left": 16.875,
+        "top": 5.615986,
+        "right": 18.28125,
+        "bottom": 4.214943,
+        "countries": [
+            "central_african_republic"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 124,
+        "left": 18.28125,
+        "top": 5.615986,
+        "right": 19.6875,
+        "bottom": 4.214943,
+        "countries": [
+            "central_african_republic",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 124,
+        "left": 19.6875,
+        "top": 5.615986,
+        "right": 21.09375,
+        "bottom": 4.214943,
+        "countries": [
+            "central_african_republic",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 124,
+        "left": 21.09375,
+        "top": 5.615986,
+        "right": 22.5,
+        "bottom": 4.214943,
+        "countries": [
+            "central_african_republic",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 124,
+        "left": 22.5,
+        "top": 5.615986,
+        "right": 23.90625,
+        "bottom": 4.214943,
+        "countries": [
+            "central_african_republic",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 124,
+        "left": 23.90625,
+        "top": 5.615986,
+        "right": 25.3125,
+        "bottom": 4.214943,
+        "countries": [
+            "central_african_republic",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 124,
+        "left": 25.3125,
+        "top": 5.615986,
+        "right": 26.71875,
+        "bottom": 4.214943,
+        "countries": [
+            "central_african_republic",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 124,
+        "left": 26.71875,
+        "top": 5.615986,
+        "right": 28.125,
+        "bottom": 4.214943,
+        "countries": [
+            "sudan",
+            "central_african_republic",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 125,
+        "left": 16.875,
+        "top": 4.214943,
+        "right": 18.28125,
+        "bottom": 2.811371,
+        "countries": [
+            "republic_of_congo",
+            "central_african_republic"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 125,
+        "left": 18.28125,
+        "top": 4.214943,
+        "right": 19.6875,
+        "bottom": 2.811371,
+        "countries": [
+            "republic_of_congo",
+            "central_african_republic",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 125,
+        "left": 21.09375,
+        "top": 4.214943,
+        "right": 22.5,
+        "bottom": 2.811371,
+        "countries": [
+            "central_african_republic",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 125,
+        "left": 22.5,
+        "top": 4.214943,
+        "right": 23.90625,
+        "bottom": 2.811371,
+        "countries": [
+            "central_african_republic",
+            "democratic_republic_of_the_congo"
+        ]
+    }
+]

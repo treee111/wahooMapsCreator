@@ -1,0 +1,1415 @@
+[
+    {
+        "x": 80,
+        "y": 144,
+        "left": -67.5,
+        "top": -21.943046,
+        "right": -66.09375,
+        "bottom": -23.241346,
+        "countries": [
+            "chile",
+            "bolivia",
+            "argentina"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 145,
+        "left": -68.90625,
+        "top": -23.241346,
+        "right": -67.5,
+        "bottom": -24.527135,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 145,
+        "left": -67.5,
+        "top": -23.241346,
+        "right": -66.09375,
+        "bottom": -24.527135,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 146,
+        "left": -68.90625,
+        "top": -24.527135,
+        "right": -67.5,
+        "bottom": -25.799891,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 147,
+        "left": -68.90625,
+        "top": -25.799891,
+        "right": -67.5,
+        "bottom": -27.059126,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 148,
+        "left": -70.3125,
+        "top": -27.059126,
+        "right": -68.90625,
+        "bottom": -28.304381,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 148,
+        "left": -68.90625,
+        "top": -27.059126,
+        "right": -67.5,
+        "bottom": -28.304381,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 149,
+        "left": -70.3125,
+        "top": -28.304381,
+        "right": -68.90625,
+        "bottom": -29.53523,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 150,
+        "left": -70.3125,
+        "top": -29.53523,
+        "right": -68.90625,
+        "bottom": -30.751278,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 151,
+        "left": -71.71875,
+        "top": -30.751278,
+        "right": -70.3125,
+        "bottom": -31.952162,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 151,
+        "left": -70.3125,
+        "top": -30.751278,
+        "right": -68.90625,
+        "bottom": -31.952162,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 152,
+        "left": -71.71875,
+        "top": -31.952162,
+        "right": -70.3125,
+        "bottom": -33.137551,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 152,
+        "left": -70.3125,
+        "top": -31.952162,
+        "right": -68.90625,
+        "bottom": -33.137551,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 153,
+        "left": -70.3125,
+        "top": -33.137551,
+        "right": -68.90625,
+        "bottom": -34.307144,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 154,
+        "left": -71.71875,
+        "top": -34.307144,
+        "right": -70.3125,
+        "bottom": -35.46067,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 154,
+        "left": -70.3125,
+        "top": -34.307144,
+        "right": -68.90625,
+        "bottom": -35.46067,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 155,
+        "left": -71.71875,
+        "top": -35.46067,
+        "right": -70.3125,
+        "bottom": -36.597889,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 156,
+        "left": -71.71875,
+        "top": -36.597889,
+        "right": -70.3125,
+        "bottom": -37.71859,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 157,
+        "left": -71.71875,
+        "top": -37.71859,
+        "right": -70.3125,
+        "bottom": -38.822591,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 158,
+        "left": -73.125,
+        "top": -38.822591,
+        "right": -71.71875,
+        "bottom": -39.909736,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 158,
+        "left": -71.71875,
+        "top": -38.822591,
+        "right": -70.3125,
+        "bottom": -39.909736,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 159,
+        "left": -73.125,
+        "top": -39.909736,
+        "right": -71.71875,
+        "bottom": -40.979898,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 159,
+        "left": -71.71875,
+        "top": -39.909736,
+        "right": -70.3125,
+        "bottom": -40.979898,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 160,
+        "left": -73.125,
+        "top": -40.979898,
+        "right": -71.71875,
+        "bottom": -42.032974,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 161,
+        "left": -73.125,
+        "top": -42.032974,
+        "right": -71.71875,
+        "bottom": -43.068888,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 162,
+        "left": -73.125,
+        "top": -43.068888,
+        "right": -71.71875,
+        "bottom": -44.087585,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 162,
+        "left": -71.71875,
+        "top": -43.068888,
+        "right": -70.3125,
+        "bottom": -44.087585,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 163,
+        "left": -73.125,
+        "top": -44.087585,
+        "right": -71.71875,
+        "bottom": -45.089036,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 163,
+        "left": -71.71875,
+        "top": -44.087585,
+        "right": -70.3125,
+        "bottom": -45.089036,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 164,
+        "left": -73.125,
+        "top": -45.089036,
+        "right": -71.71875,
+        "bottom": -46.073231,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 164,
+        "left": -71.71875,
+        "top": -45.089036,
+        "right": -70.3125,
+        "bottom": -46.073231,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 165,
+        "left": -73.125,
+        "top": -46.073231,
+        "right": -71.71875,
+        "bottom": -47.040182,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 165,
+        "left": -71.71875,
+        "top": -46.073231,
+        "right": -70.3125,
+        "bottom": -47.040182,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 166,
+        "left": -73.125,
+        "top": -47.040182,
+        "right": -71.71875,
+        "bottom": -47.989922,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 167,
+        "left": -73.125,
+        "top": -47.989922,
+        "right": -71.71875,
+        "bottom": -48.922499,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 75,
+        "y": 168,
+        "left": -74.53125,
+        "top": -48.922499,
+        "right": -73.125,
+        "bottom": -49.837982,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 168,
+        "left": -73.125,
+        "top": -48.922499,
+        "right": -71.71875,
+        "bottom": -49.837982,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 75,
+        "y": 169,
+        "left": -74.53125,
+        "top": -49.837982,
+        "right": -73.125,
+        "bottom": -50.736455,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 169,
+        "left": -73.125,
+        "top": -49.837982,
+        "right": -71.71875,
+        "bottom": -50.736455,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 75,
+        "y": 170,
+        "left": -74.53125,
+        "top": -50.736455,
+        "right": -73.125,
+        "bottom": -51.618017,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 170,
+        "left": -73.125,
+        "top": -50.736455,
+        "right": -71.71875,
+        "bottom": -51.618017,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 171,
+        "left": -73.125,
+        "top": -51.618017,
+        "right": -71.71875,
+        "bottom": -52.48278,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 171,
+        "left": -71.71875,
+        "top": -51.618017,
+        "right": -70.3125,
+        "bottom": -52.48278,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 171,
+        "left": -70.3125,
+        "top": -51.618017,
+        "right": -68.90625,
+        "bottom": -52.48278,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 171,
+        "left": -68.90625,
+        "top": -51.618017,
+        "right": -67.5,
+        "bottom": -52.48278,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 172,
+        "left": -68.90625,
+        "top": -52.48278,
+        "right": -67.5,
+        "bottom": -53.330873,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 173,
+        "left": -68.90625,
+        "top": -53.330873,
+        "right": -67.5,
+        "bottom": -54.162434,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 174,
+        "left": -68.90625,
+        "top": -54.162434,
+        "right": -67.5,
+        "bottom": -54.977614,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 174,
+        "left": -67.5,
+        "top": -54.162434,
+        "right": -66.09375,
+        "bottom": -54.977614,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 175,
+        "left": -67.5,
+        "top": -54.977614,
+        "right": -66.09375,
+        "bottom": -55.776573,
+        "countries": [
+            "chile",
+            "argentina"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 140,
+        "left": -70.3125,
+        "top": -16.636192,
+        "right": -68.90625,
+        "bottom": -17.978733,
+        "countries": [
+            "peru",
+            "chile",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 141,
+        "left": -70.3125,
+        "top": -17.978733,
+        "right": -68.90625,
+        "bottom": -19.311143,
+        "countries": [
+            "peru",
+            "chile",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 141,
+        "left": -68.90625,
+        "top": -17.978733,
+        "right": -67.5,
+        "bottom": -19.311143,
+        "countries": [
+            "chile",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 142,
+        "left": -68.90625,
+        "top": -19.311143,
+        "right": -67.5,
+        "bottom": -20.632784,
+        "countries": [
+            "chile",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 143,
+        "left": -68.90625,
+        "top": -20.632784,
+        "right": -67.5,
+        "bottom": -21.943046,
+        "countries": [
+            "chile",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 144,
+        "left": -68.90625,
+        "top": -21.943046,
+        "right": -67.5,
+        "bottom": -23.241346,
+        "countries": [
+            "chile",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 141,
+        "left": -71.71875,
+        "top": -17.978733,
+        "right": -70.3125,
+        "bottom": -19.311143,
+        "countries": [
+            "peru",
+            "chile"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 142,
+        "left": -70.3125,
+        "top": -19.311143,
+        "right": -68.90625,
+        "bottom": -20.632784,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 143,
+        "left": -70.3125,
+        "top": -20.632784,
+        "right": -68.90625,
+        "bottom": -21.943046,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 144,
+        "left": -71.71875,
+        "top": -21.943046,
+        "right": -70.3125,
+        "bottom": -23.241346,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 144,
+        "left": -70.3125,
+        "top": -21.943046,
+        "right": -68.90625,
+        "bottom": -23.241346,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 145,
+        "left": -71.71875,
+        "top": -23.241346,
+        "right": -70.3125,
+        "bottom": -24.527135,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 145,
+        "left": -70.3125,
+        "top": -23.241346,
+        "right": -68.90625,
+        "bottom": -24.527135,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 146,
+        "left": -71.71875,
+        "top": -24.527135,
+        "right": -70.3125,
+        "bottom": -25.799891,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 146,
+        "left": -70.3125,
+        "top": -24.527135,
+        "right": -68.90625,
+        "bottom": -25.799891,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 50,
+        "y": 147,
+        "left": -109.6875,
+        "top": -25.799891,
+        "right": -108.28125,
+        "bottom": -27.059126,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 71,
+        "y": 147,
+        "left": -80.15625,
+        "top": -25.799891,
+        "right": -78.75,
+        "bottom": -27.059126,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 147,
+        "left": -71.71875,
+        "top": -25.799891,
+        "right": -70.3125,
+        "bottom": -27.059126,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 147,
+        "left": -70.3125,
+        "top": -25.799891,
+        "right": -68.90625,
+        "bottom": -27.059126,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 50,
+        "y": 148,
+        "left": -109.6875,
+        "top": -27.059126,
+        "right": -108.28125,
+        "bottom": -28.304381,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 148,
+        "left": -71.71875,
+        "top": -27.059126,
+        "right": -70.3125,
+        "bottom": -28.304381,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 149,
+        "left": -71.71875,
+        "top": -28.304381,
+        "right": -70.3125,
+        "bottom": -29.53523,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 150,
+        "left": -71.71875,
+        "top": -29.53523,
+        "right": -70.3125,
+        "bottom": -30.751278,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 64,
+        "y": 152,
+        "left": -90.0,
+        "top": -31.952162,
+        "right": -88.59375,
+        "bottom": -33.137551,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 152,
+        "left": -73.125,
+        "top": -31.952162,
+        "right": -71.71875,
+        "bottom": -33.137551,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 70,
+        "y": 153,
+        "left": -81.5625,
+        "top": -33.137551,
+        "right": -80.15625,
+        "bottom": -34.307144,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 71,
+        "y": 153,
+        "left": -80.15625,
+        "top": -33.137551,
+        "right": -78.75,
+        "bottom": -34.307144,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 153,
+        "left": -73.125,
+        "top": -33.137551,
+        "right": -71.71875,
+        "bottom": -34.307144,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 153,
+        "left": -71.71875,
+        "top": -33.137551,
+        "right": -70.3125,
+        "bottom": -34.307144,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 154,
+        "left": -73.125,
+        "top": -34.307144,
+        "right": -71.71875,
+        "bottom": -35.46067,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 155,
+        "left": -73.125,
+        "top": -35.46067,
+        "right": -71.71875,
+        "bottom": -36.597889,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 75,
+        "y": 156,
+        "left": -74.53125,
+        "top": -36.597889,
+        "right": -73.125,
+        "bottom": -37.71859,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 156,
+        "left": -73.125,
+        "top": -36.597889,
+        "right": -71.71875,
+        "bottom": -37.71859,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 75,
+        "y": 157,
+        "left": -74.53125,
+        "top": -37.71859,
+        "right": -73.125,
+        "bottom": -38.822591,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 157,
+        "left": -73.125,
+        "top": -37.71859,
+        "right": -71.71875,
+        "bottom": -38.822591,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 75,
+        "y": 158,
+        "left": -74.53125,
+        "top": -38.822591,
+        "right": -73.125,
+        "bottom": -39.909736,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 75,
+        "y": 159,
+        "left": -74.53125,
+        "top": -39.909736,
+        "right": -73.125,
+        "bottom": -40.979898,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 75,
+        "y": 160,
+        "left": -74.53125,
+        "top": -40.979898,
+        "right": -73.125,
+        "bottom": -42.032974,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 75,
+        "y": 161,
+        "left": -74.53125,
+        "top": -42.032974,
+        "right": -73.125,
+        "bottom": -43.068888,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 74,
+        "y": 162,
+        "left": -75.9375,
+        "top": -43.068888,
+        "right": -74.53125,
+        "bottom": -44.087585,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 75,
+        "y": 162,
+        "left": -74.53125,
+        "top": -43.068888,
+        "right": -73.125,
+        "bottom": -44.087585,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 74,
+        "y": 163,
+        "left": -75.9375,
+        "top": -44.087585,
+        "right": -74.53125,
+        "bottom": -45.089036,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 75,
+        "y": 163,
+        "left": -74.53125,
+        "top": -44.087585,
+        "right": -73.125,
+        "bottom": -45.089036,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 74,
+        "y": 164,
+        "left": -75.9375,
+        "top": -45.089036,
+        "right": -74.53125,
+        "bottom": -46.073231,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 75,
+        "y": 164,
+        "left": -74.53125,
+        "top": -45.089036,
+        "right": -73.125,
+        "bottom": -46.073231,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 74,
+        "y": 165,
+        "left": -75.9375,
+        "top": -46.073231,
+        "right": -74.53125,
+        "bottom": -47.040182,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 75,
+        "y": 165,
+        "left": -74.53125,
+        "top": -46.073231,
+        "right": -73.125,
+        "bottom": -47.040182,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 74,
+        "y": 166,
+        "left": -75.9375,
+        "top": -47.040182,
+        "right": -74.53125,
+        "bottom": -47.989922,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 75,
+        "y": 166,
+        "left": -74.53125,
+        "top": -47.040182,
+        "right": -73.125,
+        "bottom": -47.989922,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 74,
+        "y": 167,
+        "left": -75.9375,
+        "top": -47.989922,
+        "right": -74.53125,
+        "bottom": -48.922499,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 75,
+        "y": 167,
+        "left": -74.53125,
+        "top": -47.989922,
+        "right": -73.125,
+        "bottom": -48.922499,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 74,
+        "y": 168,
+        "left": -75.9375,
+        "top": -48.922499,
+        "right": -74.53125,
+        "bottom": -49.837982,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 74,
+        "y": 169,
+        "left": -75.9375,
+        "top": -49.837982,
+        "right": -74.53125,
+        "bottom": -50.736455,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 74,
+        "y": 170,
+        "left": -75.9375,
+        "top": -50.736455,
+        "right": -74.53125,
+        "bottom": -51.618017,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 74,
+        "y": 171,
+        "left": -75.9375,
+        "top": -51.618017,
+        "right": -74.53125,
+        "bottom": -52.48278,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 75,
+        "y": 171,
+        "left": -74.53125,
+        "top": -51.618017,
+        "right": -73.125,
+        "bottom": -52.48278,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 74,
+        "y": 172,
+        "left": -75.9375,
+        "top": -52.48278,
+        "right": -74.53125,
+        "bottom": -53.330873,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 75,
+        "y": 172,
+        "left": -74.53125,
+        "top": -52.48278,
+        "right": -73.125,
+        "bottom": -53.330873,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 172,
+        "left": -73.125,
+        "top": -52.48278,
+        "right": -71.71875,
+        "bottom": -53.330873,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 172,
+        "left": -71.71875,
+        "top": -52.48278,
+        "right": -70.3125,
+        "bottom": -53.330873,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 172,
+        "left": -70.3125,
+        "top": -52.48278,
+        "right": -68.90625,
+        "bottom": -53.330873,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 75,
+        "y": 173,
+        "left": -74.53125,
+        "top": -53.330873,
+        "right": -73.125,
+        "bottom": -54.162434,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 173,
+        "left": -73.125,
+        "top": -53.330873,
+        "right": -71.71875,
+        "bottom": -54.162434,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 173,
+        "left": -71.71875,
+        "top": -53.330873,
+        "right": -70.3125,
+        "bottom": -54.162434,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 173,
+        "left": -70.3125,
+        "top": -53.330873,
+        "right": -68.90625,
+        "bottom": -54.162434,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 174,
+        "left": -73.125,
+        "top": -54.162434,
+        "right": -71.71875,
+        "bottom": -54.977614,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 174,
+        "left": -71.71875,
+        "top": -54.162434,
+        "right": -70.3125,
+        "bottom": -54.977614,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 174,
+        "left": -70.3125,
+        "top": -54.162434,
+        "right": -68.90625,
+        "bottom": -54.977614,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 175,
+        "left": -71.71875,
+        "top": -54.977614,
+        "right": -70.3125,
+        "bottom": -55.776573,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 175,
+        "left": -70.3125,
+        "top": -54.977614,
+        "right": -68.90625,
+        "bottom": -55.776573,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 175,
+        "left": -68.90625,
+        "top": -54.977614,
+        "right": -67.5,
+        "bottom": -55.776573,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 176,
+        "left": -68.90625,
+        "top": -55.776573,
+        "right": -67.5,
+        "bottom": -56.559482,
+        "countries": [
+            "chile"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 176,
+        "left": -67.5,
+        "top": -55.776573,
+        "right": -66.09375,
+        "bottom": -56.559482,
+        "countries": [
+            "chile"
+        ]
+    }
+]

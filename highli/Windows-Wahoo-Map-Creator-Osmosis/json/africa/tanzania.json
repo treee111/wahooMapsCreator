@@ -1,0 +1,691 @@
+[
+    {
+        "x": 149,
+        "y": 129,
+        "left": 29.53125,
+        "top": -1.406109,
+        "right": 30.9375,
+        "bottom": -2.811371,
+        "countries": [
+            "burundi",
+            "democratic_republic_of_the_congo",
+            "tanzania",
+            "rwanda",
+            "uganda"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 130,
+        "left": 29.53125,
+        "top": -2.811371,
+        "right": 30.9375,
+        "bottom": -4.214943,
+        "countries": [
+            "rwanda",
+            "tanzania",
+            "burundi"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 131,
+        "left": 28.125,
+        "top": -4.214943,
+        "right": 29.53125,
+        "bottom": -5.615986,
+        "countries": [
+            "tanzania",
+            "democratic_republic_of_the_congo",
+            "burundi"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 131,
+        "left": 29.53125,
+        "top": -4.214943,
+        "right": 30.9375,
+        "bottom": -5.615986,
+        "countries": [
+            "tanzania",
+            "democratic_republic_of_the_congo",
+            "burundi"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 128,
+        "left": 29.53125,
+        "top": 0.0,
+        "right": 30.9375,
+        "bottom": -1.406109,
+        "countries": [
+            "uganda",
+            "tanzania",
+            "democratic_republic_of_the_congo",
+            "rwanda"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 132,
+        "left": 29.53125,
+        "top": -5.615986,
+        "right": 30.9375,
+        "bottom": -7.013668,
+        "countries": [
+            "tanzania",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 133,
+        "left": 29.53125,
+        "top": -7.013668,
+        "right": 30.9375,
+        "bottom": -8.407168,
+        "countries": [
+            "zambia",
+            "tanzania",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 128,
+        "left": 33.75,
+        "top": 0.0,
+        "right": 35.15625,
+        "bottom": -1.406109,
+        "countries": [
+            "uganda",
+            "kenya",
+            "tanzania"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 129,
+        "left": 33.75,
+        "top": -1.406109,
+        "right": 35.15625,
+        "bottom": -2.811371,
+        "countries": [
+            "kenya",
+            "tanzania"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 129,
+        "left": 35.15625,
+        "top": -1.406109,
+        "right": 36.5625,
+        "bottom": -2.811371,
+        "countries": [
+            "kenya",
+            "tanzania"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 129,
+        "left": 36.5625,
+        "top": -1.406109,
+        "right": 37.96875,
+        "bottom": -2.811371,
+        "countries": [
+            "kenya",
+            "tanzania"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 130,
+        "left": 36.5625,
+        "top": -2.811371,
+        "right": 37.96875,
+        "bottom": -4.214943,
+        "countries": [
+            "kenya",
+            "tanzania"
+        ]
+    },
+    {
+        "x": 155,
+        "y": 130,
+        "left": 37.96875,
+        "top": -2.811371,
+        "right": 39.375,
+        "bottom": -4.214943,
+        "countries": [
+            "kenya",
+            "tanzania"
+        ]
+    },
+    {
+        "x": 155,
+        "y": 131,
+        "left": 37.96875,
+        "top": -4.214943,
+        "right": 39.375,
+        "bottom": -5.615986,
+        "countries": [
+            "kenya",
+            "tanzania"
+        ]
+    },
+    {
+        "x": 156,
+        "y": 131,
+        "left": 39.375,
+        "top": -4.214943,
+        "right": 40.78125,
+        "bottom": -5.615986,
+        "countries": [
+            "kenya",
+            "tanzania"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 134,
+        "left": 32.34375,
+        "top": -8.407168,
+        "right": 33.75,
+        "bottom": -9.795678,
+        "countries": [
+            "zambia",
+            "tanzania",
+            "malawi"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 134,
+        "left": 33.75,
+        "top": -8.407168,
+        "right": 35.15625,
+        "bottom": -9.795678,
+        "countries": [
+            "tanzania",
+            "malawi"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 135,
+        "left": 33.75,
+        "top": -9.795678,
+        "right": 35.15625,
+        "bottom": -11.178402,
+        "countries": [
+            "tanzania",
+            "malawi"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 136,
+        "left": 33.75,
+        "top": -11.178402,
+        "right": 35.15625,
+        "bottom": -12.554564,
+        "countries": [
+            "mozambique",
+            "tanzania",
+            "malawi"
+        ]
+    },
+    {
+        "x": 155,
+        "y": 135,
+        "left": 37.96875,
+        "top": -9.795678,
+        "right": 39.375,
+        "bottom": -11.178402,
+        "countries": [
+            "mozambique",
+            "tanzania"
+        ]
+    },
+    {
+        "x": 156,
+        "y": 135,
+        "left": 39.375,
+        "top": -9.795678,
+        "right": 40.78125,
+        "bottom": -11.178402,
+        "countries": [
+            "mozambique",
+            "tanzania"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 136,
+        "left": 35.15625,
+        "top": -11.178402,
+        "right": 36.5625,
+        "bottom": -12.554564,
+        "countries": [
+            "mozambique",
+            "tanzania"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 136,
+        "left": 36.5625,
+        "top": -11.178402,
+        "right": 37.96875,
+        "bottom": -12.554564,
+        "countries": [
+            "mozambique",
+            "tanzania"
+        ]
+    },
+    {
+        "x": 155,
+        "y": 136,
+        "left": 37.96875,
+        "top": -11.178402,
+        "right": 39.375,
+        "bottom": -12.554564,
+        "countries": [
+            "mozambique",
+            "tanzania"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 128,
+        "left": 30.9375,
+        "top": 0.0,
+        "right": 32.34375,
+        "bottom": -1.406109,
+        "countries": [
+            "uganda",
+            "tanzania"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 128,
+        "left": 32.34375,
+        "top": 0.0,
+        "right": 33.75,
+        "bottom": -1.406109,
+        "countries": [
+            "uganda",
+            "tanzania"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 129,
+        "left": 30.9375,
+        "top": -1.406109,
+        "right": 32.34375,
+        "bottom": -2.811371,
+        "countries": [
+            "tanzania"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 129,
+        "left": 32.34375,
+        "top": -1.406109,
+        "right": 33.75,
+        "bottom": -2.811371,
+        "countries": [
+            "tanzania"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 130,
+        "left": 30.9375,
+        "top": -2.811371,
+        "right": 32.34375,
+        "bottom": -4.214943,
+        "countries": [
+            "tanzania"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 130,
+        "left": 32.34375,
+        "top": -2.811371,
+        "right": 33.75,
+        "bottom": -4.214943,
+        "countries": [
+            "tanzania"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 130,
+        "left": 33.75,
+        "top": -2.811371,
+        "right": 35.15625,
+        "bottom": -4.214943,
+        "countries": [
+            "tanzania"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 130,
+        "left": 35.15625,
+        "top": -2.811371,
+        "right": 36.5625,
+        "bottom": -4.214943,
+        "countries": [
+            "tanzania"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 131,
+        "left": 30.9375,
+        "top": -4.214943,
+        "right": 32.34375,
+        "bottom": -5.615986,
+        "countries": [
+            "tanzania"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 131,
+        "left": 32.34375,
+        "top": -4.214943,
+        "right": 33.75,
+        "bottom": -5.615986,
+        "countries": [
+            "tanzania"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 131,
+        "left": 33.75,
+        "top": -4.214943,
+        "right": 35.15625,
+        "bottom": -5.615986,
+        "countries": [
+            "tanzania"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 131,
+        "left": 35.15625,
+        "top": -4.214943,
+        "right": 36.5625,
+        "bottom": -5.615986,
+        "countries": [
+            "tanzania"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 131,
+        "left": 36.5625,
+        "top": -4.214943,
+        "right": 37.96875,
+        "bottom": -5.615986,
+        "countries": [
+            "tanzania"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 132,
+        "left": 30.9375,
+        "top": -5.615986,
+        "right": 32.34375,
+        "bottom": -7.013668,
+        "countries": [
+            "tanzania"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 132,
+        "left": 32.34375,
+        "top": -5.615986,
+        "right": 33.75,
+        "bottom": -7.013668,
+        "countries": [
+            "tanzania"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 132,
+        "left": 33.75,
+        "top": -5.615986,
+        "right": 35.15625,
+        "bottom": -7.013668,
+        "countries": [
+            "tanzania"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 132,
+        "left": 35.15625,
+        "top": -5.615986,
+        "right": 36.5625,
+        "bottom": -7.013668,
+        "countries": [
+            "tanzania"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 132,
+        "left": 36.5625,
+        "top": -5.615986,
+        "right": 37.96875,
+        "bottom": -7.013668,
+        "countries": [
+            "tanzania"
+        ]
+    },
+    {
+        "x": 155,
+        "y": 132,
+        "left": 37.96875,
+        "top": -5.615986,
+        "right": 39.375,
+        "bottom": -7.013668,
+        "countries": [
+            "tanzania"
+        ]
+    },
+    {
+        "x": 156,
+        "y": 132,
+        "left": 39.375,
+        "top": -5.615986,
+        "right": 40.78125,
+        "bottom": -7.013668,
+        "countries": [
+            "tanzania"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 133,
+        "left": 30.9375,
+        "top": -7.013668,
+        "right": 32.34375,
+        "bottom": -8.407168,
+        "countries": [
+            "tanzania"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 133,
+        "left": 32.34375,
+        "top": -7.013668,
+        "right": 33.75,
+        "bottom": -8.407168,
+        "countries": [
+            "tanzania"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 133,
+        "left": 33.75,
+        "top": -7.013668,
+        "right": 35.15625,
+        "bottom": -8.407168,
+        "countries": [
+            "tanzania"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 133,
+        "left": 35.15625,
+        "top": -7.013668,
+        "right": 36.5625,
+        "bottom": -8.407168,
+        "countries": [
+            "tanzania"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 133,
+        "left": 36.5625,
+        "top": -7.013668,
+        "right": 37.96875,
+        "bottom": -8.407168,
+        "countries": [
+            "tanzania"
+        ]
+    },
+    {
+        "x": 155,
+        "y": 133,
+        "left": 37.96875,
+        "top": -7.013668,
+        "right": 39.375,
+        "bottom": -8.407168,
+        "countries": [
+            "tanzania"
+        ]
+    },
+    {
+        "x": 156,
+        "y": 133,
+        "left": 39.375,
+        "top": -7.013668,
+        "right": 40.78125,
+        "bottom": -8.407168,
+        "countries": [
+            "tanzania"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 134,
+        "left": 29.53125,
+        "top": -8.407168,
+        "right": 30.9375,
+        "bottom": -9.795678,
+        "countries": [
+            "zambia",
+            "tanzania"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 134,
+        "left": 30.9375,
+        "top": -8.407168,
+        "right": 32.34375,
+        "bottom": -9.795678,
+        "countries": [
+            "zambia",
+            "tanzania"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 134,
+        "left": 35.15625,
+        "top": -8.407168,
+        "right": 36.5625,
+        "bottom": -9.795678,
+        "countries": [
+            "tanzania"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 134,
+        "left": 36.5625,
+        "top": -8.407168,
+        "right": 37.96875,
+        "bottom": -9.795678,
+        "countries": [
+            "tanzania"
+        ]
+    },
+    {
+        "x": 155,
+        "y": 134,
+        "left": 37.96875,
+        "top": -8.407168,
+        "right": 39.375,
+        "bottom": -9.795678,
+        "countries": [
+            "tanzania"
+        ]
+    },
+    {
+        "x": 156,
+        "y": 134,
+        "left": 39.375,
+        "top": -8.407168,
+        "right": 40.78125,
+        "bottom": -9.795678,
+        "countries": [
+            "tanzania"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 135,
+        "left": 35.15625,
+        "top": -9.795678,
+        "right": 36.5625,
+        "bottom": -11.178402,
+        "countries": [
+            "tanzania"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 135,
+        "left": 36.5625,
+        "top": -9.795678,
+        "right": 37.96875,
+        "bottom": -11.178402,
+        "countries": [
+            "tanzania"
+        ]
+    }
+]

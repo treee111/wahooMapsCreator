@@ -1,0 +1,29 @@
+[
+    {
+        "x": 82,
+        "y": 114,
+        "left": -64.6875,
+        "top": 19.311143,
+        "right": -63.28125,
+        "bottom": 17.978733,
+        "countries": [
+            "anguilla",
+            "virgin_islands_u.s.",
+            "united_states_virgin_islands",
+            "british_virgin_islands"
+        ]
+    },
+    {
+        "x": 83,
+        "y": 114,
+        "left": -63.28125,
+        "top": 19.311143,
+        "right": -61.875,
+        "bottom": 17.978733,
+        "countries": [
+            "anguilla",
+            "saint-martin",
+            "sint_maarten"
+        ]
+    }
+]

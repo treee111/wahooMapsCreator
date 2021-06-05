@@ -1,0 +1,329 @@
+[
+    {
+        "x": 40,
+        "y": 87,
+        "left": -123.75,
+        "top": 49.837982,
+        "right": -122.34375,
+        "bottom": 48.922499,
+        "countries": [
+            "washington",
+            "canada"
+        ]
+    },
+    {
+        "x": 41,
+        "y": 87,
+        "left": -122.34375,
+        "top": 49.837982,
+        "right": -120.9375,
+        "bottom": 48.922499,
+        "countries": [
+            "washington",
+            "canada"
+        ]
+    },
+    {
+        "x": 42,
+        "y": 87,
+        "left": -120.9375,
+        "top": 49.837982,
+        "right": -119.53125,
+        "bottom": 48.922499,
+        "countries": [
+            "washington",
+            "canada"
+        ]
+    },
+    {
+        "x": 43,
+        "y": 87,
+        "left": -119.53125,
+        "top": 49.837982,
+        "right": -118.125,
+        "bottom": 48.922499,
+        "countries": [
+            "washington",
+            "canada"
+        ]
+    },
+    {
+        "x": 44,
+        "y": 87,
+        "left": -118.125,
+        "top": 49.837982,
+        "right": -116.71875,
+        "bottom": 48.922499,
+        "countries": [
+            "idaho",
+            "washington",
+            "canada"
+        ]
+    },
+    {
+        "x": 39,
+        "y": 88,
+        "left": -125.15625,
+        "top": 48.922499,
+        "right": -123.75,
+        "bottom": 47.989922,
+        "countries": [
+            "washington",
+            "canada"
+        ]
+    },
+    {
+        "x": 40,
+        "y": 88,
+        "left": -123.75,
+        "top": 48.922499,
+        "right": -122.34375,
+        "bottom": 47.989922,
+        "countries": [
+            "washington",
+            "canada"
+        ]
+    },
+    {
+        "x": 44,
+        "y": 88,
+        "left": -118.125,
+        "top": 48.922499,
+        "right": -116.71875,
+        "bottom": 47.989922,
+        "countries": [
+            "idaho",
+            "washington"
+        ]
+    },
+    {
+        "x": 44,
+        "y": 89,
+        "left": -118.125,
+        "top": 47.989922,
+        "right": -116.71875,
+        "bottom": 47.040182,
+        "countries": [
+            "idaho",
+            "washington"
+        ]
+    },
+    {
+        "x": 44,
+        "y": 90,
+        "left": -118.125,
+        "top": 47.040182,
+        "right": -116.71875,
+        "bottom": 46.073231,
+        "countries": [
+            "idaho",
+            "washington"
+        ]
+    },
+    {
+        "x": 44,
+        "y": 91,
+        "left": -118.125,
+        "top": 46.073231,
+        "right": -116.71875,
+        "bottom": 45.089036,
+        "countries": [
+            "idaho",
+            "oregon",
+            "washington"
+        ]
+    },
+    {
+        "x": 39,
+        "y": 90,
+        "left": -125.15625,
+        "top": 47.040182,
+        "right": -123.75,
+        "bottom": 46.073231,
+        "countries": [
+            "oregon",
+            "washington"
+        ]
+    },
+    {
+        "x": 40,
+        "y": 90,
+        "left": -123.75,
+        "top": 47.040182,
+        "right": -122.34375,
+        "bottom": 46.073231,
+        "countries": [
+            "oregon",
+            "washington"
+        ]
+    },
+    {
+        "x": 40,
+        "y": 91,
+        "left": -123.75,
+        "top": 46.073231,
+        "right": -122.34375,
+        "bottom": 45.089036,
+        "countries": [
+            "oregon",
+            "washington"
+        ]
+    },
+    {
+        "x": 41,
+        "y": 91,
+        "left": -122.34375,
+        "top": 46.073231,
+        "right": -120.9375,
+        "bottom": 45.089036,
+        "countries": [
+            "oregon",
+            "washington"
+        ]
+    },
+    {
+        "x": 42,
+        "y": 91,
+        "left": -120.9375,
+        "top": 46.073231,
+        "right": -119.53125,
+        "bottom": 45.089036,
+        "countries": [
+            "oregon",
+            "washington"
+        ]
+    },
+    {
+        "x": 43,
+        "y": 91,
+        "left": -119.53125,
+        "top": 46.073231,
+        "right": -118.125,
+        "bottom": 45.089036,
+        "countries": [
+            "oregon",
+            "washington"
+        ]
+    },
+    {
+        "x": 41,
+        "y": 88,
+        "left": -122.34375,
+        "top": 48.922499,
+        "right": -120.9375,
+        "bottom": 47.989922,
+        "countries": [
+            "washington"
+        ]
+    },
+    {
+        "x": 42,
+        "y": 88,
+        "left": -120.9375,
+        "top": 48.922499,
+        "right": -119.53125,
+        "bottom": 47.989922,
+        "countries": [
+            "washington"
+        ]
+    },
+    {
+        "x": 43,
+        "y": 88,
+        "left": -119.53125,
+        "top": 48.922499,
+        "right": -118.125,
+        "bottom": 47.989922,
+        "countries": [
+            "washington"
+        ]
+    },
+    {
+        "x": 39,
+        "y": 89,
+        "left": -125.15625,
+        "top": 47.989922,
+        "right": -123.75,
+        "bottom": 47.040182,
+        "countries": [
+            "washington"
+        ]
+    },
+    {
+        "x": 40,
+        "y": 89,
+        "left": -123.75,
+        "top": 47.989922,
+        "right": -122.34375,
+        "bottom": 47.040182,
+        "countries": [
+            "washington"
+        ]
+    },
+    {
+        "x": 41,
+        "y": 89,
+        "left": -122.34375,
+        "top": 47.989922,
+        "right": -120.9375,
+        "bottom": 47.040182,
+        "countries": [
+            "washington"
+        ]
+    },
+    {
+        "x": 42,
+        "y": 89,
+        "left": -120.9375,
+        "top": 47.989922,
+        "right": -119.53125,
+        "bottom": 47.040182,
+        "countries": [
+            "washington"
+        ]
+    },
+    {
+        "x": 43,
+        "y": 89,
+        "left": -119.53125,
+        "top": 47.989922,
+        "right": -118.125,
+        "bottom": 47.040182,
+        "countries": [
+            "washington"
+        ]
+    },
+    {
+        "x": 41,
+        "y": 90,
+        "left": -122.34375,
+        "top": 47.040182,
+        "right": -120.9375,
+        "bottom": 46.073231,
+        "countries": [
+            "washington"
+        ]
+    },
+    {
+        "x": 42,
+        "y": 90,
+        "left": -120.9375,
+        "top": 47.040182,
+        "right": -119.53125,
+        "bottom": 46.073231,
+        "countries": [
+            "washington"
+        ]
+    },
+    {
+        "x": 43,
+        "y": 90,
+        "left": -119.53125,
+        "top": 47.040182,
+        "right": -118.125,
+        "bottom": 46.073231,
+        "countries": [
+            "washington"
+        ]
+    }
+]

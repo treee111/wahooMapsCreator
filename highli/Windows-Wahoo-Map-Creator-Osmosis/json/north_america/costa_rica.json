@@ -1,0 +1,130 @@
+[
+    {
+        "x": 67,
+        "y": 119,
+        "left": -85.78125,
+        "top": 12.554564,
+        "right": -84.375,
+        "bottom": 11.178402,
+        "countries": [
+            "costa_rica",
+            "nicaragua"
+        ]
+    },
+    {
+        "x": 66,
+        "y": 120,
+        "left": -87.1875,
+        "top": 11.178402,
+        "right": -85.78125,
+        "bottom": 9.795678,
+        "countries": [
+            "costa_rica",
+            "nicaragua"
+        ]
+    },
+    {
+        "x": 67,
+        "y": 120,
+        "left": -85.78125,
+        "top": 11.178402,
+        "right": -84.375,
+        "bottom": 9.795678,
+        "countries": [
+            "costa_rica",
+            "nicaragua"
+        ]
+    },
+    {
+        "x": 68,
+        "y": 120,
+        "left": -84.375,
+        "top": 11.178402,
+        "right": -82.96875,
+        "bottom": 9.795678,
+        "countries": [
+            "costa_rica",
+            "nicaragua"
+        ]
+    },
+    {
+        "x": 69,
+        "y": 120,
+        "left": -82.96875,
+        "top": 11.178402,
+        "right": -81.5625,
+        "bottom": 9.795678,
+        "countries": [
+            "costa_rica"
+        ]
+    },
+    {
+        "x": 67,
+        "y": 121,
+        "left": -85.78125,
+        "top": 9.795678,
+        "right": -84.375,
+        "bottom": 8.407168,
+        "countries": [
+            "costa_rica"
+        ]
+    },
+    {
+        "x": 68,
+        "y": 121,
+        "left": -84.375,
+        "top": 9.795678,
+        "right": -82.96875,
+        "bottom": 8.407168,
+        "countries": [
+            "costa_rica"
+        ]
+    },
+    {
+        "x": 69,
+        "y": 121,
+        "left": -82.96875,
+        "top": 9.795678,
+        "right": -81.5625,
+        "bottom": 8.407168,
+        "countries": [
+            "costa_rica",
+            "panama"
+        ]
+    },
+    {
+        "x": 68,
+        "y": 122,
+        "left": -84.375,
+        "top": 8.407168,
+        "right": -82.96875,
+        "bottom": 7.013668,
+        "countries": [
+            "costa_rica",
+            "panama"
+        ]
+    },
+    {
+        "x": 69,
+        "y": 122,
+        "left": -82.96875,
+        "top": 8.407168,
+        "right": -81.5625,
+        "bottom": 7.013668,
+        "countries": [
+            "costa_rica",
+            "panama"
+        ]
+    },
+    {
+        "x": 66,
+        "y": 124,
+        "left": -87.1875,
+        "top": 5.615986,
+        "right": -85.78125,
+        "bottom": 4.214943,
+        "countries": [
+            "costa_rica"
+        ]
+    }
+]

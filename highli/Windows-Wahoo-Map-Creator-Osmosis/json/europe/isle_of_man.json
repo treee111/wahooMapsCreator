@@ -1,0 +1,26 @@
+[
+    {
+        "x": 124,
+        "y": 81,
+        "left": -5.625,
+        "top": 54.977614,
+        "right": -4.21875,
+        "bottom": 54.162434,
+        "countries": [
+            "isle_of_man",
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 124,
+        "y": 82,
+        "left": -5.625,
+        "top": 54.162434,
+        "right": -4.21875,
+        "bottom": 53.330873,
+        "countries": [
+            "isle_of_man",
+            "united_kingdom"
+        ]
+    }
+]

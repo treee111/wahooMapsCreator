@@ -1,0 +1,101 @@
+[
+    {
+        "x": 191,
+        "y": 108,
+        "left": 88.59375,
+        "top": 27.059126,
+        "right": 90.0,
+        "bottom": 25.799891,
+        "countries": [
+            "bhutan",
+            "bangladesh",
+            "india"
+        ]
+    },
+    {
+        "x": 191,
+        "y": 106,
+        "left": 88.59375,
+        "top": 29.53523,
+        "right": 90.0,
+        "bottom": 28.304381,
+        "countries": [
+            "bhutan",
+            "china"
+        ]
+    },
+    {
+        "x": 192,
+        "y": 106,
+        "left": 90.0,
+        "top": 29.53523,
+        "right": 91.40625,
+        "bottom": 28.304381,
+        "countries": [
+            "bhutan",
+            "china"
+        ]
+    },
+    {
+        "x": 191,
+        "y": 107,
+        "left": 88.59375,
+        "top": 28.304381,
+        "right": 90.0,
+        "bottom": 27.059126,
+        "countries": [
+            "bhutan",
+            "china",
+            "india"
+        ]
+    },
+    {
+        "x": 192,
+        "y": 107,
+        "left": 90.0,
+        "top": 28.304381,
+        "right": 91.40625,
+        "bottom": 27.059126,
+        "countries": [
+            "bhutan",
+            "china"
+        ]
+    },
+    {
+        "x": 193,
+        "y": 107,
+        "left": 91.40625,
+        "top": 28.304381,
+        "right": 92.8125,
+        "bottom": 27.059126,
+        "countries": [
+            "bhutan",
+            "china",
+            "india"
+        ]
+    },
+    {
+        "x": 192,
+        "y": 108,
+        "left": 90.0,
+        "top": 27.059126,
+        "right": 91.40625,
+        "bottom": 25.799891,
+        "countries": [
+            "bhutan",
+            "india"
+        ]
+    },
+    {
+        "x": 193,
+        "y": 108,
+        "left": 91.40625,
+        "top": 27.059126,
+        "right": 92.8125,
+        "bottom": 25.799891,
+        "countries": [
+            "bhutan",
+            "india"
+        ]
+    }
+]

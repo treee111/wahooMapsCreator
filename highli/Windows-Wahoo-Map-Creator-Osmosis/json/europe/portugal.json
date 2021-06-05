@@ -1,0 +1,310 @@
+[
+    {
+        "x": 121,
+        "y": 94,
+        "left": -9.84375,
+        "top": 43.068888,
+        "right": -8.4375,
+        "bottom": 42.032974,
+        "countries": [
+            "portugal",
+            "spain"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 94,
+        "left": -8.4375,
+        "top": 43.068888,
+        "right": -7.03125,
+        "bottom": 42.032974,
+        "countries": [
+            "portugal",
+            "spain"
+        ]
+    },
+    {
+        "x": 121,
+        "y": 95,
+        "left": -9.84375,
+        "top": 42.032974,
+        "right": -8.4375,
+        "bottom": 40.979898,
+        "countries": [
+            "portugal",
+            "spain"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 95,
+        "left": -8.4375,
+        "top": 42.032974,
+        "right": -7.03125,
+        "bottom": 40.979898,
+        "countries": [
+            "portugal",
+            "spain"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 95,
+        "left": -7.03125,
+        "top": 42.032974,
+        "right": -5.625,
+        "bottom": 40.979898,
+        "countries": [
+            "portugal",
+            "spain"
+        ]
+    },
+    {
+        "x": 121,
+        "y": 96,
+        "left": -9.84375,
+        "top": 40.979898,
+        "right": -8.4375,
+        "bottom": 39.909736,
+        "countries": [
+            "portugal"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 96,
+        "left": -8.4375,
+        "top": 40.979898,
+        "right": -7.03125,
+        "bottom": 39.909736,
+        "countries": [
+            "portugal"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 96,
+        "left": -7.03125,
+        "top": 40.979898,
+        "right": -5.625,
+        "bottom": 39.909736,
+        "countries": [
+            "portugal",
+            "spain"
+        ]
+    },
+    {
+        "x": 105,
+        "y": 97,
+        "left": -32.34375,
+        "top": 39.909736,
+        "right": -30.9375,
+        "bottom": 38.822591,
+        "countries": [
+            "portugal"
+        ]
+    },
+    {
+        "x": 108,
+        "y": 97,
+        "left": -28.125,
+        "top": 39.909736,
+        "right": -26.71875,
+        "bottom": 38.822591,
+        "countries": [
+            "portugal"
+        ]
+    },
+    {
+        "x": 121,
+        "y": 97,
+        "left": -9.84375,
+        "top": 39.909736,
+        "right": -8.4375,
+        "bottom": 38.822591,
+        "countries": [
+            "portugal"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 97,
+        "left": -8.4375,
+        "top": 39.909736,
+        "right": -7.03125,
+        "bottom": 38.822591,
+        "countries": [
+            "portugal",
+            "spain"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 97,
+        "left": -7.03125,
+        "top": 39.909736,
+        "right": -5.625,
+        "bottom": 38.822591,
+        "countries": [
+            "portugal",
+            "spain"
+        ]
+    },
+    {
+        "x": 107,
+        "y": 98,
+        "left": -29.53125,
+        "top": 38.822591,
+        "right": -28.125,
+        "bottom": 37.71859,
+        "countries": [
+            "portugal"
+        ]
+    },
+    {
+        "x": 108,
+        "y": 98,
+        "left": -28.125,
+        "top": 38.822591,
+        "right": -26.71875,
+        "bottom": 37.71859,
+        "countries": [
+            "portugal"
+        ]
+    },
+    {
+        "x": 109,
+        "y": 98,
+        "left": -26.71875,
+        "top": 38.822591,
+        "right": -25.3125,
+        "bottom": 37.71859,
+        "countries": [
+            "portugal"
+        ]
+    },
+    {
+        "x": 110,
+        "y": 98,
+        "left": -25.3125,
+        "top": 38.822591,
+        "right": -23.90625,
+        "bottom": 37.71859,
+        "countries": [
+            "portugal"
+        ]
+    },
+    {
+        "x": 121,
+        "y": 98,
+        "left": -9.84375,
+        "top": 38.822591,
+        "right": -8.4375,
+        "bottom": 37.71859,
+        "countries": [
+            "portugal"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 98,
+        "left": -8.4375,
+        "top": 38.822591,
+        "right": -7.03125,
+        "bottom": 37.71859,
+        "countries": [
+            "portugal",
+            "spain"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 98,
+        "left": -7.03125,
+        "top": 38.822591,
+        "right": -5.625,
+        "bottom": 37.71859,
+        "countries": [
+            "portugal",
+            "spain"
+        ]
+    },
+    {
+        "x": 109,
+        "y": 99,
+        "left": -26.71875,
+        "top": 37.71859,
+        "right": -25.3125,
+        "bottom": 36.597889,
+        "countries": [
+            "portugal"
+        ]
+    },
+    {
+        "x": 110,
+        "y": 99,
+        "left": -25.3125,
+        "top": 37.71859,
+        "right": -23.90625,
+        "bottom": 36.597889,
+        "countries": [
+            "portugal"
+        ]
+    },
+    {
+        "x": 121,
+        "y": 99,
+        "left": -9.84375,
+        "top": 37.71859,
+        "right": -8.4375,
+        "bottom": 36.597889,
+        "countries": [
+            "portugal"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 99,
+        "left": -8.4375,
+        "top": 37.71859,
+        "right": -7.03125,
+        "bottom": 36.597889,
+        "countries": [
+            "portugal",
+            "spain"
+        ]
+    },
+    {
+        "x": 115,
+        "y": 103,
+        "left": -18.28125,
+        "top": 33.137551,
+        "right": -16.875,
+        "bottom": 31.952162,
+        "countries": [
+            "portugal"
+        ]
+    },
+    {
+        "x": 116,
+        "y": 103,
+        "left": -16.875,
+        "top": 33.137551,
+        "right": -15.46875,
+        "bottom": 31.952162,
+        "countries": [
+            "portugal"
+        ]
+    },
+    {
+        "x": 116,
+        "y": 105,
+        "left": -16.875,
+        "top": 30.751278,
+        "right": -15.46875,
+        "bottom": 29.53523,
+        "countries": [
+            "portugal"
+        ]
+    }
+]

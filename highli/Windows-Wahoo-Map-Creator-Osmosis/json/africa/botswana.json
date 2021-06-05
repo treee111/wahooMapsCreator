@@ -1,0 +1,488 @@
+[
+    {
+        "x": 142,
+        "y": 141,
+        "left": 19.6875,
+        "top": -17.978733,
+        "right": 21.09375,
+        "bottom": -19.311143,
+        "countries": [
+            "botswana",
+            "namibia",
+            "angola"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 141,
+        "left": 21.09375,
+        "top": -17.978733,
+        "right": 22.5,
+        "bottom": -19.311143,
+        "countries": [
+            "botswana",
+            "namibia",
+            "angola"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 140,
+        "left": 23.90625,
+        "top": -16.636192,
+        "right": 25.3125,
+        "bottom": -17.978733,
+        "countries": [
+            "zambia",
+            "botswana",
+            "zimbabwe",
+            "namibia"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 141,
+        "left": 22.5,
+        "top": -17.978733,
+        "right": 23.90625,
+        "bottom": -19.311143,
+        "countries": [
+            "botswana",
+            "namibia"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 141,
+        "left": 23.90625,
+        "top": -17.978733,
+        "right": 25.3125,
+        "bottom": -19.311143,
+        "countries": [
+            "botswana",
+            "zimbabwe",
+            "namibia"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 141,
+        "left": 25.3125,
+        "top": -17.978733,
+        "right": 26.71875,
+        "bottom": -19.311143,
+        "countries": [
+            "zambia",
+            "botswana",
+            "zimbabwe"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 142,
+        "left": 19.6875,
+        "top": -19.311143,
+        "right": 21.09375,
+        "bottom": -20.632784,
+        "countries": [
+            "botswana",
+            "namibia"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 142,
+        "left": 21.09375,
+        "top": -19.311143,
+        "right": 22.5,
+        "bottom": -20.632784,
+        "countries": [
+            "botswana"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 142,
+        "left": 22.5,
+        "top": -19.311143,
+        "right": 23.90625,
+        "bottom": -20.632784,
+        "countries": [
+            "botswana"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 142,
+        "left": 23.90625,
+        "top": -19.311143,
+        "right": 25.3125,
+        "bottom": -20.632784,
+        "countries": [
+            "botswana"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 142,
+        "left": 25.3125,
+        "top": -19.311143,
+        "right": 26.71875,
+        "bottom": -20.632784,
+        "countries": [
+            "botswana",
+            "zimbabwe"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 142,
+        "left": 26.71875,
+        "top": -19.311143,
+        "right": 28.125,
+        "bottom": -20.632784,
+        "countries": [
+            "botswana",
+            "zimbabwe"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 143,
+        "left": 19.6875,
+        "top": -20.632784,
+        "right": 21.09375,
+        "bottom": -21.943046,
+        "countries": [
+            "botswana",
+            "namibia"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 143,
+        "left": 21.09375,
+        "top": -20.632784,
+        "right": 22.5,
+        "bottom": -21.943046,
+        "countries": [
+            "botswana"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 143,
+        "left": 22.5,
+        "top": -20.632784,
+        "right": 23.90625,
+        "bottom": -21.943046,
+        "countries": [
+            "botswana"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 143,
+        "left": 23.90625,
+        "top": -20.632784,
+        "right": 25.3125,
+        "bottom": -21.943046,
+        "countries": [
+            "botswana"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 143,
+        "left": 25.3125,
+        "top": -20.632784,
+        "right": 26.71875,
+        "bottom": -21.943046,
+        "countries": [
+            "botswana"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 143,
+        "left": 26.71875,
+        "top": -20.632784,
+        "right": 28.125,
+        "bottom": -21.943046,
+        "countries": [
+            "botswana",
+            "zimbabwe"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 143,
+        "left": 28.125,
+        "top": -20.632784,
+        "right": 29.53125,
+        "bottom": -21.943046,
+        "countries": [
+            "botswana",
+            "zimbabwe"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 144,
+        "left": 19.6875,
+        "top": -21.943046,
+        "right": 21.09375,
+        "bottom": -23.241346,
+        "countries": [
+            "botswana",
+            "namibia"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 144,
+        "left": 21.09375,
+        "top": -21.943046,
+        "right": 22.5,
+        "bottom": -23.241346,
+        "countries": [
+            "botswana"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 144,
+        "left": 22.5,
+        "top": -21.943046,
+        "right": 23.90625,
+        "bottom": -23.241346,
+        "countries": [
+            "botswana"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 144,
+        "left": 23.90625,
+        "top": -21.943046,
+        "right": 25.3125,
+        "bottom": -23.241346,
+        "countries": [
+            "botswana"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 144,
+        "left": 25.3125,
+        "top": -21.943046,
+        "right": 26.71875,
+        "bottom": -23.241346,
+        "countries": [
+            "botswana"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 144,
+        "left": 26.71875,
+        "top": -21.943046,
+        "right": 28.125,
+        "bottom": -23.241346,
+        "countries": [
+            "botswana",
+            "south_africa"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 144,
+        "left": 28.125,
+        "top": -21.943046,
+        "right": 29.53125,
+        "bottom": -23.241346,
+        "countries": [
+            "botswana",
+            "south_africa",
+            "zimbabwe"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 145,
+        "left": 19.6875,
+        "top": -23.241346,
+        "right": 21.09375,
+        "bottom": -24.527135,
+        "countries": [
+            "botswana",
+            "namibia"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 145,
+        "left": 21.09375,
+        "top": -23.241346,
+        "right": 22.5,
+        "bottom": -24.527135,
+        "countries": [
+            "botswana"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 145,
+        "left": 22.5,
+        "top": -23.241346,
+        "right": 23.90625,
+        "bottom": -24.527135,
+        "countries": [
+            "botswana"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 145,
+        "left": 23.90625,
+        "top": -23.241346,
+        "right": 25.3125,
+        "bottom": -24.527135,
+        "countries": [
+            "botswana"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 145,
+        "left": 25.3125,
+        "top": -23.241346,
+        "right": 26.71875,
+        "bottom": -24.527135,
+        "countries": [
+            "botswana",
+            "south_africa"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 145,
+        "left": 26.71875,
+        "top": -23.241346,
+        "right": 28.125,
+        "bottom": -24.527135,
+        "countries": [
+            "botswana",
+            "south_africa"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 146,
+        "left": 19.6875,
+        "top": -24.527135,
+        "right": 21.09375,
+        "bottom": -25.799891,
+        "countries": [
+            "botswana",
+            "south_africa",
+            "namibia"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 146,
+        "left": 21.09375,
+        "top": -24.527135,
+        "right": 22.5,
+        "bottom": -25.799891,
+        "countries": [
+            "botswana"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 146,
+        "left": 22.5,
+        "top": -24.527135,
+        "right": 23.90625,
+        "bottom": -25.799891,
+        "countries": [
+            "botswana",
+            "south_africa"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 146,
+        "left": 23.90625,
+        "top": -24.527135,
+        "right": 25.3125,
+        "bottom": -25.799891,
+        "countries": [
+            "botswana",
+            "south_africa"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 146,
+        "left": 25.3125,
+        "top": -24.527135,
+        "right": 26.71875,
+        "bottom": -25.799891,
+        "countries": [
+            "botswana",
+            "south_africa"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 147,
+        "left": 19.6875,
+        "top": -25.799891,
+        "right": 21.09375,
+        "bottom": -27.059126,
+        "countries": [
+            "botswana",
+            "south_africa",
+            "namibia"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 147,
+        "left": 21.09375,
+        "top": -25.799891,
+        "right": 22.5,
+        "bottom": -27.059126,
+        "countries": [
+            "botswana",
+            "south_africa"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 147,
+        "left": 22.5,
+        "top": -25.799891,
+        "right": 23.90625,
+        "bottom": -27.059126,
+        "countries": [
+            "botswana",
+            "south_africa"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 147,
+        "left": 23.90625,
+        "top": -25.799891,
+        "right": 25.3125,
+        "bottom": -27.059126,
+        "countries": [
+            "botswana",
+            "south_africa"
+        ]
+    }
+]

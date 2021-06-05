@@ -1,0 +1,70 @@
+[
+    {
+        "x": 148,
+        "y": 129,
+        "left": 28.125,
+        "top": -1.406109,
+        "right": 29.53125,
+        "bottom": -2.811371,
+        "countries": [
+            "rwanda",
+            "democratic_republic_of_the_congo",
+            "burundi"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 129,
+        "left": 29.53125,
+        "top": -1.406109,
+        "right": 30.9375,
+        "bottom": -2.811371,
+        "countries": [
+            "burundi",
+            "democratic_republic_of_the_congo",
+            "tanzania",
+            "rwanda",
+            "uganda"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 130,
+        "left": 28.125,
+        "top": -2.811371,
+        "right": 29.53125,
+        "bottom": -4.214943,
+        "countries": [
+            "rwanda",
+            "democratic_republic_of_the_congo",
+            "burundi"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 130,
+        "left": 29.53125,
+        "top": -2.811371,
+        "right": 30.9375,
+        "bottom": -4.214943,
+        "countries": [
+            "rwanda",
+            "tanzania",
+            "burundi"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 128,
+        "left": 29.53125,
+        "top": 0.0,
+        "right": 30.9375,
+        "bottom": -1.406109,
+        "countries": [
+            "uganda",
+            "tanzania",
+            "democratic_republic_of_the_congo",
+            "rwanda"
+        ]
+    }
+]

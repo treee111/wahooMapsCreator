@@ -1,0 +1,506 @@
+[
+    {
+        "x": 147,
+        "y": 79,
+        "left": 26.71875,
+        "top": 56.559482,
+        "right": 28.125,
+        "bottom": 55.776573,
+        "countries": [
+            "belarus",
+            "latvia",
+            "russia"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 79,
+        "left": 28.125,
+        "top": 56.559482,
+        "right": 29.53125,
+        "bottom": 55.776573,
+        "countries": [
+            "belarus",
+            "latvia",
+            "russia"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 79,
+        "left": 29.53125,
+        "top": 56.559482,
+        "right": 30.9375,
+        "bottom": 55.776573,
+        "countries": [
+            "belarus",
+            "russia"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 80,
+        "left": 25.3125,
+        "top": 55.776573,
+        "right": 26.71875,
+        "bottom": 54.977614,
+        "countries": [
+            "belarus",
+            "latvia",
+            "lithuania"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 80,
+        "left": 26.71875,
+        "top": 55.776573,
+        "right": 28.125,
+        "bottom": 54.977614,
+        "countries": [
+            "belarus",
+            "latvia",
+            "lithuania"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 80,
+        "left": 28.125,
+        "top": 55.776573,
+        "right": 29.53125,
+        "bottom": 54.977614,
+        "countries": [
+            "belarus",
+            "russia"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 80,
+        "left": 29.53125,
+        "top": 55.776573,
+        "right": 30.9375,
+        "bottom": 54.977614,
+        "countries": [
+            "belarus",
+            "russia"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 80,
+        "left": 30.9375,
+        "top": 55.776573,
+        "right": 32.34375,
+        "bottom": 54.977614,
+        "countries": [
+            "belarus",
+            "russia"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 81,
+        "left": 23.90625,
+        "top": 54.977614,
+        "right": 25.3125,
+        "bottom": 54.162434,
+        "countries": [
+            "belarus",
+            "lithuania"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 81,
+        "left": 25.3125,
+        "top": 54.977614,
+        "right": 26.71875,
+        "bottom": 54.162434,
+        "countries": [
+            "belarus",
+            "lithuania"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 81,
+        "left": 26.71875,
+        "top": 54.977614,
+        "right": 28.125,
+        "bottom": 54.162434,
+        "countries": [
+            "belarus"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 81,
+        "left": 28.125,
+        "top": 54.977614,
+        "right": 29.53125,
+        "bottom": 54.162434,
+        "countries": [
+            "belarus"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 81,
+        "left": 29.53125,
+        "top": 54.977614,
+        "right": 30.9375,
+        "bottom": 54.162434,
+        "countries": [
+            "belarus",
+            "russia"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 81,
+        "left": 30.9375,
+        "top": 54.977614,
+        "right": 32.34375,
+        "bottom": 54.162434,
+        "countries": [
+            "belarus",
+            "russia"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 82,
+        "left": 22.5,
+        "top": 54.162434,
+        "right": 23.90625,
+        "bottom": 53.330873,
+        "countries": [
+            "belarus",
+            "poland",
+            "lithuania"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 82,
+        "left": 23.90625,
+        "top": 54.162434,
+        "right": 25.3125,
+        "bottom": 53.330873,
+        "countries": [
+            "belarus",
+            "lithuania"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 82,
+        "left": 25.3125,
+        "top": 54.162434,
+        "right": 26.71875,
+        "bottom": 53.330873,
+        "countries": [
+            "belarus",
+            "lithuania"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 82,
+        "left": 26.71875,
+        "top": 54.162434,
+        "right": 28.125,
+        "bottom": 53.330873,
+        "countries": [
+            "belarus"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 82,
+        "left": 28.125,
+        "top": 54.162434,
+        "right": 29.53125,
+        "bottom": 53.330873,
+        "countries": [
+            "belarus"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 82,
+        "left": 29.53125,
+        "top": 54.162434,
+        "right": 30.9375,
+        "bottom": 53.330873,
+        "countries": [
+            "belarus"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 82,
+        "left": 30.9375,
+        "top": 54.162434,
+        "right": 32.34375,
+        "bottom": 53.330873,
+        "countries": [
+            "belarus",
+            "russia"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 82,
+        "left": 32.34375,
+        "top": 54.162434,
+        "right": 33.75,
+        "bottom": 53.330873,
+        "countries": [
+            "belarus",
+            "russia"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 83,
+        "left": 22.5,
+        "top": 53.330873,
+        "right": 23.90625,
+        "bottom": 52.48278,
+        "countries": [
+            "belarus",
+            "poland"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 83,
+        "left": 23.90625,
+        "top": 53.330873,
+        "right": 25.3125,
+        "bottom": 52.48278,
+        "countries": [
+            "belarus",
+            "poland"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 83,
+        "left": 25.3125,
+        "top": 53.330873,
+        "right": 26.71875,
+        "bottom": 52.48278,
+        "countries": [
+            "belarus"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 83,
+        "left": 26.71875,
+        "top": 53.330873,
+        "right": 28.125,
+        "bottom": 52.48278,
+        "countries": [
+            "belarus"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 83,
+        "left": 28.125,
+        "top": 53.330873,
+        "right": 29.53125,
+        "bottom": 52.48278,
+        "countries": [
+            "belarus"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 83,
+        "left": 29.53125,
+        "top": 53.330873,
+        "right": 30.9375,
+        "bottom": 52.48278,
+        "countries": [
+            "belarus"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 83,
+        "left": 30.9375,
+        "top": 53.330873,
+        "right": 32.34375,
+        "bottom": 52.48278,
+        "countries": [
+            "belarus",
+            "russia"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 83,
+        "left": 32.34375,
+        "top": 53.330873,
+        "right": 33.75,
+        "bottom": 52.48278,
+        "countries": [
+            "belarus",
+            "russia"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 84,
+        "left": 22.5,
+        "top": 52.48278,
+        "right": 23.90625,
+        "bottom": 51.618017,
+        "countries": [
+            "belarus",
+            "poland",
+            "ukraine"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 84,
+        "left": 23.90625,
+        "top": 52.48278,
+        "right": 25.3125,
+        "bottom": 51.618017,
+        "countries": [
+            "belarus",
+            "ukraine"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 84,
+        "left": 25.3125,
+        "top": 52.48278,
+        "right": 26.71875,
+        "bottom": 51.618017,
+        "countries": [
+            "belarus",
+            "ukraine"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 84,
+        "left": 26.71875,
+        "top": 52.48278,
+        "right": 28.125,
+        "bottom": 51.618017,
+        "countries": [
+            "belarus",
+            "ukraine"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 84,
+        "left": 28.125,
+        "top": 52.48278,
+        "right": 29.53125,
+        "bottom": 51.618017,
+        "countries": [
+            "belarus",
+            "ukraine"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 84,
+        "left": 29.53125,
+        "top": 52.48278,
+        "right": 30.9375,
+        "bottom": 51.618017,
+        "countries": [
+            "belarus",
+            "ukraine"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 84,
+        "left": 30.9375,
+        "top": 52.48278,
+        "right": 32.34375,
+        "bottom": 51.618017,
+        "countries": [
+            "belarus",
+            "russia",
+            "ukraine"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 85,
+        "left": 22.5,
+        "top": 51.618017,
+        "right": 23.90625,
+        "bottom": 50.736455,
+        "countries": [
+            "belarus",
+            "poland",
+            "ukraine"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 85,
+        "left": 23.90625,
+        "top": 51.618017,
+        "right": 25.3125,
+        "bottom": 50.736455,
+        "countries": [
+            "belarus",
+            "poland",
+            "ukraine"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 85,
+        "left": 26.71875,
+        "top": 51.618017,
+        "right": 28.125,
+        "bottom": 50.736455,
+        "countries": [
+            "belarus",
+            "ukraine"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 85,
+        "left": 28.125,
+        "top": 51.618017,
+        "right": 29.53125,
+        "bottom": 50.736455,
+        "countries": [
+            "belarus",
+            "ukraine"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 85,
+        "left": 29.53125,
+        "top": 51.618017,
+        "right": 30.9375,
+        "bottom": 50.736455,
+        "countries": [
+            "belarus",
+            "ukraine"
+        ]
+    }
+]

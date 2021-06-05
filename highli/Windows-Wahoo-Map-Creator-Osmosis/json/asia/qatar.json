@@ -1,0 +1,53 @@
+[
+    {
+        "x": 164,
+        "y": 108,
+        "left": 50.625,
+        "top": 27.059126,
+        "right": 52.03125,
+        "bottom": 25.799891,
+        "countries": [
+            "qatar",
+            "bahrain"
+        ]
+    },
+    {
+        "x": 164,
+        "y": 109,
+        "left": 50.625,
+        "top": 25.799891,
+        "right": 52.03125,
+        "bottom": 24.527135,
+        "countries": [
+            "saudi_arabia",
+            "qatar",
+            "united_arab_emirates",
+            "bahrain"
+        ]
+    },
+    {
+        "x": 165,
+        "y": 109,
+        "left": 52.03125,
+        "top": 25.799891,
+        "right": 53.4375,
+        "bottom": 24.527135,
+        "countries": [
+            "united_arab_emirates",
+            "qatar"
+        ]
+    },
+    {
+        "x": 164,
+        "y": 110,
+        "left": 50.625,
+        "top": 24.527135,
+        "right": 52.03125,
+        "bottom": 23.241346,
+        "countries": [
+            "saudi_arabia",
+            "qatar",
+            "united_arab_emirates"
+        ]
+    }
+]

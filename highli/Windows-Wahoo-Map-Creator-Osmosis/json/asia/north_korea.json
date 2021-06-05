@@ -1,0 +1,247 @@
+[
+    {
+        "x": 219,
+        "y": 94,
+        "left": 127.96875,
+        "top": 43.068888,
+        "right": 129.375,
+        "bottom": 42.032974,
+        "countries": [
+            "north_korea",
+            "china"
+        ]
+    },
+    {
+        "x": 220,
+        "y": 94,
+        "left": 129.375,
+        "top": 43.068888,
+        "right": 130.78125,
+        "bottom": 42.032974,
+        "countries": [
+            "russia",
+            "north_korea",
+            "china"
+        ]
+    },
+    {
+        "x": 217,
+        "y": 95,
+        "left": 125.15625,
+        "top": 42.032974,
+        "right": 126.5625,
+        "bottom": 40.979898,
+        "countries": [
+            "north_korea",
+            "china"
+        ]
+    },
+    {
+        "x": 218,
+        "y": 95,
+        "left": 126.5625,
+        "top": 42.032974,
+        "right": 127.96875,
+        "bottom": 40.979898,
+        "countries": [
+            "north_korea",
+            "china"
+        ]
+    },
+    {
+        "x": 219,
+        "y": 95,
+        "left": 127.96875,
+        "top": 42.032974,
+        "right": 129.375,
+        "bottom": 40.979898,
+        "countries": [
+            "north_korea",
+            "china"
+        ]
+    },
+    {
+        "x": 216,
+        "y": 96,
+        "left": 123.75,
+        "top": 40.979898,
+        "right": 125.15625,
+        "bottom": 39.909736,
+        "countries": [
+            "north_korea",
+            "china"
+        ]
+    },
+    {
+        "x": 217,
+        "y": 96,
+        "left": 125.15625,
+        "top": 40.979898,
+        "right": 126.5625,
+        "bottom": 39.909736,
+        "countries": [
+            "north_korea",
+            "china"
+        ]
+    },
+    {
+        "x": 216,
+        "y": 97,
+        "left": 123.75,
+        "top": 39.909736,
+        "right": 125.15625,
+        "bottom": 38.822591,
+        "countries": [
+            "north_korea",
+            "china"
+        ]
+    },
+    {
+        "x": 220,
+        "y": 95,
+        "left": 129.375,
+        "top": 42.032974,
+        "right": 130.78125,
+        "bottom": 40.979898,
+        "countries": [
+            "north_korea"
+        ]
+    },
+    {
+        "x": 218,
+        "y": 96,
+        "left": 126.5625,
+        "top": 40.979898,
+        "right": 127.96875,
+        "bottom": 39.909736,
+        "countries": [
+            "north_korea"
+        ]
+    },
+    {
+        "x": 219,
+        "y": 96,
+        "left": 127.96875,
+        "top": 40.979898,
+        "right": 129.375,
+        "bottom": 39.909736,
+        "countries": [
+            "north_korea"
+        ]
+    },
+    {
+        "x": 220,
+        "y": 96,
+        "left": 129.375,
+        "top": 40.979898,
+        "right": 130.78125,
+        "bottom": 39.909736,
+        "countries": [
+            "north_korea"
+        ]
+    },
+    {
+        "x": 217,
+        "y": 97,
+        "left": 125.15625,
+        "top": 39.909736,
+        "right": 126.5625,
+        "bottom": 38.822591,
+        "countries": [
+            "north_korea"
+        ]
+    },
+    {
+        "x": 218,
+        "y": 97,
+        "left": 126.5625,
+        "top": 39.909736,
+        "right": 127.96875,
+        "bottom": 38.822591,
+        "countries": [
+            "north_korea"
+        ]
+    },
+    {
+        "x": 219,
+        "y": 97,
+        "left": 127.96875,
+        "top": 39.909736,
+        "right": 129.375,
+        "bottom": 38.822591,
+        "countries": [
+            "north_korea"
+        ]
+    },
+    {
+        "x": 216,
+        "y": 98,
+        "left": 123.75,
+        "top": 38.822591,
+        "right": 125.15625,
+        "bottom": 37.71859,
+        "countries": [
+            "north_korea",
+            "south_korea"
+        ]
+    },
+    {
+        "x": 217,
+        "y": 98,
+        "left": 125.15625,
+        "top": 38.822591,
+        "right": 126.5625,
+        "bottom": 37.71859,
+        "countries": [
+            "north_korea",
+            "south_korea"
+        ]
+    },
+    {
+        "x": 218,
+        "y": 98,
+        "left": 126.5625,
+        "top": 38.822591,
+        "right": 127.96875,
+        "bottom": 37.71859,
+        "countries": [
+            "north_korea",
+            "south_korea"
+        ]
+    },
+    {
+        "x": 219,
+        "y": 98,
+        "left": 127.96875,
+        "top": 38.822591,
+        "right": 129.375,
+        "bottom": 37.71859,
+        "countries": [
+            "north_korea",
+            "south_korea"
+        ]
+    },
+    {
+        "x": 216,
+        "y": 99,
+        "left": 123.75,
+        "top": 37.71859,
+        "right": 125.15625,
+        "bottom": 36.597889,
+        "countries": [
+            "north_korea"
+        ]
+    },
+    {
+        "x": 217,
+        "y": 99,
+        "left": 125.15625,
+        "top": 37.71859,
+        "right": 126.5625,
+        "bottom": 36.597889,
+        "countries": [
+            "north_korea",
+            "south_korea"
+        ]
+    }
+]

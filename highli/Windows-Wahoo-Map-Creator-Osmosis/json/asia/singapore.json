@@ -1,0 +1,52 @@
+[
+    {
+        "x": 201,
+        "y": 127,
+        "left": 102.65625,
+        "top": 1.406109,
+        "right": 104.0625,
+        "bottom": 0.0,
+        "countries": [
+            "indonesia",
+            "singapore",
+            "malaysia"
+        ]
+    },
+    {
+        "x": 202,
+        "y": 127,
+        "left": 104.0625,
+        "top": 1.406109,
+        "right": 105.46875,
+        "bottom": 0.0,
+        "countries": [
+            "indonesia",
+            "singapore",
+            "malaysia"
+        ]
+    },
+    {
+        "x": 201,
+        "y": 126,
+        "left": 102.65625,
+        "top": 2.811371,
+        "right": 104.0625,
+        "bottom": 1.406109,
+        "countries": [
+            "singapore",
+            "malaysia"
+        ]
+    },
+    {
+        "x": 202,
+        "y": 126,
+        "left": 104.0625,
+        "top": 2.811371,
+        "right": 105.46875,
+        "bottom": 1.406109,
+        "countries": [
+            "singapore",
+            "malaysia"
+        ]
+    }
+]

@@ -1,0 +1,35 @@
+[
+    {
+        "x": 70,
+        "y": 113,
+        "left": -81.5625,
+        "top": 20.632784,
+        "right": -80.15625,
+        "bottom": 19.311143,
+        "countries": [
+            "cayman_islands"
+        ]
+    },
+    {
+        "x": 71,
+        "y": 113,
+        "left": -80.15625,
+        "top": 20.632784,
+        "right": -78.75,
+        "bottom": 19.311143,
+        "countries": [
+            "cayman_islands"
+        ]
+    },
+    {
+        "x": 70,
+        "y": 114,
+        "left": -81.5625,
+        "top": 19.311143,
+        "right": -80.15625,
+        "bottom": 17.978733,
+        "countries": [
+            "cayman_islands"
+        ]
+    }
+]

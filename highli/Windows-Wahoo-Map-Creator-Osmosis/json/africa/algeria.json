@@ -1,0 +1,1806 @@
+[
+    {
+        "x": 129,
+        "y": 99,
+        "left": 1.40625,
+        "top": 37.71859,
+        "right": 2.8125,
+        "bottom": 36.597889,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 130,
+        "y": 99,
+        "left": 2.8125,
+        "top": 37.71859,
+        "right": 4.21875,
+        "bottom": 36.597889,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 131,
+        "y": 99,
+        "left": 4.21875,
+        "top": 37.71859,
+        "right": 5.625,
+        "bottom": 36.597889,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 132,
+        "y": 99,
+        "left": 5.625,
+        "top": 37.71859,
+        "right": 7.03125,
+        "bottom": 36.597889,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 133,
+        "y": 99,
+        "left": 7.03125,
+        "top": 37.71859,
+        "right": 8.4375,
+        "bottom": 36.597889,
+        "countries": [
+            "tunisia",
+            "algeria"
+        ]
+    },
+    {
+        "x": 134,
+        "y": 99,
+        "left": 8.4375,
+        "top": 37.71859,
+        "right": 9.84375,
+        "bottom": 36.597889,
+        "countries": [
+            "tunisia",
+            "algeria"
+        ]
+    },
+    {
+        "x": 127,
+        "y": 100,
+        "left": -1.40625,
+        "top": 36.597889,
+        "right": 0.0,
+        "bottom": 35.46067,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 128,
+        "y": 100,
+        "left": 0.0,
+        "top": 36.597889,
+        "right": 1.40625,
+        "bottom": 35.46067,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 129,
+        "y": 100,
+        "left": 1.40625,
+        "top": 36.597889,
+        "right": 2.8125,
+        "bottom": 35.46067,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 130,
+        "y": 100,
+        "left": 2.8125,
+        "top": 36.597889,
+        "right": 4.21875,
+        "bottom": 35.46067,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 131,
+        "y": 100,
+        "left": 4.21875,
+        "top": 36.597889,
+        "right": 5.625,
+        "bottom": 35.46067,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 132,
+        "y": 100,
+        "left": 5.625,
+        "top": 36.597889,
+        "right": 7.03125,
+        "bottom": 35.46067,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 133,
+        "y": 100,
+        "left": 7.03125,
+        "top": 36.597889,
+        "right": 8.4375,
+        "bottom": 35.46067,
+        "countries": [
+            "tunisia",
+            "algeria"
+        ]
+    },
+    {
+        "x": 126,
+        "y": 101,
+        "left": -2.8125,
+        "top": 35.46067,
+        "right": -1.40625,
+        "bottom": 34.307144,
+        "countries": [
+            "spain",
+            "algeria",
+            "morocco"
+        ]
+    },
+    {
+        "x": 127,
+        "y": 101,
+        "left": -1.40625,
+        "top": 35.46067,
+        "right": 0.0,
+        "bottom": 34.307144,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 128,
+        "y": 101,
+        "left": 0.0,
+        "top": 35.46067,
+        "right": 1.40625,
+        "bottom": 34.307144,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 129,
+        "y": 101,
+        "left": 1.40625,
+        "top": 35.46067,
+        "right": 2.8125,
+        "bottom": 34.307144,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 130,
+        "y": 101,
+        "left": 2.8125,
+        "top": 35.46067,
+        "right": 4.21875,
+        "bottom": 34.307144,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 131,
+        "y": 101,
+        "left": 4.21875,
+        "top": 35.46067,
+        "right": 5.625,
+        "bottom": 34.307144,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 132,
+        "y": 101,
+        "left": 5.625,
+        "top": 35.46067,
+        "right": 7.03125,
+        "bottom": 34.307144,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 133,
+        "y": 101,
+        "left": 7.03125,
+        "top": 35.46067,
+        "right": 8.4375,
+        "bottom": 34.307144,
+        "countries": [
+            "tunisia",
+            "algeria"
+        ]
+    },
+    {
+        "x": 134,
+        "y": 101,
+        "left": 8.4375,
+        "top": 35.46067,
+        "right": 9.84375,
+        "bottom": 34.307144,
+        "countries": [
+            "tunisia",
+            "algeria"
+        ]
+    },
+    {
+        "x": 126,
+        "y": 102,
+        "left": -2.8125,
+        "top": 34.307144,
+        "right": -1.40625,
+        "bottom": 33.137551,
+        "countries": [
+            "algeria",
+            "morocco"
+        ]
+    },
+    {
+        "x": 127,
+        "y": 102,
+        "left": -1.40625,
+        "top": 34.307144,
+        "right": 0.0,
+        "bottom": 33.137551,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 128,
+        "y": 102,
+        "left": 0.0,
+        "top": 34.307144,
+        "right": 1.40625,
+        "bottom": 33.137551,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 129,
+        "y": 102,
+        "left": 1.40625,
+        "top": 34.307144,
+        "right": 2.8125,
+        "bottom": 33.137551,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 130,
+        "y": 102,
+        "left": 2.8125,
+        "top": 34.307144,
+        "right": 4.21875,
+        "bottom": 33.137551,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 131,
+        "y": 102,
+        "left": 4.21875,
+        "top": 34.307144,
+        "right": 5.625,
+        "bottom": 33.137551,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 132,
+        "y": 102,
+        "left": 5.625,
+        "top": 34.307144,
+        "right": 7.03125,
+        "bottom": 33.137551,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 133,
+        "y": 102,
+        "left": 7.03125,
+        "top": 34.307144,
+        "right": 8.4375,
+        "bottom": 33.137551,
+        "countries": [
+            "tunisia",
+            "algeria"
+        ]
+    },
+    {
+        "x": 125,
+        "y": 103,
+        "left": -4.21875,
+        "top": 33.137551,
+        "right": -2.8125,
+        "bottom": 31.952162,
+        "countries": [
+            "algeria",
+            "morocco"
+        ]
+    },
+    {
+        "x": 126,
+        "y": 103,
+        "left": -2.8125,
+        "top": 33.137551,
+        "right": -1.40625,
+        "bottom": 31.952162,
+        "countries": [
+            "algeria",
+            "morocco"
+        ]
+    },
+    {
+        "x": 127,
+        "y": 103,
+        "left": -1.40625,
+        "top": 33.137551,
+        "right": 0.0,
+        "bottom": 31.952162,
+        "countries": [
+            "algeria",
+            "morocco"
+        ]
+    },
+    {
+        "x": 128,
+        "y": 103,
+        "left": 0.0,
+        "top": 33.137551,
+        "right": 1.40625,
+        "bottom": 31.952162,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 129,
+        "y": 103,
+        "left": 1.40625,
+        "top": 33.137551,
+        "right": 2.8125,
+        "bottom": 31.952162,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 130,
+        "y": 103,
+        "left": 2.8125,
+        "top": 33.137551,
+        "right": 4.21875,
+        "bottom": 31.952162,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 131,
+        "y": 103,
+        "left": 4.21875,
+        "top": 33.137551,
+        "right": 5.625,
+        "bottom": 31.952162,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 132,
+        "y": 103,
+        "left": 5.625,
+        "top": 33.137551,
+        "right": 7.03125,
+        "bottom": 31.952162,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 133,
+        "y": 103,
+        "left": 7.03125,
+        "top": 33.137551,
+        "right": 8.4375,
+        "bottom": 31.952162,
+        "countries": [
+            "tunisia",
+            "algeria"
+        ]
+    },
+    {
+        "x": 134,
+        "y": 103,
+        "left": 8.4375,
+        "top": 33.137551,
+        "right": 9.84375,
+        "bottom": 31.952162,
+        "countries": [
+            "tunisia",
+            "algeria"
+        ]
+    },
+    {
+        "x": 125,
+        "y": 104,
+        "left": -4.21875,
+        "top": 31.952162,
+        "right": -2.8125,
+        "bottom": 30.751278,
+        "countries": [
+            "algeria",
+            "morocco"
+        ]
+    },
+    {
+        "x": 126,
+        "y": 104,
+        "left": -2.8125,
+        "top": 31.952162,
+        "right": -1.40625,
+        "bottom": 30.751278,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 127,
+        "y": 104,
+        "left": -1.40625,
+        "top": 31.952162,
+        "right": 0.0,
+        "bottom": 30.751278,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 128,
+        "y": 104,
+        "left": 0.0,
+        "top": 31.952162,
+        "right": 1.40625,
+        "bottom": 30.751278,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 129,
+        "y": 104,
+        "left": 1.40625,
+        "top": 31.952162,
+        "right": 2.8125,
+        "bottom": 30.751278,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 130,
+        "y": 104,
+        "left": 2.8125,
+        "top": 31.952162,
+        "right": 4.21875,
+        "bottom": 30.751278,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 131,
+        "y": 104,
+        "left": 4.21875,
+        "top": 31.952162,
+        "right": 5.625,
+        "bottom": 30.751278,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 132,
+        "y": 104,
+        "left": 5.625,
+        "top": 31.952162,
+        "right": 7.03125,
+        "bottom": 30.751278,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 133,
+        "y": 104,
+        "left": 7.03125,
+        "top": 31.952162,
+        "right": 8.4375,
+        "bottom": 30.751278,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 134,
+        "y": 104,
+        "left": 8.4375,
+        "top": 31.952162,
+        "right": 9.84375,
+        "bottom": 30.751278,
+        "countries": [
+            "tunisia",
+            "algeria"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 105,
+        "left": -8.4375,
+        "top": 30.751278,
+        "right": -7.03125,
+        "bottom": 29.53523,
+        "countries": [
+            "algeria",
+            "morocco"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 105,
+        "left": -7.03125,
+        "top": 30.751278,
+        "right": -5.625,
+        "bottom": 29.53523,
+        "countries": [
+            "algeria",
+            "morocco"
+        ]
+    },
+    {
+        "x": 124,
+        "y": 105,
+        "left": -5.625,
+        "top": 30.751278,
+        "right": -4.21875,
+        "bottom": 29.53523,
+        "countries": [
+            "algeria",
+            "morocco"
+        ]
+    },
+    {
+        "x": 125,
+        "y": 105,
+        "left": -4.21875,
+        "top": 30.751278,
+        "right": -2.8125,
+        "bottom": 29.53523,
+        "countries": [
+            "algeria",
+            "morocco"
+        ]
+    },
+    {
+        "x": 126,
+        "y": 105,
+        "left": -2.8125,
+        "top": 30.751278,
+        "right": -1.40625,
+        "bottom": 29.53523,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 127,
+        "y": 105,
+        "left": -1.40625,
+        "top": 30.751278,
+        "right": 0.0,
+        "bottom": 29.53523,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 128,
+        "y": 105,
+        "left": 0.0,
+        "top": 30.751278,
+        "right": 1.40625,
+        "bottom": 29.53523,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 129,
+        "y": 105,
+        "left": 1.40625,
+        "top": 30.751278,
+        "right": 2.8125,
+        "bottom": 29.53523,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 130,
+        "y": 105,
+        "left": 2.8125,
+        "top": 30.751278,
+        "right": 4.21875,
+        "bottom": 29.53523,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 131,
+        "y": 105,
+        "left": 4.21875,
+        "top": 30.751278,
+        "right": 5.625,
+        "bottom": 29.53523,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 132,
+        "y": 105,
+        "left": 5.625,
+        "top": 30.751278,
+        "right": 7.03125,
+        "bottom": 29.53523,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 133,
+        "y": 105,
+        "left": 7.03125,
+        "top": 30.751278,
+        "right": 8.4375,
+        "bottom": 29.53523,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 134,
+        "y": 105,
+        "left": 8.4375,
+        "top": 30.751278,
+        "right": 9.84375,
+        "bottom": 29.53523,
+        "countries": [
+            "libya",
+            "tunisia",
+            "algeria"
+        ]
+    },
+    {
+        "x": 121,
+        "y": 106,
+        "left": -9.84375,
+        "top": 29.53523,
+        "right": -8.4375,
+        "bottom": 28.304381,
+        "countries": [
+            "algeria",
+            "morocco"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 106,
+        "left": -8.4375,
+        "top": 29.53523,
+        "right": -7.03125,
+        "bottom": 28.304381,
+        "countries": [
+            "algeria",
+            "morocco"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 106,
+        "left": -7.03125,
+        "top": 29.53523,
+        "right": -5.625,
+        "bottom": 28.304381,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 124,
+        "y": 106,
+        "left": -5.625,
+        "top": 29.53523,
+        "right": -4.21875,
+        "bottom": 28.304381,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 125,
+        "y": 106,
+        "left": -4.21875,
+        "top": 29.53523,
+        "right": -2.8125,
+        "bottom": 28.304381,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 126,
+        "y": 106,
+        "left": -2.8125,
+        "top": 29.53523,
+        "right": -1.40625,
+        "bottom": 28.304381,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 127,
+        "y": 106,
+        "left": -1.40625,
+        "top": 29.53523,
+        "right": 0.0,
+        "bottom": 28.304381,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 128,
+        "y": 106,
+        "left": 0.0,
+        "top": 29.53523,
+        "right": 1.40625,
+        "bottom": 28.304381,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 129,
+        "y": 106,
+        "left": 1.40625,
+        "top": 29.53523,
+        "right": 2.8125,
+        "bottom": 28.304381,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 130,
+        "y": 106,
+        "left": 2.8125,
+        "top": 29.53523,
+        "right": 4.21875,
+        "bottom": 28.304381,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 131,
+        "y": 106,
+        "left": 4.21875,
+        "top": 29.53523,
+        "right": 5.625,
+        "bottom": 28.304381,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 132,
+        "y": 106,
+        "left": 5.625,
+        "top": 29.53523,
+        "right": 7.03125,
+        "bottom": 28.304381,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 133,
+        "y": 106,
+        "left": 7.03125,
+        "top": 29.53523,
+        "right": 8.4375,
+        "bottom": 28.304381,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 134,
+        "y": 106,
+        "left": 8.4375,
+        "top": 29.53523,
+        "right": 9.84375,
+        "bottom": 28.304381,
+        "countries": [
+            "libya",
+            "algeria"
+        ]
+    },
+    {
+        "x": 135,
+        "y": 106,
+        "left": 9.84375,
+        "top": 29.53523,
+        "right": 11.25,
+        "bottom": 28.304381,
+        "countries": [
+            "libya",
+            "algeria"
+        ]
+    },
+    {
+        "x": 121,
+        "y": 107,
+        "left": -9.84375,
+        "top": 28.304381,
+        "right": -8.4375,
+        "bottom": 27.059126,
+        "countries": [
+            "morocco",
+            "algeria",
+            "western_sahara",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 107,
+        "left": -8.4375,
+        "top": 28.304381,
+        "right": -7.03125,
+        "bottom": 27.059126,
+        "countries": [
+            "algeria",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 107,
+        "left": -7.03125,
+        "top": 28.304381,
+        "right": -5.625,
+        "bottom": 27.059126,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 124,
+        "y": 107,
+        "left": -5.625,
+        "top": 28.304381,
+        "right": -4.21875,
+        "bottom": 27.059126,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 125,
+        "y": 107,
+        "left": -4.21875,
+        "top": 28.304381,
+        "right": -2.8125,
+        "bottom": 27.059126,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 126,
+        "y": 107,
+        "left": -2.8125,
+        "top": 28.304381,
+        "right": -1.40625,
+        "bottom": 27.059126,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 127,
+        "y": 107,
+        "left": -1.40625,
+        "top": 28.304381,
+        "right": 0.0,
+        "bottom": 27.059126,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 128,
+        "y": 107,
+        "left": 0.0,
+        "top": 28.304381,
+        "right": 1.40625,
+        "bottom": 27.059126,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 129,
+        "y": 107,
+        "left": 1.40625,
+        "top": 28.304381,
+        "right": 2.8125,
+        "bottom": 27.059126,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 130,
+        "y": 107,
+        "left": 2.8125,
+        "top": 28.304381,
+        "right": 4.21875,
+        "bottom": 27.059126,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 131,
+        "y": 107,
+        "left": 4.21875,
+        "top": 28.304381,
+        "right": 5.625,
+        "bottom": 27.059126,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 132,
+        "y": 107,
+        "left": 5.625,
+        "top": 28.304381,
+        "right": 7.03125,
+        "bottom": 27.059126,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 133,
+        "y": 107,
+        "left": 7.03125,
+        "top": 28.304381,
+        "right": 8.4375,
+        "bottom": 27.059126,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 134,
+        "y": 107,
+        "left": 8.4375,
+        "top": 28.304381,
+        "right": 9.84375,
+        "bottom": 27.059126,
+        "countries": [
+            "libya",
+            "algeria"
+        ]
+    },
+    {
+        "x": 135,
+        "y": 107,
+        "left": 9.84375,
+        "top": 28.304381,
+        "right": 11.25,
+        "bottom": 27.059126,
+        "countries": [
+            "libya",
+            "algeria"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 108,
+        "left": -8.4375,
+        "top": 27.059126,
+        "right": -7.03125,
+        "bottom": 25.799891,
+        "countries": [
+            "algeria",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 108,
+        "left": -7.03125,
+        "top": 27.059126,
+        "right": -5.625,
+        "bottom": 25.799891,
+        "countries": [
+            "algeria",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 124,
+        "y": 108,
+        "left": -5.625,
+        "top": 27.059126,
+        "right": -4.21875,
+        "bottom": 25.799891,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 125,
+        "y": 108,
+        "left": -4.21875,
+        "top": 27.059126,
+        "right": -2.8125,
+        "bottom": 25.799891,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 126,
+        "y": 108,
+        "left": -2.8125,
+        "top": 27.059126,
+        "right": -1.40625,
+        "bottom": 25.799891,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 127,
+        "y": 108,
+        "left": -1.40625,
+        "top": 27.059126,
+        "right": 0.0,
+        "bottom": 25.799891,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 128,
+        "y": 108,
+        "left": 0.0,
+        "top": 27.059126,
+        "right": 1.40625,
+        "bottom": 25.799891,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 129,
+        "y": 108,
+        "left": 1.40625,
+        "top": 27.059126,
+        "right": 2.8125,
+        "bottom": 25.799891,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 130,
+        "y": 108,
+        "left": 2.8125,
+        "top": 27.059126,
+        "right": 4.21875,
+        "bottom": 25.799891,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 131,
+        "y": 108,
+        "left": 4.21875,
+        "top": 27.059126,
+        "right": 5.625,
+        "bottom": 25.799891,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 132,
+        "y": 108,
+        "left": 5.625,
+        "top": 27.059126,
+        "right": 7.03125,
+        "bottom": 25.799891,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 133,
+        "y": 108,
+        "left": 7.03125,
+        "top": 27.059126,
+        "right": 8.4375,
+        "bottom": 25.799891,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 134,
+        "y": 108,
+        "left": 8.4375,
+        "top": 27.059126,
+        "right": 9.84375,
+        "bottom": 25.799891,
+        "countries": [
+            "libya",
+            "algeria"
+        ]
+    },
+    {
+        "x": 135,
+        "y": 108,
+        "left": 9.84375,
+        "top": 27.059126,
+        "right": 11.25,
+        "bottom": 25.799891,
+        "countries": [
+            "libya",
+            "algeria"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 109,
+        "left": -7.03125,
+        "top": 25.799891,
+        "right": -5.625,
+        "bottom": 24.527135,
+        "countries": [
+            "algeria",
+            "mali",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 124,
+        "y": 109,
+        "left": -5.625,
+        "top": 25.799891,
+        "right": -4.21875,
+        "bottom": 24.527135,
+        "countries": [
+            "algeria",
+            "mali",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 125,
+        "y": 109,
+        "left": -4.21875,
+        "top": 25.799891,
+        "right": -2.8125,
+        "bottom": 24.527135,
+        "countries": [
+            "algeria",
+            "mali"
+        ]
+    },
+    {
+        "x": 126,
+        "y": 109,
+        "left": -2.8125,
+        "top": 25.799891,
+        "right": -1.40625,
+        "bottom": 24.527135,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 127,
+        "y": 109,
+        "left": -1.40625,
+        "top": 25.799891,
+        "right": 0.0,
+        "bottom": 24.527135,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 128,
+        "y": 109,
+        "left": 0.0,
+        "top": 25.799891,
+        "right": 1.40625,
+        "bottom": 24.527135,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 129,
+        "y": 109,
+        "left": 1.40625,
+        "top": 25.799891,
+        "right": 2.8125,
+        "bottom": 24.527135,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 130,
+        "y": 109,
+        "left": 2.8125,
+        "top": 25.799891,
+        "right": 4.21875,
+        "bottom": 24.527135,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 131,
+        "y": 109,
+        "left": 4.21875,
+        "top": 25.799891,
+        "right": 5.625,
+        "bottom": 24.527135,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 132,
+        "y": 109,
+        "left": 5.625,
+        "top": 25.799891,
+        "right": 7.03125,
+        "bottom": 24.527135,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 133,
+        "y": 109,
+        "left": 7.03125,
+        "top": 25.799891,
+        "right": 8.4375,
+        "bottom": 24.527135,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 134,
+        "y": 109,
+        "left": 8.4375,
+        "top": 25.799891,
+        "right": 9.84375,
+        "bottom": 24.527135,
+        "countries": [
+            "libya",
+            "algeria"
+        ]
+    },
+    {
+        "x": 135,
+        "y": 109,
+        "left": 9.84375,
+        "top": 25.799891,
+        "right": 11.25,
+        "bottom": 24.527135,
+        "countries": [
+            "libya",
+            "algeria"
+        ]
+    },
+    {
+        "x": 125,
+        "y": 110,
+        "left": -4.21875,
+        "top": 24.527135,
+        "right": -2.8125,
+        "bottom": 23.241346,
+        "countries": [
+            "algeria",
+            "mali"
+        ]
+    },
+    {
+        "x": 126,
+        "y": 110,
+        "left": -2.8125,
+        "top": 24.527135,
+        "right": -1.40625,
+        "bottom": 23.241346,
+        "countries": [
+            "algeria",
+            "mali"
+        ]
+    },
+    {
+        "x": 127,
+        "y": 110,
+        "left": -1.40625,
+        "top": 24.527135,
+        "right": 0.0,
+        "bottom": 23.241346,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 128,
+        "y": 110,
+        "left": 0.0,
+        "top": 24.527135,
+        "right": 1.40625,
+        "bottom": 23.241346,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 129,
+        "y": 110,
+        "left": 1.40625,
+        "top": 24.527135,
+        "right": 2.8125,
+        "bottom": 23.241346,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 130,
+        "y": 110,
+        "left": 2.8125,
+        "top": 24.527135,
+        "right": 4.21875,
+        "bottom": 23.241346,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 131,
+        "y": 110,
+        "left": 4.21875,
+        "top": 24.527135,
+        "right": 5.625,
+        "bottom": 23.241346,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 132,
+        "y": 110,
+        "left": 5.625,
+        "top": 24.527135,
+        "right": 7.03125,
+        "bottom": 23.241346,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 133,
+        "y": 110,
+        "left": 7.03125,
+        "top": 24.527135,
+        "right": 8.4375,
+        "bottom": 23.241346,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 134,
+        "y": 110,
+        "left": 8.4375,
+        "top": 24.527135,
+        "right": 9.84375,
+        "bottom": 23.241346,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 135,
+        "y": 110,
+        "left": 9.84375,
+        "top": 24.527135,
+        "right": 11.25,
+        "bottom": 23.241346,
+        "countries": [
+            "libya",
+            "algeria"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 110,
+        "left": 11.25,
+        "top": 24.527135,
+        "right": 12.65625,
+        "bottom": 23.241346,
+        "countries": [
+            "libya",
+            "algeria",
+            "niger"
+        ]
+    },
+    {
+        "x": 126,
+        "y": 111,
+        "left": -2.8125,
+        "top": 23.241346,
+        "right": -1.40625,
+        "bottom": 21.943046,
+        "countries": [
+            "algeria",
+            "mali"
+        ]
+    },
+    {
+        "x": 127,
+        "y": 111,
+        "left": -1.40625,
+        "top": 23.241346,
+        "right": 0.0,
+        "bottom": 21.943046,
+        "countries": [
+            "algeria",
+            "mali"
+        ]
+    },
+    {
+        "x": 128,
+        "y": 111,
+        "left": 0.0,
+        "top": 23.241346,
+        "right": 1.40625,
+        "bottom": 21.943046,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 129,
+        "y": 111,
+        "left": 1.40625,
+        "top": 23.241346,
+        "right": 2.8125,
+        "bottom": 21.943046,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 130,
+        "y": 111,
+        "left": 2.8125,
+        "top": 23.241346,
+        "right": 4.21875,
+        "bottom": 21.943046,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 131,
+        "y": 111,
+        "left": 4.21875,
+        "top": 23.241346,
+        "right": 5.625,
+        "bottom": 21.943046,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 132,
+        "y": 111,
+        "left": 5.625,
+        "top": 23.241346,
+        "right": 7.03125,
+        "bottom": 21.943046,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 133,
+        "y": 111,
+        "left": 7.03125,
+        "top": 23.241346,
+        "right": 8.4375,
+        "bottom": 21.943046,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 134,
+        "y": 111,
+        "left": 8.4375,
+        "top": 23.241346,
+        "right": 9.84375,
+        "bottom": 21.943046,
+        "countries": [
+            "algeria",
+            "niger"
+        ]
+    },
+    {
+        "x": 135,
+        "y": 111,
+        "left": 9.84375,
+        "top": 23.241346,
+        "right": 11.25,
+        "bottom": 21.943046,
+        "countries": [
+            "algeria",
+            "niger"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 111,
+        "left": 11.25,
+        "top": 23.241346,
+        "right": 12.65625,
+        "bottom": 21.943046,
+        "countries": [
+            "algeria",
+            "niger"
+        ]
+    },
+    {
+        "x": 127,
+        "y": 112,
+        "left": -1.40625,
+        "top": 21.943046,
+        "right": 0.0,
+        "bottom": 20.632784,
+        "countries": [
+            "algeria",
+            "mali"
+        ]
+    },
+    {
+        "x": 128,
+        "y": 112,
+        "left": 0.0,
+        "top": 21.943046,
+        "right": 1.40625,
+        "bottom": 20.632784,
+        "countries": [
+            "algeria",
+            "mali"
+        ]
+    },
+    {
+        "x": 129,
+        "y": 112,
+        "left": 1.40625,
+        "top": 21.943046,
+        "right": 2.8125,
+        "bottom": 20.632784,
+        "countries": [
+            "algeria",
+            "mali"
+        ]
+    },
+    {
+        "x": 130,
+        "y": 112,
+        "left": 2.8125,
+        "top": 21.943046,
+        "right": 4.21875,
+        "bottom": 20.632784,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 131,
+        "y": 112,
+        "left": 4.21875,
+        "top": 21.943046,
+        "right": 5.625,
+        "bottom": 20.632784,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 132,
+        "y": 112,
+        "left": 5.625,
+        "top": 21.943046,
+        "right": 7.03125,
+        "bottom": 20.632784,
+        "countries": [
+            "algeria"
+        ]
+    },
+    {
+        "x": 133,
+        "y": 112,
+        "left": 7.03125,
+        "top": 21.943046,
+        "right": 8.4375,
+        "bottom": 20.632784,
+        "countries": [
+            "algeria",
+            "niger"
+        ]
+    },
+    {
+        "x": 134,
+        "y": 112,
+        "left": 8.4375,
+        "top": 21.943046,
+        "right": 9.84375,
+        "bottom": 20.632784,
+        "countries": [
+            "algeria",
+            "niger"
+        ]
+    },
+    {
+        "x": 129,
+        "y": 113,
+        "left": 1.40625,
+        "top": 20.632784,
+        "right": 2.8125,
+        "bottom": 19.311143,
+        "countries": [
+            "algeria",
+            "mali"
+        ]
+    },
+    {
+        "x": 130,
+        "y": 113,
+        "left": 2.8125,
+        "top": 20.632784,
+        "right": 4.21875,
+        "bottom": 19.311143,
+        "countries": [
+            "algeria",
+            "mali"
+        ]
+    },
+    {
+        "x": 131,
+        "y": 113,
+        "left": 4.21875,
+        "top": 20.632784,
+        "right": 5.625,
+        "bottom": 19.311143,
+        "countries": [
+            "algeria",
+            "niger"
+        ]
+    },
+    {
+        "x": 132,
+        "y": 113,
+        "left": 5.625,
+        "top": 20.632784,
+        "right": 7.03125,
+        "bottom": 19.311143,
+        "countries": [
+            "algeria",
+            "niger"
+        ]
+    },
+    {
+        "x": 133,
+        "y": 113,
+        "left": 7.03125,
+        "top": 20.632784,
+        "right": 8.4375,
+        "bottom": 19.311143,
+        "countries": [
+            "algeria",
+            "niger"
+        ]
+    },
+    {
+        "x": 130,
+        "y": 114,
+        "left": 2.8125,
+        "top": 19.311143,
+        "right": 4.21875,
+        "bottom": 17.978733,
+        "countries": [
+            "algeria",
+            "mali"
+        ]
+    },
+    {
+        "x": 131,
+        "y": 114,
+        "left": 4.21875,
+        "top": 19.311143,
+        "right": 5.625,
+        "bottom": 17.978733,
+        "countries": [
+            "algeria",
+            "niger",
+            "mali"
+        ]
+    }
+]

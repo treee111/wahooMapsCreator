@@ -1,0 +1,40 @@
+[
+    {
+        "x": 209,
+        "y": 124,
+        "left": 113.90625,
+        "top": 5.615986,
+        "right": 115.3125,
+        "bottom": 4.214943,
+        "countries": [
+            "brunei",
+            "malaysia"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 124,
+        "left": 115.3125,
+        "top": 5.615986,
+        "right": 116.71875,
+        "bottom": 4.214943,
+        "countries": [
+            "brunei",
+            "malaysia",
+            "indonesia"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 125,
+        "left": 113.90625,
+        "top": 4.214943,
+        "right": 115.3125,
+        "bottom": 2.811371,
+        "countries": [
+            "brunei",
+            "malaysia",
+            "indonesia"
+        ]
+    }
+]

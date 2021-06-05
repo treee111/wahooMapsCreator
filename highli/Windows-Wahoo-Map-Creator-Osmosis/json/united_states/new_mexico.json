@@ -1,0 +1,334 @@
+[
+    {
+        "x": 50,
+        "y": 104,
+        "left": -109.6875,
+        "top": 31.952162,
+        "right": -108.28125,
+        "bottom": 30.751278,
+        "countries": [
+            "new_mexico",
+            "mexico",
+            "arizona"
+        ]
+    },
+    {
+        "x": 51,
+        "y": 104,
+        "left": -108.28125,
+        "top": 31.952162,
+        "right": -106.875,
+        "bottom": 30.751278,
+        "countries": [
+            "new_mexico",
+            "mexico"
+        ]
+    },
+    {
+        "x": 52,
+        "y": 104,
+        "left": -106.875,
+        "top": 31.952162,
+        "right": -105.46875,
+        "bottom": 30.751278,
+        "countries": [
+            "new_mexico",
+            "texas",
+            "mexico"
+        ]
+    },
+    {
+        "x": 50,
+        "y": 99,
+        "left": -109.6875,
+        "top": 37.71859,
+        "right": -108.28125,
+        "bottom": 36.597889,
+        "countries": [
+            "new_mexico",
+            "utah",
+            "colorado",
+            "arizona"
+        ]
+    },
+    {
+        "x": 50,
+        "y": 100,
+        "left": -109.6875,
+        "top": 36.597889,
+        "right": -108.28125,
+        "bottom": 35.46067,
+        "countries": [
+            "new_mexico",
+            "arizona"
+        ]
+    },
+    {
+        "x": 50,
+        "y": 101,
+        "left": -109.6875,
+        "top": 35.46067,
+        "right": -108.28125,
+        "bottom": 34.307144,
+        "countries": [
+            "new_mexico",
+            "arizona"
+        ]
+    },
+    {
+        "x": 50,
+        "y": 102,
+        "left": -109.6875,
+        "top": 34.307144,
+        "right": -108.28125,
+        "bottom": 33.137551,
+        "countries": [
+            "new_mexico",
+            "arizona"
+        ]
+    },
+    {
+        "x": 50,
+        "y": 103,
+        "left": -109.6875,
+        "top": 33.137551,
+        "right": -108.28125,
+        "bottom": 31.952162,
+        "countries": [
+            "new_mexico",
+            "arizona"
+        ]
+    },
+    {
+        "x": 51,
+        "y": 99,
+        "left": -108.28125,
+        "top": 37.71859,
+        "right": -106.875,
+        "bottom": 36.597889,
+        "countries": [
+            "new_mexico",
+            "colorado"
+        ]
+    },
+    {
+        "x": 52,
+        "y": 99,
+        "left": -106.875,
+        "top": 37.71859,
+        "right": -105.46875,
+        "bottom": 36.597889,
+        "countries": [
+            "new_mexico",
+            "colorado"
+        ]
+    },
+    {
+        "x": 53,
+        "y": 99,
+        "left": -105.46875,
+        "top": 37.71859,
+        "right": -104.0625,
+        "bottom": 36.597889,
+        "countries": [
+            "new_mexico",
+            "colorado"
+        ]
+    },
+    {
+        "x": 54,
+        "y": 99,
+        "left": -104.0625,
+        "top": 37.71859,
+        "right": -102.65625,
+        "bottom": 36.597889,
+        "countries": [
+            "new_mexico",
+            "oklahoma",
+            "colorado"
+        ]
+    },
+    {
+        "x": 51,
+        "y": 100,
+        "left": -108.28125,
+        "top": 36.597889,
+        "right": -106.875,
+        "bottom": 35.46067,
+        "countries": [
+            "new_mexico"
+        ]
+    },
+    {
+        "x": 52,
+        "y": 100,
+        "left": -106.875,
+        "top": 36.597889,
+        "right": -105.46875,
+        "bottom": 35.46067,
+        "countries": [
+            "new_mexico"
+        ]
+    },
+    {
+        "x": 53,
+        "y": 100,
+        "left": -105.46875,
+        "top": 36.597889,
+        "right": -104.0625,
+        "bottom": 35.46067,
+        "countries": [
+            "new_mexico"
+        ]
+    },
+    {
+        "x": 54,
+        "y": 100,
+        "left": -104.0625,
+        "top": 36.597889,
+        "right": -102.65625,
+        "bottom": 35.46067,
+        "countries": [
+            "new_mexico",
+            "oklahoma",
+            "texas"
+        ]
+    },
+    {
+        "x": 51,
+        "y": 101,
+        "left": -108.28125,
+        "top": 35.46067,
+        "right": -106.875,
+        "bottom": 34.307144,
+        "countries": [
+            "new_mexico"
+        ]
+    },
+    {
+        "x": 52,
+        "y": 101,
+        "left": -106.875,
+        "top": 35.46067,
+        "right": -105.46875,
+        "bottom": 34.307144,
+        "countries": [
+            "new_mexico"
+        ]
+    },
+    {
+        "x": 53,
+        "y": 101,
+        "left": -105.46875,
+        "top": 35.46067,
+        "right": -104.0625,
+        "bottom": 34.307144,
+        "countries": [
+            "new_mexico"
+        ]
+    },
+    {
+        "x": 54,
+        "y": 101,
+        "left": -104.0625,
+        "top": 35.46067,
+        "right": -102.65625,
+        "bottom": 34.307144,
+        "countries": [
+            "new_mexico",
+            "texas"
+        ]
+    },
+    {
+        "x": 51,
+        "y": 102,
+        "left": -108.28125,
+        "top": 34.307144,
+        "right": -106.875,
+        "bottom": 33.137551,
+        "countries": [
+            "new_mexico"
+        ]
+    },
+    {
+        "x": 52,
+        "y": 102,
+        "left": -106.875,
+        "top": 34.307144,
+        "right": -105.46875,
+        "bottom": 33.137551,
+        "countries": [
+            "new_mexico"
+        ]
+    },
+    {
+        "x": 53,
+        "y": 102,
+        "left": -105.46875,
+        "top": 34.307144,
+        "right": -104.0625,
+        "bottom": 33.137551,
+        "countries": [
+            "new_mexico"
+        ]
+    },
+    {
+        "x": 54,
+        "y": 102,
+        "left": -104.0625,
+        "top": 34.307144,
+        "right": -102.65625,
+        "bottom": 33.137551,
+        "countries": [
+            "new_mexico",
+            "texas"
+        ]
+    },
+    {
+        "x": 51,
+        "y": 103,
+        "left": -108.28125,
+        "top": 33.137551,
+        "right": -106.875,
+        "bottom": 31.952162,
+        "countries": [
+            "new_mexico"
+        ]
+    },
+    {
+        "x": 52,
+        "y": 103,
+        "left": -106.875,
+        "top": 33.137551,
+        "right": -105.46875,
+        "bottom": 31.952162,
+        "countries": [
+            "new_mexico",
+            "texas"
+        ]
+    },
+    {
+        "x": 53,
+        "y": 103,
+        "left": -105.46875,
+        "top": 33.137551,
+        "right": -104.0625,
+        "bottom": 31.952162,
+        "countries": [
+            "new_mexico",
+            "texas"
+        ]
+    },
+    {
+        "x": 54,
+        "y": 103,
+        "left": -104.0625,
+        "top": 33.137551,
+        "right": -102.65625,
+        "bottom": 31.952162,
+        "countries": [
+            "new_mexico",
+            "texas"
+        ]
+    }
+]

@@ -1,0 +1,266 @@
+[
+    {
+        "x": 147,
+        "y": 79,
+        "left": 26.71875,
+        "top": 56.559482,
+        "right": 28.125,
+        "bottom": 55.776573,
+        "countries": [
+            "belarus",
+            "latvia",
+            "russia"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 79,
+        "left": 28.125,
+        "top": 56.559482,
+        "right": 29.53125,
+        "bottom": 55.776573,
+        "countries": [
+            "belarus",
+            "latvia",
+            "russia"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 80,
+        "left": 25.3125,
+        "top": 55.776573,
+        "right": 26.71875,
+        "bottom": 54.977614,
+        "countries": [
+            "belarus",
+            "latvia",
+            "lithuania"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 80,
+        "left": 26.71875,
+        "top": 55.776573,
+        "right": 28.125,
+        "bottom": 54.977614,
+        "countries": [
+            "belarus",
+            "latvia",
+            "lithuania"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 76,
+        "left": 23.90625,
+        "top": 58.813742,
+        "right": 25.3125,
+        "bottom": 58.077876,
+        "countries": [
+            "estonia",
+            "latvia"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 77,
+        "left": 21.09375,
+        "top": 58.077876,
+        "right": 22.5,
+        "bottom": 57.326521,
+        "countries": [
+            "estonia",
+            "latvia"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 77,
+        "left": 22.5,
+        "top": 58.077876,
+        "right": 23.90625,
+        "bottom": 57.326521,
+        "countries": [
+            "estonia",
+            "latvia"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 77,
+        "left": 23.90625,
+        "top": 58.077876,
+        "right": 25.3125,
+        "bottom": 57.326521,
+        "countries": [
+            "estonia",
+            "latvia"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 77,
+        "left": 25.3125,
+        "top": 58.077876,
+        "right": 26.71875,
+        "bottom": 57.326521,
+        "countries": [
+            "estonia",
+            "latvia"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 77,
+        "left": 26.71875,
+        "top": 58.077876,
+        "right": 28.125,
+        "bottom": 57.326521,
+        "countries": [
+            "russia",
+            "estonia",
+            "latvia"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 78,
+        "left": 19.6875,
+        "top": 57.326521,
+        "right": 21.09375,
+        "bottom": 56.559482,
+        "countries": [
+            "latvia"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 78,
+        "left": 21.09375,
+        "top": 57.326521,
+        "right": 22.5,
+        "bottom": 56.559482,
+        "countries": [
+            "latvia"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 78,
+        "left": 22.5,
+        "top": 57.326521,
+        "right": 23.90625,
+        "bottom": 56.559482,
+        "countries": [
+            "latvia"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 78,
+        "left": 23.90625,
+        "top": 57.326521,
+        "right": 25.3125,
+        "bottom": 56.559482,
+        "countries": [
+            "latvia"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 78,
+        "left": 25.3125,
+        "top": 57.326521,
+        "right": 26.71875,
+        "bottom": 56.559482,
+        "countries": [
+            "latvia"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 78,
+        "left": 26.71875,
+        "top": 57.326521,
+        "right": 28.125,
+        "bottom": 56.559482,
+        "countries": [
+            "russia",
+            "latvia"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 78,
+        "left": 28.125,
+        "top": 57.326521,
+        "right": 29.53125,
+        "bottom": 56.559482,
+        "countries": [
+            "russia",
+            "latvia"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 79,
+        "left": 19.6875,
+        "top": 56.559482,
+        "right": 21.09375,
+        "bottom": 55.776573,
+        "countries": [
+            "latvia",
+            "lithuania"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 79,
+        "left": 21.09375,
+        "top": 56.559482,
+        "right": 22.5,
+        "bottom": 55.776573,
+        "countries": [
+            "latvia",
+            "lithuania"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 79,
+        "left": 22.5,
+        "top": 56.559482,
+        "right": 23.90625,
+        "bottom": 55.776573,
+        "countries": [
+            "latvia",
+            "lithuania"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 79,
+        "left": 23.90625,
+        "top": 56.559482,
+        "right": 25.3125,
+        "bottom": 55.776573,
+        "countries": [
+            "latvia",
+            "lithuania"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 79,
+        "left": 25.3125,
+        "top": 56.559482,
+        "right": 26.71875,
+        "bottom": 55.776573,
+        "countries": [
+            "latvia",
+            "lithuania"
+        ]
+    }
+]

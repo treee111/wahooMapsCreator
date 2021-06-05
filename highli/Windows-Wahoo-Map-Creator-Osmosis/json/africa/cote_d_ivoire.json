@@ -1,0 +1,313 @@
+[
+    {
+        "x": 124,
+        "y": 120,
+        "left": -5.625,
+        "top": 11.178402,
+        "right": -4.21875,
+        "bottom": 9.795678,
+        "countries": [
+            "cote_d_ivoire",
+            "burkina_faso",
+            "mali"
+        ]
+    },
+    {
+        "x": 125,
+        "y": 120,
+        "left": -4.21875,
+        "top": 11.178402,
+        "right": -2.8125,
+        "bottom": 9.795678,
+        "countries": [
+            "cote_d_ivoire",
+            "burkina_faso",
+            "ghana"
+        ]
+    },
+    {
+        "x": 124,
+        "y": 121,
+        "left": -5.625,
+        "top": 9.795678,
+        "right": -4.21875,
+        "bottom": 8.407168,
+        "countries": [
+            "cote_d_ivoire",
+            "burkina_faso"
+        ]
+    },
+    {
+        "x": 125,
+        "y": 121,
+        "left": -4.21875,
+        "top": 9.795678,
+        "right": -2.8125,
+        "bottom": 8.407168,
+        "countries": [
+            "cote_d_ivoire",
+            "burkina_faso"
+        ]
+    },
+    {
+        "x": 126,
+        "y": 121,
+        "left": -2.8125,
+        "top": 9.795678,
+        "right": -1.40625,
+        "bottom": 8.407168,
+        "countries": [
+            "cote_d_ivoire",
+            "burkina_faso",
+            "ghana"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 120,
+        "left": -8.4375,
+        "top": 11.178402,
+        "right": -7.03125,
+        "bottom": 9.795678,
+        "countries": [
+            "cote_d_ivoire",
+            "mali",
+            "guinea"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 120,
+        "left": -7.03125,
+        "top": 11.178402,
+        "right": -5.625,
+        "bottom": 9.795678,
+        "countries": [
+            "cote_d_ivoire",
+            "mali"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 121,
+        "left": -8.4375,
+        "top": 9.795678,
+        "right": -7.03125,
+        "bottom": 8.407168,
+        "countries": [
+            "cote_d_ivoire",
+            "guinea"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 121,
+        "left": -7.03125,
+        "top": 9.795678,
+        "right": -5.625,
+        "bottom": 8.407168,
+        "countries": [
+            "cote_d_ivoire"
+        ]
+    },
+    {
+        "x": 121,
+        "y": 122,
+        "left": -9.84375,
+        "top": 8.407168,
+        "right": -8.4375,
+        "bottom": 7.013668,
+        "countries": [
+            "cote_d_ivoire",
+            "liberia",
+            "guinea"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 122,
+        "left": -8.4375,
+        "top": 8.407168,
+        "right": -7.03125,
+        "bottom": 7.013668,
+        "countries": [
+            "cote_d_ivoire",
+            "liberia",
+            "guinea"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 122,
+        "left": -7.03125,
+        "top": 8.407168,
+        "right": -5.625,
+        "bottom": 7.013668,
+        "countries": [
+            "cote_d_ivoire"
+        ]
+    },
+    {
+        "x": 124,
+        "y": 122,
+        "left": -5.625,
+        "top": 8.407168,
+        "right": -4.21875,
+        "bottom": 7.013668,
+        "countries": [
+            "cote_d_ivoire"
+        ]
+    },
+    {
+        "x": 125,
+        "y": 122,
+        "left": -4.21875,
+        "top": 8.407168,
+        "right": -2.8125,
+        "bottom": 7.013668,
+        "countries": [
+            "cote_d_ivoire",
+            "ghana"
+        ]
+    },
+    {
+        "x": 126,
+        "y": 122,
+        "left": -2.8125,
+        "top": 8.407168,
+        "right": -1.40625,
+        "bottom": 7.013668,
+        "countries": [
+            "cote_d_ivoire",
+            "ghana"
+        ]
+    },
+    {
+        "x": 121,
+        "y": 123,
+        "left": -9.84375,
+        "top": 7.013668,
+        "right": -8.4375,
+        "bottom": 5.615986,
+        "countries": [
+            "cote_d_ivoire",
+            "liberia"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 123,
+        "left": -8.4375,
+        "top": 7.013668,
+        "right": -7.03125,
+        "bottom": 5.615986,
+        "countries": [
+            "cote_d_ivoire",
+            "liberia"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 123,
+        "left": -7.03125,
+        "top": 7.013668,
+        "right": -5.625,
+        "bottom": 5.615986,
+        "countries": [
+            "cote_d_ivoire"
+        ]
+    },
+    {
+        "x": 124,
+        "y": 123,
+        "left": -5.625,
+        "top": 7.013668,
+        "right": -4.21875,
+        "bottom": 5.615986,
+        "countries": [
+            "cote_d_ivoire"
+        ]
+    },
+    {
+        "x": 125,
+        "y": 123,
+        "left": -4.21875,
+        "top": 7.013668,
+        "right": -2.8125,
+        "bottom": 5.615986,
+        "countries": [
+            "cote_d_ivoire",
+            "ghana"
+        ]
+    },
+    {
+        "x": 126,
+        "y": 123,
+        "left": -2.8125,
+        "top": 7.013668,
+        "right": -1.40625,
+        "bottom": 5.615986,
+        "countries": [
+            "cote_d_ivoire",
+            "ghana"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 124,
+        "left": -8.4375,
+        "top": 5.615986,
+        "right": -7.03125,
+        "bottom": 4.214943,
+        "countries": [
+            "cote_d_ivoire",
+            "liberia"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 124,
+        "left": -7.03125,
+        "top": 5.615986,
+        "right": -5.625,
+        "bottom": 4.214943,
+        "countries": [
+            "cote_d_ivoire"
+        ]
+    },
+    {
+        "x": 124,
+        "y": 124,
+        "left": -5.625,
+        "top": 5.615986,
+        "right": -4.21875,
+        "bottom": 4.214943,
+        "countries": [
+            "cote_d_ivoire"
+        ]
+    },
+    {
+        "x": 125,
+        "y": 124,
+        "left": -4.21875,
+        "top": 5.615986,
+        "right": -2.8125,
+        "bottom": 4.214943,
+        "countries": [
+            "cote_d_ivoire",
+            "ghana"
+        ]
+    },
+    {
+        "x": 126,
+        "y": 124,
+        "left": -2.8125,
+        "top": 5.615986,
+        "right": -1.40625,
+        "bottom": 4.214943,
+        "countries": [
+            "cote_d_ivoire",
+            "ghana"
+        ]
+    }
+]

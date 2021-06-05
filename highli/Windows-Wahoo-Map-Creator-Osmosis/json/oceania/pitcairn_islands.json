@@ -1,0 +1,46 @@
+[
+    {
+        "x": 35,
+        "y": 145,
+        "left": -130.78125,
+        "top": -23.241346,
+        "right": -129.375,
+        "bottom": -24.527135,
+        "countries": [
+            "pitcairn_islands"
+        ]
+    },
+    {
+        "x": 36,
+        "y": 145,
+        "left": -129.375,
+        "top": -23.241346,
+        "right": -127.96875,
+        "bottom": -24.527135,
+        "countries": [
+            "pitcairn_islands"
+        ]
+    },
+    {
+        "x": 35,
+        "y": 146,
+        "left": -130.78125,
+        "top": -24.527135,
+        "right": -129.375,
+        "bottom": -25.799891,
+        "countries": [
+            "pitcairn_islands"
+        ]
+    },
+    {
+        "x": 39,
+        "y": 146,
+        "left": -125.15625,
+        "top": -24.527135,
+        "right": -123.75,
+        "bottom": -25.799891,
+        "countries": [
+            "pitcairn_islands"
+        ]
+    }
+]

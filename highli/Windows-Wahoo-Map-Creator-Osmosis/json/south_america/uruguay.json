@@ -1,0 +1,248 @@
+[
+    {
+        "x": 86,
+        "y": 150,
+        "left": -59.0625,
+        "top": -29.53523,
+        "right": -57.65625,
+        "bottom": -30.751278,
+        "countries": [
+            "uruguay",
+            "argentina"
+        ]
+    },
+    {
+        "x": 87,
+        "y": 150,
+        "left": -57.65625,
+        "top": -29.53523,
+        "right": -56.25,
+        "bottom": -30.751278,
+        "countries": [
+            "brazil",
+            "uruguay",
+            "argentina"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 151,
+        "left": -59.0625,
+        "top": -30.751278,
+        "right": -57.65625,
+        "bottom": -31.952162,
+        "countries": [
+            "uruguay",
+            "argentina"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 152,
+        "left": -59.0625,
+        "top": -31.952162,
+        "right": -57.65625,
+        "bottom": -33.137551,
+        "countries": [
+            "uruguay",
+            "argentina"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 153,
+        "left": -59.0625,
+        "top": -33.137551,
+        "right": -57.65625,
+        "bottom": -34.307144,
+        "countries": [
+            "uruguay",
+            "argentina"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 154,
+        "left": -59.0625,
+        "top": -34.307144,
+        "right": -57.65625,
+        "bottom": -35.46067,
+        "countries": [
+            "uruguay",
+            "argentina"
+        ]
+    },
+    {
+        "x": 87,
+        "y": 154,
+        "left": -57.65625,
+        "top": -34.307144,
+        "right": -56.25,
+        "bottom": -35.46067,
+        "countries": [
+            "uruguay",
+            "argentina"
+        ]
+    },
+    {
+        "x": 88,
+        "y": 150,
+        "left": -56.25,
+        "top": -29.53523,
+        "right": -54.84375,
+        "bottom": -30.751278,
+        "countries": [
+            "brazil",
+            "uruguay"
+        ]
+    },
+    {
+        "x": 88,
+        "y": 151,
+        "left": -56.25,
+        "top": -30.751278,
+        "right": -54.84375,
+        "bottom": -31.952162,
+        "countries": [
+            "brazil",
+            "uruguay"
+        ]
+    },
+    {
+        "x": 89,
+        "y": 151,
+        "left": -54.84375,
+        "top": -30.751278,
+        "right": -53.4375,
+        "bottom": -31.952162,
+        "countries": [
+            "brazil",
+            "uruguay"
+        ]
+    },
+    {
+        "x": 89,
+        "y": 152,
+        "left": -54.84375,
+        "top": -31.952162,
+        "right": -53.4375,
+        "bottom": -33.137551,
+        "countries": [
+            "brazil",
+            "uruguay"
+        ]
+    },
+    {
+        "x": 90,
+        "y": 152,
+        "left": -53.4375,
+        "top": -31.952162,
+        "right": -52.03125,
+        "bottom": -33.137551,
+        "countries": [
+            "brazil",
+            "uruguay"
+        ]
+    },
+    {
+        "x": 89,
+        "y": 153,
+        "left": -54.84375,
+        "top": -33.137551,
+        "right": -53.4375,
+        "bottom": -34.307144,
+        "countries": [
+            "brazil",
+            "uruguay"
+        ]
+    },
+    {
+        "x": 90,
+        "y": 153,
+        "left": -53.4375,
+        "top": -33.137551,
+        "right": -52.03125,
+        "bottom": -34.307144,
+        "countries": [
+            "brazil",
+            "uruguay"
+        ]
+    },
+    {
+        "x": 87,
+        "y": 151,
+        "left": -57.65625,
+        "top": -30.751278,
+        "right": -56.25,
+        "bottom": -31.952162,
+        "countries": [
+            "uruguay"
+        ]
+    },
+    {
+        "x": 87,
+        "y": 152,
+        "left": -57.65625,
+        "top": -31.952162,
+        "right": -56.25,
+        "bottom": -33.137551,
+        "countries": [
+            "uruguay"
+        ]
+    },
+    {
+        "x": 88,
+        "y": 152,
+        "left": -56.25,
+        "top": -31.952162,
+        "right": -54.84375,
+        "bottom": -33.137551,
+        "countries": [
+            "uruguay"
+        ]
+    },
+    {
+        "x": 87,
+        "y": 153,
+        "left": -57.65625,
+        "top": -33.137551,
+        "right": -56.25,
+        "bottom": -34.307144,
+        "countries": [
+            "uruguay"
+        ]
+    },
+    {
+        "x": 88,
+        "y": 153,
+        "left": -56.25,
+        "top": -33.137551,
+        "right": -54.84375,
+        "bottom": -34.307144,
+        "countries": [
+            "uruguay"
+        ]
+    },
+    {
+        "x": 88,
+        "y": 154,
+        "left": -56.25,
+        "top": -34.307144,
+        "right": -54.84375,
+        "bottom": -35.46067,
+        "countries": [
+            "uruguay"
+        ]
+    },
+    {
+        "x": 89,
+        "y": 154,
+        "left": -54.84375,
+        "top": -34.307144,
+        "right": -53.4375,
+        "bottom": -35.46067,
+        "countries": [
+            "uruguay"
+        ]
+    }
+]

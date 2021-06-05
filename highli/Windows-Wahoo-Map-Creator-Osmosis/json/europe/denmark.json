@@ -1,0 +1,220 @@
+[
+    {
+        "x": 134,
+        "y": 77,
+        "left": 8.4375,
+        "top": 58.077876,
+        "right": 9.84375,
+        "bottom": 57.326521,
+        "countries": [
+            "denmark"
+        ]
+    },
+    {
+        "x": 135,
+        "y": 77,
+        "left": 9.84375,
+        "top": 58.077876,
+        "right": 11.25,
+        "bottom": 57.326521,
+        "countries": [
+            "denmark"
+        ]
+    },
+    {
+        "x": 133,
+        "y": 78,
+        "left": 7.03125,
+        "top": 57.326521,
+        "right": 8.4375,
+        "bottom": 56.559482,
+        "countries": [
+            "denmark"
+        ]
+    },
+    {
+        "x": 134,
+        "y": 78,
+        "left": 8.4375,
+        "top": 57.326521,
+        "right": 9.84375,
+        "bottom": 56.559482,
+        "countries": [
+            "denmark"
+        ]
+    },
+    {
+        "x": 135,
+        "y": 78,
+        "left": 9.84375,
+        "top": 57.326521,
+        "right": 11.25,
+        "bottom": 56.559482,
+        "countries": [
+            "denmark"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 78,
+        "left": 11.25,
+        "top": 57.326521,
+        "right": 12.65625,
+        "bottom": 56.559482,
+        "countries": [
+            "denmark",
+            "sweden"
+        ]
+    },
+    {
+        "x": 133,
+        "y": 79,
+        "left": 7.03125,
+        "top": 56.559482,
+        "right": 8.4375,
+        "bottom": 55.776573,
+        "countries": [
+            "denmark"
+        ]
+    },
+    {
+        "x": 134,
+        "y": 79,
+        "left": 8.4375,
+        "top": 56.559482,
+        "right": 9.84375,
+        "bottom": 55.776573,
+        "countries": [
+            "denmark"
+        ]
+    },
+    {
+        "x": 135,
+        "y": 79,
+        "left": 9.84375,
+        "top": 56.559482,
+        "right": 11.25,
+        "bottom": 55.776573,
+        "countries": [
+            "denmark"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 79,
+        "left": 11.25,
+        "top": 56.559482,
+        "right": 12.65625,
+        "bottom": 55.776573,
+        "countries": [
+            "denmark",
+            "sweden"
+        ]
+    },
+    {
+        "x": 133,
+        "y": 80,
+        "left": 7.03125,
+        "top": 55.776573,
+        "right": 8.4375,
+        "bottom": 54.977614,
+        "countries": [
+            "denmark",
+            "germany"
+        ]
+    },
+    {
+        "x": 134,
+        "y": 80,
+        "left": 8.4375,
+        "top": 55.776573,
+        "right": 9.84375,
+        "bottom": 54.977614,
+        "countries": [
+            "denmark",
+            "germany"
+        ]
+    },
+    {
+        "x": 135,
+        "y": 80,
+        "left": 9.84375,
+        "top": 55.776573,
+        "right": 11.25,
+        "bottom": 54.977614,
+        "countries": [
+            "denmark"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 80,
+        "left": 11.25,
+        "top": 55.776573,
+        "right": 12.65625,
+        "bottom": 54.977614,
+        "countries": [
+            "denmark"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 80,
+        "left": 12.65625,
+        "top": 55.776573,
+        "right": 14.0625,
+        "bottom": 54.977614,
+        "countries": [
+            "denmark",
+            "sweden"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 80,
+        "left": 14.0625,
+        "top": 55.776573,
+        "right": 15.46875,
+        "bottom": 54.977614,
+        "countries": [
+            "denmark",
+            "sweden"
+        ]
+    },
+    {
+        "x": 134,
+        "y": 81,
+        "left": 8.4375,
+        "top": 54.977614,
+        "right": 9.84375,
+        "bottom": 54.162434,
+        "countries": [
+            "denmark",
+            "germany"
+        ]
+    },
+    {
+        "x": 135,
+        "y": 81,
+        "left": 9.84375,
+        "top": 54.977614,
+        "right": 11.25,
+        "bottom": 54.162434,
+        "countries": [
+            "denmark",
+            "germany"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 81,
+        "left": 11.25,
+        "top": 54.977614,
+        "right": 12.65625,
+        "bottom": 54.162434,
+        "countries": [
+            "denmark",
+            "germany"
+        ]
+    }
+]

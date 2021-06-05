@@ -1,0 +1,263 @@
+[
+    {
+        "x": 122,
+        "y": 120,
+        "left": -8.4375,
+        "top": 11.178402,
+        "right": -7.03125,
+        "bottom": 9.795678,
+        "countries": [
+            "cote_d_ivoire",
+            "mali",
+            "guinea"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 121,
+        "left": -8.4375,
+        "top": 9.795678,
+        "right": -7.03125,
+        "bottom": 8.407168,
+        "countries": [
+            "cote_d_ivoire",
+            "guinea"
+        ]
+    },
+    {
+        "x": 121,
+        "y": 122,
+        "left": -9.84375,
+        "top": 8.407168,
+        "right": -8.4375,
+        "bottom": 7.013668,
+        "countries": [
+            "cote_d_ivoire",
+            "liberia",
+            "guinea"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 122,
+        "left": -8.4375,
+        "top": 8.407168,
+        "right": -7.03125,
+        "bottom": 7.013668,
+        "countries": [
+            "cote_d_ivoire",
+            "liberia",
+            "guinea"
+        ]
+    },
+    {
+        "x": 118,
+        "y": 118,
+        "left": -14.0625,
+        "top": 13.923404,
+        "right": -12.65625,
+        "bottom": 12.554564,
+        "countries": [
+            "gambia",
+            "guinea-bissau",
+            "senegal",
+            "guinea"
+        ]
+    },
+    {
+        "x": 117,
+        "y": 119,
+        "left": -15.46875,
+        "top": 12.554564,
+        "right": -14.0625,
+        "bottom": 11.178402,
+        "countries": [
+            "guinea-bissau",
+            "senegal",
+            "guinea"
+        ]
+    },
+    {
+        "x": 118,
+        "y": 119,
+        "left": -14.0625,
+        "top": 12.554564,
+        "right": -12.65625,
+        "bottom": 11.178402,
+        "countries": [
+            "guinea-bissau",
+            "senegal",
+            "guinea"
+        ]
+    },
+    {
+        "x": 119,
+        "y": 119,
+        "left": -12.65625,
+        "top": 12.554564,
+        "right": -11.25,
+        "bottom": 11.178402,
+        "countries": [
+            "senegal",
+            "mali",
+            "guinea"
+        ]
+    },
+    {
+        "x": 120,
+        "y": 119,
+        "left": -11.25,
+        "top": 12.554564,
+        "right": -9.84375,
+        "bottom": 11.178402,
+        "countries": [
+            "mali",
+            "guinea"
+        ]
+    },
+    {
+        "x": 121,
+        "y": 119,
+        "left": -9.84375,
+        "top": 12.554564,
+        "right": -8.4375,
+        "bottom": 11.178402,
+        "countries": [
+            "mali",
+            "guinea"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 119,
+        "left": -8.4375,
+        "top": 12.554564,
+        "right": -7.03125,
+        "bottom": 11.178402,
+        "countries": [
+            "mali",
+            "guinea"
+        ]
+    },
+    {
+        "x": 117,
+        "y": 120,
+        "left": -15.46875,
+        "top": 11.178402,
+        "right": -14.0625,
+        "bottom": 9.795678,
+        "countries": [
+            "guinea-bissau",
+            "guinea"
+        ]
+    },
+    {
+        "x": 118,
+        "y": 120,
+        "left": -14.0625,
+        "top": 11.178402,
+        "right": -12.65625,
+        "bottom": 9.795678,
+        "countries": [
+            "guinea"
+        ]
+    },
+    {
+        "x": 119,
+        "y": 120,
+        "left": -12.65625,
+        "top": 11.178402,
+        "right": -11.25,
+        "bottom": 9.795678,
+        "countries": [
+            "sierra_leone",
+            "guinea"
+        ]
+    },
+    {
+        "x": 120,
+        "y": 120,
+        "left": -11.25,
+        "top": 11.178402,
+        "right": -9.84375,
+        "bottom": 9.795678,
+        "countries": [
+            "sierra_leone",
+            "guinea"
+        ]
+    },
+    {
+        "x": 121,
+        "y": 120,
+        "left": -9.84375,
+        "top": 11.178402,
+        "right": -8.4375,
+        "bottom": 9.795678,
+        "countries": [
+            "mali",
+            "guinea"
+        ]
+    },
+    {
+        "x": 118,
+        "y": 121,
+        "left": -14.0625,
+        "top": 9.795678,
+        "right": -12.65625,
+        "bottom": 8.407168,
+        "countries": [
+            "sierra_leone",
+            "guinea"
+        ]
+    },
+    {
+        "x": 119,
+        "y": 121,
+        "left": -12.65625,
+        "top": 9.795678,
+        "right": -11.25,
+        "bottom": 8.407168,
+        "countries": [
+            "sierra_leone",
+            "guinea"
+        ]
+    },
+    {
+        "x": 120,
+        "y": 121,
+        "left": -11.25,
+        "top": 9.795678,
+        "right": -9.84375,
+        "bottom": 8.407168,
+        "countries": [
+            "sierra_leone",
+            "liberia",
+            "guinea"
+        ]
+    },
+    {
+        "x": 121,
+        "y": 121,
+        "left": -9.84375,
+        "top": 9.795678,
+        "right": -8.4375,
+        "bottom": 8.407168,
+        "countries": [
+            "liberia",
+            "guinea"
+        ]
+    },
+    {
+        "x": 120,
+        "y": 122,
+        "left": -11.25,
+        "top": 8.407168,
+        "right": -9.84375,
+        "bottom": 7.013668,
+        "countries": [
+            "sierra_leone",
+            "liberia",
+            "guinea"
+        ]
+    }
+]
