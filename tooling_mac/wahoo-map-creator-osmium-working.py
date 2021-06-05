@@ -15,9 +15,14 @@ import sys
 # ! means error
 # + means additional comment in a working-unit
 
-COMMON_PATH ='common_resources'
+def getGitRoot():
+    return subprocess.Popen(['git', 'rev-parse', '--show-toplevel'], stdout=subprocess.PIPE).communicate()[0].rstrip().decode('utf-8')
+
+# script_path = os.path.abspath(__file__) # i.e. /path/to/dir/foobar.py
+ROOT_PATH = getGitRoot()
+COMMON_PATH = os.path.join(ROOT_PATH, 'common_resources')
+OUT_PATH = os.path.join(ROOT_PATH, 'output')
 MAP_PATH = os.path.join(COMMON_PATH, 'maps')
-OUT_PATH ='output'
 land_polygons_file = os.path.join(COMMON_PATH, 'land-polygons-split-4326/land_polygons.shp')
 
 # Tags to keep

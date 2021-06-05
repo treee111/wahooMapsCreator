@@ -5,33 +5,33 @@
             "name": "works-only1-tile",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceRoot}/wahoo-map-creator-osmium-working.py",
+            "program": "${workspaceRoot}/tooling_mac/wahoo-map-creator-osmium-working.py",
             "console": "integratedTerminal",
-            "args": ["/Users/benjamin/Documents/osm_maps_wahoo/script/germany-only1.json"]
+            "args": ["${workspaceRoot}/common_resources/germany-only1.json"]
         },
         {
             "name": "works-germany",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceRoot}/wahoo-map-creator-osmium-working.py",
+            "program": "${workspaceRoot}/tooling_mac/wahoo-map-creator-osmium-working.py",
             "console": "integratedTerminal",
-            "args": ["/Users/benjamin/Documents/osm_maps_wahoo/script/germany.json"]
+            "args": ["${workspaceRoot}/common_resources/germany.json"]
         },
         {
             "name": "new-only1-tile",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceRoot}/wahoo-map-creator-osmium-new.py",
+            "program": "${workspaceRoot}/tooling_mac/wahoo-map-creator-osmium-new.py",
             "console": "integratedTerminal",
-            "args": ["/Users/benjamin/Documents/osm_maps_wahoo/script/germany-only1.json"]
+            "args": ["${workspaceRoot}/common_resources/germany-only1.json"]
         },
         {
             "name": "new-germany",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceRoot}/wahoo-map-creator-osmium-new.py",
+            "program": "${workspaceRoot}/tooling_mac/wahoo-map-creator-osmium-new.py",
             "console": "integratedTerminal",
-            "args": ["/Users/benjamin/Documents/osm_maps_wahoo/script/germany.json"]
+            "args": ["${workspaceRoot}/common_resources/germany.json"]
         }
     ]
 }
