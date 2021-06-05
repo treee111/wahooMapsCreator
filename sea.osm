@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6">
+	<node timestamp="1969-12-31T23:59:59Z" changeset="-1" id="32951459320" version="1" lon="$LEFT" lat="$BOTTOM" />
+	<node timestamp="1969-12-31T23:59:59Z" changeset="-1" id="32951459321" version="1" lon="$LEFT" lat="$TOP" />
+	<node timestamp="1969-12-31T23:59:59Z" changeset="-1" id="32951459322" version="1" lon="$RIGHT" lat="$TOP" />
+	<node timestamp="1969-12-31T23:59:59Z" changeset="-1" id="32951459323" version="1" lon="$RIGHT" lat="$BOTTOM" />
+	<way timestamp="1969-12-31T23:59:59Z" changeset="-1" id="32951623372" version="1">
+		<nd ref="32951459320" />
+		<nd ref="32951459321" />
+		<nd ref="32951459322" />
+		<nd ref="32951459323" />
+		<nd ref="32951459320" />
+		<tag k="area" v="yes" />
+		<tag k="layer" v="-5" />
+		<tag k="natural" v="sea" />
+	</way>
+</osm>
