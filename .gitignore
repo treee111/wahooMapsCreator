@@ -1,6 +1,7 @@
 # maps/**/*
 maps/*
 output/*
+output*/*
 tools_dl/
-land-polygons-split-4326/
-highli/Windows-Wahoo-Map-Creator-Osmosis/Land-Polygons-Split-4326/
+common_resources/land-polygons-split-4326/
+tooling_windows/Windows-Wahoo-Map-Creator-Osmosis/Land-Polygons-Split-4326/

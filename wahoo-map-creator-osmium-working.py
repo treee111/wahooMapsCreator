@@ -15,9 +15,11 @@ import sys
 # ! means error
 # + means additional comment in a working-unit
 
-MAP_PATH='maps'
-OUT_PATH='output'
-land_polygons_file='land-polygons-split-4326/land_polygons.shp'
+COMMON_PATH ='common_resources'
+MAP_PATH = os.path.join(COMMON_PATH, 'maps')
+OUT_PATH ='output'
+land_polygons_file = os.path.join(COMMON_PATH, 'land-polygons-split-4326/land_polygons.shp')
+
 # Tags to keep
 filtered_tags=['access', 'admin_level', 'aerialway', 'aeroway', 'barrier',
                'boundary', 'bridge', 'highway', 'natural', 'oneway', 'place',
@@ -77,8 +79,7 @@ for key, val  in border_countries.items():
     outFile = os.path.join(OUT_PATH, f'filtered-{key}.osm.pbf')
     ## print(outFile)
     if not os.path.isfile(outFile):
-        print('+ Create filtered country file')
-# add country in print        
+        print(f'+ Create filtered country file for {key}')    
 
         cmd = ['osmium', 'tags-filter']
         cmd.append(val['map_file'])
@@ -111,7 +112,7 @@ for tile in country:
         subprocess.run(cmd)
 
     if not os.path.isfile(outFile+'1.osm'):
-        cmd = ['python3', 'shape2osm.py', '-l', outFile, landFile]
+        cmd = ['python3', os.path.join(COMMON_PATH, 'shape2osm.py'), '-l', outFile, landFile]
         #print(cmd)
         subprocess.run(cmd)
     TileCount += 1
@@ -126,7 +127,7 @@ for tile in country:
     outFile = os.path.join(OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'sea.osm')
     if not os.path.isfile(outFile):
         print(f'+ Generate sea {TileCount} of {len(country)} for Coordinates: {tile["x"]} {tile["y"]}')
-        with open('sea.osm') as f:
+        with open(os.path.join(COMMON_PATH, 'sea.osm')) as f:
             sea_data = f.read()
 
             sea_data = sea_data.replace('$LEFT', f'{tile["left"]-0.1:.6f}')
@@ -197,7 +198,7 @@ for tile in country:
         cmd = ['osmosis', '--rb', mergedFile, '--mw', 'file='+outFile]
         cmd.append(f'bbox={tile["bottom"]:.6f},{tile["left"]:.6f},{tile["top"]:.6f},{tile["right"]:.6f}')
         cmd.append('zoom-interval-conf=10,0,17')
-        cmd.append('tag-conf-file=tag-wahoo.xml')
+        cmd.append(f'tag-conf-file={os.path.join(COMMON_PATH, "tag-wahoo.xml")}')
         # print(cmd)
         subprocess.run(cmd)
 
