@@ -2,12 +2,36 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: Aktuelle Datei",
+            "name": "works-only1-tile",
             "type": "python",
             "request": "launch",
             "program": "${workspaceRoot}/wahoo-map-creator-osmium-working.py",
             "console": "integratedTerminal",
             "args": ["/Users/benjamin/Documents/osm_maps_wahoo/script/germany-only1.json"]
+        },
+        {
+            "name": "works-germany",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceRoot}/wahoo-map-creator-osmium-working.py",
+            "console": "integratedTerminal",
+            "args": ["/Users/benjamin/Documents/osm_maps_wahoo/script/germany.json"]
+        },
+        {
+            "name": "new-only1-tile",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceRoot}/wahoo-map-creator-osmium-new.py",
+            "console": "integratedTerminal",
+            "args": ["/Users/benjamin/Documents/osm_maps_wahoo/script/germany-only1.json"]
+        },
+        {
+            "name": "new-germany",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceRoot}/wahoo-map-creator-osmium-new.py",
+            "console": "integratedTerminal",
+            "args": ["/Users/benjamin/Documents/osm_maps_wahoo/script/germany.json"]
         }
     ]
 }
