@@ -102,10 +102,10 @@ for tile in country:
     if not os.path.isfile(landFile):
         print(f'+ Generate land {TileCount} of {len(country)} for Coordinates: {tile["x"]} {tile["y"]}')
         cmd = ['ogr2ogr', '-overwrite', '-skipfailures']
-        cmd.extend(['-spat', f'{tile["left"]:.6f}',
-                    f'{tile["bottom"]:.6f}',
-                    f'{tile["right"]:.6f}',
-                    f'{tile["top"]:.6f}'])
+        cmd.extend(['-spat', f'{tile["left"]-0.1:.6f}',
+                    f'{tile["bottom"]-0.1:.6f}',
+                    f'{tile["right"]+0.1:.6f}',
+                    f'{tile["top"]+0.1:.6f}'])
         cmd.append(landFile)
         cmd.append(land_polygons_file)
         #print(cmd)
@@ -130,10 +130,10 @@ for tile in country:
         with open('sea.osm') as f:
             sea_data = f.read()
 
-            sea_data = sea_data.replace('$LEFT', f'{tile["left"]:.6f}')
-            sea_data = sea_data.replace('$BOTTOM',f'{tile["bottom"]:.6f}')
-            sea_data = sea_data.replace('$RIGHT',f'{tile["right"]:.6f}')
-            sea_data = sea_data.replace('$TOP',f'{tile["top"]:.6f}')
+            sea_data = sea_data.replace('$LEFT', f'{tile["left"]-0.1:.6f}')
+            sea_data = sea_data.replace('$BOTTOM',f'{tile["bottom"]-0.1:.6f}')
+            sea_data = sea_data.replace('$RIGHT',f'{tile["right"]+0.1:.6f}')
+            sea_data = sea_data.replace('$TOP',f'{tile["top"]+0.1:.6f}')
 
             with open(outFile, 'w') as of:
                 of.write(sea_data)
