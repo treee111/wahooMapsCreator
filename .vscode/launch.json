@@ -5,6 +5,14 @@
             "name": "works-only1-tile",
             "type": "python",
             "request": "launch",
+            "program": "${workspaceRoot}/tooling_mac/wahoo-map-creator-osmium-using-common.py",
+            "console": "integratedTerminal",
+            "args": ["${workspaceRoot}/common_resources/germany-only1.json"]
+        },
+        {
+            "name": "works-only1-tile",
+            "type": "python",
+            "request": "launch",
             "program": "${workspaceRoot}/tooling_mac/wahoo-map-creator-osmium-working.py",
             "console": "integratedTerminal",
             "args": ["${workspaceRoot}/common_resources/germany-only1.json"]
