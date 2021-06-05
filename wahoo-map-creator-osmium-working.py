@@ -28,15 +28,16 @@ if len(sys.argv) != 2:
     sys.exit()
 
 
-print('\n\n# read json file')
+print('\n\n# Read json file')
 with open(sys.argv[1]) as f:
     country = json.load(f)
 if country == '' :
-    print ('! json file could not be opened.')
+    print ('! Json file could not be opened.')
     sys.exit()
 
 # logging
-print(f'use json file {f.name} with {len(country)} tiles')
+print(f'+ Use json file {f.name} with {len(country)} tiles')
+print('# Read json file: OK')
 
 
 print('\n\n# check land_polygons.shp file')
@@ -47,7 +48,7 @@ if not os.path.isfile(land_polygons_file):
 print('# check land_polygons.shp file: OK')
 
 
-print('\n\n# check countries .osm.pbf files')
+print('\n\n# Check countries .osm.pbf files')
 # Build list of countries needed
 border_countries = {}
 for tile in country:
@@ -55,30 +56,28 @@ for tile in country:
     if not os.path.isdir(outdir):
         os.makedirs(outdir)
 
-# search for user entered country name in translated (to geofabrik). if match continue with matched else continue with user entered country
-# search for country match in geofabrik tables to determine region to use for map download 
     for c in tile['countries']:
         if c not in border_countries:
             map_files = glob.glob(f'{MAP_PATH}/**/{c}*.osm.pbf')
             if len(map_files) != 1 or not os.path.isfile(map_files[0]):
-                print(f'! failed to find country: {c}')
+                print(f'! Failed to find country: {c}')
                 sys.exit()
             border_countries[c] = {'map_file':map_files[0]}
 
 # logging
-print(f'# border countries of json file: {len(border_countries)}')
+print(f'+ Border countries of json file: {len(border_countries)}')
 for c in border_countries:
-    print(f'+ border country: {c}')
-print('# check countries .osm.pbf files:OK')
+    print(f'+ Border country: {c}')
+print('# Check countries .osm.pbf files: OK')
 
 
-print('\n\n# filter tags from country osm.pbf files')
+print('\n\n# Filter tags from country osm.pbf files')
 for key, val  in border_countries.items():
     ## print(key, val)
     outFile = os.path.join(OUT_PATH, f'filtered-{key}.osm.pbf')
     ## print(outFile)
     if not os.path.isfile(outFile):
-        print('+ create filtered country file')
+        print('+ Create filtered country file')
 # add country in print        
 
         cmd = ['osmium', 'tags-filter']
@@ -90,7 +89,7 @@ for key, val  in border_countries.items():
     border_countries[key]['filtered_file'] = outFile
 
 # logging
-print('# filter tags from country osm.pbf files: OK')
+print('# Filter tags from country osm.pbf files: OK')
 
 
 print('\n\n# Generate land')
@@ -118,7 +117,7 @@ for tile in country:
     TileCount += 1
 
 # logging
-print('# generate land: OK')
+print('# Generate land: OK')
 
 
 print('\n\n# Generate sea')
@@ -141,13 +140,13 @@ for tile in country:
 
 
 # logging
-print('# generate sea: OK')
+print('# Generate sea: OK')
 
 
 print('\n\n# Split filtered country files to tiles')
 TileCount = 1
 for tile in country:
-    print(f'+ split filtered country {c}')
+    print(f'+ Split filtered country {c}')
 
     for c in tile['countries']:
         print(f'+ Splitting tile {TileCount} of {len(country)} for Coordinates: {tile["x"]},{tile["y"]} from map of {c}')
@@ -164,7 +163,7 @@ for tile in country:
     TileCount += 1
 
 # logging
-print('# split filtered countries: OK')
+print('# Split filtered country files to tiles: OK')
 
 
 print('\n\n# Merge splitted tiles with land an sea')
@@ -185,13 +184,13 @@ for tile in country:
     TileCount += 1
 
 # logging
-print('# merge splitted, land an sea: OK')
+print('# Merge splitted tiles with land an sea: OK')
 
 
 print('\n\n# Creating .map files')
 TileCount = 1
 for tile in country:
-    print(f'\n\nCreating map file for tile {TileCount} of {len(country)} for Coordinates: {tile["x"]}, {tile["y"]}')
+    print(f'+ Creating map file for tile {TileCount} of {len(country)} for Coordinates: {tile["x"]}, {tile["y"]}')
     outFile = os.path.join(OUT_PATH, f'{tile["x"]}', f'{tile["y"]}.map')
     if not os.path.isfile(outFile+'.lzma'):
         mergedFile = os.path.join(OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', 'merged.osm.pbf')
@@ -209,12 +208,12 @@ for tile in country:
     TileCount += 1
 
 # logging
-print('# create .map files: OK')
+print('# Creating .map files: OK')
 
 
-print('\n# zip .map.lzma files')
+print('\n# Zip .map.lzma files')
 countryName = os.path.split(sys.argv[1])
-print(f'+ country: {countryName[1][:-5]}')
+print(f'+ Country: {countryName[1][:-5]}')
 # Make Wahoo zip file
 cmd = ['zip', '-r', countryName[1][:-5] + '.zip']
 for tile in country:
@@ -223,4 +222,4 @@ for tile in country:
 subprocess.run(cmd, cwd=OUT_PATH)
 
 # logging
-print('# zip .map.lzma files: OK \n')
+print('# Zip .map.lzma files: OK \n')
