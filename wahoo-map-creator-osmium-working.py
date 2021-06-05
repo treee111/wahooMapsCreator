@@ -22,11 +22,16 @@ if len(sys.argv) != 2:
 print('# read json file')
 with open(sys.argv[1]) as f:
     country = json.load(f)
+    print(f'use json file {f.name} with {len(country)} tiles')
+
 
 print('# check land_polygons.shp file')
 if not os.path.isfile(land_polygons_file):
     print(f'failed to find {land_polygons_file}')
     sys.exit()
+else:
+    print('# check land_polygons.shp file: OK')
+
 
 
 print('# check countries .osm.pbf files')
@@ -44,6 +49,12 @@ for tile in country:
                 sys.exit()
             border_countries[c] = {'map_file':map_files[0]}
 
+# logging
+print(f'# border countries of json file: {len(border_countries)}')
+for c in border_countries:
+    print(f'# border country: {c}')
+print('# check countries .osm.pbf files:OK')
+
 
 print('# filter tags from country osm.pbf files')
 for key, val  in border_countries.items():
@@ -52,6 +63,7 @@ for key, val  in border_countries.items():
     # print(outFile)
     if not os.path.isfile(outFile):
         print('! create filtered country file')
+# add country in print        
 
         cmd = ['osmium', 'tags-filter']
         cmd.append(val['map_file'])
@@ -60,6 +72,10 @@ for key, val  in border_countries.items():
         print(cmd)
         subprocess.run(cmd)
     border_countries[key]['filtered_file'] = outFile
+
+# logging
+print('# filter tags from country osm.pbf files: OK')
+
 
 print('# generate land')
 for tile in country:
@@ -83,6 +99,10 @@ for tile in country:
         print(cmd)
         subprocess.run(cmd)
 
+# logging
+print('# generate land: OK')
+
+
 print('# generate sea')
 for tile in country:
     outFile = os.path.join(OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'sea.osm')
@@ -99,11 +119,16 @@ for tile in country:
             with open(outFile, 'w') as of:
                 of.write(sea_data)
 
+# logging
+print('# generate sea: OK')
+
 
 print('# split filtered countries')
 for tile in country:
     for c in tile['countries']:
         outFile = os.path.join(OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'split-{c}.osm.pbf')
+        
+        print(f'# split filtered country {c}')
         if not os.path.isfile(outFile):
             cmd = ['osmium', 'extract']
             cmd.extend(['-b',f'{tile["left"]},{tile["bottom"]},{tile["right"]},{tile["top"]}'])
@@ -112,7 +137,11 @@ for tile in country:
             cmd.extend(['-o', outFile])
             print(cmd)
             subprocess.run(cmd)
-            # print(border_countries[c]['filtered_file'])
+            print(border_countries[c]['filtered_file'])
+
+# logging
+print('# split filtered countries: OK')
+
 
 print('# merge splitted, land an sea')
 for tile in country:
@@ -127,6 +156,9 @@ for tile in country:
         cmd.extend(['-o', outFile])
         print(cmd)
         subprocess.run(cmd)
+
+# logging
+print('# merge splitted, land an sea: OK')
 
 
 print('# create .map files')

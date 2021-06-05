@@ -5,9 +5,9 @@
             "name": "Python: Aktuelle Datei",
             "type": "python",
             "request": "launch",
-            "program": "${file}",
+            "program": "${workspaceRoot}/wahoo-map-creator-osmium-working.py",
             "console": "integratedTerminal",
-            "args": ["--create=337"]
+            "args": ["/Users/benjamin/Documents/osm_maps_wahoo/script/germany-only1.json"]
         }
     ]
 }
