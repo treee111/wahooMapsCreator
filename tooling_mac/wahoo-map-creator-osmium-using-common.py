@@ -89,33 +89,8 @@ x.checkAndDownloadOsmPbfFile()
 # Filter tags from country osm.pbf files'
 x.filterTagsFromCountryOsmPbdFiles()
 
-
-print('\n\n# Generate land')
-TileCount = 1
-for tile in country:
-    landFile = os.path.join(file_directory_functions.OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'land.shp')
-    outFile = os.path.join(file_directory_functions.OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'land')
-
-    if not os.path.isfile(landFile):
-        print(f'+ Generate land {TileCount} of {len(country)} for Coordinates: {tile["x"]} {tile["y"]}')
-        cmd = ['ogr2ogr', '-overwrite', '-skipfailures']
-        cmd.extend(['-spat', f'{tile["left"]-0.1:.6f}',
-                    f'{tile["bottom"]-0.1:.6f}',
-                    f'{tile["right"]+0.1:.6f}',
-                    f'{tile["top"]+0.1:.6f}'])
-        cmd.append(landFile)
-        cmd.append(file_directory_functions.land_polygons_file)
-        #print(cmd)
-        subprocess.run(cmd)
-
-    if not os.path.isfile(outFile+'1.osm'):
-        cmd = ['python3', os.path.join(file_directory_functions.COMMON_PATH, 'shape2osm.py'), '-l', outFile, landFile]
-        #print(cmd)
-        subprocess.run(cmd)
-    TileCount += 1
-
-# logging
-print('# Generate land: OK')
+# Generate land
+x.generateLand()
 
 
 print('\n\n# Generate sea')

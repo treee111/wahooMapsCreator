@@ -120,6 +120,13 @@ class OSM_Maps:
         # logging
         print('# check land_polygons.shp file: OK')
 
+
+    def createEmptyDirectories(self):
+        for tile in self.country:
+            outdir = os.path.join(file_directory_functions.OUT_PATH, f'{tile["x"]}', f'{tile["y"]}')
+            if not os.path.isdir(outdir):
+                os.makedirs(outdir)
+
     def checkAndDownloadOsmPbfFile(self):
         print('\n\n# check countries .osm.pbf files')
         # Build list of countries needed
@@ -150,11 +157,10 @@ class OSM_Maps:
         print('+ deleted files')
         # time.sleep(60)
 
+        self.createEmptyDirectories()
+
         border_countries = {}
         for tile in self.country:
-            outdir = os.path.join(file_directory_functions.OUT_PATH, f'{tile["x"]}', f'{tile["y"]}')
-            if not os.path.isdir(outdir):
-                os.makedirs(outdir)
 
         # search for user entered country name in translated (to geofabrik). if match continue with matched else continue with user entered country
         # search for country match in geofabrik tables to determine region to use for map download 
@@ -298,3 +304,32 @@ class OSM_Maps:
 
         # logging
         print('# Filter tags from country osm.pbf files: OK')
+
+    def generateLand(self):
+        print('\n\n# Generate land')
+
+        TileCount = 1
+        for tile in self.country:
+            landFile = os.path.join(file_directory_functions.OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'land.shp')
+            outFile = os.path.join(file_directory_functions.OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'land')
+
+            if not os.path.isfile(landFile) or self.Force_Processing == 1:
+                print(f'+ Generate land {TileCount} of {len(self.country)} for Coordinates: {tile["x"]} {tile["y"]}')
+                cmd = ['ogr2ogr', '-overwrite', '-skipfailures']
+                cmd.extend(['-spat', f'{tile["left"]-0.1:.6f}',
+                            f'{tile["bottom"]-0.1:.6f}',
+                            f'{tile["right"]+0.1:.6f}',
+                            f'{tile["top"]+0.1:.6f}'])
+                cmd.append(landFile)
+                cmd.append(file_directory_functions.land_polygons_file)
+                #print(cmd)
+                subprocess.run(cmd)
+
+            if not os.path.isfile(outFile+'1.osm') or self.Force_Processing == 1:
+                cmd = ['python3', os.path.join(file_directory_functions.COMMON_PATH, 'shape2osm.py'), '-l', outFile, landFile]
+                #print(cmd)
+                subprocess.run(cmd)
+            TileCount += 1
+
+        # logging
+        print('# Generate land: OK')
