@@ -14,6 +14,7 @@ from os import sys, path
 sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
 from common_resources import file_directory_functions
 from common_resources import osm_maps_functions
+from common_resources.osm_maps_functions import OSM_Maps
 
 ########### Configurable Parameters
 
@@ -63,7 +64,9 @@ if len(sys.argv) != 2:
     print(f'! Usage: {sys.argv[0]} Country name part of a .json file.')
     sys.exit()
 
-# if osm_maps_functions.getRegionOfCountry(sys.argv[1]) == '' :
+x = OSM_Maps(sys.argv[1], Max_Days_Old, Force_Processing)
+
+# if x.region == '' :
 #     print ('Invalid country name.')
 #     sys.exit()
 
@@ -77,13 +80,15 @@ if country == '' :
 print(f'+ Use json file {f.name} with {len(country)} tiles')
 print('# Read json file: OK')
 
+x.country = country
 
 # Check for expired land polygons file and download, if too old
-osm_maps_functions.checkAndDownloadLandPoligonsFile(Max_Days_Old, Force_Processing)
+# osm_maps_functions.checkAndDownloadLandPoligonsFile(Max_Days_Old, Force_Processing)
+x.checkAndDownloadLandPoligonsFile()
 
 # Check for expired .osm.pbf files and download, if too old
-osm_maps_functions.checkAndDownloadOsmPbfFile(country, Max_Days_Old, Force_Processing)
-
+# osm_maps_functions.checkAndDownloadOsmPbfFile(country, Max_Days_Old, Force_Processing)
+x.checkAndDownloadOsmPbfFile()
 
 print('\n\n# Filter tags from country osm.pbf files')
 for key, val  in border_countries.items():
