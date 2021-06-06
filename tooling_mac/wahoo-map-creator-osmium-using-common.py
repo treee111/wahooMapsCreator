@@ -92,28 +92,9 @@ x.filterTagsFromCountryOsmPbdFiles()
 # Generate land
 x.generateLand()
 
+# Generate sea
+x.generateSea()
 
-print('\n\n# Generate sea')
-TileCount = 1
-for tile in country:
-    outFile = os.path.join(file_directory_functions.OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'sea.osm')
-    if not os.path.isfile(outFile):
-        print(f'+ Generate sea {TileCount} of {len(country)} for Coordinates: {tile["x"]} {tile["y"]}')
-        with open(os.path.join(file_directory_functions.COMMON_PATH, 'sea.osm')) as f:
-            sea_data = f.read()
-
-            sea_data = sea_data.replace('$LEFT', f'{tile["left"]-0.1:.6f}')
-            sea_data = sea_data.replace('$BOTTOM',f'{tile["bottom"]-0.1:.6f}')
-            sea_data = sea_data.replace('$RIGHT',f'{tile["right"]+0.1:.6f}')
-            sea_data = sea_data.replace('$TOP',f'{tile["top"]+0.1:.6f}')
-
-            with open(outFile, 'w') as of:
-                of.write(sea_data)
-    TileCount += 1
-
-
-# logging
-print('# Generate sea: OK')
 
 
 print('\n\n# Split filtered country files to tiles')

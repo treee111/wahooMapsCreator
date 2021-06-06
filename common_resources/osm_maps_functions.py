@@ -333,3 +333,26 @@ class OSM_Maps:
 
         # logging
         print('# Generate land: OK')
+
+    def generateSea(self):
+        print('\n\n# Generate sea')
+
+        TileCount = 1
+        for tile in self.country:
+            outFile = os.path.join(file_directory_functions.OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'sea.osm')
+            if not os.path.isfile(outFile) or self.Force_Processing == 1:
+                print(f'+ Generate sea {TileCount} of {len(self.country)} for Coordinates: {tile["x"]} {tile["y"]}')
+                with open(os.path.join(file_directory_functions.COMMON_PATH, 'sea.osm')) as f:
+                    sea_data = f.read()
+
+                    sea_data = sea_data.replace('$LEFT', f'{tile["left"]-0.1:.6f}')
+                    sea_data = sea_data.replace('$BOTTOM',f'{tile["bottom"]-0.1:.6f}')
+                    sea_data = sea_data.replace('$RIGHT',f'{tile["right"]+0.1:.6f}')
+                    sea_data = sea_data.replace('$TOP',f'{tile["top"]+0.1:.6f}')
+
+                    with open(outFile, 'w') as of:
+                        of.write(sea_data)
+            TileCount += 1
+
+        # logging
+        print('# Generate sea: OK')
