@@ -8,6 +8,8 @@ import subprocess
 def getGitRoot():
     return subprocess.Popen(['git', 'rev-parse', '--show-toplevel'], stdout=subprocess.PIPE).communicate()[0].rstrip().decode('utf-8')
 
+# script_path = os.path.abspath(__file__) # i.e. /path/to/dir/foobar.py
+
 ROOT_PATH = getGitRoot()
 COMMON_PATH = os.path.join(ROOT_PATH, 'common_resources')
 OUT_PATH = os.path.join(ROOT_PATH, 'output')

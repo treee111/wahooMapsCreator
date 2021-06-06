@@ -22,15 +22,15 @@ class OSM_Maps:
     "This is a OSM data class"
 
 
-    def __init__(self, input_country, Max_Days_Old, Force_Processing, workers, threads, Save_Cruiser):
-        self.input_country = input_country
-        self.region = self.getRegionOfCountry(input_country)
+    def __init__(self, inputFile, Max_Days_Old, Force_Processing, workers, threads, Save_Cruiser):
+        self.inputFileWithPath = inputFile
+        self.region = self.getRegionOfCountry(inputFile)
         self.Max_Days_Old = Max_Days_Old
         self.Force_Processing = Force_Processing
         self.workers = workers
         self.threads = threads
         self.Save_Cruiser = Save_Cruiser
-        self.country = []
+        self.tilesFromJson = []
         self.border_countries = {}
 
         self.countryName = os.path.split(sys.argv[1])[1][:-5]
@@ -149,16 +149,17 @@ class OSM_Maps:
 
 
     def createEmptyDirectories(self):
-        for tile in self.country:
+        for tile in self.tilesFromJson:
             outdir = os.path.join(file_directory_functions.OUT_PATH, f'{tile["x"]}', f'{tile["y"]}')
             if not os.path.isdir(outdir):
                 os.makedirs(outdir)
+
 
     def checkAndDownloadOsmPbfFile(self):
         print('\n\n# check countries .osm.pbf files')
         # Build list of countries needed
         border_countries = {}
-        for tile in self.country:
+        for tile in self.tilesFromJson:
             for c in tile['countries']:
                 if c not in border_countries:
                     border_countries[c] = {'map_file':c}
@@ -187,7 +188,7 @@ class OSM_Maps:
         self.createEmptyDirectories()
 
         border_countries = {}
-        for tile in self.country:
+        for tile in self.tilesFromJson:
 
         # search for user entered country name in translated (to geofabrik). if match continue with matched else continue with user entered country
         # search for country match in geofabrik tables to determine region to use for map download 
@@ -256,6 +257,7 @@ class OSM_Maps:
                         print(f'+ Border country: {c}')
                     print('# Check countries .osm.pbf files: OK')
     
+
     def filterTagsFromCountryOsmPbdFiles(self):
 
         print('\n\n# Filter tags from country osm.pbf files')
@@ -332,16 +334,17 @@ class OSM_Maps:
         # logging
         print('# Filter tags from country osm.pbf files: OK')
 
+
     def generateLand(self):
         print('\n\n# Generate land')
 
         TileCount = 1
-        for tile in self.country:
+        for tile in self.tilesFromJson:
             landFile = os.path.join(file_directory_functions.OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'land.shp')
             outFile = os.path.join(file_directory_functions.OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'land')
 
             if not os.path.isfile(landFile) or self.Force_Processing == 1:
-                print(f'+ Generate land {TileCount} of {len(self.country)} for Coordinates: {tile["x"]} {tile["y"]}')
+                print(f'+ Generate land {TileCount} of {len(self.tilesFromJson)} for Coordinates: {tile["x"]} {tile["y"]}')
                 cmd = ['ogr2ogr', '-overwrite', '-skipfailures']
                 cmd.extend(['-spat', f'{tile["left"]-0.1:.6f}',
                             f'{tile["bottom"]-0.1:.6f}',
@@ -361,14 +364,15 @@ class OSM_Maps:
         # logging
         print('# Generate land: OK')
 
+
     def generateSea(self):
         print('\n\n# Generate sea')
 
         TileCount = 1
-        for tile in self.country:
+        for tile in self.tilesFromJson:
             outFile = os.path.join(file_directory_functions.OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'sea.osm')
             if not os.path.isfile(outFile) or self.Force_Processing == 1:
-                print(f'+ Generate sea {TileCount} of {len(self.country)} for Coordinates: {tile["x"]} {tile["y"]}')
+                print(f'+ Generate sea {TileCount} of {len(self.tilesFromJson)} for Coordinates: {tile["x"]} {tile["y"]}')
                 with open(os.path.join(file_directory_functions.COMMON_PATH, 'sea.osm')) as f:
                     sea_data = f.read()
 
@@ -384,14 +388,15 @@ class OSM_Maps:
         # logging
         print('# Generate sea: OK')
 
+
     def splitFilteredCountryFilesToTiles(self):
         print('\n\n# Split filtered country files to tiles')
         TileCount = 1
-        for tile in self.country:
+        for tile in self.tilesFromJson:
 
             for c in tile['countries']:
                 print(f'+ Split filtered country {c}')
-                print(f'+ Splitting tile {TileCount} of {len(self.country)} for Coordinates: {tile["x"]},{tile["y"]} from map of {c}')
+                print(f'+ Splitting tile {TileCount} of {len(self.tilesFromJson)} for Coordinates: {tile["x"]},{tile["y"]} from map of {c}')
                 outFile = os.path.join(file_directory_functions.OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'split-{c}.osm.pbf')
                 if not os.path.isfile(outFile) or self.Force_Processing == 1:
                     # Windows
@@ -429,11 +434,12 @@ class OSM_Maps:
             # logging
             print('# Split filtered country files to tiles: OK')
 
+
     def mergeSplittedTilesWithLandAndSea(self):
         print('\n\n# Merge splitted tiles with land an sea')
         TileCount = 1
-        for tile in self.country:
-            print(f'+ Merging tiles for tile {TileCount} of {len(self.country)} for Coordinates: {tile["x"]},{tile["y"]}')
+        for tile in self.tilesFromJson:
+            print(f'+ Merging tiles for tile {TileCount} of {len(self.tilesFromJson)} for Coordinates: {tile["x"]},{tile["y"]}')
             outFile = os.path.join(file_directory_functions.OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'merged.osm.pbf')
             if not os.path.isfile(outFile) or self.Force_Processing == 1:
                 # Windows
@@ -479,8 +485,8 @@ class OSM_Maps:
     def createMapFiles(self):
         print('\n\n# Creating .map files')
         TileCount = 1
-        for tile in self.country:
-            print(f'+ Creating map file for tile {TileCount} of {len(self.country)} for Coordinates: {tile["x"]}, {tile["y"]}')
+        for tile in self.tilesFromJson:
+            print(f'+ Creating map file for tile {TileCount} of {len(self.tilesFromJson)} for Coordinates: {tile["x"]}, {tile["y"]}')
             outFile = os.path.join(file_directory_functions.OUT_PATH, f'{tile["x"]}', f'{tile["y"]}.map')
             if not os.path.isfile(outFile+'.lzma') or self.Force_Processing == 1:
                 mergedFile = os.path.join(file_directory_functions.OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', 'merged.osm.pbf')
@@ -521,6 +527,7 @@ class OSM_Maps:
         # logging
         print('# Creating .map files: OK')
 
+
     def zipMapFiles(self):
         print('\n# Zip .map.lzma files')
         # countryName = os.path.split(sys.argv[1])
@@ -528,7 +535,6 @@ class OSM_Maps:
         print(f'+ Country: {self.countryName}')
 
         # Make Wahoo zip file
-
         # Windows
         if platform.system() == "Windows":
             cmd = ['7za', 'a', '-tzip', '-m0=lzma', '-mx9', '-mfb=273', '-md=1536m', self.countryName + '.zip']
@@ -537,7 +543,7 @@ class OSM_Maps:
         else:
             cmd = ['zip', '-r', self.countryName + '.zip']
         
-        for tile in self.country:
+        for tile in self.tilesFromJson:
             cmd.append(os.path.join(f'{tile["x"]}', f'{tile["y"]}.map.lzma'))
         #print(cmd)
         subprocess.run(cmd, cwd=file_directory_functions.OUT_PATH)
@@ -545,22 +551,18 @@ class OSM_Maps:
         # logging
         print('# Zip .map.lzma files: OK \n')
 
+
     def makeCruiserFiles(self):
         # Make Cruiser map files zip file
         if self.Save_Cruiser == 1:
             # Windows
             if platform.system() == "Windows":
                 cmd = ['7za', 'a', '-tzip', '-m0=lzma', self.countryName + '-maps.zip']
-
-                cmd = ['7za', 'a', '-tzip', '-m0=lzma', '-mx9', '-mfb=273', '-md=1536m', countryName[1] + '.zip']
             # Non-Windows
             else:
                 cmd = ['zip', '-r', self.countryName + '-maps.zip']
 
-                # cmd = ['zip', '-r', self.countryName + '.zip']
-
-
-            for tile in self.country:
+            for tile in self.tilesFromJson:
                 cmd.append(os.path.join(f'{tile["x"]}', f'{tile["y"]}.map'))
             #print(cmd)
             subprocess.run(cmd, cwd=file_directory_functions.OUT_PATH)

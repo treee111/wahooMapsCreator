@@ -1,11 +1,7 @@
 #!/usr/bin/python
 
 # import official python packages
-import glob
-import json
 import multiprocessing
-import os
-import subprocess
 import sys
 
 
@@ -47,15 +43,6 @@ workers = '1'
 # ! means error
 # + means additional comment in a working-unit
 
-# script_path = os.path.abspath(__file__) # i.e. /path/to/dir/foobar.py
-
-# ROOT_PATH = file_directory_functions.getGitRoot()
-# COMMON_PATH = os.path.join(ROOT_PATH, 'common_resources')
-# OUT_PATH = os.path.join(ROOT_PATH, 'output')
-# MAP_PATH = os.path.join(COMMON_PATH, 'maps')
-# land_polygons_file = os.path.join(COMMON_PATH, 'land-polygons-split-4326/land_polygons.shp')
-
-
 if len(sys.argv) != 2:
     print(f'! Usage: {sys.argv[0]} Country name part of a .json file.')
     sys.exit()
@@ -69,13 +56,10 @@ x = OSM_Maps(sys.argv[1], Max_Days_Old, Force_Processing, workers, threads, Save
 # Read json file
 x.readJsonFile()
 
-
 # Check for expired land polygons file and download, if too old
-# osm_maps_functions.checkAndDownloadLandPoligonsFile(Max_Days_Old, Force_Processing)
 x.checkAndDownloadLandPoligonsFile()
 
 # Check for expired .osm.pbf files and download, if too old
-# osm_maps_functions.checkAndDownloadOsmPbfFile(country, Max_Days_Old, Force_Processing)
 x.checkAndDownloadOsmPbfFile()
 
 # Filter tags from country osm.pbf files'
