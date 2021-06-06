@@ -108,14 +108,14 @@ class OSM_Maps:
         # Build list of countries needed
         border_countries = {}
         for tile in self.tilesFromJson:
-            for c in tile['countries']:
-                if c not in border_countries:
-                    border_countries[c] = {'map_file':c}
+            for country in tile['countries']:
+                if country not in border_countries:
+                    border_countries[country] = {'map_file':country}
         
         # logging
         print(f'+ Border countries of json file: {len(border_countries)}')
-        for c in border_countries:
-            print(f'+ Border country: {c}')
+        for country in border_countries:
+            print(f'+ Border country: {country}')
 
         # time.sleep(60)
 
@@ -123,93 +123,41 @@ class OSM_Maps:
         print(f'+ Checking for old maps and remove them')
         now = time.time()
         To_Old = now - 60 * 60 * 24 * self.Max_Days_Old
-        for c in border_countries:
+        for country in border_countries:
             # print(f'+ mapfile for {c}')
-            map_files = glob.glob(f'{file_directory_functions.MAPS_DIR}/{c}*.osm.pbf')
+            map_files = glob.glob(f'{file_directory_functions.MAPS_DIR}/{country}*.osm.pbf')
             if len(map_files) != 1:
-                map_files = glob.glob(f'{file_directory_functions.MAPS_DIR}/**/{c}*.osm.pbf')
+                map_files = glob.glob(f'{file_directory_functions.MAPS_DIR}/**/{country}*.osm.pbf')
             if len(map_files) == 1 and os.path.isfile(map_files[0]):
                 FileCreation = os.path.getctime(map_files[0])
                 if FileCreation < To_Old or self.Force_Processing == 1:
-                    print(f'+ mapfile for {c}: deleted')
+                    print(f'+ mapfile for {country}: deleted')
                     os.remove(map_files[0])
                     self.Force_Processing = 1
                 else:
-                    print(f'+ mapfile for {c}: up-to-date')
+                    border_countries[country] = {'map_file':map_files[0]}
+                    print(f'+ mapfile for {country}: up-to-date')
 
         # time.sleep(60)
 
         file_directory_functions.createEmptyDirectories(self.tilesFromJson)
 
-        border_countries = {}
-        for tile in self.tilesFromJson:
 
-        # search for user entered country name in translated (to geofabrik). if match continue with matched else continue with user entered country
-        # search for country match in geofabrik tables to determine region to use for map download 
-            for c in tile['countries']:
-                if c not in border_countries:
-                    print(f'+ Checking mapfile for {c}')
-                    map_files = glob.glob(f'{file_directory_functions.MAPS_DIR}/{c}*.osm.pbf')
-                    if len(map_files) != 1:
-                        map_files = glob.glob(f'{file_directory_functions.MAPS_DIR}/**/{c}*.osm.pbf')
-                    if len(map_files) != 1 or not os.path.isfile(map_files[0]):
-                        try:
-                            c_translated = constants.Translate_Country[f'{c}']
-                        except:
-                            c_translated = c
-                        region = ''
-                        if c_translated in constants.africa_geofabrik :
-                            region = 'africa'
-                        if c_translated in constants.antarctica_geofabrik :
-                            region = 'antarctica'
-                        if c_translated in constants.asia_geofabrik :
-                            region = 'asia'
-                        if c_translated in constants.australiaoceania_geofabrik :
-                            region = 'australia-oceania'
-                        if c_translated in constants.centralamerica_geofabrik :
-                            region = 'central-america'
-                        if c_translated in constants.europe_geofabrik :
-                            region = 'europe'
-                        if c_translated in constants.northamerica_geofabrik :
-                            region = 'north-america'
-                        if c_translated in constants.southamerica_geofabrik :
-                            region = 'south-america'
-                        if c_translated in constants.germany_subregions_geofabrik :
-                            region = 'europe\\germany'
-                        if c_translated in constants.noregion_geofabrik :
-                            region = 'no'                    
-                        if region == '':
-                            print(f'\n! No Geofabrik region match for country: {c_translated}')
-                            sys.exit()
-                        print(f'+ Trying to download missing map of {c}.')
-                        try:
-                            translatedCountry = constants.Translate_Country[f'{c}']
-                            if region != 'no':
-                                url = 'https://download.geofabrik.de/'+ region + '/' + translatedCountry + '-latest.osm.pbf'
-                            else:
-                                url = 'https://download.geofabrik.de/' + translatedCountry + '-latest.osm.pbf'
-                        except:
-                            if region != 'no':
-                                url = 'https://download.geofabrik.de/'+ region + f'/{c}' + '-latest.osm.pbf'
-                            else:
-                                url = 'https://download.geofabrik.de/' + f'/{c}' + '-latest.osm.pbf'
-                        r = requests.get(url, allow_redirects=True, stream = True)
-                        if r.status_code != 200:
-                            print(f'! failed to find or download country: {c}')
-                            sys.exit()
-                        Download=open(os.path.join (file_directory_functions.MAPS_DIR, f'{c}' + '-latest.osm.pbf'), 'wb')
-                        for chunk in r.iter_content(chunk_size=1024*100):
-                            Download.write(chunk)
-                        Download.close()
-                        map_files = [os.path.join (file_directory_functions.MAPS_DIR, f'{c}' + '-latest.osm.pbf')]
-                        print(f'+ Map of {c} downloaded.')
-                    self.border_countries[c] = {'map_file':map_files[0]}
+        for country in border_countries:
+            print(f'+ Checking mapfile for {country}')
+            # check for already existing .osm.pbf file
+            # map_file_name = border_countries[country]['map_file']
+            if len(border_countries[country]) != 1 or not os.path.isfile(border_countries[country]['map_file']):
+                # if there exists no file or it is no file --> download
+                map_files = self.downloadMap(country)
+                border_countries[country] = {'map_file':map_files[0]}
 
+        self.border_countries = border_countries
         # logging
         print('# Check countries .osm.pbf files: OK')
     
 
-    def filterTagsFromCountryOsmPbdFiles(self):
+    def filterTagsFromCountryOsmPbfFiles(self):
 
         print('\n# Filter tags from country osm.pbf files')
 
@@ -513,3 +461,32 @@ class OSM_Maps:
                 cmd.append(os.path.join(f'{tile["x"]}', f'{tile["y"]}.map'))
             #print(cmd)
             subprocess.run(cmd, cwd=file_directory_functions.OUTPUT_DIR)
+
+
+    def downloadMap(self, country):
+        # search for user entered country name in translated (to geofabrik). if match continue with matched else continue with user entered country
+        # search for country match in geofabrik tables to determine region to use for map download 
+
+        print(f'+ Trying to download missing map of {country}.')
+        
+        # get Geofabrik region of country
+        translatedCountry = constants_functions.translateInputCountryToOsm(country)
+        region = constants_functions.getGeofabrikRegionOfCountry(f'{country}')
+
+        if region != 'no':
+            url = 'https://download.geofabrik.de/'+ region + '/' + translatedCountry + '-latest.osm.pbf'
+        else:
+            url = 'https://download.geofabrik.de/' + translatedCountry + '-latest.osm.pbf'
+
+        r = requests.get(url, allow_redirects=True, stream = True)
+        if r.status_code != 200:
+            print(f'! failed to find or download country: {country}')
+            sys.exit()
+        Download=open(os.path.join (file_directory_functions.MAPS_DIR, f'{country}' + '-latest.osm.pbf'), 'wb')
+        for chunk in r.iter_content(chunk_size=1024*100):
+            Download.write(chunk)
+        Download.close()
+        map_files = [os.path.join (file_directory_functions.MAPS_DIR, f'{country}' + '-latest.osm.pbf')]
+        print(f'+ Map of {country} downloaded.')
+
+        return map_files
