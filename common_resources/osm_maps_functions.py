@@ -9,7 +9,6 @@ import requests
 import subprocess
 import sys
 import time
-import zipfile
 import platform
 
 # import custom python packages
@@ -79,28 +78,7 @@ class OSM_Maps:
         print('# Read json file: OK')
 
 
-    def unzip(source_filename, dest_dir):
-        with zipfile.ZipFile(source_filename) as zf:
-            for member in zf.infolist():
-                # Path traversal defense copied from
-                # http://hg.python.org/cpython/file/tip/Lib/http/server.py#l789
-                words = member.filename.split('/')
-                path = dest_dir
-                for word in words[:-1]:
-                    while True:
-                        drive, word = os.path.splitdrive(word)
-                        head, word = os.path.split(word)
-                        if not drive:
-                            break
-                    if word in (os.curdir, os.pardir, ''):
-                        continue
-                    path = os.path.join(path, word)
-                if(member.filename.split('/').pop()): member.filename = member.filename.split('/').pop()
-                zf.extract(member, path)
-
-
     def checkAndDownloadLandPoligonsFile(self):
-        
         print('\n# check land_polygons.shp file')
         # Check for expired land polygons file and delete it
         now = time.time()
@@ -127,7 +105,7 @@ class OSM_Maps:
             Download.close()
             # unpack it
             # should work on macOS and Windows
-            self.unzip(os.path.join (file_directory_functions.COMMON_DIR, 'land-polygons-split-4326.zip'), file_directory_functions.COMMON_DIR)
+            file_directory_functions.unzip(os.path.join (file_directory_functions.COMMON_DIR, 'land-polygons-split-4326.zip'), file_directory_functions.COMMON_DIR)
             # Windows-Version
             # cmd = ['7za', 'x', '-y', os.path.join (file_directory_functions.COMMON_DIR, 'land-polygons-split-4326.zip')]
             #print(cmd)
@@ -144,13 +122,6 @@ class OSM_Maps:
         
         # logging
         print('# check land_polygons.shp file: OK')
-
-
-    def createEmptyDirectories(self):
-        for tile in self.tilesFromJson:
-            outdir = os.path.join(file_directory_functions.OUTPUT_DIR, f'{tile["x"]}', f'{tile["y"]}')
-            if not os.path.isdir(outdir):
-                os.makedirs(outdir)
 
 
     def checkAndDownloadOsmPbfFile(self):
@@ -189,7 +160,7 @@ class OSM_Maps:
 
         # time.sleep(60)
 
-        self.createEmptyDirectories()
+        file_directory_functions.createEmptyDirectories(self.tilesFromJson)
 
         border_countries = {}
         for tile in self.tilesFromJson:
