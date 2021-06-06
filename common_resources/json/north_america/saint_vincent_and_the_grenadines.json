@@ -1,0 +1,27 @@
+[
+    {
+        "x": 84,
+        "y": 119,
+        "left": -61.875,
+        "top": 12.554564,
+        "right": -60.46875,
+        "bottom": 11.178402,
+        "countries": [
+            "grenada",
+            "saint_vincent_and_the_grenadines",
+            "trinidad_and_tobago"
+        ]
+    },
+    {
+        "x": 84,
+        "y": 118,
+        "left": -61.875,
+        "top": 13.923404,
+        "right": -60.46875,
+        "bottom": 12.554564,
+        "countries": [
+            "saint_vincent_and_the_grenadines",
+            "saint_lucia"
+        ]
+    }
+]

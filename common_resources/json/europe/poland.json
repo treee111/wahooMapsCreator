@@ -1,0 +1,563 @@
+[
+    {
+        "x": 144,
+        "y": 82,
+        "left": 22.5,
+        "top": 54.162434,
+        "right": 23.90625,
+        "bottom": 53.330873,
+        "countries": [
+            "belarus",
+            "poland",
+            "lithuania"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 83,
+        "left": 22.5,
+        "top": 53.330873,
+        "right": 23.90625,
+        "bottom": 52.48278,
+        "countries": [
+            "belarus",
+            "poland"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 83,
+        "left": 23.90625,
+        "top": 53.330873,
+        "right": 25.3125,
+        "bottom": 52.48278,
+        "countries": [
+            "belarus",
+            "poland"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 84,
+        "left": 22.5,
+        "top": 52.48278,
+        "right": 23.90625,
+        "bottom": 51.618017,
+        "countries": [
+            "belarus",
+            "poland",
+            "ukraine"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 85,
+        "left": 22.5,
+        "top": 51.618017,
+        "right": 23.90625,
+        "bottom": 50.736455,
+        "countries": [
+            "belarus",
+            "poland",
+            "ukraine"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 85,
+        "left": 23.90625,
+        "top": 51.618017,
+        "right": 25.3125,
+        "bottom": 50.736455,
+        "countries": [
+            "belarus",
+            "poland",
+            "ukraine"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 85,
+        "left": 14.0625,
+        "top": 51.618017,
+        "right": 15.46875,
+        "bottom": 50.736455,
+        "countries": [
+            "poland",
+            "czech_republic",
+            "germany"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 85,
+        "left": 15.46875,
+        "top": 51.618017,
+        "right": 16.875,
+        "bottom": 50.736455,
+        "countries": [
+            "poland",
+            "czech_republic"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 86,
+        "left": 15.46875,
+        "top": 50.736455,
+        "right": 16.875,
+        "bottom": 49.837982,
+        "countries": [
+            "poland",
+            "czech_republic"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 86,
+        "left": 16.875,
+        "top": 50.736455,
+        "right": 18.28125,
+        "bottom": 49.837982,
+        "countries": [
+            "poland",
+            "czech_republic"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 86,
+        "left": 18.28125,
+        "top": 50.736455,
+        "right": 19.6875,
+        "bottom": 49.837982,
+        "countries": [
+            "poland",
+            "czech_republic"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 87,
+        "left": 18.28125,
+        "top": 49.837982,
+        "right": 19.6875,
+        "bottom": 48.922499,
+        "countries": [
+            "poland",
+            "czech_republic",
+            "slovakia"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 82,
+        "left": 14.0625,
+        "top": 54.162434,
+        "right": 15.46875,
+        "bottom": 53.330873,
+        "countries": [
+            "poland",
+            "germany"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 83,
+        "left": 14.0625,
+        "top": 53.330873,
+        "right": 15.46875,
+        "bottom": 52.48278,
+        "countries": [
+            "poland",
+            "germany"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 84,
+        "left": 14.0625,
+        "top": 52.48278,
+        "right": 15.46875,
+        "bottom": 51.618017,
+        "countries": [
+            "poland",
+            "germany"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 81,
+        "left": 22.5,
+        "top": 54.977614,
+        "right": 23.90625,
+        "bottom": 54.162434,
+        "countries": [
+            "russia",
+            "poland",
+            "lithuania"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 81,
+        "left": 14.0625,
+        "top": 54.977614,
+        "right": 15.46875,
+        "bottom": 54.162434,
+        "countries": [
+            "poland"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 81,
+        "left": 15.46875,
+        "top": 54.977614,
+        "right": 16.875,
+        "bottom": 54.162434,
+        "countries": [
+            "poland"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 81,
+        "left": 16.875,
+        "top": 54.977614,
+        "right": 18.28125,
+        "bottom": 54.162434,
+        "countries": [
+            "poland"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 81,
+        "left": 18.28125,
+        "top": 54.977614,
+        "right": 19.6875,
+        "bottom": 54.162434,
+        "countries": [
+            "russia",
+            "poland"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 81,
+        "left": 19.6875,
+        "top": 54.977614,
+        "right": 21.09375,
+        "bottom": 54.162434,
+        "countries": [
+            "russia",
+            "poland"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 81,
+        "left": 21.09375,
+        "top": 54.977614,
+        "right": 22.5,
+        "bottom": 54.162434,
+        "countries": [
+            "russia",
+            "poland"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 82,
+        "left": 15.46875,
+        "top": 54.162434,
+        "right": 16.875,
+        "bottom": 53.330873,
+        "countries": [
+            "poland"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 82,
+        "left": 16.875,
+        "top": 54.162434,
+        "right": 18.28125,
+        "bottom": 53.330873,
+        "countries": [
+            "poland"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 82,
+        "left": 18.28125,
+        "top": 54.162434,
+        "right": 19.6875,
+        "bottom": 53.330873,
+        "countries": [
+            "poland"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 82,
+        "left": 19.6875,
+        "top": 54.162434,
+        "right": 21.09375,
+        "bottom": 53.330873,
+        "countries": [
+            "poland"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 82,
+        "left": 21.09375,
+        "top": 54.162434,
+        "right": 22.5,
+        "bottom": 53.330873,
+        "countries": [
+            "poland"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 83,
+        "left": 15.46875,
+        "top": 53.330873,
+        "right": 16.875,
+        "bottom": 52.48278,
+        "countries": [
+            "poland"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 83,
+        "left": 16.875,
+        "top": 53.330873,
+        "right": 18.28125,
+        "bottom": 52.48278,
+        "countries": [
+            "poland"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 83,
+        "left": 18.28125,
+        "top": 53.330873,
+        "right": 19.6875,
+        "bottom": 52.48278,
+        "countries": [
+            "poland"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 83,
+        "left": 19.6875,
+        "top": 53.330873,
+        "right": 21.09375,
+        "bottom": 52.48278,
+        "countries": [
+            "poland"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 83,
+        "left": 21.09375,
+        "top": 53.330873,
+        "right": 22.5,
+        "bottom": 52.48278,
+        "countries": [
+            "poland"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 84,
+        "left": 15.46875,
+        "top": 52.48278,
+        "right": 16.875,
+        "bottom": 51.618017,
+        "countries": [
+            "poland"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 84,
+        "left": 16.875,
+        "top": 52.48278,
+        "right": 18.28125,
+        "bottom": 51.618017,
+        "countries": [
+            "poland"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 84,
+        "left": 18.28125,
+        "top": 52.48278,
+        "right": 19.6875,
+        "bottom": 51.618017,
+        "countries": [
+            "poland"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 84,
+        "left": 19.6875,
+        "top": 52.48278,
+        "right": 21.09375,
+        "bottom": 51.618017,
+        "countries": [
+            "poland"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 84,
+        "left": 21.09375,
+        "top": 52.48278,
+        "right": 22.5,
+        "bottom": 51.618017,
+        "countries": [
+            "poland"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 85,
+        "left": 16.875,
+        "top": 51.618017,
+        "right": 18.28125,
+        "bottom": 50.736455,
+        "countries": [
+            "poland"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 85,
+        "left": 18.28125,
+        "top": 51.618017,
+        "right": 19.6875,
+        "bottom": 50.736455,
+        "countries": [
+            "poland"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 85,
+        "left": 19.6875,
+        "top": 51.618017,
+        "right": 21.09375,
+        "bottom": 50.736455,
+        "countries": [
+            "poland"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 85,
+        "left": 21.09375,
+        "top": 51.618017,
+        "right": 22.5,
+        "bottom": 50.736455,
+        "countries": [
+            "poland"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 86,
+        "left": 19.6875,
+        "top": 50.736455,
+        "right": 21.09375,
+        "bottom": 49.837982,
+        "countries": [
+            "poland"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 86,
+        "left": 21.09375,
+        "top": 50.736455,
+        "right": 22.5,
+        "bottom": 49.837982,
+        "countries": [
+            "poland"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 86,
+        "left": 22.5,
+        "top": 50.736455,
+        "right": 23.90625,
+        "bottom": 49.837982,
+        "countries": [
+            "poland",
+            "ukraine"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 86,
+        "left": 23.90625,
+        "top": 50.736455,
+        "right": 25.3125,
+        "bottom": 49.837982,
+        "countries": [
+            "poland",
+            "ukraine"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 87,
+        "left": 19.6875,
+        "top": 49.837982,
+        "right": 21.09375,
+        "bottom": 48.922499,
+        "countries": [
+            "poland",
+            "slovakia"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 87,
+        "left": 21.09375,
+        "top": 49.837982,
+        "right": 22.5,
+        "bottom": 48.922499,
+        "countries": [
+            "poland",
+            "ukraine",
+            "slovakia"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 87,
+        "left": 22.5,
+        "top": 49.837982,
+        "right": 23.90625,
+        "bottom": 48.922499,
+        "countries": [
+            "poland",
+            "ukraine",
+            "slovakia"
+        ]
+    }
+]

@@ -1,0 +1,263 @@
+[
+    {
+        "x": 63,
+        "y": 94,
+        "left": -91.40625,
+        "top": 43.068888,
+        "right": -90.0,
+        "bottom": 42.032974,
+        "countries": [
+            "wisconsin",
+            "iowa",
+            "illinois"
+        ]
+    },
+    {
+        "x": 64,
+        "y": 94,
+        "left": -90.0,
+        "top": 43.068888,
+        "right": -88.59375,
+        "bottom": 42.032974,
+        "countries": [
+            "wisconsin",
+            "illinois"
+        ]
+    },
+    {
+        "x": 65,
+        "y": 94,
+        "left": -88.59375,
+        "top": 43.068888,
+        "right": -87.1875,
+        "bottom": 42.032974,
+        "countries": [
+            "wisconsin",
+            "illinois"
+        ]
+    },
+    {
+        "x": 62,
+        "y": 93,
+        "left": -92.8125,
+        "top": 44.087585,
+        "right": -91.40625,
+        "bottom": 43.068888,
+        "countries": [
+            "wisconsin",
+            "iowa",
+            "minnesota"
+        ]
+    },
+    {
+        "x": 63,
+        "y": 93,
+        "left": -91.40625,
+        "top": 44.087585,
+        "right": -90.0,
+        "bottom": 43.068888,
+        "countries": [
+            "wisconsin",
+            "iowa",
+            "minnesota"
+        ]
+    },
+    {
+        "x": 63,
+        "y": 90,
+        "left": -91.40625,
+        "top": 47.040182,
+        "right": -90.0,
+        "bottom": 46.073231,
+        "countries": [
+            "michigan",
+            "wisconsin"
+        ]
+    },
+    {
+        "x": 64,
+        "y": 90,
+        "left": -90.0,
+        "top": 47.040182,
+        "right": -88.59375,
+        "bottom": 46.073231,
+        "countries": [
+            "michigan",
+            "wisconsin"
+        ]
+    },
+    {
+        "x": 64,
+        "y": 91,
+        "left": -90.0,
+        "top": 46.073231,
+        "right": -88.59375,
+        "bottom": 45.089036,
+        "countries": [
+            "michigan",
+            "wisconsin"
+        ]
+    },
+    {
+        "x": 65,
+        "y": 91,
+        "left": -88.59375,
+        "top": 46.073231,
+        "right": -87.1875,
+        "bottom": 45.089036,
+        "countries": [
+            "michigan",
+            "wisconsin"
+        ]
+    },
+    {
+        "x": 66,
+        "y": 91,
+        "left": -87.1875,
+        "top": 46.073231,
+        "right": -85.78125,
+        "bottom": 45.089036,
+        "countries": [
+            "michigan",
+            "wisconsin"
+        ]
+    },
+    {
+        "x": 66,
+        "y": 92,
+        "left": -87.1875,
+        "top": 45.089036,
+        "right": -85.78125,
+        "bottom": 44.087585,
+        "countries": [
+            "michigan",
+            "wisconsin"
+        ]
+    },
+    {
+        "x": 63,
+        "y": 89,
+        "left": -91.40625,
+        "top": 47.989922,
+        "right": -90.0,
+        "bottom": 47.040182,
+        "countries": [
+            "wisconsin",
+            "minnesota"
+        ]
+    },
+    {
+        "x": 62,
+        "y": 90,
+        "left": -92.8125,
+        "top": 47.040182,
+        "right": -91.40625,
+        "bottom": 46.073231,
+        "countries": [
+            "wisconsin",
+            "minnesota"
+        ]
+    },
+    {
+        "x": 61,
+        "y": 91,
+        "left": -94.21875,
+        "top": 46.073231,
+        "right": -92.8125,
+        "bottom": 45.089036,
+        "countries": [
+            "wisconsin",
+            "minnesota"
+        ]
+    },
+    {
+        "x": 62,
+        "y": 91,
+        "left": -92.8125,
+        "top": 46.073231,
+        "right": -91.40625,
+        "bottom": 45.089036,
+        "countries": [
+            "wisconsin",
+            "minnesota"
+        ]
+    },
+    {
+        "x": 62,
+        "y": 92,
+        "left": -92.8125,
+        "top": 45.089036,
+        "right": -91.40625,
+        "bottom": 44.087585,
+        "countries": [
+            "wisconsin",
+            "minnesota"
+        ]
+    },
+    {
+        "x": 63,
+        "y": 91,
+        "left": -91.40625,
+        "top": 46.073231,
+        "right": -90.0,
+        "bottom": 45.089036,
+        "countries": [
+            "wisconsin"
+        ]
+    },
+    {
+        "x": 63,
+        "y": 92,
+        "left": -91.40625,
+        "top": 45.089036,
+        "right": -90.0,
+        "bottom": 44.087585,
+        "countries": [
+            "wisconsin"
+        ]
+    },
+    {
+        "x": 64,
+        "y": 92,
+        "left": -90.0,
+        "top": 45.089036,
+        "right": -88.59375,
+        "bottom": 44.087585,
+        "countries": [
+            "wisconsin"
+        ]
+    },
+    {
+        "x": 65,
+        "y": 92,
+        "left": -88.59375,
+        "top": 45.089036,
+        "right": -87.1875,
+        "bottom": 44.087585,
+        "countries": [
+            "wisconsin"
+        ]
+    },
+    {
+        "x": 64,
+        "y": 93,
+        "left": -90.0,
+        "top": 44.087585,
+        "right": -88.59375,
+        "bottom": 43.068888,
+        "countries": [
+            "wisconsin"
+        ]
+    },
+    {
+        "x": 65,
+        "y": 93,
+        "left": -88.59375,
+        "top": 44.087585,
+        "right": -87.1875,
+        "bottom": 43.068888,
+        "countries": [
+            "wisconsin"
+        ]
+    }
+]

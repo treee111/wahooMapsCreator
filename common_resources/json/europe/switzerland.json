@@ -1,0 +1,129 @@
+[
+    {
+        "x": 134,
+        "y": 89,
+        "left": 8.4375,
+        "top": 47.989922,
+        "right": 9.84375,
+        "bottom": 47.040182,
+        "countries": [
+            "liechtenstein",
+            "germany",
+            "austria",
+            "switzerland"
+        ]
+    },
+    {
+        "x": 134,
+        "y": 90,
+        "left": 8.4375,
+        "top": 47.040182,
+        "right": 9.84375,
+        "bottom": 46.073231,
+        "countries": [
+            "italy",
+            "switzerland",
+            "austria"
+        ]
+    },
+    {
+        "x": 135,
+        "y": 90,
+        "left": 9.84375,
+        "top": 47.040182,
+        "right": 11.25,
+        "bottom": 46.073231,
+        "countries": [
+            "italy",
+            "switzerland",
+            "austria"
+        ]
+    },
+    {
+        "x": 132,
+        "y": 91,
+        "left": 5.625,
+        "top": 46.073231,
+        "right": 7.03125,
+        "bottom": 45.089036,
+        "countries": [
+            "france",
+            "switzerland",
+            "italy"
+        ]
+    },
+    {
+        "x": 133,
+        "y": 91,
+        "left": 7.03125,
+        "top": 46.073231,
+        "right": 8.4375,
+        "bottom": 45.089036,
+        "countries": [
+            "france",
+            "switzerland",
+            "italy"
+        ]
+    },
+    {
+        "x": 132,
+        "y": 90,
+        "left": 5.625,
+        "top": 47.040182,
+        "right": 7.03125,
+        "bottom": 46.073231,
+        "countries": [
+            "france",
+            "switzerland"
+        ]
+    },
+    {
+        "x": 132,
+        "y": 89,
+        "left": 5.625,
+        "top": 47.989922,
+        "right": 7.03125,
+        "bottom": 47.040182,
+        "countries": [
+            "france",
+            "switzerland"
+        ]
+    },
+    {
+        "x": 133,
+        "y": 89,
+        "left": 7.03125,
+        "top": 47.989922,
+        "right": 8.4375,
+        "bottom": 47.040182,
+        "countries": [
+            "france",
+            "germany",
+            "switzerland"
+        ]
+    },
+    {
+        "x": 133,
+        "y": 90,
+        "left": 7.03125,
+        "top": 47.040182,
+        "right": 8.4375,
+        "bottom": 46.073231,
+        "countries": [
+            "switzerland",
+            "italy"
+        ]
+    },
+    {
+        "x": 134,
+        "y": 91,
+        "left": 8.4375,
+        "top": 46.073231,
+        "right": 9.84375,
+        "bottom": 45.089036,
+        "countries": [
+            "switzerland",
+            "italy"
+        ]
+    }
+]

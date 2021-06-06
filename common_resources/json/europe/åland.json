@@ -1,0 +1,73 @@
+[
+    {
+        "x": 142,
+        "y": 73,
+        "left": 19.6875,
+        "top": 60.930432,
+        "right": 21.09375,
+        "bottom": 60.239811,
+        "countries": [
+            "\u00e5land",
+            "finland"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 73,
+        "left": 21.09375,
+        "top": 60.930432,
+        "right": 22.5,
+        "bottom": 60.239811,
+        "countries": [
+            "\u00e5land",
+            "finland"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 74,
+        "left": 21.09375,
+        "top": 60.239811,
+        "right": 22.5,
+        "bottom": 59.534318,
+        "countries": [
+            "\u00e5land",
+            "finland"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 73,
+        "left": 18.28125,
+        "top": 60.930432,
+        "right": 19.6875,
+        "bottom": 60.239811,
+        "countries": [
+            "\u00e5land",
+            "sweden"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 74,
+        "left": 18.28125,
+        "top": 60.239811,
+        "right": 19.6875,
+        "bottom": 59.534318,
+        "countries": [
+            "\u00e5land",
+            "sweden"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 74,
+        "left": 19.6875,
+        "top": 60.239811,
+        "right": 21.09375,
+        "bottom": 59.534318,
+        "countries": [
+            "\u00e5land"
+        ]
+    }
+]

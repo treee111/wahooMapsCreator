@@ -1,0 +1,52 @@
+[
+    {
+        "x": 162,
+        "y": 105,
+        "left": 47.8125,
+        "top": 30.751278,
+        "right": 49.21875,
+        "bottom": 29.53523,
+        "countries": [
+            "iran",
+            "iraq",
+            "kuwait"
+        ]
+    },
+    {
+        "x": 161,
+        "y": 105,
+        "left": 46.40625,
+        "top": 30.751278,
+        "right": 47.8125,
+        "bottom": 29.53523,
+        "countries": [
+            "iraq",
+            "kuwait"
+        ]
+    },
+    {
+        "x": 161,
+        "y": 106,
+        "left": 46.40625,
+        "top": 29.53523,
+        "right": 47.8125,
+        "bottom": 28.304381,
+        "countries": [
+            "saudi_arabia",
+            "iraq",
+            "kuwait"
+        ]
+    },
+    {
+        "x": 162,
+        "y": 106,
+        "left": 47.8125,
+        "top": 29.53523,
+        "right": 49.21875,
+        "bottom": 28.304381,
+        "countries": [
+            "saudi_arabia",
+            "kuwait"
+        ]
+    }
+]

@@ -1,0 +1,5517 @@
+[
+    {
+        "x": 228,
+        "y": 134,
+        "left": 140.625,
+        "top": -8.407168,
+        "right": 142.03125,
+        "bottom": -9.795678,
+        "countries": [
+            "indonesia",
+            "papua_new_guinea",
+            "australia"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 136,
+        "left": 122.34375,
+        "top": -11.178402,
+        "right": 123.75,
+        "bottom": -12.554564,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 229,
+        "y": 134,
+        "left": 142.03125,
+        "top": -8.407168,
+        "right": 143.4375,
+        "bottom": -9.795678,
+        "countries": [
+            "papua_new_guinea",
+            "australia"
+        ]
+    },
+    {
+        "x": 230,
+        "y": 134,
+        "left": 143.4375,
+        "top": -8.407168,
+        "right": 144.84375,
+        "bottom": -9.795678,
+        "countries": [
+            "papua_new_guinea",
+            "australia"
+        ]
+    },
+    {
+        "x": 220,
+        "y": 135,
+        "left": 129.375,
+        "top": -9.795678,
+        "right": 130.78125,
+        "bottom": -11.178402,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 221,
+        "y": 135,
+        "left": 130.78125,
+        "top": -9.795678,
+        "right": 132.1875,
+        "bottom": -11.178402,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 222,
+        "y": 135,
+        "left": 132.1875,
+        "top": -9.795678,
+        "right": 133.59375,
+        "bottom": -11.178402,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 225,
+        "y": 135,
+        "left": 136.40625,
+        "top": -9.795678,
+        "right": 137.8125,
+        "bottom": -11.178402,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 229,
+        "y": 135,
+        "left": 142.03125,
+        "top": -9.795678,
+        "right": 143.4375,
+        "bottom": -11.178402,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 230,
+        "y": 135,
+        "left": 143.4375,
+        "top": -9.795678,
+        "right": 144.84375,
+        "bottom": -11.178402,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 220,
+        "y": 136,
+        "left": 129.375,
+        "top": -11.178402,
+        "right": 130.78125,
+        "bottom": -12.554564,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 221,
+        "y": 136,
+        "left": 130.78125,
+        "top": -11.178402,
+        "right": 132.1875,
+        "bottom": -12.554564,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 222,
+        "y": 136,
+        "left": 132.1875,
+        "top": -11.178402,
+        "right": 133.59375,
+        "bottom": -12.554564,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 223,
+        "y": 136,
+        "left": 133.59375,
+        "top": -11.178402,
+        "right": 135.0,
+        "bottom": -12.554564,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 224,
+        "y": 136,
+        "left": 135.0,
+        "top": -11.178402,
+        "right": 136.40625,
+        "bottom": -12.554564,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 225,
+        "y": 136,
+        "left": 136.40625,
+        "top": -11.178402,
+        "right": 137.8125,
+        "bottom": -12.554564,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 228,
+        "y": 136,
+        "left": 140.625,
+        "top": -11.178402,
+        "right": 142.03125,
+        "bottom": -12.554564,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 229,
+        "y": 136,
+        "left": 142.03125,
+        "top": -11.178402,
+        "right": 143.4375,
+        "bottom": -12.554564,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 217,
+        "y": 137,
+        "left": 125.15625,
+        "top": -12.554564,
+        "right": 126.5625,
+        "bottom": -13.923404,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 218,
+        "y": 137,
+        "left": 126.5625,
+        "top": -12.554564,
+        "right": 127.96875,
+        "bottom": -13.923404,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 220,
+        "y": 137,
+        "left": 129.375,
+        "top": -12.554564,
+        "right": 130.78125,
+        "bottom": -13.923404,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 221,
+        "y": 137,
+        "left": 130.78125,
+        "top": -12.554564,
+        "right": 132.1875,
+        "bottom": -13.923404,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 222,
+        "y": 137,
+        "left": 132.1875,
+        "top": -12.554564,
+        "right": 133.59375,
+        "bottom": -13.923404,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 223,
+        "y": 137,
+        "left": 133.59375,
+        "top": -12.554564,
+        "right": 135.0,
+        "bottom": -13.923404,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 224,
+        "y": 137,
+        "left": 135.0,
+        "top": -12.554564,
+        "right": 136.40625,
+        "bottom": -13.923404,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 225,
+        "y": 137,
+        "left": 136.40625,
+        "top": -12.554564,
+        "right": 137.8125,
+        "bottom": -13.923404,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 228,
+        "y": 137,
+        "left": 140.625,
+        "top": -12.554564,
+        "right": 142.03125,
+        "bottom": -13.923404,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 229,
+        "y": 137,
+        "left": 142.03125,
+        "top": -12.554564,
+        "right": 143.4375,
+        "bottom": -13.923404,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 230,
+        "y": 137,
+        "left": 143.4375,
+        "top": -12.554564,
+        "right": 144.84375,
+        "bottom": -13.923404,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 138,
+        "left": 122.34375,
+        "top": -13.923404,
+        "right": 123.75,
+        "bottom": -15.284185,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 216,
+        "y": 138,
+        "left": 123.75,
+        "top": -13.923404,
+        "right": 125.15625,
+        "bottom": -15.284185,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 217,
+        "y": 138,
+        "left": 125.15625,
+        "top": -13.923404,
+        "right": 126.5625,
+        "bottom": -15.284185,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 218,
+        "y": 138,
+        "left": 126.5625,
+        "top": -13.923404,
+        "right": 127.96875,
+        "bottom": -15.284185,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 219,
+        "y": 138,
+        "left": 127.96875,
+        "top": -13.923404,
+        "right": 129.375,
+        "bottom": -15.284185,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 220,
+        "y": 138,
+        "left": 129.375,
+        "top": -13.923404,
+        "right": 130.78125,
+        "bottom": -15.284185,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 221,
+        "y": 138,
+        "left": 130.78125,
+        "top": -13.923404,
+        "right": 132.1875,
+        "bottom": -15.284185,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 222,
+        "y": 138,
+        "left": 132.1875,
+        "top": -13.923404,
+        "right": 133.59375,
+        "bottom": -15.284185,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 223,
+        "y": 138,
+        "left": 133.59375,
+        "top": -13.923404,
+        "right": 135.0,
+        "bottom": -15.284185,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 224,
+        "y": 138,
+        "left": 135.0,
+        "top": -13.923404,
+        "right": 136.40625,
+        "bottom": -15.284185,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 225,
+        "y": 138,
+        "left": 136.40625,
+        "top": -13.923404,
+        "right": 137.8125,
+        "bottom": -15.284185,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 228,
+        "y": 138,
+        "left": 140.625,
+        "top": -13.923404,
+        "right": 142.03125,
+        "bottom": -15.284185,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 229,
+        "y": 138,
+        "left": 142.03125,
+        "top": -13.923404,
+        "right": 143.4375,
+        "bottom": -15.284185,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 230,
+        "y": 138,
+        "left": 143.4375,
+        "top": -13.923404,
+        "right": 144.84375,
+        "bottom": -15.284185,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 231,
+        "y": 138,
+        "left": 144.84375,
+        "top": -13.923404,
+        "right": 146.25,
+        "bottom": -15.284185,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 139,
+        "left": 122.34375,
+        "top": -15.284185,
+        "right": 123.75,
+        "bottom": -16.636192,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 216,
+        "y": 139,
+        "left": 123.75,
+        "top": -15.284185,
+        "right": 125.15625,
+        "bottom": -16.636192,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 217,
+        "y": 139,
+        "left": 125.15625,
+        "top": -15.284185,
+        "right": 126.5625,
+        "bottom": -16.636192,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 218,
+        "y": 139,
+        "left": 126.5625,
+        "top": -15.284185,
+        "right": 127.96875,
+        "bottom": -16.636192,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 219,
+        "y": 139,
+        "left": 127.96875,
+        "top": -15.284185,
+        "right": 129.375,
+        "bottom": -16.636192,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 220,
+        "y": 139,
+        "left": 129.375,
+        "top": -15.284185,
+        "right": 130.78125,
+        "bottom": -16.636192,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 221,
+        "y": 139,
+        "left": 130.78125,
+        "top": -15.284185,
+        "right": 132.1875,
+        "bottom": -16.636192,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 222,
+        "y": 139,
+        "left": 132.1875,
+        "top": -15.284185,
+        "right": 133.59375,
+        "bottom": -16.636192,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 223,
+        "y": 139,
+        "left": 133.59375,
+        "top": -15.284185,
+        "right": 135.0,
+        "bottom": -16.636192,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 224,
+        "y": 139,
+        "left": 135.0,
+        "top": -15.284185,
+        "right": 136.40625,
+        "bottom": -16.636192,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 225,
+        "y": 139,
+        "left": 136.40625,
+        "top": -15.284185,
+        "right": 137.8125,
+        "bottom": -16.636192,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 226,
+        "y": 139,
+        "left": 137.8125,
+        "top": -15.284185,
+        "right": 139.21875,
+        "bottom": -16.636192,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 227,
+        "y": 139,
+        "left": 139.21875,
+        "top": -15.284185,
+        "right": 140.625,
+        "bottom": -16.636192,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 228,
+        "y": 139,
+        "left": 140.625,
+        "top": -15.284185,
+        "right": 142.03125,
+        "bottom": -16.636192,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 229,
+        "y": 139,
+        "left": 142.03125,
+        "top": -15.284185,
+        "right": 143.4375,
+        "bottom": -16.636192,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 230,
+        "y": 139,
+        "left": 143.4375,
+        "top": -15.284185,
+        "right": 144.84375,
+        "bottom": -16.636192,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 231,
+        "y": 139,
+        "left": 144.84375,
+        "top": -15.284185,
+        "right": 146.25,
+        "bottom": -16.636192,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 140,
+        "left": 120.9375,
+        "top": -16.636192,
+        "right": 122.34375,
+        "bottom": -17.978733,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 140,
+        "left": 122.34375,
+        "top": -16.636192,
+        "right": 123.75,
+        "bottom": -17.978733,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 216,
+        "y": 140,
+        "left": 123.75,
+        "top": -16.636192,
+        "right": 125.15625,
+        "bottom": -17.978733,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 217,
+        "y": 140,
+        "left": 125.15625,
+        "top": -16.636192,
+        "right": 126.5625,
+        "bottom": -17.978733,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 218,
+        "y": 140,
+        "left": 126.5625,
+        "top": -16.636192,
+        "right": 127.96875,
+        "bottom": -17.978733,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 219,
+        "y": 140,
+        "left": 127.96875,
+        "top": -16.636192,
+        "right": 129.375,
+        "bottom": -17.978733,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 220,
+        "y": 140,
+        "left": 129.375,
+        "top": -16.636192,
+        "right": 130.78125,
+        "bottom": -17.978733,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 221,
+        "y": 140,
+        "left": 130.78125,
+        "top": -16.636192,
+        "right": 132.1875,
+        "bottom": -17.978733,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 222,
+        "y": 140,
+        "left": 132.1875,
+        "top": -16.636192,
+        "right": 133.59375,
+        "bottom": -17.978733,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 223,
+        "y": 140,
+        "left": 133.59375,
+        "top": -16.636192,
+        "right": 135.0,
+        "bottom": -17.978733,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 224,
+        "y": 140,
+        "left": 135.0,
+        "top": -16.636192,
+        "right": 136.40625,
+        "bottom": -17.978733,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 225,
+        "y": 140,
+        "left": 136.40625,
+        "top": -16.636192,
+        "right": 137.8125,
+        "bottom": -17.978733,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 226,
+        "y": 140,
+        "left": 137.8125,
+        "top": -16.636192,
+        "right": 139.21875,
+        "bottom": -17.978733,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 227,
+        "y": 140,
+        "left": 139.21875,
+        "top": -16.636192,
+        "right": 140.625,
+        "bottom": -17.978733,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 228,
+        "y": 140,
+        "left": 140.625,
+        "top": -16.636192,
+        "right": 142.03125,
+        "bottom": -17.978733,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 229,
+        "y": 140,
+        "left": 142.03125,
+        "top": -16.636192,
+        "right": 143.4375,
+        "bottom": -17.978733,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 230,
+        "y": 140,
+        "left": 143.4375,
+        "top": -16.636192,
+        "right": 144.84375,
+        "bottom": -17.978733,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 231,
+        "y": 140,
+        "left": 144.84375,
+        "top": -16.636192,
+        "right": 146.25,
+        "bottom": -17.978733,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 141,
+        "left": 120.9375,
+        "top": -17.978733,
+        "right": 122.34375,
+        "bottom": -19.311143,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 141,
+        "left": 122.34375,
+        "top": -17.978733,
+        "right": 123.75,
+        "bottom": -19.311143,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 216,
+        "y": 141,
+        "left": 123.75,
+        "top": -17.978733,
+        "right": 125.15625,
+        "bottom": -19.311143,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 217,
+        "y": 141,
+        "left": 125.15625,
+        "top": -17.978733,
+        "right": 126.5625,
+        "bottom": -19.311143,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 218,
+        "y": 141,
+        "left": 126.5625,
+        "top": -17.978733,
+        "right": 127.96875,
+        "bottom": -19.311143,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 219,
+        "y": 141,
+        "left": 127.96875,
+        "top": -17.978733,
+        "right": 129.375,
+        "bottom": -19.311143,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 220,
+        "y": 141,
+        "left": 129.375,
+        "top": -17.978733,
+        "right": 130.78125,
+        "bottom": -19.311143,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 221,
+        "y": 141,
+        "left": 130.78125,
+        "top": -17.978733,
+        "right": 132.1875,
+        "bottom": -19.311143,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 222,
+        "y": 141,
+        "left": 132.1875,
+        "top": -17.978733,
+        "right": 133.59375,
+        "bottom": -19.311143,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 223,
+        "y": 141,
+        "left": 133.59375,
+        "top": -17.978733,
+        "right": 135.0,
+        "bottom": -19.311143,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 224,
+        "y": 141,
+        "left": 135.0,
+        "top": -17.978733,
+        "right": 136.40625,
+        "bottom": -19.311143,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 225,
+        "y": 141,
+        "left": 136.40625,
+        "top": -17.978733,
+        "right": 137.8125,
+        "bottom": -19.311143,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 226,
+        "y": 141,
+        "left": 137.8125,
+        "top": -17.978733,
+        "right": 139.21875,
+        "bottom": -19.311143,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 227,
+        "y": 141,
+        "left": 139.21875,
+        "top": -17.978733,
+        "right": 140.625,
+        "bottom": -19.311143,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 228,
+        "y": 141,
+        "left": 140.625,
+        "top": -17.978733,
+        "right": 142.03125,
+        "bottom": -19.311143,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 229,
+        "y": 141,
+        "left": 142.03125,
+        "top": -17.978733,
+        "right": 143.4375,
+        "bottom": -19.311143,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 230,
+        "y": 141,
+        "left": 143.4375,
+        "top": -17.978733,
+        "right": 144.84375,
+        "bottom": -19.311143,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 231,
+        "y": 141,
+        "left": 144.84375,
+        "top": -17.978733,
+        "right": 146.25,
+        "bottom": -19.311143,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 232,
+        "y": 141,
+        "left": 146.25,
+        "top": -17.978733,
+        "right": 147.65625,
+        "bottom": -19.311143,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 142,
+        "left": 115.3125,
+        "top": -19.311143,
+        "right": 116.71875,
+        "bottom": -20.632784,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 142,
+        "left": 116.71875,
+        "top": -19.311143,
+        "right": 118.125,
+        "bottom": -20.632784,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 142,
+        "left": 118.125,
+        "top": -19.311143,
+        "right": 119.53125,
+        "bottom": -20.632784,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 142,
+        "left": 119.53125,
+        "top": -19.311143,
+        "right": 120.9375,
+        "bottom": -20.632784,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 142,
+        "left": 120.9375,
+        "top": -19.311143,
+        "right": 122.34375,
+        "bottom": -20.632784,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 142,
+        "left": 122.34375,
+        "top": -19.311143,
+        "right": 123.75,
+        "bottom": -20.632784,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 216,
+        "y": 142,
+        "left": 123.75,
+        "top": -19.311143,
+        "right": 125.15625,
+        "bottom": -20.632784,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 217,
+        "y": 142,
+        "left": 125.15625,
+        "top": -19.311143,
+        "right": 126.5625,
+        "bottom": -20.632784,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 218,
+        "y": 142,
+        "left": 126.5625,
+        "top": -19.311143,
+        "right": 127.96875,
+        "bottom": -20.632784,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 219,
+        "y": 142,
+        "left": 127.96875,
+        "top": -19.311143,
+        "right": 129.375,
+        "bottom": -20.632784,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 220,
+        "y": 142,
+        "left": 129.375,
+        "top": -19.311143,
+        "right": 130.78125,
+        "bottom": -20.632784,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 221,
+        "y": 142,
+        "left": 130.78125,
+        "top": -19.311143,
+        "right": 132.1875,
+        "bottom": -20.632784,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 222,
+        "y": 142,
+        "left": 132.1875,
+        "top": -19.311143,
+        "right": 133.59375,
+        "bottom": -20.632784,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 223,
+        "y": 142,
+        "left": 133.59375,
+        "top": -19.311143,
+        "right": 135.0,
+        "bottom": -20.632784,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 224,
+        "y": 142,
+        "left": 135.0,
+        "top": -19.311143,
+        "right": 136.40625,
+        "bottom": -20.632784,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 225,
+        "y": 142,
+        "left": 136.40625,
+        "top": -19.311143,
+        "right": 137.8125,
+        "bottom": -20.632784,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 226,
+        "y": 142,
+        "left": 137.8125,
+        "top": -19.311143,
+        "right": 139.21875,
+        "bottom": -20.632784,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 227,
+        "y": 142,
+        "left": 139.21875,
+        "top": -19.311143,
+        "right": 140.625,
+        "bottom": -20.632784,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 228,
+        "y": 142,
+        "left": 140.625,
+        "top": -19.311143,
+        "right": 142.03125,
+        "bottom": -20.632784,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 229,
+        "y": 142,
+        "left": 142.03125,
+        "top": -19.311143,
+        "right": 143.4375,
+        "bottom": -20.632784,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 230,
+        "y": 142,
+        "left": 143.4375,
+        "top": -19.311143,
+        "right": 144.84375,
+        "bottom": -20.632784,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 231,
+        "y": 142,
+        "left": 144.84375,
+        "top": -19.311143,
+        "right": 146.25,
+        "bottom": -20.632784,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 232,
+        "y": 142,
+        "left": 146.25,
+        "top": -19.311143,
+        "right": 147.65625,
+        "bottom": -20.632784,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 233,
+        "y": 142,
+        "left": 147.65625,
+        "top": -19.311143,
+        "right": 149.0625,
+        "bottom": -20.632784,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 234,
+        "y": 142,
+        "left": 149.0625,
+        "top": -19.311143,
+        "right": 150.46875,
+        "bottom": -20.632784,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 143,
+        "left": 113.90625,
+        "top": -20.632784,
+        "right": 115.3125,
+        "bottom": -21.943046,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 143,
+        "left": 115.3125,
+        "top": -20.632784,
+        "right": 116.71875,
+        "bottom": -21.943046,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 143,
+        "left": 116.71875,
+        "top": -20.632784,
+        "right": 118.125,
+        "bottom": -21.943046,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 143,
+        "left": 118.125,
+        "top": -20.632784,
+        "right": 119.53125,
+        "bottom": -21.943046,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 143,
+        "left": 119.53125,
+        "top": -20.632784,
+        "right": 120.9375,
+        "bottom": -21.943046,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 143,
+        "left": 120.9375,
+        "top": -20.632784,
+        "right": 122.34375,
+        "bottom": -21.943046,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 143,
+        "left": 122.34375,
+        "top": -20.632784,
+        "right": 123.75,
+        "bottom": -21.943046,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 216,
+        "y": 143,
+        "left": 123.75,
+        "top": -20.632784,
+        "right": 125.15625,
+        "bottom": -21.943046,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 217,
+        "y": 143,
+        "left": 125.15625,
+        "top": -20.632784,
+        "right": 126.5625,
+        "bottom": -21.943046,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 218,
+        "y": 143,
+        "left": 126.5625,
+        "top": -20.632784,
+        "right": 127.96875,
+        "bottom": -21.943046,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 219,
+        "y": 143,
+        "left": 127.96875,
+        "top": -20.632784,
+        "right": 129.375,
+        "bottom": -21.943046,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 220,
+        "y": 143,
+        "left": 129.375,
+        "top": -20.632784,
+        "right": 130.78125,
+        "bottom": -21.943046,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 221,
+        "y": 143,
+        "left": 130.78125,
+        "top": -20.632784,
+        "right": 132.1875,
+        "bottom": -21.943046,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 222,
+        "y": 143,
+        "left": 132.1875,
+        "top": -20.632784,
+        "right": 133.59375,
+        "bottom": -21.943046,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 223,
+        "y": 143,
+        "left": 133.59375,
+        "top": -20.632784,
+        "right": 135.0,
+        "bottom": -21.943046,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 224,
+        "y": 143,
+        "left": 135.0,
+        "top": -20.632784,
+        "right": 136.40625,
+        "bottom": -21.943046,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 225,
+        "y": 143,
+        "left": 136.40625,
+        "top": -20.632784,
+        "right": 137.8125,
+        "bottom": -21.943046,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 226,
+        "y": 143,
+        "left": 137.8125,
+        "top": -20.632784,
+        "right": 139.21875,
+        "bottom": -21.943046,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 227,
+        "y": 143,
+        "left": 139.21875,
+        "top": -20.632784,
+        "right": 140.625,
+        "bottom": -21.943046,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 228,
+        "y": 143,
+        "left": 140.625,
+        "top": -20.632784,
+        "right": 142.03125,
+        "bottom": -21.943046,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 229,
+        "y": 143,
+        "left": 142.03125,
+        "top": -20.632784,
+        "right": 143.4375,
+        "bottom": -21.943046,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 230,
+        "y": 143,
+        "left": 143.4375,
+        "top": -20.632784,
+        "right": 144.84375,
+        "bottom": -21.943046,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 231,
+        "y": 143,
+        "left": 144.84375,
+        "top": -20.632784,
+        "right": 146.25,
+        "bottom": -21.943046,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 232,
+        "y": 143,
+        "left": 146.25,
+        "top": -20.632784,
+        "right": 147.65625,
+        "bottom": -21.943046,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 233,
+        "y": 143,
+        "left": 147.65625,
+        "top": -20.632784,
+        "right": 149.0625,
+        "bottom": -21.943046,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 234,
+        "y": 143,
+        "left": 149.0625,
+        "top": -20.632784,
+        "right": 150.46875,
+        "bottom": -21.943046,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 208,
+        "y": 144,
+        "left": 112.5,
+        "top": -21.943046,
+        "right": 113.90625,
+        "bottom": -23.241346,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 144,
+        "left": 113.90625,
+        "top": -21.943046,
+        "right": 115.3125,
+        "bottom": -23.241346,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 144,
+        "left": 115.3125,
+        "top": -21.943046,
+        "right": 116.71875,
+        "bottom": -23.241346,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 144,
+        "left": 116.71875,
+        "top": -21.943046,
+        "right": 118.125,
+        "bottom": -23.241346,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 144,
+        "left": 118.125,
+        "top": -21.943046,
+        "right": 119.53125,
+        "bottom": -23.241346,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 144,
+        "left": 119.53125,
+        "top": -21.943046,
+        "right": 120.9375,
+        "bottom": -23.241346,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 144,
+        "left": 120.9375,
+        "top": -21.943046,
+        "right": 122.34375,
+        "bottom": -23.241346,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 144,
+        "left": 122.34375,
+        "top": -21.943046,
+        "right": 123.75,
+        "bottom": -23.241346,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 216,
+        "y": 144,
+        "left": 123.75,
+        "top": -21.943046,
+        "right": 125.15625,
+        "bottom": -23.241346,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 217,
+        "y": 144,
+        "left": 125.15625,
+        "top": -21.943046,
+        "right": 126.5625,
+        "bottom": -23.241346,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 218,
+        "y": 144,
+        "left": 126.5625,
+        "top": -21.943046,
+        "right": 127.96875,
+        "bottom": -23.241346,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 219,
+        "y": 144,
+        "left": 127.96875,
+        "top": -21.943046,
+        "right": 129.375,
+        "bottom": -23.241346,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 220,
+        "y": 144,
+        "left": 129.375,
+        "top": -21.943046,
+        "right": 130.78125,
+        "bottom": -23.241346,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 221,
+        "y": 144,
+        "left": 130.78125,
+        "top": -21.943046,
+        "right": 132.1875,
+        "bottom": -23.241346,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 222,
+        "y": 144,
+        "left": 132.1875,
+        "top": -21.943046,
+        "right": 133.59375,
+        "bottom": -23.241346,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 223,
+        "y": 144,
+        "left": 133.59375,
+        "top": -21.943046,
+        "right": 135.0,
+        "bottom": -23.241346,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 224,
+        "y": 144,
+        "left": 135.0,
+        "top": -21.943046,
+        "right": 136.40625,
+        "bottom": -23.241346,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 225,
+        "y": 144,
+        "left": 136.40625,
+        "top": -21.943046,
+        "right": 137.8125,
+        "bottom": -23.241346,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 226,
+        "y": 144,
+        "left": 137.8125,
+        "top": -21.943046,
+        "right": 139.21875,
+        "bottom": -23.241346,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 227,
+        "y": 144,
+        "left": 139.21875,
+        "top": -21.943046,
+        "right": 140.625,
+        "bottom": -23.241346,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 228,
+        "y": 144,
+        "left": 140.625,
+        "top": -21.943046,
+        "right": 142.03125,
+        "bottom": -23.241346,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 229,
+        "y": 144,
+        "left": 142.03125,
+        "top": -21.943046,
+        "right": 143.4375,
+        "bottom": -23.241346,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 230,
+        "y": 144,
+        "left": 143.4375,
+        "top": -21.943046,
+        "right": 144.84375,
+        "bottom": -23.241346,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 231,
+        "y": 144,
+        "left": 144.84375,
+        "top": -21.943046,
+        "right": 146.25,
+        "bottom": -23.241346,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 232,
+        "y": 144,
+        "left": 146.25,
+        "top": -21.943046,
+        "right": 147.65625,
+        "bottom": -23.241346,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 233,
+        "y": 144,
+        "left": 147.65625,
+        "top": -21.943046,
+        "right": 149.0625,
+        "bottom": -23.241346,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 234,
+        "y": 144,
+        "left": 149.0625,
+        "top": -21.943046,
+        "right": 150.46875,
+        "bottom": -23.241346,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 235,
+        "y": 144,
+        "left": 150.46875,
+        "top": -21.943046,
+        "right": 151.875,
+        "bottom": -23.241346,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 208,
+        "y": 145,
+        "left": 112.5,
+        "top": -23.241346,
+        "right": 113.90625,
+        "bottom": -24.527135,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 145,
+        "left": 113.90625,
+        "top": -23.241346,
+        "right": 115.3125,
+        "bottom": -24.527135,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 145,
+        "left": 115.3125,
+        "top": -23.241346,
+        "right": 116.71875,
+        "bottom": -24.527135,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 145,
+        "left": 116.71875,
+        "top": -23.241346,
+        "right": 118.125,
+        "bottom": -24.527135,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 145,
+        "left": 118.125,
+        "top": -23.241346,
+        "right": 119.53125,
+        "bottom": -24.527135,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 145,
+        "left": 119.53125,
+        "top": -23.241346,
+        "right": 120.9375,
+        "bottom": -24.527135,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 145,
+        "left": 120.9375,
+        "top": -23.241346,
+        "right": 122.34375,
+        "bottom": -24.527135,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 145,
+        "left": 122.34375,
+        "top": -23.241346,
+        "right": 123.75,
+        "bottom": -24.527135,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 216,
+        "y": 145,
+        "left": 123.75,
+        "top": -23.241346,
+        "right": 125.15625,
+        "bottom": -24.527135,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 217,
+        "y": 145,
+        "left": 125.15625,
+        "top": -23.241346,
+        "right": 126.5625,
+        "bottom": -24.527135,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 218,
+        "y": 145,
+        "left": 126.5625,
+        "top": -23.241346,
+        "right": 127.96875,
+        "bottom": -24.527135,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 219,
+        "y": 145,
+        "left": 127.96875,
+        "top": -23.241346,
+        "right": 129.375,
+        "bottom": -24.527135,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 220,
+        "y": 145,
+        "left": 129.375,
+        "top": -23.241346,
+        "right": 130.78125,
+        "bottom": -24.527135,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 221,
+        "y": 145,
+        "left": 130.78125,
+        "top": -23.241346,
+        "right": 132.1875,
+        "bottom": -24.527135,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 222,
+        "y": 145,
+        "left": 132.1875,
+        "top": -23.241346,
+        "right": 133.59375,
+        "bottom": -24.527135,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 223,
+        "y": 145,
+        "left": 133.59375,
+        "top": -23.241346,
+        "right": 135.0,
+        "bottom": -24.527135,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 224,
+        "y": 145,
+        "left": 135.0,
+        "top": -23.241346,
+        "right": 136.40625,
+        "bottom": -24.527135,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 225,
+        "y": 145,
+        "left": 136.40625,
+        "top": -23.241346,
+        "right": 137.8125,
+        "bottom": -24.527135,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 226,
+        "y": 145,
+        "left": 137.8125,
+        "top": -23.241346,
+        "right": 139.21875,
+        "bottom": -24.527135,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 227,
+        "y": 145,
+        "left": 139.21875,
+        "top": -23.241346,
+        "right": 140.625,
+        "bottom": -24.527135,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 228,
+        "y": 145,
+        "left": 140.625,
+        "top": -23.241346,
+        "right": 142.03125,
+        "bottom": -24.527135,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 229,
+        "y": 145,
+        "left": 142.03125,
+        "top": -23.241346,
+        "right": 143.4375,
+        "bottom": -24.527135,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 230,
+        "y": 145,
+        "left": 143.4375,
+        "top": -23.241346,
+        "right": 144.84375,
+        "bottom": -24.527135,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 231,
+        "y": 145,
+        "left": 144.84375,
+        "top": -23.241346,
+        "right": 146.25,
+        "bottom": -24.527135,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 232,
+        "y": 145,
+        "left": 146.25,
+        "top": -23.241346,
+        "right": 147.65625,
+        "bottom": -24.527135,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 233,
+        "y": 145,
+        "left": 147.65625,
+        "top": -23.241346,
+        "right": 149.0625,
+        "bottom": -24.527135,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 234,
+        "y": 145,
+        "left": 149.0625,
+        "top": -23.241346,
+        "right": 150.46875,
+        "bottom": -24.527135,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 235,
+        "y": 145,
+        "left": 150.46875,
+        "top": -23.241346,
+        "right": 151.875,
+        "bottom": -24.527135,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 236,
+        "y": 145,
+        "left": 151.875,
+        "top": -23.241346,
+        "right": 153.28125,
+        "bottom": -24.527135,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 208,
+        "y": 146,
+        "left": 112.5,
+        "top": -24.527135,
+        "right": 113.90625,
+        "bottom": -25.799891,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 146,
+        "left": 113.90625,
+        "top": -24.527135,
+        "right": 115.3125,
+        "bottom": -25.799891,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 146,
+        "left": 115.3125,
+        "top": -24.527135,
+        "right": 116.71875,
+        "bottom": -25.799891,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 146,
+        "left": 116.71875,
+        "top": -24.527135,
+        "right": 118.125,
+        "bottom": -25.799891,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 146,
+        "left": 118.125,
+        "top": -24.527135,
+        "right": 119.53125,
+        "bottom": -25.799891,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 146,
+        "left": 119.53125,
+        "top": -24.527135,
+        "right": 120.9375,
+        "bottom": -25.799891,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 146,
+        "left": 120.9375,
+        "top": -24.527135,
+        "right": 122.34375,
+        "bottom": -25.799891,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 146,
+        "left": 122.34375,
+        "top": -24.527135,
+        "right": 123.75,
+        "bottom": -25.799891,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 216,
+        "y": 146,
+        "left": 123.75,
+        "top": -24.527135,
+        "right": 125.15625,
+        "bottom": -25.799891,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 217,
+        "y": 146,
+        "left": 125.15625,
+        "top": -24.527135,
+        "right": 126.5625,
+        "bottom": -25.799891,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 218,
+        "y": 146,
+        "left": 126.5625,
+        "top": -24.527135,
+        "right": 127.96875,
+        "bottom": -25.799891,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 219,
+        "y": 146,
+        "left": 127.96875,
+        "top": -24.527135,
+        "right": 129.375,
+        "bottom": -25.799891,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 220,
+        "y": 146,
+        "left": 129.375,
+        "top": -24.527135,
+        "right": 130.78125,
+        "bottom": -25.799891,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 221,
+        "y": 146,
+        "left": 130.78125,
+        "top": -24.527135,
+        "right": 132.1875,
+        "bottom": -25.799891,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 222,
+        "y": 146,
+        "left": 132.1875,
+        "top": -24.527135,
+        "right": 133.59375,
+        "bottom": -25.799891,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 223,
+        "y": 146,
+        "left": 133.59375,
+        "top": -24.527135,
+        "right": 135.0,
+        "bottom": -25.799891,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 224,
+        "y": 146,
+        "left": 135.0,
+        "top": -24.527135,
+        "right": 136.40625,
+        "bottom": -25.799891,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 225,
+        "y": 146,
+        "left": 136.40625,
+        "top": -24.527135,
+        "right": 137.8125,
+        "bottom": -25.799891,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 226,
+        "y": 146,
+        "left": 137.8125,
+        "top": -24.527135,
+        "right": 139.21875,
+        "bottom": -25.799891,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 227,
+        "y": 146,
+        "left": 139.21875,
+        "top": -24.527135,
+        "right": 140.625,
+        "bottom": -25.799891,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 228,
+        "y": 146,
+        "left": 140.625,
+        "top": -24.527135,
+        "right": 142.03125,
+        "bottom": -25.799891,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 229,
+        "y": 146,
+        "left": 142.03125,
+        "top": -24.527135,
+        "right": 143.4375,
+        "bottom": -25.799891,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 230,
+        "y": 146,
+        "left": 143.4375,
+        "top": -24.527135,
+        "right": 144.84375,
+        "bottom": -25.799891,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 231,
+        "y": 146,
+        "left": 144.84375,
+        "top": -24.527135,
+        "right": 146.25,
+        "bottom": -25.799891,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 232,
+        "y": 146,
+        "left": 146.25,
+        "top": -24.527135,
+        "right": 147.65625,
+        "bottom": -25.799891,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 233,
+        "y": 146,
+        "left": 147.65625,
+        "top": -24.527135,
+        "right": 149.0625,
+        "bottom": -25.799891,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 234,
+        "y": 146,
+        "left": 149.0625,
+        "top": -24.527135,
+        "right": 150.46875,
+        "bottom": -25.799891,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 235,
+        "y": 146,
+        "left": 150.46875,
+        "top": -24.527135,
+        "right": 151.875,
+        "bottom": -25.799891,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 236,
+        "y": 146,
+        "left": 151.875,
+        "top": -24.527135,
+        "right": 153.28125,
+        "bottom": -25.799891,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 237,
+        "y": 146,
+        "left": 153.28125,
+        "top": -24.527135,
+        "right": 154.6875,
+        "bottom": -25.799891,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 208,
+        "y": 147,
+        "left": 112.5,
+        "top": -25.799891,
+        "right": 113.90625,
+        "bottom": -27.059126,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 147,
+        "left": 113.90625,
+        "top": -25.799891,
+        "right": 115.3125,
+        "bottom": -27.059126,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 147,
+        "left": 115.3125,
+        "top": -25.799891,
+        "right": 116.71875,
+        "bottom": -27.059126,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 147,
+        "left": 116.71875,
+        "top": -25.799891,
+        "right": 118.125,
+        "bottom": -27.059126,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 147,
+        "left": 118.125,
+        "top": -25.799891,
+        "right": 119.53125,
+        "bottom": -27.059126,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 147,
+        "left": 119.53125,
+        "top": -25.799891,
+        "right": 120.9375,
+        "bottom": -27.059126,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 147,
+        "left": 120.9375,
+        "top": -25.799891,
+        "right": 122.34375,
+        "bottom": -27.059126,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 147,
+        "left": 122.34375,
+        "top": -25.799891,
+        "right": 123.75,
+        "bottom": -27.059126,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 216,
+        "y": 147,
+        "left": 123.75,
+        "top": -25.799891,
+        "right": 125.15625,
+        "bottom": -27.059126,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 217,
+        "y": 147,
+        "left": 125.15625,
+        "top": -25.799891,
+        "right": 126.5625,
+        "bottom": -27.059126,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 218,
+        "y": 147,
+        "left": 126.5625,
+        "top": -25.799891,
+        "right": 127.96875,
+        "bottom": -27.059126,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 219,
+        "y": 147,
+        "left": 127.96875,
+        "top": -25.799891,
+        "right": 129.375,
+        "bottom": -27.059126,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 220,
+        "y": 147,
+        "left": 129.375,
+        "top": -25.799891,
+        "right": 130.78125,
+        "bottom": -27.059126,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 221,
+        "y": 147,
+        "left": 130.78125,
+        "top": -25.799891,
+        "right": 132.1875,
+        "bottom": -27.059126,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 222,
+        "y": 147,
+        "left": 132.1875,
+        "top": -25.799891,
+        "right": 133.59375,
+        "bottom": -27.059126,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 223,
+        "y": 147,
+        "left": 133.59375,
+        "top": -25.799891,
+        "right": 135.0,
+        "bottom": -27.059126,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 224,
+        "y": 147,
+        "left": 135.0,
+        "top": -25.799891,
+        "right": 136.40625,
+        "bottom": -27.059126,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 225,
+        "y": 147,
+        "left": 136.40625,
+        "top": -25.799891,
+        "right": 137.8125,
+        "bottom": -27.059126,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 226,
+        "y": 147,
+        "left": 137.8125,
+        "top": -25.799891,
+        "right": 139.21875,
+        "bottom": -27.059126,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 227,
+        "y": 147,
+        "left": 139.21875,
+        "top": -25.799891,
+        "right": 140.625,
+        "bottom": -27.059126,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 228,
+        "y": 147,
+        "left": 140.625,
+        "top": -25.799891,
+        "right": 142.03125,
+        "bottom": -27.059126,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 229,
+        "y": 147,
+        "left": 142.03125,
+        "top": -25.799891,
+        "right": 143.4375,
+        "bottom": -27.059126,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 230,
+        "y": 147,
+        "left": 143.4375,
+        "top": -25.799891,
+        "right": 144.84375,
+        "bottom": -27.059126,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 231,
+        "y": 147,
+        "left": 144.84375,
+        "top": -25.799891,
+        "right": 146.25,
+        "bottom": -27.059126,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 232,
+        "y": 147,
+        "left": 146.25,
+        "top": -25.799891,
+        "right": 147.65625,
+        "bottom": -27.059126,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 233,
+        "y": 147,
+        "left": 147.65625,
+        "top": -25.799891,
+        "right": 149.0625,
+        "bottom": -27.059126,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 234,
+        "y": 147,
+        "left": 149.0625,
+        "top": -25.799891,
+        "right": 150.46875,
+        "bottom": -27.059126,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 235,
+        "y": 147,
+        "left": 150.46875,
+        "top": -25.799891,
+        "right": 151.875,
+        "bottom": -27.059126,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 236,
+        "y": 147,
+        "left": 151.875,
+        "top": -25.799891,
+        "right": 153.28125,
+        "bottom": -27.059126,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 237,
+        "y": 147,
+        "left": 153.28125,
+        "top": -25.799891,
+        "right": 154.6875,
+        "bottom": -27.059126,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 208,
+        "y": 148,
+        "left": 112.5,
+        "top": -27.059126,
+        "right": 113.90625,
+        "bottom": -28.304381,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 148,
+        "left": 113.90625,
+        "top": -27.059126,
+        "right": 115.3125,
+        "bottom": -28.304381,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 148,
+        "left": 115.3125,
+        "top": -27.059126,
+        "right": 116.71875,
+        "bottom": -28.304381,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 148,
+        "left": 116.71875,
+        "top": -27.059126,
+        "right": 118.125,
+        "bottom": -28.304381,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 148,
+        "left": 118.125,
+        "top": -27.059126,
+        "right": 119.53125,
+        "bottom": -28.304381,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 148,
+        "left": 119.53125,
+        "top": -27.059126,
+        "right": 120.9375,
+        "bottom": -28.304381,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 148,
+        "left": 120.9375,
+        "top": -27.059126,
+        "right": 122.34375,
+        "bottom": -28.304381,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 148,
+        "left": 122.34375,
+        "top": -27.059126,
+        "right": 123.75,
+        "bottom": -28.304381,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 216,
+        "y": 148,
+        "left": 123.75,
+        "top": -27.059126,
+        "right": 125.15625,
+        "bottom": -28.304381,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 217,
+        "y": 148,
+        "left": 125.15625,
+        "top": -27.059126,
+        "right": 126.5625,
+        "bottom": -28.304381,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 218,
+        "y": 148,
+        "left": 126.5625,
+        "top": -27.059126,
+        "right": 127.96875,
+        "bottom": -28.304381,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 219,
+        "y": 148,
+        "left": 127.96875,
+        "top": -27.059126,
+        "right": 129.375,
+        "bottom": -28.304381,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 220,
+        "y": 148,
+        "left": 129.375,
+        "top": -27.059126,
+        "right": 130.78125,
+        "bottom": -28.304381,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 221,
+        "y": 148,
+        "left": 130.78125,
+        "top": -27.059126,
+        "right": 132.1875,
+        "bottom": -28.304381,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 222,
+        "y": 148,
+        "left": 132.1875,
+        "top": -27.059126,
+        "right": 133.59375,
+        "bottom": -28.304381,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 223,
+        "y": 148,
+        "left": 133.59375,
+        "top": -27.059126,
+        "right": 135.0,
+        "bottom": -28.304381,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 224,
+        "y": 148,
+        "left": 135.0,
+        "top": -27.059126,
+        "right": 136.40625,
+        "bottom": -28.304381,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 225,
+        "y": 148,
+        "left": 136.40625,
+        "top": -27.059126,
+        "right": 137.8125,
+        "bottom": -28.304381,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 226,
+        "y": 148,
+        "left": 137.8125,
+        "top": -27.059126,
+        "right": 139.21875,
+        "bottom": -28.304381,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 227,
+        "y": 148,
+        "left": 139.21875,
+        "top": -27.059126,
+        "right": 140.625,
+        "bottom": -28.304381,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 228,
+        "y": 148,
+        "left": 140.625,
+        "top": -27.059126,
+        "right": 142.03125,
+        "bottom": -28.304381,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 229,
+        "y": 148,
+        "left": 142.03125,
+        "top": -27.059126,
+        "right": 143.4375,
+        "bottom": -28.304381,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 230,
+        "y": 148,
+        "left": 143.4375,
+        "top": -27.059126,
+        "right": 144.84375,
+        "bottom": -28.304381,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 231,
+        "y": 148,
+        "left": 144.84375,
+        "top": -27.059126,
+        "right": 146.25,
+        "bottom": -28.304381,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 232,
+        "y": 148,
+        "left": 146.25,
+        "top": -27.059126,
+        "right": 147.65625,
+        "bottom": -28.304381,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 233,
+        "y": 148,
+        "left": 147.65625,
+        "top": -27.059126,
+        "right": 149.0625,
+        "bottom": -28.304381,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 234,
+        "y": 148,
+        "left": 149.0625,
+        "top": -27.059126,
+        "right": 150.46875,
+        "bottom": -28.304381,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 235,
+        "y": 148,
+        "left": 150.46875,
+        "top": -27.059126,
+        "right": 151.875,
+        "bottom": -28.304381,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 236,
+        "y": 148,
+        "left": 151.875,
+        "top": -27.059126,
+        "right": 153.28125,
+        "bottom": -28.304381,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 237,
+        "y": 148,
+        "left": 153.28125,
+        "top": -27.059126,
+        "right": 154.6875,
+        "bottom": -28.304381,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 208,
+        "y": 149,
+        "left": 112.5,
+        "top": -28.304381,
+        "right": 113.90625,
+        "bottom": -29.53523,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 149,
+        "left": 113.90625,
+        "top": -28.304381,
+        "right": 115.3125,
+        "bottom": -29.53523,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 149,
+        "left": 115.3125,
+        "top": -28.304381,
+        "right": 116.71875,
+        "bottom": -29.53523,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 149,
+        "left": 116.71875,
+        "top": -28.304381,
+        "right": 118.125,
+        "bottom": -29.53523,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 149,
+        "left": 118.125,
+        "top": -28.304381,
+        "right": 119.53125,
+        "bottom": -29.53523,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 149,
+        "left": 119.53125,
+        "top": -28.304381,
+        "right": 120.9375,
+        "bottom": -29.53523,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 149,
+        "left": 120.9375,
+        "top": -28.304381,
+        "right": 122.34375,
+        "bottom": -29.53523,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 149,
+        "left": 122.34375,
+        "top": -28.304381,
+        "right": 123.75,
+        "bottom": -29.53523,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 216,
+        "y": 149,
+        "left": 123.75,
+        "top": -28.304381,
+        "right": 125.15625,
+        "bottom": -29.53523,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 217,
+        "y": 149,
+        "left": 125.15625,
+        "top": -28.304381,
+        "right": 126.5625,
+        "bottom": -29.53523,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 218,
+        "y": 149,
+        "left": 126.5625,
+        "top": -28.304381,
+        "right": 127.96875,
+        "bottom": -29.53523,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 219,
+        "y": 149,
+        "left": 127.96875,
+        "top": -28.304381,
+        "right": 129.375,
+        "bottom": -29.53523,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 220,
+        "y": 149,
+        "left": 129.375,
+        "top": -28.304381,
+        "right": 130.78125,
+        "bottom": -29.53523,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 221,
+        "y": 149,
+        "left": 130.78125,
+        "top": -28.304381,
+        "right": 132.1875,
+        "bottom": -29.53523,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 222,
+        "y": 149,
+        "left": 132.1875,
+        "top": -28.304381,
+        "right": 133.59375,
+        "bottom": -29.53523,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 223,
+        "y": 149,
+        "left": 133.59375,
+        "top": -28.304381,
+        "right": 135.0,
+        "bottom": -29.53523,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 224,
+        "y": 149,
+        "left": 135.0,
+        "top": -28.304381,
+        "right": 136.40625,
+        "bottom": -29.53523,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 225,
+        "y": 149,
+        "left": 136.40625,
+        "top": -28.304381,
+        "right": 137.8125,
+        "bottom": -29.53523,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 226,
+        "y": 149,
+        "left": 137.8125,
+        "top": -28.304381,
+        "right": 139.21875,
+        "bottom": -29.53523,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 227,
+        "y": 149,
+        "left": 139.21875,
+        "top": -28.304381,
+        "right": 140.625,
+        "bottom": -29.53523,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 228,
+        "y": 149,
+        "left": 140.625,
+        "top": -28.304381,
+        "right": 142.03125,
+        "bottom": -29.53523,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 229,
+        "y": 149,
+        "left": 142.03125,
+        "top": -28.304381,
+        "right": 143.4375,
+        "bottom": -29.53523,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 230,
+        "y": 149,
+        "left": 143.4375,
+        "top": -28.304381,
+        "right": 144.84375,
+        "bottom": -29.53523,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 231,
+        "y": 149,
+        "left": 144.84375,
+        "top": -28.304381,
+        "right": 146.25,
+        "bottom": -29.53523,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 232,
+        "y": 149,
+        "left": 146.25,
+        "top": -28.304381,
+        "right": 147.65625,
+        "bottom": -29.53523,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 233,
+        "y": 149,
+        "left": 147.65625,
+        "top": -28.304381,
+        "right": 149.0625,
+        "bottom": -29.53523,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 234,
+        "y": 149,
+        "left": 149.0625,
+        "top": -28.304381,
+        "right": 150.46875,
+        "bottom": -29.53523,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 235,
+        "y": 149,
+        "left": 150.46875,
+        "top": -28.304381,
+        "right": 151.875,
+        "bottom": -29.53523,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 236,
+        "y": 149,
+        "left": 151.875,
+        "top": -28.304381,
+        "right": 153.28125,
+        "bottom": -29.53523,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 237,
+        "y": 149,
+        "left": 153.28125,
+        "top": -28.304381,
+        "right": 154.6875,
+        "bottom": -29.53523,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 150,
+        "left": 113.90625,
+        "top": -29.53523,
+        "right": 115.3125,
+        "bottom": -30.751278,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 150,
+        "left": 115.3125,
+        "top": -29.53523,
+        "right": 116.71875,
+        "bottom": -30.751278,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 150,
+        "left": 116.71875,
+        "top": -29.53523,
+        "right": 118.125,
+        "bottom": -30.751278,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 150,
+        "left": 118.125,
+        "top": -29.53523,
+        "right": 119.53125,
+        "bottom": -30.751278,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 150,
+        "left": 119.53125,
+        "top": -29.53523,
+        "right": 120.9375,
+        "bottom": -30.751278,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 150,
+        "left": 120.9375,
+        "top": -29.53523,
+        "right": 122.34375,
+        "bottom": -30.751278,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 150,
+        "left": 122.34375,
+        "top": -29.53523,
+        "right": 123.75,
+        "bottom": -30.751278,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 216,
+        "y": 150,
+        "left": 123.75,
+        "top": -29.53523,
+        "right": 125.15625,
+        "bottom": -30.751278,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 217,
+        "y": 150,
+        "left": 125.15625,
+        "top": -29.53523,
+        "right": 126.5625,
+        "bottom": -30.751278,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 218,
+        "y": 150,
+        "left": 126.5625,
+        "top": -29.53523,
+        "right": 127.96875,
+        "bottom": -30.751278,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 219,
+        "y": 150,
+        "left": 127.96875,
+        "top": -29.53523,
+        "right": 129.375,
+        "bottom": -30.751278,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 220,
+        "y": 150,
+        "left": 129.375,
+        "top": -29.53523,
+        "right": 130.78125,
+        "bottom": -30.751278,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 221,
+        "y": 150,
+        "left": 130.78125,
+        "top": -29.53523,
+        "right": 132.1875,
+        "bottom": -30.751278,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 222,
+        "y": 150,
+        "left": 132.1875,
+        "top": -29.53523,
+        "right": 133.59375,
+        "bottom": -30.751278,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 223,
+        "y": 150,
+        "left": 133.59375,
+        "top": -29.53523,
+        "right": 135.0,
+        "bottom": -30.751278,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 224,
+        "y": 150,
+        "left": 135.0,
+        "top": -29.53523,
+        "right": 136.40625,
+        "bottom": -30.751278,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 225,
+        "y": 150,
+        "left": 136.40625,
+        "top": -29.53523,
+        "right": 137.8125,
+        "bottom": -30.751278,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 226,
+        "y": 150,
+        "left": 137.8125,
+        "top": -29.53523,
+        "right": 139.21875,
+        "bottom": -30.751278,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 227,
+        "y": 150,
+        "left": 139.21875,
+        "top": -29.53523,
+        "right": 140.625,
+        "bottom": -30.751278,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 228,
+        "y": 150,
+        "left": 140.625,
+        "top": -29.53523,
+        "right": 142.03125,
+        "bottom": -30.751278,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 229,
+        "y": 150,
+        "left": 142.03125,
+        "top": -29.53523,
+        "right": 143.4375,
+        "bottom": -30.751278,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 230,
+        "y": 150,
+        "left": 143.4375,
+        "top": -29.53523,
+        "right": 144.84375,
+        "bottom": -30.751278,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 231,
+        "y": 150,
+        "left": 144.84375,
+        "top": -29.53523,
+        "right": 146.25,
+        "bottom": -30.751278,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 232,
+        "y": 150,
+        "left": 146.25,
+        "top": -29.53523,
+        "right": 147.65625,
+        "bottom": -30.751278,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 233,
+        "y": 150,
+        "left": 147.65625,
+        "top": -29.53523,
+        "right": 149.0625,
+        "bottom": -30.751278,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 234,
+        "y": 150,
+        "left": 149.0625,
+        "top": -29.53523,
+        "right": 150.46875,
+        "bottom": -30.751278,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 235,
+        "y": 150,
+        "left": 150.46875,
+        "top": -29.53523,
+        "right": 151.875,
+        "bottom": -30.751278,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 236,
+        "y": 150,
+        "left": 151.875,
+        "top": -29.53523,
+        "right": 153.28125,
+        "bottom": -30.751278,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 237,
+        "y": 150,
+        "left": 153.28125,
+        "top": -29.53523,
+        "right": 154.6875,
+        "bottom": -30.751278,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 151,
+        "left": 113.90625,
+        "top": -30.751278,
+        "right": 115.3125,
+        "bottom": -31.952162,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 151,
+        "left": 115.3125,
+        "top": -30.751278,
+        "right": 116.71875,
+        "bottom": -31.952162,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 151,
+        "left": 116.71875,
+        "top": -30.751278,
+        "right": 118.125,
+        "bottom": -31.952162,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 151,
+        "left": 118.125,
+        "top": -30.751278,
+        "right": 119.53125,
+        "bottom": -31.952162,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 151,
+        "left": 119.53125,
+        "top": -30.751278,
+        "right": 120.9375,
+        "bottom": -31.952162,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 151,
+        "left": 120.9375,
+        "top": -30.751278,
+        "right": 122.34375,
+        "bottom": -31.952162,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 151,
+        "left": 122.34375,
+        "top": -30.751278,
+        "right": 123.75,
+        "bottom": -31.952162,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 216,
+        "y": 151,
+        "left": 123.75,
+        "top": -30.751278,
+        "right": 125.15625,
+        "bottom": -31.952162,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 217,
+        "y": 151,
+        "left": 125.15625,
+        "top": -30.751278,
+        "right": 126.5625,
+        "bottom": -31.952162,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 218,
+        "y": 151,
+        "left": 126.5625,
+        "top": -30.751278,
+        "right": 127.96875,
+        "bottom": -31.952162,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 219,
+        "y": 151,
+        "left": 127.96875,
+        "top": -30.751278,
+        "right": 129.375,
+        "bottom": -31.952162,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 220,
+        "y": 151,
+        "left": 129.375,
+        "top": -30.751278,
+        "right": 130.78125,
+        "bottom": -31.952162,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 221,
+        "y": 151,
+        "left": 130.78125,
+        "top": -30.751278,
+        "right": 132.1875,
+        "bottom": -31.952162,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 222,
+        "y": 151,
+        "left": 132.1875,
+        "top": -30.751278,
+        "right": 133.59375,
+        "bottom": -31.952162,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 223,
+        "y": 151,
+        "left": 133.59375,
+        "top": -30.751278,
+        "right": 135.0,
+        "bottom": -31.952162,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 224,
+        "y": 151,
+        "left": 135.0,
+        "top": -30.751278,
+        "right": 136.40625,
+        "bottom": -31.952162,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 225,
+        "y": 151,
+        "left": 136.40625,
+        "top": -30.751278,
+        "right": 137.8125,
+        "bottom": -31.952162,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 226,
+        "y": 151,
+        "left": 137.8125,
+        "top": -30.751278,
+        "right": 139.21875,
+        "bottom": -31.952162,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 227,
+        "y": 151,
+        "left": 139.21875,
+        "top": -30.751278,
+        "right": 140.625,
+        "bottom": -31.952162,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 228,
+        "y": 151,
+        "left": 140.625,
+        "top": -30.751278,
+        "right": 142.03125,
+        "bottom": -31.952162,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 229,
+        "y": 151,
+        "left": 142.03125,
+        "top": -30.751278,
+        "right": 143.4375,
+        "bottom": -31.952162,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 230,
+        "y": 151,
+        "left": 143.4375,
+        "top": -30.751278,
+        "right": 144.84375,
+        "bottom": -31.952162,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 231,
+        "y": 151,
+        "left": 144.84375,
+        "top": -30.751278,
+        "right": 146.25,
+        "bottom": -31.952162,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 232,
+        "y": 151,
+        "left": 146.25,
+        "top": -30.751278,
+        "right": 147.65625,
+        "bottom": -31.952162,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 233,
+        "y": 151,
+        "left": 147.65625,
+        "top": -30.751278,
+        "right": 149.0625,
+        "bottom": -31.952162,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 234,
+        "y": 151,
+        "left": 149.0625,
+        "top": -30.751278,
+        "right": 150.46875,
+        "bottom": -31.952162,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 235,
+        "y": 151,
+        "left": 150.46875,
+        "top": -30.751278,
+        "right": 151.875,
+        "bottom": -31.952162,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 236,
+        "y": 151,
+        "left": 151.875,
+        "top": -30.751278,
+        "right": 153.28125,
+        "bottom": -31.952162,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 241,
+        "y": 151,
+        "left": 158.90625,
+        "top": -30.751278,
+        "right": 160.3125,
+        "bottom": -31.952162,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 152,
+        "left": 115.3125,
+        "top": -31.952162,
+        "right": 116.71875,
+        "bottom": -33.137551,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 152,
+        "left": 116.71875,
+        "top": -31.952162,
+        "right": 118.125,
+        "bottom": -33.137551,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 152,
+        "left": 118.125,
+        "top": -31.952162,
+        "right": 119.53125,
+        "bottom": -33.137551,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 152,
+        "left": 119.53125,
+        "top": -31.952162,
+        "right": 120.9375,
+        "bottom": -33.137551,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 152,
+        "left": 120.9375,
+        "top": -31.952162,
+        "right": 122.34375,
+        "bottom": -33.137551,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 152,
+        "left": 122.34375,
+        "top": -31.952162,
+        "right": 123.75,
+        "bottom": -33.137551,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 216,
+        "y": 152,
+        "left": 123.75,
+        "top": -31.952162,
+        "right": 125.15625,
+        "bottom": -33.137551,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 217,
+        "y": 152,
+        "left": 125.15625,
+        "top": -31.952162,
+        "right": 126.5625,
+        "bottom": -33.137551,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 218,
+        "y": 152,
+        "left": 126.5625,
+        "top": -31.952162,
+        "right": 127.96875,
+        "bottom": -33.137551,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 219,
+        "y": 152,
+        "left": 127.96875,
+        "top": -31.952162,
+        "right": 129.375,
+        "bottom": -33.137551,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 221,
+        "y": 152,
+        "left": 130.78125,
+        "top": -31.952162,
+        "right": 132.1875,
+        "bottom": -33.137551,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 222,
+        "y": 152,
+        "left": 132.1875,
+        "top": -31.952162,
+        "right": 133.59375,
+        "bottom": -33.137551,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 223,
+        "y": 152,
+        "left": 133.59375,
+        "top": -31.952162,
+        "right": 135.0,
+        "bottom": -33.137551,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 224,
+        "y": 152,
+        "left": 135.0,
+        "top": -31.952162,
+        "right": 136.40625,
+        "bottom": -33.137551,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 225,
+        "y": 152,
+        "left": 136.40625,
+        "top": -31.952162,
+        "right": 137.8125,
+        "bottom": -33.137551,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 226,
+        "y": 152,
+        "left": 137.8125,
+        "top": -31.952162,
+        "right": 139.21875,
+        "bottom": -33.137551,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 227,
+        "y": 152,
+        "left": 139.21875,
+        "top": -31.952162,
+        "right": 140.625,
+        "bottom": -33.137551,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 228,
+        "y": 152,
+        "left": 140.625,
+        "top": -31.952162,
+        "right": 142.03125,
+        "bottom": -33.137551,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 229,
+        "y": 152,
+        "left": 142.03125,
+        "top": -31.952162,
+        "right": 143.4375,
+        "bottom": -33.137551,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 230,
+        "y": 152,
+        "left": 143.4375,
+        "top": -31.952162,
+        "right": 144.84375,
+        "bottom": -33.137551,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 231,
+        "y": 152,
+        "left": 144.84375,
+        "top": -31.952162,
+        "right": 146.25,
+        "bottom": -33.137551,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 232,
+        "y": 152,
+        "left": 146.25,
+        "top": -31.952162,
+        "right": 147.65625,
+        "bottom": -33.137551,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 233,
+        "y": 152,
+        "left": 147.65625,
+        "top": -31.952162,
+        "right": 149.0625,
+        "bottom": -33.137551,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 234,
+        "y": 152,
+        "left": 149.0625,
+        "top": -31.952162,
+        "right": 150.46875,
+        "bottom": -33.137551,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 235,
+        "y": 152,
+        "left": 150.46875,
+        "top": -31.952162,
+        "right": 151.875,
+        "bottom": -33.137551,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 236,
+        "y": 152,
+        "left": 151.875,
+        "top": -31.952162,
+        "right": 153.28125,
+        "bottom": -33.137551,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 153,
+        "left": 113.90625,
+        "top": -33.137551,
+        "right": 115.3125,
+        "bottom": -34.307144,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 153,
+        "left": 115.3125,
+        "top": -33.137551,
+        "right": 116.71875,
+        "bottom": -34.307144,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 153,
+        "left": 116.71875,
+        "top": -33.137551,
+        "right": 118.125,
+        "bottom": -34.307144,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 153,
+        "left": 118.125,
+        "top": -33.137551,
+        "right": 119.53125,
+        "bottom": -34.307144,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 153,
+        "left": 119.53125,
+        "top": -33.137551,
+        "right": 120.9375,
+        "bottom": -34.307144,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 153,
+        "left": 120.9375,
+        "top": -33.137551,
+        "right": 122.34375,
+        "bottom": -34.307144,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 153,
+        "left": 122.34375,
+        "top": -33.137551,
+        "right": 123.75,
+        "bottom": -34.307144,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 216,
+        "y": 153,
+        "left": 123.75,
+        "top": -33.137551,
+        "right": 125.15625,
+        "bottom": -34.307144,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 223,
+        "y": 153,
+        "left": 133.59375,
+        "top": -33.137551,
+        "right": 135.0,
+        "bottom": -34.307144,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 224,
+        "y": 153,
+        "left": 135.0,
+        "top": -33.137551,
+        "right": 136.40625,
+        "bottom": -34.307144,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 225,
+        "y": 153,
+        "left": 136.40625,
+        "top": -33.137551,
+        "right": 137.8125,
+        "bottom": -34.307144,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 226,
+        "y": 153,
+        "left": 137.8125,
+        "top": -33.137551,
+        "right": 139.21875,
+        "bottom": -34.307144,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 227,
+        "y": 153,
+        "left": 139.21875,
+        "top": -33.137551,
+        "right": 140.625,
+        "bottom": -34.307144,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 228,
+        "y": 153,
+        "left": 140.625,
+        "top": -33.137551,
+        "right": 142.03125,
+        "bottom": -34.307144,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 229,
+        "y": 153,
+        "left": 142.03125,
+        "top": -33.137551,
+        "right": 143.4375,
+        "bottom": -34.307144,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 230,
+        "y": 153,
+        "left": 143.4375,
+        "top": -33.137551,
+        "right": 144.84375,
+        "bottom": -34.307144,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 231,
+        "y": 153,
+        "left": 144.84375,
+        "top": -33.137551,
+        "right": 146.25,
+        "bottom": -34.307144,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 232,
+        "y": 153,
+        "left": 146.25,
+        "top": -33.137551,
+        "right": 147.65625,
+        "bottom": -34.307144,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 233,
+        "y": 153,
+        "left": 147.65625,
+        "top": -33.137551,
+        "right": 149.0625,
+        "bottom": -34.307144,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 234,
+        "y": 153,
+        "left": 149.0625,
+        "top": -33.137551,
+        "right": 150.46875,
+        "bottom": -34.307144,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 235,
+        "y": 153,
+        "left": 150.46875,
+        "top": -33.137551,
+        "right": 151.875,
+        "bottom": -34.307144,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 154,
+        "left": 113.90625,
+        "top": -34.307144,
+        "right": 115.3125,
+        "bottom": -35.46067,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 154,
+        "left": 115.3125,
+        "top": -34.307144,
+        "right": 116.71875,
+        "bottom": -35.46067,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 154,
+        "left": 116.71875,
+        "top": -34.307144,
+        "right": 118.125,
+        "bottom": -35.46067,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 154,
+        "left": 118.125,
+        "top": -34.307144,
+        "right": 119.53125,
+        "bottom": -35.46067,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 154,
+        "left": 119.53125,
+        "top": -34.307144,
+        "right": 120.9375,
+        "bottom": -35.46067,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 154,
+        "left": 122.34375,
+        "top": -34.307144,
+        "right": 123.75,
+        "bottom": -35.46067,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 223,
+        "y": 154,
+        "left": 133.59375,
+        "top": -34.307144,
+        "right": 135.0,
+        "bottom": -35.46067,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 224,
+        "y": 154,
+        "left": 135.0,
+        "top": -34.307144,
+        "right": 136.40625,
+        "bottom": -35.46067,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 225,
+        "y": 154,
+        "left": 136.40625,
+        "top": -34.307144,
+        "right": 137.8125,
+        "bottom": -35.46067,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 226,
+        "y": 154,
+        "left": 137.8125,
+        "top": -34.307144,
+        "right": 139.21875,
+        "bottom": -35.46067,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 227,
+        "y": 154,
+        "left": 139.21875,
+        "top": -34.307144,
+        "right": 140.625,
+        "bottom": -35.46067,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 228,
+        "y": 154,
+        "left": 140.625,
+        "top": -34.307144,
+        "right": 142.03125,
+        "bottom": -35.46067,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 229,
+        "y": 154,
+        "left": 142.03125,
+        "top": -34.307144,
+        "right": 143.4375,
+        "bottom": -35.46067,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 230,
+        "y": 154,
+        "left": 143.4375,
+        "top": -34.307144,
+        "right": 144.84375,
+        "bottom": -35.46067,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 231,
+        "y": 154,
+        "left": 144.84375,
+        "top": -34.307144,
+        "right": 146.25,
+        "bottom": -35.46067,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 232,
+        "y": 154,
+        "left": 146.25,
+        "top": -34.307144,
+        "right": 147.65625,
+        "bottom": -35.46067,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 233,
+        "y": 154,
+        "left": 147.65625,
+        "top": -34.307144,
+        "right": 149.0625,
+        "bottom": -35.46067,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 234,
+        "y": 154,
+        "left": 149.0625,
+        "top": -34.307144,
+        "right": 150.46875,
+        "bottom": -35.46067,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 235,
+        "y": 154,
+        "left": 150.46875,
+        "top": -34.307144,
+        "right": 151.875,
+        "bottom": -35.46067,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 225,
+        "y": 155,
+        "left": 136.40625,
+        "top": -35.46067,
+        "right": 137.8125,
+        "bottom": -36.597889,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 226,
+        "y": 155,
+        "left": 137.8125,
+        "top": -35.46067,
+        "right": 139.21875,
+        "bottom": -36.597889,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 227,
+        "y": 155,
+        "left": 139.21875,
+        "top": -35.46067,
+        "right": 140.625,
+        "bottom": -36.597889,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 228,
+        "y": 155,
+        "left": 140.625,
+        "top": -35.46067,
+        "right": 142.03125,
+        "bottom": -36.597889,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 229,
+        "y": 155,
+        "left": 142.03125,
+        "top": -35.46067,
+        "right": 143.4375,
+        "bottom": -36.597889,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 230,
+        "y": 155,
+        "left": 143.4375,
+        "top": -35.46067,
+        "right": 144.84375,
+        "bottom": -36.597889,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 231,
+        "y": 155,
+        "left": 144.84375,
+        "top": -35.46067,
+        "right": 146.25,
+        "bottom": -36.597889,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 232,
+        "y": 155,
+        "left": 146.25,
+        "top": -35.46067,
+        "right": 147.65625,
+        "bottom": -36.597889,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 233,
+        "y": 155,
+        "left": 147.65625,
+        "top": -35.46067,
+        "right": 149.0625,
+        "bottom": -36.597889,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 234,
+        "y": 155,
+        "left": 149.0625,
+        "top": -35.46067,
+        "right": 150.46875,
+        "bottom": -36.597889,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 227,
+        "y": 156,
+        "left": 139.21875,
+        "top": -36.597889,
+        "right": 140.625,
+        "bottom": -37.71859,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 228,
+        "y": 156,
+        "left": 140.625,
+        "top": -36.597889,
+        "right": 142.03125,
+        "bottom": -37.71859,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 229,
+        "y": 156,
+        "left": 142.03125,
+        "top": -36.597889,
+        "right": 143.4375,
+        "bottom": -37.71859,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 230,
+        "y": 156,
+        "left": 143.4375,
+        "top": -36.597889,
+        "right": 144.84375,
+        "bottom": -37.71859,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 231,
+        "y": 156,
+        "left": 144.84375,
+        "top": -36.597889,
+        "right": 146.25,
+        "bottom": -37.71859,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 232,
+        "y": 156,
+        "left": 146.25,
+        "top": -36.597889,
+        "right": 147.65625,
+        "bottom": -37.71859,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 233,
+        "y": 156,
+        "left": 147.65625,
+        "top": -36.597889,
+        "right": 149.0625,
+        "bottom": -37.71859,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 234,
+        "y": 156,
+        "left": 149.0625,
+        "top": -36.597889,
+        "right": 150.46875,
+        "bottom": -37.71859,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 227,
+        "y": 157,
+        "left": 139.21875,
+        "top": -37.71859,
+        "right": 140.625,
+        "bottom": -38.822591,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 228,
+        "y": 157,
+        "left": 140.625,
+        "top": -37.71859,
+        "right": 142.03125,
+        "bottom": -38.822591,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 229,
+        "y": 157,
+        "left": 142.03125,
+        "top": -37.71859,
+        "right": 143.4375,
+        "bottom": -38.822591,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 230,
+        "y": 157,
+        "left": 143.4375,
+        "top": -37.71859,
+        "right": 144.84375,
+        "bottom": -38.822591,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 231,
+        "y": 157,
+        "left": 144.84375,
+        "top": -37.71859,
+        "right": 146.25,
+        "bottom": -38.822591,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 232,
+        "y": 157,
+        "left": 146.25,
+        "top": -37.71859,
+        "right": 147.65625,
+        "bottom": -38.822591,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 233,
+        "y": 157,
+        "left": 147.65625,
+        "top": -37.71859,
+        "right": 149.0625,
+        "bottom": -38.822591,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 234,
+        "y": 157,
+        "left": 149.0625,
+        "top": -37.71859,
+        "right": 150.46875,
+        "bottom": -38.822591,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 230,
+        "y": 158,
+        "left": 143.4375,
+        "top": -38.822591,
+        "right": 144.84375,
+        "bottom": -39.909736,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 231,
+        "y": 158,
+        "left": 144.84375,
+        "top": -38.822591,
+        "right": 146.25,
+        "bottom": -39.909736,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 232,
+        "y": 158,
+        "left": 146.25,
+        "top": -38.822591,
+        "right": 147.65625,
+        "bottom": -39.909736,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 233,
+        "y": 158,
+        "left": 147.65625,
+        "top": -38.822591,
+        "right": 149.0625,
+        "bottom": -39.909736,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 230,
+        "y": 159,
+        "left": 143.4375,
+        "top": -39.909736,
+        "right": 144.84375,
+        "bottom": -40.979898,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 231,
+        "y": 159,
+        "left": 144.84375,
+        "top": -39.909736,
+        "right": 146.25,
+        "bottom": -40.979898,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 232,
+        "y": 159,
+        "left": 146.25,
+        "top": -39.909736,
+        "right": 147.65625,
+        "bottom": -40.979898,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 233,
+        "y": 159,
+        "left": 147.65625,
+        "top": -39.909736,
+        "right": 149.0625,
+        "bottom": -40.979898,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 230,
+        "y": 160,
+        "left": 143.4375,
+        "top": -40.979898,
+        "right": 144.84375,
+        "bottom": -42.032974,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 231,
+        "y": 160,
+        "left": 144.84375,
+        "top": -40.979898,
+        "right": 146.25,
+        "bottom": -42.032974,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 232,
+        "y": 160,
+        "left": 146.25,
+        "top": -40.979898,
+        "right": 147.65625,
+        "bottom": -42.032974,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 233,
+        "y": 160,
+        "left": 147.65625,
+        "top": -40.979898,
+        "right": 149.0625,
+        "bottom": -42.032974,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 231,
+        "y": 161,
+        "left": 144.84375,
+        "top": -42.032974,
+        "right": 146.25,
+        "bottom": -43.068888,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 232,
+        "y": 161,
+        "left": 146.25,
+        "top": -42.032974,
+        "right": 147.65625,
+        "bottom": -43.068888,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 233,
+        "y": 161,
+        "left": 147.65625,
+        "top": -42.032974,
+        "right": 149.0625,
+        "bottom": -43.068888,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 231,
+        "y": 162,
+        "left": 144.84375,
+        "top": -43.068888,
+        "right": 146.25,
+        "bottom": -44.087585,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 232,
+        "y": 162,
+        "left": 146.25,
+        "top": -43.068888,
+        "right": 147.65625,
+        "bottom": -44.087585,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 233,
+        "y": 162,
+        "left": 147.65625,
+        "top": -43.068888,
+        "right": 149.0625,
+        "bottom": -44.087585,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 240,
+        "y": 174,
+        "left": 157.5,
+        "top": -54.162434,
+        "right": 158.90625,
+        "bottom": -54.977614,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 241,
+        "y": 174,
+        "left": 158.90625,
+        "top": -54.162434,
+        "right": 160.3125,
+        "bottom": -54.977614,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 234,
+        "y": 139,
+        "left": 149.0625,
+        "top": -15.284185,
+        "right": 150.46875,
+        "bottom": -16.636192,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 234,
+        "y": 140,
+        "left": 149.0625,
+        "top": -16.636192,
+        "right": 150.46875,
+        "bottom": -17.978733,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 235,
+        "y": 140,
+        "left": 150.46875,
+        "top": -16.636192,
+        "right": 151.875,
+        "bottom": -17.978733,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 236,
+        "y": 140,
+        "left": 151.875,
+        "top": -16.636192,
+        "right": 153.28125,
+        "bottom": -17.978733,
+        "countries": [
+            "australia"
+        ]
+    },
+    {
+        "x": 238,
+        "y": 140,
+        "left": 154.6875,
+        "top": -16.636192,
+        "right": 156.09375,
+        "bottom": -17.978733,
+        "countries": [
+            "australia"
+        ]
+    }
+]

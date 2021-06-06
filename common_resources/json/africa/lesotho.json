@@ -1,0 +1,50 @@
+[
+    {
+        "x": 147,
+        "y": 149,
+        "left": 26.71875,
+        "top": -28.304381,
+        "right": 28.125,
+        "bottom": -29.53523,
+        "countries": [
+            "lesotho",
+            "south_africa"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 149,
+        "left": 28.125,
+        "top": -28.304381,
+        "right": 29.53125,
+        "bottom": -29.53523,
+        "countries": [
+            "lesotho",
+            "south_africa"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 150,
+        "left": 26.71875,
+        "top": -29.53523,
+        "right": 28.125,
+        "bottom": -30.751278,
+        "countries": [
+            "lesotho",
+            "south_africa"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 150,
+        "left": 28.125,
+        "top": -29.53523,
+        "right": 29.53125,
+        "bottom": -30.751278,
+        "countries": [
+            "lesotho",
+            "south_africa"
+        ]
+    }
+]

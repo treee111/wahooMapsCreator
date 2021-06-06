@@ -1,0 +1,232 @@
+[
+    {
+        "x": 63,
+        "y": 94,
+        "left": -91.40625,
+        "top": 43.068888,
+        "right": -90.0,
+        "bottom": 42.032974,
+        "countries": [
+            "wisconsin",
+            "iowa",
+            "illinois"
+        ]
+    },
+    {
+        "x": 64,
+        "y": 94,
+        "left": -90.0,
+        "top": 43.068888,
+        "right": -88.59375,
+        "bottom": 42.032974,
+        "countries": [
+            "wisconsin",
+            "illinois"
+        ]
+    },
+    {
+        "x": 65,
+        "y": 94,
+        "left": -88.59375,
+        "top": 43.068888,
+        "right": -87.1875,
+        "bottom": 42.032974,
+        "countries": [
+            "wisconsin",
+            "illinois"
+        ]
+    },
+    {
+        "x": 63,
+        "y": 95,
+        "left": -91.40625,
+        "top": 42.032974,
+        "right": -90.0,
+        "bottom": 40.979898,
+        "countries": [
+            "iowa",
+            "illinois"
+        ]
+    },
+    {
+        "x": 64,
+        "y": 95,
+        "left": -90.0,
+        "top": 42.032974,
+        "right": -88.59375,
+        "bottom": 40.979898,
+        "countries": [
+            "illinois"
+        ]
+    },
+    {
+        "x": 65,
+        "y": 95,
+        "left": -88.59375,
+        "top": 42.032974,
+        "right": -87.1875,
+        "bottom": 40.979898,
+        "countries": [
+            "illinois",
+            "indiana"
+        ]
+    },
+    {
+        "x": 62,
+        "y": 96,
+        "left": -92.8125,
+        "top": 40.979898,
+        "right": -91.40625,
+        "bottom": 39.909736,
+        "countries": [
+            "iowa",
+            "illinois",
+            "missouri"
+        ]
+    },
+    {
+        "x": 63,
+        "y": 96,
+        "left": -91.40625,
+        "top": 40.979898,
+        "right": -90.0,
+        "bottom": 39.909736,
+        "countries": [
+            "iowa",
+            "illinois"
+        ]
+    },
+    {
+        "x": 64,
+        "y": 96,
+        "left": -90.0,
+        "top": 40.979898,
+        "right": -88.59375,
+        "bottom": 39.909736,
+        "countries": [
+            "illinois"
+        ]
+    },
+    {
+        "x": 65,
+        "y": 96,
+        "left": -88.59375,
+        "top": 40.979898,
+        "right": -87.1875,
+        "bottom": 39.909736,
+        "countries": [
+            "illinois",
+            "indiana"
+        ]
+    },
+    {
+        "x": 62,
+        "y": 97,
+        "left": -92.8125,
+        "top": 39.909736,
+        "right": -91.40625,
+        "bottom": 38.822591,
+        "countries": [
+            "illinois",
+            "missouri"
+        ]
+    },
+    {
+        "x": 63,
+        "y": 97,
+        "left": -91.40625,
+        "top": 39.909736,
+        "right": -90.0,
+        "bottom": 38.822591,
+        "countries": [
+            "illinois",
+            "missouri"
+        ]
+    },
+    {
+        "x": 64,
+        "y": 97,
+        "left": -90.0,
+        "top": 39.909736,
+        "right": -88.59375,
+        "bottom": 38.822591,
+        "countries": [
+            "illinois"
+        ]
+    },
+    {
+        "x": 65,
+        "y": 97,
+        "left": -88.59375,
+        "top": 39.909736,
+        "right": -87.1875,
+        "bottom": 38.822591,
+        "countries": [
+            "illinois",
+            "indiana"
+        ]
+    },
+    {
+        "x": 63,
+        "y": 98,
+        "left": -91.40625,
+        "top": 38.822591,
+        "right": -90.0,
+        "bottom": 37.71859,
+        "countries": [
+            "illinois",
+            "missouri"
+        ]
+    },
+    {
+        "x": 64,
+        "y": 98,
+        "left": -90.0,
+        "top": 38.822591,
+        "right": -88.59375,
+        "bottom": 37.71859,
+        "countries": [
+            "illinois",
+            "missouri"
+        ]
+    },
+    {
+        "x": 65,
+        "y": 98,
+        "left": -88.59375,
+        "top": 38.822591,
+        "right": -87.1875,
+        "bottom": 37.71859,
+        "countries": [
+            "kentucky",
+            "illinois",
+            "indiana"
+        ]
+    },
+    {
+        "x": 64,
+        "y": 99,
+        "left": -90.0,
+        "top": 37.71859,
+        "right": -88.59375,
+        "bottom": 36.597889,
+        "countries": [
+            "illinois",
+            "missouri",
+            "kentucky"
+        ]
+    },
+    {
+        "x": 65,
+        "y": 99,
+        "left": -88.59375,
+        "top": 37.71859,
+        "right": -87.1875,
+        "bottom": 36.597889,
+        "countries": [
+            "tennessee",
+            "illinois",
+            "kentucky"
+        ]
+    }
+]

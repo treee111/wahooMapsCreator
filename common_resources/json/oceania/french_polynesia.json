@@ -1,0 +1,640 @@
+[
+    {
+        "x": 27,
+        "y": 133,
+        "left": -142.03125,
+        "top": -7.013668,
+        "right": -140.625,
+        "bottom": -8.407168,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 28,
+        "y": 133,
+        "left": -140.625,
+        "top": -7.013668,
+        "right": -139.21875,
+        "bottom": -8.407168,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 28,
+        "y": 134,
+        "left": -140.625,
+        "top": -8.407168,
+        "right": -139.21875,
+        "bottom": -9.795678,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 29,
+        "y": 134,
+        "left": -139.21875,
+        "top": -8.407168,
+        "right": -137.8125,
+        "bottom": -9.795678,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 29,
+        "y": 135,
+        "left": -139.21875,
+        "top": -9.795678,
+        "right": -137.8125,
+        "bottom": -11.178402,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 22,
+        "y": 138,
+        "left": -149.0625,
+        "top": -13.923404,
+        "right": -147.65625,
+        "bottom": -15.284185,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 23,
+        "y": 138,
+        "left": -147.65625,
+        "top": -13.923404,
+        "right": -146.25,
+        "bottom": -15.284185,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 24,
+        "y": 138,
+        "left": -146.25,
+        "top": -13.923404,
+        "right": -144.84375,
+        "bottom": -15.284185,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 25,
+        "y": 138,
+        "left": -144.84375,
+        "top": -13.923404,
+        "right": -143.4375,
+        "bottom": -15.284185,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 27,
+        "y": 138,
+        "left": -142.03125,
+        "top": -13.923404,
+        "right": -140.625,
+        "bottom": -15.284185,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 29,
+        "y": 138,
+        "left": -139.21875,
+        "top": -13.923404,
+        "right": -137.8125,
+        "bottom": -15.284185,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 17,
+        "y": 139,
+        "left": -156.09375,
+        "top": -15.284185,
+        "right": -154.6875,
+        "bottom": -16.636192,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 18,
+        "y": 139,
+        "left": -154.6875,
+        "top": -15.284185,
+        "right": -153.28125,
+        "bottom": -16.636192,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 19,
+        "y": 139,
+        "left": -153.28125,
+        "top": -15.284185,
+        "right": -151.875,
+        "bottom": -16.636192,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 20,
+        "y": 139,
+        "left": -151.875,
+        "top": -15.284185,
+        "right": -150.46875,
+        "bottom": -16.636192,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 22,
+        "y": 139,
+        "left": -149.0625,
+        "top": -15.284185,
+        "right": -147.65625,
+        "bottom": -16.636192,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 23,
+        "y": 139,
+        "left": -147.65625,
+        "top": -15.284185,
+        "right": -146.25,
+        "bottom": -16.636192,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 24,
+        "y": 139,
+        "left": -146.25,
+        "top": -15.284185,
+        "right": -144.84375,
+        "bottom": -16.636192,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 25,
+        "y": 139,
+        "left": -144.84375,
+        "top": -15.284185,
+        "right": -143.4375,
+        "bottom": -16.636192,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 26,
+        "y": 139,
+        "left": -143.4375,
+        "top": -15.284185,
+        "right": -142.03125,
+        "bottom": -16.636192,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 27,
+        "y": 139,
+        "left": -142.03125,
+        "top": -15.284185,
+        "right": -140.625,
+        "bottom": -16.636192,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 28,
+        "y": 139,
+        "left": -140.625,
+        "top": -15.284185,
+        "right": -139.21875,
+        "bottom": -16.636192,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 18,
+        "y": 140,
+        "left": -154.6875,
+        "top": -16.636192,
+        "right": -153.28125,
+        "bottom": -17.978733,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 20,
+        "y": 140,
+        "left": -151.875,
+        "top": -16.636192,
+        "right": -150.46875,
+        "bottom": -17.978733,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 21,
+        "y": 140,
+        "left": -150.46875,
+        "top": -16.636192,
+        "right": -149.0625,
+        "bottom": -17.978733,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 22,
+        "y": 140,
+        "left": -149.0625,
+        "top": -16.636192,
+        "right": -147.65625,
+        "bottom": -17.978733,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 24,
+        "y": 140,
+        "left": -146.25,
+        "top": -16.636192,
+        "right": -144.84375,
+        "bottom": -17.978733,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 25,
+        "y": 140,
+        "left": -144.84375,
+        "top": -16.636192,
+        "right": -143.4375,
+        "bottom": -17.978733,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 26,
+        "y": 140,
+        "left": -143.4375,
+        "top": -16.636192,
+        "right": -142.03125,
+        "bottom": -17.978733,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 27,
+        "y": 140,
+        "left": -142.03125,
+        "top": -16.636192,
+        "right": -140.625,
+        "bottom": -17.978733,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 28,
+        "y": 140,
+        "left": -140.625,
+        "top": -16.636192,
+        "right": -139.21875,
+        "bottom": -17.978733,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 29,
+        "y": 140,
+        "left": -139.21875,
+        "top": -16.636192,
+        "right": -137.8125,
+        "bottom": -17.978733,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 26,
+        "y": 141,
+        "left": -143.4375,
+        "top": -17.978733,
+        "right": -142.03125,
+        "bottom": -19.311143,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 27,
+        "y": 141,
+        "left": -142.03125,
+        "top": -17.978733,
+        "right": -140.625,
+        "bottom": -19.311143,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 28,
+        "y": 141,
+        "left": -140.625,
+        "top": -17.978733,
+        "right": -139.21875,
+        "bottom": -19.311143,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 29,
+        "y": 141,
+        "left": -139.21875,
+        "top": -17.978733,
+        "right": -137.8125,
+        "bottom": -19.311143,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 30,
+        "y": 141,
+        "left": -137.8125,
+        "top": -17.978733,
+        "right": -136.40625,
+        "bottom": -19.311143,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 31,
+        "y": 141,
+        "left": -136.40625,
+        "top": -17.978733,
+        "right": -135.0,
+        "bottom": -19.311143,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 24,
+        "y": 142,
+        "left": -146.25,
+        "top": -19.311143,
+        "right": -144.84375,
+        "bottom": -20.632784,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 25,
+        "y": 142,
+        "left": -144.84375,
+        "top": -19.311143,
+        "right": -143.4375,
+        "bottom": -20.632784,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 26,
+        "y": 142,
+        "left": -143.4375,
+        "top": -19.311143,
+        "right": -142.03125,
+        "bottom": -20.632784,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 28,
+        "y": 142,
+        "left": -140.625,
+        "top": -19.311143,
+        "right": -139.21875,
+        "bottom": -20.632784,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 29,
+        "y": 142,
+        "left": -139.21875,
+        "top": -19.311143,
+        "right": -137.8125,
+        "bottom": -20.632784,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 18,
+        "y": 143,
+        "left": -154.6875,
+        "top": -20.632784,
+        "right": -153.28125,
+        "bottom": -21.943046,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 26,
+        "y": 143,
+        "left": -143.4375,
+        "top": -20.632784,
+        "right": -142.03125,
+        "bottom": -21.943046,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 27,
+        "y": 143,
+        "left": -142.03125,
+        "top": -20.632784,
+        "right": -140.625,
+        "bottom": -21.943046,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 28,
+        "y": 143,
+        "left": -140.625,
+        "top": -20.632784,
+        "right": -139.21875,
+        "bottom": -21.943046,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 29,
+        "y": 143,
+        "left": -139.21875,
+        "top": -20.632784,
+        "right": -137.8125,
+        "bottom": -21.943046,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 30,
+        "y": 143,
+        "left": -137.8125,
+        "top": -20.632784,
+        "right": -136.40625,
+        "bottom": -21.943046,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 31,
+        "y": 143,
+        "left": -136.40625,
+        "top": -20.632784,
+        "right": -135.0,
+        "bottom": -21.943046,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 19,
+        "y": 144,
+        "left": -153.28125,
+        "top": -21.943046,
+        "right": -151.875,
+        "bottom": -23.241346,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 20,
+        "y": 144,
+        "left": -151.875,
+        "top": -21.943046,
+        "right": -150.46875,
+        "bottom": -23.241346,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 31,
+        "y": 144,
+        "left": -136.40625,
+        "top": -21.943046,
+        "right": -135.0,
+        "bottom": -23.241346,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 32,
+        "y": 144,
+        "left": -135.0,
+        "top": -21.943046,
+        "right": -133.59375,
+        "bottom": -23.241346,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 21,
+        "y": 145,
+        "left": -150.46875,
+        "top": -23.241346,
+        "right": -149.0625,
+        "bottom": -24.527135,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 22,
+        "y": 145,
+        "left": -149.0625,
+        "top": -23.241346,
+        "right": -147.65625,
+        "bottom": -24.527135,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 23,
+        "y": 145,
+        "left": -147.65625,
+        "top": -23.241346,
+        "right": -146.25,
+        "bottom": -24.527135,
+        "countries": [
+            "french_polynesia"
+        ]
+    },
+    {
+        "x": 25,
+        "y": 148,
+        "left": -144.84375,
+        "top": -27.059126,
+        "right": -143.4375,
+        "bottom": -28.304381,
+        "countries": [
+            "french_polynesia"
+        ]
+    }
+]

@@ -1,0 +1,145 @@
+[
+    {
+        "x": 98,
+        "y": 173,
+        "left": -42.1875,
+        "top": -53.330873,
+        "right": -40.78125,
+        "bottom": -54.162434,
+        "countries": [
+            "south_georgia_and_the_south_sandwich_islands"
+        ]
+    },
+    {
+        "x": 100,
+        "y": 173,
+        "left": -39.375,
+        "top": -53.330873,
+        "right": -37.96875,
+        "bottom": -54.162434,
+        "countries": [
+            "south_georgia_and_the_south_sandwich_islands"
+        ]
+    },
+    {
+        "x": 101,
+        "y": 173,
+        "left": -37.96875,
+        "top": -53.330873,
+        "right": -36.5625,
+        "bottom": -54.162434,
+        "countries": [
+            "south_georgia_and_the_south_sandwich_islands"
+        ]
+    },
+    {
+        "x": 102,
+        "y": 173,
+        "left": -36.5625,
+        "top": -53.330873,
+        "right": -35.15625,
+        "bottom": -54.162434,
+        "countries": [
+            "south_georgia_and_the_south_sandwich_islands"
+        ]
+    },
+    {
+        "x": 101,
+        "y": 174,
+        "left": -37.96875,
+        "top": -54.162434,
+        "right": -36.5625,
+        "bottom": -54.977614,
+        "countries": [
+            "south_georgia_and_the_south_sandwich_islands"
+        ]
+    },
+    {
+        "x": 102,
+        "y": 174,
+        "left": -36.5625,
+        "top": -54.162434,
+        "right": -35.15625,
+        "bottom": -54.977614,
+        "countries": [
+            "south_georgia_and_the_south_sandwich_islands"
+        ]
+    },
+    {
+        "x": 108,
+        "y": 176,
+        "left": -28.125,
+        "top": -55.776573,
+        "right": -26.71875,
+        "bottom": -56.559482,
+        "countries": [
+            "south_georgia_and_the_south_sandwich_islands"
+        ]
+    },
+    {
+        "x": 108,
+        "y": 177,
+        "left": -28.125,
+        "top": -56.559482,
+        "right": -26.71875,
+        "bottom": -57.326521,
+        "countries": [
+            "south_georgia_and_the_south_sandwich_islands"
+        ]
+    },
+    {
+        "x": 109,
+        "y": 177,
+        "left": -26.71875,
+        "top": -56.559482,
+        "right": -25.3125,
+        "bottom": -57.326521,
+        "countries": [
+            "south_georgia_and_the_south_sandwich_islands"
+        ]
+    },
+    {
+        "x": 109,
+        "y": 178,
+        "left": -26.71875,
+        "top": -57.326521,
+        "right": -25.3125,
+        "bottom": -58.077876,
+        "countries": [
+            "south_georgia_and_the_south_sandwich_islands"
+        ]
+    },
+    {
+        "x": 109,
+        "y": 179,
+        "left": -26.71875,
+        "top": -58.077876,
+        "right": -25.3125,
+        "bottom": -58.813742,
+        "countries": [
+            "south_georgia_and_the_south_sandwich_islands"
+        ]
+    },
+    {
+        "x": 108,
+        "y": 180,
+        "left": -28.125,
+        "top": -58.813742,
+        "right": -26.71875,
+        "bottom": -59.534318,
+        "countries": [
+            "south_georgia_and_the_south_sandwich_islands"
+        ]
+    },
+    {
+        "x": 109,
+        "y": 180,
+        "left": -26.71875,
+        "top": -58.813742,
+        "right": -25.3125,
+        "bottom": -59.534318,
+        "countries": [
+            "south_georgia_and_the_south_sandwich_islands"
+        ]
+    }
+]

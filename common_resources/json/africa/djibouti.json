@@ -1,0 +1,67 @@
+[
+    {
+        "x": 158,
+        "y": 118,
+        "left": 42.1875,
+        "top": 13.923404,
+        "right": 43.59375,
+        "bottom": 12.554564,
+        "countries": [
+            "yemen",
+            "ethiopia",
+            "djibouti",
+            "eritrea"
+        ]
+    },
+    {
+        "x": 157,
+        "y": 119,
+        "left": 40.78125,
+        "top": 12.554564,
+        "right": 42.1875,
+        "bottom": 11.178402,
+        "countries": [
+            "ethiopia",
+            "djibouti"
+        ]
+    },
+    {
+        "x": 158,
+        "y": 119,
+        "left": 42.1875,
+        "top": 12.554564,
+        "right": 43.59375,
+        "bottom": 11.178402,
+        "countries": [
+            "somalia",
+            "ethiopia",
+            "djibouti",
+            "eritrea"
+        ]
+    },
+    {
+        "x": 157,
+        "y": 120,
+        "left": 40.78125,
+        "top": 11.178402,
+        "right": 42.1875,
+        "bottom": 9.795678,
+        "countries": [
+            "ethiopia",
+            "djibouti"
+        ]
+    },
+    {
+        "x": 158,
+        "y": 120,
+        "left": 42.1875,
+        "top": 11.178402,
+        "right": 43.59375,
+        "bottom": 9.795678,
+        "countries": [
+            "somalia",
+            "ethiopia",
+            "djibouti"
+        ]
+    }
+]

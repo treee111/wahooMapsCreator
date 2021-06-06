@@ -1,0 +1,75 @@
+[
+    {
+        "x": 63,
+        "y": 117,
+        "left": -91.40625,
+        "top": 15.284185,
+        "right": -90.0,
+        "bottom": 13.923404,
+        "countries": [
+            "el_salvador",
+            "guatemala"
+        ]
+    },
+    {
+        "x": 64,
+        "y": 117,
+        "left": -90.0,
+        "top": 15.284185,
+        "right": -88.59375,
+        "bottom": 13.923404,
+        "countries": [
+            "el_salvador",
+            "guatemala",
+            "honduras"
+        ]
+    },
+    {
+        "x": 65,
+        "y": 117,
+        "left": -88.59375,
+        "top": 15.284185,
+        "right": -87.1875,
+        "bottom": 13.923404,
+        "countries": [
+            "el_salvador",
+            "honduras"
+        ]
+    },
+    {
+        "x": 63,
+        "y": 118,
+        "left": -91.40625,
+        "top": 13.923404,
+        "right": -90.0,
+        "bottom": 12.554564,
+        "countries": [
+            "el_salvador",
+            "guatemala"
+        ]
+    },
+    {
+        "x": 64,
+        "y": 118,
+        "left": -90.0,
+        "top": 13.923404,
+        "right": -88.59375,
+        "bottom": 12.554564,
+        "countries": [
+            "el_salvador"
+        ]
+    },
+    {
+        "x": 65,
+        "y": 118,
+        "left": -88.59375,
+        "top": 13.923404,
+        "right": -87.1875,
+        "bottom": 12.554564,
+        "countries": [
+            "el_salvador",
+            "honduras",
+            "nicaragua"
+        ]
+    }
+]

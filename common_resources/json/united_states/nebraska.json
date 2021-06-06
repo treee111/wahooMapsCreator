@@ -1,0 +1,223 @@
+[
+    {
+        "x": 54,
+        "y": 95,
+        "left": -104.0625,
+        "top": 42.032974,
+        "right": -102.65625,
+        "bottom": 40.979898,
+        "countries": [
+            "nebraska",
+            "colorado",
+            "wyoming"
+        ]
+    },
+    {
+        "x": 55,
+        "y": 95,
+        "left": -102.65625,
+        "top": 42.032974,
+        "right": -101.25,
+        "bottom": 40.979898,
+        "countries": [
+            "nebraska",
+            "colorado"
+        ]
+    },
+    {
+        "x": 55,
+        "y": 96,
+        "left": -102.65625,
+        "top": 40.979898,
+        "right": -101.25,
+        "bottom": 39.909736,
+        "countries": [
+            "nebraska",
+            "kansas",
+            "colorado"
+        ]
+    },
+    {
+        "x": 59,
+        "y": 94,
+        "left": -97.03125,
+        "top": 43.068888,
+        "right": -95.625,
+        "bottom": 42.032974,
+        "countries": [
+            "iowa",
+            "south_dakota",
+            "nebraska"
+        ]
+    },
+    {
+        "x": 59,
+        "y": 95,
+        "left": -97.03125,
+        "top": 42.032974,
+        "right": -95.625,
+        "bottom": 40.979898,
+        "countries": [
+            "iowa",
+            "nebraska"
+        ]
+    },
+    {
+        "x": 59,
+        "y": 96,
+        "left": -97.03125,
+        "top": 40.979898,
+        "right": -95.625,
+        "bottom": 39.909736,
+        "countries": [
+            "iowa",
+            "nebraska",
+            "missouri",
+            "kansas"
+        ]
+    },
+    {
+        "x": 60,
+        "y": 96,
+        "left": -95.625,
+        "top": 40.979898,
+        "right": -94.21875,
+        "bottom": 39.909736,
+        "countries": [
+            "iowa",
+            "nebraska",
+            "missouri",
+            "kansas"
+        ]
+    },
+    {
+        "x": 56,
+        "y": 96,
+        "left": -101.25,
+        "top": 40.979898,
+        "right": -99.84375,
+        "bottom": 39.909736,
+        "countries": [
+            "kansas",
+            "nebraska"
+        ]
+    },
+    {
+        "x": 57,
+        "y": 96,
+        "left": -99.84375,
+        "top": 40.979898,
+        "right": -98.4375,
+        "bottom": 39.909736,
+        "countries": [
+            "kansas",
+            "nebraska"
+        ]
+    },
+    {
+        "x": 58,
+        "y": 96,
+        "left": -98.4375,
+        "top": 40.979898,
+        "right": -97.03125,
+        "bottom": 39.909736,
+        "countries": [
+            "kansas",
+            "nebraska"
+        ]
+    },
+    {
+        "x": 54,
+        "y": 94,
+        "left": -104.0625,
+        "top": 43.068888,
+        "right": -102.65625,
+        "bottom": 42.032974,
+        "countries": [
+            "south_dakota",
+            "nebraska",
+            "wyoming"
+        ]
+    },
+    {
+        "x": 55,
+        "y": 94,
+        "left": -102.65625,
+        "top": 43.068888,
+        "right": -101.25,
+        "bottom": 42.032974,
+        "countries": [
+            "south_dakota",
+            "nebraska"
+        ]
+    },
+    {
+        "x": 56,
+        "y": 94,
+        "left": -101.25,
+        "top": 43.068888,
+        "right": -99.84375,
+        "bottom": 42.032974,
+        "countries": [
+            "south_dakota",
+            "nebraska"
+        ]
+    },
+    {
+        "x": 57,
+        "y": 94,
+        "left": -99.84375,
+        "top": 43.068888,
+        "right": -98.4375,
+        "bottom": 42.032974,
+        "countries": [
+            "south_dakota",
+            "nebraska"
+        ]
+    },
+    {
+        "x": 58,
+        "y": 94,
+        "left": -98.4375,
+        "top": 43.068888,
+        "right": -97.03125,
+        "bottom": 42.032974,
+        "countries": [
+            "south_dakota",
+            "nebraska"
+        ]
+    },
+    {
+        "x": 56,
+        "y": 95,
+        "left": -101.25,
+        "top": 42.032974,
+        "right": -99.84375,
+        "bottom": 40.979898,
+        "countries": [
+            "nebraska"
+        ]
+    },
+    {
+        "x": 57,
+        "y": 95,
+        "left": -99.84375,
+        "top": 42.032974,
+        "right": -98.4375,
+        "bottom": 40.979898,
+        "countries": [
+            "nebraska"
+        ]
+    },
+    {
+        "x": 58,
+        "y": 95,
+        "left": -98.4375,
+        "top": 42.032974,
+        "right": -97.03125,
+        "bottom": 40.979898,
+        "countries": [
+            "nebraska"
+        ]
+    }
+]

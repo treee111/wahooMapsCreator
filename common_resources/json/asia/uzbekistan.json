@@ -1,0 +1,722 @@
+[
+    {
+        "x": 175,
+        "y": 99,
+        "left": 66.09375,
+        "top": 37.71859,
+        "right": 67.5,
+        "bottom": 36.597889,
+        "countries": [
+            "afghanistan",
+            "turkmenistan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 176,
+        "y": 99,
+        "left": 67.5,
+        "top": 37.71859,
+        "right": 68.90625,
+        "bottom": 36.597889,
+        "countries": [
+            "afghanistan",
+            "tajikistan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 180,
+        "y": 96,
+        "left": 73.125,
+        "top": 40.979898,
+        "right": 74.53125,
+        "bottom": 39.909736,
+        "countries": [
+            "uzbekistan",
+            "china",
+            "kyrgyzstan"
+        ]
+    },
+    {
+        "x": 168,
+        "y": 91,
+        "left": 56.25,
+        "top": 46.073231,
+        "right": 57.65625,
+        "bottom": 45.089036,
+        "countries": [
+            "kazakhstan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 169,
+        "y": 91,
+        "left": 57.65625,
+        "top": 46.073231,
+        "right": 59.0625,
+        "bottom": 45.089036,
+        "countries": [
+            "kazakhstan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 170,
+        "y": 91,
+        "left": 59.0625,
+        "top": 46.073231,
+        "right": 60.46875,
+        "bottom": 45.089036,
+        "countries": [
+            "kazakhstan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 167,
+        "y": 92,
+        "left": 54.84375,
+        "top": 45.089036,
+        "right": 56.25,
+        "bottom": 44.087585,
+        "countries": [
+            "kazakhstan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 168,
+        "y": 92,
+        "left": 56.25,
+        "top": 45.089036,
+        "right": 57.65625,
+        "bottom": 44.087585,
+        "countries": [
+            "kazakhstan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 171,
+        "y": 92,
+        "left": 60.46875,
+        "top": 45.089036,
+        "right": 61.875,
+        "bottom": 44.087585,
+        "countries": [
+            "kazakhstan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 167,
+        "y": 93,
+        "left": 54.84375,
+        "top": 44.087585,
+        "right": 56.25,
+        "bottom": 43.068888,
+        "countries": [
+            "kazakhstan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 171,
+        "y": 93,
+        "left": 60.46875,
+        "top": 44.087585,
+        "right": 61.875,
+        "bottom": 43.068888,
+        "countries": [
+            "kazakhstan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 172,
+        "y": 93,
+        "left": 61.875,
+        "top": 44.087585,
+        "right": 63.28125,
+        "bottom": 43.068888,
+        "countries": [
+            "kazakhstan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 173,
+        "y": 93,
+        "left": 63.28125,
+        "top": 44.087585,
+        "right": 64.6875,
+        "bottom": 43.068888,
+        "countries": [
+            "kazakhstan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 174,
+        "y": 93,
+        "left": 64.6875,
+        "top": 44.087585,
+        "right": 66.09375,
+        "bottom": 43.068888,
+        "countries": [
+            "kazakhstan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 167,
+        "y": 94,
+        "left": 54.84375,
+        "top": 43.068888,
+        "right": 56.25,
+        "bottom": 42.032974,
+        "countries": [
+            "kazakhstan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 174,
+        "y": 94,
+        "left": 64.6875,
+        "top": 43.068888,
+        "right": 66.09375,
+        "bottom": 42.032974,
+        "countries": [
+            "kazakhstan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 175,
+        "y": 94,
+        "left": 66.09375,
+        "top": 43.068888,
+        "right": 67.5,
+        "bottom": 42.032974,
+        "countries": [
+            "kazakhstan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 178,
+        "y": 94,
+        "left": 70.3125,
+        "top": 43.068888,
+        "right": 71.71875,
+        "bottom": 42.032974,
+        "countries": [
+            "kazakhstan",
+            "uzbekistan",
+            "kyrgyzstan"
+        ]
+    },
+    {
+        "x": 167,
+        "y": 95,
+        "left": 54.84375,
+        "top": 42.032974,
+        "right": 56.25,
+        "bottom": 40.979898,
+        "countries": [
+            "turkmenistan",
+            "kazakhstan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 174,
+        "y": 95,
+        "left": 64.6875,
+        "top": 42.032974,
+        "right": 66.09375,
+        "bottom": 40.979898,
+        "countries": [
+            "kazakhstan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 175,
+        "y": 95,
+        "left": 66.09375,
+        "top": 42.032974,
+        "right": 67.5,
+        "bottom": 40.979898,
+        "countries": [
+            "kazakhstan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 176,
+        "y": 95,
+        "left": 67.5,
+        "top": 42.032974,
+        "right": 68.90625,
+        "bottom": 40.979898,
+        "countries": [
+            "kazakhstan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 177,
+        "y": 95,
+        "left": 68.90625,
+        "top": 42.032974,
+        "right": 70.3125,
+        "bottom": 40.979898,
+        "countries": [
+            "kazakhstan",
+            "uzbekistan",
+            "kyrgyzstan"
+        ]
+    },
+    {
+        "x": 178,
+        "y": 95,
+        "left": 70.3125,
+        "top": 42.032974,
+        "right": 71.71875,
+        "bottom": 40.979898,
+        "countries": [
+            "kazakhstan",
+            "tajikistan",
+            "uzbekistan",
+            "kyrgyzstan"
+        ]
+    },
+    {
+        "x": 176,
+        "y": 96,
+        "left": 67.5,
+        "top": 40.979898,
+        "right": 68.90625,
+        "bottom": 39.909736,
+        "countries": [
+            "kazakhstan",
+            "tajikistan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 179,
+        "y": 95,
+        "left": 71.71875,
+        "top": 42.032974,
+        "right": 73.125,
+        "bottom": 40.979898,
+        "countries": [
+            "uzbekistan",
+            "kyrgyzstan"
+        ]
+    },
+    {
+        "x": 177,
+        "y": 96,
+        "left": 68.90625,
+        "top": 40.979898,
+        "right": 70.3125,
+        "bottom": 39.909736,
+        "countries": [
+            "tajikistan",
+            "uzbekistan",
+            "kyrgyzstan"
+        ]
+    },
+    {
+        "x": 178,
+        "y": 96,
+        "left": 70.3125,
+        "top": 40.979898,
+        "right": 71.71875,
+        "bottom": 39.909736,
+        "countries": [
+            "tajikistan",
+            "uzbekistan",
+            "kyrgyzstan"
+        ]
+    },
+    {
+        "x": 179,
+        "y": 96,
+        "left": 71.71875,
+        "top": 40.979898,
+        "right": 73.125,
+        "bottom": 39.909736,
+        "countries": [
+            "uzbekistan",
+            "kyrgyzstan"
+        ]
+    },
+    {
+        "x": 177,
+        "y": 97,
+        "left": 68.90625,
+        "top": 39.909736,
+        "right": 70.3125,
+        "bottom": 38.822591,
+        "countries": [
+            "tajikistan",
+            "uzbekistan",
+            "kyrgyzstan"
+        ]
+    },
+    {
+        "x": 178,
+        "y": 97,
+        "left": 70.3125,
+        "top": 39.909736,
+        "right": 71.71875,
+        "bottom": 38.822591,
+        "countries": [
+            "tajikistan",
+            "uzbekistan",
+            "kyrgyzstan"
+        ]
+    },
+    {
+        "x": 175,
+        "y": 97,
+        "left": 66.09375,
+        "top": 39.909736,
+        "right": 67.5,
+        "bottom": 38.822591,
+        "countries": [
+            "tajikistan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 176,
+        "y": 97,
+        "left": 67.5,
+        "top": 39.909736,
+        "right": 68.90625,
+        "bottom": 38.822591,
+        "countries": [
+            "tajikistan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 176,
+        "y": 98,
+        "left": 67.5,
+        "top": 38.822591,
+        "right": 68.90625,
+        "bottom": 37.71859,
+        "countries": [
+            "tajikistan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 168,
+        "y": 94,
+        "left": 56.25,
+        "top": 43.068888,
+        "right": 57.65625,
+        "bottom": 42.032974,
+        "countries": [
+            "turkmenistan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 169,
+        "y": 94,
+        "left": 57.65625,
+        "top": 43.068888,
+        "right": 59.0625,
+        "bottom": 42.032974,
+        "countries": [
+            "turkmenistan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 170,
+        "y": 94,
+        "left": 59.0625,
+        "top": 43.068888,
+        "right": 60.46875,
+        "bottom": 42.032974,
+        "countries": [
+            "turkmenistan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 168,
+        "y": 95,
+        "left": 56.25,
+        "top": 42.032974,
+        "right": 57.65625,
+        "bottom": 40.979898,
+        "countries": [
+            "turkmenistan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 170,
+        "y": 95,
+        "left": 59.0625,
+        "top": 42.032974,
+        "right": 60.46875,
+        "bottom": 40.979898,
+        "countries": [
+            "turkmenistan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 171,
+        "y": 95,
+        "left": 60.46875,
+        "top": 42.032974,
+        "right": 61.875,
+        "bottom": 40.979898,
+        "countries": [
+            "turkmenistan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 172,
+        "y": 95,
+        "left": 61.875,
+        "top": 42.032974,
+        "right": 63.28125,
+        "bottom": 40.979898,
+        "countries": [
+            "turkmenistan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 172,
+        "y": 96,
+        "left": 61.875,
+        "top": 40.979898,
+        "right": 63.28125,
+        "bottom": 39.909736,
+        "countries": [
+            "turkmenistan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 172,
+        "y": 97,
+        "left": 61.875,
+        "top": 39.909736,
+        "right": 63.28125,
+        "bottom": 38.822591,
+        "countries": [
+            "turkmenistan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 173,
+        "y": 97,
+        "left": 63.28125,
+        "top": 39.909736,
+        "right": 64.6875,
+        "bottom": 38.822591,
+        "countries": [
+            "turkmenistan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 173,
+        "y": 98,
+        "left": 63.28125,
+        "top": 38.822591,
+        "right": 64.6875,
+        "bottom": 37.71859,
+        "countries": [
+            "turkmenistan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 174,
+        "y": 98,
+        "left": 64.6875,
+        "top": 38.822591,
+        "right": 66.09375,
+        "bottom": 37.71859,
+        "countries": [
+            "turkmenistan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 175,
+        "y": 98,
+        "left": 66.09375,
+        "top": 38.822591,
+        "right": 67.5,
+        "bottom": 37.71859,
+        "countries": [
+            "turkmenistan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 169,
+        "y": 92,
+        "left": 57.65625,
+        "top": 45.089036,
+        "right": 59.0625,
+        "bottom": 44.087585,
+        "countries": [
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 170,
+        "y": 92,
+        "left": 59.0625,
+        "top": 45.089036,
+        "right": 60.46875,
+        "bottom": 44.087585,
+        "countries": [
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 168,
+        "y": 93,
+        "left": 56.25,
+        "top": 44.087585,
+        "right": 57.65625,
+        "bottom": 43.068888,
+        "countries": [
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 169,
+        "y": 93,
+        "left": 57.65625,
+        "top": 44.087585,
+        "right": 59.0625,
+        "bottom": 43.068888,
+        "countries": [
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 170,
+        "y": 93,
+        "left": 59.0625,
+        "top": 44.087585,
+        "right": 60.46875,
+        "bottom": 43.068888,
+        "countries": [
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 171,
+        "y": 94,
+        "left": 60.46875,
+        "top": 43.068888,
+        "right": 61.875,
+        "bottom": 42.032974,
+        "countries": [
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 172,
+        "y": 94,
+        "left": 61.875,
+        "top": 43.068888,
+        "right": 63.28125,
+        "bottom": 42.032974,
+        "countries": [
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 173,
+        "y": 94,
+        "left": 63.28125,
+        "top": 43.068888,
+        "right": 64.6875,
+        "bottom": 42.032974,
+        "countries": [
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 173,
+        "y": 95,
+        "left": 63.28125,
+        "top": 42.032974,
+        "right": 64.6875,
+        "bottom": 40.979898,
+        "countries": [
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 173,
+        "y": 96,
+        "left": 63.28125,
+        "top": 40.979898,
+        "right": 64.6875,
+        "bottom": 39.909736,
+        "countries": [
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 174,
+        "y": 96,
+        "left": 64.6875,
+        "top": 40.979898,
+        "right": 66.09375,
+        "bottom": 39.909736,
+        "countries": [
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 175,
+        "y": 96,
+        "left": 66.09375,
+        "top": 40.979898,
+        "right": 67.5,
+        "bottom": 39.909736,
+        "countries": [
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 174,
+        "y": 97,
+        "left": 64.6875,
+        "top": 39.909736,
+        "right": 66.09375,
+        "bottom": 38.822591,
+        "countries": [
+            "uzbekistan"
+        ]
+    }
+]

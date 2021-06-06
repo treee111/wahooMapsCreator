@@ -1,0 +1,145 @@
+[
+    {
+        "x": 15,
+        "y": 134,
+        "left": -158.90625,
+        "top": -8.407168,
+        "right": -157.5,
+        "bottom": -9.795678,
+        "countries": [
+            "cook_islands"
+        ]
+    },
+    {
+        "x": 10,
+        "y": 135,
+        "left": -165.9375,
+        "top": -9.795678,
+        "right": -164.53125,
+        "bottom": -11.178402,
+        "countries": [
+            "cook_islands"
+        ]
+    },
+    {
+        "x": 13,
+        "y": 135,
+        "left": -161.71875,
+        "top": -9.795678,
+        "right": -160.3125,
+        "bottom": -11.178402,
+        "countries": [
+            "cook_islands"
+        ]
+    },
+    {
+        "x": 10,
+        "y": 136,
+        "left": -165.9375,
+        "top": -11.178402,
+        "right": -164.53125,
+        "bottom": -12.554564,
+        "countries": [
+            "cook_islands"
+        ]
+    },
+    {
+        "x": 11,
+        "y": 137,
+        "left": -164.53125,
+        "top": -12.554564,
+        "right": -163.125,
+        "bottom": -13.923404,
+        "countries": [
+            "cook_islands"
+        ]
+    },
+    {
+        "x": 12,
+        "y": 137,
+        "left": -163.125,
+        "top": -12.554564,
+        "right": -161.71875,
+        "bottom": -13.923404,
+        "countries": [
+            "cook_islands"
+        ]
+    },
+    {
+        "x": 14,
+        "y": 141,
+        "left": -160.3125,
+        "top": -17.978733,
+        "right": -158.90625,
+        "bottom": -19.311143,
+        "countries": [
+            "cook_islands"
+        ]
+    },
+    {
+        "x": 15,
+        "y": 141,
+        "left": -158.90625,
+        "top": -17.978733,
+        "right": -157.5,
+        "bottom": -19.311143,
+        "countries": [
+            "cook_islands"
+        ]
+    },
+    {
+        "x": 15,
+        "y": 142,
+        "left": -158.90625,
+        "top": -19.311143,
+        "right": -157.5,
+        "bottom": -20.632784,
+        "countries": [
+            "cook_islands"
+        ]
+    },
+    {
+        "x": 16,
+        "y": 142,
+        "left": -157.5,
+        "top": -19.311143,
+        "right": -156.09375,
+        "bottom": -20.632784,
+        "countries": [
+            "cook_islands"
+        ]
+    },
+    {
+        "x": 14,
+        "y": 143,
+        "left": -160.3125,
+        "top": -20.632784,
+        "right": -158.90625,
+        "bottom": -21.943046,
+        "countries": [
+            "cook_islands"
+        ]
+    },
+    {
+        "x": 15,
+        "y": 143,
+        "left": -158.90625,
+        "top": -20.632784,
+        "right": -157.5,
+        "bottom": -21.943046,
+        "countries": [
+            "cook_islands"
+        ]
+    },
+    {
+        "x": 15,
+        "y": 144,
+        "left": -158.90625,
+        "top": -21.943046,
+        "right": -157.5,
+        "bottom": -23.241346,
+        "countries": [
+            "cook_islands"
+        ]
+    }
+]

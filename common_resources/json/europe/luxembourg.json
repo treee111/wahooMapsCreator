@@ -1,0 +1,29 @@
+[
+    {
+        "x": 132,
+        "y": 86,
+        "left": 5.625,
+        "top": 50.736455,
+        "right": 7.03125,
+        "bottom": 49.837982,
+        "countries": [
+            "luxembourg",
+            "belgium",
+            "germany"
+        ]
+    },
+    {
+        "x": 132,
+        "y": 87,
+        "left": 5.625,
+        "top": 49.837982,
+        "right": 7.03125,
+        "bottom": 48.922499,
+        "countries": [
+            "luxembourg",
+            "france",
+            "belgium",
+            "germany"
+        ]
+    }
+]

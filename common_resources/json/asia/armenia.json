@@ -1,0 +1,119 @@
+[
+    {
+        "x": 158,
+        "y": 95,
+        "left": 42.1875,
+        "top": 42.032974,
+        "right": 43.59375,
+        "bottom": 40.979898,
+        "countries": [
+            "georgia",
+            "armenia",
+            "turkey"
+        ]
+    },
+    {
+        "x": 159,
+        "y": 95,
+        "left": 43.59375,
+        "top": 42.032974,
+        "right": 45.0,
+        "bottom": 40.979898,
+        "countries": [
+            "georgia",
+            "azerbaijan",
+            "armenia",
+            "turkey"
+        ]
+    },
+    {
+        "x": 160,
+        "y": 95,
+        "left": 45.0,
+        "top": 42.032974,
+        "right": 46.40625,
+        "bottom": 40.979898,
+        "countries": [
+            "georgia",
+            "azerbaijan",
+            "armenia",
+            "russia"
+        ]
+    },
+    {
+        "x": 158,
+        "y": 96,
+        "left": 42.1875,
+        "top": 40.979898,
+        "right": 43.59375,
+        "bottom": 39.909736,
+        "countries": [
+            "armenia",
+            "turkey"
+        ]
+    },
+    {
+        "x": 159,
+        "y": 96,
+        "left": 43.59375,
+        "top": 40.979898,
+        "right": 45.0,
+        "bottom": 39.909736,
+        "countries": [
+            "armenia",
+            "turkey"
+        ]
+    },
+    {
+        "x": 160,
+        "y": 96,
+        "left": 45.0,
+        "top": 40.979898,
+        "right": 46.40625,
+        "bottom": 39.909736,
+        "countries": [
+            "azerbaijan",
+            "armenia"
+        ]
+    },
+    {
+        "x": 159,
+        "y": 97,
+        "left": 43.59375,
+        "top": 39.909736,
+        "right": 45.0,
+        "bottom": 38.822591,
+        "countries": [
+            "iran",
+            "azerbaijan",
+            "armenia",
+            "turkey"
+        ]
+    },
+    {
+        "x": 160,
+        "y": 97,
+        "left": 45.0,
+        "top": 39.909736,
+        "right": 46.40625,
+        "bottom": 38.822591,
+        "countries": [
+            "iran",
+            "azerbaijan",
+            "armenia"
+        ]
+    },
+    {
+        "x": 161,
+        "y": 97,
+        "left": 46.40625,
+        "top": 39.909736,
+        "right": 47.8125,
+        "bottom": 38.822591,
+        "countries": [
+            "iran",
+            "azerbaijan",
+            "armenia"
+        ]
+    }
+]

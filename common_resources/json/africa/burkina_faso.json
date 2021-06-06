@@ -1,0 +1,293 @@
+[
+    {
+        "x": 128,
+        "y": 119,
+        "left": 0.0,
+        "top": 12.554564,
+        "right": 1.40625,
+        "bottom": 11.178402,
+        "countries": [
+            "benin",
+            "burkina_faso"
+        ]
+    },
+    {
+        "x": 129,
+        "y": 119,
+        "left": 1.40625,
+        "top": 12.554564,
+        "right": 2.8125,
+        "bottom": 11.178402,
+        "countries": [
+            "benin",
+            "burkina_faso",
+            "niger"
+        ]
+    },
+    {
+        "x": 128,
+        "y": 120,
+        "left": 0.0,
+        "top": 11.178402,
+        "right": 1.40625,
+        "bottom": 9.795678,
+        "countries": [
+            "benin",
+            "togo",
+            "burkina_faso",
+            "ghana"
+        ]
+    },
+    {
+        "x": 125,
+        "y": 117,
+        "left": -4.21875,
+        "top": 15.284185,
+        "right": -2.8125,
+        "bottom": 13.923404,
+        "countries": [
+            "burkina_faso",
+            "mali"
+        ]
+    },
+    {
+        "x": 126,
+        "y": 117,
+        "left": -2.8125,
+        "top": 15.284185,
+        "right": -1.40625,
+        "bottom": 13.923404,
+        "countries": [
+            "burkina_faso",
+            "mali"
+        ]
+    },
+    {
+        "x": 127,
+        "y": 117,
+        "left": -1.40625,
+        "top": 15.284185,
+        "right": 0.0,
+        "bottom": 13.923404,
+        "countries": [
+            "burkina_faso",
+            "mali"
+        ]
+    },
+    {
+        "x": 128,
+        "y": 117,
+        "left": 0.0,
+        "top": 15.284185,
+        "right": 1.40625,
+        "bottom": 13.923404,
+        "countries": [
+            "burkina_faso",
+            "niger",
+            "mali"
+        ]
+    },
+    {
+        "x": 124,
+        "y": 118,
+        "left": -5.625,
+        "top": 13.923404,
+        "right": -4.21875,
+        "bottom": 12.554564,
+        "countries": [
+            "burkina_faso",
+            "mali"
+        ]
+    },
+    {
+        "x": 125,
+        "y": 118,
+        "left": -4.21875,
+        "top": 13.923404,
+        "right": -2.8125,
+        "bottom": 12.554564,
+        "countries": [
+            "burkina_faso",
+            "mali"
+        ]
+    },
+    {
+        "x": 126,
+        "y": 118,
+        "left": -2.8125,
+        "top": 13.923404,
+        "right": -1.40625,
+        "bottom": 12.554564,
+        "countries": [
+            "burkina_faso"
+        ]
+    },
+    {
+        "x": 127,
+        "y": 118,
+        "left": -1.40625,
+        "top": 13.923404,
+        "right": 0.0,
+        "bottom": 12.554564,
+        "countries": [
+            "burkina_faso"
+        ]
+    },
+    {
+        "x": 128,
+        "y": 118,
+        "left": 0.0,
+        "top": 13.923404,
+        "right": 1.40625,
+        "bottom": 12.554564,
+        "countries": [
+            "burkina_faso",
+            "niger"
+        ]
+    },
+    {
+        "x": 129,
+        "y": 118,
+        "left": 1.40625,
+        "top": 13.923404,
+        "right": 2.8125,
+        "bottom": 12.554564,
+        "countries": [
+            "burkina_faso",
+            "niger"
+        ]
+    },
+    {
+        "x": 124,
+        "y": 119,
+        "left": -5.625,
+        "top": 12.554564,
+        "right": -4.21875,
+        "bottom": 11.178402,
+        "countries": [
+            "burkina_faso",
+            "mali"
+        ]
+    },
+    {
+        "x": 125,
+        "y": 119,
+        "left": -4.21875,
+        "top": 12.554564,
+        "right": -2.8125,
+        "bottom": 11.178402,
+        "countries": [
+            "burkina_faso"
+        ]
+    },
+    {
+        "x": 126,
+        "y": 119,
+        "left": -2.8125,
+        "top": 12.554564,
+        "right": -1.40625,
+        "bottom": 11.178402,
+        "countries": [
+            "burkina_faso"
+        ]
+    },
+    {
+        "x": 127,
+        "y": 119,
+        "left": -1.40625,
+        "top": 12.554564,
+        "right": 0.0,
+        "bottom": 11.178402,
+        "countries": [
+            "burkina_faso"
+        ]
+    },
+    {
+        "x": 124,
+        "y": 120,
+        "left": -5.625,
+        "top": 11.178402,
+        "right": -4.21875,
+        "bottom": 9.795678,
+        "countries": [
+            "cote_d_ivoire",
+            "burkina_faso",
+            "mali"
+        ]
+    },
+    {
+        "x": 125,
+        "y": 120,
+        "left": -4.21875,
+        "top": 11.178402,
+        "right": -2.8125,
+        "bottom": 9.795678,
+        "countries": [
+            "cote_d_ivoire",
+            "burkina_faso",
+            "ghana"
+        ]
+    },
+    {
+        "x": 126,
+        "y": 120,
+        "left": -2.8125,
+        "top": 11.178402,
+        "right": -1.40625,
+        "bottom": 9.795678,
+        "countries": [
+            "burkina_faso",
+            "ghana"
+        ]
+    },
+    {
+        "x": 127,
+        "y": 120,
+        "left": -1.40625,
+        "top": 11.178402,
+        "right": 0.0,
+        "bottom": 9.795678,
+        "countries": [
+            "togo",
+            "burkina_faso",
+            "ghana"
+        ]
+    },
+    {
+        "x": 124,
+        "y": 121,
+        "left": -5.625,
+        "top": 9.795678,
+        "right": -4.21875,
+        "bottom": 8.407168,
+        "countries": [
+            "cote_d_ivoire",
+            "burkina_faso"
+        ]
+    },
+    {
+        "x": 125,
+        "y": 121,
+        "left": -4.21875,
+        "top": 9.795678,
+        "right": -2.8125,
+        "bottom": 8.407168,
+        "countries": [
+            "cote_d_ivoire",
+            "burkina_faso"
+        ]
+    },
+    {
+        "x": 126,
+        "y": 121,
+        "left": -2.8125,
+        "top": 9.795678,
+        "right": -1.40625,
+        "bottom": 8.407168,
+        "countries": [
+            "cote_d_ivoire",
+            "burkina_faso",
+            "ghana"
+        ]
+    }
+]

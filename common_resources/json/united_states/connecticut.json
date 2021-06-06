@@ -1,0 +1,57 @@
+[
+    {
+        "x": 75,
+        "y": 94,
+        "left": -74.53125,
+        "top": 43.068888,
+        "right": -73.125,
+        "bottom": 42.032974,
+        "countries": [
+            "connecticut",
+            "new_york",
+            "vermont",
+            "massachusetts"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 94,
+        "left": -73.125,
+        "top": 43.068888,
+        "right": -71.71875,
+        "bottom": 42.032974,
+        "countries": [
+            "connecticut",
+            "vermont",
+            "massachusetts",
+            "new_hampshire"
+        ]
+    },
+    {
+        "x": 75,
+        "y": 95,
+        "left": -74.53125,
+        "top": 42.032974,
+        "right": -73.125,
+        "bottom": 40.979898,
+        "countries": [
+            "connecticut",
+            "new_jersey",
+            "new_york"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 95,
+        "left": -73.125,
+        "top": 42.032974,
+        "right": -71.71875,
+        "bottom": 40.979898,
+        "countries": [
+            "connecticut",
+            "new_york",
+            "rhode_island",
+            "massachusetts"
+        ]
+    }
+]

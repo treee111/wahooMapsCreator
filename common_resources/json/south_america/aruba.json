@@ -1,0 +1,26 @@
+[
+    {
+        "x": 78,
+        "y": 118,
+        "left": -70.3125,
+        "top": 13.923404,
+        "right": -68.90625,
+        "bottom": 12.554564,
+        "countries": [
+            "aruba"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 119,
+        "left": -70.3125,
+        "top": 12.554564,
+        "right": -68.90625,
+        "bottom": 11.178402,
+        "countries": [
+            "curacao",
+            "venezuela",
+            "aruba"
+        ]
+    }
+]

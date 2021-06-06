@@ -23,7 +23,7 @@ class OSM_Maps:
 
 
     def __init__(self, inputFile, Max_Days_Old, Force_Processing, workers, threads, Save_Cruiser):
-        self.inputFileWithPath = inputFile
+        self.inputArgument1 = inputFile
         self.region = constants_functions.getRegionOfCountry(inputFile)
         self.Max_Days_Old = Max_Days_Old
         self.Force_Processing = Force_Processing
@@ -39,15 +39,16 @@ class OSM_Maps:
     def readJsonFile(self):
         print('\n# Read json file')
 
-        # Windows
-        if platform.system() == "Windows":
-            with open(os.path.join ('json', self.region, self.inputFileWithPath + '.json')) as f:
-                self.tilesFromJson = json.load(f)
-                f.close()
-        # Non-Windows
+        # option 1: have a .json file as input parameter
+        if os.path.isfile(self.inputArgument1):
+            jsonFilePath = self.inputArgument1
+        # option 2: input a country as parameter, e.g. germany
         else:
-            with open(sys.argv[1]) as f:
-                self.tilesFromJson = json.load(f)
+            jsonFilePath = os.path.join (file_directory_functions.COMMON_DIR, 'json', self.region, self.inputArgument1 + '.json')
+        
+        with open(jsonFilePath) as f:
+            self.tilesFromJson = json.load(f)
+            f.close()
         if self.tilesFromJson == '' :
             print ('! Json file could not be opened.')
             sys.exit()
@@ -141,7 +142,6 @@ class OSM_Maps:
         # time.sleep(60)
 
         file_directory_functions.createEmptyDirectories(self.tilesFromJson)
-
 
         for country in border_countries:
             print(f'+ Checking mapfile for {country}')

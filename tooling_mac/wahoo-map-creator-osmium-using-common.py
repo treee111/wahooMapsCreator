@@ -63,7 +63,7 @@ x.checkAndDownloadLandPoligonsFile()
 x.checkAndDownloadOsmPbfFile()
 
 # Filter tags from country osm.pbf files'
-x.filterTagsFromCountryOsmPbdFiles()
+x.filterTagsFromCountryOsmPbfFiles()
 
 # Generate land
 x.generateLand()

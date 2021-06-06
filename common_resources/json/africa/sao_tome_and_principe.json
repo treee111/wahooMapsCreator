@@ -1,0 +1,46 @@
+[
+    {
+        "x": 133,
+        "y": 126,
+        "left": 7.03125,
+        "top": 2.811371,
+        "right": 8.4375,
+        "bottom": 1.406109,
+        "countries": [
+            "sao_tome_and_principe"
+        ]
+    },
+    {
+        "x": 132,
+        "y": 127,
+        "left": 5.625,
+        "top": 1.406109,
+        "right": 7.03125,
+        "bottom": 0.0,
+        "countries": [
+            "sao_tome_and_principe"
+        ]
+    },
+    {
+        "x": 133,
+        "y": 127,
+        "left": 7.03125,
+        "top": 1.406109,
+        "right": 8.4375,
+        "bottom": 0.0,
+        "countries": [
+            "sao_tome_and_principe"
+        ]
+    },
+    {
+        "x": 132,
+        "y": 128,
+        "left": 5.625,
+        "top": 0.0,
+        "right": 7.03125,
+        "bottom": -1.406109,
+        "countries": [
+            "sao_tome_and_principe"
+        ]
+    }
+]

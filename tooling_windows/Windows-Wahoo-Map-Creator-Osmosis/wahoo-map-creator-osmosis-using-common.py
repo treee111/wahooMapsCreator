@@ -46,18 +46,6 @@ workers = '1'
 
 ########### End of Configurable Parameters
 
-CurDir = os.getcwd() # Current Directory
-
-MAP_PATH = os.path.join (CurDir, 'Maps')
-OUT_PATH = os.path.join (CurDir, 'Output')
-land_polygons_file = os.path.join (CurDir, 'land-polygons-split-4326', 'land_polygons.shp')
-url = ''
-
-# Tags to keep
-filtered_tags = 'access= admin_level= aerialway= aeroway= barrier= boundary= bridge= highway= natural= oneway= place= railway= tracktype= tunnel= waterway='
-
-
-
 if len(sys.argv) != 2:
     print(f'Usage: {sys.argv[0]} Country name part of a .json file.')
     sys.exit()
@@ -80,7 +68,7 @@ x.checkAndDownloadLandPoligonsFile()
 x.checkAndDownloadOsmPbfFile()
 
 # Filter tags from country osm.pbf files'
-x.filterTagsFromCountryOsmPbdFiles()
+x.filterTagsFromCountryOsmPbfFiles()
 
 # Generate land
 x.generateLand()

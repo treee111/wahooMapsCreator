@@ -1,0 +1,138 @@
+[
+    {
+        "x": 64,
+        "y": 115,
+        "left": -90.0,
+        "top": 17.978733,
+        "right": -88.59375,
+        "bottom": 16.636192,
+        "countries": [
+            "belize",
+            "guatemala",
+            "mexico"
+        ]
+    },
+    {
+        "x": 64,
+        "y": 116,
+        "left": -90.0,
+        "top": 16.636192,
+        "right": -88.59375,
+        "bottom": 15.284185,
+        "countries": [
+            "belize",
+            "guatemala",
+            "honduras"
+        ]
+    },
+    {
+        "x": 65,
+        "y": 116,
+        "left": -88.59375,
+        "top": 16.636192,
+        "right": -87.1875,
+        "bottom": 15.284185,
+        "countries": [
+            "belize",
+            "guatemala",
+            "honduras"
+        ]
+    },
+    {
+        "x": 63,
+        "y": 117,
+        "left": -91.40625,
+        "top": 15.284185,
+        "right": -90.0,
+        "bottom": 13.923404,
+        "countries": [
+            "el_salvador",
+            "guatemala"
+        ]
+    },
+    {
+        "x": 64,
+        "y": 117,
+        "left": -90.0,
+        "top": 15.284185,
+        "right": -88.59375,
+        "bottom": 13.923404,
+        "countries": [
+            "el_salvador",
+            "guatemala",
+            "honduras"
+        ]
+    },
+    {
+        "x": 63,
+        "y": 118,
+        "left": -91.40625,
+        "top": 13.923404,
+        "right": -90.0,
+        "bottom": 12.554564,
+        "countries": [
+            "el_salvador",
+            "guatemala"
+        ]
+    },
+    {
+        "x": 62,
+        "y": 115,
+        "left": -92.8125,
+        "top": 17.978733,
+        "right": -91.40625,
+        "bottom": 16.636192,
+        "countries": [
+            "guatemala",
+            "mexico"
+        ]
+    },
+    {
+        "x": 63,
+        "y": 115,
+        "left": -91.40625,
+        "top": 17.978733,
+        "right": -90.0,
+        "bottom": 16.636192,
+        "countries": [
+            "guatemala",
+            "mexico"
+        ]
+    },
+    {
+        "x": 62,
+        "y": 116,
+        "left": -92.8125,
+        "top": 16.636192,
+        "right": -91.40625,
+        "bottom": 15.284185,
+        "countries": [
+            "guatemala",
+            "mexico"
+        ]
+    },
+    {
+        "x": 63,
+        "y": 116,
+        "left": -91.40625,
+        "top": 16.636192,
+        "right": -90.0,
+        "bottom": 15.284185,
+        "countries": [
+            "guatemala",
+            "mexico"
+        ]
+    },
+    {
+        "x": 62,
+        "y": 117,
+        "left": -92.8125,
+        "top": 15.284185,
+        "right": -91.40625,
+        "bottom": 13.923404,
+        "countries": [
+            "guatemala",
+            "mexico"
+        ]
+    }
+]

@@ -1,0 +1,471 @@
+[
+    {
+        "x": 152,
+        "y": 124,
+        "left": 33.75,
+        "top": 5.615986,
+        "right": 35.15625,
+        "bottom": 4.214943,
+        "countries": [
+            "kenya",
+            "sudan",
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 124,
+        "left": 35.15625,
+        "top": 5.615986,
+        "right": 36.5625,
+        "bottom": 4.214943,
+        "countries": [
+            "kenya",
+            "sudan",
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 124,
+        "left": 36.5625,
+        "top": 5.615986,
+        "right": 37.96875,
+        "bottom": 4.214943,
+        "countries": [
+            "kenya",
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 156,
+        "y": 124,
+        "left": 39.375,
+        "top": 5.615986,
+        "right": 40.78125,
+        "bottom": 4.214943,
+        "countries": [
+            "kenya",
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 157,
+        "y": 124,
+        "left": 40.78125,
+        "top": 5.615986,
+        "right": 42.1875,
+        "bottom": 4.214943,
+        "countries": [
+            "kenya",
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 125,
+        "left": 36.5625,
+        "top": 4.214943,
+        "right": 37.96875,
+        "bottom": 2.811371,
+        "countries": [
+            "kenya",
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 155,
+        "y": 125,
+        "left": 37.96875,
+        "top": 4.214943,
+        "right": 39.375,
+        "bottom": 2.811371,
+        "countries": [
+            "kenya",
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 156,
+        "y": 125,
+        "left": 39.375,
+        "top": 4.214943,
+        "right": 40.78125,
+        "bottom": 2.811371,
+        "countries": [
+            "kenya",
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 157,
+        "y": 125,
+        "left": 40.78125,
+        "top": 4.214943,
+        "right": 42.1875,
+        "bottom": 2.811371,
+        "countries": [
+            "kenya",
+            "somalia",
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 125,
+        "left": 33.75,
+        "top": 4.214943,
+        "right": 35.15625,
+        "bottom": 2.811371,
+        "countries": [
+            "uganda",
+            "sudan",
+            "kenya"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 125,
+        "left": 35.15625,
+        "top": 4.214943,
+        "right": 36.5625,
+        "bottom": 2.811371,
+        "countries": [
+            "kenya"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 126,
+        "left": 33.75,
+        "top": 2.811371,
+        "right": 35.15625,
+        "bottom": 1.406109,
+        "countries": [
+            "uganda",
+            "kenya"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 126,
+        "left": 35.15625,
+        "top": 2.811371,
+        "right": 36.5625,
+        "bottom": 1.406109,
+        "countries": [
+            "kenya"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 126,
+        "left": 36.5625,
+        "top": 2.811371,
+        "right": 37.96875,
+        "bottom": 1.406109,
+        "countries": [
+            "kenya"
+        ]
+    },
+    {
+        "x": 155,
+        "y": 126,
+        "left": 37.96875,
+        "top": 2.811371,
+        "right": 39.375,
+        "bottom": 1.406109,
+        "countries": [
+            "kenya"
+        ]
+    },
+    {
+        "x": 156,
+        "y": 126,
+        "left": 39.375,
+        "top": 2.811371,
+        "right": 40.78125,
+        "bottom": 1.406109,
+        "countries": [
+            "kenya"
+        ]
+    },
+    {
+        "x": 157,
+        "y": 126,
+        "left": 40.78125,
+        "top": 2.811371,
+        "right": 42.1875,
+        "bottom": 1.406109,
+        "countries": [
+            "somalia",
+            "kenya"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 127,
+        "left": 33.75,
+        "top": 1.406109,
+        "right": 35.15625,
+        "bottom": 0.0,
+        "countries": [
+            "uganda",
+            "kenya"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 127,
+        "left": 35.15625,
+        "top": 1.406109,
+        "right": 36.5625,
+        "bottom": 0.0,
+        "countries": [
+            "kenya"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 127,
+        "left": 36.5625,
+        "top": 1.406109,
+        "right": 37.96875,
+        "bottom": 0.0,
+        "countries": [
+            "kenya"
+        ]
+    },
+    {
+        "x": 155,
+        "y": 127,
+        "left": 37.96875,
+        "top": 1.406109,
+        "right": 39.375,
+        "bottom": 0.0,
+        "countries": [
+            "kenya"
+        ]
+    },
+    {
+        "x": 156,
+        "y": 127,
+        "left": 39.375,
+        "top": 1.406109,
+        "right": 40.78125,
+        "bottom": 0.0,
+        "countries": [
+            "kenya"
+        ]
+    },
+    {
+        "x": 157,
+        "y": 127,
+        "left": 40.78125,
+        "top": 1.406109,
+        "right": 42.1875,
+        "bottom": 0.0,
+        "countries": [
+            "somalia",
+            "kenya"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 128,
+        "left": 33.75,
+        "top": 0.0,
+        "right": 35.15625,
+        "bottom": -1.406109,
+        "countries": [
+            "uganda",
+            "kenya",
+            "tanzania"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 128,
+        "left": 35.15625,
+        "top": 0.0,
+        "right": 36.5625,
+        "bottom": -1.406109,
+        "countries": [
+            "kenya"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 128,
+        "left": 36.5625,
+        "top": 0.0,
+        "right": 37.96875,
+        "bottom": -1.406109,
+        "countries": [
+            "kenya"
+        ]
+    },
+    {
+        "x": 155,
+        "y": 128,
+        "left": 37.96875,
+        "top": 0.0,
+        "right": 39.375,
+        "bottom": -1.406109,
+        "countries": [
+            "kenya"
+        ]
+    },
+    {
+        "x": 156,
+        "y": 128,
+        "left": 39.375,
+        "top": 0.0,
+        "right": 40.78125,
+        "bottom": -1.406109,
+        "countries": [
+            "kenya"
+        ]
+    },
+    {
+        "x": 157,
+        "y": 128,
+        "left": 40.78125,
+        "top": 0.0,
+        "right": 42.1875,
+        "bottom": -1.406109,
+        "countries": [
+            "somalia",
+            "kenya"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 129,
+        "left": 33.75,
+        "top": -1.406109,
+        "right": 35.15625,
+        "bottom": -2.811371,
+        "countries": [
+            "kenya",
+            "tanzania"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 129,
+        "left": 35.15625,
+        "top": -1.406109,
+        "right": 36.5625,
+        "bottom": -2.811371,
+        "countries": [
+            "kenya",
+            "tanzania"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 129,
+        "left": 36.5625,
+        "top": -1.406109,
+        "right": 37.96875,
+        "bottom": -2.811371,
+        "countries": [
+            "kenya",
+            "tanzania"
+        ]
+    },
+    {
+        "x": 155,
+        "y": 129,
+        "left": 37.96875,
+        "top": -1.406109,
+        "right": 39.375,
+        "bottom": -2.811371,
+        "countries": [
+            "kenya"
+        ]
+    },
+    {
+        "x": 156,
+        "y": 129,
+        "left": 39.375,
+        "top": -1.406109,
+        "right": 40.78125,
+        "bottom": -2.811371,
+        "countries": [
+            "kenya"
+        ]
+    },
+    {
+        "x": 157,
+        "y": 129,
+        "left": 40.78125,
+        "top": -1.406109,
+        "right": 42.1875,
+        "bottom": -2.811371,
+        "countries": [
+            "somalia",
+            "kenya"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 130,
+        "left": 36.5625,
+        "top": -2.811371,
+        "right": 37.96875,
+        "bottom": -4.214943,
+        "countries": [
+            "kenya",
+            "tanzania"
+        ]
+    },
+    {
+        "x": 155,
+        "y": 130,
+        "left": 37.96875,
+        "top": -2.811371,
+        "right": 39.375,
+        "bottom": -4.214943,
+        "countries": [
+            "kenya",
+            "tanzania"
+        ]
+    },
+    {
+        "x": 156,
+        "y": 130,
+        "left": 39.375,
+        "top": -2.811371,
+        "right": 40.78125,
+        "bottom": -4.214943,
+        "countries": [
+            "kenya"
+        ]
+    },
+    {
+        "x": 155,
+        "y": 131,
+        "left": 37.96875,
+        "top": -4.214943,
+        "right": 39.375,
+        "bottom": -5.615986,
+        "countries": [
+            "kenya",
+            "tanzania"
+        ]
+    },
+    {
+        "x": 156,
+        "y": 131,
+        "left": 39.375,
+        "top": -4.214943,
+        "right": 40.78125,
+        "bottom": -5.615986,
+        "countries": [
+            "kenya",
+            "tanzania"
+        ]
+    }
+]

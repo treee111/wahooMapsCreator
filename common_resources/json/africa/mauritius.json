@@ -1,0 +1,57 @@
+[
+    {
+        "x": 168,
+        "y": 135,
+        "left": 56.25,
+        "top": -9.795678,
+        "right": 57.65625,
+        "bottom": -11.178402,
+        "countries": [
+            "mauritius"
+        ]
+    },
+    {
+        "x": 170,
+        "y": 140,
+        "left": 59.0625,
+        "top": -16.636192,
+        "right": 60.46875,
+        "bottom": -17.978733,
+        "countries": [
+            "mauritius"
+        ]
+    },
+    {
+        "x": 168,
+        "y": 142,
+        "left": 56.25,
+        "top": -19.311143,
+        "right": 57.65625,
+        "bottom": -20.632784,
+        "countries": [
+            "mauritius"
+        ]
+    },
+    {
+        "x": 169,
+        "y": 142,
+        "left": 57.65625,
+        "top": -19.311143,
+        "right": 59.0625,
+        "bottom": -20.632784,
+        "countries": [
+            "mauritius"
+        ]
+    },
+    {
+        "x": 173,
+        "y": 142,
+        "left": 63.28125,
+        "top": -19.311143,
+        "right": 64.6875,
+        "bottom": -20.632784,
+        "countries": [
+            "mauritius"
+        ]
+    }
+]

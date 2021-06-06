@@ -1,0 +1,288 @@
+[
+    {
+        "x": 50,
+        "y": 95,
+        "left": -109.6875,
+        "top": 42.032974,
+        "right": -108.28125,
+        "bottom": 40.979898,
+        "countries": [
+            "colorado",
+            "wyoming",
+            "utah"
+        ]
+    },
+    {
+        "x": 51,
+        "y": 95,
+        "left": -108.28125,
+        "top": 42.032974,
+        "right": -106.875,
+        "bottom": 40.979898,
+        "countries": [
+            "colorado",
+            "wyoming"
+        ]
+    },
+    {
+        "x": 52,
+        "y": 95,
+        "left": -106.875,
+        "top": 42.032974,
+        "right": -105.46875,
+        "bottom": 40.979898,
+        "countries": [
+            "colorado",
+            "wyoming"
+        ]
+    },
+    {
+        "x": 53,
+        "y": 95,
+        "left": -105.46875,
+        "top": 42.032974,
+        "right": -104.0625,
+        "bottom": 40.979898,
+        "countries": [
+            "colorado",
+            "wyoming"
+        ]
+    },
+    {
+        "x": 54,
+        "y": 95,
+        "left": -104.0625,
+        "top": 42.032974,
+        "right": -102.65625,
+        "bottom": 40.979898,
+        "countries": [
+            "nebraska",
+            "colorado",
+            "wyoming"
+        ]
+    },
+    {
+        "x": 49,
+        "y": 92,
+        "left": -111.09375,
+        "top": 45.089036,
+        "right": -109.6875,
+        "bottom": 44.087585,
+        "countries": [
+            "idaho",
+            "montana",
+            "wyoming"
+        ]
+    },
+    {
+        "x": 49,
+        "y": 93,
+        "left": -111.09375,
+        "top": 44.087585,
+        "right": -109.6875,
+        "bottom": 43.068888,
+        "countries": [
+            "idaho",
+            "wyoming"
+        ]
+    },
+    {
+        "x": 49,
+        "y": 94,
+        "left": -111.09375,
+        "top": 43.068888,
+        "right": -109.6875,
+        "bottom": 42.032974,
+        "countries": [
+            "idaho",
+            "wyoming"
+        ]
+    },
+    {
+        "x": 49,
+        "y": 95,
+        "left": -111.09375,
+        "top": 42.032974,
+        "right": -109.6875,
+        "bottom": 40.979898,
+        "countries": [
+            "idaho",
+            "wyoming",
+            "utah"
+        ]
+    },
+    {
+        "x": 50,
+        "y": 92,
+        "left": -109.6875,
+        "top": 45.089036,
+        "right": -108.28125,
+        "bottom": 44.087585,
+        "countries": [
+            "montana",
+            "wyoming"
+        ]
+    },
+    {
+        "x": 51,
+        "y": 92,
+        "left": -108.28125,
+        "top": 45.089036,
+        "right": -106.875,
+        "bottom": 44.087585,
+        "countries": [
+            "montana",
+            "wyoming"
+        ]
+    },
+    {
+        "x": 52,
+        "y": 92,
+        "left": -106.875,
+        "top": 45.089036,
+        "right": -105.46875,
+        "bottom": 44.087585,
+        "countries": [
+            "montana",
+            "wyoming"
+        ]
+    },
+    {
+        "x": 53,
+        "y": 92,
+        "left": -105.46875,
+        "top": 45.089036,
+        "right": -104.0625,
+        "bottom": 44.087585,
+        "countries": [
+            "montana",
+            "wyoming"
+        ]
+    },
+    {
+        "x": 54,
+        "y": 92,
+        "left": -104.0625,
+        "top": 45.089036,
+        "right": -102.65625,
+        "bottom": 44.087585,
+        "countries": [
+            "montana",
+            "south_dakota",
+            "wyoming"
+        ]
+    },
+    {
+        "x": 54,
+        "y": 94,
+        "left": -104.0625,
+        "top": 43.068888,
+        "right": -102.65625,
+        "bottom": 42.032974,
+        "countries": [
+            "south_dakota",
+            "nebraska",
+            "wyoming"
+        ]
+    },
+    {
+        "x": 54,
+        "y": 93,
+        "left": -104.0625,
+        "top": 44.087585,
+        "right": -102.65625,
+        "bottom": 43.068888,
+        "countries": [
+            "south_dakota",
+            "wyoming"
+        ]
+    },
+    {
+        "x": 50,
+        "y": 93,
+        "left": -109.6875,
+        "top": 44.087585,
+        "right": -108.28125,
+        "bottom": 43.068888,
+        "countries": [
+            "wyoming"
+        ]
+    },
+    {
+        "x": 51,
+        "y": 93,
+        "left": -108.28125,
+        "top": 44.087585,
+        "right": -106.875,
+        "bottom": 43.068888,
+        "countries": [
+            "wyoming"
+        ]
+    },
+    {
+        "x": 52,
+        "y": 93,
+        "left": -106.875,
+        "top": 44.087585,
+        "right": -105.46875,
+        "bottom": 43.068888,
+        "countries": [
+            "wyoming"
+        ]
+    },
+    {
+        "x": 53,
+        "y": 93,
+        "left": -105.46875,
+        "top": 44.087585,
+        "right": -104.0625,
+        "bottom": 43.068888,
+        "countries": [
+            "wyoming"
+        ]
+    },
+    {
+        "x": 50,
+        "y": 94,
+        "left": -109.6875,
+        "top": 43.068888,
+        "right": -108.28125,
+        "bottom": 42.032974,
+        "countries": [
+            "wyoming"
+        ]
+    },
+    {
+        "x": 51,
+        "y": 94,
+        "left": -108.28125,
+        "top": 43.068888,
+        "right": -106.875,
+        "bottom": 42.032974,
+        "countries": [
+            "wyoming"
+        ]
+    },
+    {
+        "x": 52,
+        "y": 94,
+        "left": -106.875,
+        "top": 43.068888,
+        "right": -105.46875,
+        "bottom": 42.032974,
+        "countries": [
+            "wyoming"
+        ]
+    },
+    {
+        "x": 53,
+        "y": 94,
+        "left": -105.46875,
+        "top": 43.068888,
+        "right": -104.0625,
+        "bottom": 42.032974,
+        "countries": [
+            "wyoming"
+        ]
+    }
+]

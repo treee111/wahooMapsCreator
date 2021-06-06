@@ -1,0 +1,131 @@
+[
+    {
+        "x": 69,
+        "y": 98,
+        "left": -82.96875,
+        "top": 38.822591,
+        "right": -81.5625,
+        "bottom": 37.71859,
+        "countries": [
+            "west_virginia",
+            "ohio",
+            "kentucky"
+        ]
+    },
+    {
+        "x": 69,
+        "y": 99,
+        "left": -82.96875,
+        "top": 37.71859,
+        "right": -81.5625,
+        "bottom": 36.597889,
+        "countries": [
+            "tennessee",
+            "west_virginia",
+            "virginia",
+            "kentucky"
+        ]
+    },
+    {
+        "x": 71,
+        "y": 97,
+        "left": -80.15625,
+        "top": 39.909736,
+        "right": -78.75,
+        "bottom": 38.822591,
+        "countries": [
+            "maryland",
+            "pennsylvania",
+            "west_virginia",
+            "virginia"
+        ]
+    },
+    {
+        "x": 72,
+        "y": 97,
+        "left": -78.75,
+        "top": 39.909736,
+        "right": -77.34375,
+        "bottom": 38.822591,
+        "countries": [
+            "maryland",
+            "pennsylvania",
+            "west_virginia",
+            "virginia"
+        ]
+    },
+    {
+        "x": 70,
+        "y": 96,
+        "left": -81.5625,
+        "top": 40.979898,
+        "right": -80.15625,
+        "bottom": 39.909736,
+        "countries": [
+            "pennsylvania",
+            "west_virginia",
+            "ohio"
+        ]
+    },
+    {
+        "x": 69,
+        "y": 97,
+        "left": -82.96875,
+        "top": 39.909736,
+        "right": -81.5625,
+        "bottom": 38.822591,
+        "countries": [
+            "west_virginia",
+            "ohio"
+        ]
+    },
+    {
+        "x": 70,
+        "y": 97,
+        "left": -81.5625,
+        "top": 39.909736,
+        "right": -80.15625,
+        "bottom": 38.822591,
+        "countries": [
+            "pennsylvania",
+            "west_virginia",
+            "ohio"
+        ]
+    },
+    {
+        "x": 70,
+        "y": 98,
+        "left": -81.5625,
+        "top": 38.822591,
+        "right": -80.15625,
+        "bottom": 37.71859,
+        "countries": [
+            "west_virginia",
+            "virginia"
+        ]
+    },
+    {
+        "x": 71,
+        "y": 98,
+        "left": -80.15625,
+        "top": 38.822591,
+        "right": -78.75,
+        "bottom": 37.71859,
+        "countries": [
+            "west_virginia",
+            "virginia"
+        ]
+    },
+    {
+        "x": 70,
+        "y": 99,
+        "left": -81.5625,
+        "top": 37.71859,
+        "right": -80.15625,
+        "bottom": 36.597889,
+        "countries": [
+            "west_virginia",
+            "virginia"
+        ]
+    }
+]

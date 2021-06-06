@@ -1,0 +1,39 @@
+[
+    {
+        "x": 84,
+        "y": 119,
+        "left": -61.875,
+        "top": 12.554564,
+        "right": -60.46875,
+        "bottom": 11.178402,
+        "countries": [
+            "grenada",
+            "saint_vincent_and_the_grenadines",
+            "trinidad_and_tobago"
+        ]
+    },
+    {
+        "x": 83,
+        "y": 120,
+        "left": -63.28125,
+        "top": 11.178402,
+        "right": -61.875,
+        "bottom": 9.795678,
+        "countries": [
+            "venezuela",
+            "trinidad_and_tobago"
+        ]
+    },
+    {
+        "x": 84,
+        "y": 120,
+        "left": -61.875,
+        "top": 11.178402,
+        "right": -60.46875,
+        "bottom": 9.795678,
+        "countries": [
+            "venezuela",
+            "trinidad_and_tobago"
+        ]
+    }
+]

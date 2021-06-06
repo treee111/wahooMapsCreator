@@ -1,0 +1,215 @@
+[
+    {
+        "x": 70,
+        "y": 94,
+        "left": -81.5625,
+        "top": 43.068888,
+        "right": -80.15625,
+        "bottom": 42.032974,
+        "countries": [
+            "pennsylvania",
+            "canada"
+        ]
+    },
+    {
+        "x": 71,
+        "y": 94,
+        "left": -80.15625,
+        "top": 43.068888,
+        "right": -78.75,
+        "bottom": 42.032974,
+        "countries": [
+            "pennsylvania",
+            "new_york",
+            "canada"
+        ]
+    },
+    {
+        "x": 74,
+        "y": 97,
+        "left": -75.9375,
+        "top": 39.909736,
+        "right": -74.53125,
+        "bottom": 38.822591,
+        "countries": [
+            "maryland",
+            "pennsylvania",
+            "new_jersey",
+            "delaware"
+        ]
+    },
+    {
+        "x": 73,
+        "y": 97,
+        "left": -77.34375,
+        "top": 39.909736,
+        "right": -75.9375,
+        "bottom": 38.822591,
+        "countries": [
+            "maryland",
+            "district_of_columbia",
+            "pennsylvania",
+            "virginia"
+        ]
+    },
+    {
+        "x": 71,
+        "y": 97,
+        "left": -80.15625,
+        "top": 39.909736,
+        "right": -78.75,
+        "bottom": 38.822591,
+        "countries": [
+            "maryland",
+            "pennsylvania",
+            "west_virginia",
+            "virginia"
+        ]
+    },
+    {
+        "x": 72,
+        "y": 97,
+        "left": -78.75,
+        "top": 39.909736,
+        "right": -77.34375,
+        "bottom": 38.822591,
+        "countries": [
+            "maryland",
+            "pennsylvania",
+            "west_virginia",
+            "virginia"
+        ]
+    },
+    {
+        "x": 74,
+        "y": 95,
+        "left": -75.9375,
+        "top": 42.032974,
+        "right": -74.53125,
+        "bottom": 40.979898,
+        "countries": [
+            "pennsylvania",
+            "new_jersey",
+            "new_york"
+        ]
+    },
+    {
+        "x": 74,
+        "y": 96,
+        "left": -75.9375,
+        "top": 40.979898,
+        "right": -74.53125,
+        "bottom": 39.909736,
+        "countries": [
+            "pennsylvania",
+            "new_jersey"
+        ]
+    },
+    {
+        "x": 71,
+        "y": 95,
+        "left": -80.15625,
+        "top": 42.032974,
+        "right": -78.75,
+        "bottom": 40.979898,
+        "countries": [
+            "pennsylvania",
+            "new_york"
+        ]
+    },
+    {
+        "x": 72,
+        "y": 95,
+        "left": -78.75,
+        "top": 42.032974,
+        "right": -77.34375,
+        "bottom": 40.979898,
+        "countries": [
+            "pennsylvania",
+            "new_york"
+        ]
+    },
+    {
+        "x": 73,
+        "y": 95,
+        "left": -77.34375,
+        "top": 42.032974,
+        "right": -75.9375,
+        "bottom": 40.979898,
+        "countries": [
+            "pennsylvania",
+            "new_york"
+        ]
+    },
+    {
+        "x": 70,
+        "y": 95,
+        "left": -81.5625,
+        "top": 42.032974,
+        "right": -80.15625,
+        "bottom": 40.979898,
+        "countries": [
+            "pennsylvania",
+            "ohio"
+        ]
+    },
+    {
+        "x": 70,
+        "y": 96,
+        "left": -81.5625,
+        "top": 40.979898,
+        "right": -80.15625,
+        "bottom": 39.909736,
+        "countries": [
+            "pennsylvania",
+            "west_virginia",
+            "ohio"
+        ]
+    },
+    {
+        "x": 70,
+        "y": 97,
+        "left": -81.5625,
+        "top": 39.909736,
+        "right": -80.15625,
+        "bottom": 38.822591,
+        "countries": [
+            "pennsylvania",
+            "west_virginia",
+            "ohio"
+        ]
+    },
+    {
+        "x": 71,
+        "y": 96,
+        "left": -80.15625,
+        "top": 40.979898,
+        "right": -78.75,
+        "bottom": 39.909736,
+        "countries": [
+            "pennsylvania"
+        ]
+    },
+    {
+        "x": 72,
+        "y": 96,
+        "left": -78.75,
+        "top": 40.979898,
+        "right": -77.34375,
+        "bottom": 39.909736,
+        "countries": [
+            "pennsylvania"
+        ]
+    },
+    {
+        "x": 73,
+        "y": 96,
+        "left": -77.34375,
+        "top": 40.979898,
+        "right": -75.9375,
+        "bottom": 39.909736,
+        "countries": [
+            "pennsylvania"
+        ]
+    }
+]

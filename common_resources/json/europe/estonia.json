@@ -1,0 +1,212 @@
+[
+    {
+        "x": 145,
+        "y": 74,
+        "left": 23.90625,
+        "top": 60.239811,
+        "right": 25.3125,
+        "bottom": 59.534318,
+        "countries": [
+            "estonia",
+            "finland"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 74,
+        "left": 25.3125,
+        "top": 60.239811,
+        "right": 26.71875,
+        "bottom": 59.534318,
+        "countries": [
+            "estonia",
+            "finland"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 75,
+        "left": 21.09375,
+        "top": 59.534318,
+        "right": 22.5,
+        "bottom": 58.813742,
+        "countries": [
+            "estonia"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 75,
+        "left": 22.5,
+        "top": 59.534318,
+        "right": 23.90625,
+        "bottom": 58.813742,
+        "countries": [
+            "estonia"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 75,
+        "left": 23.90625,
+        "top": 59.534318,
+        "right": 25.3125,
+        "bottom": 58.813742,
+        "countries": [
+            "estonia"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 75,
+        "left": 25.3125,
+        "top": 59.534318,
+        "right": 26.71875,
+        "bottom": 58.813742,
+        "countries": [
+            "estonia"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 75,
+        "left": 26.71875,
+        "top": 59.534318,
+        "right": 28.125,
+        "bottom": 58.813742,
+        "countries": [
+            "russia",
+            "estonia"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 75,
+        "left": 28.125,
+        "top": 59.534318,
+        "right": 29.53125,
+        "bottom": 58.813742,
+        "countries": [
+            "russia",
+            "estonia"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 76,
+        "left": 21.09375,
+        "top": 58.813742,
+        "right": 22.5,
+        "bottom": 58.077876,
+        "countries": [
+            "estonia"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 76,
+        "left": 22.5,
+        "top": 58.813742,
+        "right": 23.90625,
+        "bottom": 58.077876,
+        "countries": [
+            "estonia"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 76,
+        "left": 23.90625,
+        "top": 58.813742,
+        "right": 25.3125,
+        "bottom": 58.077876,
+        "countries": [
+            "estonia",
+            "latvia"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 76,
+        "left": 25.3125,
+        "top": 58.813742,
+        "right": 26.71875,
+        "bottom": 58.077876,
+        "countries": [
+            "estonia"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 76,
+        "left": 26.71875,
+        "top": 58.813742,
+        "right": 28.125,
+        "bottom": 58.077876,
+        "countries": [
+            "russia",
+            "estonia"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 77,
+        "left": 21.09375,
+        "top": 58.077876,
+        "right": 22.5,
+        "bottom": 57.326521,
+        "countries": [
+            "estonia",
+            "latvia"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 77,
+        "left": 22.5,
+        "top": 58.077876,
+        "right": 23.90625,
+        "bottom": 57.326521,
+        "countries": [
+            "estonia",
+            "latvia"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 77,
+        "left": 23.90625,
+        "top": 58.077876,
+        "right": 25.3125,
+        "bottom": 57.326521,
+        "countries": [
+            "estonia",
+            "latvia"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 77,
+        "left": 25.3125,
+        "top": 58.077876,
+        "right": 26.71875,
+        "bottom": 57.326521,
+        "countries": [
+            "estonia",
+            "latvia"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 77,
+        "left": 26.71875,
+        "top": 58.077876,
+        "right": 28.125,
+        "bottom": 57.326521,
+        "countries": [
+            "russia",
+            "estonia",
+            "latvia"
+        ]
+    }
+]

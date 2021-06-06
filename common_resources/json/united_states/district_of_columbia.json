@@ -1,0 +1,29 @@
+[
+    {
+        "x": 73,
+        "y": 97,
+        "left": -77.34375,
+        "top": 39.909736,
+        "right": -75.9375,
+        "bottom": 38.822591,
+        "countries": [
+            "maryland",
+            "district_of_columbia",
+            "pennsylvania",
+            "virginia"
+        ]
+    },
+    {
+        "x": 73,
+        "y": 98,
+        "left": -77.34375,
+        "top": 38.822591,
+        "right": -75.9375,
+        "bottom": 37.71859,
+        "countries": [
+            "maryland",
+            "district_of_columbia",
+            "virginia"
+        ]
+    }
+]

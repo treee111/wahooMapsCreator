@@ -1,0 +1,8176 @@
+[
+    {
+        "x": 180,
+        "y": 99,
+        "left": 73.125,
+        "top": 37.71859,
+        "right": 74.53125,
+        "bottom": 36.597889,
+        "countries": [
+            "afghanistan",
+            "tajikistan",
+            "china",
+            "pakistan"
+        ]
+    },
+    {
+        "x": 181,
+        "y": 99,
+        "left": 74.53125,
+        "top": 37.71859,
+        "right": 75.9375,
+        "bottom": 36.597889,
+        "countries": [
+            "afghanistan",
+            "tajikistan",
+            "china",
+            "pakistan"
+        ]
+    },
+    {
+        "x": 191,
+        "y": 106,
+        "left": 88.59375,
+        "top": 29.53523,
+        "right": 90.0,
+        "bottom": 28.304381,
+        "countries": [
+            "bhutan",
+            "china"
+        ]
+    },
+    {
+        "x": 192,
+        "y": 106,
+        "left": 90.0,
+        "top": 29.53523,
+        "right": 91.40625,
+        "bottom": 28.304381,
+        "countries": [
+            "bhutan",
+            "china"
+        ]
+    },
+    {
+        "x": 191,
+        "y": 107,
+        "left": 88.59375,
+        "top": 28.304381,
+        "right": 90.0,
+        "bottom": 27.059126,
+        "countries": [
+            "bhutan",
+            "china",
+            "india"
+        ]
+    },
+    {
+        "x": 192,
+        "y": 107,
+        "left": 90.0,
+        "top": 28.304381,
+        "right": 91.40625,
+        "bottom": 27.059126,
+        "countries": [
+            "bhutan",
+            "china"
+        ]
+    },
+    {
+        "x": 193,
+        "y": 107,
+        "left": 91.40625,
+        "top": 28.304381,
+        "right": 92.8125,
+        "bottom": 27.059126,
+        "countries": [
+            "bhutan",
+            "china",
+            "india"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 82,
+        "left": 120.9375,
+        "top": 54.162434,
+        "right": 122.34375,
+        "bottom": 53.330873,
+        "countries": [
+            "russia",
+            "china"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 82,
+        "left": 122.34375,
+        "top": 54.162434,
+        "right": 123.75,
+        "bottom": 53.330873,
+        "countries": [
+            "russia",
+            "china"
+        ]
+    },
+    {
+        "x": 216,
+        "y": 82,
+        "left": 123.75,
+        "top": 54.162434,
+        "right": 125.15625,
+        "bottom": 53.330873,
+        "countries": [
+            "russia",
+            "china"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 83,
+        "left": 119.53125,
+        "top": 53.330873,
+        "right": 120.9375,
+        "bottom": 52.48278,
+        "countries": [
+            "russia",
+            "china"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 83,
+        "left": 120.9375,
+        "top": 53.330873,
+        "right": 122.34375,
+        "bottom": 52.48278,
+        "countries": [
+            "russia",
+            "china"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 83,
+        "left": 122.34375,
+        "top": 53.330873,
+        "right": 123.75,
+        "bottom": 52.48278,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 216,
+        "y": 83,
+        "left": 123.75,
+        "top": 53.330873,
+        "right": 125.15625,
+        "bottom": 52.48278,
+        "countries": [
+            "russia",
+            "china"
+        ]
+    },
+    {
+        "x": 217,
+        "y": 83,
+        "left": 125.15625,
+        "top": 53.330873,
+        "right": 126.5625,
+        "bottom": 52.48278,
+        "countries": [
+            "russia",
+            "china"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 84,
+        "left": 119.53125,
+        "top": 52.48278,
+        "right": 120.9375,
+        "bottom": 51.618017,
+        "countries": [
+            "russia",
+            "china"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 84,
+        "left": 120.9375,
+        "top": 52.48278,
+        "right": 122.34375,
+        "bottom": 51.618017,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 84,
+        "left": 122.34375,
+        "top": 52.48278,
+        "right": 123.75,
+        "bottom": 51.618017,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 216,
+        "y": 84,
+        "left": 123.75,
+        "top": 52.48278,
+        "right": 125.15625,
+        "bottom": 51.618017,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 217,
+        "y": 84,
+        "left": 125.15625,
+        "top": 52.48278,
+        "right": 126.5625,
+        "bottom": 51.618017,
+        "countries": [
+            "russia",
+            "china"
+        ]
+    },
+    {
+        "x": 218,
+        "y": 84,
+        "left": 126.5625,
+        "top": 52.48278,
+        "right": 127.96875,
+        "bottom": 51.618017,
+        "countries": [
+            "russia",
+            "china"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 85,
+        "left": 118.125,
+        "top": 51.618017,
+        "right": 119.53125,
+        "bottom": 50.736455,
+        "countries": [
+            "russia",
+            "china"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 85,
+        "left": 119.53125,
+        "top": 51.618017,
+        "right": 120.9375,
+        "bottom": 50.736455,
+        "countries": [
+            "russia",
+            "china"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 85,
+        "left": 120.9375,
+        "top": 51.618017,
+        "right": 122.34375,
+        "bottom": 50.736455,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 85,
+        "left": 122.34375,
+        "top": 51.618017,
+        "right": 123.75,
+        "bottom": 50.736455,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 216,
+        "y": 85,
+        "left": 123.75,
+        "top": 51.618017,
+        "right": 125.15625,
+        "bottom": 50.736455,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 217,
+        "y": 85,
+        "left": 125.15625,
+        "top": 51.618017,
+        "right": 126.5625,
+        "bottom": 50.736455,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 218,
+        "y": 85,
+        "left": 126.5625,
+        "top": 51.618017,
+        "right": 127.96875,
+        "bottom": 50.736455,
+        "countries": [
+            "russia",
+            "china"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 86,
+        "left": 115.3125,
+        "top": 50.736455,
+        "right": 116.71875,
+        "bottom": 49.837982,
+        "countries": [
+            "russia",
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 86,
+        "left": 118.125,
+        "top": 50.736455,
+        "right": 119.53125,
+        "bottom": 49.837982,
+        "countries": [
+            "russia",
+            "china"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 86,
+        "left": 119.53125,
+        "top": 50.736455,
+        "right": 120.9375,
+        "bottom": 49.837982,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 86,
+        "left": 120.9375,
+        "top": 50.736455,
+        "right": 122.34375,
+        "bottom": 49.837982,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 86,
+        "left": 122.34375,
+        "top": 50.736455,
+        "right": 123.75,
+        "bottom": 49.837982,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 216,
+        "y": 86,
+        "left": 123.75,
+        "top": 50.736455,
+        "right": 125.15625,
+        "bottom": 49.837982,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 217,
+        "y": 86,
+        "left": 125.15625,
+        "top": 50.736455,
+        "right": 126.5625,
+        "bottom": 49.837982,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 218,
+        "y": 86,
+        "left": 126.5625,
+        "top": 50.736455,
+        "right": 127.96875,
+        "bottom": 49.837982,
+        "countries": [
+            "russia",
+            "china"
+        ]
+    },
+    {
+        "x": 189,
+        "y": 87,
+        "left": 85.78125,
+        "top": 49.837982,
+        "right": 87.1875,
+        "bottom": 48.922499,
+        "countries": [
+            "russia",
+            "kazakhstan",
+            "china"
+        ]
+    },
+    {
+        "x": 190,
+        "y": 87,
+        "left": 87.1875,
+        "top": 49.837982,
+        "right": 88.59375,
+        "bottom": 48.922499,
+        "countries": [
+            "russia",
+            "mongolia",
+            "kazakhstan",
+            "china"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 87,
+        "left": 115.3125,
+        "top": 49.837982,
+        "right": 116.71875,
+        "bottom": 48.922499,
+        "countries": [
+            "russia",
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 87,
+        "left": 116.71875,
+        "top": 49.837982,
+        "right": 118.125,
+        "bottom": 48.922499,
+        "countries": [
+            "russia",
+            "china"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 87,
+        "left": 118.125,
+        "top": 49.837982,
+        "right": 119.53125,
+        "bottom": 48.922499,
+        "countries": [
+            "russia",
+            "china"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 87,
+        "left": 119.53125,
+        "top": 49.837982,
+        "right": 120.9375,
+        "bottom": 48.922499,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 87,
+        "left": 120.9375,
+        "top": 49.837982,
+        "right": 122.34375,
+        "bottom": 48.922499,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 87,
+        "left": 122.34375,
+        "top": 49.837982,
+        "right": 123.75,
+        "bottom": 48.922499,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 216,
+        "y": 87,
+        "left": 123.75,
+        "top": 49.837982,
+        "right": 125.15625,
+        "bottom": 48.922499,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 217,
+        "y": 87,
+        "left": 125.15625,
+        "top": 49.837982,
+        "right": 126.5625,
+        "bottom": 48.922499,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 218,
+        "y": 87,
+        "left": 126.5625,
+        "top": 49.837982,
+        "right": 127.96875,
+        "bottom": 48.922499,
+        "countries": [
+            "russia",
+            "china"
+        ]
+    },
+    {
+        "x": 219,
+        "y": 87,
+        "left": 127.96875,
+        "top": 49.837982,
+        "right": 129.375,
+        "bottom": 48.922499,
+        "countries": [
+            "russia",
+            "china"
+        ]
+    },
+    {
+        "x": 220,
+        "y": 87,
+        "left": 129.375,
+        "top": 49.837982,
+        "right": 130.78125,
+        "bottom": 48.922499,
+        "countries": [
+            "russia",
+            "china"
+        ]
+    },
+    {
+        "x": 188,
+        "y": 88,
+        "left": 84.375,
+        "top": 48.922499,
+        "right": 85.78125,
+        "bottom": 47.989922,
+        "countries": [
+            "kazakhstan",
+            "china"
+        ]
+    },
+    {
+        "x": 189,
+        "y": 88,
+        "left": 85.78125,
+        "top": 48.922499,
+        "right": 87.1875,
+        "bottom": 47.989922,
+        "countries": [
+            "kazakhstan",
+            "china"
+        ]
+    },
+    {
+        "x": 190,
+        "y": 88,
+        "left": 87.1875,
+        "top": 48.922499,
+        "right": 88.59375,
+        "bottom": 47.989922,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 191,
+        "y": 88,
+        "left": 88.59375,
+        "top": 48.922499,
+        "right": 90.0,
+        "bottom": 47.989922,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 88,
+        "left": 115.3125,
+        "top": 48.922499,
+        "right": 116.71875,
+        "bottom": 47.989922,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 88,
+        "left": 116.71875,
+        "top": 48.922499,
+        "right": 118.125,
+        "bottom": 47.989922,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 88,
+        "left": 118.125,
+        "top": 48.922499,
+        "right": 119.53125,
+        "bottom": 47.989922,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 88,
+        "left": 119.53125,
+        "top": 48.922499,
+        "right": 120.9375,
+        "bottom": 47.989922,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 88,
+        "left": 120.9375,
+        "top": 48.922499,
+        "right": 122.34375,
+        "bottom": 47.989922,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 88,
+        "left": 122.34375,
+        "top": 48.922499,
+        "right": 123.75,
+        "bottom": 47.989922,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 216,
+        "y": 88,
+        "left": 123.75,
+        "top": 48.922499,
+        "right": 125.15625,
+        "bottom": 47.989922,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 217,
+        "y": 88,
+        "left": 125.15625,
+        "top": 48.922499,
+        "right": 126.5625,
+        "bottom": 47.989922,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 218,
+        "y": 88,
+        "left": 126.5625,
+        "top": 48.922499,
+        "right": 127.96875,
+        "bottom": 47.989922,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 219,
+        "y": 88,
+        "left": 127.96875,
+        "top": 48.922499,
+        "right": 129.375,
+        "bottom": 47.989922,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 220,
+        "y": 88,
+        "left": 129.375,
+        "top": 48.922499,
+        "right": 130.78125,
+        "bottom": 47.989922,
+        "countries": [
+            "russia",
+            "china"
+        ]
+    },
+    {
+        "x": 221,
+        "y": 88,
+        "left": 130.78125,
+        "top": 48.922499,
+        "right": 132.1875,
+        "bottom": 47.989922,
+        "countries": [
+            "russia",
+            "china"
+        ]
+    },
+    {
+        "x": 222,
+        "y": 88,
+        "left": 132.1875,
+        "top": 48.922499,
+        "right": 133.59375,
+        "bottom": 47.989922,
+        "countries": [
+            "russia",
+            "china"
+        ]
+    },
+    {
+        "x": 223,
+        "y": 88,
+        "left": 133.59375,
+        "top": 48.922499,
+        "right": 135.0,
+        "bottom": 47.989922,
+        "countries": [
+            "russia",
+            "china"
+        ]
+    },
+    {
+        "x": 187,
+        "y": 89,
+        "left": 82.96875,
+        "top": 47.989922,
+        "right": 84.375,
+        "bottom": 47.040182,
+        "countries": [
+            "kazakhstan",
+            "china"
+        ]
+    },
+    {
+        "x": 188,
+        "y": 89,
+        "left": 84.375,
+        "top": 47.989922,
+        "right": 85.78125,
+        "bottom": 47.040182,
+        "countries": [
+            "kazakhstan",
+            "china"
+        ]
+    },
+    {
+        "x": 189,
+        "y": 89,
+        "left": 85.78125,
+        "top": 47.989922,
+        "right": 87.1875,
+        "bottom": 47.040182,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 190,
+        "y": 89,
+        "left": 87.1875,
+        "top": 47.989922,
+        "right": 88.59375,
+        "bottom": 47.040182,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 191,
+        "y": 89,
+        "left": 88.59375,
+        "top": 47.989922,
+        "right": 90.0,
+        "bottom": 47.040182,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 192,
+        "y": 89,
+        "left": 90.0,
+        "top": 47.989922,
+        "right": 91.40625,
+        "bottom": 47.040182,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 89,
+        "left": 115.3125,
+        "top": 47.989922,
+        "right": 116.71875,
+        "bottom": 47.040182,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 89,
+        "left": 116.71875,
+        "top": 47.989922,
+        "right": 118.125,
+        "bottom": 47.040182,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 89,
+        "left": 118.125,
+        "top": 47.989922,
+        "right": 119.53125,
+        "bottom": 47.040182,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 89,
+        "left": 119.53125,
+        "top": 47.989922,
+        "right": 120.9375,
+        "bottom": 47.040182,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 89,
+        "left": 120.9375,
+        "top": 47.989922,
+        "right": 122.34375,
+        "bottom": 47.040182,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 89,
+        "left": 122.34375,
+        "top": 47.989922,
+        "right": 123.75,
+        "bottom": 47.040182,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 216,
+        "y": 89,
+        "left": 123.75,
+        "top": 47.989922,
+        "right": 125.15625,
+        "bottom": 47.040182,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 217,
+        "y": 89,
+        "left": 125.15625,
+        "top": 47.989922,
+        "right": 126.5625,
+        "bottom": 47.040182,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 218,
+        "y": 89,
+        "left": 126.5625,
+        "top": 47.989922,
+        "right": 127.96875,
+        "bottom": 47.040182,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 219,
+        "y": 89,
+        "left": 127.96875,
+        "top": 47.989922,
+        "right": 129.375,
+        "bottom": 47.040182,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 220,
+        "y": 89,
+        "left": 129.375,
+        "top": 47.989922,
+        "right": 130.78125,
+        "bottom": 47.040182,
+        "countries": [
+            "russia",
+            "china"
+        ]
+    },
+    {
+        "x": 221,
+        "y": 89,
+        "left": 130.78125,
+        "top": 47.989922,
+        "right": 132.1875,
+        "bottom": 47.040182,
+        "countries": [
+            "russia",
+            "china"
+        ]
+    },
+    {
+        "x": 222,
+        "y": 89,
+        "left": 132.1875,
+        "top": 47.989922,
+        "right": 133.59375,
+        "bottom": 47.040182,
+        "countries": [
+            "russia",
+            "china"
+        ]
+    },
+    {
+        "x": 223,
+        "y": 89,
+        "left": 133.59375,
+        "top": 47.989922,
+        "right": 135.0,
+        "bottom": 47.040182,
+        "countries": [
+            "russia",
+            "china"
+        ]
+    },
+    {
+        "x": 186,
+        "y": 90,
+        "left": 81.5625,
+        "top": 47.040182,
+        "right": 82.96875,
+        "bottom": 46.073231,
+        "countries": [
+            "kazakhstan",
+            "china"
+        ]
+    },
+    {
+        "x": 187,
+        "y": 90,
+        "left": 82.96875,
+        "top": 47.040182,
+        "right": 84.375,
+        "bottom": 46.073231,
+        "countries": [
+            "kazakhstan",
+            "china"
+        ]
+    },
+    {
+        "x": 188,
+        "y": 90,
+        "left": 84.375,
+        "top": 47.040182,
+        "right": 85.78125,
+        "bottom": 46.073231,
+        "countries": [
+            "kazakhstan",
+            "china"
+        ]
+    },
+    {
+        "x": 189,
+        "y": 90,
+        "left": 85.78125,
+        "top": 47.040182,
+        "right": 87.1875,
+        "bottom": 46.073231,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 190,
+        "y": 90,
+        "left": 87.1875,
+        "top": 47.040182,
+        "right": 88.59375,
+        "bottom": 46.073231,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 191,
+        "y": 90,
+        "left": 88.59375,
+        "top": 47.040182,
+        "right": 90.0,
+        "bottom": 46.073231,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 192,
+        "y": 90,
+        "left": 90.0,
+        "top": 47.040182,
+        "right": 91.40625,
+        "bottom": 46.073231,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 90,
+        "left": 115.3125,
+        "top": 47.040182,
+        "right": 116.71875,
+        "bottom": 46.073231,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 90,
+        "left": 116.71875,
+        "top": 47.040182,
+        "right": 118.125,
+        "bottom": 46.073231,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 90,
+        "left": 118.125,
+        "top": 47.040182,
+        "right": 119.53125,
+        "bottom": 46.073231,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 90,
+        "left": 119.53125,
+        "top": 47.040182,
+        "right": 120.9375,
+        "bottom": 46.073231,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 90,
+        "left": 120.9375,
+        "top": 47.040182,
+        "right": 122.34375,
+        "bottom": 46.073231,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 90,
+        "left": 122.34375,
+        "top": 47.040182,
+        "right": 123.75,
+        "bottom": 46.073231,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 216,
+        "y": 90,
+        "left": 123.75,
+        "top": 47.040182,
+        "right": 125.15625,
+        "bottom": 46.073231,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 217,
+        "y": 90,
+        "left": 125.15625,
+        "top": 47.040182,
+        "right": 126.5625,
+        "bottom": 46.073231,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 218,
+        "y": 90,
+        "left": 126.5625,
+        "top": 47.040182,
+        "right": 127.96875,
+        "bottom": 46.073231,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 219,
+        "y": 90,
+        "left": 127.96875,
+        "top": 47.040182,
+        "right": 129.375,
+        "bottom": 46.073231,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 220,
+        "y": 90,
+        "left": 129.375,
+        "top": 47.040182,
+        "right": 130.78125,
+        "bottom": 46.073231,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 221,
+        "y": 90,
+        "left": 130.78125,
+        "top": 47.040182,
+        "right": 132.1875,
+        "bottom": 46.073231,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 222,
+        "y": 90,
+        "left": 132.1875,
+        "top": 47.040182,
+        "right": 133.59375,
+        "bottom": 46.073231,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 223,
+        "y": 90,
+        "left": 133.59375,
+        "top": 47.040182,
+        "right": 135.0,
+        "bottom": 46.073231,
+        "countries": [
+            "russia",
+            "china"
+        ]
+    },
+    {
+        "x": 185,
+        "y": 91,
+        "left": 80.15625,
+        "top": 46.073231,
+        "right": 81.5625,
+        "bottom": 45.089036,
+        "countries": [
+            "kazakhstan",
+            "china"
+        ]
+    },
+    {
+        "x": 186,
+        "y": 91,
+        "left": 81.5625,
+        "top": 46.073231,
+        "right": 82.96875,
+        "bottom": 45.089036,
+        "countries": [
+            "kazakhstan",
+            "china"
+        ]
+    },
+    {
+        "x": 187,
+        "y": 91,
+        "left": 82.96875,
+        "top": 46.073231,
+        "right": 84.375,
+        "bottom": 45.089036,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 188,
+        "y": 91,
+        "left": 84.375,
+        "top": 46.073231,
+        "right": 85.78125,
+        "bottom": 45.089036,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 189,
+        "y": 91,
+        "left": 85.78125,
+        "top": 46.073231,
+        "right": 87.1875,
+        "bottom": 45.089036,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 190,
+        "y": 91,
+        "left": 87.1875,
+        "top": 46.073231,
+        "right": 88.59375,
+        "bottom": 45.089036,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 191,
+        "y": 91,
+        "left": 88.59375,
+        "top": 46.073231,
+        "right": 90.0,
+        "bottom": 45.089036,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 192,
+        "y": 91,
+        "left": 90.0,
+        "top": 46.073231,
+        "right": 91.40625,
+        "bottom": 45.089036,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 193,
+        "y": 91,
+        "left": 91.40625,
+        "top": 46.073231,
+        "right": 92.8125,
+        "bottom": 45.089036,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 207,
+        "y": 91,
+        "left": 111.09375,
+        "top": 46.073231,
+        "right": 112.5,
+        "bottom": 45.089036,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 91,
+        "left": 113.90625,
+        "top": 46.073231,
+        "right": 115.3125,
+        "bottom": 45.089036,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 91,
+        "left": 115.3125,
+        "top": 46.073231,
+        "right": 116.71875,
+        "bottom": 45.089036,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 91,
+        "left": 116.71875,
+        "top": 46.073231,
+        "right": 118.125,
+        "bottom": 45.089036,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 91,
+        "left": 118.125,
+        "top": 46.073231,
+        "right": 119.53125,
+        "bottom": 45.089036,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 91,
+        "left": 119.53125,
+        "top": 46.073231,
+        "right": 120.9375,
+        "bottom": 45.089036,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 91,
+        "left": 120.9375,
+        "top": 46.073231,
+        "right": 122.34375,
+        "bottom": 45.089036,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 91,
+        "left": 122.34375,
+        "top": 46.073231,
+        "right": 123.75,
+        "bottom": 45.089036,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 216,
+        "y": 91,
+        "left": 123.75,
+        "top": 46.073231,
+        "right": 125.15625,
+        "bottom": 45.089036,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 217,
+        "y": 91,
+        "left": 125.15625,
+        "top": 46.073231,
+        "right": 126.5625,
+        "bottom": 45.089036,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 218,
+        "y": 91,
+        "left": 126.5625,
+        "top": 46.073231,
+        "right": 127.96875,
+        "bottom": 45.089036,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 219,
+        "y": 91,
+        "left": 127.96875,
+        "top": 46.073231,
+        "right": 129.375,
+        "bottom": 45.089036,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 220,
+        "y": 91,
+        "left": 129.375,
+        "top": 46.073231,
+        "right": 130.78125,
+        "bottom": 45.089036,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 221,
+        "y": 91,
+        "left": 130.78125,
+        "top": 46.073231,
+        "right": 132.1875,
+        "bottom": 45.089036,
+        "countries": [
+            "russia",
+            "china"
+        ]
+    },
+    {
+        "x": 222,
+        "y": 91,
+        "left": 132.1875,
+        "top": 46.073231,
+        "right": 133.59375,
+        "bottom": 45.089036,
+        "countries": [
+            "russia",
+            "china"
+        ]
+    },
+    {
+        "x": 223,
+        "y": 91,
+        "left": 133.59375,
+        "top": 46.073231,
+        "right": 135.0,
+        "bottom": 45.089036,
+        "countries": [
+            "russia",
+            "china"
+        ]
+    },
+    {
+        "x": 184,
+        "y": 92,
+        "left": 78.75,
+        "top": 45.089036,
+        "right": 80.15625,
+        "bottom": 44.087585,
+        "countries": [
+            "kazakhstan",
+            "china"
+        ]
+    },
+    {
+        "x": 185,
+        "y": 92,
+        "left": 80.15625,
+        "top": 45.089036,
+        "right": 81.5625,
+        "bottom": 44.087585,
+        "countries": [
+            "kazakhstan",
+            "china"
+        ]
+    },
+    {
+        "x": 186,
+        "y": 92,
+        "left": 81.5625,
+        "top": 45.089036,
+        "right": 82.96875,
+        "bottom": 44.087585,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 187,
+        "y": 92,
+        "left": 82.96875,
+        "top": 45.089036,
+        "right": 84.375,
+        "bottom": 44.087585,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 188,
+        "y": 92,
+        "left": 84.375,
+        "top": 45.089036,
+        "right": 85.78125,
+        "bottom": 44.087585,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 189,
+        "y": 92,
+        "left": 85.78125,
+        "top": 45.089036,
+        "right": 87.1875,
+        "bottom": 44.087585,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 190,
+        "y": 92,
+        "left": 87.1875,
+        "top": 45.089036,
+        "right": 88.59375,
+        "bottom": 44.087585,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 191,
+        "y": 92,
+        "left": 88.59375,
+        "top": 45.089036,
+        "right": 90.0,
+        "bottom": 44.087585,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 192,
+        "y": 92,
+        "left": 90.0,
+        "top": 45.089036,
+        "right": 91.40625,
+        "bottom": 44.087585,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 193,
+        "y": 92,
+        "left": 91.40625,
+        "top": 45.089036,
+        "right": 92.8125,
+        "bottom": 44.087585,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 194,
+        "y": 92,
+        "left": 92.8125,
+        "top": 45.089036,
+        "right": 94.21875,
+        "bottom": 44.087585,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 195,
+        "y": 92,
+        "left": 94.21875,
+        "top": 45.089036,
+        "right": 95.625,
+        "bottom": 44.087585,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 207,
+        "y": 92,
+        "left": 111.09375,
+        "top": 45.089036,
+        "right": 112.5,
+        "bottom": 44.087585,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 208,
+        "y": 92,
+        "left": 112.5,
+        "top": 45.089036,
+        "right": 113.90625,
+        "bottom": 44.087585,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 92,
+        "left": 113.90625,
+        "top": 45.089036,
+        "right": 115.3125,
+        "bottom": 44.087585,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 92,
+        "left": 115.3125,
+        "top": 45.089036,
+        "right": 116.71875,
+        "bottom": 44.087585,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 92,
+        "left": 116.71875,
+        "top": 45.089036,
+        "right": 118.125,
+        "bottom": 44.087585,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 92,
+        "left": 118.125,
+        "top": 45.089036,
+        "right": 119.53125,
+        "bottom": 44.087585,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 92,
+        "left": 119.53125,
+        "top": 45.089036,
+        "right": 120.9375,
+        "bottom": 44.087585,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 92,
+        "left": 120.9375,
+        "top": 45.089036,
+        "right": 122.34375,
+        "bottom": 44.087585,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 92,
+        "left": 122.34375,
+        "top": 45.089036,
+        "right": 123.75,
+        "bottom": 44.087585,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 216,
+        "y": 92,
+        "left": 123.75,
+        "top": 45.089036,
+        "right": 125.15625,
+        "bottom": 44.087585,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 217,
+        "y": 92,
+        "left": 125.15625,
+        "top": 45.089036,
+        "right": 126.5625,
+        "bottom": 44.087585,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 218,
+        "y": 92,
+        "left": 126.5625,
+        "top": 45.089036,
+        "right": 127.96875,
+        "bottom": 44.087585,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 219,
+        "y": 92,
+        "left": 127.96875,
+        "top": 45.089036,
+        "right": 129.375,
+        "bottom": 44.087585,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 220,
+        "y": 92,
+        "left": 129.375,
+        "top": 45.089036,
+        "right": 130.78125,
+        "bottom": 44.087585,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 221,
+        "y": 92,
+        "left": 130.78125,
+        "top": 45.089036,
+        "right": 132.1875,
+        "bottom": 44.087585,
+        "countries": [
+            "russia",
+            "china"
+        ]
+    },
+    {
+        "x": 222,
+        "y": 92,
+        "left": 132.1875,
+        "top": 45.089036,
+        "right": 133.59375,
+        "bottom": 44.087585,
+        "countries": [
+            "russia",
+            "china"
+        ]
+    },
+    {
+        "x": 185,
+        "y": 93,
+        "left": 80.15625,
+        "top": 44.087585,
+        "right": 81.5625,
+        "bottom": 43.068888,
+        "countries": [
+            "kazakhstan",
+            "china"
+        ]
+    },
+    {
+        "x": 186,
+        "y": 93,
+        "left": 81.5625,
+        "top": 44.087585,
+        "right": 82.96875,
+        "bottom": 43.068888,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 187,
+        "y": 93,
+        "left": 82.96875,
+        "top": 44.087585,
+        "right": 84.375,
+        "bottom": 43.068888,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 188,
+        "y": 93,
+        "left": 84.375,
+        "top": 44.087585,
+        "right": 85.78125,
+        "bottom": 43.068888,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 189,
+        "y": 93,
+        "left": 85.78125,
+        "top": 44.087585,
+        "right": 87.1875,
+        "bottom": 43.068888,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 190,
+        "y": 93,
+        "left": 87.1875,
+        "top": 44.087585,
+        "right": 88.59375,
+        "bottom": 43.068888,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 191,
+        "y": 93,
+        "left": 88.59375,
+        "top": 44.087585,
+        "right": 90.0,
+        "bottom": 43.068888,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 192,
+        "y": 93,
+        "left": 90.0,
+        "top": 44.087585,
+        "right": 91.40625,
+        "bottom": 43.068888,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 193,
+        "y": 93,
+        "left": 91.40625,
+        "top": 44.087585,
+        "right": 92.8125,
+        "bottom": 43.068888,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 194,
+        "y": 93,
+        "left": 92.8125,
+        "top": 44.087585,
+        "right": 94.21875,
+        "bottom": 43.068888,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 195,
+        "y": 93,
+        "left": 94.21875,
+        "top": 44.087585,
+        "right": 95.625,
+        "bottom": 43.068888,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 196,
+        "y": 93,
+        "left": 95.625,
+        "top": 44.087585,
+        "right": 97.03125,
+        "bottom": 43.068888,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 206,
+        "y": 93,
+        "left": 109.6875,
+        "top": 44.087585,
+        "right": 111.09375,
+        "bottom": 43.068888,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 207,
+        "y": 93,
+        "left": 111.09375,
+        "top": 44.087585,
+        "right": 112.5,
+        "bottom": 43.068888,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 208,
+        "y": 93,
+        "left": 112.5,
+        "top": 44.087585,
+        "right": 113.90625,
+        "bottom": 43.068888,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 93,
+        "left": 113.90625,
+        "top": 44.087585,
+        "right": 115.3125,
+        "bottom": 43.068888,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 93,
+        "left": 115.3125,
+        "top": 44.087585,
+        "right": 116.71875,
+        "bottom": 43.068888,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 93,
+        "left": 116.71875,
+        "top": 44.087585,
+        "right": 118.125,
+        "bottom": 43.068888,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 93,
+        "left": 118.125,
+        "top": 44.087585,
+        "right": 119.53125,
+        "bottom": 43.068888,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 93,
+        "left": 119.53125,
+        "top": 44.087585,
+        "right": 120.9375,
+        "bottom": 43.068888,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 93,
+        "left": 120.9375,
+        "top": 44.087585,
+        "right": 122.34375,
+        "bottom": 43.068888,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 93,
+        "left": 122.34375,
+        "top": 44.087585,
+        "right": 123.75,
+        "bottom": 43.068888,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 216,
+        "y": 93,
+        "left": 123.75,
+        "top": 44.087585,
+        "right": 125.15625,
+        "bottom": 43.068888,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 217,
+        "y": 93,
+        "left": 125.15625,
+        "top": 44.087585,
+        "right": 126.5625,
+        "bottom": 43.068888,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 218,
+        "y": 93,
+        "left": 126.5625,
+        "top": 44.087585,
+        "right": 127.96875,
+        "bottom": 43.068888,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 219,
+        "y": 93,
+        "left": 127.96875,
+        "top": 44.087585,
+        "right": 129.375,
+        "bottom": 43.068888,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 220,
+        "y": 93,
+        "left": 129.375,
+        "top": 44.087585,
+        "right": 130.78125,
+        "bottom": 43.068888,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 221,
+        "y": 93,
+        "left": 130.78125,
+        "top": 44.087585,
+        "right": 132.1875,
+        "bottom": 43.068888,
+        "countries": [
+            "russia",
+            "china"
+        ]
+    },
+    {
+        "x": 184,
+        "y": 94,
+        "left": 78.75,
+        "top": 43.068888,
+        "right": 80.15625,
+        "bottom": 42.032974,
+        "countries": [
+            "kazakhstan",
+            "china",
+            "kyrgyzstan"
+        ]
+    },
+    {
+        "x": 185,
+        "y": 94,
+        "left": 80.15625,
+        "top": 43.068888,
+        "right": 81.5625,
+        "bottom": 42.032974,
+        "countries": [
+            "kazakhstan",
+            "china",
+            "kyrgyzstan"
+        ]
+    },
+    {
+        "x": 186,
+        "y": 94,
+        "left": 81.5625,
+        "top": 43.068888,
+        "right": 82.96875,
+        "bottom": 42.032974,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 187,
+        "y": 94,
+        "left": 82.96875,
+        "top": 43.068888,
+        "right": 84.375,
+        "bottom": 42.032974,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 188,
+        "y": 94,
+        "left": 84.375,
+        "top": 43.068888,
+        "right": 85.78125,
+        "bottom": 42.032974,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 189,
+        "y": 94,
+        "left": 85.78125,
+        "top": 43.068888,
+        "right": 87.1875,
+        "bottom": 42.032974,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 190,
+        "y": 94,
+        "left": 87.1875,
+        "top": 43.068888,
+        "right": 88.59375,
+        "bottom": 42.032974,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 191,
+        "y": 94,
+        "left": 88.59375,
+        "top": 43.068888,
+        "right": 90.0,
+        "bottom": 42.032974,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 192,
+        "y": 94,
+        "left": 90.0,
+        "top": 43.068888,
+        "right": 91.40625,
+        "bottom": 42.032974,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 193,
+        "y": 94,
+        "left": 91.40625,
+        "top": 43.068888,
+        "right": 92.8125,
+        "bottom": 42.032974,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 194,
+        "y": 94,
+        "left": 92.8125,
+        "top": 43.068888,
+        "right": 94.21875,
+        "bottom": 42.032974,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 195,
+        "y": 94,
+        "left": 94.21875,
+        "top": 43.068888,
+        "right": 95.625,
+        "bottom": 42.032974,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 196,
+        "y": 94,
+        "left": 95.625,
+        "top": 43.068888,
+        "right": 97.03125,
+        "bottom": 42.032974,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 197,
+        "y": 94,
+        "left": 97.03125,
+        "top": 43.068888,
+        "right": 98.4375,
+        "bottom": 42.032974,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 198,
+        "y": 94,
+        "left": 98.4375,
+        "top": 43.068888,
+        "right": 99.84375,
+        "bottom": 42.032974,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 94,
+        "left": 99.84375,
+        "top": 43.068888,
+        "right": 101.25,
+        "bottom": 42.032974,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 94,
+        "left": 101.25,
+        "top": 43.068888,
+        "right": 102.65625,
+        "bottom": 42.032974,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 201,
+        "y": 94,
+        "left": 102.65625,
+        "top": 43.068888,
+        "right": 104.0625,
+        "bottom": 42.032974,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 203,
+        "y": 94,
+        "left": 105.46875,
+        "top": 43.068888,
+        "right": 106.875,
+        "bottom": 42.032974,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 204,
+        "y": 94,
+        "left": 106.875,
+        "top": 43.068888,
+        "right": 108.28125,
+        "bottom": 42.032974,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 205,
+        "y": 94,
+        "left": 108.28125,
+        "top": 43.068888,
+        "right": 109.6875,
+        "bottom": 42.032974,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 206,
+        "y": 94,
+        "left": 109.6875,
+        "top": 43.068888,
+        "right": 111.09375,
+        "bottom": 42.032974,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 207,
+        "y": 94,
+        "left": 111.09375,
+        "top": 43.068888,
+        "right": 112.5,
+        "bottom": 42.032974,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 208,
+        "y": 94,
+        "left": 112.5,
+        "top": 43.068888,
+        "right": 113.90625,
+        "bottom": 42.032974,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 94,
+        "left": 113.90625,
+        "top": 43.068888,
+        "right": 115.3125,
+        "bottom": 42.032974,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 94,
+        "left": 115.3125,
+        "top": 43.068888,
+        "right": 116.71875,
+        "bottom": 42.032974,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 94,
+        "left": 116.71875,
+        "top": 43.068888,
+        "right": 118.125,
+        "bottom": 42.032974,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 94,
+        "left": 118.125,
+        "top": 43.068888,
+        "right": 119.53125,
+        "bottom": 42.032974,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 94,
+        "left": 119.53125,
+        "top": 43.068888,
+        "right": 120.9375,
+        "bottom": 42.032974,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 94,
+        "left": 120.9375,
+        "top": 43.068888,
+        "right": 122.34375,
+        "bottom": 42.032974,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 94,
+        "left": 122.34375,
+        "top": 43.068888,
+        "right": 123.75,
+        "bottom": 42.032974,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 216,
+        "y": 94,
+        "left": 123.75,
+        "top": 43.068888,
+        "right": 125.15625,
+        "bottom": 42.032974,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 217,
+        "y": 94,
+        "left": 125.15625,
+        "top": 43.068888,
+        "right": 126.5625,
+        "bottom": 42.032974,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 218,
+        "y": 94,
+        "left": 126.5625,
+        "top": 43.068888,
+        "right": 127.96875,
+        "bottom": 42.032974,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 219,
+        "y": 94,
+        "left": 127.96875,
+        "top": 43.068888,
+        "right": 129.375,
+        "bottom": 42.032974,
+        "countries": [
+            "north_korea",
+            "china"
+        ]
+    },
+    {
+        "x": 220,
+        "y": 94,
+        "left": 129.375,
+        "top": 43.068888,
+        "right": 130.78125,
+        "bottom": 42.032974,
+        "countries": [
+            "russia",
+            "north_korea",
+            "china"
+        ]
+    },
+    {
+        "x": 221,
+        "y": 94,
+        "left": 130.78125,
+        "top": 43.068888,
+        "right": 132.1875,
+        "bottom": 42.032974,
+        "countries": [
+            "russia",
+            "china"
+        ]
+    },
+    {
+        "x": 182,
+        "y": 95,
+        "left": 75.9375,
+        "top": 42.032974,
+        "right": 77.34375,
+        "bottom": 40.979898,
+        "countries": [
+            "china",
+            "kyrgyzstan"
+        ]
+    },
+    {
+        "x": 183,
+        "y": 95,
+        "left": 77.34375,
+        "top": 42.032974,
+        "right": 78.75,
+        "bottom": 40.979898,
+        "countries": [
+            "china",
+            "kyrgyzstan"
+        ]
+    },
+    {
+        "x": 184,
+        "y": 95,
+        "left": 78.75,
+        "top": 42.032974,
+        "right": 80.15625,
+        "bottom": 40.979898,
+        "countries": [
+            "china",
+            "kyrgyzstan"
+        ]
+    },
+    {
+        "x": 185,
+        "y": 95,
+        "left": 80.15625,
+        "top": 42.032974,
+        "right": 81.5625,
+        "bottom": 40.979898,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 186,
+        "y": 95,
+        "left": 81.5625,
+        "top": 42.032974,
+        "right": 82.96875,
+        "bottom": 40.979898,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 187,
+        "y": 95,
+        "left": 82.96875,
+        "top": 42.032974,
+        "right": 84.375,
+        "bottom": 40.979898,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 188,
+        "y": 95,
+        "left": 84.375,
+        "top": 42.032974,
+        "right": 85.78125,
+        "bottom": 40.979898,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 189,
+        "y": 95,
+        "left": 85.78125,
+        "top": 42.032974,
+        "right": 87.1875,
+        "bottom": 40.979898,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 190,
+        "y": 95,
+        "left": 87.1875,
+        "top": 42.032974,
+        "right": 88.59375,
+        "bottom": 40.979898,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 191,
+        "y": 95,
+        "left": 88.59375,
+        "top": 42.032974,
+        "right": 90.0,
+        "bottom": 40.979898,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 192,
+        "y": 95,
+        "left": 90.0,
+        "top": 42.032974,
+        "right": 91.40625,
+        "bottom": 40.979898,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 193,
+        "y": 95,
+        "left": 91.40625,
+        "top": 42.032974,
+        "right": 92.8125,
+        "bottom": 40.979898,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 194,
+        "y": 95,
+        "left": 92.8125,
+        "top": 42.032974,
+        "right": 94.21875,
+        "bottom": 40.979898,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 195,
+        "y": 95,
+        "left": 94.21875,
+        "top": 42.032974,
+        "right": 95.625,
+        "bottom": 40.979898,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 196,
+        "y": 95,
+        "left": 95.625,
+        "top": 42.032974,
+        "right": 97.03125,
+        "bottom": 40.979898,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 197,
+        "y": 95,
+        "left": 97.03125,
+        "top": 42.032974,
+        "right": 98.4375,
+        "bottom": 40.979898,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 198,
+        "y": 95,
+        "left": 98.4375,
+        "top": 42.032974,
+        "right": 99.84375,
+        "bottom": 40.979898,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 95,
+        "left": 99.84375,
+        "top": 42.032974,
+        "right": 101.25,
+        "bottom": 40.979898,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 95,
+        "left": 101.25,
+        "top": 42.032974,
+        "right": 102.65625,
+        "bottom": 40.979898,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 201,
+        "y": 95,
+        "left": 102.65625,
+        "top": 42.032974,
+        "right": 104.0625,
+        "bottom": 40.979898,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 202,
+        "y": 95,
+        "left": 104.0625,
+        "top": 42.032974,
+        "right": 105.46875,
+        "bottom": 40.979898,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 203,
+        "y": 95,
+        "left": 105.46875,
+        "top": 42.032974,
+        "right": 106.875,
+        "bottom": 40.979898,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 204,
+        "y": 95,
+        "left": 106.875,
+        "top": 42.032974,
+        "right": 108.28125,
+        "bottom": 40.979898,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 205,
+        "y": 95,
+        "left": 108.28125,
+        "top": 42.032974,
+        "right": 109.6875,
+        "bottom": 40.979898,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 206,
+        "y": 95,
+        "left": 109.6875,
+        "top": 42.032974,
+        "right": 111.09375,
+        "bottom": 40.979898,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 207,
+        "y": 95,
+        "left": 111.09375,
+        "top": 42.032974,
+        "right": 112.5,
+        "bottom": 40.979898,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 208,
+        "y": 95,
+        "left": 112.5,
+        "top": 42.032974,
+        "right": 113.90625,
+        "bottom": 40.979898,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 95,
+        "left": 113.90625,
+        "top": 42.032974,
+        "right": 115.3125,
+        "bottom": 40.979898,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 95,
+        "left": 115.3125,
+        "top": 42.032974,
+        "right": 116.71875,
+        "bottom": 40.979898,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 95,
+        "left": 116.71875,
+        "top": 42.032974,
+        "right": 118.125,
+        "bottom": 40.979898,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 95,
+        "left": 118.125,
+        "top": 42.032974,
+        "right": 119.53125,
+        "bottom": 40.979898,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 95,
+        "left": 119.53125,
+        "top": 42.032974,
+        "right": 120.9375,
+        "bottom": 40.979898,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 95,
+        "left": 120.9375,
+        "top": 42.032974,
+        "right": 122.34375,
+        "bottom": 40.979898,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 95,
+        "left": 122.34375,
+        "top": 42.032974,
+        "right": 123.75,
+        "bottom": 40.979898,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 216,
+        "y": 95,
+        "left": 123.75,
+        "top": 42.032974,
+        "right": 125.15625,
+        "bottom": 40.979898,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 217,
+        "y": 95,
+        "left": 125.15625,
+        "top": 42.032974,
+        "right": 126.5625,
+        "bottom": 40.979898,
+        "countries": [
+            "north_korea",
+            "china"
+        ]
+    },
+    {
+        "x": 218,
+        "y": 95,
+        "left": 126.5625,
+        "top": 42.032974,
+        "right": 127.96875,
+        "bottom": 40.979898,
+        "countries": [
+            "north_korea",
+            "china"
+        ]
+    },
+    {
+        "x": 219,
+        "y": 95,
+        "left": 127.96875,
+        "top": 42.032974,
+        "right": 129.375,
+        "bottom": 40.979898,
+        "countries": [
+            "north_korea",
+            "china"
+        ]
+    },
+    {
+        "x": 180,
+        "y": 96,
+        "left": 73.125,
+        "top": 40.979898,
+        "right": 74.53125,
+        "bottom": 39.909736,
+        "countries": [
+            "uzbekistan",
+            "china",
+            "kyrgyzstan"
+        ]
+    },
+    {
+        "x": 181,
+        "y": 96,
+        "left": 74.53125,
+        "top": 40.979898,
+        "right": 75.9375,
+        "bottom": 39.909736,
+        "countries": [
+            "china",
+            "kyrgyzstan"
+        ]
+    },
+    {
+        "x": 182,
+        "y": 96,
+        "left": 75.9375,
+        "top": 40.979898,
+        "right": 77.34375,
+        "bottom": 39.909736,
+        "countries": [
+            "china",
+            "kyrgyzstan"
+        ]
+    },
+    {
+        "x": 183,
+        "y": 96,
+        "left": 77.34375,
+        "top": 40.979898,
+        "right": 78.75,
+        "bottom": 39.909736,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 184,
+        "y": 96,
+        "left": 78.75,
+        "top": 40.979898,
+        "right": 80.15625,
+        "bottom": 39.909736,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 185,
+        "y": 96,
+        "left": 80.15625,
+        "top": 40.979898,
+        "right": 81.5625,
+        "bottom": 39.909736,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 186,
+        "y": 96,
+        "left": 81.5625,
+        "top": 40.979898,
+        "right": 82.96875,
+        "bottom": 39.909736,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 187,
+        "y": 96,
+        "left": 82.96875,
+        "top": 40.979898,
+        "right": 84.375,
+        "bottom": 39.909736,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 188,
+        "y": 96,
+        "left": 84.375,
+        "top": 40.979898,
+        "right": 85.78125,
+        "bottom": 39.909736,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 189,
+        "y": 96,
+        "left": 85.78125,
+        "top": 40.979898,
+        "right": 87.1875,
+        "bottom": 39.909736,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 190,
+        "y": 96,
+        "left": 87.1875,
+        "top": 40.979898,
+        "right": 88.59375,
+        "bottom": 39.909736,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 191,
+        "y": 96,
+        "left": 88.59375,
+        "top": 40.979898,
+        "right": 90.0,
+        "bottom": 39.909736,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 192,
+        "y": 96,
+        "left": 90.0,
+        "top": 40.979898,
+        "right": 91.40625,
+        "bottom": 39.909736,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 193,
+        "y": 96,
+        "left": 91.40625,
+        "top": 40.979898,
+        "right": 92.8125,
+        "bottom": 39.909736,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 194,
+        "y": 96,
+        "left": 92.8125,
+        "top": 40.979898,
+        "right": 94.21875,
+        "bottom": 39.909736,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 195,
+        "y": 96,
+        "left": 94.21875,
+        "top": 40.979898,
+        "right": 95.625,
+        "bottom": 39.909736,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 196,
+        "y": 96,
+        "left": 95.625,
+        "top": 40.979898,
+        "right": 97.03125,
+        "bottom": 39.909736,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 197,
+        "y": 96,
+        "left": 97.03125,
+        "top": 40.979898,
+        "right": 98.4375,
+        "bottom": 39.909736,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 198,
+        "y": 96,
+        "left": 98.4375,
+        "top": 40.979898,
+        "right": 99.84375,
+        "bottom": 39.909736,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 96,
+        "left": 99.84375,
+        "top": 40.979898,
+        "right": 101.25,
+        "bottom": 39.909736,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 96,
+        "left": 101.25,
+        "top": 40.979898,
+        "right": 102.65625,
+        "bottom": 39.909736,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 201,
+        "y": 96,
+        "left": 102.65625,
+        "top": 40.979898,
+        "right": 104.0625,
+        "bottom": 39.909736,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 202,
+        "y": 96,
+        "left": 104.0625,
+        "top": 40.979898,
+        "right": 105.46875,
+        "bottom": 39.909736,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 203,
+        "y": 96,
+        "left": 105.46875,
+        "top": 40.979898,
+        "right": 106.875,
+        "bottom": 39.909736,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 204,
+        "y": 96,
+        "left": 106.875,
+        "top": 40.979898,
+        "right": 108.28125,
+        "bottom": 39.909736,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 205,
+        "y": 96,
+        "left": 108.28125,
+        "top": 40.979898,
+        "right": 109.6875,
+        "bottom": 39.909736,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 206,
+        "y": 96,
+        "left": 109.6875,
+        "top": 40.979898,
+        "right": 111.09375,
+        "bottom": 39.909736,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 207,
+        "y": 96,
+        "left": 111.09375,
+        "top": 40.979898,
+        "right": 112.5,
+        "bottom": 39.909736,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 208,
+        "y": 96,
+        "left": 112.5,
+        "top": 40.979898,
+        "right": 113.90625,
+        "bottom": 39.909736,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 96,
+        "left": 113.90625,
+        "top": 40.979898,
+        "right": 115.3125,
+        "bottom": 39.909736,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 96,
+        "left": 115.3125,
+        "top": 40.979898,
+        "right": 116.71875,
+        "bottom": 39.909736,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 96,
+        "left": 116.71875,
+        "top": 40.979898,
+        "right": 118.125,
+        "bottom": 39.909736,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 96,
+        "left": 118.125,
+        "top": 40.979898,
+        "right": 119.53125,
+        "bottom": 39.909736,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 96,
+        "left": 119.53125,
+        "top": 40.979898,
+        "right": 120.9375,
+        "bottom": 39.909736,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 96,
+        "left": 120.9375,
+        "top": 40.979898,
+        "right": 122.34375,
+        "bottom": 39.909736,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 96,
+        "left": 122.34375,
+        "top": 40.979898,
+        "right": 123.75,
+        "bottom": 39.909736,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 216,
+        "y": 96,
+        "left": 123.75,
+        "top": 40.979898,
+        "right": 125.15625,
+        "bottom": 39.909736,
+        "countries": [
+            "north_korea",
+            "china"
+        ]
+    },
+    {
+        "x": 217,
+        "y": 96,
+        "left": 125.15625,
+        "top": 40.979898,
+        "right": 126.5625,
+        "bottom": 39.909736,
+        "countries": [
+            "north_korea",
+            "china"
+        ]
+    },
+    {
+        "x": 180,
+        "y": 97,
+        "left": 73.125,
+        "top": 39.909736,
+        "right": 74.53125,
+        "bottom": 38.822591,
+        "countries": [
+            "tajikistan",
+            "china",
+            "kyrgyzstan"
+        ]
+    },
+    {
+        "x": 181,
+        "y": 97,
+        "left": 74.53125,
+        "top": 39.909736,
+        "right": 75.9375,
+        "bottom": 38.822591,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 182,
+        "y": 97,
+        "left": 75.9375,
+        "top": 39.909736,
+        "right": 77.34375,
+        "bottom": 38.822591,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 183,
+        "y": 97,
+        "left": 77.34375,
+        "top": 39.909736,
+        "right": 78.75,
+        "bottom": 38.822591,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 184,
+        "y": 97,
+        "left": 78.75,
+        "top": 39.909736,
+        "right": 80.15625,
+        "bottom": 38.822591,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 185,
+        "y": 97,
+        "left": 80.15625,
+        "top": 39.909736,
+        "right": 81.5625,
+        "bottom": 38.822591,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 186,
+        "y": 97,
+        "left": 81.5625,
+        "top": 39.909736,
+        "right": 82.96875,
+        "bottom": 38.822591,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 187,
+        "y": 97,
+        "left": 82.96875,
+        "top": 39.909736,
+        "right": 84.375,
+        "bottom": 38.822591,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 188,
+        "y": 97,
+        "left": 84.375,
+        "top": 39.909736,
+        "right": 85.78125,
+        "bottom": 38.822591,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 189,
+        "y": 97,
+        "left": 85.78125,
+        "top": 39.909736,
+        "right": 87.1875,
+        "bottom": 38.822591,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 190,
+        "y": 97,
+        "left": 87.1875,
+        "top": 39.909736,
+        "right": 88.59375,
+        "bottom": 38.822591,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 191,
+        "y": 97,
+        "left": 88.59375,
+        "top": 39.909736,
+        "right": 90.0,
+        "bottom": 38.822591,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 192,
+        "y": 97,
+        "left": 90.0,
+        "top": 39.909736,
+        "right": 91.40625,
+        "bottom": 38.822591,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 193,
+        "y": 97,
+        "left": 91.40625,
+        "top": 39.909736,
+        "right": 92.8125,
+        "bottom": 38.822591,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 194,
+        "y": 97,
+        "left": 92.8125,
+        "top": 39.909736,
+        "right": 94.21875,
+        "bottom": 38.822591,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 195,
+        "y": 97,
+        "left": 94.21875,
+        "top": 39.909736,
+        "right": 95.625,
+        "bottom": 38.822591,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 196,
+        "y": 97,
+        "left": 95.625,
+        "top": 39.909736,
+        "right": 97.03125,
+        "bottom": 38.822591,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 197,
+        "y": 97,
+        "left": 97.03125,
+        "top": 39.909736,
+        "right": 98.4375,
+        "bottom": 38.822591,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 198,
+        "y": 97,
+        "left": 98.4375,
+        "top": 39.909736,
+        "right": 99.84375,
+        "bottom": 38.822591,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 97,
+        "left": 99.84375,
+        "top": 39.909736,
+        "right": 101.25,
+        "bottom": 38.822591,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 97,
+        "left": 101.25,
+        "top": 39.909736,
+        "right": 102.65625,
+        "bottom": 38.822591,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 201,
+        "y": 97,
+        "left": 102.65625,
+        "top": 39.909736,
+        "right": 104.0625,
+        "bottom": 38.822591,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 202,
+        "y": 97,
+        "left": 104.0625,
+        "top": 39.909736,
+        "right": 105.46875,
+        "bottom": 38.822591,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 203,
+        "y": 97,
+        "left": 105.46875,
+        "top": 39.909736,
+        "right": 106.875,
+        "bottom": 38.822591,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 204,
+        "y": 97,
+        "left": 106.875,
+        "top": 39.909736,
+        "right": 108.28125,
+        "bottom": 38.822591,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 205,
+        "y": 97,
+        "left": 108.28125,
+        "top": 39.909736,
+        "right": 109.6875,
+        "bottom": 38.822591,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 206,
+        "y": 97,
+        "left": 109.6875,
+        "top": 39.909736,
+        "right": 111.09375,
+        "bottom": 38.822591,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 207,
+        "y": 97,
+        "left": 111.09375,
+        "top": 39.909736,
+        "right": 112.5,
+        "bottom": 38.822591,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 208,
+        "y": 97,
+        "left": 112.5,
+        "top": 39.909736,
+        "right": 113.90625,
+        "bottom": 38.822591,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 97,
+        "left": 113.90625,
+        "top": 39.909736,
+        "right": 115.3125,
+        "bottom": 38.822591,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 97,
+        "left": 115.3125,
+        "top": 39.909736,
+        "right": 116.71875,
+        "bottom": 38.822591,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 97,
+        "left": 116.71875,
+        "top": 39.909736,
+        "right": 118.125,
+        "bottom": 38.822591,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 97,
+        "left": 118.125,
+        "top": 39.909736,
+        "right": 119.53125,
+        "bottom": 38.822591,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 97,
+        "left": 119.53125,
+        "top": 39.909736,
+        "right": 120.9375,
+        "bottom": 38.822591,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 97,
+        "left": 120.9375,
+        "top": 39.909736,
+        "right": 122.34375,
+        "bottom": 38.822591,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 97,
+        "left": 122.34375,
+        "top": 39.909736,
+        "right": 123.75,
+        "bottom": 38.822591,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 216,
+        "y": 97,
+        "left": 123.75,
+        "top": 39.909736,
+        "right": 125.15625,
+        "bottom": 38.822591,
+        "countries": [
+            "north_korea",
+            "china"
+        ]
+    },
+    {
+        "x": 180,
+        "y": 98,
+        "left": 73.125,
+        "top": 38.822591,
+        "right": 74.53125,
+        "bottom": 37.71859,
+        "countries": [
+            "tajikistan",
+            "china"
+        ]
+    },
+    {
+        "x": 181,
+        "y": 98,
+        "left": 74.53125,
+        "top": 38.822591,
+        "right": 75.9375,
+        "bottom": 37.71859,
+        "countries": [
+            "tajikistan",
+            "china"
+        ]
+    },
+    {
+        "x": 182,
+        "y": 98,
+        "left": 75.9375,
+        "top": 38.822591,
+        "right": 77.34375,
+        "bottom": 37.71859,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 183,
+        "y": 98,
+        "left": 77.34375,
+        "top": 38.822591,
+        "right": 78.75,
+        "bottom": 37.71859,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 184,
+        "y": 98,
+        "left": 78.75,
+        "top": 38.822591,
+        "right": 80.15625,
+        "bottom": 37.71859,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 185,
+        "y": 98,
+        "left": 80.15625,
+        "top": 38.822591,
+        "right": 81.5625,
+        "bottom": 37.71859,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 186,
+        "y": 98,
+        "left": 81.5625,
+        "top": 38.822591,
+        "right": 82.96875,
+        "bottom": 37.71859,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 187,
+        "y": 98,
+        "left": 82.96875,
+        "top": 38.822591,
+        "right": 84.375,
+        "bottom": 37.71859,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 188,
+        "y": 98,
+        "left": 84.375,
+        "top": 38.822591,
+        "right": 85.78125,
+        "bottom": 37.71859,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 189,
+        "y": 98,
+        "left": 85.78125,
+        "top": 38.822591,
+        "right": 87.1875,
+        "bottom": 37.71859,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 190,
+        "y": 98,
+        "left": 87.1875,
+        "top": 38.822591,
+        "right": 88.59375,
+        "bottom": 37.71859,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 191,
+        "y": 98,
+        "left": 88.59375,
+        "top": 38.822591,
+        "right": 90.0,
+        "bottom": 37.71859,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 192,
+        "y": 98,
+        "left": 90.0,
+        "top": 38.822591,
+        "right": 91.40625,
+        "bottom": 37.71859,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 193,
+        "y": 98,
+        "left": 91.40625,
+        "top": 38.822591,
+        "right": 92.8125,
+        "bottom": 37.71859,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 194,
+        "y": 98,
+        "left": 92.8125,
+        "top": 38.822591,
+        "right": 94.21875,
+        "bottom": 37.71859,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 195,
+        "y": 98,
+        "left": 94.21875,
+        "top": 38.822591,
+        "right": 95.625,
+        "bottom": 37.71859,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 196,
+        "y": 98,
+        "left": 95.625,
+        "top": 38.822591,
+        "right": 97.03125,
+        "bottom": 37.71859,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 197,
+        "y": 98,
+        "left": 97.03125,
+        "top": 38.822591,
+        "right": 98.4375,
+        "bottom": 37.71859,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 198,
+        "y": 98,
+        "left": 98.4375,
+        "top": 38.822591,
+        "right": 99.84375,
+        "bottom": 37.71859,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 98,
+        "left": 99.84375,
+        "top": 38.822591,
+        "right": 101.25,
+        "bottom": 37.71859,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 98,
+        "left": 101.25,
+        "top": 38.822591,
+        "right": 102.65625,
+        "bottom": 37.71859,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 201,
+        "y": 98,
+        "left": 102.65625,
+        "top": 38.822591,
+        "right": 104.0625,
+        "bottom": 37.71859,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 202,
+        "y": 98,
+        "left": 104.0625,
+        "top": 38.822591,
+        "right": 105.46875,
+        "bottom": 37.71859,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 203,
+        "y": 98,
+        "left": 105.46875,
+        "top": 38.822591,
+        "right": 106.875,
+        "bottom": 37.71859,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 204,
+        "y": 98,
+        "left": 106.875,
+        "top": 38.822591,
+        "right": 108.28125,
+        "bottom": 37.71859,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 205,
+        "y": 98,
+        "left": 108.28125,
+        "top": 38.822591,
+        "right": 109.6875,
+        "bottom": 37.71859,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 206,
+        "y": 98,
+        "left": 109.6875,
+        "top": 38.822591,
+        "right": 111.09375,
+        "bottom": 37.71859,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 207,
+        "y": 98,
+        "left": 111.09375,
+        "top": 38.822591,
+        "right": 112.5,
+        "bottom": 37.71859,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 208,
+        "y": 98,
+        "left": 112.5,
+        "top": 38.822591,
+        "right": 113.90625,
+        "bottom": 37.71859,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 98,
+        "left": 113.90625,
+        "top": 38.822591,
+        "right": 115.3125,
+        "bottom": 37.71859,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 98,
+        "left": 115.3125,
+        "top": 38.822591,
+        "right": 116.71875,
+        "bottom": 37.71859,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 98,
+        "left": 116.71875,
+        "top": 38.822591,
+        "right": 118.125,
+        "bottom": 37.71859,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 98,
+        "left": 118.125,
+        "top": 38.822591,
+        "right": 119.53125,
+        "bottom": 37.71859,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 98,
+        "left": 119.53125,
+        "top": 38.822591,
+        "right": 120.9375,
+        "bottom": 37.71859,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 98,
+        "left": 120.9375,
+        "top": 38.822591,
+        "right": 122.34375,
+        "bottom": 37.71859,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 182,
+        "y": 99,
+        "left": 75.9375,
+        "top": 37.71859,
+        "right": 77.34375,
+        "bottom": 36.597889,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 183,
+        "y": 99,
+        "left": 77.34375,
+        "top": 37.71859,
+        "right": 78.75,
+        "bottom": 36.597889,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 184,
+        "y": 99,
+        "left": 78.75,
+        "top": 37.71859,
+        "right": 80.15625,
+        "bottom": 36.597889,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 185,
+        "y": 99,
+        "left": 80.15625,
+        "top": 37.71859,
+        "right": 81.5625,
+        "bottom": 36.597889,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 186,
+        "y": 99,
+        "left": 81.5625,
+        "top": 37.71859,
+        "right": 82.96875,
+        "bottom": 36.597889,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 187,
+        "y": 99,
+        "left": 82.96875,
+        "top": 37.71859,
+        "right": 84.375,
+        "bottom": 36.597889,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 188,
+        "y": 99,
+        "left": 84.375,
+        "top": 37.71859,
+        "right": 85.78125,
+        "bottom": 36.597889,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 189,
+        "y": 99,
+        "left": 85.78125,
+        "top": 37.71859,
+        "right": 87.1875,
+        "bottom": 36.597889,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 190,
+        "y": 99,
+        "left": 87.1875,
+        "top": 37.71859,
+        "right": 88.59375,
+        "bottom": 36.597889,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 191,
+        "y": 99,
+        "left": 88.59375,
+        "top": 37.71859,
+        "right": 90.0,
+        "bottom": 36.597889,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 192,
+        "y": 99,
+        "left": 90.0,
+        "top": 37.71859,
+        "right": 91.40625,
+        "bottom": 36.597889,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 193,
+        "y": 99,
+        "left": 91.40625,
+        "top": 37.71859,
+        "right": 92.8125,
+        "bottom": 36.597889,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 194,
+        "y": 99,
+        "left": 92.8125,
+        "top": 37.71859,
+        "right": 94.21875,
+        "bottom": 36.597889,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 195,
+        "y": 99,
+        "left": 94.21875,
+        "top": 37.71859,
+        "right": 95.625,
+        "bottom": 36.597889,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 196,
+        "y": 99,
+        "left": 95.625,
+        "top": 37.71859,
+        "right": 97.03125,
+        "bottom": 36.597889,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 197,
+        "y": 99,
+        "left": 97.03125,
+        "top": 37.71859,
+        "right": 98.4375,
+        "bottom": 36.597889,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 198,
+        "y": 99,
+        "left": 98.4375,
+        "top": 37.71859,
+        "right": 99.84375,
+        "bottom": 36.597889,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 99,
+        "left": 99.84375,
+        "top": 37.71859,
+        "right": 101.25,
+        "bottom": 36.597889,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 99,
+        "left": 101.25,
+        "top": 37.71859,
+        "right": 102.65625,
+        "bottom": 36.597889,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 201,
+        "y": 99,
+        "left": 102.65625,
+        "top": 37.71859,
+        "right": 104.0625,
+        "bottom": 36.597889,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 202,
+        "y": 99,
+        "left": 104.0625,
+        "top": 37.71859,
+        "right": 105.46875,
+        "bottom": 36.597889,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 203,
+        "y": 99,
+        "left": 105.46875,
+        "top": 37.71859,
+        "right": 106.875,
+        "bottom": 36.597889,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 204,
+        "y": 99,
+        "left": 106.875,
+        "top": 37.71859,
+        "right": 108.28125,
+        "bottom": 36.597889,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 205,
+        "y": 99,
+        "left": 108.28125,
+        "top": 37.71859,
+        "right": 109.6875,
+        "bottom": 36.597889,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 206,
+        "y": 99,
+        "left": 109.6875,
+        "top": 37.71859,
+        "right": 111.09375,
+        "bottom": 36.597889,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 207,
+        "y": 99,
+        "left": 111.09375,
+        "top": 37.71859,
+        "right": 112.5,
+        "bottom": 36.597889,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 208,
+        "y": 99,
+        "left": 112.5,
+        "top": 37.71859,
+        "right": 113.90625,
+        "bottom": 36.597889,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 99,
+        "left": 113.90625,
+        "top": 37.71859,
+        "right": 115.3125,
+        "bottom": 36.597889,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 99,
+        "left": 115.3125,
+        "top": 37.71859,
+        "right": 116.71875,
+        "bottom": 36.597889,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 99,
+        "left": 116.71875,
+        "top": 37.71859,
+        "right": 118.125,
+        "bottom": 36.597889,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 99,
+        "left": 118.125,
+        "top": 37.71859,
+        "right": 119.53125,
+        "bottom": 36.597889,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 99,
+        "left": 119.53125,
+        "top": 37.71859,
+        "right": 120.9375,
+        "bottom": 36.597889,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 99,
+        "left": 120.9375,
+        "top": 37.71859,
+        "right": 122.34375,
+        "bottom": 36.597889,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 99,
+        "left": 122.34375,
+        "top": 37.71859,
+        "right": 123.75,
+        "bottom": 36.597889,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 181,
+        "y": 100,
+        "left": 74.53125,
+        "top": 36.597889,
+        "right": 75.9375,
+        "bottom": 35.46067,
+        "countries": [
+            "china",
+            "pakistan"
+        ]
+    },
+    {
+        "x": 182,
+        "y": 100,
+        "left": 75.9375,
+        "top": 36.597889,
+        "right": 77.34375,
+        "bottom": 35.46067,
+        "countries": [
+            "china",
+            "pakistan"
+        ]
+    },
+    {
+        "x": 183,
+        "y": 100,
+        "left": 77.34375,
+        "top": 36.597889,
+        "right": 78.75,
+        "bottom": 35.46067,
+        "countries": [
+            "pakistan",
+            "china",
+            "india"
+        ]
+    },
+    {
+        "x": 184,
+        "y": 100,
+        "left": 78.75,
+        "top": 36.597889,
+        "right": 80.15625,
+        "bottom": 35.46067,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 185,
+        "y": 100,
+        "left": 80.15625,
+        "top": 36.597889,
+        "right": 81.5625,
+        "bottom": 35.46067,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 186,
+        "y": 100,
+        "left": 81.5625,
+        "top": 36.597889,
+        "right": 82.96875,
+        "bottom": 35.46067,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 187,
+        "y": 100,
+        "left": 82.96875,
+        "top": 36.597889,
+        "right": 84.375,
+        "bottom": 35.46067,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 188,
+        "y": 100,
+        "left": 84.375,
+        "top": 36.597889,
+        "right": 85.78125,
+        "bottom": 35.46067,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 189,
+        "y": 100,
+        "left": 85.78125,
+        "top": 36.597889,
+        "right": 87.1875,
+        "bottom": 35.46067,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 190,
+        "y": 100,
+        "left": 87.1875,
+        "top": 36.597889,
+        "right": 88.59375,
+        "bottom": 35.46067,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 191,
+        "y": 100,
+        "left": 88.59375,
+        "top": 36.597889,
+        "right": 90.0,
+        "bottom": 35.46067,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 192,
+        "y": 100,
+        "left": 90.0,
+        "top": 36.597889,
+        "right": 91.40625,
+        "bottom": 35.46067,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 193,
+        "y": 100,
+        "left": 91.40625,
+        "top": 36.597889,
+        "right": 92.8125,
+        "bottom": 35.46067,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 194,
+        "y": 100,
+        "left": 92.8125,
+        "top": 36.597889,
+        "right": 94.21875,
+        "bottom": 35.46067,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 195,
+        "y": 100,
+        "left": 94.21875,
+        "top": 36.597889,
+        "right": 95.625,
+        "bottom": 35.46067,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 196,
+        "y": 100,
+        "left": 95.625,
+        "top": 36.597889,
+        "right": 97.03125,
+        "bottom": 35.46067,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 197,
+        "y": 100,
+        "left": 97.03125,
+        "top": 36.597889,
+        "right": 98.4375,
+        "bottom": 35.46067,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 198,
+        "y": 100,
+        "left": 98.4375,
+        "top": 36.597889,
+        "right": 99.84375,
+        "bottom": 35.46067,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 100,
+        "left": 99.84375,
+        "top": 36.597889,
+        "right": 101.25,
+        "bottom": 35.46067,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 100,
+        "left": 101.25,
+        "top": 36.597889,
+        "right": 102.65625,
+        "bottom": 35.46067,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 201,
+        "y": 100,
+        "left": 102.65625,
+        "top": 36.597889,
+        "right": 104.0625,
+        "bottom": 35.46067,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 202,
+        "y": 100,
+        "left": 104.0625,
+        "top": 36.597889,
+        "right": 105.46875,
+        "bottom": 35.46067,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 203,
+        "y": 100,
+        "left": 105.46875,
+        "top": 36.597889,
+        "right": 106.875,
+        "bottom": 35.46067,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 204,
+        "y": 100,
+        "left": 106.875,
+        "top": 36.597889,
+        "right": 108.28125,
+        "bottom": 35.46067,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 205,
+        "y": 100,
+        "left": 108.28125,
+        "top": 36.597889,
+        "right": 109.6875,
+        "bottom": 35.46067,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 206,
+        "y": 100,
+        "left": 109.6875,
+        "top": 36.597889,
+        "right": 111.09375,
+        "bottom": 35.46067,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 207,
+        "y": 100,
+        "left": 111.09375,
+        "top": 36.597889,
+        "right": 112.5,
+        "bottom": 35.46067,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 208,
+        "y": 100,
+        "left": 112.5,
+        "top": 36.597889,
+        "right": 113.90625,
+        "bottom": 35.46067,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 100,
+        "left": 113.90625,
+        "top": 36.597889,
+        "right": 115.3125,
+        "bottom": 35.46067,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 100,
+        "left": 115.3125,
+        "top": 36.597889,
+        "right": 116.71875,
+        "bottom": 35.46067,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 100,
+        "left": 116.71875,
+        "top": 36.597889,
+        "right": 118.125,
+        "bottom": 35.46067,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 100,
+        "left": 118.125,
+        "top": 36.597889,
+        "right": 119.53125,
+        "bottom": 35.46067,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 100,
+        "left": 119.53125,
+        "top": 36.597889,
+        "right": 120.9375,
+        "bottom": 35.46067,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 100,
+        "left": 120.9375,
+        "top": 36.597889,
+        "right": 122.34375,
+        "bottom": 35.46067,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 183,
+        "y": 101,
+        "left": 77.34375,
+        "top": 35.46067,
+        "right": 78.75,
+        "bottom": 34.307144,
+        "countries": [
+            "pakistan",
+            "china",
+            "india"
+        ]
+    },
+    {
+        "x": 184,
+        "y": 101,
+        "left": 78.75,
+        "top": 35.46067,
+        "right": 80.15625,
+        "bottom": 34.307144,
+        "countries": [
+            "china",
+            "india"
+        ]
+    },
+    {
+        "x": 185,
+        "y": 101,
+        "left": 80.15625,
+        "top": 35.46067,
+        "right": 81.5625,
+        "bottom": 34.307144,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 186,
+        "y": 101,
+        "left": 81.5625,
+        "top": 35.46067,
+        "right": 82.96875,
+        "bottom": 34.307144,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 187,
+        "y": 101,
+        "left": 82.96875,
+        "top": 35.46067,
+        "right": 84.375,
+        "bottom": 34.307144,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 188,
+        "y": 101,
+        "left": 84.375,
+        "top": 35.46067,
+        "right": 85.78125,
+        "bottom": 34.307144,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 189,
+        "y": 101,
+        "left": 85.78125,
+        "top": 35.46067,
+        "right": 87.1875,
+        "bottom": 34.307144,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 190,
+        "y": 101,
+        "left": 87.1875,
+        "top": 35.46067,
+        "right": 88.59375,
+        "bottom": 34.307144,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 191,
+        "y": 101,
+        "left": 88.59375,
+        "top": 35.46067,
+        "right": 90.0,
+        "bottom": 34.307144,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 192,
+        "y": 101,
+        "left": 90.0,
+        "top": 35.46067,
+        "right": 91.40625,
+        "bottom": 34.307144,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 193,
+        "y": 101,
+        "left": 91.40625,
+        "top": 35.46067,
+        "right": 92.8125,
+        "bottom": 34.307144,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 194,
+        "y": 101,
+        "left": 92.8125,
+        "top": 35.46067,
+        "right": 94.21875,
+        "bottom": 34.307144,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 195,
+        "y": 101,
+        "left": 94.21875,
+        "top": 35.46067,
+        "right": 95.625,
+        "bottom": 34.307144,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 196,
+        "y": 101,
+        "left": 95.625,
+        "top": 35.46067,
+        "right": 97.03125,
+        "bottom": 34.307144,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 197,
+        "y": 101,
+        "left": 97.03125,
+        "top": 35.46067,
+        "right": 98.4375,
+        "bottom": 34.307144,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 198,
+        "y": 101,
+        "left": 98.4375,
+        "top": 35.46067,
+        "right": 99.84375,
+        "bottom": 34.307144,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 101,
+        "left": 99.84375,
+        "top": 35.46067,
+        "right": 101.25,
+        "bottom": 34.307144,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 101,
+        "left": 101.25,
+        "top": 35.46067,
+        "right": 102.65625,
+        "bottom": 34.307144,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 201,
+        "y": 101,
+        "left": 102.65625,
+        "top": 35.46067,
+        "right": 104.0625,
+        "bottom": 34.307144,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 202,
+        "y": 101,
+        "left": 104.0625,
+        "top": 35.46067,
+        "right": 105.46875,
+        "bottom": 34.307144,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 203,
+        "y": 101,
+        "left": 105.46875,
+        "top": 35.46067,
+        "right": 106.875,
+        "bottom": 34.307144,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 204,
+        "y": 101,
+        "left": 106.875,
+        "top": 35.46067,
+        "right": 108.28125,
+        "bottom": 34.307144,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 205,
+        "y": 101,
+        "left": 108.28125,
+        "top": 35.46067,
+        "right": 109.6875,
+        "bottom": 34.307144,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 206,
+        "y": 101,
+        "left": 109.6875,
+        "top": 35.46067,
+        "right": 111.09375,
+        "bottom": 34.307144,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 207,
+        "y": 101,
+        "left": 111.09375,
+        "top": 35.46067,
+        "right": 112.5,
+        "bottom": 34.307144,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 208,
+        "y": 101,
+        "left": 112.5,
+        "top": 35.46067,
+        "right": 113.90625,
+        "bottom": 34.307144,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 101,
+        "left": 113.90625,
+        "top": 35.46067,
+        "right": 115.3125,
+        "bottom": 34.307144,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 101,
+        "left": 115.3125,
+        "top": 35.46067,
+        "right": 116.71875,
+        "bottom": 34.307144,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 101,
+        "left": 116.71875,
+        "top": 35.46067,
+        "right": 118.125,
+        "bottom": 34.307144,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 101,
+        "left": 118.125,
+        "top": 35.46067,
+        "right": 119.53125,
+        "bottom": 34.307144,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 101,
+        "left": 119.53125,
+        "top": 35.46067,
+        "right": 120.9375,
+        "bottom": 34.307144,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 183,
+        "y": 102,
+        "left": 77.34375,
+        "top": 34.307144,
+        "right": 78.75,
+        "bottom": 33.137551,
+        "countries": [
+            "china",
+            "india"
+        ]
+    },
+    {
+        "x": 184,
+        "y": 102,
+        "left": 78.75,
+        "top": 34.307144,
+        "right": 80.15625,
+        "bottom": 33.137551,
+        "countries": [
+            "china",
+            "india"
+        ]
+    },
+    {
+        "x": 185,
+        "y": 102,
+        "left": 80.15625,
+        "top": 34.307144,
+        "right": 81.5625,
+        "bottom": 33.137551,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 186,
+        "y": 102,
+        "left": 81.5625,
+        "top": 34.307144,
+        "right": 82.96875,
+        "bottom": 33.137551,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 187,
+        "y": 102,
+        "left": 82.96875,
+        "top": 34.307144,
+        "right": 84.375,
+        "bottom": 33.137551,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 188,
+        "y": 102,
+        "left": 84.375,
+        "top": 34.307144,
+        "right": 85.78125,
+        "bottom": 33.137551,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 189,
+        "y": 102,
+        "left": 85.78125,
+        "top": 34.307144,
+        "right": 87.1875,
+        "bottom": 33.137551,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 190,
+        "y": 102,
+        "left": 87.1875,
+        "top": 34.307144,
+        "right": 88.59375,
+        "bottom": 33.137551,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 191,
+        "y": 102,
+        "left": 88.59375,
+        "top": 34.307144,
+        "right": 90.0,
+        "bottom": 33.137551,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 192,
+        "y": 102,
+        "left": 90.0,
+        "top": 34.307144,
+        "right": 91.40625,
+        "bottom": 33.137551,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 193,
+        "y": 102,
+        "left": 91.40625,
+        "top": 34.307144,
+        "right": 92.8125,
+        "bottom": 33.137551,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 194,
+        "y": 102,
+        "left": 92.8125,
+        "top": 34.307144,
+        "right": 94.21875,
+        "bottom": 33.137551,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 195,
+        "y": 102,
+        "left": 94.21875,
+        "top": 34.307144,
+        "right": 95.625,
+        "bottom": 33.137551,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 196,
+        "y": 102,
+        "left": 95.625,
+        "top": 34.307144,
+        "right": 97.03125,
+        "bottom": 33.137551,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 197,
+        "y": 102,
+        "left": 97.03125,
+        "top": 34.307144,
+        "right": 98.4375,
+        "bottom": 33.137551,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 198,
+        "y": 102,
+        "left": 98.4375,
+        "top": 34.307144,
+        "right": 99.84375,
+        "bottom": 33.137551,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 102,
+        "left": 99.84375,
+        "top": 34.307144,
+        "right": 101.25,
+        "bottom": 33.137551,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 102,
+        "left": 101.25,
+        "top": 34.307144,
+        "right": 102.65625,
+        "bottom": 33.137551,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 201,
+        "y": 102,
+        "left": 102.65625,
+        "top": 34.307144,
+        "right": 104.0625,
+        "bottom": 33.137551,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 202,
+        "y": 102,
+        "left": 104.0625,
+        "top": 34.307144,
+        "right": 105.46875,
+        "bottom": 33.137551,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 203,
+        "y": 102,
+        "left": 105.46875,
+        "top": 34.307144,
+        "right": 106.875,
+        "bottom": 33.137551,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 204,
+        "y": 102,
+        "left": 106.875,
+        "top": 34.307144,
+        "right": 108.28125,
+        "bottom": 33.137551,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 205,
+        "y": 102,
+        "left": 108.28125,
+        "top": 34.307144,
+        "right": 109.6875,
+        "bottom": 33.137551,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 206,
+        "y": 102,
+        "left": 109.6875,
+        "top": 34.307144,
+        "right": 111.09375,
+        "bottom": 33.137551,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 207,
+        "y": 102,
+        "left": 111.09375,
+        "top": 34.307144,
+        "right": 112.5,
+        "bottom": 33.137551,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 208,
+        "y": 102,
+        "left": 112.5,
+        "top": 34.307144,
+        "right": 113.90625,
+        "bottom": 33.137551,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 102,
+        "left": 113.90625,
+        "top": 34.307144,
+        "right": 115.3125,
+        "bottom": 33.137551,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 102,
+        "left": 115.3125,
+        "top": 34.307144,
+        "right": 116.71875,
+        "bottom": 33.137551,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 102,
+        "left": 116.71875,
+        "top": 34.307144,
+        "right": 118.125,
+        "bottom": 33.137551,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 102,
+        "left": 118.125,
+        "top": 34.307144,
+        "right": 119.53125,
+        "bottom": 33.137551,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 102,
+        "left": 119.53125,
+        "top": 34.307144,
+        "right": 120.9375,
+        "bottom": 33.137551,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 183,
+        "y": 103,
+        "left": 77.34375,
+        "top": 33.137551,
+        "right": 78.75,
+        "bottom": 31.952162,
+        "countries": [
+            "china",
+            "india"
+        ]
+    },
+    {
+        "x": 184,
+        "y": 103,
+        "left": 78.75,
+        "top": 33.137551,
+        "right": 80.15625,
+        "bottom": 31.952162,
+        "countries": [
+            "china",
+            "india"
+        ]
+    },
+    {
+        "x": 185,
+        "y": 103,
+        "left": 80.15625,
+        "top": 33.137551,
+        "right": 81.5625,
+        "bottom": 31.952162,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 186,
+        "y": 103,
+        "left": 81.5625,
+        "top": 33.137551,
+        "right": 82.96875,
+        "bottom": 31.952162,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 187,
+        "y": 103,
+        "left": 82.96875,
+        "top": 33.137551,
+        "right": 84.375,
+        "bottom": 31.952162,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 188,
+        "y": 103,
+        "left": 84.375,
+        "top": 33.137551,
+        "right": 85.78125,
+        "bottom": 31.952162,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 189,
+        "y": 103,
+        "left": 85.78125,
+        "top": 33.137551,
+        "right": 87.1875,
+        "bottom": 31.952162,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 190,
+        "y": 103,
+        "left": 87.1875,
+        "top": 33.137551,
+        "right": 88.59375,
+        "bottom": 31.952162,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 191,
+        "y": 103,
+        "left": 88.59375,
+        "top": 33.137551,
+        "right": 90.0,
+        "bottom": 31.952162,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 192,
+        "y": 103,
+        "left": 90.0,
+        "top": 33.137551,
+        "right": 91.40625,
+        "bottom": 31.952162,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 193,
+        "y": 103,
+        "left": 91.40625,
+        "top": 33.137551,
+        "right": 92.8125,
+        "bottom": 31.952162,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 194,
+        "y": 103,
+        "left": 92.8125,
+        "top": 33.137551,
+        "right": 94.21875,
+        "bottom": 31.952162,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 195,
+        "y": 103,
+        "left": 94.21875,
+        "top": 33.137551,
+        "right": 95.625,
+        "bottom": 31.952162,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 196,
+        "y": 103,
+        "left": 95.625,
+        "top": 33.137551,
+        "right": 97.03125,
+        "bottom": 31.952162,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 197,
+        "y": 103,
+        "left": 97.03125,
+        "top": 33.137551,
+        "right": 98.4375,
+        "bottom": 31.952162,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 198,
+        "y": 103,
+        "left": 98.4375,
+        "top": 33.137551,
+        "right": 99.84375,
+        "bottom": 31.952162,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 103,
+        "left": 99.84375,
+        "top": 33.137551,
+        "right": 101.25,
+        "bottom": 31.952162,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 103,
+        "left": 101.25,
+        "top": 33.137551,
+        "right": 102.65625,
+        "bottom": 31.952162,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 201,
+        "y": 103,
+        "left": 102.65625,
+        "top": 33.137551,
+        "right": 104.0625,
+        "bottom": 31.952162,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 202,
+        "y": 103,
+        "left": 104.0625,
+        "top": 33.137551,
+        "right": 105.46875,
+        "bottom": 31.952162,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 203,
+        "y": 103,
+        "left": 105.46875,
+        "top": 33.137551,
+        "right": 106.875,
+        "bottom": 31.952162,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 204,
+        "y": 103,
+        "left": 106.875,
+        "top": 33.137551,
+        "right": 108.28125,
+        "bottom": 31.952162,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 205,
+        "y": 103,
+        "left": 108.28125,
+        "top": 33.137551,
+        "right": 109.6875,
+        "bottom": 31.952162,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 206,
+        "y": 103,
+        "left": 109.6875,
+        "top": 33.137551,
+        "right": 111.09375,
+        "bottom": 31.952162,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 207,
+        "y": 103,
+        "left": 111.09375,
+        "top": 33.137551,
+        "right": 112.5,
+        "bottom": 31.952162,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 208,
+        "y": 103,
+        "left": 112.5,
+        "top": 33.137551,
+        "right": 113.90625,
+        "bottom": 31.952162,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 103,
+        "left": 113.90625,
+        "top": 33.137551,
+        "right": 115.3125,
+        "bottom": 31.952162,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 103,
+        "left": 115.3125,
+        "top": 33.137551,
+        "right": 116.71875,
+        "bottom": 31.952162,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 103,
+        "left": 116.71875,
+        "top": 33.137551,
+        "right": 118.125,
+        "bottom": 31.952162,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 103,
+        "left": 118.125,
+        "top": 33.137551,
+        "right": 119.53125,
+        "bottom": 31.952162,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 103,
+        "left": 119.53125,
+        "top": 33.137551,
+        "right": 120.9375,
+        "bottom": 31.952162,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 103,
+        "left": 120.9375,
+        "top": 33.137551,
+        "right": 122.34375,
+        "bottom": 31.952162,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 183,
+        "y": 104,
+        "left": 77.34375,
+        "top": 31.952162,
+        "right": 78.75,
+        "bottom": 30.751278,
+        "countries": [
+            "china",
+            "india"
+        ]
+    },
+    {
+        "x": 184,
+        "y": 104,
+        "left": 78.75,
+        "top": 31.952162,
+        "right": 80.15625,
+        "bottom": 30.751278,
+        "countries": [
+            "china",
+            "india"
+        ]
+    },
+    {
+        "x": 185,
+        "y": 104,
+        "left": 80.15625,
+        "top": 31.952162,
+        "right": 81.5625,
+        "bottom": 30.751278,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 186,
+        "y": 104,
+        "left": 81.5625,
+        "top": 31.952162,
+        "right": 82.96875,
+        "bottom": 30.751278,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 187,
+        "y": 104,
+        "left": 82.96875,
+        "top": 31.952162,
+        "right": 84.375,
+        "bottom": 30.751278,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 188,
+        "y": 104,
+        "left": 84.375,
+        "top": 31.952162,
+        "right": 85.78125,
+        "bottom": 30.751278,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 189,
+        "y": 104,
+        "left": 85.78125,
+        "top": 31.952162,
+        "right": 87.1875,
+        "bottom": 30.751278,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 190,
+        "y": 104,
+        "left": 87.1875,
+        "top": 31.952162,
+        "right": 88.59375,
+        "bottom": 30.751278,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 191,
+        "y": 104,
+        "left": 88.59375,
+        "top": 31.952162,
+        "right": 90.0,
+        "bottom": 30.751278,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 192,
+        "y": 104,
+        "left": 90.0,
+        "top": 31.952162,
+        "right": 91.40625,
+        "bottom": 30.751278,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 193,
+        "y": 104,
+        "left": 91.40625,
+        "top": 31.952162,
+        "right": 92.8125,
+        "bottom": 30.751278,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 194,
+        "y": 104,
+        "left": 92.8125,
+        "top": 31.952162,
+        "right": 94.21875,
+        "bottom": 30.751278,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 195,
+        "y": 104,
+        "left": 94.21875,
+        "top": 31.952162,
+        "right": 95.625,
+        "bottom": 30.751278,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 196,
+        "y": 104,
+        "left": 95.625,
+        "top": 31.952162,
+        "right": 97.03125,
+        "bottom": 30.751278,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 197,
+        "y": 104,
+        "left": 97.03125,
+        "top": 31.952162,
+        "right": 98.4375,
+        "bottom": 30.751278,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 198,
+        "y": 104,
+        "left": 98.4375,
+        "top": 31.952162,
+        "right": 99.84375,
+        "bottom": 30.751278,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 104,
+        "left": 99.84375,
+        "top": 31.952162,
+        "right": 101.25,
+        "bottom": 30.751278,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 104,
+        "left": 101.25,
+        "top": 31.952162,
+        "right": 102.65625,
+        "bottom": 30.751278,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 201,
+        "y": 104,
+        "left": 102.65625,
+        "top": 31.952162,
+        "right": 104.0625,
+        "bottom": 30.751278,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 202,
+        "y": 104,
+        "left": 104.0625,
+        "top": 31.952162,
+        "right": 105.46875,
+        "bottom": 30.751278,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 203,
+        "y": 104,
+        "left": 105.46875,
+        "top": 31.952162,
+        "right": 106.875,
+        "bottom": 30.751278,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 204,
+        "y": 104,
+        "left": 106.875,
+        "top": 31.952162,
+        "right": 108.28125,
+        "bottom": 30.751278,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 205,
+        "y": 104,
+        "left": 108.28125,
+        "top": 31.952162,
+        "right": 109.6875,
+        "bottom": 30.751278,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 206,
+        "y": 104,
+        "left": 109.6875,
+        "top": 31.952162,
+        "right": 111.09375,
+        "bottom": 30.751278,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 207,
+        "y": 104,
+        "left": 111.09375,
+        "top": 31.952162,
+        "right": 112.5,
+        "bottom": 30.751278,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 208,
+        "y": 104,
+        "left": 112.5,
+        "top": 31.952162,
+        "right": 113.90625,
+        "bottom": 30.751278,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 104,
+        "left": 113.90625,
+        "top": 31.952162,
+        "right": 115.3125,
+        "bottom": 30.751278,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 104,
+        "left": 115.3125,
+        "top": 31.952162,
+        "right": 116.71875,
+        "bottom": 30.751278,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 104,
+        "left": 116.71875,
+        "top": 31.952162,
+        "right": 118.125,
+        "bottom": 30.751278,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 104,
+        "left": 118.125,
+        "top": 31.952162,
+        "right": 119.53125,
+        "bottom": 30.751278,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 104,
+        "left": 119.53125,
+        "top": 31.952162,
+        "right": 120.9375,
+        "bottom": 30.751278,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 104,
+        "left": 120.9375,
+        "top": 31.952162,
+        "right": 122.34375,
+        "bottom": 30.751278,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 104,
+        "left": 122.34375,
+        "top": 31.952162,
+        "right": 123.75,
+        "bottom": 30.751278,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 184,
+        "y": 105,
+        "left": 78.75,
+        "top": 30.751278,
+        "right": 80.15625,
+        "bottom": 29.53523,
+        "countries": [
+            "china",
+            "india"
+        ]
+    },
+    {
+        "x": 185,
+        "y": 105,
+        "left": 80.15625,
+        "top": 30.751278,
+        "right": 81.5625,
+        "bottom": 29.53523,
+        "countries": [
+            "nepal",
+            "china",
+            "india"
+        ]
+    },
+    {
+        "x": 186,
+        "y": 105,
+        "left": 81.5625,
+        "top": 30.751278,
+        "right": 82.96875,
+        "bottom": 29.53523,
+        "countries": [
+            "nepal",
+            "china"
+        ]
+    },
+    {
+        "x": 187,
+        "y": 105,
+        "left": 82.96875,
+        "top": 30.751278,
+        "right": 84.375,
+        "bottom": 29.53523,
+        "countries": [
+            "nepal",
+            "china"
+        ]
+    },
+    {
+        "x": 188,
+        "y": 105,
+        "left": 84.375,
+        "top": 30.751278,
+        "right": 85.78125,
+        "bottom": 29.53523,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 189,
+        "y": 105,
+        "left": 85.78125,
+        "top": 30.751278,
+        "right": 87.1875,
+        "bottom": 29.53523,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 190,
+        "y": 105,
+        "left": 87.1875,
+        "top": 30.751278,
+        "right": 88.59375,
+        "bottom": 29.53523,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 191,
+        "y": 105,
+        "left": 88.59375,
+        "top": 30.751278,
+        "right": 90.0,
+        "bottom": 29.53523,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 192,
+        "y": 105,
+        "left": 90.0,
+        "top": 30.751278,
+        "right": 91.40625,
+        "bottom": 29.53523,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 193,
+        "y": 105,
+        "left": 91.40625,
+        "top": 30.751278,
+        "right": 92.8125,
+        "bottom": 29.53523,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 194,
+        "y": 105,
+        "left": 92.8125,
+        "top": 30.751278,
+        "right": 94.21875,
+        "bottom": 29.53523,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 195,
+        "y": 105,
+        "left": 94.21875,
+        "top": 30.751278,
+        "right": 95.625,
+        "bottom": 29.53523,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 196,
+        "y": 105,
+        "left": 95.625,
+        "top": 30.751278,
+        "right": 97.03125,
+        "bottom": 29.53523,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 197,
+        "y": 105,
+        "left": 97.03125,
+        "top": 30.751278,
+        "right": 98.4375,
+        "bottom": 29.53523,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 198,
+        "y": 105,
+        "left": 98.4375,
+        "top": 30.751278,
+        "right": 99.84375,
+        "bottom": 29.53523,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 105,
+        "left": 99.84375,
+        "top": 30.751278,
+        "right": 101.25,
+        "bottom": 29.53523,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 105,
+        "left": 101.25,
+        "top": 30.751278,
+        "right": 102.65625,
+        "bottom": 29.53523,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 201,
+        "y": 105,
+        "left": 102.65625,
+        "top": 30.751278,
+        "right": 104.0625,
+        "bottom": 29.53523,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 202,
+        "y": 105,
+        "left": 104.0625,
+        "top": 30.751278,
+        "right": 105.46875,
+        "bottom": 29.53523,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 203,
+        "y": 105,
+        "left": 105.46875,
+        "top": 30.751278,
+        "right": 106.875,
+        "bottom": 29.53523,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 204,
+        "y": 105,
+        "left": 106.875,
+        "top": 30.751278,
+        "right": 108.28125,
+        "bottom": 29.53523,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 205,
+        "y": 105,
+        "left": 108.28125,
+        "top": 30.751278,
+        "right": 109.6875,
+        "bottom": 29.53523,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 206,
+        "y": 105,
+        "left": 109.6875,
+        "top": 30.751278,
+        "right": 111.09375,
+        "bottom": 29.53523,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 207,
+        "y": 105,
+        "left": 111.09375,
+        "top": 30.751278,
+        "right": 112.5,
+        "bottom": 29.53523,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 208,
+        "y": 105,
+        "left": 112.5,
+        "top": 30.751278,
+        "right": 113.90625,
+        "bottom": 29.53523,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 105,
+        "left": 113.90625,
+        "top": 30.751278,
+        "right": 115.3125,
+        "bottom": 29.53523,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 105,
+        "left": 115.3125,
+        "top": 30.751278,
+        "right": 116.71875,
+        "bottom": 29.53523,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 105,
+        "left": 116.71875,
+        "top": 30.751278,
+        "right": 118.125,
+        "bottom": 29.53523,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 105,
+        "left": 118.125,
+        "top": 30.751278,
+        "right": 119.53125,
+        "bottom": 29.53523,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 105,
+        "left": 119.53125,
+        "top": 30.751278,
+        "right": 120.9375,
+        "bottom": 29.53523,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 105,
+        "left": 120.9375,
+        "top": 30.751278,
+        "right": 122.34375,
+        "bottom": 29.53523,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 105,
+        "left": 122.34375,
+        "top": 30.751278,
+        "right": 123.75,
+        "bottom": 29.53523,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 187,
+        "y": 106,
+        "left": 82.96875,
+        "top": 29.53523,
+        "right": 84.375,
+        "bottom": 28.304381,
+        "countries": [
+            "nepal",
+            "china"
+        ]
+    },
+    {
+        "x": 188,
+        "y": 106,
+        "left": 84.375,
+        "top": 29.53523,
+        "right": 85.78125,
+        "bottom": 28.304381,
+        "countries": [
+            "nepal",
+            "china"
+        ]
+    },
+    {
+        "x": 189,
+        "y": 106,
+        "left": 85.78125,
+        "top": 29.53523,
+        "right": 87.1875,
+        "bottom": 28.304381,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 190,
+        "y": 106,
+        "left": 87.1875,
+        "top": 29.53523,
+        "right": 88.59375,
+        "bottom": 28.304381,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 193,
+        "y": 106,
+        "left": 91.40625,
+        "top": 29.53523,
+        "right": 92.8125,
+        "bottom": 28.304381,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 194,
+        "y": 106,
+        "left": 92.8125,
+        "top": 29.53523,
+        "right": 94.21875,
+        "bottom": 28.304381,
+        "countries": [
+            "china",
+            "india"
+        ]
+    },
+    {
+        "x": 195,
+        "y": 106,
+        "left": 94.21875,
+        "top": 29.53523,
+        "right": 95.625,
+        "bottom": 28.304381,
+        "countries": [
+            "china",
+            "india"
+        ]
+    },
+    {
+        "x": 196,
+        "y": 106,
+        "left": 95.625,
+        "top": 29.53523,
+        "right": 97.03125,
+        "bottom": 28.304381,
+        "countries": [
+            "china",
+            "india"
+        ]
+    },
+    {
+        "x": 197,
+        "y": 106,
+        "left": 97.03125,
+        "top": 29.53523,
+        "right": 98.4375,
+        "bottom": 28.304381,
+        "countries": [
+            "myanmar",
+            "china",
+            "india"
+        ]
+    },
+    {
+        "x": 198,
+        "y": 106,
+        "left": 98.4375,
+        "top": 29.53523,
+        "right": 99.84375,
+        "bottom": 28.304381,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 106,
+        "left": 99.84375,
+        "top": 29.53523,
+        "right": 101.25,
+        "bottom": 28.304381,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 106,
+        "left": 101.25,
+        "top": 29.53523,
+        "right": 102.65625,
+        "bottom": 28.304381,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 201,
+        "y": 106,
+        "left": 102.65625,
+        "top": 29.53523,
+        "right": 104.0625,
+        "bottom": 28.304381,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 202,
+        "y": 106,
+        "left": 104.0625,
+        "top": 29.53523,
+        "right": 105.46875,
+        "bottom": 28.304381,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 203,
+        "y": 106,
+        "left": 105.46875,
+        "top": 29.53523,
+        "right": 106.875,
+        "bottom": 28.304381,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 204,
+        "y": 106,
+        "left": 106.875,
+        "top": 29.53523,
+        "right": 108.28125,
+        "bottom": 28.304381,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 205,
+        "y": 106,
+        "left": 108.28125,
+        "top": 29.53523,
+        "right": 109.6875,
+        "bottom": 28.304381,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 206,
+        "y": 106,
+        "left": 109.6875,
+        "top": 29.53523,
+        "right": 111.09375,
+        "bottom": 28.304381,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 207,
+        "y": 106,
+        "left": 111.09375,
+        "top": 29.53523,
+        "right": 112.5,
+        "bottom": 28.304381,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 208,
+        "y": 106,
+        "left": 112.5,
+        "top": 29.53523,
+        "right": 113.90625,
+        "bottom": 28.304381,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 106,
+        "left": 113.90625,
+        "top": 29.53523,
+        "right": 115.3125,
+        "bottom": 28.304381,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 106,
+        "left": 115.3125,
+        "top": 29.53523,
+        "right": 116.71875,
+        "bottom": 28.304381,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 106,
+        "left": 116.71875,
+        "top": 29.53523,
+        "right": 118.125,
+        "bottom": 28.304381,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 106,
+        "left": 118.125,
+        "top": 29.53523,
+        "right": 119.53125,
+        "bottom": 28.304381,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 106,
+        "left": 119.53125,
+        "top": 29.53523,
+        "right": 120.9375,
+        "bottom": 28.304381,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 106,
+        "left": 120.9375,
+        "top": 29.53523,
+        "right": 122.34375,
+        "bottom": 28.304381,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 188,
+        "y": 107,
+        "left": 84.375,
+        "top": 28.304381,
+        "right": 85.78125,
+        "bottom": 27.059126,
+        "countries": [
+            "nepal",
+            "china",
+            "india"
+        ]
+    },
+    {
+        "x": 189,
+        "y": 107,
+        "left": 85.78125,
+        "top": 28.304381,
+        "right": 87.1875,
+        "bottom": 27.059126,
+        "countries": [
+            "nepal",
+            "china"
+        ]
+    },
+    {
+        "x": 190,
+        "y": 107,
+        "left": 87.1875,
+        "top": 28.304381,
+        "right": 88.59375,
+        "bottom": 27.059126,
+        "countries": [
+            "nepal",
+            "china",
+            "india"
+        ]
+    },
+    {
+        "x": 194,
+        "y": 107,
+        "left": 92.8125,
+        "top": 28.304381,
+        "right": 94.21875,
+        "bottom": 27.059126,
+        "countries": [
+            "china",
+            "india"
+        ]
+    },
+    {
+        "x": 197,
+        "y": 107,
+        "left": 97.03125,
+        "top": 28.304381,
+        "right": 98.4375,
+        "bottom": 27.059126,
+        "countries": [
+            "myanmar",
+            "china",
+            "india"
+        ]
+    },
+    {
+        "x": 198,
+        "y": 107,
+        "left": 98.4375,
+        "top": 28.304381,
+        "right": 99.84375,
+        "bottom": 27.059126,
+        "countries": [
+            "myanmar",
+            "china"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 107,
+        "left": 99.84375,
+        "top": 28.304381,
+        "right": 101.25,
+        "bottom": 27.059126,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 107,
+        "left": 101.25,
+        "top": 28.304381,
+        "right": 102.65625,
+        "bottom": 27.059126,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 201,
+        "y": 107,
+        "left": 102.65625,
+        "top": 28.304381,
+        "right": 104.0625,
+        "bottom": 27.059126,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 202,
+        "y": 107,
+        "left": 104.0625,
+        "top": 28.304381,
+        "right": 105.46875,
+        "bottom": 27.059126,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 203,
+        "y": 107,
+        "left": 105.46875,
+        "top": 28.304381,
+        "right": 106.875,
+        "bottom": 27.059126,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 204,
+        "y": 107,
+        "left": 106.875,
+        "top": 28.304381,
+        "right": 108.28125,
+        "bottom": 27.059126,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 205,
+        "y": 107,
+        "left": 108.28125,
+        "top": 28.304381,
+        "right": 109.6875,
+        "bottom": 27.059126,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 206,
+        "y": 107,
+        "left": 109.6875,
+        "top": 28.304381,
+        "right": 111.09375,
+        "bottom": 27.059126,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 207,
+        "y": 107,
+        "left": 111.09375,
+        "top": 28.304381,
+        "right": 112.5,
+        "bottom": 27.059126,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 208,
+        "y": 107,
+        "left": 112.5,
+        "top": 28.304381,
+        "right": 113.90625,
+        "bottom": 27.059126,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 107,
+        "left": 113.90625,
+        "top": 28.304381,
+        "right": 115.3125,
+        "bottom": 27.059126,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 107,
+        "left": 115.3125,
+        "top": 28.304381,
+        "right": 116.71875,
+        "bottom": 27.059126,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 107,
+        "left": 116.71875,
+        "top": 28.304381,
+        "right": 118.125,
+        "bottom": 27.059126,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 107,
+        "left": 118.125,
+        "top": 28.304381,
+        "right": 119.53125,
+        "bottom": 27.059126,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 107,
+        "left": 119.53125,
+        "top": 28.304381,
+        "right": 120.9375,
+        "bottom": 27.059126,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 107,
+        "left": 120.9375,
+        "top": 28.304381,
+        "right": 122.34375,
+        "bottom": 27.059126,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 198,
+        "y": 108,
+        "left": 98.4375,
+        "top": 27.059126,
+        "right": 99.84375,
+        "bottom": 25.799891,
+        "countries": [
+            "myanmar",
+            "china"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 108,
+        "left": 99.84375,
+        "top": 27.059126,
+        "right": 101.25,
+        "bottom": 25.799891,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 108,
+        "left": 101.25,
+        "top": 27.059126,
+        "right": 102.65625,
+        "bottom": 25.799891,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 201,
+        "y": 108,
+        "left": 102.65625,
+        "top": 27.059126,
+        "right": 104.0625,
+        "bottom": 25.799891,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 202,
+        "y": 108,
+        "left": 104.0625,
+        "top": 27.059126,
+        "right": 105.46875,
+        "bottom": 25.799891,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 203,
+        "y": 108,
+        "left": 105.46875,
+        "top": 27.059126,
+        "right": 106.875,
+        "bottom": 25.799891,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 204,
+        "y": 108,
+        "left": 106.875,
+        "top": 27.059126,
+        "right": 108.28125,
+        "bottom": 25.799891,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 205,
+        "y": 108,
+        "left": 108.28125,
+        "top": 27.059126,
+        "right": 109.6875,
+        "bottom": 25.799891,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 206,
+        "y": 108,
+        "left": 109.6875,
+        "top": 27.059126,
+        "right": 111.09375,
+        "bottom": 25.799891,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 207,
+        "y": 108,
+        "left": 111.09375,
+        "top": 27.059126,
+        "right": 112.5,
+        "bottom": 25.799891,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 208,
+        "y": 108,
+        "left": 112.5,
+        "top": 27.059126,
+        "right": 113.90625,
+        "bottom": 25.799891,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 108,
+        "left": 113.90625,
+        "top": 27.059126,
+        "right": 115.3125,
+        "bottom": 25.799891,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 108,
+        "left": 115.3125,
+        "top": 27.059126,
+        "right": 116.71875,
+        "bottom": 25.799891,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 108,
+        "left": 116.71875,
+        "top": 27.059126,
+        "right": 118.125,
+        "bottom": 25.799891,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 108,
+        "left": 118.125,
+        "top": 27.059126,
+        "right": 119.53125,
+        "bottom": 25.799891,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 108,
+        "left": 119.53125,
+        "top": 27.059126,
+        "right": 120.9375,
+        "bottom": 25.799891,
+        "countries": [
+            "taiwan",
+            "china"
+        ]
+    },
+    {
+        "x": 197,
+        "y": 109,
+        "left": 97.03125,
+        "top": 25.799891,
+        "right": 98.4375,
+        "bottom": 24.527135,
+        "countries": [
+            "myanmar",
+            "china"
+        ]
+    },
+    {
+        "x": 198,
+        "y": 109,
+        "left": 98.4375,
+        "top": 25.799891,
+        "right": 99.84375,
+        "bottom": 24.527135,
+        "countries": [
+            "myanmar",
+            "china"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 109,
+        "left": 99.84375,
+        "top": 25.799891,
+        "right": 101.25,
+        "bottom": 24.527135,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 109,
+        "left": 101.25,
+        "top": 25.799891,
+        "right": 102.65625,
+        "bottom": 24.527135,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 201,
+        "y": 109,
+        "left": 102.65625,
+        "top": 25.799891,
+        "right": 104.0625,
+        "bottom": 24.527135,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 202,
+        "y": 109,
+        "left": 104.0625,
+        "top": 25.799891,
+        "right": 105.46875,
+        "bottom": 24.527135,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 203,
+        "y": 109,
+        "left": 105.46875,
+        "top": 25.799891,
+        "right": 106.875,
+        "bottom": 24.527135,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 204,
+        "y": 109,
+        "left": 106.875,
+        "top": 25.799891,
+        "right": 108.28125,
+        "bottom": 24.527135,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 205,
+        "y": 109,
+        "left": 108.28125,
+        "top": 25.799891,
+        "right": 109.6875,
+        "bottom": 24.527135,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 206,
+        "y": 109,
+        "left": 109.6875,
+        "top": 25.799891,
+        "right": 111.09375,
+        "bottom": 24.527135,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 207,
+        "y": 109,
+        "left": 111.09375,
+        "top": 25.799891,
+        "right": 112.5,
+        "bottom": 24.527135,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 208,
+        "y": 109,
+        "left": 112.5,
+        "top": 25.799891,
+        "right": 113.90625,
+        "bottom": 24.527135,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 109,
+        "left": 113.90625,
+        "top": 25.799891,
+        "right": 115.3125,
+        "bottom": 24.527135,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 109,
+        "left": 115.3125,
+        "top": 25.799891,
+        "right": 116.71875,
+        "bottom": 24.527135,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 109,
+        "left": 116.71875,
+        "top": 25.799891,
+        "right": 118.125,
+        "bottom": 24.527135,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 109,
+        "left": 118.125,
+        "top": 25.799891,
+        "right": 119.53125,
+        "bottom": 24.527135,
+        "countries": [
+            "taiwan",
+            "china"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 109,
+        "left": 119.53125,
+        "top": 25.799891,
+        "right": 120.9375,
+        "bottom": 24.527135,
+        "countries": [
+            "taiwan",
+            "china"
+        ]
+    },
+    {
+        "x": 197,
+        "y": 110,
+        "left": 97.03125,
+        "top": 24.527135,
+        "right": 98.4375,
+        "bottom": 23.241346,
+        "countries": [
+            "myanmar",
+            "china"
+        ]
+    },
+    {
+        "x": 198,
+        "y": 110,
+        "left": 98.4375,
+        "top": 24.527135,
+        "right": 99.84375,
+        "bottom": 23.241346,
+        "countries": [
+            "myanmar",
+            "china"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 110,
+        "left": 99.84375,
+        "top": 24.527135,
+        "right": 101.25,
+        "bottom": 23.241346,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 110,
+        "left": 101.25,
+        "top": 24.527135,
+        "right": 102.65625,
+        "bottom": 23.241346,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 201,
+        "y": 110,
+        "left": 102.65625,
+        "top": 24.527135,
+        "right": 104.0625,
+        "bottom": 23.241346,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 202,
+        "y": 110,
+        "left": 104.0625,
+        "top": 24.527135,
+        "right": 105.46875,
+        "bottom": 23.241346,
+        "countries": [
+            "vietnam",
+            "china"
+        ]
+    },
+    {
+        "x": 203,
+        "y": 110,
+        "left": 105.46875,
+        "top": 24.527135,
+        "right": 106.875,
+        "bottom": 23.241346,
+        "countries": [
+            "vietnam",
+            "china"
+        ]
+    },
+    {
+        "x": 204,
+        "y": 110,
+        "left": 106.875,
+        "top": 24.527135,
+        "right": 108.28125,
+        "bottom": 23.241346,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 205,
+        "y": 110,
+        "left": 108.28125,
+        "top": 24.527135,
+        "right": 109.6875,
+        "bottom": 23.241346,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 206,
+        "y": 110,
+        "left": 109.6875,
+        "top": 24.527135,
+        "right": 111.09375,
+        "bottom": 23.241346,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 207,
+        "y": 110,
+        "left": 111.09375,
+        "top": 24.527135,
+        "right": 112.5,
+        "bottom": 23.241346,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 208,
+        "y": 110,
+        "left": 112.5,
+        "top": 24.527135,
+        "right": 113.90625,
+        "bottom": 23.241346,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 110,
+        "left": 113.90625,
+        "top": 24.527135,
+        "right": 115.3125,
+        "bottom": 23.241346,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 110,
+        "left": 115.3125,
+        "top": 24.527135,
+        "right": 116.71875,
+        "bottom": 23.241346,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 110,
+        "left": 116.71875,
+        "top": 24.527135,
+        "right": 118.125,
+        "bottom": 23.241346,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 110,
+        "left": 118.125,
+        "top": 24.527135,
+        "right": 119.53125,
+        "bottom": 23.241346,
+        "countries": [
+            "taiwan",
+            "china"
+        ]
+    },
+    {
+        "x": 198,
+        "y": 111,
+        "left": 98.4375,
+        "top": 23.241346,
+        "right": 99.84375,
+        "bottom": 21.943046,
+        "countries": [
+            "myanmar",
+            "china"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 111,
+        "left": 99.84375,
+        "top": 23.241346,
+        "right": 101.25,
+        "bottom": 21.943046,
+        "countries": [
+            "myanmar",
+            "china"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 111,
+        "left": 101.25,
+        "top": 23.241346,
+        "right": 102.65625,
+        "bottom": 21.943046,
+        "countries": [
+            "vietnam",
+            "laos",
+            "china"
+        ]
+    },
+    {
+        "x": 201,
+        "y": 111,
+        "left": 102.65625,
+        "top": 23.241346,
+        "right": 104.0625,
+        "bottom": 21.943046,
+        "countries": [
+            "vietnam",
+            "china"
+        ]
+    },
+    {
+        "x": 202,
+        "y": 111,
+        "left": 104.0625,
+        "top": 23.241346,
+        "right": 105.46875,
+        "bottom": 21.943046,
+        "countries": [
+            "vietnam",
+            "china"
+        ]
+    },
+    {
+        "x": 203,
+        "y": 111,
+        "left": 105.46875,
+        "top": 23.241346,
+        "right": 106.875,
+        "bottom": 21.943046,
+        "countries": [
+            "vietnam",
+            "china"
+        ]
+    },
+    {
+        "x": 204,
+        "y": 111,
+        "left": 106.875,
+        "top": 23.241346,
+        "right": 108.28125,
+        "bottom": 21.943046,
+        "countries": [
+            "vietnam",
+            "china"
+        ]
+    },
+    {
+        "x": 205,
+        "y": 111,
+        "left": 108.28125,
+        "top": 23.241346,
+        "right": 109.6875,
+        "bottom": 21.943046,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 206,
+        "y": 111,
+        "left": 109.6875,
+        "top": 23.241346,
+        "right": 111.09375,
+        "bottom": 21.943046,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 207,
+        "y": 111,
+        "left": 111.09375,
+        "top": 23.241346,
+        "right": 112.5,
+        "bottom": 21.943046,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 208,
+        "y": 111,
+        "left": 112.5,
+        "top": 23.241346,
+        "right": 113.90625,
+        "bottom": 21.943046,
+        "countries": [
+            "hong_kong",
+            "macao",
+            "china"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 111,
+        "left": 113.90625,
+        "top": 23.241346,
+        "right": 115.3125,
+        "bottom": 21.943046,
+        "countries": [
+            "hong_kong",
+            "china"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 111,
+        "left": 115.3125,
+        "top": 23.241346,
+        "right": 116.71875,
+        "bottom": 21.943046,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 111,
+        "left": 116.71875,
+        "top": 23.241346,
+        "right": 118.125,
+        "bottom": 21.943046,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 112,
+        "left": 99.84375,
+        "top": 21.943046,
+        "right": 101.25,
+        "bottom": 20.632784,
+        "countries": [
+            "myanmar",
+            "laos",
+            "china"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 112,
+        "left": 101.25,
+        "top": 21.943046,
+        "right": 102.65625,
+        "bottom": 20.632784,
+        "countries": [
+            "vietnam",
+            "laos",
+            "china"
+        ]
+    },
+    {
+        "x": 204,
+        "y": 112,
+        "left": 106.875,
+        "top": 21.943046,
+        "right": 108.28125,
+        "bottom": 20.632784,
+        "countries": [
+            "vietnam",
+            "china"
+        ]
+    },
+    {
+        "x": 205,
+        "y": 112,
+        "left": 108.28125,
+        "top": 21.943046,
+        "right": 109.6875,
+        "bottom": 20.632784,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 206,
+        "y": 112,
+        "left": 109.6875,
+        "top": 21.943046,
+        "right": 111.09375,
+        "bottom": 20.632784,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 207,
+        "y": 112,
+        "left": 111.09375,
+        "top": 21.943046,
+        "right": 112.5,
+        "bottom": 20.632784,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 208,
+        "y": 112,
+        "left": 112.5,
+        "top": 21.943046,
+        "right": 113.90625,
+        "bottom": 20.632784,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 112,
+        "left": 113.90625,
+        "top": 21.943046,
+        "right": 115.3125,
+        "bottom": 20.632784,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 205,
+        "y": 113,
+        "left": 108.28125,
+        "top": 20.632784,
+        "right": 109.6875,
+        "bottom": 19.311143,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 206,
+        "y": 113,
+        "left": 109.6875,
+        "top": 20.632784,
+        "right": 111.09375,
+        "bottom": 19.311143,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 207,
+        "y": 113,
+        "left": 111.09375,
+        "top": 20.632784,
+        "right": 112.5,
+        "bottom": 19.311143,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 205,
+        "y": 114,
+        "left": 108.28125,
+        "top": 19.311143,
+        "right": 109.6875,
+        "bottom": 17.978733,
+        "countries": [
+            "china"
+        ]
+    },
+    {
+        "x": 206,
+        "y": 114,
+        "left": 109.6875,
+        "top": 19.311143,
+        "right": 111.09375,
+        "bottom": 17.978733,
+        "countries": [
+            "china"
+        ]
+    }
+]

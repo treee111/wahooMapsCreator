@@ -1,0 +1,408 @@
+[
+    {
+        "x": 58,
+        "y": 87,
+        "left": -98.4375,
+        "top": 49.837982,
+        "right": -97.03125,
+        "bottom": 48.922499,
+        "countries": [
+            "north_dakota",
+            "minnesota",
+            "canada"
+        ]
+    },
+    {
+        "x": 59,
+        "y": 87,
+        "left": -97.03125,
+        "top": 49.837982,
+        "right": -95.625,
+        "bottom": 48.922499,
+        "countries": [
+            "minnesota",
+            "canada"
+        ]
+    },
+    {
+        "x": 60,
+        "y": 87,
+        "left": -95.625,
+        "top": 49.837982,
+        "right": -94.21875,
+        "bottom": 48.922499,
+        "countries": [
+            "minnesota",
+            "canada"
+        ]
+    },
+    {
+        "x": 60,
+        "y": 88,
+        "left": -95.625,
+        "top": 48.922499,
+        "right": -94.21875,
+        "bottom": 47.989922,
+        "countries": [
+            "minnesota",
+            "canada"
+        ]
+    },
+    {
+        "x": 61,
+        "y": 88,
+        "left": -94.21875,
+        "top": 48.922499,
+        "right": -92.8125,
+        "bottom": 47.989922,
+        "countries": [
+            "minnesota",
+            "canada"
+        ]
+    },
+    {
+        "x": 62,
+        "y": 88,
+        "left": -92.8125,
+        "top": 48.922499,
+        "right": -91.40625,
+        "bottom": 47.989922,
+        "countries": [
+            "minnesota",
+            "canada"
+        ]
+    },
+    {
+        "x": 63,
+        "y": 88,
+        "left": -91.40625,
+        "top": 48.922499,
+        "right": -90.0,
+        "bottom": 47.989922,
+        "countries": [
+            "minnesota",
+            "canada"
+        ]
+    },
+    {
+        "x": 64,
+        "y": 88,
+        "left": -90.0,
+        "top": 48.922499,
+        "right": -88.59375,
+        "bottom": 47.989922,
+        "countries": [
+            "michigan",
+            "minnesota",
+            "canada"
+        ]
+    },
+    {
+        "x": 64,
+        "y": 89,
+        "left": -90.0,
+        "top": 47.989922,
+        "right": -88.59375,
+        "bottom": 47.040182,
+        "countries": [
+            "michigan",
+            "minnesota",
+            "canada"
+        ]
+    },
+    {
+        "x": 59,
+        "y": 93,
+        "left": -97.03125,
+        "top": 44.087585,
+        "right": -95.625,
+        "bottom": 43.068888,
+        "countries": [
+            "iowa",
+            "south_dakota",
+            "minnesota"
+        ]
+    },
+    {
+        "x": 60,
+        "y": 93,
+        "left": -95.625,
+        "top": 44.087585,
+        "right": -94.21875,
+        "bottom": 43.068888,
+        "countries": [
+            "iowa",
+            "minnesota"
+        ]
+    },
+    {
+        "x": 61,
+        "y": 93,
+        "left": -94.21875,
+        "top": 44.087585,
+        "right": -92.8125,
+        "bottom": 43.068888,
+        "countries": [
+            "iowa",
+            "minnesota"
+        ]
+    },
+    {
+        "x": 62,
+        "y": 93,
+        "left": -92.8125,
+        "top": 44.087585,
+        "right": -91.40625,
+        "bottom": 43.068888,
+        "countries": [
+            "wisconsin",
+            "iowa",
+            "minnesota"
+        ]
+    },
+    {
+        "x": 63,
+        "y": 93,
+        "left": -91.40625,
+        "top": 44.087585,
+        "right": -90.0,
+        "bottom": 43.068888,
+        "countries": [
+            "wisconsin",
+            "iowa",
+            "minnesota"
+        ]
+    },
+    {
+        "x": 58,
+        "y": 88,
+        "left": -98.4375,
+        "top": 48.922499,
+        "right": -97.03125,
+        "bottom": 47.989922,
+        "countries": [
+            "north_dakota",
+            "minnesota"
+        ]
+    },
+    {
+        "x": 59,
+        "y": 88,
+        "left": -97.03125,
+        "top": 48.922499,
+        "right": -95.625,
+        "bottom": 47.989922,
+        "countries": [
+            "minnesota"
+        ]
+    },
+    {
+        "x": 58,
+        "y": 89,
+        "left": -98.4375,
+        "top": 47.989922,
+        "right": -97.03125,
+        "bottom": 47.040182,
+        "countries": [
+            "north_dakota",
+            "minnesota"
+        ]
+    },
+    {
+        "x": 59,
+        "y": 89,
+        "left": -97.03125,
+        "top": 47.989922,
+        "right": -95.625,
+        "bottom": 47.040182,
+        "countries": [
+            "north_dakota",
+            "minnesota"
+        ]
+    },
+    {
+        "x": 60,
+        "y": 89,
+        "left": -95.625,
+        "top": 47.989922,
+        "right": -94.21875,
+        "bottom": 47.040182,
+        "countries": [
+            "minnesota"
+        ]
+    },
+    {
+        "x": 61,
+        "y": 89,
+        "left": -94.21875,
+        "top": 47.989922,
+        "right": -92.8125,
+        "bottom": 47.040182,
+        "countries": [
+            "minnesota"
+        ]
+    },
+    {
+        "x": 62,
+        "y": 89,
+        "left": -92.8125,
+        "top": 47.989922,
+        "right": -91.40625,
+        "bottom": 47.040182,
+        "countries": [
+            "minnesota"
+        ]
+    },
+    {
+        "x": 63,
+        "y": 89,
+        "left": -91.40625,
+        "top": 47.989922,
+        "right": -90.0,
+        "bottom": 47.040182,
+        "countries": [
+            "wisconsin",
+            "minnesota"
+        ]
+    },
+    {
+        "x": 59,
+        "y": 90,
+        "left": -97.03125,
+        "top": 47.040182,
+        "right": -95.625,
+        "bottom": 46.073231,
+        "countries": [
+            "north_dakota",
+            "minnesota"
+        ]
+    },
+    {
+        "x": 60,
+        "y": 90,
+        "left": -95.625,
+        "top": 47.040182,
+        "right": -94.21875,
+        "bottom": 46.073231,
+        "countries": [
+            "minnesota"
+        ]
+    },
+    {
+        "x": 61,
+        "y": 90,
+        "left": -94.21875,
+        "top": 47.040182,
+        "right": -92.8125,
+        "bottom": 46.073231,
+        "countries": [
+            "minnesota"
+        ]
+    },
+    {
+        "x": 62,
+        "y": 90,
+        "left": -92.8125,
+        "top": 47.040182,
+        "right": -91.40625,
+        "bottom": 46.073231,
+        "countries": [
+            "wisconsin",
+            "minnesota"
+        ]
+    },
+    {
+        "x": 59,
+        "y": 91,
+        "left": -97.03125,
+        "top": 46.073231,
+        "right": -95.625,
+        "bottom": 45.089036,
+        "countries": [
+            "north_dakota",
+            "minnesota",
+            "south_dakota"
+        ]
+    },
+    {
+        "x": 60,
+        "y": 91,
+        "left": -95.625,
+        "top": 46.073231,
+        "right": -94.21875,
+        "bottom": 45.089036,
+        "countries": [
+            "minnesota"
+        ]
+    },
+    {
+        "x": 61,
+        "y": 91,
+        "left": -94.21875,
+        "top": 46.073231,
+        "right": -92.8125,
+        "bottom": 45.089036,
+        "countries": [
+            "wisconsin",
+            "minnesota"
+        ]
+    },
+    {
+        "x": 62,
+        "y": 91,
+        "left": -92.8125,
+        "top": 46.073231,
+        "right": -91.40625,
+        "bottom": 45.089036,
+        "countries": [
+            "wisconsin",
+            "minnesota"
+        ]
+    },
+    {
+        "x": 59,
+        "y": 92,
+        "left": -97.03125,
+        "top": 45.089036,
+        "right": -95.625,
+        "bottom": 44.087585,
+        "countries": [
+            "south_dakota",
+            "minnesota"
+        ]
+    },
+    {
+        "x": 60,
+        "y": 92,
+        "left": -95.625,
+        "top": 45.089036,
+        "right": -94.21875,
+        "bottom": 44.087585,
+        "countries": [
+            "minnesota"
+        ]
+    },
+    {
+        "x": 61,
+        "y": 92,
+        "left": -94.21875,
+        "top": 45.089036,
+        "right": -92.8125,
+        "bottom": 44.087585,
+        "countries": [
+            "minnesota"
+        ]
+    },
+    {
+        "x": 62,
+        "y": 92,
+        "left": -92.8125,
+        "top": 45.089036,
+        "right": -91.40625,
+        "bottom": 44.087585,
+        "countries": [
+            "wisconsin",
+            "minnesota"
+        ]
+    }
+]

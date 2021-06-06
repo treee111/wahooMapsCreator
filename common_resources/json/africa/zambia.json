@@ -1,0 +1,610 @@
+[
+    {
+        "x": 145,
+        "y": 135,
+        "left": 23.90625,
+        "top": -9.795678,
+        "right": 25.3125,
+        "bottom": -11.178402,
+        "countries": [
+            "zambia",
+            "angola",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 136,
+        "left": 23.90625,
+        "top": -11.178402,
+        "right": 25.3125,
+        "bottom": -12.554564,
+        "countries": [
+            "zambia",
+            "angola",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 137,
+        "left": 21.09375,
+        "top": -12.554564,
+        "right": 22.5,
+        "bottom": -13.923404,
+        "countries": [
+            "zambia",
+            "angola"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 137,
+        "left": 22.5,
+        "top": -12.554564,
+        "right": 23.90625,
+        "bottom": -13.923404,
+        "countries": [
+            "zambia",
+            "angola"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 137,
+        "left": 23.90625,
+        "top": -12.554564,
+        "right": 25.3125,
+        "bottom": -13.923404,
+        "countries": [
+            "zambia",
+            "angola"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 138,
+        "left": 21.09375,
+        "top": -13.923404,
+        "right": 22.5,
+        "bottom": -15.284185,
+        "countries": [
+            "zambia",
+            "angola"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 139,
+        "left": 21.09375,
+        "top": -15.284185,
+        "right": 22.5,
+        "bottom": -16.636192,
+        "countries": [
+            "zambia",
+            "angola"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 140,
+        "left": 21.09375,
+        "top": -16.636192,
+        "right": 22.5,
+        "bottom": -17.978733,
+        "countries": [
+            "zambia",
+            "namibia",
+            "angola"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 140,
+        "left": 22.5,
+        "top": -16.636192,
+        "right": 23.90625,
+        "bottom": -17.978733,
+        "countries": [
+            "zambia",
+            "namibia",
+            "angola"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 140,
+        "left": 23.90625,
+        "top": -16.636192,
+        "right": 25.3125,
+        "bottom": -17.978733,
+        "countries": [
+            "zambia",
+            "botswana",
+            "zimbabwe",
+            "namibia"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 141,
+        "left": 25.3125,
+        "top": -17.978733,
+        "right": 26.71875,
+        "bottom": -19.311143,
+        "countries": [
+            "zambia",
+            "botswana",
+            "zimbabwe"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 133,
+        "left": 28.125,
+        "top": -7.013668,
+        "right": 29.53125,
+        "bottom": -8.407168,
+        "countries": [
+            "zambia",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 133,
+        "left": 29.53125,
+        "top": -7.013668,
+        "right": 30.9375,
+        "bottom": -8.407168,
+        "countries": [
+            "zambia",
+            "tanzania",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 134,
+        "left": 28.125,
+        "top": -8.407168,
+        "right": 29.53125,
+        "bottom": -9.795678,
+        "countries": [
+            "zambia",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 135,
+        "left": 28.125,
+        "top": -9.795678,
+        "right": 29.53125,
+        "bottom": -11.178402,
+        "countries": [
+            "zambia",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 136,
+        "left": 25.3125,
+        "top": -11.178402,
+        "right": 26.71875,
+        "bottom": -12.554564,
+        "countries": [
+            "zambia",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 136,
+        "left": 26.71875,
+        "top": -11.178402,
+        "right": 28.125,
+        "bottom": -12.554564,
+        "countries": [
+            "zambia",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 136,
+        "left": 28.125,
+        "top": -11.178402,
+        "right": 29.53125,
+        "bottom": -12.554564,
+        "countries": [
+            "zambia",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 136,
+        "left": 29.53125,
+        "top": -11.178402,
+        "right": 30.9375,
+        "bottom": -12.554564,
+        "countries": [
+            "zambia",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 137,
+        "left": 28.125,
+        "top": -12.554564,
+        "right": 29.53125,
+        "bottom": -13.923404,
+        "countries": [
+            "zambia",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 137,
+        "left": 29.53125,
+        "top": -12.554564,
+        "right": 30.9375,
+        "bottom": -13.923404,
+        "countries": [
+            "zambia",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 134,
+        "left": 32.34375,
+        "top": -8.407168,
+        "right": 33.75,
+        "bottom": -9.795678,
+        "countries": [
+            "zambia",
+            "tanzania",
+            "malawi"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 135,
+        "left": 32.34375,
+        "top": -9.795678,
+        "right": 33.75,
+        "bottom": -11.178402,
+        "countries": [
+            "zambia",
+            "malawi"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 136,
+        "left": 32.34375,
+        "top": -11.178402,
+        "right": 33.75,
+        "bottom": -12.554564,
+        "countries": [
+            "zambia",
+            "malawi"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 137,
+        "left": 32.34375,
+        "top": -12.554564,
+        "right": 33.75,
+        "bottom": -13.923404,
+        "countries": [
+            "zambia",
+            "malawi"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 138,
+        "left": 32.34375,
+        "top": -13.923404,
+        "right": 33.75,
+        "bottom": -15.284185,
+        "countries": [
+            "zambia",
+            "mozambique",
+            "malawi"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 138,
+        "left": 29.53125,
+        "top": -13.923404,
+        "right": 30.9375,
+        "bottom": -15.284185,
+        "countries": [
+            "zambia",
+            "mozambique"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 138,
+        "left": 30.9375,
+        "top": -13.923404,
+        "right": 32.34375,
+        "bottom": -15.284185,
+        "countries": [
+            "zambia",
+            "mozambique"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 139,
+        "left": 29.53125,
+        "top": -15.284185,
+        "right": 30.9375,
+        "bottom": -16.636192,
+        "countries": [
+            "zambia",
+            "mozambique",
+            "zimbabwe"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 134,
+        "left": 29.53125,
+        "top": -8.407168,
+        "right": 30.9375,
+        "bottom": -9.795678,
+        "countries": [
+            "zambia",
+            "tanzania"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 134,
+        "left": 30.9375,
+        "top": -8.407168,
+        "right": 32.34375,
+        "bottom": -9.795678,
+        "countries": [
+            "zambia",
+            "tanzania"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 135,
+        "left": 29.53125,
+        "top": -9.795678,
+        "right": 30.9375,
+        "bottom": -11.178402,
+        "countries": [
+            "zambia"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 135,
+        "left": 30.9375,
+        "top": -9.795678,
+        "right": 32.34375,
+        "bottom": -11.178402,
+        "countries": [
+            "zambia"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 136,
+        "left": 30.9375,
+        "top": -11.178402,
+        "right": 32.34375,
+        "bottom": -12.554564,
+        "countries": [
+            "zambia"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 137,
+        "left": 25.3125,
+        "top": -12.554564,
+        "right": 26.71875,
+        "bottom": -13.923404,
+        "countries": [
+            "zambia"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 137,
+        "left": 26.71875,
+        "top": -12.554564,
+        "right": 28.125,
+        "bottom": -13.923404,
+        "countries": [
+            "zambia"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 137,
+        "left": 30.9375,
+        "top": -12.554564,
+        "right": 32.34375,
+        "bottom": -13.923404,
+        "countries": [
+            "zambia"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 138,
+        "left": 22.5,
+        "top": -13.923404,
+        "right": 23.90625,
+        "bottom": -15.284185,
+        "countries": [
+            "zambia"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 138,
+        "left": 23.90625,
+        "top": -13.923404,
+        "right": 25.3125,
+        "bottom": -15.284185,
+        "countries": [
+            "zambia"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 138,
+        "left": 25.3125,
+        "top": -13.923404,
+        "right": 26.71875,
+        "bottom": -15.284185,
+        "countries": [
+            "zambia"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 138,
+        "left": 26.71875,
+        "top": -13.923404,
+        "right": 28.125,
+        "bottom": -15.284185,
+        "countries": [
+            "zambia"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 138,
+        "left": 28.125,
+        "top": -13.923404,
+        "right": 29.53125,
+        "bottom": -15.284185,
+        "countries": [
+            "zambia"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 139,
+        "left": 22.5,
+        "top": -15.284185,
+        "right": 23.90625,
+        "bottom": -16.636192,
+        "countries": [
+            "zambia"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 139,
+        "left": 23.90625,
+        "top": -15.284185,
+        "right": 25.3125,
+        "bottom": -16.636192,
+        "countries": [
+            "zambia"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 139,
+        "left": 25.3125,
+        "top": -15.284185,
+        "right": 26.71875,
+        "bottom": -16.636192,
+        "countries": [
+            "zambia"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 139,
+        "left": 26.71875,
+        "top": -15.284185,
+        "right": 28.125,
+        "bottom": -16.636192,
+        "countries": [
+            "zambia"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 139,
+        "left": 28.125,
+        "top": -15.284185,
+        "right": 29.53125,
+        "bottom": -16.636192,
+        "countries": [
+            "zambia",
+            "zimbabwe"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 140,
+        "left": 25.3125,
+        "top": -16.636192,
+        "right": 26.71875,
+        "bottom": -17.978733,
+        "countries": [
+            "zambia",
+            "zimbabwe"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 140,
+        "left": 26.71875,
+        "top": -16.636192,
+        "right": 28.125,
+        "bottom": -17.978733,
+        "countries": [
+            "zambia",
+            "zimbabwe"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 140,
+        "left": 28.125,
+        "top": -16.636192,
+        "right": 29.53125,
+        "bottom": -17.978733,
+        "countries": [
+            "zambia",
+            "zimbabwe"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 141,
+        "left": 26.71875,
+        "top": -17.978733,
+        "right": 28.125,
+        "bottom": -19.311143,
+        "countries": [
+            "zambia",
+            "zimbabwe"
+        ]
+    }
+]

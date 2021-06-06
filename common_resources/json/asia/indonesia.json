@@ -1,0 +1,2644 @@
+[
+    {
+        "x": 210,
+        "y": 124,
+        "left": 115.3125,
+        "top": 5.615986,
+        "right": 116.71875,
+        "bottom": 4.214943,
+        "countries": [
+            "brunei",
+            "malaysia",
+            "indonesia"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 125,
+        "left": 113.90625,
+        "top": 4.214943,
+        "right": 115.3125,
+        "bottom": 2.811371,
+        "countries": [
+            "brunei",
+            "malaysia",
+            "indonesia"
+        ]
+    },
+    {
+        "x": 217,
+        "y": 133,
+        "left": 125.15625,
+        "top": -7.013668,
+        "right": 126.5625,
+        "bottom": -8.407168,
+        "countries": [
+            "indonesia",
+            "east_timor"
+        ]
+    },
+    {
+        "x": 218,
+        "y": 133,
+        "left": 126.5625,
+        "top": -7.013668,
+        "right": 127.96875,
+        "bottom": -8.407168,
+        "countries": [
+            "indonesia",
+            "east_timor"
+        ]
+    },
+    {
+        "x": 216,
+        "y": 134,
+        "left": 123.75,
+        "top": -8.407168,
+        "right": 125.15625,
+        "bottom": -9.795678,
+        "countries": [
+            "indonesia",
+            "east_timor"
+        ]
+    },
+    {
+        "x": 217,
+        "y": 134,
+        "left": 125.15625,
+        "top": -8.407168,
+        "right": 126.5625,
+        "bottom": -9.795678,
+        "countries": [
+            "indonesia",
+            "east_timor"
+        ]
+    },
+    {
+        "x": 218,
+        "y": 134,
+        "left": 126.5625,
+        "top": -8.407168,
+        "right": 127.96875,
+        "bottom": -9.795678,
+        "countries": [
+            "indonesia",
+            "east_timor"
+        ]
+    },
+    {
+        "x": 195,
+        "y": 123,
+        "left": 94.21875,
+        "top": 7.013668,
+        "right": 95.625,
+        "bottom": 5.615986,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 195,
+        "y": 124,
+        "left": 94.21875,
+        "top": 5.615986,
+        "right": 95.625,
+        "bottom": 4.214943,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 196,
+        "y": 124,
+        "left": 95.625,
+        "top": 5.615986,
+        "right": 97.03125,
+        "bottom": 4.214943,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 197,
+        "y": 124,
+        "left": 97.03125,
+        "top": 5.615986,
+        "right": 98.4375,
+        "bottom": 4.214943,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 204,
+        "y": 124,
+        "left": 106.875,
+        "top": 5.615986,
+        "right": 108.28125,
+        "bottom": 4.214943,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 124,
+        "left": 116.71875,
+        "top": 5.615986,
+        "right": 118.125,
+        "bottom": 4.214943,
+        "countries": [
+            "indonesia",
+            "malaysia"
+        ]
+    },
+    {
+        "x": 217,
+        "y": 124,
+        "left": 125.15625,
+        "top": 5.615986,
+        "right": 126.5625,
+        "bottom": 4.214943,
+        "countries": [
+            "indonesia",
+            "philippines"
+        ]
+    },
+    {
+        "x": 218,
+        "y": 124,
+        "left": 126.5625,
+        "top": 5.615986,
+        "right": 127.96875,
+        "bottom": 4.214943,
+        "countries": [
+            "indonesia",
+            "philippines"
+        ]
+    },
+    {
+        "x": 195,
+        "y": 125,
+        "left": 94.21875,
+        "top": 4.214943,
+        "right": 95.625,
+        "bottom": 2.811371,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 196,
+        "y": 125,
+        "left": 95.625,
+        "top": 4.214943,
+        "right": 97.03125,
+        "bottom": 2.811371,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 197,
+        "y": 125,
+        "left": 97.03125,
+        "top": 4.214943,
+        "right": 98.4375,
+        "bottom": 2.811371,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 198,
+        "y": 125,
+        "left": 98.4375,
+        "top": 4.214943,
+        "right": 99.84375,
+        "bottom": 2.811371,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 125,
+        "left": 99.84375,
+        "top": 4.214943,
+        "right": 101.25,
+        "bottom": 2.811371,
+        "countries": [
+            "indonesia",
+            "malaysia"
+        ]
+    },
+    {
+        "x": 203,
+        "y": 125,
+        "left": 105.46875,
+        "top": 4.214943,
+        "right": 106.875,
+        "bottom": 2.811371,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 204,
+        "y": 125,
+        "left": 106.875,
+        "top": 4.214943,
+        "right": 108.28125,
+        "bottom": 2.811371,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 205,
+        "y": 125,
+        "left": 108.28125,
+        "top": 4.214943,
+        "right": 109.6875,
+        "bottom": 2.811371,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 125,
+        "left": 115.3125,
+        "top": 4.214943,
+        "right": 116.71875,
+        "bottom": 2.811371,
+        "countries": [
+            "indonesia",
+            "malaysia"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 125,
+        "left": 116.71875,
+        "top": 4.214943,
+        "right": 118.125,
+        "bottom": 2.811371,
+        "countries": [
+            "indonesia",
+            "malaysia"
+        ]
+    },
+    {
+        "x": 217,
+        "y": 125,
+        "left": 125.15625,
+        "top": 4.214943,
+        "right": 126.5625,
+        "bottom": 2.811371,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 218,
+        "y": 125,
+        "left": 126.5625,
+        "top": 4.214943,
+        "right": 127.96875,
+        "bottom": 2.811371,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 196,
+        "y": 126,
+        "left": 95.625,
+        "top": 2.811371,
+        "right": 97.03125,
+        "bottom": 1.406109,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 197,
+        "y": 126,
+        "left": 97.03125,
+        "top": 2.811371,
+        "right": 98.4375,
+        "bottom": 1.406109,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 198,
+        "y": 126,
+        "left": 98.4375,
+        "top": 2.811371,
+        "right": 99.84375,
+        "bottom": 1.406109,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 126,
+        "left": 99.84375,
+        "top": 2.811371,
+        "right": 101.25,
+        "bottom": 1.406109,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 126,
+        "left": 101.25,
+        "top": 2.811371,
+        "right": 102.65625,
+        "bottom": 1.406109,
+        "countries": [
+            "indonesia",
+            "malaysia"
+        ]
+    },
+    {
+        "x": 203,
+        "y": 126,
+        "left": 105.46875,
+        "top": 2.811371,
+        "right": 106.875,
+        "bottom": 1.406109,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 205,
+        "y": 126,
+        "left": 108.28125,
+        "top": 2.811371,
+        "right": 109.6875,
+        "bottom": 1.406109,
+        "countries": [
+            "indonesia",
+            "malaysia"
+        ]
+    },
+    {
+        "x": 206,
+        "y": 126,
+        "left": 109.6875,
+        "top": 2.811371,
+        "right": 111.09375,
+        "bottom": 1.406109,
+        "countries": [
+            "indonesia",
+            "malaysia"
+        ]
+    },
+    {
+        "x": 207,
+        "y": 126,
+        "left": 111.09375,
+        "top": 2.811371,
+        "right": 112.5,
+        "bottom": 1.406109,
+        "countries": [
+            "indonesia",
+            "malaysia"
+        ]
+    },
+    {
+        "x": 208,
+        "y": 126,
+        "left": 112.5,
+        "top": 2.811371,
+        "right": 113.90625,
+        "bottom": 1.406109,
+        "countries": [
+            "indonesia",
+            "malaysia"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 126,
+        "left": 113.90625,
+        "top": 2.811371,
+        "right": 115.3125,
+        "bottom": 1.406109,
+        "countries": [
+            "indonesia",
+            "malaysia"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 126,
+        "left": 115.3125,
+        "top": 2.811371,
+        "right": 116.71875,
+        "bottom": 1.406109,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 126,
+        "left": 116.71875,
+        "top": 2.811371,
+        "right": 118.125,
+        "bottom": 1.406109,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 126,
+        "left": 118.125,
+        "top": 2.811371,
+        "right": 119.53125,
+        "bottom": 1.406109,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 216,
+        "y": 126,
+        "left": 123.75,
+        "top": 2.811371,
+        "right": 125.15625,
+        "bottom": 1.406109,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 217,
+        "y": 126,
+        "left": 125.15625,
+        "top": 2.811371,
+        "right": 126.5625,
+        "bottom": 1.406109,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 218,
+        "y": 126,
+        "left": 126.5625,
+        "top": 2.811371,
+        "right": 127.96875,
+        "bottom": 1.406109,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 219,
+        "y": 126,
+        "left": 127.96875,
+        "top": 2.811371,
+        "right": 129.375,
+        "bottom": 1.406109,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 197,
+        "y": 127,
+        "left": 97.03125,
+        "top": 1.406109,
+        "right": 98.4375,
+        "bottom": 0.0,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 198,
+        "y": 127,
+        "left": 98.4375,
+        "top": 1.406109,
+        "right": 99.84375,
+        "bottom": 0.0,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 127,
+        "left": 99.84375,
+        "top": 1.406109,
+        "right": 101.25,
+        "bottom": 0.0,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 127,
+        "left": 101.25,
+        "top": 1.406109,
+        "right": 102.65625,
+        "bottom": 0.0,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 201,
+        "y": 127,
+        "left": 102.65625,
+        "top": 1.406109,
+        "right": 104.0625,
+        "bottom": 0.0,
+        "countries": [
+            "indonesia",
+            "singapore",
+            "malaysia"
+        ]
+    },
+    {
+        "x": 202,
+        "y": 127,
+        "left": 104.0625,
+        "top": 1.406109,
+        "right": 105.46875,
+        "bottom": 0.0,
+        "countries": [
+            "indonesia",
+            "singapore",
+            "malaysia"
+        ]
+    },
+    {
+        "x": 204,
+        "y": 127,
+        "left": 106.875,
+        "top": 1.406109,
+        "right": 108.28125,
+        "bottom": 0.0,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 205,
+        "y": 127,
+        "left": 108.28125,
+        "top": 1.406109,
+        "right": 109.6875,
+        "bottom": 0.0,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 206,
+        "y": 127,
+        "left": 109.6875,
+        "top": 1.406109,
+        "right": 111.09375,
+        "bottom": 0.0,
+        "countries": [
+            "indonesia",
+            "malaysia"
+        ]
+    },
+    {
+        "x": 207,
+        "y": 127,
+        "left": 111.09375,
+        "top": 1.406109,
+        "right": 112.5,
+        "bottom": 0.0,
+        "countries": [
+            "indonesia",
+            "malaysia"
+        ]
+    },
+    {
+        "x": 208,
+        "y": 127,
+        "left": 112.5,
+        "top": 1.406109,
+        "right": 113.90625,
+        "bottom": 0.0,
+        "countries": [
+            "indonesia",
+            "malaysia"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 127,
+        "left": 113.90625,
+        "top": 1.406109,
+        "right": 115.3125,
+        "bottom": 0.0,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 127,
+        "left": 115.3125,
+        "top": 1.406109,
+        "right": 116.71875,
+        "bottom": 0.0,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 127,
+        "left": 116.71875,
+        "top": 1.406109,
+        "right": 118.125,
+        "bottom": 0.0,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 127,
+        "left": 118.125,
+        "top": 1.406109,
+        "right": 119.53125,
+        "bottom": 0.0,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 127,
+        "left": 119.53125,
+        "top": 1.406109,
+        "right": 120.9375,
+        "bottom": 0.0,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 127,
+        "left": 120.9375,
+        "top": 1.406109,
+        "right": 122.34375,
+        "bottom": 0.0,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 127,
+        "left": 122.34375,
+        "top": 1.406109,
+        "right": 123.75,
+        "bottom": 0.0,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 216,
+        "y": 127,
+        "left": 123.75,
+        "top": 1.406109,
+        "right": 125.15625,
+        "bottom": 0.0,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 217,
+        "y": 127,
+        "left": 125.15625,
+        "top": 1.406109,
+        "right": 126.5625,
+        "bottom": 0.0,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 218,
+        "y": 127,
+        "left": 126.5625,
+        "top": 1.406109,
+        "right": 127.96875,
+        "bottom": 0.0,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 219,
+        "y": 127,
+        "left": 127.96875,
+        "top": 1.406109,
+        "right": 129.375,
+        "bottom": 0.0,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 220,
+        "y": 127,
+        "left": 129.375,
+        "top": 1.406109,
+        "right": 130.78125,
+        "bottom": 0.0,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 221,
+        "y": 127,
+        "left": 130.78125,
+        "top": 1.406109,
+        "right": 132.1875,
+        "bottom": 0.0,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 223,
+        "y": 127,
+        "left": 133.59375,
+        "top": 1.406109,
+        "right": 135.0,
+        "bottom": 0.0,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 197,
+        "y": 128,
+        "left": 97.03125,
+        "top": 0.0,
+        "right": 98.4375,
+        "bottom": -1.406109,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 198,
+        "y": 128,
+        "left": 98.4375,
+        "top": 0.0,
+        "right": 99.84375,
+        "bottom": -1.406109,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 128,
+        "left": 99.84375,
+        "top": 0.0,
+        "right": 101.25,
+        "bottom": -1.406109,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 128,
+        "left": 101.25,
+        "top": 0.0,
+        "right": 102.65625,
+        "bottom": -1.406109,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 201,
+        "y": 128,
+        "left": 102.65625,
+        "top": 0.0,
+        "right": 104.0625,
+        "bottom": -1.406109,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 202,
+        "y": 128,
+        "left": 104.0625,
+        "top": 0.0,
+        "right": 105.46875,
+        "bottom": -1.406109,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 205,
+        "y": 128,
+        "left": 108.28125,
+        "top": 0.0,
+        "right": 109.6875,
+        "bottom": -1.406109,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 206,
+        "y": 128,
+        "left": 109.6875,
+        "top": 0.0,
+        "right": 111.09375,
+        "bottom": -1.406109,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 207,
+        "y": 128,
+        "left": 111.09375,
+        "top": 0.0,
+        "right": 112.5,
+        "bottom": -1.406109,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 208,
+        "y": 128,
+        "left": 112.5,
+        "top": 0.0,
+        "right": 113.90625,
+        "bottom": -1.406109,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 128,
+        "left": 113.90625,
+        "top": 0.0,
+        "right": 115.3125,
+        "bottom": -1.406109,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 128,
+        "left": 115.3125,
+        "top": 0.0,
+        "right": 116.71875,
+        "bottom": -1.406109,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 128,
+        "left": 116.71875,
+        "top": 0.0,
+        "right": 118.125,
+        "bottom": -1.406109,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 128,
+        "left": 118.125,
+        "top": 0.0,
+        "right": 119.53125,
+        "bottom": -1.406109,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 128,
+        "left": 119.53125,
+        "top": 0.0,
+        "right": 120.9375,
+        "bottom": -1.406109,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 128,
+        "left": 120.9375,
+        "top": 0.0,
+        "right": 122.34375,
+        "bottom": -1.406109,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 128,
+        "left": 122.34375,
+        "top": 0.0,
+        "right": 123.75,
+        "bottom": -1.406109,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 218,
+        "y": 128,
+        "left": 126.5625,
+        "top": 0.0,
+        "right": 127.96875,
+        "bottom": -1.406109,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 219,
+        "y": 128,
+        "left": 127.96875,
+        "top": 0.0,
+        "right": 129.375,
+        "bottom": -1.406109,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 220,
+        "y": 128,
+        "left": 129.375,
+        "top": 0.0,
+        "right": 130.78125,
+        "bottom": -1.406109,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 221,
+        "y": 128,
+        "left": 130.78125,
+        "top": 0.0,
+        "right": 132.1875,
+        "bottom": -1.406109,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 222,
+        "y": 128,
+        "left": 132.1875,
+        "top": 0.0,
+        "right": 133.59375,
+        "bottom": -1.406109,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 223,
+        "y": 128,
+        "left": 133.59375,
+        "top": 0.0,
+        "right": 135.0,
+        "bottom": -1.406109,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 224,
+        "y": 128,
+        "left": 135.0,
+        "top": 0.0,
+        "right": 136.40625,
+        "bottom": -1.406109,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 225,
+        "y": 128,
+        "left": 136.40625,
+        "top": 0.0,
+        "right": 137.8125,
+        "bottom": -1.406109,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 198,
+        "y": 129,
+        "left": 98.4375,
+        "top": -1.406109,
+        "right": 99.84375,
+        "bottom": -2.811371,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 129,
+        "left": 99.84375,
+        "top": -1.406109,
+        "right": 101.25,
+        "bottom": -2.811371,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 129,
+        "left": 101.25,
+        "top": -1.406109,
+        "right": 102.65625,
+        "bottom": -2.811371,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 201,
+        "y": 129,
+        "left": 102.65625,
+        "top": -1.406109,
+        "right": 104.0625,
+        "bottom": -2.811371,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 202,
+        "y": 129,
+        "left": 104.0625,
+        "top": -1.406109,
+        "right": 105.46875,
+        "bottom": -2.811371,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 203,
+        "y": 129,
+        "left": 105.46875,
+        "top": -1.406109,
+        "right": 106.875,
+        "bottom": -2.811371,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 204,
+        "y": 129,
+        "left": 106.875,
+        "top": -1.406109,
+        "right": 108.28125,
+        "bottom": -2.811371,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 205,
+        "y": 129,
+        "left": 108.28125,
+        "top": -1.406109,
+        "right": 109.6875,
+        "bottom": -2.811371,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 206,
+        "y": 129,
+        "left": 109.6875,
+        "top": -1.406109,
+        "right": 111.09375,
+        "bottom": -2.811371,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 207,
+        "y": 129,
+        "left": 111.09375,
+        "top": -1.406109,
+        "right": 112.5,
+        "bottom": -2.811371,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 208,
+        "y": 129,
+        "left": 112.5,
+        "top": -1.406109,
+        "right": 113.90625,
+        "bottom": -2.811371,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 129,
+        "left": 113.90625,
+        "top": -1.406109,
+        "right": 115.3125,
+        "bottom": -2.811371,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 129,
+        "left": 115.3125,
+        "top": -1.406109,
+        "right": 116.71875,
+        "bottom": -2.811371,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 129,
+        "left": 118.125,
+        "top": -1.406109,
+        "right": 119.53125,
+        "bottom": -2.811371,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 129,
+        "left": 119.53125,
+        "top": -1.406109,
+        "right": 120.9375,
+        "bottom": -2.811371,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 129,
+        "left": 120.9375,
+        "top": -1.406109,
+        "right": 122.34375,
+        "bottom": -2.811371,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 129,
+        "left": 122.34375,
+        "top": -1.406109,
+        "right": 123.75,
+        "bottom": -2.811371,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 216,
+        "y": 129,
+        "left": 123.75,
+        "top": -1.406109,
+        "right": 125.15625,
+        "bottom": -2.811371,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 217,
+        "y": 129,
+        "left": 125.15625,
+        "top": -1.406109,
+        "right": 126.5625,
+        "bottom": -2.811371,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 218,
+        "y": 129,
+        "left": 126.5625,
+        "top": -1.406109,
+        "right": 127.96875,
+        "bottom": -2.811371,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 219,
+        "y": 129,
+        "left": 127.96875,
+        "top": -1.406109,
+        "right": 129.375,
+        "bottom": -2.811371,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 220,
+        "y": 129,
+        "left": 129.375,
+        "top": -1.406109,
+        "right": 130.78125,
+        "bottom": -2.811371,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 221,
+        "y": 129,
+        "left": 130.78125,
+        "top": -1.406109,
+        "right": 132.1875,
+        "bottom": -2.811371,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 222,
+        "y": 129,
+        "left": 132.1875,
+        "top": -1.406109,
+        "right": 133.59375,
+        "bottom": -2.811371,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 223,
+        "y": 129,
+        "left": 133.59375,
+        "top": -1.406109,
+        "right": 135.0,
+        "bottom": -2.811371,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 224,
+        "y": 129,
+        "left": 135.0,
+        "top": -1.406109,
+        "right": 136.40625,
+        "bottom": -2.811371,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 225,
+        "y": 129,
+        "left": 136.40625,
+        "top": -1.406109,
+        "right": 137.8125,
+        "bottom": -2.811371,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 226,
+        "y": 129,
+        "left": 137.8125,
+        "top": -1.406109,
+        "right": 139.21875,
+        "bottom": -2.811371,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 227,
+        "y": 129,
+        "left": 139.21875,
+        "top": -1.406109,
+        "right": 140.625,
+        "bottom": -2.811371,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 228,
+        "y": 129,
+        "left": 140.625,
+        "top": -1.406109,
+        "right": 142.03125,
+        "bottom": -2.811371,
+        "countries": [
+            "indonesia",
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 130,
+        "left": 99.84375,
+        "top": -2.811371,
+        "right": 101.25,
+        "bottom": -4.214943,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 130,
+        "left": 101.25,
+        "top": -2.811371,
+        "right": 102.65625,
+        "bottom": -4.214943,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 201,
+        "y": 130,
+        "left": 102.65625,
+        "top": -2.811371,
+        "right": 104.0625,
+        "bottom": -4.214943,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 202,
+        "y": 130,
+        "left": 104.0625,
+        "top": -2.811371,
+        "right": 105.46875,
+        "bottom": -4.214943,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 203,
+        "y": 130,
+        "left": 105.46875,
+        "top": -2.811371,
+        "right": 106.875,
+        "bottom": -4.214943,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 204,
+        "y": 130,
+        "left": 106.875,
+        "top": -2.811371,
+        "right": 108.28125,
+        "bottom": -4.214943,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 205,
+        "y": 130,
+        "left": 108.28125,
+        "top": -2.811371,
+        "right": 109.6875,
+        "bottom": -4.214943,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 206,
+        "y": 130,
+        "left": 109.6875,
+        "top": -2.811371,
+        "right": 111.09375,
+        "bottom": -4.214943,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 207,
+        "y": 130,
+        "left": 111.09375,
+        "top": -2.811371,
+        "right": 112.5,
+        "bottom": -4.214943,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 208,
+        "y": 130,
+        "left": 112.5,
+        "top": -2.811371,
+        "right": 113.90625,
+        "bottom": -4.214943,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 130,
+        "left": 113.90625,
+        "top": -2.811371,
+        "right": 115.3125,
+        "bottom": -4.214943,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 130,
+        "left": 115.3125,
+        "top": -2.811371,
+        "right": 116.71875,
+        "bottom": -4.214943,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 130,
+        "left": 118.125,
+        "top": -2.811371,
+        "right": 119.53125,
+        "bottom": -4.214943,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 130,
+        "left": 119.53125,
+        "top": -2.811371,
+        "right": 120.9375,
+        "bottom": -4.214943,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 130,
+        "left": 120.9375,
+        "top": -2.811371,
+        "right": 122.34375,
+        "bottom": -4.214943,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 130,
+        "left": 122.34375,
+        "top": -2.811371,
+        "right": 123.75,
+        "bottom": -4.214943,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 217,
+        "y": 130,
+        "left": 125.15625,
+        "top": -2.811371,
+        "right": 126.5625,
+        "bottom": -4.214943,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 218,
+        "y": 130,
+        "left": 126.5625,
+        "top": -2.811371,
+        "right": 127.96875,
+        "bottom": -4.214943,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 219,
+        "y": 130,
+        "left": 127.96875,
+        "top": -2.811371,
+        "right": 129.375,
+        "bottom": -4.214943,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 220,
+        "y": 130,
+        "left": 129.375,
+        "top": -2.811371,
+        "right": 130.78125,
+        "bottom": -4.214943,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 221,
+        "y": 130,
+        "left": 130.78125,
+        "top": -2.811371,
+        "right": 132.1875,
+        "bottom": -4.214943,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 222,
+        "y": 130,
+        "left": 132.1875,
+        "top": -2.811371,
+        "right": 133.59375,
+        "bottom": -4.214943,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 223,
+        "y": 130,
+        "left": 133.59375,
+        "top": -2.811371,
+        "right": 135.0,
+        "bottom": -4.214943,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 224,
+        "y": 130,
+        "left": 135.0,
+        "top": -2.811371,
+        "right": 136.40625,
+        "bottom": -4.214943,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 225,
+        "y": 130,
+        "left": 136.40625,
+        "top": -2.811371,
+        "right": 137.8125,
+        "bottom": -4.214943,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 226,
+        "y": 130,
+        "left": 137.8125,
+        "top": -2.811371,
+        "right": 139.21875,
+        "bottom": -4.214943,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 227,
+        "y": 130,
+        "left": 139.21875,
+        "top": -2.811371,
+        "right": 140.625,
+        "bottom": -4.214943,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 228,
+        "y": 130,
+        "left": 140.625,
+        "top": -2.811371,
+        "right": 142.03125,
+        "bottom": -4.214943,
+        "countries": [
+            "indonesia",
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 131,
+        "left": 101.25,
+        "top": -4.214943,
+        "right": 102.65625,
+        "bottom": -5.615986,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 201,
+        "y": 131,
+        "left": 102.65625,
+        "top": -4.214943,
+        "right": 104.0625,
+        "bottom": -5.615986,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 202,
+        "y": 131,
+        "left": 104.0625,
+        "top": -4.214943,
+        "right": 105.46875,
+        "bottom": -5.615986,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 203,
+        "y": 131,
+        "left": 105.46875,
+        "top": -4.214943,
+        "right": 106.875,
+        "bottom": -5.615986,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 131,
+        "left": 113.90625,
+        "top": -4.214943,
+        "right": 115.3125,
+        "bottom": -5.615986,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 131,
+        "left": 115.3125,
+        "top": -4.214943,
+        "right": 116.71875,
+        "bottom": -5.615986,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 131,
+        "left": 116.71875,
+        "top": -4.214943,
+        "right": 118.125,
+        "bottom": -5.615986,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 131,
+        "left": 118.125,
+        "top": -4.214943,
+        "right": 119.53125,
+        "bottom": -5.615986,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 131,
+        "left": 119.53125,
+        "top": -4.214943,
+        "right": 120.9375,
+        "bottom": -5.615986,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 131,
+        "left": 120.9375,
+        "top": -4.214943,
+        "right": 122.34375,
+        "bottom": -5.615986,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 131,
+        "left": 122.34375,
+        "top": -4.214943,
+        "right": 123.75,
+        "bottom": -5.615986,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 216,
+        "y": 131,
+        "left": 123.75,
+        "top": -4.214943,
+        "right": 125.15625,
+        "bottom": -5.615986,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 218,
+        "y": 131,
+        "left": 126.5625,
+        "top": -4.214943,
+        "right": 127.96875,
+        "bottom": -5.615986,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 220,
+        "y": 131,
+        "left": 129.375,
+        "top": -4.214943,
+        "right": 130.78125,
+        "bottom": -5.615986,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 221,
+        "y": 131,
+        "left": 130.78125,
+        "top": -4.214943,
+        "right": 132.1875,
+        "bottom": -5.615986,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 222,
+        "y": 131,
+        "left": 132.1875,
+        "top": -4.214943,
+        "right": 133.59375,
+        "bottom": -5.615986,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 223,
+        "y": 131,
+        "left": 133.59375,
+        "top": -4.214943,
+        "right": 135.0,
+        "bottom": -5.615986,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 224,
+        "y": 131,
+        "left": 135.0,
+        "top": -4.214943,
+        "right": 136.40625,
+        "bottom": -5.615986,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 225,
+        "y": 131,
+        "left": 136.40625,
+        "top": -4.214943,
+        "right": 137.8125,
+        "bottom": -5.615986,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 226,
+        "y": 131,
+        "left": 137.8125,
+        "top": -4.214943,
+        "right": 139.21875,
+        "bottom": -5.615986,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 227,
+        "y": 131,
+        "left": 139.21875,
+        "top": -4.214943,
+        "right": 140.625,
+        "bottom": -5.615986,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 228,
+        "y": 131,
+        "left": 140.625,
+        "top": -4.214943,
+        "right": 142.03125,
+        "bottom": -5.615986,
+        "countries": [
+            "indonesia",
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 202,
+        "y": 132,
+        "left": 104.0625,
+        "top": -5.615986,
+        "right": 105.46875,
+        "bottom": -7.013668,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 203,
+        "y": 132,
+        "left": 105.46875,
+        "top": -5.615986,
+        "right": 106.875,
+        "bottom": -7.013668,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 204,
+        "y": 132,
+        "left": 106.875,
+        "top": -5.615986,
+        "right": 108.28125,
+        "bottom": -7.013668,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 205,
+        "y": 132,
+        "left": 108.28125,
+        "top": -5.615986,
+        "right": 109.6875,
+        "bottom": -7.013668,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 206,
+        "y": 132,
+        "left": 109.6875,
+        "top": -5.615986,
+        "right": 111.09375,
+        "bottom": -7.013668,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 207,
+        "y": 132,
+        "left": 111.09375,
+        "top": -5.615986,
+        "right": 112.5,
+        "bottom": -7.013668,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 208,
+        "y": 132,
+        "left": 112.5,
+        "top": -5.615986,
+        "right": 113.90625,
+        "bottom": -7.013668,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 132,
+        "left": 113.90625,
+        "top": -5.615986,
+        "right": 115.3125,
+        "bottom": -7.013668,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 132,
+        "left": 115.3125,
+        "top": -5.615986,
+        "right": 116.71875,
+        "bottom": -7.013668,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 132,
+        "left": 118.125,
+        "top": -5.615986,
+        "right": 119.53125,
+        "bottom": -7.013668,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 132,
+        "left": 119.53125,
+        "top": -5.615986,
+        "right": 120.9375,
+        "bottom": -7.013668,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 132,
+        "left": 120.9375,
+        "top": -5.615986,
+        "right": 122.34375,
+        "bottom": -7.013668,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 132,
+        "left": 122.34375,
+        "top": -5.615986,
+        "right": 123.75,
+        "bottom": -7.013668,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 216,
+        "y": 132,
+        "left": 123.75,
+        "top": -5.615986,
+        "right": 125.15625,
+        "bottom": -7.013668,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 218,
+        "y": 132,
+        "left": 126.5625,
+        "top": -5.615986,
+        "right": 127.96875,
+        "bottom": -7.013668,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 219,
+        "y": 132,
+        "left": 127.96875,
+        "top": -5.615986,
+        "right": 129.375,
+        "bottom": -7.013668,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 220,
+        "y": 132,
+        "left": 129.375,
+        "top": -5.615986,
+        "right": 130.78125,
+        "bottom": -7.013668,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 221,
+        "y": 132,
+        "left": 130.78125,
+        "top": -5.615986,
+        "right": 132.1875,
+        "bottom": -7.013668,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 222,
+        "y": 132,
+        "left": 132.1875,
+        "top": -5.615986,
+        "right": 133.59375,
+        "bottom": -7.013668,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 223,
+        "y": 132,
+        "left": 133.59375,
+        "top": -5.615986,
+        "right": 135.0,
+        "bottom": -7.013668,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 226,
+        "y": 132,
+        "left": 137.8125,
+        "top": -5.615986,
+        "right": 139.21875,
+        "bottom": -7.013668,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 227,
+        "y": 132,
+        "left": 139.21875,
+        "top": -5.615986,
+        "right": 140.625,
+        "bottom": -7.013668,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 228,
+        "y": 132,
+        "left": 140.625,
+        "top": -5.615986,
+        "right": 142.03125,
+        "bottom": -7.013668,
+        "countries": [
+            "indonesia",
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 203,
+        "y": 133,
+        "left": 105.46875,
+        "top": -7.013668,
+        "right": 106.875,
+        "bottom": -8.407168,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 204,
+        "y": 133,
+        "left": 106.875,
+        "top": -7.013668,
+        "right": 108.28125,
+        "bottom": -8.407168,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 205,
+        "y": 133,
+        "left": 108.28125,
+        "top": -7.013668,
+        "right": 109.6875,
+        "bottom": -8.407168,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 206,
+        "y": 133,
+        "left": 109.6875,
+        "top": -7.013668,
+        "right": 111.09375,
+        "bottom": -8.407168,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 207,
+        "y": 133,
+        "left": 111.09375,
+        "top": -7.013668,
+        "right": 112.5,
+        "bottom": -8.407168,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 208,
+        "y": 133,
+        "left": 112.5,
+        "top": -7.013668,
+        "right": 113.90625,
+        "bottom": -8.407168,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 133,
+        "left": 113.90625,
+        "top": -7.013668,
+        "right": 115.3125,
+        "bottom": -8.407168,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 133,
+        "left": 115.3125,
+        "top": -7.013668,
+        "right": 116.71875,
+        "bottom": -8.407168,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 133,
+        "left": 116.71875,
+        "top": -7.013668,
+        "right": 118.125,
+        "bottom": -8.407168,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 133,
+        "left": 118.125,
+        "top": -7.013668,
+        "right": 119.53125,
+        "bottom": -8.407168,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 133,
+        "left": 119.53125,
+        "top": -7.013668,
+        "right": 120.9375,
+        "bottom": -8.407168,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 133,
+        "left": 120.9375,
+        "top": -7.013668,
+        "right": 122.34375,
+        "bottom": -8.407168,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 133,
+        "left": 122.34375,
+        "top": -7.013668,
+        "right": 123.75,
+        "bottom": -8.407168,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 216,
+        "y": 133,
+        "left": 123.75,
+        "top": -7.013668,
+        "right": 125.15625,
+        "bottom": -8.407168,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 219,
+        "y": 133,
+        "left": 127.96875,
+        "top": -7.013668,
+        "right": 129.375,
+        "bottom": -8.407168,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 220,
+        "y": 133,
+        "left": 129.375,
+        "top": -7.013668,
+        "right": 130.78125,
+        "bottom": -8.407168,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 221,
+        "y": 133,
+        "left": 130.78125,
+        "top": -7.013668,
+        "right": 132.1875,
+        "bottom": -8.407168,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 223,
+        "y": 133,
+        "left": 133.59375,
+        "top": -7.013668,
+        "right": 135.0,
+        "bottom": -8.407168,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 225,
+        "y": 133,
+        "left": 136.40625,
+        "top": -7.013668,
+        "right": 137.8125,
+        "bottom": -8.407168,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 226,
+        "y": 133,
+        "left": 137.8125,
+        "top": -7.013668,
+        "right": 139.21875,
+        "bottom": -8.407168,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 227,
+        "y": 133,
+        "left": 139.21875,
+        "top": -7.013668,
+        "right": 140.625,
+        "bottom": -8.407168,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 228,
+        "y": 133,
+        "left": 140.625,
+        "top": -7.013668,
+        "right": 142.03125,
+        "bottom": -8.407168,
+        "countries": [
+            "indonesia",
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 208,
+        "y": 134,
+        "left": 112.5,
+        "top": -8.407168,
+        "right": 113.90625,
+        "bottom": -9.795678,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 134,
+        "left": 113.90625,
+        "top": -8.407168,
+        "right": 115.3125,
+        "bottom": -9.795678,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 134,
+        "left": 115.3125,
+        "top": -8.407168,
+        "right": 116.71875,
+        "bottom": -9.795678,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 134,
+        "left": 116.71875,
+        "top": -8.407168,
+        "right": 118.125,
+        "bottom": -9.795678,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 134,
+        "left": 118.125,
+        "top": -8.407168,
+        "right": 119.53125,
+        "bottom": -9.795678,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 134,
+        "left": 119.53125,
+        "top": -8.407168,
+        "right": 120.9375,
+        "bottom": -9.795678,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 134,
+        "left": 120.9375,
+        "top": -8.407168,
+        "right": 122.34375,
+        "bottom": -9.795678,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 134,
+        "left": 122.34375,
+        "top": -8.407168,
+        "right": 123.75,
+        "bottom": -9.795678,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 225,
+        "y": 134,
+        "left": 136.40625,
+        "top": -8.407168,
+        "right": 137.8125,
+        "bottom": -9.795678,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 226,
+        "y": 134,
+        "left": 137.8125,
+        "top": -8.407168,
+        "right": 139.21875,
+        "bottom": -9.795678,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 227,
+        "y": 134,
+        "left": 139.21875,
+        "top": -8.407168,
+        "right": 140.625,
+        "bottom": -9.795678,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 228,
+        "y": 134,
+        "left": 140.625,
+        "top": -8.407168,
+        "right": 142.03125,
+        "bottom": -9.795678,
+        "countries": [
+            "indonesia",
+            "papua_new_guinea",
+            "australia"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 135,
+        "left": 118.125,
+        "top": -9.795678,
+        "right": 119.53125,
+        "bottom": -11.178402,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 135,
+        "left": 119.53125,
+        "top": -9.795678,
+        "right": 120.9375,
+        "bottom": -11.178402,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 135,
+        "left": 120.9375,
+        "top": -9.795678,
+        "right": 122.34375,
+        "bottom": -11.178402,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 135,
+        "left": 122.34375,
+        "top": -9.795678,
+        "right": 123.75,
+        "bottom": -11.178402,
+        "countries": [
+            "indonesia"
+        ]
+    },
+    {
+        "x": 216,
+        "y": 135,
+        "left": 123.75,
+        "top": -9.795678,
+        "right": 125.15625,
+        "bottom": -11.178402,
+        "countries": [
+            "indonesia"
+        ]
+    }
+]

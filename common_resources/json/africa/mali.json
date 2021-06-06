@@ -1,0 +1,995 @@
+[
+    {
+        "x": 123,
+        "y": 109,
+        "left": -7.03125,
+        "top": 25.799891,
+        "right": -5.625,
+        "bottom": 24.527135,
+        "countries": [
+            "algeria",
+            "mali",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 124,
+        "y": 109,
+        "left": -5.625,
+        "top": 25.799891,
+        "right": -4.21875,
+        "bottom": 24.527135,
+        "countries": [
+            "algeria",
+            "mali",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 125,
+        "y": 109,
+        "left": -4.21875,
+        "top": 25.799891,
+        "right": -2.8125,
+        "bottom": 24.527135,
+        "countries": [
+            "algeria",
+            "mali"
+        ]
+    },
+    {
+        "x": 125,
+        "y": 110,
+        "left": -4.21875,
+        "top": 24.527135,
+        "right": -2.8125,
+        "bottom": 23.241346,
+        "countries": [
+            "algeria",
+            "mali"
+        ]
+    },
+    {
+        "x": 126,
+        "y": 110,
+        "left": -2.8125,
+        "top": 24.527135,
+        "right": -1.40625,
+        "bottom": 23.241346,
+        "countries": [
+            "algeria",
+            "mali"
+        ]
+    },
+    {
+        "x": 126,
+        "y": 111,
+        "left": -2.8125,
+        "top": 23.241346,
+        "right": -1.40625,
+        "bottom": 21.943046,
+        "countries": [
+            "algeria",
+            "mali"
+        ]
+    },
+    {
+        "x": 127,
+        "y": 111,
+        "left": -1.40625,
+        "top": 23.241346,
+        "right": 0.0,
+        "bottom": 21.943046,
+        "countries": [
+            "algeria",
+            "mali"
+        ]
+    },
+    {
+        "x": 127,
+        "y": 112,
+        "left": -1.40625,
+        "top": 21.943046,
+        "right": 0.0,
+        "bottom": 20.632784,
+        "countries": [
+            "algeria",
+            "mali"
+        ]
+    },
+    {
+        "x": 128,
+        "y": 112,
+        "left": 0.0,
+        "top": 21.943046,
+        "right": 1.40625,
+        "bottom": 20.632784,
+        "countries": [
+            "algeria",
+            "mali"
+        ]
+    },
+    {
+        "x": 129,
+        "y": 112,
+        "left": 1.40625,
+        "top": 21.943046,
+        "right": 2.8125,
+        "bottom": 20.632784,
+        "countries": [
+            "algeria",
+            "mali"
+        ]
+    },
+    {
+        "x": 129,
+        "y": 113,
+        "left": 1.40625,
+        "top": 20.632784,
+        "right": 2.8125,
+        "bottom": 19.311143,
+        "countries": [
+            "algeria",
+            "mali"
+        ]
+    },
+    {
+        "x": 130,
+        "y": 113,
+        "left": 2.8125,
+        "top": 20.632784,
+        "right": 4.21875,
+        "bottom": 19.311143,
+        "countries": [
+            "algeria",
+            "mali"
+        ]
+    },
+    {
+        "x": 130,
+        "y": 114,
+        "left": 2.8125,
+        "top": 19.311143,
+        "right": 4.21875,
+        "bottom": 17.978733,
+        "countries": [
+            "algeria",
+            "mali"
+        ]
+    },
+    {
+        "x": 131,
+        "y": 114,
+        "left": 4.21875,
+        "top": 19.311143,
+        "right": 5.625,
+        "bottom": 17.978733,
+        "countries": [
+            "algeria",
+            "niger",
+            "mali"
+        ]
+    },
+    {
+        "x": 125,
+        "y": 117,
+        "left": -4.21875,
+        "top": 15.284185,
+        "right": -2.8125,
+        "bottom": 13.923404,
+        "countries": [
+            "burkina_faso",
+            "mali"
+        ]
+    },
+    {
+        "x": 126,
+        "y": 117,
+        "left": -2.8125,
+        "top": 15.284185,
+        "right": -1.40625,
+        "bottom": 13.923404,
+        "countries": [
+            "burkina_faso",
+            "mali"
+        ]
+    },
+    {
+        "x": 127,
+        "y": 117,
+        "left": -1.40625,
+        "top": 15.284185,
+        "right": 0.0,
+        "bottom": 13.923404,
+        "countries": [
+            "burkina_faso",
+            "mali"
+        ]
+    },
+    {
+        "x": 128,
+        "y": 117,
+        "left": 0.0,
+        "top": 15.284185,
+        "right": 1.40625,
+        "bottom": 13.923404,
+        "countries": [
+            "burkina_faso",
+            "niger",
+            "mali"
+        ]
+    },
+    {
+        "x": 124,
+        "y": 118,
+        "left": -5.625,
+        "top": 13.923404,
+        "right": -4.21875,
+        "bottom": 12.554564,
+        "countries": [
+            "burkina_faso",
+            "mali"
+        ]
+    },
+    {
+        "x": 125,
+        "y": 118,
+        "left": -4.21875,
+        "top": 13.923404,
+        "right": -2.8125,
+        "bottom": 12.554564,
+        "countries": [
+            "burkina_faso",
+            "mali"
+        ]
+    },
+    {
+        "x": 124,
+        "y": 119,
+        "left": -5.625,
+        "top": 12.554564,
+        "right": -4.21875,
+        "bottom": 11.178402,
+        "countries": [
+            "burkina_faso",
+            "mali"
+        ]
+    },
+    {
+        "x": 124,
+        "y": 120,
+        "left": -5.625,
+        "top": 11.178402,
+        "right": -4.21875,
+        "bottom": 9.795678,
+        "countries": [
+            "cote_d_ivoire",
+            "burkina_faso",
+            "mali"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 120,
+        "left": -8.4375,
+        "top": 11.178402,
+        "right": -7.03125,
+        "bottom": 9.795678,
+        "countries": [
+            "cote_d_ivoire",
+            "mali",
+            "guinea"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 120,
+        "left": -7.03125,
+        "top": 11.178402,
+        "right": -5.625,
+        "bottom": 9.795678,
+        "countries": [
+            "cote_d_ivoire",
+            "mali"
+        ]
+    },
+    {
+        "x": 119,
+        "y": 119,
+        "left": -12.65625,
+        "top": 12.554564,
+        "right": -11.25,
+        "bottom": 11.178402,
+        "countries": [
+            "senegal",
+            "mali",
+            "guinea"
+        ]
+    },
+    {
+        "x": 120,
+        "y": 119,
+        "left": -11.25,
+        "top": 12.554564,
+        "right": -9.84375,
+        "bottom": 11.178402,
+        "countries": [
+            "mali",
+            "guinea"
+        ]
+    },
+    {
+        "x": 121,
+        "y": 119,
+        "left": -9.84375,
+        "top": 12.554564,
+        "right": -8.4375,
+        "bottom": 11.178402,
+        "countries": [
+            "mali",
+            "guinea"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 119,
+        "left": -8.4375,
+        "top": 12.554564,
+        "right": -7.03125,
+        "bottom": 11.178402,
+        "countries": [
+            "mali",
+            "guinea"
+        ]
+    },
+    {
+        "x": 121,
+        "y": 120,
+        "left": -9.84375,
+        "top": 11.178402,
+        "right": -8.4375,
+        "bottom": 9.795678,
+        "countries": [
+            "mali",
+            "guinea"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 110,
+        "left": -7.03125,
+        "top": 24.527135,
+        "right": -5.625,
+        "bottom": 23.241346,
+        "countries": [
+            "mali",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 124,
+        "y": 110,
+        "left": -5.625,
+        "top": 24.527135,
+        "right": -4.21875,
+        "bottom": 23.241346,
+        "countries": [
+            "mali"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 111,
+        "left": -7.03125,
+        "top": 23.241346,
+        "right": -5.625,
+        "bottom": 21.943046,
+        "countries": [
+            "mali",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 124,
+        "y": 111,
+        "left": -5.625,
+        "top": 23.241346,
+        "right": -4.21875,
+        "bottom": 21.943046,
+        "countries": [
+            "mali"
+        ]
+    },
+    {
+        "x": 125,
+        "y": 111,
+        "left": -4.21875,
+        "top": 23.241346,
+        "right": -2.8125,
+        "bottom": 21.943046,
+        "countries": [
+            "mali"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 112,
+        "left": -7.03125,
+        "top": 21.943046,
+        "right": -5.625,
+        "bottom": 20.632784,
+        "countries": [
+            "mali",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 124,
+        "y": 112,
+        "left": -5.625,
+        "top": 21.943046,
+        "right": -4.21875,
+        "bottom": 20.632784,
+        "countries": [
+            "mali"
+        ]
+    },
+    {
+        "x": 125,
+        "y": 112,
+        "left": -4.21875,
+        "top": 21.943046,
+        "right": -2.8125,
+        "bottom": 20.632784,
+        "countries": [
+            "mali"
+        ]
+    },
+    {
+        "x": 126,
+        "y": 112,
+        "left": -2.8125,
+        "top": 21.943046,
+        "right": -1.40625,
+        "bottom": 20.632784,
+        "countries": [
+            "mali"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 113,
+        "left": -7.03125,
+        "top": 20.632784,
+        "right": -5.625,
+        "bottom": 19.311143,
+        "countries": [
+            "mali",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 124,
+        "y": 113,
+        "left": -5.625,
+        "top": 20.632784,
+        "right": -4.21875,
+        "bottom": 19.311143,
+        "countries": [
+            "mali"
+        ]
+    },
+    {
+        "x": 125,
+        "y": 113,
+        "left": -4.21875,
+        "top": 20.632784,
+        "right": -2.8125,
+        "bottom": 19.311143,
+        "countries": [
+            "mali"
+        ]
+    },
+    {
+        "x": 126,
+        "y": 113,
+        "left": -2.8125,
+        "top": 20.632784,
+        "right": -1.40625,
+        "bottom": 19.311143,
+        "countries": [
+            "mali"
+        ]
+    },
+    {
+        "x": 127,
+        "y": 113,
+        "left": -1.40625,
+        "top": 20.632784,
+        "right": 0.0,
+        "bottom": 19.311143,
+        "countries": [
+            "mali"
+        ]
+    },
+    {
+        "x": 128,
+        "y": 113,
+        "left": 0.0,
+        "top": 20.632784,
+        "right": 1.40625,
+        "bottom": 19.311143,
+        "countries": [
+            "mali"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 114,
+        "left": -7.03125,
+        "top": 19.311143,
+        "right": -5.625,
+        "bottom": 17.978733,
+        "countries": [
+            "mali",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 124,
+        "y": 114,
+        "left": -5.625,
+        "top": 19.311143,
+        "right": -4.21875,
+        "bottom": 17.978733,
+        "countries": [
+            "mali"
+        ]
+    },
+    {
+        "x": 125,
+        "y": 114,
+        "left": -4.21875,
+        "top": 19.311143,
+        "right": -2.8125,
+        "bottom": 17.978733,
+        "countries": [
+            "mali"
+        ]
+    },
+    {
+        "x": 126,
+        "y": 114,
+        "left": -2.8125,
+        "top": 19.311143,
+        "right": -1.40625,
+        "bottom": 17.978733,
+        "countries": [
+            "mali"
+        ]
+    },
+    {
+        "x": 127,
+        "y": 114,
+        "left": -1.40625,
+        "top": 19.311143,
+        "right": 0.0,
+        "bottom": 17.978733,
+        "countries": [
+            "mali"
+        ]
+    },
+    {
+        "x": 128,
+        "y": 114,
+        "left": 0.0,
+        "top": 19.311143,
+        "right": 1.40625,
+        "bottom": 17.978733,
+        "countries": [
+            "mali"
+        ]
+    },
+    {
+        "x": 129,
+        "y": 114,
+        "left": 1.40625,
+        "top": 19.311143,
+        "right": 2.8125,
+        "bottom": 17.978733,
+        "countries": [
+            "mali"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 115,
+        "left": -7.03125,
+        "top": 17.978733,
+        "right": -5.625,
+        "bottom": 16.636192,
+        "countries": [
+            "mali",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 124,
+        "y": 115,
+        "left": -5.625,
+        "top": 17.978733,
+        "right": -4.21875,
+        "bottom": 16.636192,
+        "countries": [
+            "mali",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 125,
+        "y": 115,
+        "left": -4.21875,
+        "top": 17.978733,
+        "right": -2.8125,
+        "bottom": 16.636192,
+        "countries": [
+            "mali"
+        ]
+    },
+    {
+        "x": 126,
+        "y": 115,
+        "left": -2.8125,
+        "top": 17.978733,
+        "right": -1.40625,
+        "bottom": 16.636192,
+        "countries": [
+            "mali"
+        ]
+    },
+    {
+        "x": 127,
+        "y": 115,
+        "left": -1.40625,
+        "top": 17.978733,
+        "right": 0.0,
+        "bottom": 16.636192,
+        "countries": [
+            "mali"
+        ]
+    },
+    {
+        "x": 128,
+        "y": 115,
+        "left": 0.0,
+        "top": 17.978733,
+        "right": 1.40625,
+        "bottom": 16.636192,
+        "countries": [
+            "mali"
+        ]
+    },
+    {
+        "x": 129,
+        "y": 115,
+        "left": 1.40625,
+        "top": 17.978733,
+        "right": 2.8125,
+        "bottom": 16.636192,
+        "countries": [
+            "mali"
+        ]
+    },
+    {
+        "x": 130,
+        "y": 115,
+        "left": 2.8125,
+        "top": 17.978733,
+        "right": 4.21875,
+        "bottom": 16.636192,
+        "countries": [
+            "niger",
+            "mali"
+        ]
+    },
+    {
+        "x": 131,
+        "y": 115,
+        "left": 4.21875,
+        "top": 17.978733,
+        "right": 5.625,
+        "bottom": 16.636192,
+        "countries": [
+            "niger",
+            "mali"
+        ]
+    },
+    {
+        "x": 119,
+        "y": 116,
+        "left": -12.65625,
+        "top": 16.636192,
+        "right": -11.25,
+        "bottom": 15.284185,
+        "countries": [
+            "mali",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 120,
+        "y": 116,
+        "left": -11.25,
+        "top": 16.636192,
+        "right": -9.84375,
+        "bottom": 15.284185,
+        "countries": [
+            "mali",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 121,
+        "y": 116,
+        "left": -9.84375,
+        "top": 16.636192,
+        "right": -8.4375,
+        "bottom": 15.284185,
+        "countries": [
+            "mali",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 116,
+        "left": -8.4375,
+        "top": 16.636192,
+        "right": -7.03125,
+        "bottom": 15.284185,
+        "countries": [
+            "mali",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 116,
+        "left": -7.03125,
+        "top": 16.636192,
+        "right": -5.625,
+        "bottom": 15.284185,
+        "countries": [
+            "mali",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 124,
+        "y": 116,
+        "left": -5.625,
+        "top": 16.636192,
+        "right": -4.21875,
+        "bottom": 15.284185,
+        "countries": [
+            "mali",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 125,
+        "y": 116,
+        "left": -4.21875,
+        "top": 16.636192,
+        "right": -2.8125,
+        "bottom": 15.284185,
+        "countries": [
+            "mali"
+        ]
+    },
+    {
+        "x": 126,
+        "y": 116,
+        "left": -2.8125,
+        "top": 16.636192,
+        "right": -1.40625,
+        "bottom": 15.284185,
+        "countries": [
+            "mali"
+        ]
+    },
+    {
+        "x": 127,
+        "y": 116,
+        "left": -1.40625,
+        "top": 16.636192,
+        "right": 0.0,
+        "bottom": 15.284185,
+        "countries": [
+            "mali"
+        ]
+    },
+    {
+        "x": 128,
+        "y": 116,
+        "left": 0.0,
+        "top": 16.636192,
+        "right": 1.40625,
+        "bottom": 15.284185,
+        "countries": [
+            "mali"
+        ]
+    },
+    {
+        "x": 129,
+        "y": 116,
+        "left": 1.40625,
+        "top": 16.636192,
+        "right": 2.8125,
+        "bottom": 15.284185,
+        "countries": [
+            "niger",
+            "mali"
+        ]
+    },
+    {
+        "x": 130,
+        "y": 116,
+        "left": 2.8125,
+        "top": 16.636192,
+        "right": 4.21875,
+        "bottom": 15.284185,
+        "countries": [
+            "niger",
+            "mali"
+        ]
+    },
+    {
+        "x": 119,
+        "y": 117,
+        "left": -12.65625,
+        "top": 15.284185,
+        "right": -11.25,
+        "bottom": 13.923404,
+        "countries": [
+            "senegal",
+            "mali",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 120,
+        "y": 117,
+        "left": -11.25,
+        "top": 15.284185,
+        "right": -9.84375,
+        "bottom": 13.923404,
+        "countries": [
+            "mali",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 121,
+        "y": 117,
+        "left": -9.84375,
+        "top": 15.284185,
+        "right": -8.4375,
+        "bottom": 13.923404,
+        "countries": [
+            "mali"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 117,
+        "left": -8.4375,
+        "top": 15.284185,
+        "right": -7.03125,
+        "bottom": 13.923404,
+        "countries": [
+            "mali"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 117,
+        "left": -7.03125,
+        "top": 15.284185,
+        "right": -5.625,
+        "bottom": 13.923404,
+        "countries": [
+            "mali"
+        ]
+    },
+    {
+        "x": 124,
+        "y": 117,
+        "left": -5.625,
+        "top": 15.284185,
+        "right": -4.21875,
+        "bottom": 13.923404,
+        "countries": [
+            "mali"
+        ]
+    },
+    {
+        "x": 129,
+        "y": 117,
+        "left": 1.40625,
+        "top": 15.284185,
+        "right": 2.8125,
+        "bottom": 13.923404,
+        "countries": [
+            "niger",
+            "mali"
+        ]
+    },
+    {
+        "x": 119,
+        "y": 118,
+        "left": -12.65625,
+        "top": 13.923404,
+        "right": -11.25,
+        "bottom": 12.554564,
+        "countries": [
+            "senegal",
+            "mali"
+        ]
+    },
+    {
+        "x": 120,
+        "y": 118,
+        "left": -11.25,
+        "top": 13.923404,
+        "right": -9.84375,
+        "bottom": 12.554564,
+        "countries": [
+            "mali"
+        ]
+    },
+    {
+        "x": 121,
+        "y": 118,
+        "left": -9.84375,
+        "top": 13.923404,
+        "right": -8.4375,
+        "bottom": 12.554564,
+        "countries": [
+            "mali"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 118,
+        "left": -8.4375,
+        "top": 13.923404,
+        "right": -7.03125,
+        "bottom": 12.554564,
+        "countries": [
+            "mali"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 118,
+        "left": -7.03125,
+        "top": 13.923404,
+        "right": -5.625,
+        "bottom": 12.554564,
+        "countries": [
+            "mali"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 119,
+        "left": -7.03125,
+        "top": 12.554564,
+        "right": -5.625,
+        "bottom": 11.178402,
+        "countries": [
+            "mali"
+        ]
+    }
+]

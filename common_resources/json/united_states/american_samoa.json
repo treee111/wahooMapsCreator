@@ -1,0 +1,47 @@
+[
+    {
+        "x": 6,
+        "y": 135,
+        "left": -171.5625,
+        "top": -9.795678,
+        "right": -170.15625,
+        "bottom": -11.178402,
+        "countries": [
+            "american_samoa"
+        ]
+    },
+    {
+        "x": 6,
+        "y": 138,
+        "left": -171.5625,
+        "top": -13.923404,
+        "right": -170.15625,
+        "bottom": -15.284185,
+        "countries": [
+            "american_samoa",
+            "samoa"
+        ]
+    },
+    {
+        "x": 7,
+        "y": 138,
+        "left": -170.15625,
+        "top": -13.923404,
+        "right": -168.75,
+        "bottom": -15.284185,
+        "countries": [
+            "american_samoa"
+        ]
+    },
+    {
+        "x": 8,
+        "y": 138,
+        "left": -168.75,
+        "top": -13.923404,
+        "right": -167.34375,
+        "bottom": -15.284185,
+        "countries": [
+            "american_samoa"
+        ]
+    }
+]

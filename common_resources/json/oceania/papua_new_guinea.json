@@ -1,0 +1,728 @@
+[
+    {
+        "x": 228,
+        "y": 129,
+        "left": 140.625,
+        "top": -1.406109,
+        "right": 142.03125,
+        "bottom": -2.811371,
+        "countries": [
+            "indonesia",
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 228,
+        "y": 130,
+        "left": 140.625,
+        "top": -2.811371,
+        "right": 142.03125,
+        "bottom": -4.214943,
+        "countries": [
+            "indonesia",
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 228,
+        "y": 131,
+        "left": 140.625,
+        "top": -4.214943,
+        "right": 142.03125,
+        "bottom": -5.615986,
+        "countries": [
+            "indonesia",
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 228,
+        "y": 132,
+        "left": 140.625,
+        "top": -5.615986,
+        "right": 142.03125,
+        "bottom": -7.013668,
+        "countries": [
+            "indonesia",
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 228,
+        "y": 133,
+        "left": 140.625,
+        "top": -7.013668,
+        "right": 142.03125,
+        "bottom": -8.407168,
+        "countries": [
+            "indonesia",
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 228,
+        "y": 134,
+        "left": 140.625,
+        "top": -8.407168,
+        "right": 142.03125,
+        "bottom": -9.795678,
+        "countries": [
+            "indonesia",
+            "papua_new_guinea",
+            "australia"
+        ]
+    },
+    {
+        "x": 229,
+        "y": 134,
+        "left": 142.03125,
+        "top": -8.407168,
+        "right": 143.4375,
+        "bottom": -9.795678,
+        "countries": [
+            "papua_new_guinea",
+            "australia"
+        ]
+    },
+    {
+        "x": 230,
+        "y": 134,
+        "left": 143.4375,
+        "top": -8.407168,
+        "right": 144.84375,
+        "bottom": -9.795678,
+        "countries": [
+            "papua_new_guinea",
+            "australia"
+        ]
+    },
+    {
+        "x": 230,
+        "y": 128,
+        "left": 143.4375,
+        "top": 0.0,
+        "right": 144.84375,
+        "bottom": -1.406109,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 231,
+        "y": 128,
+        "left": 144.84375,
+        "top": 0.0,
+        "right": 146.25,
+        "bottom": -1.406109,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 234,
+        "y": 128,
+        "left": 149.0625,
+        "top": 0.0,
+        "right": 150.46875,
+        "bottom": -1.406109,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 229,
+        "y": 129,
+        "left": 142.03125,
+        "top": -1.406109,
+        "right": 143.4375,
+        "bottom": -2.811371,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 230,
+        "y": 129,
+        "left": 143.4375,
+        "top": -1.406109,
+        "right": 144.84375,
+        "bottom": -2.811371,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 231,
+        "y": 129,
+        "left": 144.84375,
+        "top": -1.406109,
+        "right": 146.25,
+        "bottom": -2.811371,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 232,
+        "y": 129,
+        "left": 146.25,
+        "top": -1.406109,
+        "right": 147.65625,
+        "bottom": -2.811371,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 233,
+        "y": 129,
+        "left": 147.65625,
+        "top": -1.406109,
+        "right": 149.0625,
+        "bottom": -2.811371,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 234,
+        "y": 129,
+        "left": 149.0625,
+        "top": -1.406109,
+        "right": 150.46875,
+        "bottom": -2.811371,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 235,
+        "y": 129,
+        "left": 150.46875,
+        "top": -1.406109,
+        "right": 151.875,
+        "bottom": -2.811371,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 236,
+        "y": 129,
+        "left": 151.875,
+        "top": -1.406109,
+        "right": 153.28125,
+        "bottom": -2.811371,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 229,
+        "y": 130,
+        "left": 142.03125,
+        "top": -2.811371,
+        "right": 143.4375,
+        "bottom": -4.214943,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 230,
+        "y": 130,
+        "left": 143.4375,
+        "top": -2.811371,
+        "right": 144.84375,
+        "bottom": -4.214943,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 231,
+        "y": 130,
+        "left": 144.84375,
+        "top": -2.811371,
+        "right": 146.25,
+        "bottom": -4.214943,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 235,
+        "y": 130,
+        "left": 150.46875,
+        "top": -2.811371,
+        "right": 151.875,
+        "bottom": -4.214943,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 236,
+        "y": 130,
+        "left": 151.875,
+        "top": -2.811371,
+        "right": 153.28125,
+        "bottom": -4.214943,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 237,
+        "y": 130,
+        "left": 153.28125,
+        "top": -2.811371,
+        "right": 154.6875,
+        "bottom": -4.214943,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 238,
+        "y": 130,
+        "left": 154.6875,
+        "top": -2.811371,
+        "right": 156.09375,
+        "bottom": -4.214943,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 229,
+        "y": 131,
+        "left": 142.03125,
+        "top": -4.214943,
+        "right": 143.4375,
+        "bottom": -5.615986,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 230,
+        "y": 131,
+        "left": 143.4375,
+        "top": -4.214943,
+        "right": 144.84375,
+        "bottom": -5.615986,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 231,
+        "y": 131,
+        "left": 144.84375,
+        "top": -4.214943,
+        "right": 146.25,
+        "bottom": -5.615986,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 232,
+        "y": 131,
+        "left": 146.25,
+        "top": -4.214943,
+        "right": 147.65625,
+        "bottom": -5.615986,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 233,
+        "y": 131,
+        "left": 147.65625,
+        "top": -4.214943,
+        "right": 149.0625,
+        "bottom": -5.615986,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 234,
+        "y": 131,
+        "left": 149.0625,
+        "top": -4.214943,
+        "right": 150.46875,
+        "bottom": -5.615986,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 235,
+        "y": 131,
+        "left": 150.46875,
+        "top": -4.214943,
+        "right": 151.875,
+        "bottom": -5.615986,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 236,
+        "y": 131,
+        "left": 151.875,
+        "top": -4.214943,
+        "right": 153.28125,
+        "bottom": -5.615986,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 237,
+        "y": 131,
+        "left": 153.28125,
+        "top": -4.214943,
+        "right": 154.6875,
+        "bottom": -5.615986,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 238,
+        "y": 131,
+        "left": 154.6875,
+        "top": -4.214943,
+        "right": 156.09375,
+        "bottom": -5.615986,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 239,
+        "y": 131,
+        "left": 156.09375,
+        "top": -4.214943,
+        "right": 157.5,
+        "bottom": -5.615986,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 241,
+        "y": 131,
+        "left": 158.90625,
+        "top": -4.214943,
+        "right": 160.3125,
+        "bottom": -5.615986,
+        "countries": [
+            "solomon_islands",
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 229,
+        "y": 132,
+        "left": 142.03125,
+        "top": -5.615986,
+        "right": 143.4375,
+        "bottom": -7.013668,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 230,
+        "y": 132,
+        "left": 143.4375,
+        "top": -5.615986,
+        "right": 144.84375,
+        "bottom": -7.013668,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 231,
+        "y": 132,
+        "left": 144.84375,
+        "top": -5.615986,
+        "right": 146.25,
+        "bottom": -7.013668,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 232,
+        "y": 132,
+        "left": 146.25,
+        "top": -5.615986,
+        "right": 147.65625,
+        "bottom": -7.013668,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 233,
+        "y": 132,
+        "left": 147.65625,
+        "top": -5.615986,
+        "right": 149.0625,
+        "bottom": -7.013668,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 234,
+        "y": 132,
+        "left": 149.0625,
+        "top": -5.615986,
+        "right": 150.46875,
+        "bottom": -7.013668,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 235,
+        "y": 132,
+        "left": 150.46875,
+        "top": -5.615986,
+        "right": 151.875,
+        "bottom": -7.013668,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 238,
+        "y": 132,
+        "left": 154.6875,
+        "top": -5.615986,
+        "right": 156.09375,
+        "bottom": -7.013668,
+        "countries": [
+            "solomon_islands",
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 229,
+        "y": 133,
+        "left": 142.03125,
+        "top": -7.013668,
+        "right": 143.4375,
+        "bottom": -8.407168,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 230,
+        "y": 133,
+        "left": 143.4375,
+        "top": -7.013668,
+        "right": 144.84375,
+        "bottom": -8.407168,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 231,
+        "y": 133,
+        "left": 144.84375,
+        "top": -7.013668,
+        "right": 146.25,
+        "bottom": -8.407168,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 232,
+        "y": 133,
+        "left": 146.25,
+        "top": -7.013668,
+        "right": 147.65625,
+        "bottom": -8.407168,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 233,
+        "y": 133,
+        "left": 147.65625,
+        "top": -7.013668,
+        "right": 149.0625,
+        "bottom": -8.407168,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 235,
+        "y": 133,
+        "left": 150.46875,
+        "top": -7.013668,
+        "right": 151.875,
+        "bottom": -8.407168,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 232,
+        "y": 134,
+        "left": 146.25,
+        "top": -8.407168,
+        "right": 147.65625,
+        "bottom": -9.795678,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 233,
+        "y": 134,
+        "left": 147.65625,
+        "top": -8.407168,
+        "right": 149.0625,
+        "bottom": -9.795678,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 234,
+        "y": 134,
+        "left": 149.0625,
+        "top": -8.407168,
+        "right": 150.46875,
+        "bottom": -9.795678,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 235,
+        "y": 134,
+        "left": 150.46875,
+        "top": -8.407168,
+        "right": 151.875,
+        "bottom": -9.795678,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 236,
+        "y": 134,
+        "left": 151.875,
+        "top": -8.407168,
+        "right": 153.28125,
+        "bottom": -9.795678,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 237,
+        "y": 134,
+        "left": 153.28125,
+        "top": -8.407168,
+        "right": 154.6875,
+        "bottom": -9.795678,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 232,
+        "y": 135,
+        "left": 146.25,
+        "top": -9.795678,
+        "right": 147.65625,
+        "bottom": -11.178402,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 233,
+        "y": 135,
+        "left": 147.65625,
+        "top": -9.795678,
+        "right": 149.0625,
+        "bottom": -11.178402,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 234,
+        "y": 135,
+        "left": 149.0625,
+        "top": -9.795678,
+        "right": 150.46875,
+        "bottom": -11.178402,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 235,
+        "y": 135,
+        "left": 150.46875,
+        "top": -9.795678,
+        "right": 151.875,
+        "bottom": -11.178402,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 236,
+        "y": 135,
+        "left": 151.875,
+        "top": -9.795678,
+        "right": 153.28125,
+        "bottom": -11.178402,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 236,
+        "y": 136,
+        "left": 151.875,
+        "top": -11.178402,
+        "right": 153.28125,
+        "bottom": -12.554564,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 237,
+        "y": 136,
+        "left": 153.28125,
+        "top": -11.178402,
+        "right": 154.6875,
+        "bottom": -12.554564,
+        "countries": [
+            "papua_new_guinea"
+        ]
+    }
+]

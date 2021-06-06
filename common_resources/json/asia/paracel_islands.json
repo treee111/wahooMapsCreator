@@ -1,0 +1,35 @@
+[
+    {
+        "x": 207,
+        "y": 115,
+        "left": 111.09375,
+        "top": 17.978733,
+        "right": 112.5,
+        "bottom": 16.636192,
+        "countries": [
+            "paracel_islands"
+        ]
+    },
+    {
+        "x": 208,
+        "y": 115,
+        "left": 112.5,
+        "top": 17.978733,
+        "right": 113.90625,
+        "bottom": 16.636192,
+        "countries": [
+            "paracel_islands"
+        ]
+    },
+    {
+        "x": 207,
+        "y": 116,
+        "left": 111.09375,
+        "top": 16.636192,
+        "right": 112.5,
+        "bottom": 15.284185,
+        "countries": [
+            "paracel_islands"
+        ]
+    }
+]

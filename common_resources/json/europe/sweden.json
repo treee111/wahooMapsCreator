@@ -1,0 +1,1491 @@
+[
+    {
+        "x": 136,
+        "y": 78,
+        "left": 11.25,
+        "top": 57.326521,
+        "right": 12.65625,
+        "bottom": 56.559482,
+        "countries": [
+            "denmark",
+            "sweden"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 79,
+        "left": 11.25,
+        "top": 56.559482,
+        "right": 12.65625,
+        "bottom": 55.776573,
+        "countries": [
+            "denmark",
+            "sweden"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 80,
+        "left": 12.65625,
+        "top": 55.776573,
+        "right": 14.0625,
+        "bottom": 54.977614,
+        "countries": [
+            "denmark",
+            "sweden"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 80,
+        "left": 14.0625,
+        "top": 55.776573,
+        "right": 15.46875,
+        "bottom": 54.977614,
+        "countries": [
+            "denmark",
+            "sweden"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 59,
+        "left": 19.6875,
+        "top": 69.162558,
+        "right": 21.09375,
+        "bottom": 68.656555,
+        "countries": [
+            "norway",
+            "sweden",
+            "finland"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 59,
+        "left": 21.09375,
+        "top": 69.162558,
+        "right": 22.5,
+        "bottom": 68.656555,
+        "countries": [
+            "norway",
+            "sweden",
+            "finland"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 60,
+        "left": 21.09375,
+        "top": 68.656555,
+        "right": 22.5,
+        "bottom": 68.138852,
+        "countries": [
+            "sweden",
+            "finland"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 60,
+        "left": 22.5,
+        "top": 68.656555,
+        "right": 23.90625,
+        "bottom": 68.138852,
+        "countries": [
+            "norway",
+            "sweden",
+            "finland"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 61,
+        "left": 22.5,
+        "top": 68.138852,
+        "right": 23.90625,
+        "bottom": 67.609221,
+        "countries": [
+            "sweden",
+            "finland"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 62,
+        "left": 22.5,
+        "top": 67.609221,
+        "right": 23.90625,
+        "bottom": 67.067433,
+        "countries": [
+            "sweden",
+            "finland"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 63,
+        "left": 22.5,
+        "top": 67.067433,
+        "right": 23.90625,
+        "bottom": 66.51326,
+        "countries": [
+            "sweden",
+            "finland"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 63,
+        "left": 23.90625,
+        "top": 67.067433,
+        "right": 25.3125,
+        "bottom": 66.51326,
+        "countries": [
+            "sweden",
+            "finland"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 64,
+        "left": 22.5,
+        "top": 66.51326,
+        "right": 23.90625,
+        "bottom": 65.946472,
+        "countries": [
+            "sweden",
+            "finland"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 64,
+        "left": 23.90625,
+        "top": 66.51326,
+        "right": 25.3125,
+        "bottom": 65.946472,
+        "countries": [
+            "sweden",
+            "finland"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 65,
+        "left": 23.90625,
+        "top": 65.946472,
+        "right": 25.3125,
+        "bottom": 65.366837,
+        "countries": [
+            "sweden",
+            "finland"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 69,
+        "left": 19.6875,
+        "top": 63.548552,
+        "right": 21.09375,
+        "bottom": 62.915233,
+        "countries": [
+            "sweden",
+            "finland"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 60,
+        "left": 16.875,
+        "top": 68.656555,
+        "right": 18.28125,
+        "bottom": 68.138852,
+        "countries": [
+            "norway",
+            "sweden"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 60,
+        "left": 18.28125,
+        "top": 68.656555,
+        "right": 19.6875,
+        "bottom": 68.138852,
+        "countries": [
+            "norway",
+            "sweden"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 60,
+        "left": 19.6875,
+        "top": 68.656555,
+        "right": 21.09375,
+        "bottom": 68.138852,
+        "countries": [
+            "norway",
+            "sweden"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 61,
+        "left": 15.46875,
+        "top": 68.138852,
+        "right": 16.875,
+        "bottom": 67.609221,
+        "countries": [
+            "norway",
+            "sweden"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 61,
+        "left": 16.875,
+        "top": 68.138852,
+        "right": 18.28125,
+        "bottom": 67.609221,
+        "countries": [
+            "norway",
+            "sweden"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 62,
+        "left": 15.46875,
+        "top": 67.609221,
+        "right": 16.875,
+        "bottom": 67.067433,
+        "countries": [
+            "norway",
+            "sweden"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 63,
+        "left": 14.0625,
+        "top": 67.067433,
+        "right": 15.46875,
+        "bottom": 66.51326,
+        "countries": [
+            "norway",
+            "sweden"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 63,
+        "left": 15.46875,
+        "top": 67.067433,
+        "right": 16.875,
+        "bottom": 66.51326,
+        "countries": [
+            "norway",
+            "sweden"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 64,
+        "left": 14.0625,
+        "top": 66.51326,
+        "right": 15.46875,
+        "bottom": 65.946472,
+        "countries": [
+            "norway",
+            "sweden"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 64,
+        "left": 15.46875,
+        "top": 66.51326,
+        "right": 16.875,
+        "bottom": 65.946472,
+        "countries": [
+            "norway",
+            "sweden"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 65,
+        "left": 14.0625,
+        "top": 65.946472,
+        "right": 15.46875,
+        "bottom": 65.366837,
+        "countries": [
+            "norway",
+            "sweden"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 66,
+        "left": 12.65625,
+        "top": 65.366837,
+        "right": 14.0625,
+        "bottom": 64.774125,
+        "countries": [
+            "norway",
+            "sweden"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 66,
+        "left": 14.0625,
+        "top": 65.366837,
+        "right": 15.46875,
+        "bottom": 64.774125,
+        "countries": [
+            "norway",
+            "sweden"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 67,
+        "left": 12.65625,
+        "top": 64.774125,
+        "right": 14.0625,
+        "bottom": 64.168107,
+        "countries": [
+            "norway",
+            "sweden"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 67,
+        "left": 14.0625,
+        "top": 64.774125,
+        "right": 15.46875,
+        "bottom": 64.168107,
+        "countries": [
+            "norway",
+            "sweden"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 68,
+        "left": 11.25,
+        "top": 64.168107,
+        "right": 12.65625,
+        "bottom": 63.548552,
+        "countries": [
+            "norway",
+            "sweden"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 68,
+        "left": 12.65625,
+        "top": 64.168107,
+        "right": 14.0625,
+        "bottom": 63.548552,
+        "countries": [
+            "norway",
+            "sweden"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 68,
+        "left": 14.0625,
+        "top": 64.168107,
+        "right": 15.46875,
+        "bottom": 63.548552,
+        "countries": [
+            "norway",
+            "sweden"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 69,
+        "left": 11.25,
+        "top": 63.548552,
+        "right": 12.65625,
+        "bottom": 62.915233,
+        "countries": [
+            "norway",
+            "sweden"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 70,
+        "left": 11.25,
+        "top": 62.915233,
+        "right": 12.65625,
+        "bottom": 62.267923,
+        "countries": [
+            "norway",
+            "sweden"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 71,
+        "left": 11.25,
+        "top": 62.267923,
+        "right": 12.65625,
+        "bottom": 61.606396,
+        "countries": [
+            "norway",
+            "sweden"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 72,
+        "left": 11.25,
+        "top": 61.606396,
+        "right": 12.65625,
+        "bottom": 60.930432,
+        "countries": [
+            "norway",
+            "sweden"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 72,
+        "left": 12.65625,
+        "top": 61.606396,
+        "right": 14.0625,
+        "bottom": 60.930432,
+        "countries": [
+            "norway",
+            "sweden"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 73,
+        "left": 11.25,
+        "top": 60.930432,
+        "right": 12.65625,
+        "bottom": 60.239811,
+        "countries": [
+            "norway",
+            "sweden"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 74,
+        "left": 11.25,
+        "top": 60.239811,
+        "right": 12.65625,
+        "bottom": 59.534318,
+        "countries": [
+            "norway",
+            "sweden"
+        ]
+    },
+    {
+        "x": 135,
+        "y": 75,
+        "left": 9.84375,
+        "top": 59.534318,
+        "right": 11.25,
+        "bottom": 58.813742,
+        "countries": [
+            "norway",
+            "sweden"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 75,
+        "left": 11.25,
+        "top": 59.534318,
+        "right": 12.65625,
+        "bottom": 58.813742,
+        "countries": [
+            "norway",
+            "sweden"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 61,
+        "left": 18.28125,
+        "top": 68.138852,
+        "right": 19.6875,
+        "bottom": 67.609221,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 61,
+        "left": 19.6875,
+        "top": 68.138852,
+        "right": 21.09375,
+        "bottom": 67.609221,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 61,
+        "left": 21.09375,
+        "top": 68.138852,
+        "right": 22.5,
+        "bottom": 67.609221,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 62,
+        "left": 16.875,
+        "top": 67.609221,
+        "right": 18.28125,
+        "bottom": 67.067433,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 62,
+        "left": 18.28125,
+        "top": 67.609221,
+        "right": 19.6875,
+        "bottom": 67.067433,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 62,
+        "left": 19.6875,
+        "top": 67.609221,
+        "right": 21.09375,
+        "bottom": 67.067433,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 62,
+        "left": 21.09375,
+        "top": 67.609221,
+        "right": 22.5,
+        "bottom": 67.067433,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 63,
+        "left": 16.875,
+        "top": 67.067433,
+        "right": 18.28125,
+        "bottom": 66.51326,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 63,
+        "left": 18.28125,
+        "top": 67.067433,
+        "right": 19.6875,
+        "bottom": 66.51326,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 63,
+        "left": 19.6875,
+        "top": 67.067433,
+        "right": 21.09375,
+        "bottom": 66.51326,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 63,
+        "left": 21.09375,
+        "top": 67.067433,
+        "right": 22.5,
+        "bottom": 66.51326,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 64,
+        "left": 16.875,
+        "top": 66.51326,
+        "right": 18.28125,
+        "bottom": 65.946472,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 64,
+        "left": 18.28125,
+        "top": 66.51326,
+        "right": 19.6875,
+        "bottom": 65.946472,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 64,
+        "left": 19.6875,
+        "top": 66.51326,
+        "right": 21.09375,
+        "bottom": 65.946472,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 64,
+        "left": 21.09375,
+        "top": 66.51326,
+        "right": 22.5,
+        "bottom": 65.946472,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 65,
+        "left": 15.46875,
+        "top": 65.946472,
+        "right": 16.875,
+        "bottom": 65.366837,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 65,
+        "left": 16.875,
+        "top": 65.946472,
+        "right": 18.28125,
+        "bottom": 65.366837,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 65,
+        "left": 18.28125,
+        "top": 65.946472,
+        "right": 19.6875,
+        "bottom": 65.366837,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 65,
+        "left": 19.6875,
+        "top": 65.946472,
+        "right": 21.09375,
+        "bottom": 65.366837,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 65,
+        "left": 21.09375,
+        "top": 65.946472,
+        "right": 22.5,
+        "bottom": 65.366837,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 65,
+        "left": 22.5,
+        "top": 65.946472,
+        "right": 23.90625,
+        "bottom": 65.366837,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 66,
+        "left": 15.46875,
+        "top": 65.366837,
+        "right": 16.875,
+        "bottom": 64.774125,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 66,
+        "left": 16.875,
+        "top": 65.366837,
+        "right": 18.28125,
+        "bottom": 64.774125,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 66,
+        "left": 18.28125,
+        "top": 65.366837,
+        "right": 19.6875,
+        "bottom": 64.774125,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 66,
+        "left": 19.6875,
+        "top": 65.366837,
+        "right": 21.09375,
+        "bottom": 64.774125,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 66,
+        "left": 21.09375,
+        "top": 65.366837,
+        "right": 22.5,
+        "bottom": 64.774125,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 67,
+        "left": 15.46875,
+        "top": 64.774125,
+        "right": 16.875,
+        "bottom": 64.168107,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 67,
+        "left": 16.875,
+        "top": 64.774125,
+        "right": 18.28125,
+        "bottom": 64.168107,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 67,
+        "left": 18.28125,
+        "top": 64.774125,
+        "right": 19.6875,
+        "bottom": 64.168107,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 67,
+        "left": 19.6875,
+        "top": 64.774125,
+        "right": 21.09375,
+        "bottom": 64.168107,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 67,
+        "left": 21.09375,
+        "top": 64.774125,
+        "right": 22.5,
+        "bottom": 64.168107,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 68,
+        "left": 15.46875,
+        "top": 64.168107,
+        "right": 16.875,
+        "bottom": 63.548552,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 68,
+        "left": 16.875,
+        "top": 64.168107,
+        "right": 18.28125,
+        "bottom": 63.548552,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 68,
+        "left": 18.28125,
+        "top": 64.168107,
+        "right": 19.6875,
+        "bottom": 63.548552,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 68,
+        "left": 19.6875,
+        "top": 64.168107,
+        "right": 21.09375,
+        "bottom": 63.548552,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 69,
+        "left": 12.65625,
+        "top": 63.548552,
+        "right": 14.0625,
+        "bottom": 62.915233,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 69,
+        "left": 14.0625,
+        "top": 63.548552,
+        "right": 15.46875,
+        "bottom": 62.915233,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 69,
+        "left": 15.46875,
+        "top": 63.548552,
+        "right": 16.875,
+        "bottom": 62.915233,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 69,
+        "left": 16.875,
+        "top": 63.548552,
+        "right": 18.28125,
+        "bottom": 62.915233,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 69,
+        "left": 18.28125,
+        "top": 63.548552,
+        "right": 19.6875,
+        "bottom": 62.915233,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 70,
+        "left": 12.65625,
+        "top": 62.915233,
+        "right": 14.0625,
+        "bottom": 62.267923,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 70,
+        "left": 14.0625,
+        "top": 62.915233,
+        "right": 15.46875,
+        "bottom": 62.267923,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 70,
+        "left": 15.46875,
+        "top": 62.915233,
+        "right": 16.875,
+        "bottom": 62.267923,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 70,
+        "left": 16.875,
+        "top": 62.915233,
+        "right": 18.28125,
+        "bottom": 62.267923,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 70,
+        "left": 18.28125,
+        "top": 62.915233,
+        "right": 19.6875,
+        "bottom": 62.267923,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 71,
+        "left": 12.65625,
+        "top": 62.267923,
+        "right": 14.0625,
+        "bottom": 61.606396,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 71,
+        "left": 14.0625,
+        "top": 62.267923,
+        "right": 15.46875,
+        "bottom": 61.606396,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 71,
+        "left": 15.46875,
+        "top": 62.267923,
+        "right": 16.875,
+        "bottom": 61.606396,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 71,
+        "left": 16.875,
+        "top": 62.267923,
+        "right": 18.28125,
+        "bottom": 61.606396,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 72,
+        "left": 14.0625,
+        "top": 61.606396,
+        "right": 15.46875,
+        "bottom": 60.930432,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 72,
+        "left": 15.46875,
+        "top": 61.606396,
+        "right": 16.875,
+        "bottom": 60.930432,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 72,
+        "left": 16.875,
+        "top": 61.606396,
+        "right": 18.28125,
+        "bottom": 60.930432,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 73,
+        "left": 12.65625,
+        "top": 60.930432,
+        "right": 14.0625,
+        "bottom": 60.239811,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 73,
+        "left": 14.0625,
+        "top": 60.930432,
+        "right": 15.46875,
+        "bottom": 60.239811,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 73,
+        "left": 15.46875,
+        "top": 60.930432,
+        "right": 16.875,
+        "bottom": 60.239811,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 73,
+        "left": 16.875,
+        "top": 60.930432,
+        "right": 18.28125,
+        "bottom": 60.239811,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 73,
+        "left": 18.28125,
+        "top": 60.930432,
+        "right": 19.6875,
+        "bottom": 60.239811,
+        "countries": [
+            "\u00e5land",
+            "sweden"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 74,
+        "left": 12.65625,
+        "top": 60.239811,
+        "right": 14.0625,
+        "bottom": 59.534318,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 74,
+        "left": 14.0625,
+        "top": 60.239811,
+        "right": 15.46875,
+        "bottom": 59.534318,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 74,
+        "left": 15.46875,
+        "top": 60.239811,
+        "right": 16.875,
+        "bottom": 59.534318,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 74,
+        "left": 16.875,
+        "top": 60.239811,
+        "right": 18.28125,
+        "bottom": 59.534318,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 74,
+        "left": 18.28125,
+        "top": 60.239811,
+        "right": 19.6875,
+        "bottom": 59.534318,
+        "countries": [
+            "\u00e5land",
+            "sweden"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 75,
+        "left": 12.65625,
+        "top": 59.534318,
+        "right": 14.0625,
+        "bottom": 58.813742,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 75,
+        "left": 14.0625,
+        "top": 59.534318,
+        "right": 15.46875,
+        "bottom": 58.813742,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 75,
+        "left": 15.46875,
+        "top": 59.534318,
+        "right": 16.875,
+        "bottom": 58.813742,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 75,
+        "left": 16.875,
+        "top": 59.534318,
+        "right": 18.28125,
+        "bottom": 58.813742,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 75,
+        "left": 18.28125,
+        "top": 59.534318,
+        "right": 19.6875,
+        "bottom": 58.813742,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 135,
+        "y": 76,
+        "left": 9.84375,
+        "top": 58.813742,
+        "right": 11.25,
+        "bottom": 58.077876,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 76,
+        "left": 11.25,
+        "top": 58.813742,
+        "right": 12.65625,
+        "bottom": 58.077876,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 76,
+        "left": 12.65625,
+        "top": 58.813742,
+        "right": 14.0625,
+        "bottom": 58.077876,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 76,
+        "left": 14.0625,
+        "top": 58.813742,
+        "right": 15.46875,
+        "bottom": 58.077876,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 76,
+        "left": 15.46875,
+        "top": 58.813742,
+        "right": 16.875,
+        "bottom": 58.077876,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 76,
+        "left": 16.875,
+        "top": 58.813742,
+        "right": 18.28125,
+        "bottom": 58.077876,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 76,
+        "left": 18.28125,
+        "top": 58.813742,
+        "right": 19.6875,
+        "bottom": 58.077876,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 77,
+        "left": 11.25,
+        "top": 58.077876,
+        "right": 12.65625,
+        "bottom": 57.326521,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 77,
+        "left": 12.65625,
+        "top": 58.077876,
+        "right": 14.0625,
+        "bottom": 57.326521,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 77,
+        "left": 14.0625,
+        "top": 58.077876,
+        "right": 15.46875,
+        "bottom": 57.326521,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 77,
+        "left": 15.46875,
+        "top": 58.077876,
+        "right": 16.875,
+        "bottom": 57.326521,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 77,
+        "left": 16.875,
+        "top": 58.077876,
+        "right": 18.28125,
+        "bottom": 57.326521,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 77,
+        "left": 18.28125,
+        "top": 58.077876,
+        "right": 19.6875,
+        "bottom": 57.326521,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 78,
+        "left": 12.65625,
+        "top": 57.326521,
+        "right": 14.0625,
+        "bottom": 56.559482,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 78,
+        "left": 14.0625,
+        "top": 57.326521,
+        "right": 15.46875,
+        "bottom": 56.559482,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 78,
+        "left": 15.46875,
+        "top": 57.326521,
+        "right": 16.875,
+        "bottom": 56.559482,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 78,
+        "left": 16.875,
+        "top": 57.326521,
+        "right": 18.28125,
+        "bottom": 56.559482,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 78,
+        "left": 18.28125,
+        "top": 57.326521,
+        "right": 19.6875,
+        "bottom": 56.559482,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 79,
+        "left": 12.65625,
+        "top": 56.559482,
+        "right": 14.0625,
+        "bottom": 55.776573,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 79,
+        "left": 14.0625,
+        "top": 56.559482,
+        "right": 15.46875,
+        "bottom": 55.776573,
+        "countries": [
+            "sweden"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 79,
+        "left": 15.46875,
+        "top": 56.559482,
+        "right": 16.875,
+        "bottom": 55.776573,
+        "countries": [
+            "sweden"
+        ]
+    }
+]

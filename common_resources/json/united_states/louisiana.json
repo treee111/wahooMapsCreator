@@ -1,0 +1,167 @@
+[
+    {
+        "x": 61,
+        "y": 103,
+        "left": -94.21875,
+        "top": 33.137551,
+        "right": -92.8125,
+        "bottom": 31.952162,
+        "countries": [
+            "texas",
+            "arkansas",
+            "louisiana"
+        ]
+    },
+    {
+        "x": 62,
+        "y": 103,
+        "left": -92.8125,
+        "top": 33.137551,
+        "right": -91.40625,
+        "bottom": 31.952162,
+        "countries": [
+            "arkansas",
+            "louisiana"
+        ]
+    },
+    {
+        "x": 63,
+        "y": 103,
+        "left": -91.40625,
+        "top": 33.137551,
+        "right": -90.0,
+        "bottom": 31.952162,
+        "countries": [
+            "arkansas",
+            "louisiana",
+            "mississippi"
+        ]
+    },
+    {
+        "x": 61,
+        "y": 104,
+        "left": -94.21875,
+        "top": 31.952162,
+        "right": -92.8125,
+        "bottom": 30.751278,
+        "countries": [
+            "texas",
+            "louisiana"
+        ]
+    },
+    {
+        "x": 62,
+        "y": 104,
+        "left": -92.8125,
+        "top": 31.952162,
+        "right": -91.40625,
+        "bottom": 30.751278,
+        "countries": [
+            "louisiana",
+            "mississippi"
+        ]
+    },
+    {
+        "x": 63,
+        "y": 104,
+        "left": -91.40625,
+        "top": 31.952162,
+        "right": -90.0,
+        "bottom": 30.751278,
+        "countries": [
+            "louisiana",
+            "mississippi"
+        ]
+    },
+    {
+        "x": 64,
+        "y": 104,
+        "left": -90.0,
+        "top": 31.952162,
+        "right": -88.59375,
+        "bottom": 30.751278,
+        "countries": [
+            "louisiana",
+            "mississippi"
+        ]
+    },
+    {
+        "x": 61,
+        "y": 105,
+        "left": -94.21875,
+        "top": 30.751278,
+        "right": -92.8125,
+        "bottom": 29.53523,
+        "countries": [
+            "texas",
+            "louisiana"
+        ]
+    },
+    {
+        "x": 62,
+        "y": 105,
+        "left": -92.8125,
+        "top": 30.751278,
+        "right": -91.40625,
+        "bottom": 29.53523,
+        "countries": [
+            "louisiana"
+        ]
+    },
+    {
+        "x": 63,
+        "y": 105,
+        "left": -91.40625,
+        "top": 30.751278,
+        "right": -90.0,
+        "bottom": 29.53523,
+        "countries": [
+            "louisiana"
+        ]
+    },
+    {
+        "x": 64,
+        "y": 105,
+        "left": -90.0,
+        "top": 30.751278,
+        "right": -88.59375,
+        "bottom": 29.53523,
+        "countries": [
+            "louisiana",
+            "mississippi"
+        ]
+    },
+    {
+        "x": 62,
+        "y": 106,
+        "left": -92.8125,
+        "top": 29.53523,
+        "right": -91.40625,
+        "bottom": 28.304381,
+        "countries": [
+            "louisiana"
+        ]
+    },
+    {
+        "x": 63,
+        "y": 106,
+        "left": -91.40625,
+        "top": 29.53523,
+        "right": -90.0,
+        "bottom": 28.304381,
+        "countries": [
+            "louisiana"
+        ]
+    },
+    {
+        "x": 64,
+        "y": 106,
+        "left": -90.0,
+        "top": 29.53523,
+        "right": -88.59375,
+        "bottom": 28.304381,
+        "countries": [
+            "louisiana"
+        ]
+    }
+]
