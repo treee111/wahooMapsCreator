@@ -68,13 +68,8 @@ if x.region == '' :
     print ('Invalid country name.')
     sys.exit()
 
-print('\n\n# read json file')
-with open(os.path.join ('json', region, sys.argv[1] + '.json')) as f:
-    country = json.load(f)
-f.close()
-if country == '' :
-    print ('json file could not be opened.')
-    sys.exit()
+# Read json file
+x.readJsonFile()
 
 # Check for expired land polygons file and download, if too old
 # osm_maps_functions.checkAndDownloadLandPoligonsFile(Max_Days_Old, Force_Processing)

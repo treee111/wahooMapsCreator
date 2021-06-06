@@ -2,6 +2,7 @@
 
 # import official python packages
 import glob
+import json
 import os
 import os.path
 import requests
@@ -55,6 +56,27 @@ class OSM_Maps:
             region = 'united-states'
 
         return region
+
+
+    def readJsonFile(self):
+        print('\n\n# Read json file')
+
+        # Windows
+        if platform.system() == "Windows":
+            with open(os.path.join ('json', self.region, self.inputFileWithPath + '.json')) as f:
+                self.tilesFromJson = json.load(f)
+                f.close()
+        # Non-Windows
+        else:
+            with open(sys.argv[1]) as f:
+                self.tilesFromJson = json.load(f)
+        if self.tilesFromJson == '' :
+            print ('! Json file could not be opened.')
+            sys.exit()
+        
+        # logging
+        print(f'+ Use json file {f.name} with {len(self.tilesFromJson)} tiles')
+        print('# Read json file: OK')
 
 
     def unzip(source_filename, dest_dir):
