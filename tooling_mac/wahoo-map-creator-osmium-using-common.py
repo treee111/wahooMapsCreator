@@ -55,10 +55,6 @@ workers = '1'
 # MAP_PATH = os.path.join(COMMON_PATH, 'maps')
 # land_polygons_file = os.path.join(COMMON_PATH, 'land-polygons-split-4326/land_polygons.shp')
 
-# Tags to keep
-filtered_tags=['access', 'admin_level', 'aerialway', 'aeroway', 'barrier',
-               'boundary', 'bridge', 'highway', 'natural', 'oneway', 'place',
-               'railway', 'tracktype', 'tunnel', 'waterway']
 
 if len(sys.argv) != 2:
     print(f'! Usage: {sys.argv[0]} Country name part of a .json file.')
@@ -90,24 +86,8 @@ x.checkAndDownloadLandPoligonsFile()
 # osm_maps_functions.checkAndDownloadOsmPbfFile(country, Max_Days_Old, Force_Processing)
 x.checkAndDownloadOsmPbfFile()
 
-print('\n\n# Filter tags from country osm.pbf files')
-for key, val  in border_countries.items():
-    ## print(key, val)
-    outFile = os.path.join(file_directory_functions.OUT_PATH, f'filtered-{key}.osm.pbf')
-    ## print(outFile)
-    if not os.path.isfile(outFile):
-        print(f'+ Create filtered country file for {key}')    
-
-        cmd = ['osmium', 'tags-filter']
-        cmd.append(val['map_file'])
-        cmd.extend(filtered_tags)
-        cmd.extend(['-o', outFile])
-        # print(cmd)
-        subprocess.run(cmd)
-    border_countries[key]['filtered_file'] = outFile
-
-# logging
-print('# Filter tags from country osm.pbf files: OK')
+# Filter tags from country osm.pbf files'
+x.filterTagsFromCountryOsmPbdFiles()
 
 
 print('\n\n# Generate land')

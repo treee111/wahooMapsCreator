@@ -84,51 +84,8 @@ x.checkAndDownloadLandPoligonsFile()
 # osm_maps_functions.checkAndDownloadOsmPbfFile(country, Max_Days_Old, Force_Processing)
 x.checkAndDownloadOsmPbfFile()
 
-print('\n\n# filter tags from country osm.pbf files')
-for key, val  in border_countries.items():
-    # print(key, val)
-    outFile = os.path.join(OUT_PATH, f'filtered-{key}.osm.pbf')
-    outFileo5m = os.path.join(OUT_PATH, f'outFile-{key}.o5m')
-    outFileo5mFiltered = os.path.join(OUT_PATH, f'outFileFiltered-{key}.o5m')
-    
-    # print(outFile)
-    if not os.path.isfile(outFile) or Force_Processing == 1:
-        #print('! create filtered country file(s)')
-        print(f'\n\n# Converting map of {key} to o5m format')
-        cmd = ['osmconvert']
-        cmd.extend(['-v', '--hash-memory=2500', '--complete-ways', '--complete-multipolygons', '--complete-boundaries', '--drop-author', '--drop-version'])
-        cmd.append(val['map_file'])
-        cmd.append('-o='+outFileo5m)
-        # print(cmd)
-        result = subprocess.run(cmd)
-        if result.returncode != 0:
-            print(f'Error in OSMConvert with country: {c}')
-            sys.exit()
-				
-        print(f'\n\n# Filtering unwanted map objects out of map of {key}')
-        cmd = ['osmfilter']
-        cmd.append(outFileo5m)
-        cmd.append('--keep="'+filtered_tags+'"')
-        cmd.append('-o='+outFileo5mFiltered)
-        # print(cmd)
-        result = subprocess.run(cmd)
-        if result.returncode != 0:
-            print(f'Error in OSMFilter with country: {c}')
-            sys.exit()
-								
-        print(f'\n\n# Converting map of {key} back to osm.pbf format')
-        cmd = ['osmconvert', '-v', '--hash-memory=2500', outFileo5mFiltered]
-        cmd.append('-o='+outFile)
-        # print(cmd)
-        result = subprocess.run(cmd)
-        if result.returncode != 0:
-            print(f'Error in OSMConvert with country: {c}')
-            sys.exit()        
-
-        os.remove(outFileo5m)
-        os.remove(outFileo5mFiltered)
-								
-    border_countries[key]['filtered_file'] = outFile
+# Filter tags from country osm.pbf files'
+x.filterTagsFromCountryOsmPbdFiles()
 
 print('\n\n# Generate land')
 TileCount = 1

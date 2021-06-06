@@ -5,10 +5,11 @@ import glob
 import os
 import os.path
 import requests
-# import subprocess
+import subprocess
 import sys
 import time
 import zipfile
+import platform
 
 # import custom python packages
 from os import sys, path
@@ -26,6 +27,7 @@ class OSM_Maps:
         self.Max_Days_Old = Max_Days_Old
         self.Force_Processing = Force_Processing
         self.country = []
+        self.border_countries = {}
    
 
     def getRegionOfCountry(self, county):
@@ -213,10 +215,86 @@ class OSM_Maps:
                         Download.close()
                         map_files = [os.path.join (file_directory_functions.MAP_PATH, f'{c}' + '-latest.osm.pbf')]
                         print(f'+ Map of {c} downloaded.')
-                    border_countries[c] = {'map_file':map_files[0]}
+                    self.border_countries[c] = {'map_file':map_files[0]}
 
                     # logging
                     print(f'+ Border countries of json file: {len(border_countries)}')
                     for c in border_countries:
                         print(f'+ Border country: {c}')
                     print('# Check countries .osm.pbf files: OK')
+    
+    def filterTagsFromCountryOsmPbdFiles(self):
+
+        print('\n\n# Filter tags from country osm.pbf files')
+
+        # Windows
+        # if os.name == "nt":
+        if platform.system() == "Windows":
+            print('\n\n# filter tags from country osm.pbf files')
+            for key, val in self.border_countries.items():
+            # print(key, val)
+                outFile = os.path.join(file_directory_functions.OUT_PATH, f'filtered-{key}.osm.pbf')
+                outFileo5m = os.path.join(file_directory_functions.OUT_PATH, f'outFile-{key}.o5m')
+                outFileo5mFiltered = os.path.join(file_directory_functions.OUT_PATH, f'outFileFiltered-{key}.o5m')
+                
+                # print(outFile)
+                if not os.path.isfile(outFile) or self.Force_Processing == 1:
+                    #print('! create filtered country file(s)')
+                    print(f'\n\n# Converting map of {key} to o5m format')
+                    cmd = ['osmconvert']
+                    cmd.extend(['-v', '--hash-memory=2500', '--complete-ways', '--complete-multipolygons', '--complete-boundaries', '--drop-author', '--drop-version'])
+                    cmd.append(val['map_file'])
+                    cmd.append('-o='+outFileo5m)
+                    # print(cmd)
+                    result = subprocess.run(cmd)
+                    if result.returncode != 0:
+                        # ToDo: check: key was c before ?!
+                        print(f'Error in OSMConvert with country: {key}')
+                        sys.exit()
+                            
+                    print(f'\n\n# Filtering unwanted map objects out of map of {key}')
+                    cmd = ['osmfilter']
+                    cmd.append(outFileo5m)
+                    cmd.append('--keep="' + constants.filtered_tags + '"')
+                    cmd.append('-o=' + outFileo5mFiltered)
+                    # print(cmd)
+                    result = subprocess.run(cmd)
+                    if result.returncode != 0:
+                        # ToDo: check: key was c before ?!
+                        print(f'Error in OSMFilter with country: {key}')
+                        sys.exit()
+                                            
+                    print(f'\n\n# Converting map of {key} back to osm.pbf format')
+                    cmd = ['osmconvert', '-v', '--hash-memory=2500', outFileo5mFiltered]
+                    cmd.append('-o='+outFile)
+                    # print(cmd)
+                    result = subprocess.run(cmd)
+                    if result.returncode != 0:
+                        # ToDo: check: key was c before ?!
+                        print(f'Error in OSMConvert with country: {key}')
+                        sys.exit()
+
+                    os.remove(outFileo5m)
+                    os.remove(outFileo5mFiltered)
+                    
+                self.border_countries[key]['filtered_file'] = outFile
+        
+        # Non-Windows
+        else:
+            for key, val  in self.border_countries.items():
+                ## print(key, val)
+                outFile = os.path.join(file_directory_functions.OUT_PATH, f'filtered-{key}.osm.pbf')
+                ## print(outFile)
+                if not os.path.isfile(outFile):
+                    print(f'+ Create filtered country file for {key}')    
+
+                    cmd = ['osmium', 'tags-filter']
+                    cmd.append(val['map_file'])
+                    cmd.extend(constants.filtered_tags)
+                    cmd.extend(['-o', outFile])
+                    # print(cmd)
+                    subprocess.run(cmd)
+                self.border_countries[key]['filtered_file'] = outFile
+
+        # logging
+        print('# Filter tags from country osm.pbf files: OK')
