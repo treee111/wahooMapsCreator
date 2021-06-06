@@ -60,7 +60,7 @@ if len(sys.argv) != 2:
     print(f'! Usage: {sys.argv[0]} Country name part of a .json file.')
     sys.exit()
 
-x = OSM_Maps(sys.argv[1], Max_Days_Old, Force_Processing, workers)
+x = OSM_Maps(sys.argv[1], Max_Days_Old, Force_Processing, workers, threads, Save_Cruiser)
 
 # if x.region == '' :
 #     print ('Invalid country name.')
@@ -101,29 +101,8 @@ x.splitFilteredCountryFilesToTiles()
 # Merge splitted tiles with land an sea   
 x.mergeSplittedTilesWithLandAndSea()
 
-
-print('\n\n# Creating .map files')
-TileCount = 1
-for tile in country:
-    print(f'+ Creating map file for tile {TileCount} of {len(country)} for Coordinates: {tile["x"]}, {tile["y"]}')
-    outFile = os.path.join(file_directory_functions.OUT_PATH, f'{tile["x"]}', f'{tile["y"]}.map')
-    if not os.path.isfile(outFile+'.lzma'):
-        mergedFile = os.path.join(file_directory_functions.OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', 'merged.osm.pbf')
-        cmd = ['osmosis', '--rb', mergedFile, '--mw', 'file='+outFile]
-        cmd.append(f'bbox={tile["bottom"]:.6f},{tile["left"]:.6f},{tile["top"]:.6f},{tile["right"]:.6f}')
-        cmd.append('zoom-interval-conf=10,0,17')
-        cmd.append(f'tag-conf-file={os.path.join(file_directory_functions.COMMON_PATH, "tag-wahoo.xml")}')
-        # print(cmd)
-        subprocess.run(cmd)
-
-        print('+ compress .map files')
-        cmd = ['lzma', outFile]
-        # print(cmd)
-        subprocess.run(cmd)
-    TileCount += 1
-
-# logging
-print('# Creating .map files: OK')
+# Creating .map files
+x.createMapFiles()
 
 
 print('\n# Zip .map.lzma files')

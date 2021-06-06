@@ -21,12 +21,14 @@ class OSM_Maps:
     "This is a OSM data class"
 
 
-    def __init__(self, input_country, Max_Days_Old, Force_Processing, workers):
+    def __init__(self, input_country, Max_Days_Old, Force_Processing, workers, threads, Save_Cruiser):
         self.input_country = input_country
         self.region = self.getRegionOfCountry(input_country)
         self.Max_Days_Old = Max_Days_Old
         self.Force_Processing = Force_Processing
         self.workers = workers
+        self.threads = threads
+        self.Save_Cruiser = Save_Cruiser
         self.country = []
         self.border_countries = {}
    
@@ -448,3 +450,49 @@ class OSM_Maps:
 
         # logging
         print('# Merge splitted tiles with land an sea: OK')
+
+
+    def createMapFiles(self):
+        print('\n\n# Creating .map files')
+        TileCount = 1
+        for tile in self.country:
+            print(f'+ Creating map file for tile {TileCount} of {len(self.country)} for Coordinates: {tile["x"]}, {tile["y"]}')
+            outFile = os.path.join(file_directory_functions.OUT_PATH, f'{tile["x"]}', f'{tile["y"]}.map')
+            if not os.path.isfile(outFile+'.lzma') or self.Force_Processing == 1:
+                mergedFile = os.path.join(file_directory_functions.OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', 'merged.osm.pbf')
+
+                # Windows
+                if platform.system() == "Windows":
+                    cmd = [os.path.join (file_directory_functions.COMMON_PATH, 'Osmosis', 'bin', 'osmosis.bat'), '--rbf', mergedFile, 'workers=' + self.workers, '--mw', 'file='+outFile]
+                # Non-Windows
+                else:
+                    cmd = ['osmosis', '--rb', mergedFile, '--mw', 'file='+outFile]
+
+                cmd.append(f'bbox={tile["bottom"]:.6f},{tile["left"]:.6f},{tile["top"]:.6f},{tile["right"]:.6f}')
+                cmd.append('zoom-interval-conf=10,0,17')
+                cmd.append('threads='+ self.threads)
+                # should work on macOS and Windows
+                cmd.append(f'tag-conf-file={os.path.join(file_directory_functions.COMMON_PATH, "tag-wahoo.xml")}')
+                # print(cmd)
+                result = subprocess.run(cmd)
+                if result.returncode != 0:
+                    print(f'Error in Osmosis with country: c // tile: {tile["x"]}, {tile["y"]}')
+                    sys.exit()
+                
+                # Windows
+                if platform.system() == "Windows":
+                    cmd = ['lzma', 'e', outFile, outFile+'.lzma', f'-mt{self.threads}', '-d27', '-fb273', '-eos']
+                # Non-Windows
+                else:
+                    cmd = ['lzma', outFile]
+
+                    # --keep: do not delete source file
+                    if self.Save_Cruiser:
+                        cmd.append('--keep')
+                
+                # print(cmd)
+                subprocess.run(cmd)
+            TileCount += 1
+
+        # logging
+        print('# Creating .map files: OK')

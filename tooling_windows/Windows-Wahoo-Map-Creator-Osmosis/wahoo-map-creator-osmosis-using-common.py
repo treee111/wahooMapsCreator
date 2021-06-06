@@ -62,7 +62,7 @@ if len(sys.argv) != 2:
     print(f'Usage: {sys.argv[0]} Country name part of a .json file.')
     sys.exit()
 
-x = OSM_Maps(sys.argv[1], Max_Days_Old, Force_Processing, workers)
+x = OSM_Maps(sys.argv[1], Max_Days_Old, Force_Processing, workers, threads, Save_Cruiser)
 
 if x.region == '' :
     print ('Invalid country name.')
@@ -99,31 +99,9 @@ x.splitFilteredCountryFilesToTiles()
 # Merge splitted tiles with land an sea   
 x.mergeSplittedTilesWithLandAndSea()
 
+# Creating .map files
+x.createMapFiles()
 
-print('\n\n# Creating .map files')
-TileCount = 1
-for tile in country:
-    print(f'\n\nCreating map file for tile {TileCount} of {len(country)} for Coordinates: {tile["x"]}, {tile["y"]}')
-    outFile = os.path.join(OUT_PATH, f'{tile["x"]}', f'{tile["y"]}.map')
-    if not os.path.isfile(outFile+'.lzma') or Force_Processing == 1:
-        mergedFile = os.path.join(OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', 'merged.osm.pbf')
-        cmd = [os.path.join (CurDir, 'Osmosis', 'bin', 'osmosis.bat'), '--rbf', mergedFile, 'workers='+workers, '--mw', 'file='+outFile]
-        cmd.append(f'bbox={tile["bottom"]:.6f},{tile["left"]:.6f},{tile["top"]:.6f},{tile["right"]:.6f}')
-        cmd.append('zoom-interval-conf=10,0,17')
-        cmd.append('threads='+threads)
-        cmd.append('tag-conf-file=' + os.path.join (CurDir, 'tag-wahoo.xml'))
-        #cmd.append('tag-conf-file=tag-mapping.xml')
-        # print(cmd)
-        result = subprocess.run(cmd)
-        if result.returncode != 0:
-            print(f'Error in Osmosis with country: {c}')
-            sys.exit()        
-
-        print('\n# compress .map file')
-        cmd = ['lzma', 'e', outFile, outFile+'.lzma', f'-mt{threads}', '-d27', '-fb273', '-eos']
-        # print(cmd)
-        subprocess.run(cmd)
-    TileCount += 1
 
 print('\n# zip .map.lzma files')
 
