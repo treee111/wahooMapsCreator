@@ -95,30 +95,9 @@ x.generateLand()
 # Generate sea
 x.generateSea()
 
-
-
-print('\n\n# Split filtered country files to tiles')
-TileCount = 1
-for tile in country:
-    print(f'+ Split filtered country {c}')
-
-    for c in tile['countries']:
-        print(f'+ Splitting tile {TileCount} of {len(country)} for Coordinates: {tile["x"]},{tile["y"]} from map of {c}')
-        outFile = os.path.join(file_directory_functions.OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'split-{c}.osm.pbf')
-        if not os.path.isfile(outFile):
-            cmd = ['osmium', 'extract']
-            cmd.extend(['-b',f'{tile["left"]},{tile["bottom"]},{tile["right"]},{tile["top"]}'])
-            cmd.append(border_countries[c]['filtered_file'])
-            cmd.extend(['-s', 'smart'])
-            cmd.extend(['-o', outFile])
-            # print(cmd)
-            subprocess.run(cmd)
-            print(border_countries[c]['filtered_file'])
-    TileCount += 1
-
-# logging
-print('# Split filtered country files to tiles: OK')
-
+# Split filtered country files to tiles
+x.splitFilteredCountryFilesToTiles()
+            
 
 print('\n\n# Merge splitted tiles with land an sea')
 TileCount = 1

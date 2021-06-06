@@ -93,31 +93,9 @@ x.generateLand()
 # Generate sea
 x.generateSea()
 
-
-
-print('\n\n# Split filtered country files to tiles')
-TileCount = 1
-for tile in country:
-    for c in tile['countries']:
-        print(f'\n\n# Splitting tile {TileCount} of {len(country)} for Coordinates: {tile["x"]},{tile["y"]} from map of {c}')
-        outFile = os.path.join(OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'split-{c}.osm.pbf')
-        if not os.path.isfile(outFile) or Force_Processing == 1:
-            #cmd = ['.\\osmosis\\bin\\osmosis.bat', '--rbf',border_countries[c]['filtered_file'],'workers='+workers, '--buffer', 'bufferCapacity=12000', '--bounding-box', 'completeWays=yes', 'completeRelations=yes']
-            #cmd.extend(['left='+f'{tile["left"]}', 'bottom='+f'{tile["bottom"]}', 'right='+f'{tile["right"]}', 'top='+f'{tile["top"]}', '--buffer', 'bufferCapacity=12000', '--wb'])
-            #cmd.append('file='+outFile)
-            #cmd.append('omitmetadata=true')
-            cmd = ['osmconvert', '-v', '--hash-memory=2500']
-            cmd.append('-b='+f'{tile["left"]}' + ',' + f'{tile["bottom"]}' + ',' + f'{tile["right"]}' + ',' + f'{tile["top"]}')
-            cmd.extend(['--complete-ways', '--complete-multipolygons', '--complete-boundaries'])
-            cmd.append(border_countries[c]['filtered_file'])
-            cmd.append('-o='+outFile)
-            # print(cmd)
-            result = subprocess.run(cmd)
-            if result.returncode != 0:
-                print(f'Error in Osmosis with country: {c}')
-                sys.exit()            
-            # print(border_countries[c]['filtered_file'])
-    TileCount += 1
+# Split filtered country files to tiles
+x.splitFilteredCountryFilesToTiles()
+            
 
 print('\n\n# Merge splitted tiles with land an sea')
 TileCount = 1
