@@ -104,16 +104,8 @@ x.mergeSplittedTilesWithLandAndSea()
 # Creating .map files
 x.createMapFiles()
 
+# Zip .map.lzma files
+x.zipMapFiles()
 
-print('\n# Zip .map.lzma files')
-countryName = os.path.split(sys.argv[1])
-print(f'+ Country: {countryName[1][:-5]}')
-# Make Wahoo zip file
-cmd = ['zip', '-r', countryName[1][:-5] + '.zip']
-for tile in country:
-    cmd.append(os.path.join(f'{tile["x"]}', f'{tile["y"]}.map.lzma'))
-#print(cmd)
-subprocess.run(cmd, cwd=file_directory_functions.OUT_PATH)
-
-# logging
-print('# Zip .map.lzma files: OK \n')
+# Make Cruiser map files zip file
+x.makeCruiserFiles()

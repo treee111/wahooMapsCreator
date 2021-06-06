@@ -31,6 +31,8 @@ class OSM_Maps:
         self.Save_Cruiser = Save_Cruiser
         self.country = []
         self.border_countries = {}
+
+        self.countryName = os.path.split(sys.argv[1])[1][:-5]
    
 
     def getRegionOfCountry(self, county):
@@ -496,3 +498,47 @@ class OSM_Maps:
 
         # logging
         print('# Creating .map files: OK')
+
+    def zipMapFiles(self):
+        print('\n# Zip .map.lzma files')
+        # countryName = os.path.split(sys.argv[1])
+        # print(f'+ Country: {countryName[1][:-5]}')
+        print(f'+ Country: {self.countryName}')
+
+        # Make Wahoo zip file
+
+        # Windows
+        if platform.system() == "Windows":
+            cmd = ['7za', 'a', '-tzip', '-m0=lzma', '-mx9', '-mfb=273', '-md=1536m', self.countryName + '.zip']
+            #cmd = ['7za', 'a', '-tzip', '-m0=lzma', countryName[1] + '.zip']
+        # Non-Windows
+        else:
+            cmd = ['zip', '-r', self.countryName + '.zip']
+        
+        for tile in self.country:
+            cmd.append(os.path.join(f'{tile["x"]}', f'{tile["y"]}.map.lzma'))
+        #print(cmd)
+        subprocess.run(cmd, cwd=file_directory_functions.OUT_PATH)
+
+        # logging
+        print('# Zip .map.lzma files: OK \n')
+
+    def makeCruiserFiles(self):
+        # Make Cruiser map files zip file
+        if self.Save_Cruiser == 1:
+            # Windows
+            if platform.system() == "Windows":
+                cmd = ['7za', 'a', '-tzip', '-m0=lzma', self.countryName + '-maps.zip']
+
+                cmd = ['7za', 'a', '-tzip', '-m0=lzma', '-mx9', '-mfb=273', '-md=1536m', countryName[1] + '.zip']
+            # Non-Windows
+            else:
+                cmd = ['zip', '-r', self.countryName + '-maps.zip']
+
+                # cmd = ['zip', '-r', self.countryName + '.zip']
+
+
+            for tile in self.country:
+                cmd.append(os.path.join(f'{tile["x"]}', f'{tile["y"]}.map'))
+            #print(cmd)
+            subprocess.run(cmd, cwd=file_directory_functions.OUT_PATH)
