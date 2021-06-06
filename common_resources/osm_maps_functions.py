@@ -16,6 +16,7 @@ from os import sys, path
 sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
 from common_resources import file_directory_functions
 from common_resources import constants
+from common_resources import constants_functions
 
 class OSM_Maps:
     "This is a OSM data class"
@@ -23,7 +24,7 @@ class OSM_Maps:
 
     def __init__(self, inputFile, Max_Days_Old, Force_Processing, workers, threads, Save_Cruiser):
         self.inputFileWithPath = inputFile
-        self.region = self.getRegionOfCountry(inputFile)
+        self.region = constants_functions.getRegionOfCountry(inputFile)
         self.Max_Days_Old = Max_Days_Old
         self.Force_Processing = Force_Processing
         self.workers = workers
@@ -34,28 +35,6 @@ class OSM_Maps:
 
         self.countryName = os.path.split(sys.argv[1])[1][:-5]
    
-
-    def getRegionOfCountry(self, county):
-        region = ''
-        if county in constants.africa :
-            region = 'africa'
-        if county in constants.antarctica :
-            region = 'antarctica'
-        if county in constants.asia :
-            region = 'asia'
-        if county in constants.europe :
-            region = 'europe'
-        if county in constants.northamerica :
-            region = 'north-america'
-        if county in constants.oceania :
-            region = 'oceania'
-        if county in constants.southamerica :
-            region = 'south-america'
-        if county in constants.unitedstates :
-            region = 'united-states'
-
-        return region
-
 
     def readJsonFile(self):
         print('\n# Read json file')
