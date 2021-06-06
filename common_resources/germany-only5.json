@@ -1,0 +1,66 @@
+[
+    {
+        "x": 137,
+        "y": 88,
+        "left": 12.65625,
+        "top": 48.922499,
+        "right": 14.0625,
+        "bottom": 47.989922,
+        "countries": [
+            "czech_republic",
+            "germany",
+            "austria"
+        ]
+    },
+    {
+        "x": 134,
+        "y": 89,
+        "left": 8.4375,
+        "top": 47.989922,
+        "right": 9.84375,
+        "bottom": 47.040182,
+        "countries": [
+            "liechtenstein",
+            "germany",
+            "austria",
+            "switzerland"
+        ]
+    },
+    {
+        "x": 135,
+        "y": 89,
+        "left": 9.84375,
+        "top": 47.989922,
+        "right": 11.25,
+        "bottom": 47.040182,
+        "countries": [
+            "germany",
+            "austria"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 89,
+        "left": 11.25,
+        "top": 47.989922,
+        "right": 12.65625,
+        "bottom": 47.040182,
+        "countries": [
+            "italy",
+            "germany",
+            "austria"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 89,
+        "left": 12.65625,
+        "top": 47.989922,
+        "right": 14.0625,
+        "bottom": 47.040182,
+        "countries": [
+            "germany",
+            "austria"
+        ]
+    }
+]
