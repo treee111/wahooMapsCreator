@@ -5,8 +5,6 @@ import glob
 import json
 import multiprocessing
 import os
-# import os.path
-
 import subprocess
 import sys
 
@@ -50,11 +48,11 @@ workers = '1'
 
 # script_path = os.path.abspath(__file__) # i.e. /path/to/dir/foobar.py
 
-ROOT_PATH = file_directory_functions.getGitRoot()
-COMMON_PATH = os.path.join(ROOT_PATH, 'common_resources')
-OUT_PATH = os.path.join(ROOT_PATH, 'output')
-MAP_PATH = os.path.join(COMMON_PATH, 'maps')
-land_polygons_file = os.path.join(COMMON_PATH, 'land-polygons-split-4326/land_polygons.shp')
+# ROOT_PATH = file_directory_functions.getGitRoot()
+# COMMON_PATH = os.path.join(ROOT_PATH, 'common_resources')
+# OUT_PATH = os.path.join(ROOT_PATH, 'output')
+# MAP_PATH = os.path.join(COMMON_PATH, 'maps')
+# land_polygons_file = os.path.join(COMMON_PATH, 'land-polygons-split-4326/land_polygons.shp')
 
 # Tags to keep
 filtered_tags=['access', 'admin_level', 'aerialway', 'aeroway', 'barrier',
@@ -83,34 +81,14 @@ print('# Read json file: OK')
 # Check for expired land polygons file and download, if too old
 osm_maps_functions.checkAndDownloadLandPoligonsFile(Max_Days_Old, Force_Processing)
 
-
-print('\n\n# Check countries .osm.pbf files')
-# Build list of countries needed
-border_countries = {}
-for tile in country:
-    outdir = os.path.join(OUT_PATH, f'{tile["x"]}', f'{tile["y"]}')
-    if not os.path.isdir(outdir):
-        os.makedirs(outdir)
-
-    for c in tile['countries']:
-        if c not in border_countries:
-            map_files = glob.glob(f'{MAP_PATH}/**/{c}*.osm.pbf')
-            if len(map_files) != 1 or not os.path.isfile(map_files[0]):
-                print(f'! Failed to find country: {c}')
-                sys.exit()
-            border_countries[c] = {'map_file':map_files[0]}
-
-# logging
-print(f'+ Border countries of json file: {len(border_countries)}')
-for c in border_countries:
-    print(f'+ Border country: {c}')
-print('# Check countries .osm.pbf files: OK')
+# Check for expired .osm.pbf files and download, if too old
+osm_maps_functions.checkAndDownloadOsmPbfFile(country, Max_Days_Old, Force_Processing)
 
 
 print('\n\n# Filter tags from country osm.pbf files')
 for key, val  in border_countries.items():
     ## print(key, val)
-    outFile = os.path.join(OUT_PATH, f'filtered-{key}.osm.pbf')
+    outFile = os.path.join(file_directory_functions.OUT_PATH, f'filtered-{key}.osm.pbf')
     ## print(outFile)
     if not os.path.isfile(outFile):
         print(f'+ Create filtered country file for {key}')    
@@ -130,8 +108,8 @@ print('# Filter tags from country osm.pbf files: OK')
 print('\n\n# Generate land')
 TileCount = 1
 for tile in country:
-    landFile = os.path.join(OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'land.shp')
-    outFile = os.path.join(OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'land')
+    landFile = os.path.join(file_directory_functions.OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'land.shp')
+    outFile = os.path.join(file_directory_functions.OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'land')
 
     if not os.path.isfile(landFile):
         print(f'+ Generate land {TileCount} of {len(country)} for Coordinates: {tile["x"]} {tile["y"]}')
@@ -141,12 +119,12 @@ for tile in country:
                     f'{tile["right"]+0.1:.6f}',
                     f'{tile["top"]+0.1:.6f}'])
         cmd.append(landFile)
-        cmd.append(land_polygons_file)
+        cmd.append(file_directory_functions.land_polygons_file)
         #print(cmd)
         subprocess.run(cmd)
 
     if not os.path.isfile(outFile+'1.osm'):
-        cmd = ['python3', os.path.join(COMMON_PATH, 'shape2osm.py'), '-l', outFile, landFile]
+        cmd = ['python3', os.path.join(file_directory_functions.COMMON_PATH, 'shape2osm.py'), '-l', outFile, landFile]
         #print(cmd)
         subprocess.run(cmd)
     TileCount += 1
@@ -158,10 +136,10 @@ print('# Generate land: OK')
 print('\n\n# Generate sea')
 TileCount = 1
 for tile in country:
-    outFile = os.path.join(OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'sea.osm')
+    outFile = os.path.join(file_directory_functions.OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'sea.osm')
     if not os.path.isfile(outFile):
         print(f'+ Generate sea {TileCount} of {len(country)} for Coordinates: {tile["x"]} {tile["y"]}')
-        with open(os.path.join(COMMON_PATH, 'sea.osm')) as f:
+        with open(os.path.join(file_directory_functions.COMMON_PATH, 'sea.osm')) as f:
             sea_data = f.read()
 
             sea_data = sea_data.replace('$LEFT', f'{tile["left"]-0.1:.6f}')
@@ -185,7 +163,7 @@ for tile in country:
 
     for c in tile['countries']:
         print(f'+ Splitting tile {TileCount} of {len(country)} for Coordinates: {tile["x"]},{tile["y"]} from map of {c}')
-        outFile = os.path.join(OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'split-{c}.osm.pbf')
+        outFile = os.path.join(file_directory_functions.OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'split-{c}.osm.pbf')
         if not os.path.isfile(outFile):
             cmd = ['osmium', 'extract']
             cmd.extend(['-b',f'{tile["left"]},{tile["bottom"]},{tile["right"]},{tile["top"]}'])
@@ -205,14 +183,14 @@ print('\n\n# Merge splitted tiles with land an sea')
 TileCount = 1
 for tile in country:
     print(f'+ Merging tiles for tile {TileCount} of {len(country)} for Coordinates: {tile["x"]},{tile["y"]}')
-    outFile = os.path.join(OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'merged.osm.pbf')
+    outFile = os.path.join(file_directory_functions.OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'merged.osm.pbf')
     if not os.path.isfile(outFile):
         cmd = ['osmium', 'merge', '--overwrite']
         for c in tile['countries']:
-            cmd.append(os.path.join(OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'split-{c}.osm.pbf'))
+            cmd.append(os.path.join(file_directory_functions.OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'split-{c}.osm.pbf'))
 
-        cmd.append(os.path.join(OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'land1.osm'))
-        cmd.append(os.path.join(OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'sea.osm'))
+        cmd.append(os.path.join(file_directory_functions.OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'land1.osm'))
+        cmd.append(os.path.join(file_directory_functions.OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'sea.osm'))
         cmd.extend(['-o', outFile])
         #print(cmd)
         subprocess.run(cmd)
@@ -226,13 +204,13 @@ print('\n\n# Creating .map files')
 TileCount = 1
 for tile in country:
     print(f'+ Creating map file for tile {TileCount} of {len(country)} for Coordinates: {tile["x"]}, {tile["y"]}')
-    outFile = os.path.join(OUT_PATH, f'{tile["x"]}', f'{tile["y"]}.map')
+    outFile = os.path.join(file_directory_functions.OUT_PATH, f'{tile["x"]}', f'{tile["y"]}.map')
     if not os.path.isfile(outFile+'.lzma'):
-        mergedFile = os.path.join(OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', 'merged.osm.pbf')
+        mergedFile = os.path.join(file_directory_functions.OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', 'merged.osm.pbf')
         cmd = ['osmosis', '--rb', mergedFile, '--mw', 'file='+outFile]
         cmd.append(f'bbox={tile["bottom"]:.6f},{tile["left"]:.6f},{tile["top"]:.6f},{tile["right"]:.6f}')
         cmd.append('zoom-interval-conf=10,0,17')
-        cmd.append(f'tag-conf-file={os.path.join(COMMON_PATH, "tag-wahoo.xml")}')
+        cmd.append(f'tag-conf-file={os.path.join(file_directory_functions.COMMON_PATH, "tag-wahoo.xml")}')
         # print(cmd)
         subprocess.run(cmd)
 
@@ -254,7 +232,7 @@ cmd = ['zip', '-r', countryName[1][:-5] + '.zip']
 for tile in country:
     cmd.append(os.path.join(f'{tile["x"]}', f'{tile["y"]}.map.lzma'))
 #print(cmd)
-subprocess.run(cmd, cwd=OUT_PATH)
+subprocess.run(cmd, cwd=file_directory_functions.OUT_PATH)
 
 # logging
 print('# Zip .map.lzma files: OK \n')
