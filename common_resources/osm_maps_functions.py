@@ -204,11 +204,11 @@ class OSM_Maps:
                             sys.exit()
                         print(f'+ Trying to download missing map of {c}.')
                         try:
-                            self.Translate_Country[f'{c}']
+                            translatedCountry = constants.Translate_Country[f'{c}']
                             if region != 'no':
-                                url = 'https://download.geofabrik.de/'+ region + '/' + self.Translate_Country[f'{c}'] + '-latest.osm.pbf'
+                                url = 'https://download.geofabrik.de/'+ region + '/' + translatedCountry + '-latest.osm.pbf'
                             else:
-                                url = 'https://download.geofabrik.de/' + self.Translate_Country[f'{c}'] + '-latest.osm.pbf'
+                                url = 'https://download.geofabrik.de/' + translatedCountry + '-latest.osm.pbf'
                         except:
                             if region != 'no':
                                 url = 'https://download.geofabrik.de/'+ region + f'/{c}' + '-latest.osm.pbf'
