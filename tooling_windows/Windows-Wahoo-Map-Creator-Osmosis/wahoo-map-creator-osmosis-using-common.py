@@ -62,7 +62,7 @@ if len(sys.argv) != 2:
     print(f'Usage: {sys.argv[0]} Country name part of a .json file.')
     sys.exit()
 
-x = OSM_Maps(sys.argv[1], Max_Days_Old, Force_Processing)
+x = OSM_Maps(sys.argv[1], Max_Days_Old, Force_Processing, workers)
 
 if x.region == '' :
     print ('Invalid country name.')
@@ -95,34 +95,10 @@ x.generateSea()
 
 # Split filtered country files to tiles
 x.splitFilteredCountryFilesToTiles()
-            
 
-print('\n\n# Merge splitted tiles with land an sea')
-TileCount = 1
-for tile in country:
-    print(f'\n\n# Merging tiles for tile {TileCount} of {len(country)} for Coordinates: {tile["x"]},{tile["y"]}')
-    outFile = os.path.join(OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'merged.osm.pbf')
-    if not os.path.isfile(outFile) or Force_Processing == 1:
-        cmd = [os.path.join (CurDir, 'Osmosis', 'bin', 'osmosis.bat')]
-        loop=0
-        for c in tile['countries']:
-            cmd.append('--rbf')
-            cmd.append(os.path.join(OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'split-{c}.osm.pbf'))
-            cmd.append('workers='+workers)
-            if loop > 0:
-                cmd.append('--merge')
-            loop+=1
-        land_files = glob.glob(os.path.join(OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'land*.osm'))
-        for land in land_files:
-            cmd.extend(['--rx', 'file='+os.path.join(OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'{land}'), '--s', '--m'])
-        cmd.extend(['--rx', 'file='+os.path.join(OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'sea.osm'), '--s', '--m'])
-        cmd.extend(['--tag-transform', 'file=' + os.path.join (CurDir, 'tunnel-transform.xml'), '--wb', outFile, 'omitmetadata=true'])
-        #print(cmd)
-        result = subprocess.run(cmd)
-        if result.returncode != 0:
-            print(f'Error in Osmosis with country: {c}')
-            sys.exit()   
-    TileCount += 1
+# Merge splitted tiles with land an sea   
+x.mergeSplittedTilesWithLandAndSea()
+
 
 print('\n\n# Creating .map files')
 TileCount = 1

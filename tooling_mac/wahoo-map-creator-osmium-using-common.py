@@ -60,7 +60,7 @@ if len(sys.argv) != 2:
     print(f'! Usage: {sys.argv[0]} Country name part of a .json file.')
     sys.exit()
 
-x = OSM_Maps(sys.argv[1], Max_Days_Old, Force_Processing)
+x = OSM_Maps(sys.argv[1], Max_Days_Old, Force_Processing, workers)
 
 # if x.region == '' :
 #     print ('Invalid country name.')
@@ -97,27 +97,9 @@ x.generateSea()
 
 # Split filtered country files to tiles
 x.splitFilteredCountryFilesToTiles()
-            
 
-print('\n\n# Merge splitted tiles with land an sea')
-TileCount = 1
-for tile in country:
-    print(f'+ Merging tiles for tile {TileCount} of {len(country)} for Coordinates: {tile["x"]},{tile["y"]}')
-    outFile = os.path.join(file_directory_functions.OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'merged.osm.pbf')
-    if not os.path.isfile(outFile):
-        cmd = ['osmium', 'merge', '--overwrite']
-        for c in tile['countries']:
-            cmd.append(os.path.join(file_directory_functions.OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'split-{c}.osm.pbf'))
-
-        cmd.append(os.path.join(file_directory_functions.OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'land1.osm'))
-        cmd.append(os.path.join(file_directory_functions.OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'sea.osm'))
-        cmd.extend(['-o', outFile])
-        #print(cmd)
-        subprocess.run(cmd)
-    TileCount += 1
-
-# logging
-print('# Merge splitted tiles with land an sea: OK')
+# Merge splitted tiles with land an sea   
+x.mergeSplittedTilesWithLandAndSea()
 
 
 print('\n\n# Creating .map files')

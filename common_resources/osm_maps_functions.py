@@ -21,11 +21,12 @@ class OSM_Maps:
     "This is a OSM data class"
 
 
-    def __init__(self, input_country, Max_Days_Old, Force_Processing):
+    def __init__(self, input_country, Max_Days_Old, Force_Processing, workers):
         self.input_country = input_country
         self.region = self.getRegionOfCountry(input_country)
         self.Max_Days_Old = Max_Days_Old
         self.Force_Processing = Force_Processing
+        self.workers = workers
         self.country = []
         self.border_countries = {}
    
@@ -401,3 +402,49 @@ class OSM_Maps:
 
             # logging
             print('# Split filtered country files to tiles: OK')
+
+    def mergeSplittedTilesWithLandAndSea(self):
+        print('\n\n# Merge splitted tiles with land an sea')
+        TileCount = 1
+        for tile in self.country:
+            print(f'+ Merging tiles for tile {TileCount} of {len(self.country)} for Coordinates: {tile["x"]},{tile["y"]}')
+            outFile = os.path.join(file_directory_functions.OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'merged.osm.pbf')
+            if not os.path.isfile(outFile) or self.Force_Processing == 1:
+                # Windows
+                if platform.system() == "Windows":
+                    cmd = [os.path.join (file_directory_functions.COMMON_PATH, 'Osmosis', 'bin', 'osmosis.bat')]
+                    loop=0
+                    for c in tile['countries']:
+                        cmd.append('--rbf')
+                        cmd.append(os.path.join(file_directory_functions.OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'split-{c}.osm.pbf'))
+                        cmd.append('workers='+ self.workers)
+                        if loop > 0:
+                            cmd.append('--merge')
+                        loop+=1
+                    land_files = glob.glob(os.path.join(file_directory_functions.OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'land*.osm'))
+                    for land in land_files:
+                        cmd.extend(['--rx', 'file='+os.path.join(file_directory_functions.OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'{land}'), '--s', '--m'])
+                    cmd.extend(['--rx', 'file='+os.path.join(file_directory_functions.OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'sea.osm'), '--s', '--m'])
+                    cmd.extend(['--tag-transform', 'file=' + os.path.join (file_directory_functions.COMMON_PATH, 'tunnel-transform.xml'), '--wb', outFile, 'omitmetadata=true'])
+                
+                    #print(cmd)
+                    result = subprocess.run(cmd)
+                    if result.returncode != 0:
+                        print(f'Error in Osmosis with country: {c}')
+                        sys.exit() 
+                # Non-Windows
+                else:
+                    cmd = ['osmium', 'merge', '--overwrite']
+                    for c in tile['countries']:
+                        cmd.append(os.path.join(file_directory_functions.OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'split-{c}.osm.pbf'))
+
+                    cmd.append(os.path.join(file_directory_functions.OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'land1.osm'))
+                    cmd.append(os.path.join(file_directory_functions.OUT_PATH, f'{tile["x"]}', f'{tile["y"]}', f'sea.osm'))
+                    cmd.extend(['-o', outFile])
+                
+                    #print(cmd)
+                    subprocess.run(cmd)
+            TileCount += 1
+
+        # logging
+        print('# Merge splitted tiles with land an sea: OK')
