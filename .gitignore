@@ -1,10 +1,16 @@
-# maps/**/*
+# top level
 maps/*
 output/*
 output*/*
 tools_dl/
+
+# common resources
 common_resources/land-polygons-split-4326/
 common_resources/land-polygons-split-4326.zip
-tooling_windows/Windows-Wahoo-Map-Creator-Osmosis/land-polygons-split-4326.zip
-
 common_resources/__pycache__/*
+
+# mac/unix
+
+#windows
+tooling_windows/Windows-Wahoo-Map-Creator-Osmosis/land-polygons-split-4326.zip
+tooling_windows/osmconvert_tempfile.*
