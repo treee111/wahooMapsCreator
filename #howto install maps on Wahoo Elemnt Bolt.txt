@@ -1,0 +1,25 @@
+Step-by-step instructions for installing the custom made maps on the Wahoo Elemnt Bolt
+by Higli May 8th, 2021
+
+1. install adb (you find adb.7z in the Windows-Wahoo-Map-Creator-Osmosis folder)
+2. unzip the desired country files
+3. connect the Bolt to the computer
+4. copy the unzipped map folders to \ELEMNT-BOLT\USB storage\maps\tiles\8\
+5. delete all files from \ELEMNT-BOLT\USB storage\maps\temp\
+
+to clear the cache and load the new maps on the Bolt:
+a) adb shell am broadcast -a com.wahoofitness.bolt.service.BMapManager.PURGE
+b) adb shell am broadcast -a com.wahoofitness.bolt.service.BMapManager.RELOAD_MAP
+
+the Bolt must be authorized for adb (test with: adb devices):
+a) disconnect Bolt from your computer
+b) turn the Bolt on
+c) press the power button (you enter the settings menu)
+d) press the power button again (you return to the normal screen)
+e) connect the Bolt to your pc
+
+adb authorization for Bolt v2:
+a) disconnect Bolt from your computer
+b) turn the Bolt on
+c) press the power, up and down buttons at the same time
+d) connect the Bolt to your computer
