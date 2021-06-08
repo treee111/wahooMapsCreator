@@ -185,7 +185,7 @@ class OSM_Maps:
                     print(f'\n# Filtering unwanted map objects out of map of {key}')
                     cmd = ['osmfilter']
                     cmd.append(outFileo5m)
-                    cmd.append('--keep="' + constants.filtered_tags + '"')
+                    cmd.append('--keep="' + constants.filtered_tags_win + '"')
                     cmd.append('-o=' + outFileo5mFiltered)
                     # print(cmd)
                     result = subprocess.run(cmd)
@@ -251,7 +251,12 @@ class OSM_Maps:
                 subprocess.run(cmd)
 
             if not os.path.isfile(outFile+'1.osm') or self.Force_Processing == 1:
-                cmd = ['python3', os.path.join(file_directory_functions.COMMON_DIR, 'shape2osm.py'), '-l', outFile, landFile]
+                # Windows
+                if platform.system() == "Windows":
+                    cmd = ['python', os.path.join(file_directory_functions.COMMON_DIR, 'shape2osm.py'), '-l', outFile, landFile]
+                # Non-Windows
+                else:
+                    cmd = ['python3', os.path.join(file_directory_functions.COMMON_DIR, 'shape2osm.py'), '-l', outFile, landFile]
                 #print(cmd)
                 subprocess.run(cmd)
             TileCount += 1

@@ -15,7 +15,7 @@ import time
 # ToDo: This might not work - Properly import in Windows!
 # import custom python packages
 from os import sys, path
-sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
+sys.path.append(path.dirname(path.dirname(path.dirname(path.abspath(__file__)))))
 from common_resources import file_directory_functions
 from common_resources import osm_maps_functions
 from common_resources.osm_maps_functions import OSM_Maps
@@ -52,9 +52,9 @@ if len(sys.argv) != 2:
 
 x = OSM_Maps(sys.argv[1], Max_Days_Old, Force_Processing, workers, threads, Save_Cruiser)
 
-if x.region == '' :
-    print ('Invalid country name.')
-    sys.exit()
+# if x.region == '' :
+#     print ('Invalid country name.')
+#     sys.exit()
 
 # Read json file
 x.readJsonFile()

@@ -178,3 +178,5 @@ noregion_geofabrik = ['russia','asia']
 filtered_tags = ['access', 'admin_level', 'aerialway', 'aeroway', 'barrier',
                'boundary', 'bridge', 'highway', 'natural', 'oneway', 'place',
                'railway', 'tracktype', 'tunnel', 'waterway']
+
+filtered_tags_win = 'access= admin_level= aerialway= aeroway= barrier= boundary= bridge= highway= natural= oneway= place= railway= tracktype= tunnel= waterway='

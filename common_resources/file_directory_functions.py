@@ -11,11 +11,11 @@ def getGitRoot():
 
 # script_path = os.path.abspath(__file__) # i.e. /path/to/dir/foobar.py
 
-ROOT_DIR = os.getcwd() #getGitRoot()
+ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname( __file__ ), os.pardir)) #os.getcwd() #getGitRoot()
 COMMON_DIR = os.path.join(ROOT_DIR, 'common_resources')
 OUTPUT_DIR = os.path.join(ROOT_DIR, 'output')
 MAPS_DIR = os.path.join(COMMON_DIR, 'maps')
-LAND_POLYGONS_PATH = os.path.join(COMMON_DIR, 'land-polygons-split-4326/land_polygons.shp')
+LAND_POLYGONS_PATH = os.path.join(COMMON_DIR, 'land-polygons-split-4326', 'land_polygons.shp')
 
 
 def unzip(source_filename, dest_dir):
