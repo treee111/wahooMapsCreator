@@ -56,6 +56,8 @@ Translate_Country = {
             'åland':                            'finland'
         }
 
+continents = ['europe', 'unitedstates', 'north-america', 'south-america', 'asia', 'oceania', 'africa', 'antarctica']
+
 africa = ['algeria', 'angola', 'benin', 'botswana', 'burkina_faso', 'burundi',
             'cameroon', 'cape_verde', 'central_african_republic', 'chad', 'comoros',
             'cote_d_ivoire', 'democratic_republic_of_the_congo', 'djibouti', 'egypt',

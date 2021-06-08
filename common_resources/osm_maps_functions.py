@@ -33,7 +33,7 @@ class OSM_Maps:
         self.tilesFromJson = []
         self.border_countries = {}
 
-        self.countryName = os.path.split(sys.argv[1])[1][:-5]
+        self.countryName = os.path.split(inputFile)[1][:-5]
    
 
     def readJsonFile(self):
