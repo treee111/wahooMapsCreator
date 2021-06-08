@@ -1,0 +1,205 @@
+[
+    {
+        "x": 72,
+        "y": 107,
+        "left": -78.75,
+        "top": 28.304381,
+        "right": -77.34375,
+        "bottom": 27.059126,
+        "countries": [
+            "bahamas"
+        ]
+    },
+    {
+        "x": 71,
+        "y": 108,
+        "left": -80.15625,
+        "top": 27.059126,
+        "right": -78.75,
+        "bottom": 25.799891,
+        "countries": [
+            "florida",
+            "bahamas"
+        ]
+    },
+    {
+        "x": 72,
+        "y": 108,
+        "left": -78.75,
+        "top": 27.059126,
+        "right": -77.34375,
+        "bottom": 25.799891,
+        "countries": [
+            "bahamas"
+        ]
+    },
+    {
+        "x": 73,
+        "y": 108,
+        "left": -77.34375,
+        "top": 27.059126,
+        "right": -75.9375,
+        "bottom": 25.799891,
+        "countries": [
+            "bahamas"
+        ]
+    },
+    {
+        "x": 71,
+        "y": 109,
+        "left": -80.15625,
+        "top": 25.799891,
+        "right": -78.75,
+        "bottom": 24.527135,
+        "countries": [
+            "florida",
+            "bahamas"
+        ]
+    },
+    {
+        "x": 72,
+        "y": 109,
+        "left": -78.75,
+        "top": 25.799891,
+        "right": -77.34375,
+        "bottom": 24.527135,
+        "countries": [
+            "bahamas"
+        ]
+    },
+    {
+        "x": 73,
+        "y": 109,
+        "left": -77.34375,
+        "top": 25.799891,
+        "right": -75.9375,
+        "bottom": 24.527135,
+        "countries": [
+            "bahamas"
+        ]
+    },
+    {
+        "x": 74,
+        "y": 109,
+        "left": -75.9375,
+        "top": 25.799891,
+        "right": -74.53125,
+        "bottom": 24.527135,
+        "countries": [
+            "bahamas"
+        ]
+    },
+    {
+        "x": 70,
+        "y": 110,
+        "left": -81.5625,
+        "top": 24.527135,
+        "right": -80.15625,
+        "bottom": 23.241346,
+        "countries": [
+            "cuba",
+            "bahamas"
+        ]
+    },
+    {
+        "x": 72,
+        "y": 110,
+        "left": -78.75,
+        "top": 24.527135,
+        "right": -77.34375,
+        "bottom": 23.241346,
+        "countries": [
+            "bahamas"
+        ]
+    },
+    {
+        "x": 73,
+        "y": 110,
+        "left": -77.34375,
+        "top": 24.527135,
+        "right": -75.9375,
+        "bottom": 23.241346,
+        "countries": [
+            "bahamas"
+        ]
+    },
+    {
+        "x": 74,
+        "y": 110,
+        "left": -75.9375,
+        "top": 24.527135,
+        "right": -74.53125,
+        "bottom": 23.241346,
+        "countries": [
+            "bahamas"
+        ]
+    },
+    {
+        "x": 75,
+        "y": 110,
+        "left": -74.53125,
+        "top": 24.527135,
+        "right": -73.125,
+        "bottom": 23.241346,
+        "countries": [
+            "bahamas"
+        ]
+    },
+    {
+        "x": 74,
+        "y": 111,
+        "left": -75.9375,
+        "top": 23.241346,
+        "right": -74.53125,
+        "bottom": 21.943046,
+        "countries": [
+            "bahamas"
+        ]
+    },
+    {
+        "x": 75,
+        "y": 111,
+        "left": -74.53125,
+        "top": 23.241346,
+        "right": -73.125,
+        "bottom": 21.943046,
+        "countries": [
+            "bahamas"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 111,
+        "left": -73.125,
+        "top": 23.241346,
+        "right": -71.71875,
+        "bottom": 21.943046,
+        "countries": [
+            "turks_and_caicos_islands",
+            "bahamas"
+        ]
+    },
+    {
+        "x": 75,
+        "y": 112,
+        "left": -74.53125,
+        "top": 21.943046,
+        "right": -73.125,
+        "bottom": 20.632784,
+        "countries": [
+            "bahamas"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 112,
+        "left": -73.125,
+        "top": 21.943046,
+        "right": -71.71875,
+        "bottom": 20.632784,
+        "countries": [
+            "turks_and_caicos_islands",
+            "bahamas"
+        ]
+    }
+]

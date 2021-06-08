@@ -1,0 +1,35 @@
+[
+    {
+        "x": 209,
+        "y": 120,
+        "left": 113.90625,
+        "top": 11.178402,
+        "right": 115.3125,
+        "bottom": 9.795678,
+        "countries": [
+            "spratly_islands"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 120,
+        "left": 115.3125,
+        "top": 11.178402,
+        "right": 116.71875,
+        "bottom": 9.795678,
+        "countries": [
+            "spratly_islands"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 121,
+        "left": 113.90625,
+        "top": 9.795678,
+        "right": 115.3125,
+        "bottom": 8.407168,
+        "countries": [
+            "spratly_islands"
+        ]
+    }
+]

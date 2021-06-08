@@ -1,0 +1,2574 @@
+[
+    {
+        "x": 190,
+        "y": 108,
+        "left": 87.1875,
+        "top": 27.059126,
+        "right": 88.59375,
+        "bottom": 25.799891,
+        "countries": [
+            "nepal",
+            "bangladesh",
+            "india"
+        ]
+    },
+    {
+        "x": 191,
+        "y": 108,
+        "left": 88.59375,
+        "top": 27.059126,
+        "right": 90.0,
+        "bottom": 25.799891,
+        "countries": [
+            "bhutan",
+            "bangladesh",
+            "india"
+        ]
+    },
+    {
+        "x": 190,
+        "y": 109,
+        "left": 87.1875,
+        "top": 25.799891,
+        "right": 88.59375,
+        "bottom": 24.527135,
+        "countries": [
+            "bangladesh",
+            "india"
+        ]
+    },
+    {
+        "x": 191,
+        "y": 109,
+        "left": 88.59375,
+        "top": 25.799891,
+        "right": 90.0,
+        "bottom": 24.527135,
+        "countries": [
+            "bangladesh",
+            "india"
+        ]
+    },
+    {
+        "x": 192,
+        "y": 109,
+        "left": 90.0,
+        "top": 25.799891,
+        "right": 91.40625,
+        "bottom": 24.527135,
+        "countries": [
+            "bangladesh",
+            "india"
+        ]
+    },
+    {
+        "x": 193,
+        "y": 109,
+        "left": 91.40625,
+        "top": 25.799891,
+        "right": 92.8125,
+        "bottom": 24.527135,
+        "countries": [
+            "bangladesh",
+            "india"
+        ]
+    },
+    {
+        "x": 190,
+        "y": 110,
+        "left": 87.1875,
+        "top": 24.527135,
+        "right": 88.59375,
+        "bottom": 23.241346,
+        "countries": [
+            "bangladesh",
+            "india"
+        ]
+    },
+    {
+        "x": 191,
+        "y": 110,
+        "left": 88.59375,
+        "top": 24.527135,
+        "right": 90.0,
+        "bottom": 23.241346,
+        "countries": [
+            "bangladesh",
+            "india"
+        ]
+    },
+    {
+        "x": 192,
+        "y": 110,
+        "left": 90.0,
+        "top": 24.527135,
+        "right": 91.40625,
+        "bottom": 23.241346,
+        "countries": [
+            "bangladesh",
+            "india"
+        ]
+    },
+    {
+        "x": 193,
+        "y": 110,
+        "left": 91.40625,
+        "top": 24.527135,
+        "right": 92.8125,
+        "bottom": 23.241346,
+        "countries": [
+            "bangladesh",
+            "india"
+        ]
+    },
+    {
+        "x": 191,
+        "y": 111,
+        "left": 88.59375,
+        "top": 23.241346,
+        "right": 90.0,
+        "bottom": 21.943046,
+        "countries": [
+            "bangladesh",
+            "india"
+        ]
+    },
+    {
+        "x": 192,
+        "y": 111,
+        "left": 90.0,
+        "top": 23.241346,
+        "right": 91.40625,
+        "bottom": 21.943046,
+        "countries": [
+            "bangladesh",
+            "india"
+        ]
+    },
+    {
+        "x": 193,
+        "y": 111,
+        "left": 91.40625,
+        "top": 23.241346,
+        "right": 92.8125,
+        "bottom": 21.943046,
+        "countries": [
+            "bangladesh",
+            "myanmar",
+            "india"
+        ]
+    },
+    {
+        "x": 191,
+        "y": 112,
+        "left": 88.59375,
+        "top": 21.943046,
+        "right": 90.0,
+        "bottom": 20.632784,
+        "countries": [
+            "bangladesh",
+            "india"
+        ]
+    },
+    {
+        "x": 191,
+        "y": 107,
+        "left": 88.59375,
+        "top": 28.304381,
+        "right": 90.0,
+        "bottom": 27.059126,
+        "countries": [
+            "bhutan",
+            "china",
+            "india"
+        ]
+    },
+    {
+        "x": 193,
+        "y": 107,
+        "left": 91.40625,
+        "top": 28.304381,
+        "right": 92.8125,
+        "bottom": 27.059126,
+        "countries": [
+            "bhutan",
+            "china",
+            "india"
+        ]
+    },
+    {
+        "x": 192,
+        "y": 108,
+        "left": 90.0,
+        "top": 27.059126,
+        "right": 91.40625,
+        "bottom": 25.799891,
+        "countries": [
+            "bhutan",
+            "india"
+        ]
+    },
+    {
+        "x": 193,
+        "y": 108,
+        "left": 91.40625,
+        "top": 27.059126,
+        "right": 92.8125,
+        "bottom": 25.799891,
+        "countries": [
+            "bhutan",
+            "india"
+        ]
+    },
+    {
+        "x": 183,
+        "y": 100,
+        "left": 77.34375,
+        "top": 36.597889,
+        "right": 78.75,
+        "bottom": 35.46067,
+        "countries": [
+            "pakistan",
+            "china",
+            "india"
+        ]
+    },
+    {
+        "x": 183,
+        "y": 101,
+        "left": 77.34375,
+        "top": 35.46067,
+        "right": 78.75,
+        "bottom": 34.307144,
+        "countries": [
+            "pakistan",
+            "china",
+            "india"
+        ]
+    },
+    {
+        "x": 184,
+        "y": 101,
+        "left": 78.75,
+        "top": 35.46067,
+        "right": 80.15625,
+        "bottom": 34.307144,
+        "countries": [
+            "china",
+            "india"
+        ]
+    },
+    {
+        "x": 183,
+        "y": 102,
+        "left": 77.34375,
+        "top": 34.307144,
+        "right": 78.75,
+        "bottom": 33.137551,
+        "countries": [
+            "china",
+            "india"
+        ]
+    },
+    {
+        "x": 184,
+        "y": 102,
+        "left": 78.75,
+        "top": 34.307144,
+        "right": 80.15625,
+        "bottom": 33.137551,
+        "countries": [
+            "china",
+            "india"
+        ]
+    },
+    {
+        "x": 183,
+        "y": 103,
+        "left": 77.34375,
+        "top": 33.137551,
+        "right": 78.75,
+        "bottom": 31.952162,
+        "countries": [
+            "china",
+            "india"
+        ]
+    },
+    {
+        "x": 184,
+        "y": 103,
+        "left": 78.75,
+        "top": 33.137551,
+        "right": 80.15625,
+        "bottom": 31.952162,
+        "countries": [
+            "china",
+            "india"
+        ]
+    },
+    {
+        "x": 183,
+        "y": 104,
+        "left": 77.34375,
+        "top": 31.952162,
+        "right": 78.75,
+        "bottom": 30.751278,
+        "countries": [
+            "china",
+            "india"
+        ]
+    },
+    {
+        "x": 184,
+        "y": 104,
+        "left": 78.75,
+        "top": 31.952162,
+        "right": 80.15625,
+        "bottom": 30.751278,
+        "countries": [
+            "china",
+            "india"
+        ]
+    },
+    {
+        "x": 184,
+        "y": 105,
+        "left": 78.75,
+        "top": 30.751278,
+        "right": 80.15625,
+        "bottom": 29.53523,
+        "countries": [
+            "china",
+            "india"
+        ]
+    },
+    {
+        "x": 185,
+        "y": 105,
+        "left": 80.15625,
+        "top": 30.751278,
+        "right": 81.5625,
+        "bottom": 29.53523,
+        "countries": [
+            "nepal",
+            "china",
+            "india"
+        ]
+    },
+    {
+        "x": 194,
+        "y": 106,
+        "left": 92.8125,
+        "top": 29.53523,
+        "right": 94.21875,
+        "bottom": 28.304381,
+        "countries": [
+            "china",
+            "india"
+        ]
+    },
+    {
+        "x": 195,
+        "y": 106,
+        "left": 94.21875,
+        "top": 29.53523,
+        "right": 95.625,
+        "bottom": 28.304381,
+        "countries": [
+            "china",
+            "india"
+        ]
+    },
+    {
+        "x": 196,
+        "y": 106,
+        "left": 95.625,
+        "top": 29.53523,
+        "right": 97.03125,
+        "bottom": 28.304381,
+        "countries": [
+            "china",
+            "india"
+        ]
+    },
+    {
+        "x": 197,
+        "y": 106,
+        "left": 97.03125,
+        "top": 29.53523,
+        "right": 98.4375,
+        "bottom": 28.304381,
+        "countries": [
+            "myanmar",
+            "china",
+            "india"
+        ]
+    },
+    {
+        "x": 188,
+        "y": 107,
+        "left": 84.375,
+        "top": 28.304381,
+        "right": 85.78125,
+        "bottom": 27.059126,
+        "countries": [
+            "nepal",
+            "china",
+            "india"
+        ]
+    },
+    {
+        "x": 190,
+        "y": 107,
+        "left": 87.1875,
+        "top": 28.304381,
+        "right": 88.59375,
+        "bottom": 27.059126,
+        "countries": [
+            "nepal",
+            "china",
+            "india"
+        ]
+    },
+    {
+        "x": 194,
+        "y": 107,
+        "left": 92.8125,
+        "top": 28.304381,
+        "right": 94.21875,
+        "bottom": 27.059126,
+        "countries": [
+            "china",
+            "india"
+        ]
+    },
+    {
+        "x": 197,
+        "y": 107,
+        "left": 97.03125,
+        "top": 28.304381,
+        "right": 98.4375,
+        "bottom": 27.059126,
+        "countries": [
+            "myanmar",
+            "china",
+            "india"
+        ]
+    },
+    {
+        "x": 180,
+        "y": 101,
+        "left": 73.125,
+        "top": 35.46067,
+        "right": 74.53125,
+        "bottom": 34.307144,
+        "countries": [
+            "pakistan",
+            "india"
+        ]
+    },
+    {
+        "x": 181,
+        "y": 101,
+        "left": 74.53125,
+        "top": 35.46067,
+        "right": 75.9375,
+        "bottom": 34.307144,
+        "countries": [
+            "pakistan",
+            "india"
+        ]
+    },
+    {
+        "x": 182,
+        "y": 101,
+        "left": 75.9375,
+        "top": 35.46067,
+        "right": 77.34375,
+        "bottom": 34.307144,
+        "countries": [
+            "pakistan",
+            "india"
+        ]
+    },
+    {
+        "x": 180,
+        "y": 102,
+        "left": 73.125,
+        "top": 34.307144,
+        "right": 74.53125,
+        "bottom": 33.137551,
+        "countries": [
+            "pakistan",
+            "india"
+        ]
+    },
+    {
+        "x": 181,
+        "y": 102,
+        "left": 74.53125,
+        "top": 34.307144,
+        "right": 75.9375,
+        "bottom": 33.137551,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 182,
+        "y": 102,
+        "left": 75.9375,
+        "top": 34.307144,
+        "right": 77.34375,
+        "bottom": 33.137551,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 180,
+        "y": 103,
+        "left": 73.125,
+        "top": 33.137551,
+        "right": 74.53125,
+        "bottom": 31.952162,
+        "countries": [
+            "pakistan",
+            "india"
+        ]
+    },
+    {
+        "x": 181,
+        "y": 103,
+        "left": 74.53125,
+        "top": 33.137551,
+        "right": 75.9375,
+        "bottom": 31.952162,
+        "countries": [
+            "pakistan",
+            "india"
+        ]
+    },
+    {
+        "x": 182,
+        "y": 103,
+        "left": 75.9375,
+        "top": 33.137551,
+        "right": 77.34375,
+        "bottom": 31.952162,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 180,
+        "y": 104,
+        "left": 73.125,
+        "top": 31.952162,
+        "right": 74.53125,
+        "bottom": 30.751278,
+        "countries": [
+            "pakistan",
+            "india"
+        ]
+    },
+    {
+        "x": 181,
+        "y": 104,
+        "left": 74.53125,
+        "top": 31.952162,
+        "right": 75.9375,
+        "bottom": 30.751278,
+        "countries": [
+            "pakistan",
+            "india"
+        ]
+    },
+    {
+        "x": 182,
+        "y": 104,
+        "left": 75.9375,
+        "top": 31.952162,
+        "right": 77.34375,
+        "bottom": 30.751278,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 180,
+        "y": 105,
+        "left": 73.125,
+        "top": 30.751278,
+        "right": 74.53125,
+        "bottom": 29.53523,
+        "countries": [
+            "pakistan",
+            "india"
+        ]
+    },
+    {
+        "x": 181,
+        "y": 105,
+        "left": 74.53125,
+        "top": 30.751278,
+        "right": 75.9375,
+        "bottom": 29.53523,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 182,
+        "y": 105,
+        "left": 75.9375,
+        "top": 30.751278,
+        "right": 77.34375,
+        "bottom": 29.53523,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 183,
+        "y": 105,
+        "left": 77.34375,
+        "top": 30.751278,
+        "right": 78.75,
+        "bottom": 29.53523,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 179,
+        "y": 106,
+        "left": 71.71875,
+        "top": 29.53523,
+        "right": 73.125,
+        "bottom": 28.304381,
+        "countries": [
+            "pakistan",
+            "india"
+        ]
+    },
+    {
+        "x": 180,
+        "y": 106,
+        "left": 73.125,
+        "top": 29.53523,
+        "right": 74.53125,
+        "bottom": 28.304381,
+        "countries": [
+            "pakistan",
+            "india"
+        ]
+    },
+    {
+        "x": 181,
+        "y": 106,
+        "left": 74.53125,
+        "top": 29.53523,
+        "right": 75.9375,
+        "bottom": 28.304381,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 182,
+        "y": 106,
+        "left": 75.9375,
+        "top": 29.53523,
+        "right": 77.34375,
+        "bottom": 28.304381,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 183,
+        "y": 106,
+        "left": 77.34375,
+        "top": 29.53523,
+        "right": 78.75,
+        "bottom": 28.304381,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 184,
+        "y": 106,
+        "left": 78.75,
+        "top": 29.53523,
+        "right": 80.15625,
+        "bottom": 28.304381,
+        "countries": [
+            "nepal",
+            "india"
+        ]
+    },
+    {
+        "x": 185,
+        "y": 106,
+        "left": 80.15625,
+        "top": 29.53523,
+        "right": 81.5625,
+        "bottom": 28.304381,
+        "countries": [
+            "nepal",
+            "india"
+        ]
+    },
+    {
+        "x": 177,
+        "y": 107,
+        "left": 68.90625,
+        "top": 28.304381,
+        "right": 70.3125,
+        "bottom": 27.059126,
+        "countries": [
+            "pakistan",
+            "india"
+        ]
+    },
+    {
+        "x": 178,
+        "y": 107,
+        "left": 70.3125,
+        "top": 28.304381,
+        "right": 71.71875,
+        "bottom": 27.059126,
+        "countries": [
+            "pakistan",
+            "india"
+        ]
+    },
+    {
+        "x": 179,
+        "y": 107,
+        "left": 71.71875,
+        "top": 28.304381,
+        "right": 73.125,
+        "bottom": 27.059126,
+        "countries": [
+            "pakistan",
+            "india"
+        ]
+    },
+    {
+        "x": 180,
+        "y": 107,
+        "left": 73.125,
+        "top": 28.304381,
+        "right": 74.53125,
+        "bottom": 27.059126,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 181,
+        "y": 107,
+        "left": 74.53125,
+        "top": 28.304381,
+        "right": 75.9375,
+        "bottom": 27.059126,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 182,
+        "y": 107,
+        "left": 75.9375,
+        "top": 28.304381,
+        "right": 77.34375,
+        "bottom": 27.059126,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 183,
+        "y": 107,
+        "left": 77.34375,
+        "top": 28.304381,
+        "right": 78.75,
+        "bottom": 27.059126,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 184,
+        "y": 107,
+        "left": 78.75,
+        "top": 28.304381,
+        "right": 80.15625,
+        "bottom": 27.059126,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 185,
+        "y": 107,
+        "left": 80.15625,
+        "top": 28.304381,
+        "right": 81.5625,
+        "bottom": 27.059126,
+        "countries": [
+            "nepal",
+            "india"
+        ]
+    },
+    {
+        "x": 186,
+        "y": 107,
+        "left": 81.5625,
+        "top": 28.304381,
+        "right": 82.96875,
+        "bottom": 27.059126,
+        "countries": [
+            "nepal",
+            "india"
+        ]
+    },
+    {
+        "x": 187,
+        "y": 107,
+        "left": 82.96875,
+        "top": 28.304381,
+        "right": 84.375,
+        "bottom": 27.059126,
+        "countries": [
+            "nepal",
+            "india"
+        ]
+    },
+    {
+        "x": 195,
+        "y": 107,
+        "left": 94.21875,
+        "top": 28.304381,
+        "right": 95.625,
+        "bottom": 27.059126,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 196,
+        "y": 107,
+        "left": 95.625,
+        "top": 28.304381,
+        "right": 97.03125,
+        "bottom": 27.059126,
+        "countries": [
+            "myanmar",
+            "india"
+        ]
+    },
+    {
+        "x": 177,
+        "y": 108,
+        "left": 68.90625,
+        "top": 27.059126,
+        "right": 70.3125,
+        "bottom": 25.799891,
+        "countries": [
+            "pakistan",
+            "india"
+        ]
+    },
+    {
+        "x": 178,
+        "y": 108,
+        "left": 70.3125,
+        "top": 27.059126,
+        "right": 71.71875,
+        "bottom": 25.799891,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 179,
+        "y": 108,
+        "left": 71.71875,
+        "top": 27.059126,
+        "right": 73.125,
+        "bottom": 25.799891,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 180,
+        "y": 108,
+        "left": 73.125,
+        "top": 27.059126,
+        "right": 74.53125,
+        "bottom": 25.799891,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 181,
+        "y": 108,
+        "left": 74.53125,
+        "top": 27.059126,
+        "right": 75.9375,
+        "bottom": 25.799891,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 182,
+        "y": 108,
+        "left": 75.9375,
+        "top": 27.059126,
+        "right": 77.34375,
+        "bottom": 25.799891,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 183,
+        "y": 108,
+        "left": 77.34375,
+        "top": 27.059126,
+        "right": 78.75,
+        "bottom": 25.799891,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 184,
+        "y": 108,
+        "left": 78.75,
+        "top": 27.059126,
+        "right": 80.15625,
+        "bottom": 25.799891,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 185,
+        "y": 108,
+        "left": 80.15625,
+        "top": 27.059126,
+        "right": 81.5625,
+        "bottom": 25.799891,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 186,
+        "y": 108,
+        "left": 81.5625,
+        "top": 27.059126,
+        "right": 82.96875,
+        "bottom": 25.799891,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 187,
+        "y": 108,
+        "left": 82.96875,
+        "top": 27.059126,
+        "right": 84.375,
+        "bottom": 25.799891,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 188,
+        "y": 108,
+        "left": 84.375,
+        "top": 27.059126,
+        "right": 85.78125,
+        "bottom": 25.799891,
+        "countries": [
+            "nepal",
+            "india"
+        ]
+    },
+    {
+        "x": 189,
+        "y": 108,
+        "left": 85.78125,
+        "top": 27.059126,
+        "right": 87.1875,
+        "bottom": 25.799891,
+        "countries": [
+            "nepal",
+            "india"
+        ]
+    },
+    {
+        "x": 194,
+        "y": 108,
+        "left": 92.8125,
+        "top": 27.059126,
+        "right": 94.21875,
+        "bottom": 25.799891,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 195,
+        "y": 108,
+        "left": 94.21875,
+        "top": 27.059126,
+        "right": 95.625,
+        "bottom": 25.799891,
+        "countries": [
+            "myanmar",
+            "india"
+        ]
+    },
+    {
+        "x": 196,
+        "y": 108,
+        "left": 95.625,
+        "top": 27.059126,
+        "right": 97.03125,
+        "bottom": 25.799891,
+        "countries": [
+            "myanmar",
+            "india"
+        ]
+    },
+    {
+        "x": 177,
+        "y": 109,
+        "left": 68.90625,
+        "top": 25.799891,
+        "right": 70.3125,
+        "bottom": 24.527135,
+        "countries": [
+            "pakistan",
+            "india"
+        ]
+    },
+    {
+        "x": 178,
+        "y": 109,
+        "left": 70.3125,
+        "top": 25.799891,
+        "right": 71.71875,
+        "bottom": 24.527135,
+        "countries": [
+            "pakistan",
+            "india"
+        ]
+    },
+    {
+        "x": 179,
+        "y": 109,
+        "left": 71.71875,
+        "top": 25.799891,
+        "right": 73.125,
+        "bottom": 24.527135,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 180,
+        "y": 109,
+        "left": 73.125,
+        "top": 25.799891,
+        "right": 74.53125,
+        "bottom": 24.527135,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 181,
+        "y": 109,
+        "left": 74.53125,
+        "top": 25.799891,
+        "right": 75.9375,
+        "bottom": 24.527135,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 182,
+        "y": 109,
+        "left": 75.9375,
+        "top": 25.799891,
+        "right": 77.34375,
+        "bottom": 24.527135,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 183,
+        "y": 109,
+        "left": 77.34375,
+        "top": 25.799891,
+        "right": 78.75,
+        "bottom": 24.527135,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 184,
+        "y": 109,
+        "left": 78.75,
+        "top": 25.799891,
+        "right": 80.15625,
+        "bottom": 24.527135,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 185,
+        "y": 109,
+        "left": 80.15625,
+        "top": 25.799891,
+        "right": 81.5625,
+        "bottom": 24.527135,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 186,
+        "y": 109,
+        "left": 81.5625,
+        "top": 25.799891,
+        "right": 82.96875,
+        "bottom": 24.527135,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 187,
+        "y": 109,
+        "left": 82.96875,
+        "top": 25.799891,
+        "right": 84.375,
+        "bottom": 24.527135,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 188,
+        "y": 109,
+        "left": 84.375,
+        "top": 25.799891,
+        "right": 85.78125,
+        "bottom": 24.527135,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 189,
+        "y": 109,
+        "left": 85.78125,
+        "top": 25.799891,
+        "right": 87.1875,
+        "bottom": 24.527135,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 194,
+        "y": 109,
+        "left": 92.8125,
+        "top": 25.799891,
+        "right": 94.21875,
+        "bottom": 24.527135,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 195,
+        "y": 109,
+        "left": 94.21875,
+        "top": 25.799891,
+        "right": 95.625,
+        "bottom": 24.527135,
+        "countries": [
+            "myanmar",
+            "india"
+        ]
+    },
+    {
+        "x": 176,
+        "y": 110,
+        "left": 67.5,
+        "top": 24.527135,
+        "right": 68.90625,
+        "bottom": 23.241346,
+        "countries": [
+            "pakistan",
+            "india"
+        ]
+    },
+    {
+        "x": 177,
+        "y": 110,
+        "left": 68.90625,
+        "top": 24.527135,
+        "right": 70.3125,
+        "bottom": 23.241346,
+        "countries": [
+            "pakistan",
+            "india"
+        ]
+    },
+    {
+        "x": 178,
+        "y": 110,
+        "left": 70.3125,
+        "top": 24.527135,
+        "right": 71.71875,
+        "bottom": 23.241346,
+        "countries": [
+            "pakistan",
+            "india"
+        ]
+    },
+    {
+        "x": 179,
+        "y": 110,
+        "left": 71.71875,
+        "top": 24.527135,
+        "right": 73.125,
+        "bottom": 23.241346,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 180,
+        "y": 110,
+        "left": 73.125,
+        "top": 24.527135,
+        "right": 74.53125,
+        "bottom": 23.241346,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 181,
+        "y": 110,
+        "left": 74.53125,
+        "top": 24.527135,
+        "right": 75.9375,
+        "bottom": 23.241346,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 182,
+        "y": 110,
+        "left": 75.9375,
+        "top": 24.527135,
+        "right": 77.34375,
+        "bottom": 23.241346,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 183,
+        "y": 110,
+        "left": 77.34375,
+        "top": 24.527135,
+        "right": 78.75,
+        "bottom": 23.241346,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 184,
+        "y": 110,
+        "left": 78.75,
+        "top": 24.527135,
+        "right": 80.15625,
+        "bottom": 23.241346,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 185,
+        "y": 110,
+        "left": 80.15625,
+        "top": 24.527135,
+        "right": 81.5625,
+        "bottom": 23.241346,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 186,
+        "y": 110,
+        "left": 81.5625,
+        "top": 24.527135,
+        "right": 82.96875,
+        "bottom": 23.241346,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 187,
+        "y": 110,
+        "left": 82.96875,
+        "top": 24.527135,
+        "right": 84.375,
+        "bottom": 23.241346,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 188,
+        "y": 110,
+        "left": 84.375,
+        "top": 24.527135,
+        "right": 85.78125,
+        "bottom": 23.241346,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 189,
+        "y": 110,
+        "left": 85.78125,
+        "top": 24.527135,
+        "right": 87.1875,
+        "bottom": 23.241346,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 194,
+        "y": 110,
+        "left": 92.8125,
+        "top": 24.527135,
+        "right": 94.21875,
+        "bottom": 23.241346,
+        "countries": [
+            "myanmar",
+            "india"
+        ]
+    },
+    {
+        "x": 195,
+        "y": 110,
+        "left": 94.21875,
+        "top": 24.527135,
+        "right": 95.625,
+        "bottom": 23.241346,
+        "countries": [
+            "myanmar",
+            "india"
+        ]
+    },
+    {
+        "x": 176,
+        "y": 111,
+        "left": 67.5,
+        "top": 23.241346,
+        "right": 68.90625,
+        "bottom": 21.943046,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 177,
+        "y": 111,
+        "left": 68.90625,
+        "top": 23.241346,
+        "right": 70.3125,
+        "bottom": 21.943046,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 178,
+        "y": 111,
+        "left": 70.3125,
+        "top": 23.241346,
+        "right": 71.71875,
+        "bottom": 21.943046,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 179,
+        "y": 111,
+        "left": 71.71875,
+        "top": 23.241346,
+        "right": 73.125,
+        "bottom": 21.943046,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 180,
+        "y": 111,
+        "left": 73.125,
+        "top": 23.241346,
+        "right": 74.53125,
+        "bottom": 21.943046,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 181,
+        "y": 111,
+        "left": 74.53125,
+        "top": 23.241346,
+        "right": 75.9375,
+        "bottom": 21.943046,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 182,
+        "y": 111,
+        "left": 75.9375,
+        "top": 23.241346,
+        "right": 77.34375,
+        "bottom": 21.943046,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 183,
+        "y": 111,
+        "left": 77.34375,
+        "top": 23.241346,
+        "right": 78.75,
+        "bottom": 21.943046,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 184,
+        "y": 111,
+        "left": 78.75,
+        "top": 23.241346,
+        "right": 80.15625,
+        "bottom": 21.943046,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 185,
+        "y": 111,
+        "left": 80.15625,
+        "top": 23.241346,
+        "right": 81.5625,
+        "bottom": 21.943046,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 186,
+        "y": 111,
+        "left": 81.5625,
+        "top": 23.241346,
+        "right": 82.96875,
+        "bottom": 21.943046,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 187,
+        "y": 111,
+        "left": 82.96875,
+        "top": 23.241346,
+        "right": 84.375,
+        "bottom": 21.943046,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 188,
+        "y": 111,
+        "left": 84.375,
+        "top": 23.241346,
+        "right": 85.78125,
+        "bottom": 21.943046,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 189,
+        "y": 111,
+        "left": 85.78125,
+        "top": 23.241346,
+        "right": 87.1875,
+        "bottom": 21.943046,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 190,
+        "y": 111,
+        "left": 87.1875,
+        "top": 23.241346,
+        "right": 88.59375,
+        "bottom": 21.943046,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 194,
+        "y": 111,
+        "left": 92.8125,
+        "top": 23.241346,
+        "right": 94.21875,
+        "bottom": 21.943046,
+        "countries": [
+            "myanmar",
+            "india"
+        ]
+    },
+    {
+        "x": 177,
+        "y": 112,
+        "left": 68.90625,
+        "top": 21.943046,
+        "right": 70.3125,
+        "bottom": 20.632784,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 178,
+        "y": 112,
+        "left": 70.3125,
+        "top": 21.943046,
+        "right": 71.71875,
+        "bottom": 20.632784,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 179,
+        "y": 112,
+        "left": 71.71875,
+        "top": 21.943046,
+        "right": 73.125,
+        "bottom": 20.632784,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 180,
+        "y": 112,
+        "left": 73.125,
+        "top": 21.943046,
+        "right": 74.53125,
+        "bottom": 20.632784,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 181,
+        "y": 112,
+        "left": 74.53125,
+        "top": 21.943046,
+        "right": 75.9375,
+        "bottom": 20.632784,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 182,
+        "y": 112,
+        "left": 75.9375,
+        "top": 21.943046,
+        "right": 77.34375,
+        "bottom": 20.632784,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 183,
+        "y": 112,
+        "left": 77.34375,
+        "top": 21.943046,
+        "right": 78.75,
+        "bottom": 20.632784,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 184,
+        "y": 112,
+        "left": 78.75,
+        "top": 21.943046,
+        "right": 80.15625,
+        "bottom": 20.632784,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 185,
+        "y": 112,
+        "left": 80.15625,
+        "top": 21.943046,
+        "right": 81.5625,
+        "bottom": 20.632784,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 186,
+        "y": 112,
+        "left": 81.5625,
+        "top": 21.943046,
+        "right": 82.96875,
+        "bottom": 20.632784,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 187,
+        "y": 112,
+        "left": 82.96875,
+        "top": 21.943046,
+        "right": 84.375,
+        "bottom": 20.632784,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 188,
+        "y": 112,
+        "left": 84.375,
+        "top": 21.943046,
+        "right": 85.78125,
+        "bottom": 20.632784,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 189,
+        "y": 112,
+        "left": 85.78125,
+        "top": 21.943046,
+        "right": 87.1875,
+        "bottom": 20.632784,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 190,
+        "y": 112,
+        "left": 87.1875,
+        "top": 21.943046,
+        "right": 88.59375,
+        "bottom": 20.632784,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 179,
+        "y": 113,
+        "left": 71.71875,
+        "top": 20.632784,
+        "right": 73.125,
+        "bottom": 19.311143,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 180,
+        "y": 113,
+        "left": 73.125,
+        "top": 20.632784,
+        "right": 74.53125,
+        "bottom": 19.311143,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 181,
+        "y": 113,
+        "left": 74.53125,
+        "top": 20.632784,
+        "right": 75.9375,
+        "bottom": 19.311143,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 182,
+        "y": 113,
+        "left": 75.9375,
+        "top": 20.632784,
+        "right": 77.34375,
+        "bottom": 19.311143,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 183,
+        "y": 113,
+        "left": 77.34375,
+        "top": 20.632784,
+        "right": 78.75,
+        "bottom": 19.311143,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 184,
+        "y": 113,
+        "left": 78.75,
+        "top": 20.632784,
+        "right": 80.15625,
+        "bottom": 19.311143,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 185,
+        "y": 113,
+        "left": 80.15625,
+        "top": 20.632784,
+        "right": 81.5625,
+        "bottom": 19.311143,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 186,
+        "y": 113,
+        "left": 81.5625,
+        "top": 20.632784,
+        "right": 82.96875,
+        "bottom": 19.311143,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 187,
+        "y": 113,
+        "left": 82.96875,
+        "top": 20.632784,
+        "right": 84.375,
+        "bottom": 19.311143,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 188,
+        "y": 113,
+        "left": 84.375,
+        "top": 20.632784,
+        "right": 85.78125,
+        "bottom": 19.311143,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 189,
+        "y": 113,
+        "left": 85.78125,
+        "top": 20.632784,
+        "right": 87.1875,
+        "bottom": 19.311143,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 179,
+        "y": 114,
+        "left": 71.71875,
+        "top": 19.311143,
+        "right": 73.125,
+        "bottom": 17.978733,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 180,
+        "y": 114,
+        "left": 73.125,
+        "top": 19.311143,
+        "right": 74.53125,
+        "bottom": 17.978733,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 181,
+        "y": 114,
+        "left": 74.53125,
+        "top": 19.311143,
+        "right": 75.9375,
+        "bottom": 17.978733,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 182,
+        "y": 114,
+        "left": 75.9375,
+        "top": 19.311143,
+        "right": 77.34375,
+        "bottom": 17.978733,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 183,
+        "y": 114,
+        "left": 77.34375,
+        "top": 19.311143,
+        "right": 78.75,
+        "bottom": 17.978733,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 184,
+        "y": 114,
+        "left": 78.75,
+        "top": 19.311143,
+        "right": 80.15625,
+        "bottom": 17.978733,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 185,
+        "y": 114,
+        "left": 80.15625,
+        "top": 19.311143,
+        "right": 81.5625,
+        "bottom": 17.978733,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 186,
+        "y": 114,
+        "left": 81.5625,
+        "top": 19.311143,
+        "right": 82.96875,
+        "bottom": 17.978733,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 187,
+        "y": 114,
+        "left": 82.96875,
+        "top": 19.311143,
+        "right": 84.375,
+        "bottom": 17.978733,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 188,
+        "y": 114,
+        "left": 84.375,
+        "top": 19.311143,
+        "right": 85.78125,
+        "bottom": 17.978733,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 179,
+        "y": 115,
+        "left": 71.71875,
+        "top": 17.978733,
+        "right": 73.125,
+        "bottom": 16.636192,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 180,
+        "y": 115,
+        "left": 73.125,
+        "top": 17.978733,
+        "right": 74.53125,
+        "bottom": 16.636192,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 181,
+        "y": 115,
+        "left": 74.53125,
+        "top": 17.978733,
+        "right": 75.9375,
+        "bottom": 16.636192,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 182,
+        "y": 115,
+        "left": 75.9375,
+        "top": 17.978733,
+        "right": 77.34375,
+        "bottom": 16.636192,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 183,
+        "y": 115,
+        "left": 77.34375,
+        "top": 17.978733,
+        "right": 78.75,
+        "bottom": 16.636192,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 184,
+        "y": 115,
+        "left": 78.75,
+        "top": 17.978733,
+        "right": 80.15625,
+        "bottom": 16.636192,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 185,
+        "y": 115,
+        "left": 80.15625,
+        "top": 17.978733,
+        "right": 81.5625,
+        "bottom": 16.636192,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 186,
+        "y": 115,
+        "left": 81.5625,
+        "top": 17.978733,
+        "right": 82.96875,
+        "bottom": 16.636192,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 187,
+        "y": 115,
+        "left": 82.96875,
+        "top": 17.978733,
+        "right": 84.375,
+        "bottom": 16.636192,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 180,
+        "y": 116,
+        "left": 73.125,
+        "top": 16.636192,
+        "right": 74.53125,
+        "bottom": 15.284185,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 181,
+        "y": 116,
+        "left": 74.53125,
+        "top": 16.636192,
+        "right": 75.9375,
+        "bottom": 15.284185,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 182,
+        "y": 116,
+        "left": 75.9375,
+        "top": 16.636192,
+        "right": 77.34375,
+        "bottom": 15.284185,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 183,
+        "y": 116,
+        "left": 77.34375,
+        "top": 16.636192,
+        "right": 78.75,
+        "bottom": 15.284185,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 184,
+        "y": 116,
+        "left": 78.75,
+        "top": 16.636192,
+        "right": 80.15625,
+        "bottom": 15.284185,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 185,
+        "y": 116,
+        "left": 80.15625,
+        "top": 16.636192,
+        "right": 81.5625,
+        "bottom": 15.284185,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 186,
+        "y": 116,
+        "left": 81.5625,
+        "top": 16.636192,
+        "right": 82.96875,
+        "bottom": 15.284185,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 180,
+        "y": 117,
+        "left": 73.125,
+        "top": 15.284185,
+        "right": 74.53125,
+        "bottom": 13.923404,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 181,
+        "y": 117,
+        "left": 74.53125,
+        "top": 15.284185,
+        "right": 75.9375,
+        "bottom": 13.923404,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 182,
+        "y": 117,
+        "left": 75.9375,
+        "top": 15.284185,
+        "right": 77.34375,
+        "bottom": 13.923404,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 183,
+        "y": 117,
+        "left": 77.34375,
+        "top": 15.284185,
+        "right": 78.75,
+        "bottom": 13.923404,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 184,
+        "y": 117,
+        "left": 78.75,
+        "top": 15.284185,
+        "right": 80.15625,
+        "bottom": 13.923404,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 185,
+        "y": 117,
+        "left": 80.15625,
+        "top": 15.284185,
+        "right": 81.5625,
+        "bottom": 13.923404,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 181,
+        "y": 118,
+        "left": 74.53125,
+        "top": 13.923404,
+        "right": 75.9375,
+        "bottom": 12.554564,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 182,
+        "y": 118,
+        "left": 75.9375,
+        "top": 13.923404,
+        "right": 77.34375,
+        "bottom": 12.554564,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 183,
+        "y": 118,
+        "left": 77.34375,
+        "top": 13.923404,
+        "right": 78.75,
+        "bottom": 12.554564,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 184,
+        "y": 118,
+        "left": 78.75,
+        "top": 13.923404,
+        "right": 80.15625,
+        "bottom": 12.554564,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 185,
+        "y": 118,
+        "left": 80.15625,
+        "top": 13.923404,
+        "right": 81.5625,
+        "bottom": 12.554564,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 193,
+        "y": 118,
+        "left": 91.40625,
+        "top": 13.923404,
+        "right": 92.8125,
+        "bottom": 12.554564,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 194,
+        "y": 118,
+        "left": 92.8125,
+        "top": 13.923404,
+        "right": 94.21875,
+        "bottom": 12.554564,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 195,
+        "y": 118,
+        "left": 94.21875,
+        "top": 13.923404,
+        "right": 95.625,
+        "bottom": 12.554564,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 179,
+        "y": 119,
+        "left": 71.71875,
+        "top": 12.554564,
+        "right": 73.125,
+        "bottom": 11.178402,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 181,
+        "y": 119,
+        "left": 74.53125,
+        "top": 12.554564,
+        "right": 75.9375,
+        "bottom": 11.178402,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 182,
+        "y": 119,
+        "left": 75.9375,
+        "top": 12.554564,
+        "right": 77.34375,
+        "bottom": 11.178402,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 183,
+        "y": 119,
+        "left": 77.34375,
+        "top": 12.554564,
+        "right": 78.75,
+        "bottom": 11.178402,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 184,
+        "y": 119,
+        "left": 78.75,
+        "top": 12.554564,
+        "right": 80.15625,
+        "bottom": 11.178402,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 185,
+        "y": 119,
+        "left": 80.15625,
+        "top": 12.554564,
+        "right": 81.5625,
+        "bottom": 11.178402,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 193,
+        "y": 119,
+        "left": 91.40625,
+        "top": 12.554564,
+        "right": 92.8125,
+        "bottom": 11.178402,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 194,
+        "y": 119,
+        "left": 92.8125,
+        "top": 12.554564,
+        "right": 94.21875,
+        "bottom": 11.178402,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 179,
+        "y": 120,
+        "left": 71.71875,
+        "top": 11.178402,
+        "right": 73.125,
+        "bottom": 9.795678,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 180,
+        "y": 120,
+        "left": 73.125,
+        "top": 11.178402,
+        "right": 74.53125,
+        "bottom": 9.795678,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 181,
+        "y": 120,
+        "left": 74.53125,
+        "top": 11.178402,
+        "right": 75.9375,
+        "bottom": 9.795678,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 182,
+        "y": 120,
+        "left": 75.9375,
+        "top": 11.178402,
+        "right": 77.34375,
+        "bottom": 9.795678,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 183,
+        "y": 120,
+        "left": 77.34375,
+        "top": 11.178402,
+        "right": 78.75,
+        "bottom": 9.795678,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 184,
+        "y": 120,
+        "left": 78.75,
+        "top": 11.178402,
+        "right": 80.15625,
+        "bottom": 9.795678,
+        "countries": [
+            "sri_lanka",
+            "india"
+        ]
+    },
+    {
+        "x": 193,
+        "y": 120,
+        "left": 91.40625,
+        "top": 11.178402,
+        "right": 92.8125,
+        "bottom": 9.795678,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 182,
+        "y": 121,
+        "left": 75.9375,
+        "top": 9.795678,
+        "right": 77.34375,
+        "bottom": 8.407168,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 183,
+        "y": 121,
+        "left": 77.34375,
+        "top": 9.795678,
+        "right": 78.75,
+        "bottom": 8.407168,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 184,
+        "y": 121,
+        "left": 78.75,
+        "top": 9.795678,
+        "right": 80.15625,
+        "bottom": 8.407168,
+        "countries": [
+            "sri_lanka",
+            "india"
+        ]
+    },
+    {
+        "x": 193,
+        "y": 121,
+        "left": 91.40625,
+        "top": 9.795678,
+        "right": 92.8125,
+        "bottom": 8.407168,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 194,
+        "y": 121,
+        "left": 92.8125,
+        "top": 9.795678,
+        "right": 94.21875,
+        "bottom": 8.407168,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 179,
+        "y": 122,
+        "left": 71.71875,
+        "top": 8.407168,
+        "right": 73.125,
+        "bottom": 7.013668,
+        "countries": [
+            "maldives",
+            "india"
+        ]
+    },
+    {
+        "x": 182,
+        "y": 122,
+        "left": 75.9375,
+        "top": 8.407168,
+        "right": 77.34375,
+        "bottom": 7.013668,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 183,
+        "y": 122,
+        "left": 77.34375,
+        "top": 8.407168,
+        "right": 78.75,
+        "bottom": 7.013668,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 194,
+        "y": 122,
+        "left": 92.8125,
+        "top": 8.407168,
+        "right": 94.21875,
+        "bottom": 7.013668,
+        "countries": [
+            "india"
+        ]
+    },
+    {
+        "x": 194,
+        "y": 123,
+        "left": 92.8125,
+        "top": 7.013668,
+        "right": 94.21875,
+        "bottom": 5.615986,
+        "countries": [
+            "india"
+        ]
+    }
+]

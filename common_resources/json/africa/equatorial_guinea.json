@@ -1,0 +1,131 @@
+[
+    {
+        "x": 134,
+        "y": 125,
+        "left": 8.4375,
+        "top": 4.214943,
+        "right": 9.84375,
+        "bottom": 2.811371,
+        "countries": [
+            "cameroon",
+            "equatorial_guinea"
+        ]
+    },
+    {
+        "x": 134,
+        "y": 126,
+        "left": 8.4375,
+        "top": 2.811371,
+        "right": 9.84375,
+        "bottom": 1.406109,
+        "countries": [
+            "cameroon",
+            "equatorial_guinea"
+        ]
+    },
+    {
+        "x": 135,
+        "y": 126,
+        "left": 9.84375,
+        "top": 2.811371,
+        "right": 11.25,
+        "bottom": 1.406109,
+        "countries": [
+            "cameroon",
+            "equatorial_guinea"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 126,
+        "left": 11.25,
+        "top": 2.811371,
+        "right": 12.65625,
+        "bottom": 1.406109,
+        "countries": [
+            "cameroon",
+            "equatorial_guinea",
+            "gabon"
+        ]
+    },
+    {
+        "x": 133,
+        "y": 125,
+        "left": 7.03125,
+        "top": 4.214943,
+        "right": 8.4375,
+        "bottom": 2.811371,
+        "countries": [
+            "equatorial_guinea"
+        ]
+    },
+    {
+        "x": 134,
+        "y": 127,
+        "left": 8.4375,
+        "top": 1.406109,
+        "right": 9.84375,
+        "bottom": 0.0,
+        "countries": [
+            "equatorial_guinea",
+            "gabon"
+        ]
+    },
+    {
+        "x": 135,
+        "y": 127,
+        "left": 9.84375,
+        "top": 1.406109,
+        "right": 11.25,
+        "bottom": 0.0,
+        "countries": [
+            "equatorial_guinea",
+            "gabon"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 127,
+        "left": 11.25,
+        "top": 1.406109,
+        "right": 12.65625,
+        "bottom": 0.0,
+        "countries": [
+            "equatorial_guinea",
+            "gabon"
+        ]
+    },
+    {
+        "x": 131,
+        "y": 128,
+        "left": 4.21875,
+        "top": 0.0,
+        "right": 5.625,
+        "bottom": -1.406109,
+        "countries": [
+            "equatorial_guinea"
+        ]
+    },
+    {
+        "x": 131,
+        "y": 129,
+        "left": 4.21875,
+        "top": -1.406109,
+        "right": 5.625,
+        "bottom": -2.811371,
+        "countries": [
+            "equatorial_guinea"
+        ]
+    },
+    {
+        "x": 132,
+        "y": 129,
+        "left": 5.625,
+        "top": -1.406109,
+        "right": 7.03125,
+        "bottom": -2.811371,
+        "countries": [
+            "equatorial_guinea"
+        ]
+    }
+]

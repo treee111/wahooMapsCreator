@@ -1,0 +1,452 @@
+[
+    {
+        "x": 209,
+        "y": 124,
+        "left": 113.90625,
+        "top": 5.615986,
+        "right": 115.3125,
+        "bottom": 4.214943,
+        "countries": [
+            "brunei",
+            "malaysia"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 124,
+        "left": 115.3125,
+        "top": 5.615986,
+        "right": 116.71875,
+        "bottom": 4.214943,
+        "countries": [
+            "brunei",
+            "malaysia",
+            "indonesia"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 125,
+        "left": 113.90625,
+        "top": 4.214943,
+        "right": 115.3125,
+        "bottom": 2.811371,
+        "countries": [
+            "brunei",
+            "malaysia",
+            "indonesia"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 124,
+        "left": 116.71875,
+        "top": 5.615986,
+        "right": 118.125,
+        "bottom": 4.214943,
+        "countries": [
+            "indonesia",
+            "malaysia"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 125,
+        "left": 99.84375,
+        "top": 4.214943,
+        "right": 101.25,
+        "bottom": 2.811371,
+        "countries": [
+            "indonesia",
+            "malaysia"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 125,
+        "left": 115.3125,
+        "top": 4.214943,
+        "right": 116.71875,
+        "bottom": 2.811371,
+        "countries": [
+            "indonesia",
+            "malaysia"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 125,
+        "left": 116.71875,
+        "top": 4.214943,
+        "right": 118.125,
+        "bottom": 2.811371,
+        "countries": [
+            "indonesia",
+            "malaysia"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 126,
+        "left": 101.25,
+        "top": 2.811371,
+        "right": 102.65625,
+        "bottom": 1.406109,
+        "countries": [
+            "indonesia",
+            "malaysia"
+        ]
+    },
+    {
+        "x": 205,
+        "y": 126,
+        "left": 108.28125,
+        "top": 2.811371,
+        "right": 109.6875,
+        "bottom": 1.406109,
+        "countries": [
+            "indonesia",
+            "malaysia"
+        ]
+    },
+    {
+        "x": 206,
+        "y": 126,
+        "left": 109.6875,
+        "top": 2.811371,
+        "right": 111.09375,
+        "bottom": 1.406109,
+        "countries": [
+            "indonesia",
+            "malaysia"
+        ]
+    },
+    {
+        "x": 207,
+        "y": 126,
+        "left": 111.09375,
+        "top": 2.811371,
+        "right": 112.5,
+        "bottom": 1.406109,
+        "countries": [
+            "indonesia",
+            "malaysia"
+        ]
+    },
+    {
+        "x": 208,
+        "y": 126,
+        "left": 112.5,
+        "top": 2.811371,
+        "right": 113.90625,
+        "bottom": 1.406109,
+        "countries": [
+            "indonesia",
+            "malaysia"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 126,
+        "left": 113.90625,
+        "top": 2.811371,
+        "right": 115.3125,
+        "bottom": 1.406109,
+        "countries": [
+            "indonesia",
+            "malaysia"
+        ]
+    },
+    {
+        "x": 201,
+        "y": 127,
+        "left": 102.65625,
+        "top": 1.406109,
+        "right": 104.0625,
+        "bottom": 0.0,
+        "countries": [
+            "indonesia",
+            "singapore",
+            "malaysia"
+        ]
+    },
+    {
+        "x": 202,
+        "y": 127,
+        "left": 104.0625,
+        "top": 1.406109,
+        "right": 105.46875,
+        "bottom": 0.0,
+        "countries": [
+            "indonesia",
+            "singapore",
+            "malaysia"
+        ]
+    },
+    {
+        "x": 206,
+        "y": 127,
+        "left": 109.6875,
+        "top": 1.406109,
+        "right": 111.09375,
+        "bottom": 0.0,
+        "countries": [
+            "indonesia",
+            "malaysia"
+        ]
+    },
+    {
+        "x": 207,
+        "y": 127,
+        "left": 111.09375,
+        "top": 1.406109,
+        "right": 112.5,
+        "bottom": 0.0,
+        "countries": [
+            "indonesia",
+            "malaysia"
+        ]
+    },
+    {
+        "x": 208,
+        "y": 127,
+        "left": 112.5,
+        "top": 1.406109,
+        "right": 113.90625,
+        "bottom": 0.0,
+        "countries": [
+            "indonesia",
+            "malaysia"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 122,
+        "left": 116.71875,
+        "top": 8.407168,
+        "right": 118.125,
+        "bottom": 7.013668,
+        "countries": [
+            "philippines",
+            "malaysia"
+        ]
+    },
+    {
+        "x": 198,
+        "y": 123,
+        "left": 98.4375,
+        "top": 7.013668,
+        "right": 99.84375,
+        "bottom": 5.615986,
+        "countries": [
+            "thailand",
+            "malaysia"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 123,
+        "left": 99.84375,
+        "top": 7.013668,
+        "right": 101.25,
+        "bottom": 5.615986,
+        "countries": [
+            "thailand",
+            "malaysia"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 123,
+        "left": 101.25,
+        "top": 7.013668,
+        "right": 102.65625,
+        "bottom": 5.615986,
+        "countries": [
+            "thailand",
+            "malaysia"
+        ]
+    },
+    {
+        "x": 201,
+        "y": 123,
+        "left": 102.65625,
+        "top": 7.013668,
+        "right": 104.0625,
+        "bottom": 5.615986,
+        "countries": [
+            "malaysia"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 123,
+        "left": 115.3125,
+        "top": 7.013668,
+        "right": 116.71875,
+        "bottom": 5.615986,
+        "countries": [
+            "malaysia"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 123,
+        "left": 116.71875,
+        "top": 7.013668,
+        "right": 118.125,
+        "bottom": 5.615986,
+        "countries": [
+            "philippines",
+            "malaysia"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 123,
+        "left": 118.125,
+        "top": 7.013668,
+        "right": 119.53125,
+        "bottom": 5.615986,
+        "countries": [
+            "philippines",
+            "malaysia"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 124,
+        "left": 99.84375,
+        "top": 5.615986,
+        "right": 101.25,
+        "bottom": 4.214943,
+        "countries": [
+            "thailand",
+            "malaysia"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 124,
+        "left": 101.25,
+        "top": 5.615986,
+        "right": 102.65625,
+        "bottom": 4.214943,
+        "countries": [
+            "malaysia"
+        ]
+    },
+    {
+        "x": 201,
+        "y": 124,
+        "left": 102.65625,
+        "top": 5.615986,
+        "right": 104.0625,
+        "bottom": 4.214943,
+        "countries": [
+            "malaysia"
+        ]
+    },
+    {
+        "x": 208,
+        "y": 124,
+        "left": 112.5,
+        "top": 5.615986,
+        "right": 113.90625,
+        "bottom": 4.214943,
+        "countries": [
+            "malaysia"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 124,
+        "left": 118.125,
+        "top": 5.615986,
+        "right": 119.53125,
+        "bottom": 4.214943,
+        "countries": [
+            "philippines",
+            "malaysia"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 125,
+        "left": 101.25,
+        "top": 4.214943,
+        "right": 102.65625,
+        "bottom": 2.811371,
+        "countries": [
+            "malaysia"
+        ]
+    },
+    {
+        "x": 201,
+        "y": 125,
+        "left": 102.65625,
+        "top": 4.214943,
+        "right": 104.0625,
+        "bottom": 2.811371,
+        "countries": [
+            "malaysia"
+        ]
+    },
+    {
+        "x": 202,
+        "y": 125,
+        "left": 104.0625,
+        "top": 4.214943,
+        "right": 105.46875,
+        "bottom": 2.811371,
+        "countries": [
+            "malaysia"
+        ]
+    },
+    {
+        "x": 207,
+        "y": 125,
+        "left": 111.09375,
+        "top": 4.214943,
+        "right": 112.5,
+        "bottom": 2.811371,
+        "countries": [
+            "malaysia"
+        ]
+    },
+    {
+        "x": 208,
+        "y": 125,
+        "left": 112.5,
+        "top": 4.214943,
+        "right": 113.90625,
+        "bottom": 2.811371,
+        "countries": [
+            "malaysia"
+        ]
+    },
+    {
+        "x": 201,
+        "y": 126,
+        "left": 102.65625,
+        "top": 2.811371,
+        "right": 104.0625,
+        "bottom": 1.406109,
+        "countries": [
+            "singapore",
+            "malaysia"
+        ]
+    },
+    {
+        "x": 202,
+        "y": 126,
+        "left": 104.0625,
+        "top": 2.811371,
+        "right": 105.46875,
+        "bottom": 1.406109,
+        "countries": [
+            "singapore",
+            "malaysia"
+        ]
+    }
+]

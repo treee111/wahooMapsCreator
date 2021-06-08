@@ -1,0 +1,396 @@
+[
+    {
+        "x": 83,
+        "y": 144,
+        "left": -63.28125,
+        "top": -21.943046,
+        "right": -61.875,
+        "bottom": -23.241346,
+        "countries": [
+            "bolivia",
+            "argentina",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 84,
+        "y": 144,
+        "left": -61.875,
+        "top": -21.943046,
+        "right": -60.46875,
+        "bottom": -23.241346,
+        "countries": [
+            "argentina",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 84,
+        "y": 145,
+        "left": -61.875,
+        "top": -23.241346,
+        "right": -60.46875,
+        "bottom": -24.527135,
+        "countries": [
+            "argentina",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 85,
+        "y": 145,
+        "left": -60.46875,
+        "top": -23.241346,
+        "right": -59.0625,
+        "bottom": -24.527135,
+        "countries": [
+            "argentina",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 85,
+        "y": 146,
+        "left": -60.46875,
+        "top": -24.527135,
+        "right": -59.0625,
+        "bottom": -25.799891,
+        "countries": [
+            "argentina",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 146,
+        "left": -59.0625,
+        "top": -24.527135,
+        "right": -57.65625,
+        "bottom": -25.799891,
+        "countries": [
+            "argentina",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 87,
+        "y": 146,
+        "left": -57.65625,
+        "top": -24.527135,
+        "right": -56.25,
+        "bottom": -25.799891,
+        "countries": [
+            "argentina",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 89,
+        "y": 146,
+        "left": -54.84375,
+        "top": -24.527135,
+        "right": -53.4375,
+        "bottom": -25.799891,
+        "countries": [
+            "brazil",
+            "argentina",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 147,
+        "left": -59.0625,
+        "top": -25.799891,
+        "right": -57.65625,
+        "bottom": -27.059126,
+        "countries": [
+            "argentina",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 88,
+        "y": 147,
+        "left": -56.25,
+        "top": -25.799891,
+        "right": -54.84375,
+        "bottom": -27.059126,
+        "countries": [
+            "argentina",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 89,
+        "y": 147,
+        "left": -54.84375,
+        "top": -25.799891,
+        "right": -53.4375,
+        "bottom": -27.059126,
+        "countries": [
+            "brazil",
+            "argentina",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 148,
+        "left": -59.0625,
+        "top": -27.059126,
+        "right": -57.65625,
+        "bottom": -28.304381,
+        "countries": [
+            "argentina",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 87,
+        "y": 148,
+        "left": -57.65625,
+        "top": -27.059126,
+        "right": -56.25,
+        "bottom": -28.304381,
+        "countries": [
+            "argentina",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 88,
+        "y": 148,
+        "left": -56.25,
+        "top": -27.059126,
+        "right": -54.84375,
+        "bottom": -28.304381,
+        "countries": [
+            "brazil",
+            "argentina",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 85,
+        "y": 141,
+        "left": -60.46875,
+        "top": -17.978733,
+        "right": -59.0625,
+        "bottom": -19.311143,
+        "countries": [
+            "bolivia",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 83,
+        "y": 142,
+        "left": -63.28125,
+        "top": -19.311143,
+        "right": -61.875,
+        "bottom": -20.632784,
+        "countries": [
+            "bolivia",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 84,
+        "y": 142,
+        "left": -61.875,
+        "top": -19.311143,
+        "right": -60.46875,
+        "bottom": -20.632784,
+        "countries": [
+            "bolivia",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 85,
+        "y": 142,
+        "left": -60.46875,
+        "top": -19.311143,
+        "right": -59.0625,
+        "bottom": -20.632784,
+        "countries": [
+            "bolivia",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 142,
+        "left": -59.0625,
+        "top": -19.311143,
+        "right": -57.65625,
+        "bottom": -20.632784,
+        "countries": [
+            "brazil",
+            "bolivia",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 83,
+        "y": 143,
+        "left": -63.28125,
+        "top": -20.632784,
+        "right": -61.875,
+        "bottom": -21.943046,
+        "countries": [
+            "bolivia",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 143,
+        "left": -59.0625,
+        "top": -20.632784,
+        "right": -57.65625,
+        "bottom": -21.943046,
+        "countries": [
+            "brazil",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 144,
+        "left": -59.0625,
+        "top": -21.943046,
+        "right": -57.65625,
+        "bottom": -23.241346,
+        "countries": [
+            "brazil",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 87,
+        "y": 144,
+        "left": -57.65625,
+        "top": -21.943046,
+        "right": -56.25,
+        "bottom": -23.241346,
+        "countries": [
+            "brazil",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 88,
+        "y": 144,
+        "left": -56.25,
+        "top": -21.943046,
+        "right": -54.84375,
+        "bottom": -23.241346,
+        "countries": [
+            "brazil",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 88,
+        "y": 145,
+        "left": -56.25,
+        "top": -23.241346,
+        "right": -54.84375,
+        "bottom": -24.527135,
+        "countries": [
+            "brazil",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 89,
+        "y": 145,
+        "left": -54.84375,
+        "top": -23.241346,
+        "right": -53.4375,
+        "bottom": -24.527135,
+        "countries": [
+            "brazil",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 84,
+        "y": 143,
+        "left": -61.875,
+        "top": -20.632784,
+        "right": -60.46875,
+        "bottom": -21.943046,
+        "countries": [
+            "paraguay"
+        ]
+    },
+    {
+        "x": 85,
+        "y": 143,
+        "left": -60.46875,
+        "top": -20.632784,
+        "right": -59.0625,
+        "bottom": -21.943046,
+        "countries": [
+            "paraguay"
+        ]
+    },
+    {
+        "x": 85,
+        "y": 144,
+        "left": -60.46875,
+        "top": -21.943046,
+        "right": -59.0625,
+        "bottom": -23.241346,
+        "countries": [
+            "paraguay"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 145,
+        "left": -59.0625,
+        "top": -23.241346,
+        "right": -57.65625,
+        "bottom": -24.527135,
+        "countries": [
+            "paraguay"
+        ]
+    },
+    {
+        "x": 87,
+        "y": 145,
+        "left": -57.65625,
+        "top": -23.241346,
+        "right": -56.25,
+        "bottom": -24.527135,
+        "countries": [
+            "paraguay"
+        ]
+    },
+    {
+        "x": 88,
+        "y": 146,
+        "left": -56.25,
+        "top": -24.527135,
+        "right": -54.84375,
+        "bottom": -25.799891,
+        "countries": [
+            "paraguay"
+        ]
+    },
+    {
+        "x": 87,
+        "y": 147,
+        "left": -57.65625,
+        "top": -25.799891,
+        "right": -56.25,
+        "bottom": -27.059126,
+        "countries": [
+            "paraguay"
+        ]
+    }
+]

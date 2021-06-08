@@ -1,0 +1,605 @@
+[
+    {
+        "x": 201,
+        "y": 117,
+        "left": 102.65625,
+        "top": 15.284185,
+        "right": 104.0625,
+        "bottom": 13.923404,
+        "countries": [
+            "cambodia",
+            "thailand"
+        ]
+    },
+    {
+        "x": 202,
+        "y": 117,
+        "left": 104.0625,
+        "top": 15.284185,
+        "right": 105.46875,
+        "bottom": 13.923404,
+        "countries": [
+            "cambodia",
+            "thailand",
+            "laos"
+        ]
+    },
+    {
+        "x": 203,
+        "y": 117,
+        "left": 105.46875,
+        "top": 15.284185,
+        "right": 106.875,
+        "bottom": 13.923404,
+        "countries": [
+            "cambodia",
+            "thailand",
+            "laos"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 118,
+        "left": 101.25,
+        "top": 13.923404,
+        "right": 102.65625,
+        "bottom": 12.554564,
+        "countries": [
+            "cambodia",
+            "thailand"
+        ]
+    },
+    {
+        "x": 201,
+        "y": 118,
+        "left": 102.65625,
+        "top": 13.923404,
+        "right": 104.0625,
+        "bottom": 12.554564,
+        "countries": [
+            "cambodia",
+            "thailand"
+        ]
+    },
+    {
+        "x": 201,
+        "y": 119,
+        "left": 102.65625,
+        "top": 12.554564,
+        "right": 104.0625,
+        "bottom": 11.178402,
+        "countries": [
+            "cambodia",
+            "thailand"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 113,
+        "left": 99.84375,
+        "top": 20.632784,
+        "right": 101.25,
+        "bottom": 19.311143,
+        "countries": [
+            "thailand",
+            "laos",
+            "myanmar"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 113,
+        "left": 101.25,
+        "top": 20.632784,
+        "right": 102.65625,
+        "bottom": 19.311143,
+        "countries": [
+            "thailand",
+            "laos"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 114,
+        "left": 99.84375,
+        "top": 19.311143,
+        "right": 101.25,
+        "bottom": 17.978733,
+        "countries": [
+            "thailand",
+            "laos"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 114,
+        "left": 101.25,
+        "top": 19.311143,
+        "right": 102.65625,
+        "bottom": 17.978733,
+        "countries": [
+            "thailand",
+            "laos"
+        ]
+    },
+    {
+        "x": 201,
+        "y": 114,
+        "left": 102.65625,
+        "top": 19.311143,
+        "right": 104.0625,
+        "bottom": 17.978733,
+        "countries": [
+            "vietnam",
+            "thailand",
+            "laos"
+        ]
+    },
+    {
+        "x": 202,
+        "y": 114,
+        "left": 104.0625,
+        "top": 19.311143,
+        "right": 105.46875,
+        "bottom": 17.978733,
+        "countries": [
+            "vietnam",
+            "thailand",
+            "laos"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 115,
+        "left": 99.84375,
+        "top": 17.978733,
+        "right": 101.25,
+        "bottom": 16.636192,
+        "countries": [
+            "thailand",
+            "laos"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 115,
+        "left": 101.25,
+        "top": 17.978733,
+        "right": 102.65625,
+        "bottom": 16.636192,
+        "countries": [
+            "thailand",
+            "laos"
+        ]
+    },
+    {
+        "x": 201,
+        "y": 115,
+        "left": 102.65625,
+        "top": 17.978733,
+        "right": 104.0625,
+        "bottom": 16.636192,
+        "countries": [
+            "thailand",
+            "laos"
+        ]
+    },
+    {
+        "x": 202,
+        "y": 115,
+        "left": 104.0625,
+        "top": 17.978733,
+        "right": 105.46875,
+        "bottom": 16.636192,
+        "countries": [
+            "thailand",
+            "laos"
+        ]
+    },
+    {
+        "x": 202,
+        "y": 116,
+        "left": 104.0625,
+        "top": 16.636192,
+        "right": 105.46875,
+        "bottom": 15.284185,
+        "countries": [
+            "thailand",
+            "laos"
+        ]
+    },
+    {
+        "x": 203,
+        "y": 116,
+        "left": 105.46875,
+        "top": 16.636192,
+        "right": 106.875,
+        "bottom": 15.284185,
+        "countries": [
+            "vietnam",
+            "thailand",
+            "laos"
+        ]
+    },
+    {
+        "x": 198,
+        "y": 123,
+        "left": 98.4375,
+        "top": 7.013668,
+        "right": 99.84375,
+        "bottom": 5.615986,
+        "countries": [
+            "thailand",
+            "malaysia"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 123,
+        "left": 99.84375,
+        "top": 7.013668,
+        "right": 101.25,
+        "bottom": 5.615986,
+        "countries": [
+            "thailand",
+            "malaysia"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 123,
+        "left": 101.25,
+        "top": 7.013668,
+        "right": 102.65625,
+        "bottom": 5.615986,
+        "countries": [
+            "thailand",
+            "malaysia"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 124,
+        "left": 99.84375,
+        "top": 5.615986,
+        "right": 101.25,
+        "bottom": 4.214943,
+        "countries": [
+            "thailand",
+            "malaysia"
+        ]
+    },
+    {
+        "x": 197,
+        "y": 113,
+        "left": 97.03125,
+        "top": 20.632784,
+        "right": 98.4375,
+        "bottom": 19.311143,
+        "countries": [
+            "thailand",
+            "myanmar"
+        ]
+    },
+    {
+        "x": 198,
+        "y": 113,
+        "left": 98.4375,
+        "top": 20.632784,
+        "right": 99.84375,
+        "bottom": 19.311143,
+        "countries": [
+            "thailand",
+            "myanmar"
+        ]
+    },
+    {
+        "x": 197,
+        "y": 114,
+        "left": 97.03125,
+        "top": 19.311143,
+        "right": 98.4375,
+        "bottom": 17.978733,
+        "countries": [
+            "thailand",
+            "myanmar"
+        ]
+    },
+    {
+        "x": 197,
+        "y": 115,
+        "left": 97.03125,
+        "top": 17.978733,
+        "right": 98.4375,
+        "bottom": 16.636192,
+        "countries": [
+            "thailand",
+            "myanmar"
+        ]
+    },
+    {
+        "x": 198,
+        "y": 115,
+        "left": 98.4375,
+        "top": 17.978733,
+        "right": 99.84375,
+        "bottom": 16.636192,
+        "countries": [
+            "thailand",
+            "myanmar"
+        ]
+    },
+    {
+        "x": 197,
+        "y": 116,
+        "left": 97.03125,
+        "top": 16.636192,
+        "right": 98.4375,
+        "bottom": 15.284185,
+        "countries": [
+            "thailand",
+            "myanmar"
+        ]
+    },
+    {
+        "x": 198,
+        "y": 116,
+        "left": 98.4375,
+        "top": 16.636192,
+        "right": 99.84375,
+        "bottom": 15.284185,
+        "countries": [
+            "thailand",
+            "myanmar"
+        ]
+    },
+    {
+        "x": 197,
+        "y": 117,
+        "left": 97.03125,
+        "top": 15.284185,
+        "right": 98.4375,
+        "bottom": 13.923404,
+        "countries": [
+            "thailand",
+            "myanmar"
+        ]
+    },
+    {
+        "x": 198,
+        "y": 117,
+        "left": 98.4375,
+        "top": 15.284185,
+        "right": 99.84375,
+        "bottom": 13.923404,
+        "countries": [
+            "thailand",
+            "myanmar"
+        ]
+    },
+    {
+        "x": 198,
+        "y": 118,
+        "left": 98.4375,
+        "top": 13.923404,
+        "right": 99.84375,
+        "bottom": 12.554564,
+        "countries": [
+            "thailand",
+            "myanmar"
+        ]
+    },
+    {
+        "x": 198,
+        "y": 119,
+        "left": 98.4375,
+        "top": 12.554564,
+        "right": 99.84375,
+        "bottom": 11.178402,
+        "countries": [
+            "thailand",
+            "myanmar"
+        ]
+    },
+    {
+        "x": 197,
+        "y": 120,
+        "left": 97.03125,
+        "top": 11.178402,
+        "right": 98.4375,
+        "bottom": 9.795678,
+        "countries": [
+            "thailand",
+            "myanmar"
+        ]
+    },
+    {
+        "x": 198,
+        "y": 120,
+        "left": 98.4375,
+        "top": 11.178402,
+        "right": 99.84375,
+        "bottom": 9.795678,
+        "countries": [
+            "thailand",
+            "myanmar"
+        ]
+    },
+    {
+        "x": 197,
+        "y": 121,
+        "left": 97.03125,
+        "top": 9.795678,
+        "right": 98.4375,
+        "bottom": 8.407168,
+        "countries": [
+            "thailand",
+            "myanmar"
+        ]
+    },
+    {
+        "x": 198,
+        "y": 114,
+        "left": 98.4375,
+        "top": 19.311143,
+        "right": 99.84375,
+        "bottom": 17.978733,
+        "countries": [
+            "thailand"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 116,
+        "left": 99.84375,
+        "top": 16.636192,
+        "right": 101.25,
+        "bottom": 15.284185,
+        "countries": [
+            "thailand"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 116,
+        "left": 101.25,
+        "top": 16.636192,
+        "right": 102.65625,
+        "bottom": 15.284185,
+        "countries": [
+            "thailand"
+        ]
+    },
+    {
+        "x": 201,
+        "y": 116,
+        "left": 102.65625,
+        "top": 16.636192,
+        "right": 104.0625,
+        "bottom": 15.284185,
+        "countries": [
+            "thailand"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 117,
+        "left": 99.84375,
+        "top": 15.284185,
+        "right": 101.25,
+        "bottom": 13.923404,
+        "countries": [
+            "thailand"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 117,
+        "left": 101.25,
+        "top": 15.284185,
+        "right": 102.65625,
+        "bottom": 13.923404,
+        "countries": [
+            "thailand"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 118,
+        "left": 99.84375,
+        "top": 13.923404,
+        "right": 101.25,
+        "bottom": 12.554564,
+        "countries": [
+            "thailand"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 119,
+        "left": 99.84375,
+        "top": 12.554564,
+        "right": 101.25,
+        "bottom": 11.178402,
+        "countries": [
+            "thailand"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 119,
+        "left": 101.25,
+        "top": 12.554564,
+        "right": 102.65625,
+        "bottom": 11.178402,
+        "countries": [
+            "thailand"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 120,
+        "left": 99.84375,
+        "top": 11.178402,
+        "right": 101.25,
+        "bottom": 9.795678,
+        "countries": [
+            "thailand"
+        ]
+    },
+    {
+        "x": 198,
+        "y": 121,
+        "left": 98.4375,
+        "top": 9.795678,
+        "right": 99.84375,
+        "bottom": 8.407168,
+        "countries": [
+            "thailand"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 121,
+        "left": 99.84375,
+        "top": 9.795678,
+        "right": 101.25,
+        "bottom": 8.407168,
+        "countries": [
+            "thailand"
+        ]
+    },
+    {
+        "x": 197,
+        "y": 122,
+        "left": 97.03125,
+        "top": 8.407168,
+        "right": 98.4375,
+        "bottom": 7.013668,
+        "countries": [
+            "thailand"
+        ]
+    },
+    {
+        "x": 198,
+        "y": 122,
+        "left": 98.4375,
+        "top": 8.407168,
+        "right": 99.84375,
+        "bottom": 7.013668,
+        "countries": [
+            "thailand"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 122,
+        "left": 99.84375,
+        "top": 8.407168,
+        "right": 101.25,
+        "bottom": 7.013668,
+        "countries": [
+            "thailand"
+        ]
+    }
+]

@@ -1,0 +1,357 @@
+[
+    {
+        "x": 50,
+        "y": 99,
+        "left": -109.6875,
+        "top": 37.71859,
+        "right": -108.28125,
+        "bottom": 36.597889,
+        "countries": [
+            "new_mexico",
+            "utah",
+            "colorado",
+            "arizona"
+        ]
+    },
+    {
+        "x": 50,
+        "y": 95,
+        "left": -109.6875,
+        "top": 42.032974,
+        "right": -108.28125,
+        "bottom": 40.979898,
+        "countries": [
+            "colorado",
+            "wyoming",
+            "utah"
+        ]
+    },
+    {
+        "x": 51,
+        "y": 95,
+        "left": -108.28125,
+        "top": 42.032974,
+        "right": -106.875,
+        "bottom": 40.979898,
+        "countries": [
+            "colorado",
+            "wyoming"
+        ]
+    },
+    {
+        "x": 52,
+        "y": 95,
+        "left": -106.875,
+        "top": 42.032974,
+        "right": -105.46875,
+        "bottom": 40.979898,
+        "countries": [
+            "colorado",
+            "wyoming"
+        ]
+    },
+    {
+        "x": 53,
+        "y": 95,
+        "left": -105.46875,
+        "top": 42.032974,
+        "right": -104.0625,
+        "bottom": 40.979898,
+        "countries": [
+            "colorado",
+            "wyoming"
+        ]
+    },
+    {
+        "x": 54,
+        "y": 95,
+        "left": -104.0625,
+        "top": 42.032974,
+        "right": -102.65625,
+        "bottom": 40.979898,
+        "countries": [
+            "nebraska",
+            "colorado",
+            "wyoming"
+        ]
+    },
+    {
+        "x": 55,
+        "y": 95,
+        "left": -102.65625,
+        "top": 42.032974,
+        "right": -101.25,
+        "bottom": 40.979898,
+        "countries": [
+            "nebraska",
+            "colorado"
+        ]
+    },
+    {
+        "x": 50,
+        "y": 96,
+        "left": -109.6875,
+        "top": 40.979898,
+        "right": -108.28125,
+        "bottom": 39.909736,
+        "countries": [
+            "colorado",
+            "utah"
+        ]
+    },
+    {
+        "x": 51,
+        "y": 96,
+        "left": -108.28125,
+        "top": 40.979898,
+        "right": -106.875,
+        "bottom": 39.909736,
+        "countries": [
+            "colorado"
+        ]
+    },
+    {
+        "x": 52,
+        "y": 96,
+        "left": -106.875,
+        "top": 40.979898,
+        "right": -105.46875,
+        "bottom": 39.909736,
+        "countries": [
+            "colorado"
+        ]
+    },
+    {
+        "x": 53,
+        "y": 96,
+        "left": -105.46875,
+        "top": 40.979898,
+        "right": -104.0625,
+        "bottom": 39.909736,
+        "countries": [
+            "colorado"
+        ]
+    },
+    {
+        "x": 54,
+        "y": 96,
+        "left": -104.0625,
+        "top": 40.979898,
+        "right": -102.65625,
+        "bottom": 39.909736,
+        "countries": [
+            "colorado"
+        ]
+    },
+    {
+        "x": 55,
+        "y": 96,
+        "left": -102.65625,
+        "top": 40.979898,
+        "right": -101.25,
+        "bottom": 39.909736,
+        "countries": [
+            "nebraska",
+            "kansas",
+            "colorado"
+        ]
+    },
+    {
+        "x": 50,
+        "y": 97,
+        "left": -109.6875,
+        "top": 39.909736,
+        "right": -108.28125,
+        "bottom": 38.822591,
+        "countries": [
+            "colorado",
+            "utah"
+        ]
+    },
+    {
+        "x": 51,
+        "y": 97,
+        "left": -108.28125,
+        "top": 39.909736,
+        "right": -106.875,
+        "bottom": 38.822591,
+        "countries": [
+            "colorado"
+        ]
+    },
+    {
+        "x": 52,
+        "y": 97,
+        "left": -106.875,
+        "top": 39.909736,
+        "right": -105.46875,
+        "bottom": 38.822591,
+        "countries": [
+            "colorado"
+        ]
+    },
+    {
+        "x": 53,
+        "y": 97,
+        "left": -105.46875,
+        "top": 39.909736,
+        "right": -104.0625,
+        "bottom": 38.822591,
+        "countries": [
+            "colorado"
+        ]
+    },
+    {
+        "x": 54,
+        "y": 97,
+        "left": -104.0625,
+        "top": 39.909736,
+        "right": -102.65625,
+        "bottom": 38.822591,
+        "countries": [
+            "colorado"
+        ]
+    },
+    {
+        "x": 55,
+        "y": 97,
+        "left": -102.65625,
+        "top": 39.909736,
+        "right": -101.25,
+        "bottom": 38.822591,
+        "countries": [
+            "kansas",
+            "colorado"
+        ]
+    },
+    {
+        "x": 50,
+        "y": 98,
+        "left": -109.6875,
+        "top": 38.822591,
+        "right": -108.28125,
+        "bottom": 37.71859,
+        "countries": [
+            "colorado",
+            "utah"
+        ]
+    },
+    {
+        "x": 51,
+        "y": 98,
+        "left": -108.28125,
+        "top": 38.822591,
+        "right": -106.875,
+        "bottom": 37.71859,
+        "countries": [
+            "colorado"
+        ]
+    },
+    {
+        "x": 52,
+        "y": 98,
+        "left": -106.875,
+        "top": 38.822591,
+        "right": -105.46875,
+        "bottom": 37.71859,
+        "countries": [
+            "colorado"
+        ]
+    },
+    {
+        "x": 53,
+        "y": 98,
+        "left": -105.46875,
+        "top": 38.822591,
+        "right": -104.0625,
+        "bottom": 37.71859,
+        "countries": [
+            "colorado"
+        ]
+    },
+    {
+        "x": 54,
+        "y": 98,
+        "left": -104.0625,
+        "top": 38.822591,
+        "right": -102.65625,
+        "bottom": 37.71859,
+        "countries": [
+            "colorado"
+        ]
+    },
+    {
+        "x": 55,
+        "y": 98,
+        "left": -102.65625,
+        "top": 38.822591,
+        "right": -101.25,
+        "bottom": 37.71859,
+        "countries": [
+            "kansas",
+            "colorado"
+        ]
+    },
+    {
+        "x": 51,
+        "y": 99,
+        "left": -108.28125,
+        "top": 37.71859,
+        "right": -106.875,
+        "bottom": 36.597889,
+        "countries": [
+            "new_mexico",
+            "colorado"
+        ]
+    },
+    {
+        "x": 52,
+        "y": 99,
+        "left": -106.875,
+        "top": 37.71859,
+        "right": -105.46875,
+        "bottom": 36.597889,
+        "countries": [
+            "new_mexico",
+            "colorado"
+        ]
+    },
+    {
+        "x": 53,
+        "y": 99,
+        "left": -105.46875,
+        "top": 37.71859,
+        "right": -104.0625,
+        "bottom": 36.597889,
+        "countries": [
+            "new_mexico",
+            "colorado"
+        ]
+    },
+    {
+        "x": 54,
+        "y": 99,
+        "left": -104.0625,
+        "top": 37.71859,
+        "right": -102.65625,
+        "bottom": 36.597889,
+        "countries": [
+            "new_mexico",
+            "oklahoma",
+            "colorado"
+        ]
+    },
+    {
+        "x": 55,
+        "y": 99,
+        "left": -102.65625,
+        "top": 37.71859,
+        "right": -101.25,
+        "bottom": 36.597889,
+        "countries": [
+            "oklahoma",
+            "kansas",
+            "colorado"
+        ]
+    }
+]

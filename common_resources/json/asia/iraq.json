@@ -1,0 +1,489 @@
+[
+    {
+        "x": 159,
+        "y": 99,
+        "left": 43.59375,
+        "top": 37.71859,
+        "right": 45.0,
+        "bottom": 36.597889,
+        "countries": [
+            "iran",
+            "turkey",
+            "iraq"
+        ]
+    },
+    {
+        "x": 160,
+        "y": 99,
+        "left": 45.0,
+        "top": 37.71859,
+        "right": 46.40625,
+        "bottom": 36.597889,
+        "countries": [
+            "iran",
+            "iraq"
+        ]
+    },
+    {
+        "x": 160,
+        "y": 100,
+        "left": 45.0,
+        "top": 36.597889,
+        "right": 46.40625,
+        "bottom": 35.46067,
+        "countries": [
+            "iran",
+            "iraq"
+        ]
+    },
+    {
+        "x": 160,
+        "y": 101,
+        "left": 45.0,
+        "top": 35.46067,
+        "right": 46.40625,
+        "bottom": 34.307144,
+        "countries": [
+            "iran",
+            "iraq"
+        ]
+    },
+    {
+        "x": 160,
+        "y": 102,
+        "left": 45.0,
+        "top": 34.307144,
+        "right": 46.40625,
+        "bottom": 33.137551,
+        "countries": [
+            "iran",
+            "iraq"
+        ]
+    },
+    {
+        "x": 160,
+        "y": 103,
+        "left": 45.0,
+        "top": 33.137551,
+        "right": 46.40625,
+        "bottom": 31.952162,
+        "countries": [
+            "iran",
+            "iraq"
+        ]
+    },
+    {
+        "x": 161,
+        "y": 103,
+        "left": 46.40625,
+        "top": 33.137551,
+        "right": 47.8125,
+        "bottom": 31.952162,
+        "countries": [
+            "iran",
+            "iraq"
+        ]
+    },
+    {
+        "x": 161,
+        "y": 104,
+        "left": 46.40625,
+        "top": 31.952162,
+        "right": 47.8125,
+        "bottom": 30.751278,
+        "countries": [
+            "iran",
+            "iraq"
+        ]
+    },
+    {
+        "x": 162,
+        "y": 104,
+        "left": 47.8125,
+        "top": 31.952162,
+        "right": 49.21875,
+        "bottom": 30.751278,
+        "countries": [
+            "iran",
+            "iraq"
+        ]
+    },
+    {
+        "x": 162,
+        "y": 105,
+        "left": 47.8125,
+        "top": 30.751278,
+        "right": 49.21875,
+        "bottom": 29.53523,
+        "countries": [
+            "iran",
+            "iraq",
+            "kuwait"
+        ]
+    },
+    {
+        "x": 157,
+        "y": 99,
+        "left": 40.78125,
+        "top": 37.71859,
+        "right": 42.1875,
+        "bottom": 36.597889,
+        "countries": [
+            "turkey",
+            "syria",
+            "iraq"
+        ]
+    },
+    {
+        "x": 158,
+        "y": 99,
+        "left": 42.1875,
+        "top": 37.71859,
+        "right": 43.59375,
+        "bottom": 36.597889,
+        "countries": [
+            "turkey",
+            "syria",
+            "iraq"
+        ]
+    },
+    {
+        "x": 157,
+        "y": 100,
+        "left": 40.78125,
+        "top": 36.597889,
+        "right": 42.1875,
+        "bottom": 35.46067,
+        "countries": [
+            "syria",
+            "iraq"
+        ]
+    },
+    {
+        "x": 158,
+        "y": 100,
+        "left": 42.1875,
+        "top": 36.597889,
+        "right": 43.59375,
+        "bottom": 35.46067,
+        "countries": [
+            "iraq"
+        ]
+    },
+    {
+        "x": 159,
+        "y": 100,
+        "left": 43.59375,
+        "top": 36.597889,
+        "right": 45.0,
+        "bottom": 35.46067,
+        "countries": [
+            "iraq"
+        ]
+    },
+    {
+        "x": 156,
+        "y": 101,
+        "left": 39.375,
+        "top": 35.46067,
+        "right": 40.78125,
+        "bottom": 34.307144,
+        "countries": [
+            "syria",
+            "iraq"
+        ]
+    },
+    {
+        "x": 157,
+        "y": 101,
+        "left": 40.78125,
+        "top": 35.46067,
+        "right": 42.1875,
+        "bottom": 34.307144,
+        "countries": [
+            "syria",
+            "iraq"
+        ]
+    },
+    {
+        "x": 158,
+        "y": 101,
+        "left": 42.1875,
+        "top": 35.46067,
+        "right": 43.59375,
+        "bottom": 34.307144,
+        "countries": [
+            "iraq"
+        ]
+    },
+    {
+        "x": 159,
+        "y": 101,
+        "left": 43.59375,
+        "top": 35.46067,
+        "right": 45.0,
+        "bottom": 34.307144,
+        "countries": [
+            "iraq"
+        ]
+    },
+    {
+        "x": 155,
+        "y": 102,
+        "left": 37.96875,
+        "top": 34.307144,
+        "right": 39.375,
+        "bottom": 33.137551,
+        "countries": [
+            "jordan",
+            "syria",
+            "iraq"
+        ]
+    },
+    {
+        "x": 156,
+        "y": 102,
+        "left": 39.375,
+        "top": 34.307144,
+        "right": 40.78125,
+        "bottom": 33.137551,
+        "countries": [
+            "syria",
+            "iraq"
+        ]
+    },
+    {
+        "x": 157,
+        "y": 102,
+        "left": 40.78125,
+        "top": 34.307144,
+        "right": 42.1875,
+        "bottom": 33.137551,
+        "countries": [
+            "iraq"
+        ]
+    },
+    {
+        "x": 158,
+        "y": 102,
+        "left": 42.1875,
+        "top": 34.307144,
+        "right": 43.59375,
+        "bottom": 33.137551,
+        "countries": [
+            "iraq"
+        ]
+    },
+    {
+        "x": 159,
+        "y": 102,
+        "left": 43.59375,
+        "top": 34.307144,
+        "right": 45.0,
+        "bottom": 33.137551,
+        "countries": [
+            "iraq"
+        ]
+    },
+    {
+        "x": 155,
+        "y": 103,
+        "left": 37.96875,
+        "top": 33.137551,
+        "right": 39.375,
+        "bottom": 31.952162,
+        "countries": [
+            "saudi_arabia",
+            "jordan",
+            "syria",
+            "iraq"
+        ]
+    },
+    {
+        "x": 156,
+        "y": 103,
+        "left": 39.375,
+        "top": 33.137551,
+        "right": 40.78125,
+        "bottom": 31.952162,
+        "countries": [
+            "saudi_arabia",
+            "iraq"
+        ]
+    },
+    {
+        "x": 157,
+        "y": 103,
+        "left": 40.78125,
+        "top": 33.137551,
+        "right": 42.1875,
+        "bottom": 31.952162,
+        "countries": [
+            "iraq"
+        ]
+    },
+    {
+        "x": 158,
+        "y": 103,
+        "left": 42.1875,
+        "top": 33.137551,
+        "right": 43.59375,
+        "bottom": 31.952162,
+        "countries": [
+            "iraq"
+        ]
+    },
+    {
+        "x": 159,
+        "y": 103,
+        "left": 43.59375,
+        "top": 33.137551,
+        "right": 45.0,
+        "bottom": 31.952162,
+        "countries": [
+            "iraq"
+        ]
+    },
+    {
+        "x": 156,
+        "y": 104,
+        "left": 39.375,
+        "top": 31.952162,
+        "right": 40.78125,
+        "bottom": 30.751278,
+        "countries": [
+            "saudi_arabia",
+            "iraq"
+        ]
+    },
+    {
+        "x": 157,
+        "y": 104,
+        "left": 40.78125,
+        "top": 31.952162,
+        "right": 42.1875,
+        "bottom": 30.751278,
+        "countries": [
+            "saudi_arabia",
+            "iraq"
+        ]
+    },
+    {
+        "x": 158,
+        "y": 104,
+        "left": 42.1875,
+        "top": 31.952162,
+        "right": 43.59375,
+        "bottom": 30.751278,
+        "countries": [
+            "saudi_arabia",
+            "iraq"
+        ]
+    },
+    {
+        "x": 159,
+        "y": 104,
+        "left": 43.59375,
+        "top": 31.952162,
+        "right": 45.0,
+        "bottom": 30.751278,
+        "countries": [
+            "iraq"
+        ]
+    },
+    {
+        "x": 160,
+        "y": 104,
+        "left": 45.0,
+        "top": 31.952162,
+        "right": 46.40625,
+        "bottom": 30.751278,
+        "countries": [
+            "iraq"
+        ]
+    },
+    {
+        "x": 158,
+        "y": 105,
+        "left": 42.1875,
+        "top": 30.751278,
+        "right": 43.59375,
+        "bottom": 29.53523,
+        "countries": [
+            "saudi_arabia",
+            "iraq"
+        ]
+    },
+    {
+        "x": 159,
+        "y": 105,
+        "left": 43.59375,
+        "top": 30.751278,
+        "right": 45.0,
+        "bottom": 29.53523,
+        "countries": [
+            "saudi_arabia",
+            "iraq"
+        ]
+    },
+    {
+        "x": 160,
+        "y": 105,
+        "left": 45.0,
+        "top": 30.751278,
+        "right": 46.40625,
+        "bottom": 29.53523,
+        "countries": [
+            "iraq"
+        ]
+    },
+    {
+        "x": 161,
+        "y": 105,
+        "left": 46.40625,
+        "top": 30.751278,
+        "right": 47.8125,
+        "bottom": 29.53523,
+        "countries": [
+            "iraq",
+            "kuwait"
+        ]
+    },
+    {
+        "x": 159,
+        "y": 106,
+        "left": 43.59375,
+        "top": 29.53523,
+        "right": 45.0,
+        "bottom": 28.304381,
+        "countries": [
+            "saudi_arabia",
+            "iraq"
+        ]
+    },
+    {
+        "x": 160,
+        "y": 106,
+        "left": 45.0,
+        "top": 29.53523,
+        "right": 46.40625,
+        "bottom": 28.304381,
+        "countries": [
+            "saudi_arabia",
+            "iraq"
+        ]
+    },
+    {
+        "x": 161,
+        "y": 106,
+        "left": 46.40625,
+        "top": 29.53523,
+        "right": 47.8125,
+        "bottom": 28.304381,
+        "countries": [
+            "saudi_arabia",
+            "iraq",
+            "kuwait"
+        ]
+    }
+]

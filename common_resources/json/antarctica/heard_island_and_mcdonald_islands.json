@@ -1,0 +1,24 @@
+[
+    {
+        "x": 179,
+        "y": 172,
+        "left": 71.71875,
+        "top": -52.48278,
+        "right": 73.125,
+        "bottom": -53.330873,
+        "countries": [
+            "heard_island_and_mcdonald_islands"
+        ]
+    },
+    {
+        "x": 180,
+        "y": 172,
+        "left": 73.125,
+        "top": -52.48278,
+        "right": 74.53125,
+        "bottom": -53.330873,
+        "countries": [
+            "heard_island_and_mcdonald_islands"
+        ]
+    }
+]

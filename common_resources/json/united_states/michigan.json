@@ -1,0 +1,343 @@
+[
+    {
+        "x": 64,
+        "y": 88,
+        "left": -90.0,
+        "top": 48.922499,
+        "right": -88.59375,
+        "bottom": 47.989922,
+        "countries": [
+            "michigan",
+            "minnesota",
+            "canada"
+        ]
+    },
+    {
+        "x": 65,
+        "y": 88,
+        "left": -88.59375,
+        "top": 48.922499,
+        "right": -87.1875,
+        "bottom": 47.989922,
+        "countries": [
+            "michigan",
+            "canada"
+        ]
+    },
+    {
+        "x": 64,
+        "y": 89,
+        "left": -90.0,
+        "top": 47.989922,
+        "right": -88.59375,
+        "bottom": 47.040182,
+        "countries": [
+            "michigan",
+            "minnesota",
+            "canada"
+        ]
+    },
+    {
+        "x": 67,
+        "y": 90,
+        "left": -85.78125,
+        "top": 47.040182,
+        "right": -84.375,
+        "bottom": 46.073231,
+        "countries": [
+            "michigan",
+            "canada"
+        ]
+    },
+    {
+        "x": 68,
+        "y": 90,
+        "left": -84.375,
+        "top": 47.040182,
+        "right": -82.96875,
+        "bottom": 46.073231,
+        "countries": [
+            "michigan",
+            "canada"
+        ]
+    },
+    {
+        "x": 68,
+        "y": 91,
+        "left": -84.375,
+        "top": 46.073231,
+        "right": -82.96875,
+        "bottom": 45.089036,
+        "countries": [
+            "michigan",
+            "canada"
+        ]
+    },
+    {
+        "x": 69,
+        "y": 93,
+        "left": -82.96875,
+        "top": 44.087585,
+        "right": -81.5625,
+        "bottom": 43.068888,
+        "countries": [
+            "michigan",
+            "canada"
+        ]
+    },
+    {
+        "x": 68,
+        "y": 94,
+        "left": -84.375,
+        "top": 43.068888,
+        "right": -82.96875,
+        "bottom": 42.032974,
+        "countries": [
+            "michigan",
+            "canada"
+        ]
+    },
+    {
+        "x": 69,
+        "y": 94,
+        "left": -82.96875,
+        "top": 43.068888,
+        "right": -81.5625,
+        "bottom": 42.032974,
+        "countries": [
+            "michigan",
+            "canada"
+        ]
+    },
+    {
+        "x": 68,
+        "y": 95,
+        "left": -84.375,
+        "top": 42.032974,
+        "right": -82.96875,
+        "bottom": 40.979898,
+        "countries": [
+            "michigan",
+            "ohio",
+            "canada"
+        ]
+    },
+    {
+        "x": 66,
+        "y": 95,
+        "left": -87.1875,
+        "top": 42.032974,
+        "right": -85.78125,
+        "bottom": 40.979898,
+        "countries": [
+            "michigan",
+            "indiana"
+        ]
+    },
+    {
+        "x": 67,
+        "y": 95,
+        "left": -85.78125,
+        "top": 42.032974,
+        "right": -84.375,
+        "bottom": 40.979898,
+        "countries": [
+            "michigan",
+            "indiana",
+            "ohio"
+        ]
+    },
+    {
+        "x": 65,
+        "y": 89,
+        "left": -88.59375,
+        "top": 47.989922,
+        "right": -87.1875,
+        "bottom": 47.040182,
+        "countries": [
+            "michigan"
+        ]
+    },
+    {
+        "x": 63,
+        "y": 90,
+        "left": -91.40625,
+        "top": 47.040182,
+        "right": -90.0,
+        "bottom": 46.073231,
+        "countries": [
+            "michigan",
+            "wisconsin"
+        ]
+    },
+    {
+        "x": 64,
+        "y": 90,
+        "left": -90.0,
+        "top": 47.040182,
+        "right": -88.59375,
+        "bottom": 46.073231,
+        "countries": [
+            "michigan",
+            "wisconsin"
+        ]
+    },
+    {
+        "x": 65,
+        "y": 90,
+        "left": -88.59375,
+        "top": 47.040182,
+        "right": -87.1875,
+        "bottom": 46.073231,
+        "countries": [
+            "michigan"
+        ]
+    },
+    {
+        "x": 66,
+        "y": 90,
+        "left": -87.1875,
+        "top": 47.040182,
+        "right": -85.78125,
+        "bottom": 46.073231,
+        "countries": [
+            "michigan"
+        ]
+    },
+    {
+        "x": 64,
+        "y": 91,
+        "left": -90.0,
+        "top": 46.073231,
+        "right": -88.59375,
+        "bottom": 45.089036,
+        "countries": [
+            "michigan",
+            "wisconsin"
+        ]
+    },
+    {
+        "x": 65,
+        "y": 91,
+        "left": -88.59375,
+        "top": 46.073231,
+        "right": -87.1875,
+        "bottom": 45.089036,
+        "countries": [
+            "michigan",
+            "wisconsin"
+        ]
+    },
+    {
+        "x": 66,
+        "y": 91,
+        "left": -87.1875,
+        "top": 46.073231,
+        "right": -85.78125,
+        "bottom": 45.089036,
+        "countries": [
+            "michigan",
+            "wisconsin"
+        ]
+    },
+    {
+        "x": 67,
+        "y": 91,
+        "left": -85.78125,
+        "top": 46.073231,
+        "right": -84.375,
+        "bottom": 45.089036,
+        "countries": [
+            "michigan"
+        ]
+    },
+    {
+        "x": 66,
+        "y": 92,
+        "left": -87.1875,
+        "top": 45.089036,
+        "right": -85.78125,
+        "bottom": 44.087585,
+        "countries": [
+            "michigan",
+            "wisconsin"
+        ]
+    },
+    {
+        "x": 67,
+        "y": 92,
+        "left": -85.78125,
+        "top": 45.089036,
+        "right": -84.375,
+        "bottom": 44.087585,
+        "countries": [
+            "michigan"
+        ]
+    },
+    {
+        "x": 68,
+        "y": 92,
+        "left": -84.375,
+        "top": 45.089036,
+        "right": -82.96875,
+        "bottom": 44.087585,
+        "countries": [
+            "michigan"
+        ]
+    },
+    {
+        "x": 66,
+        "y": 93,
+        "left": -87.1875,
+        "top": 44.087585,
+        "right": -85.78125,
+        "bottom": 43.068888,
+        "countries": [
+            "michigan"
+        ]
+    },
+    {
+        "x": 67,
+        "y": 93,
+        "left": -85.78125,
+        "top": 44.087585,
+        "right": -84.375,
+        "bottom": 43.068888,
+        "countries": [
+            "michigan"
+        ]
+    },
+    {
+        "x": 68,
+        "y": 93,
+        "left": -84.375,
+        "top": 44.087585,
+        "right": -82.96875,
+        "bottom": 43.068888,
+        "countries": [
+            "michigan"
+        ]
+    },
+    {
+        "x": 66,
+        "y": 94,
+        "left": -87.1875,
+        "top": 43.068888,
+        "right": -85.78125,
+        "bottom": 42.032974,
+        "countries": [
+            "michigan"
+        ]
+    },
+    {
+        "x": 67,
+        "y": 94,
+        "left": -85.78125,
+        "top": 43.068888,
+        "right": -84.375,
+        "bottom": 42.032974,
+        "countries": [
+            "michigan"
+        ]
+    }
+]

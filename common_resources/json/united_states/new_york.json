@@ -1,0 +1,257 @@
+[
+    {
+        "x": 73,
+        "y": 92,
+        "left": -77.34375,
+        "top": 45.089036,
+        "right": -75.9375,
+        "bottom": 44.087585,
+        "countries": [
+            "new_york",
+            "canada"
+        ]
+    },
+    {
+        "x": 74,
+        "y": 92,
+        "left": -75.9375,
+        "top": 45.089036,
+        "right": -74.53125,
+        "bottom": 44.087585,
+        "countries": [
+            "new_york",
+            "canada"
+        ]
+    },
+    {
+        "x": 75,
+        "y": 92,
+        "left": -74.53125,
+        "top": 45.089036,
+        "right": -73.125,
+        "bottom": 44.087585,
+        "countries": [
+            "vermont",
+            "new_york",
+            "canada"
+        ]
+    },
+    {
+        "x": 71,
+        "y": 93,
+        "left": -80.15625,
+        "top": 44.087585,
+        "right": -78.75,
+        "bottom": 43.068888,
+        "countries": [
+            "new_york",
+            "canada"
+        ]
+    },
+    {
+        "x": 72,
+        "y": 93,
+        "left": -78.75,
+        "top": 44.087585,
+        "right": -77.34375,
+        "bottom": 43.068888,
+        "countries": [
+            "new_york",
+            "canada"
+        ]
+    },
+    {
+        "x": 73,
+        "y": 93,
+        "left": -77.34375,
+        "top": 44.087585,
+        "right": -75.9375,
+        "bottom": 43.068888,
+        "countries": [
+            "new_york",
+            "canada"
+        ]
+    },
+    {
+        "x": 71,
+        "y": 94,
+        "left": -80.15625,
+        "top": 43.068888,
+        "right": -78.75,
+        "bottom": 42.032974,
+        "countries": [
+            "pennsylvania",
+            "new_york",
+            "canada"
+        ]
+    },
+    {
+        "x": 75,
+        "y": 94,
+        "left": -74.53125,
+        "top": 43.068888,
+        "right": -73.125,
+        "bottom": 42.032974,
+        "countries": [
+            "connecticut",
+            "new_york",
+            "vermont",
+            "massachusetts"
+        ]
+    },
+    {
+        "x": 75,
+        "y": 95,
+        "left": -74.53125,
+        "top": 42.032974,
+        "right": -73.125,
+        "bottom": 40.979898,
+        "countries": [
+            "connecticut",
+            "new_jersey",
+            "new_york"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 95,
+        "left": -73.125,
+        "top": 42.032974,
+        "right": -71.71875,
+        "bottom": 40.979898,
+        "countries": [
+            "connecticut",
+            "new_york",
+            "rhode_island",
+            "massachusetts"
+        ]
+    },
+    {
+        "x": 74,
+        "y": 95,
+        "left": -75.9375,
+        "top": 42.032974,
+        "right": -74.53125,
+        "bottom": 40.979898,
+        "countries": [
+            "pennsylvania",
+            "new_jersey",
+            "new_york"
+        ]
+    },
+    {
+        "x": 75,
+        "y": 96,
+        "left": -74.53125,
+        "top": 40.979898,
+        "right": -73.125,
+        "bottom": 39.909736,
+        "countries": [
+            "new_jersey",
+            "new_york"
+        ]
+    },
+    {
+        "x": 74,
+        "y": 93,
+        "left": -75.9375,
+        "top": 44.087585,
+        "right": -74.53125,
+        "bottom": 43.068888,
+        "countries": [
+            "new_york"
+        ]
+    },
+    {
+        "x": 75,
+        "y": 93,
+        "left": -74.53125,
+        "top": 44.087585,
+        "right": -73.125,
+        "bottom": 43.068888,
+        "countries": [
+            "vermont",
+            "new_york"
+        ]
+    },
+    {
+        "x": 72,
+        "y": 94,
+        "left": -78.75,
+        "top": 43.068888,
+        "right": -77.34375,
+        "bottom": 42.032974,
+        "countries": [
+            "new_york"
+        ]
+    },
+    {
+        "x": 73,
+        "y": 94,
+        "left": -77.34375,
+        "top": 43.068888,
+        "right": -75.9375,
+        "bottom": 42.032974,
+        "countries": [
+            "new_york"
+        ]
+    },
+    {
+        "x": 74,
+        "y": 94,
+        "left": -75.9375,
+        "top": 43.068888,
+        "right": -74.53125,
+        "bottom": 42.032974,
+        "countries": [
+            "new_york"
+        ]
+    },
+    {
+        "x": 71,
+        "y": 95,
+        "left": -80.15625,
+        "top": 42.032974,
+        "right": -78.75,
+        "bottom": 40.979898,
+        "countries": [
+            "pennsylvania",
+            "new_york"
+        ]
+    },
+    {
+        "x": 72,
+        "y": 95,
+        "left": -78.75,
+        "top": 42.032974,
+        "right": -77.34375,
+        "bottom": 40.979898,
+        "countries": [
+            "pennsylvania",
+            "new_york"
+        ]
+    },
+    {
+        "x": 73,
+        "y": 95,
+        "left": -77.34375,
+        "top": 42.032974,
+        "right": -75.9375,
+        "bottom": 40.979898,
+        "countries": [
+            "pennsylvania",
+            "new_york"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 96,
+        "left": -73.125,
+        "top": 40.979898,
+        "right": -71.71875,
+        "bottom": 39.909736,
+        "countries": [
+            "new_york"
+        ]
+    }
+]

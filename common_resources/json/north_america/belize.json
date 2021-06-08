@@ -1,0 +1,76 @@
+[
+    {
+        "x": 64,
+        "y": 114,
+        "left": -90.0,
+        "top": 19.311143,
+        "right": -88.59375,
+        "bottom": 17.978733,
+        "countries": [
+            "belize",
+            "mexico"
+        ]
+    },
+    {
+        "x": 65,
+        "y": 114,
+        "left": -88.59375,
+        "top": 19.311143,
+        "right": -87.1875,
+        "bottom": 17.978733,
+        "countries": [
+            "belize",
+            "mexico"
+        ]
+    },
+    {
+        "x": 64,
+        "y": 115,
+        "left": -90.0,
+        "top": 17.978733,
+        "right": -88.59375,
+        "bottom": 16.636192,
+        "countries": [
+            "belize",
+            "guatemala",
+            "mexico"
+        ]
+    },
+    {
+        "x": 65,
+        "y": 115,
+        "left": -88.59375,
+        "top": 17.978733,
+        "right": -87.1875,
+        "bottom": 16.636192,
+        "countries": [
+            "belize"
+        ]
+    },
+    {
+        "x": 64,
+        "y": 116,
+        "left": -90.0,
+        "top": 16.636192,
+        "right": -88.59375,
+        "bottom": 15.284185,
+        "countries": [
+            "belize",
+            "guatemala",
+            "honduras"
+        ]
+    },
+    {
+        "x": 65,
+        "y": 116,
+        "left": -88.59375,
+        "top": 16.636192,
+        "right": -87.1875,
+        "bottom": 15.284185,
+        "countries": [
+            "belize",
+            "guatemala",
+            "honduras"
+        ]
+    }
+]

@@ -1,0 +1,834 @@
+[
+    {
+        "x": 158,
+        "y": 118,
+        "left": 42.1875,
+        "top": 13.923404,
+        "right": 43.59375,
+        "bottom": 12.554564,
+        "countries": [
+            "yemen",
+            "ethiopia",
+            "djibouti",
+            "eritrea"
+        ]
+    },
+    {
+        "x": 157,
+        "y": 119,
+        "left": 40.78125,
+        "top": 12.554564,
+        "right": 42.1875,
+        "bottom": 11.178402,
+        "countries": [
+            "ethiopia",
+            "djibouti"
+        ]
+    },
+    {
+        "x": 158,
+        "y": 119,
+        "left": 42.1875,
+        "top": 12.554564,
+        "right": 43.59375,
+        "bottom": 11.178402,
+        "countries": [
+            "somalia",
+            "ethiopia",
+            "djibouti",
+            "eritrea"
+        ]
+    },
+    {
+        "x": 157,
+        "y": 120,
+        "left": 40.78125,
+        "top": 11.178402,
+        "right": 42.1875,
+        "bottom": 9.795678,
+        "countries": [
+            "ethiopia",
+            "djibouti"
+        ]
+    },
+    {
+        "x": 158,
+        "y": 120,
+        "left": 42.1875,
+        "top": 11.178402,
+        "right": 43.59375,
+        "bottom": 9.795678,
+        "countries": [
+            "somalia",
+            "ethiopia",
+            "djibouti"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 117,
+        "left": 35.15625,
+        "top": 15.284185,
+        "right": 36.5625,
+        "bottom": 13.923404,
+        "countries": [
+            "sudan",
+            "ethiopia",
+            "eritrea"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 117,
+        "left": 36.5625,
+        "top": 15.284185,
+        "right": 37.96875,
+        "bottom": 13.923404,
+        "countries": [
+            "ethiopia",
+            "eritrea"
+        ]
+    },
+    {
+        "x": 155,
+        "y": 117,
+        "left": 37.96875,
+        "top": 15.284185,
+        "right": 39.375,
+        "bottom": 13.923404,
+        "countries": [
+            "ethiopia",
+            "eritrea"
+        ]
+    },
+    {
+        "x": 156,
+        "y": 117,
+        "left": 39.375,
+        "top": 15.284185,
+        "right": 40.78125,
+        "bottom": 13.923404,
+        "countries": [
+            "ethiopia",
+            "eritrea"
+        ]
+    },
+    {
+        "x": 157,
+        "y": 117,
+        "left": 40.78125,
+        "top": 15.284185,
+        "right": 42.1875,
+        "bottom": 13.923404,
+        "countries": [
+            "yemen",
+            "ethiopia",
+            "eritrea"
+        ]
+    },
+    {
+        "x": 157,
+        "y": 118,
+        "left": 40.78125,
+        "top": 13.923404,
+        "right": 42.1875,
+        "bottom": 12.554564,
+        "countries": [
+            "ethiopia",
+            "eritrea"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 118,
+        "left": 35.15625,
+        "top": 13.923404,
+        "right": 36.5625,
+        "bottom": 12.554564,
+        "countries": [
+            "sudan",
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 118,
+        "left": 36.5625,
+        "top": 13.923404,
+        "right": 37.96875,
+        "bottom": 12.554564,
+        "countries": [
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 155,
+        "y": 118,
+        "left": 37.96875,
+        "top": 13.923404,
+        "right": 39.375,
+        "bottom": 12.554564,
+        "countries": [
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 156,
+        "y": 118,
+        "left": 39.375,
+        "top": 13.923404,
+        "right": 40.78125,
+        "bottom": 12.554564,
+        "countries": [
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 119,
+        "left": 33.75,
+        "top": 12.554564,
+        "right": 35.15625,
+        "bottom": 11.178402,
+        "countries": [
+            "sudan",
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 119,
+        "left": 35.15625,
+        "top": 12.554564,
+        "right": 36.5625,
+        "bottom": 11.178402,
+        "countries": [
+            "sudan",
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 119,
+        "left": 36.5625,
+        "top": 12.554564,
+        "right": 37.96875,
+        "bottom": 11.178402,
+        "countries": [
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 155,
+        "y": 119,
+        "left": 37.96875,
+        "top": 12.554564,
+        "right": 39.375,
+        "bottom": 11.178402,
+        "countries": [
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 156,
+        "y": 119,
+        "left": 39.375,
+        "top": 12.554564,
+        "right": 40.78125,
+        "bottom": 11.178402,
+        "countries": [
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 120,
+        "left": 33.75,
+        "top": 11.178402,
+        "right": 35.15625,
+        "bottom": 9.795678,
+        "countries": [
+            "sudan",
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 120,
+        "left": 35.15625,
+        "top": 11.178402,
+        "right": 36.5625,
+        "bottom": 9.795678,
+        "countries": [
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 120,
+        "left": 36.5625,
+        "top": 11.178402,
+        "right": 37.96875,
+        "bottom": 9.795678,
+        "countries": [
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 155,
+        "y": 120,
+        "left": 37.96875,
+        "top": 11.178402,
+        "right": 39.375,
+        "bottom": 9.795678,
+        "countries": [
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 156,
+        "y": 120,
+        "left": 39.375,
+        "top": 11.178402,
+        "right": 40.78125,
+        "bottom": 9.795678,
+        "countries": [
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 121,
+        "left": 32.34375,
+        "top": 9.795678,
+        "right": 33.75,
+        "bottom": 8.407168,
+        "countries": [
+            "sudan",
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 121,
+        "left": 33.75,
+        "top": 9.795678,
+        "right": 35.15625,
+        "bottom": 8.407168,
+        "countries": [
+            "sudan",
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 121,
+        "left": 35.15625,
+        "top": 9.795678,
+        "right": 36.5625,
+        "bottom": 8.407168,
+        "countries": [
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 121,
+        "left": 36.5625,
+        "top": 9.795678,
+        "right": 37.96875,
+        "bottom": 8.407168,
+        "countries": [
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 155,
+        "y": 121,
+        "left": 37.96875,
+        "top": 9.795678,
+        "right": 39.375,
+        "bottom": 8.407168,
+        "countries": [
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 156,
+        "y": 121,
+        "left": 39.375,
+        "top": 9.795678,
+        "right": 40.78125,
+        "bottom": 8.407168,
+        "countries": [
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 157,
+        "y": 121,
+        "left": 40.78125,
+        "top": 9.795678,
+        "right": 42.1875,
+        "bottom": 8.407168,
+        "countries": [
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 158,
+        "y": 121,
+        "left": 42.1875,
+        "top": 9.795678,
+        "right": 43.59375,
+        "bottom": 8.407168,
+        "countries": [
+            "somalia",
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 159,
+        "y": 121,
+        "left": 43.59375,
+        "top": 9.795678,
+        "right": 45.0,
+        "bottom": 8.407168,
+        "countries": [
+            "somalia",
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 160,
+        "y": 121,
+        "left": 45.0,
+        "top": 9.795678,
+        "right": 46.40625,
+        "bottom": 8.407168,
+        "countries": [
+            "somalia",
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 122,
+        "left": 32.34375,
+        "top": 8.407168,
+        "right": 33.75,
+        "bottom": 7.013668,
+        "countries": [
+            "sudan",
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 122,
+        "left": 33.75,
+        "top": 8.407168,
+        "right": 35.15625,
+        "bottom": 7.013668,
+        "countries": [
+            "sudan",
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 122,
+        "left": 35.15625,
+        "top": 8.407168,
+        "right": 36.5625,
+        "bottom": 7.013668,
+        "countries": [
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 122,
+        "left": 36.5625,
+        "top": 8.407168,
+        "right": 37.96875,
+        "bottom": 7.013668,
+        "countries": [
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 155,
+        "y": 122,
+        "left": 37.96875,
+        "top": 8.407168,
+        "right": 39.375,
+        "bottom": 7.013668,
+        "countries": [
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 156,
+        "y": 122,
+        "left": 39.375,
+        "top": 8.407168,
+        "right": 40.78125,
+        "bottom": 7.013668,
+        "countries": [
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 157,
+        "y": 122,
+        "left": 40.78125,
+        "top": 8.407168,
+        "right": 42.1875,
+        "bottom": 7.013668,
+        "countries": [
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 158,
+        "y": 122,
+        "left": 42.1875,
+        "top": 8.407168,
+        "right": 43.59375,
+        "bottom": 7.013668,
+        "countries": [
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 159,
+        "y": 122,
+        "left": 43.59375,
+        "top": 8.407168,
+        "right": 45.0,
+        "bottom": 7.013668,
+        "countries": [
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 160,
+        "y": 122,
+        "left": 45.0,
+        "top": 8.407168,
+        "right": 46.40625,
+        "bottom": 7.013668,
+        "countries": [
+            "somalia",
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 161,
+        "y": 122,
+        "left": 46.40625,
+        "top": 8.407168,
+        "right": 47.8125,
+        "bottom": 7.013668,
+        "countries": [
+            "somalia",
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 162,
+        "y": 122,
+        "left": 47.8125,
+        "top": 8.407168,
+        "right": 49.21875,
+        "bottom": 7.013668,
+        "countries": [
+            "somalia",
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 123,
+        "left": 33.75,
+        "top": 7.013668,
+        "right": 35.15625,
+        "bottom": 5.615986,
+        "countries": [
+            "sudan",
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 123,
+        "left": 35.15625,
+        "top": 7.013668,
+        "right": 36.5625,
+        "bottom": 5.615986,
+        "countries": [
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 123,
+        "left": 36.5625,
+        "top": 7.013668,
+        "right": 37.96875,
+        "bottom": 5.615986,
+        "countries": [
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 155,
+        "y": 123,
+        "left": 37.96875,
+        "top": 7.013668,
+        "right": 39.375,
+        "bottom": 5.615986,
+        "countries": [
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 156,
+        "y": 123,
+        "left": 39.375,
+        "top": 7.013668,
+        "right": 40.78125,
+        "bottom": 5.615986,
+        "countries": [
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 157,
+        "y": 123,
+        "left": 40.78125,
+        "top": 7.013668,
+        "right": 42.1875,
+        "bottom": 5.615986,
+        "countries": [
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 158,
+        "y": 123,
+        "left": 42.1875,
+        "top": 7.013668,
+        "right": 43.59375,
+        "bottom": 5.615986,
+        "countries": [
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 159,
+        "y": 123,
+        "left": 43.59375,
+        "top": 7.013668,
+        "right": 45.0,
+        "bottom": 5.615986,
+        "countries": [
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 160,
+        "y": 123,
+        "left": 45.0,
+        "top": 7.013668,
+        "right": 46.40625,
+        "bottom": 5.615986,
+        "countries": [
+            "somalia",
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 161,
+        "y": 123,
+        "left": 46.40625,
+        "top": 7.013668,
+        "right": 47.8125,
+        "bottom": 5.615986,
+        "countries": [
+            "somalia",
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 124,
+        "left": 33.75,
+        "top": 5.615986,
+        "right": 35.15625,
+        "bottom": 4.214943,
+        "countries": [
+            "kenya",
+            "sudan",
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 124,
+        "left": 35.15625,
+        "top": 5.615986,
+        "right": 36.5625,
+        "bottom": 4.214943,
+        "countries": [
+            "kenya",
+            "sudan",
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 124,
+        "left": 36.5625,
+        "top": 5.615986,
+        "right": 37.96875,
+        "bottom": 4.214943,
+        "countries": [
+            "kenya",
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 155,
+        "y": 124,
+        "left": 37.96875,
+        "top": 5.615986,
+        "right": 39.375,
+        "bottom": 4.214943,
+        "countries": [
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 156,
+        "y": 124,
+        "left": 39.375,
+        "top": 5.615986,
+        "right": 40.78125,
+        "bottom": 4.214943,
+        "countries": [
+            "kenya",
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 157,
+        "y": 124,
+        "left": 40.78125,
+        "top": 5.615986,
+        "right": 42.1875,
+        "bottom": 4.214943,
+        "countries": [
+            "kenya",
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 158,
+        "y": 124,
+        "left": 42.1875,
+        "top": 5.615986,
+        "right": 43.59375,
+        "bottom": 4.214943,
+        "countries": [
+            "somalia",
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 159,
+        "y": 124,
+        "left": 43.59375,
+        "top": 5.615986,
+        "right": 45.0,
+        "bottom": 4.214943,
+        "countries": [
+            "somalia",
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 160,
+        "y": 124,
+        "left": 45.0,
+        "top": 5.615986,
+        "right": 46.40625,
+        "bottom": 4.214943,
+        "countries": [
+            "somalia",
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 125,
+        "left": 36.5625,
+        "top": 4.214943,
+        "right": 37.96875,
+        "bottom": 2.811371,
+        "countries": [
+            "kenya",
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 155,
+        "y": 125,
+        "left": 37.96875,
+        "top": 4.214943,
+        "right": 39.375,
+        "bottom": 2.811371,
+        "countries": [
+            "kenya",
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 156,
+        "y": 125,
+        "left": 39.375,
+        "top": 4.214943,
+        "right": 40.78125,
+        "bottom": 2.811371,
+        "countries": [
+            "kenya",
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 157,
+        "y": 125,
+        "left": 40.78125,
+        "top": 4.214943,
+        "right": 42.1875,
+        "bottom": 2.811371,
+        "countries": [
+            "kenya",
+            "somalia",
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 158,
+        "y": 125,
+        "left": 42.1875,
+        "top": 4.214943,
+        "right": 43.59375,
+        "bottom": 2.811371,
+        "countries": [
+            "somalia",
+            "ethiopia"
+        ]
+    }
+]

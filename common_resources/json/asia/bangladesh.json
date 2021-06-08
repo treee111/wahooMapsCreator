@@ -1,0 +1,208 @@
+[
+    {
+        "x": 190,
+        "y": 108,
+        "left": 87.1875,
+        "top": 27.059126,
+        "right": 88.59375,
+        "bottom": 25.799891,
+        "countries": [
+            "nepal",
+            "bangladesh",
+            "india"
+        ]
+    },
+    {
+        "x": 191,
+        "y": 108,
+        "left": 88.59375,
+        "top": 27.059126,
+        "right": 90.0,
+        "bottom": 25.799891,
+        "countries": [
+            "bhutan",
+            "bangladesh",
+            "india"
+        ]
+    },
+    {
+        "x": 190,
+        "y": 109,
+        "left": 87.1875,
+        "top": 25.799891,
+        "right": 88.59375,
+        "bottom": 24.527135,
+        "countries": [
+            "bangladesh",
+            "india"
+        ]
+    },
+    {
+        "x": 191,
+        "y": 109,
+        "left": 88.59375,
+        "top": 25.799891,
+        "right": 90.0,
+        "bottom": 24.527135,
+        "countries": [
+            "bangladesh",
+            "india"
+        ]
+    },
+    {
+        "x": 192,
+        "y": 109,
+        "left": 90.0,
+        "top": 25.799891,
+        "right": 91.40625,
+        "bottom": 24.527135,
+        "countries": [
+            "bangladesh",
+            "india"
+        ]
+    },
+    {
+        "x": 193,
+        "y": 109,
+        "left": 91.40625,
+        "top": 25.799891,
+        "right": 92.8125,
+        "bottom": 24.527135,
+        "countries": [
+            "bangladesh",
+            "india"
+        ]
+    },
+    {
+        "x": 190,
+        "y": 110,
+        "left": 87.1875,
+        "top": 24.527135,
+        "right": 88.59375,
+        "bottom": 23.241346,
+        "countries": [
+            "bangladesh",
+            "india"
+        ]
+    },
+    {
+        "x": 191,
+        "y": 110,
+        "left": 88.59375,
+        "top": 24.527135,
+        "right": 90.0,
+        "bottom": 23.241346,
+        "countries": [
+            "bangladesh",
+            "india"
+        ]
+    },
+    {
+        "x": 192,
+        "y": 110,
+        "left": 90.0,
+        "top": 24.527135,
+        "right": 91.40625,
+        "bottom": 23.241346,
+        "countries": [
+            "bangladesh",
+            "india"
+        ]
+    },
+    {
+        "x": 193,
+        "y": 110,
+        "left": 91.40625,
+        "top": 24.527135,
+        "right": 92.8125,
+        "bottom": 23.241346,
+        "countries": [
+            "bangladesh",
+            "india"
+        ]
+    },
+    {
+        "x": 191,
+        "y": 111,
+        "left": 88.59375,
+        "top": 23.241346,
+        "right": 90.0,
+        "bottom": 21.943046,
+        "countries": [
+            "bangladesh",
+            "india"
+        ]
+    },
+    {
+        "x": 192,
+        "y": 111,
+        "left": 90.0,
+        "top": 23.241346,
+        "right": 91.40625,
+        "bottom": 21.943046,
+        "countries": [
+            "bangladesh",
+            "india"
+        ]
+    },
+    {
+        "x": 193,
+        "y": 111,
+        "left": 91.40625,
+        "top": 23.241346,
+        "right": 92.8125,
+        "bottom": 21.943046,
+        "countries": [
+            "bangladesh",
+            "myanmar",
+            "india"
+        ]
+    },
+    {
+        "x": 191,
+        "y": 112,
+        "left": 88.59375,
+        "top": 21.943046,
+        "right": 90.0,
+        "bottom": 20.632784,
+        "countries": [
+            "bangladesh",
+            "india"
+        ]
+    },
+    {
+        "x": 192,
+        "y": 112,
+        "left": 90.0,
+        "top": 21.943046,
+        "right": 91.40625,
+        "bottom": 20.632784,
+        "countries": [
+            "bangladesh"
+        ]
+    },
+    {
+        "x": 193,
+        "y": 112,
+        "left": 91.40625,
+        "top": 21.943046,
+        "right": 92.8125,
+        "bottom": 20.632784,
+        "countries": [
+            "bangladesh",
+            "myanmar"
+        ]
+    },
+    {
+        "x": 193,
+        "y": 113,
+        "left": 91.40625,
+        "top": 20.632784,
+        "right": 92.8125,
+        "bottom": 19.311143,
+        "countries": [
+            "bangladesh",
+            "myanmar"
+        ]
+    }
+]

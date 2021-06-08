@@ -2,6 +2,30 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "common-only1-tile",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceRoot}/tooling_mac/wahoo-map-creator-osmium-using-common.py",
+            "console": "integratedTerminal",
+            "args": ["${workspaceRoot}/common_resources/germany-only1.json"]
+        },
+        {
+            "name": "common-only5-tile",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceRoot}/tooling_mac/wahoo-map-creator-osmium-using-common.py",
+            "console": "integratedTerminal",
+            "args": ["${workspaceRoot}/common_resources/germany-only5.json"]
+        },
+        {
+            "name": "common-germany",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceRoot}/tooling_mac/wahoo-map-creator-osmium-using-common.py",
+            "console": "integratedTerminal",
+            "args": ["${workspaceRoot}/common_resources/germany.json"]
+        },
+        {
             "name": "works-only1-tile",
             "type": "python",
             "request": "launch",

@@ -1,0 +1,283 @@
+[
+    {
+        "x": 60,
+        "y": 100,
+        "left": -95.625,
+        "top": 36.597889,
+        "right": -94.21875,
+        "bottom": 35.46067,
+        "countries": [
+            "oklahoma",
+            "arkansas",
+            "missouri"
+        ]
+    },
+    {
+        "x": 61,
+        "y": 100,
+        "left": -94.21875,
+        "top": 36.597889,
+        "right": -92.8125,
+        "bottom": 35.46067,
+        "countries": [
+            "arkansas",
+            "missouri"
+        ]
+    },
+    {
+        "x": 62,
+        "y": 100,
+        "left": -92.8125,
+        "top": 36.597889,
+        "right": -91.40625,
+        "bottom": 35.46067,
+        "countries": [
+            "arkansas",
+            "missouri"
+        ]
+    },
+    {
+        "x": 63,
+        "y": 100,
+        "left": -91.40625,
+        "top": 36.597889,
+        "right": -90.0,
+        "bottom": 35.46067,
+        "countries": [
+            "tennessee",
+            "arkansas",
+            "missouri"
+        ]
+    },
+    {
+        "x": 64,
+        "y": 100,
+        "left": -90.0,
+        "top": 36.597889,
+        "right": -88.59375,
+        "bottom": 35.46067,
+        "countries": [
+            "tennessee",
+            "arkansas",
+            "missouri",
+            "kentucky"
+        ]
+    },
+    {
+        "x": 62,
+        "y": 96,
+        "left": -92.8125,
+        "top": 40.979898,
+        "right": -91.40625,
+        "bottom": 39.909736,
+        "countries": [
+            "iowa",
+            "illinois",
+            "missouri"
+        ]
+    },
+    {
+        "x": 62,
+        "y": 97,
+        "left": -92.8125,
+        "top": 39.909736,
+        "right": -91.40625,
+        "bottom": 38.822591,
+        "countries": [
+            "illinois",
+            "missouri"
+        ]
+    },
+    {
+        "x": 63,
+        "y": 97,
+        "left": -91.40625,
+        "top": 39.909736,
+        "right": -90.0,
+        "bottom": 38.822591,
+        "countries": [
+            "illinois",
+            "missouri"
+        ]
+    },
+    {
+        "x": 63,
+        "y": 98,
+        "left": -91.40625,
+        "top": 38.822591,
+        "right": -90.0,
+        "bottom": 37.71859,
+        "countries": [
+            "illinois",
+            "missouri"
+        ]
+    },
+    {
+        "x": 64,
+        "y": 98,
+        "left": -90.0,
+        "top": 38.822591,
+        "right": -88.59375,
+        "bottom": 37.71859,
+        "countries": [
+            "illinois",
+            "missouri"
+        ]
+    },
+    {
+        "x": 64,
+        "y": 99,
+        "left": -90.0,
+        "top": 37.71859,
+        "right": -88.59375,
+        "bottom": 36.597889,
+        "countries": [
+            "illinois",
+            "missouri",
+            "kentucky"
+        ]
+    },
+    {
+        "x": 59,
+        "y": 96,
+        "left": -97.03125,
+        "top": 40.979898,
+        "right": -95.625,
+        "bottom": 39.909736,
+        "countries": [
+            "iowa",
+            "nebraska",
+            "missouri",
+            "kansas"
+        ]
+    },
+    {
+        "x": 60,
+        "y": 96,
+        "left": -95.625,
+        "top": 40.979898,
+        "right": -94.21875,
+        "bottom": 39.909736,
+        "countries": [
+            "iowa",
+            "nebraska",
+            "missouri",
+            "kansas"
+        ]
+    },
+    {
+        "x": 61,
+        "y": 96,
+        "left": -94.21875,
+        "top": 40.979898,
+        "right": -92.8125,
+        "bottom": 39.909736,
+        "countries": [
+            "iowa",
+            "missouri"
+        ]
+    },
+    {
+        "x": 60,
+        "y": 97,
+        "left": -95.625,
+        "top": 39.909736,
+        "right": -94.21875,
+        "bottom": 38.822591,
+        "countries": [
+            "kansas",
+            "missouri"
+        ]
+    },
+    {
+        "x": 60,
+        "y": 98,
+        "left": -95.625,
+        "top": 38.822591,
+        "right": -94.21875,
+        "bottom": 37.71859,
+        "countries": [
+            "kansas",
+            "missouri"
+        ]
+    },
+    {
+        "x": 60,
+        "y": 99,
+        "left": -95.625,
+        "top": 37.71859,
+        "right": -94.21875,
+        "bottom": 36.597889,
+        "countries": [
+            "oklahoma",
+            "kansas",
+            "missouri"
+        ]
+    },
+    {
+        "x": 61,
+        "y": 97,
+        "left": -94.21875,
+        "top": 39.909736,
+        "right": -92.8125,
+        "bottom": 38.822591,
+        "countries": [
+            "missouri"
+        ]
+    },
+    {
+        "x": 61,
+        "y": 98,
+        "left": -94.21875,
+        "top": 38.822591,
+        "right": -92.8125,
+        "bottom": 37.71859,
+        "countries": [
+            "missouri"
+        ]
+    },
+    {
+        "x": 62,
+        "y": 98,
+        "left": -92.8125,
+        "top": 38.822591,
+        "right": -91.40625,
+        "bottom": 37.71859,
+        "countries": [
+            "missouri"
+        ]
+    },
+    {
+        "x": 61,
+        "y": 99,
+        "left": -94.21875,
+        "top": 37.71859,
+        "right": -92.8125,
+        "bottom": 36.597889,
+        "countries": [
+            "missouri"
+        ]
+    },
+    {
+        "x": 62,
+        "y": 99,
+        "left": -92.8125,
+        "top": 37.71859,
+        "right": -91.40625,
+        "bottom": 36.597889,
+        "countries": [
+            "missouri"
+        ]
+    },
+    {
+        "x": 63,
+        "y": 99,
+        "left": -91.40625,
+        "top": 37.71859,
+        "right": -90.0,
+        "bottom": 36.597889,
+        "countries": [
+            "missouri"
+        ]
+    }
+]

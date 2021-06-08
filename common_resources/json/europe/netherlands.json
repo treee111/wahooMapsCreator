@@ -1,0 +1,144 @@
+[
+    {
+        "x": 130,
+        "y": 85,
+        "left": 2.8125,
+        "top": 51.618017,
+        "right": 4.21875,
+        "bottom": 50.736455,
+        "countries": [
+            "france",
+            "belgium",
+            "netherlands"
+        ]
+    },
+    {
+        "x": 131,
+        "y": 85,
+        "left": 4.21875,
+        "top": 51.618017,
+        "right": 5.625,
+        "bottom": 50.736455,
+        "countries": [
+            "netherlands",
+            "belgium"
+        ]
+    },
+    {
+        "x": 132,
+        "y": 85,
+        "left": 5.625,
+        "top": 51.618017,
+        "right": 7.03125,
+        "bottom": 50.736455,
+        "countries": [
+            "netherlands",
+            "belgium",
+            "germany"
+        ]
+    },
+    {
+        "x": 132,
+        "y": 82,
+        "left": 5.625,
+        "top": 54.162434,
+        "right": 7.03125,
+        "bottom": 53.330873,
+        "countries": [
+            "netherlands",
+            "germany"
+        ]
+    },
+    {
+        "x": 132,
+        "y": 83,
+        "left": 5.625,
+        "top": 53.330873,
+        "right": 7.03125,
+        "bottom": 52.48278,
+        "countries": [
+            "netherlands",
+            "germany"
+        ]
+    },
+    {
+        "x": 133,
+        "y": 83,
+        "left": 7.03125,
+        "top": 53.330873,
+        "right": 8.4375,
+        "bottom": 52.48278,
+        "countries": [
+            "netherlands",
+            "germany"
+        ]
+    },
+    {
+        "x": 132,
+        "y": 84,
+        "left": 5.625,
+        "top": 52.48278,
+        "right": 7.03125,
+        "bottom": 51.618017,
+        "countries": [
+            "netherlands",
+            "germany"
+        ]
+    },
+    {
+        "x": 133,
+        "y": 84,
+        "left": 7.03125,
+        "top": 52.48278,
+        "right": 8.4375,
+        "bottom": 51.618017,
+        "countries": [
+            "netherlands",
+            "germany"
+        ]
+    },
+    {
+        "x": 131,
+        "y": 82,
+        "left": 4.21875,
+        "top": 54.162434,
+        "right": 5.625,
+        "bottom": 53.330873,
+        "countries": [
+            "netherlands"
+        ]
+    },
+    {
+        "x": 131,
+        "y": 83,
+        "left": 4.21875,
+        "top": 53.330873,
+        "right": 5.625,
+        "bottom": 52.48278,
+        "countries": [
+            "netherlands"
+        ]
+    },
+    {
+        "x": 130,
+        "y": 84,
+        "left": 2.8125,
+        "top": 52.48278,
+        "right": 4.21875,
+        "bottom": 51.618017,
+        "countries": [
+            "netherlands"
+        ]
+    },
+    {
+        "x": 131,
+        "y": 84,
+        "left": 4.21875,
+        "top": 52.48278,
+        "right": 5.625,
+        "bottom": 51.618017,
+        "countries": [
+            "netherlands"
+        ]
+    }
+]

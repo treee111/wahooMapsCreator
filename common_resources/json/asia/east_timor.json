@@ -1,0 +1,62 @@
+[
+    {
+        "x": 217,
+        "y": 133,
+        "left": 125.15625,
+        "top": -7.013668,
+        "right": 126.5625,
+        "bottom": -8.407168,
+        "countries": [
+            "indonesia",
+            "east_timor"
+        ]
+    },
+    {
+        "x": 218,
+        "y": 133,
+        "left": 126.5625,
+        "top": -7.013668,
+        "right": 127.96875,
+        "bottom": -8.407168,
+        "countries": [
+            "indonesia",
+            "east_timor"
+        ]
+    },
+    {
+        "x": 216,
+        "y": 134,
+        "left": 123.75,
+        "top": -8.407168,
+        "right": 125.15625,
+        "bottom": -9.795678,
+        "countries": [
+            "indonesia",
+            "east_timor"
+        ]
+    },
+    {
+        "x": 217,
+        "y": 134,
+        "left": 125.15625,
+        "top": -8.407168,
+        "right": 126.5625,
+        "bottom": -9.795678,
+        "countries": [
+            "indonesia",
+            "east_timor"
+        ]
+    },
+    {
+        "x": 218,
+        "y": 134,
+        "left": 126.5625,
+        "top": -8.407168,
+        "right": 127.96875,
+        "bottom": -9.795678,
+        "countries": [
+            "indonesia",
+            "east_timor"
+        ]
+    }
+]

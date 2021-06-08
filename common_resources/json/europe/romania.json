@@ -1,0 +1,421 @@
+[
+    {
+        "x": 144,
+        "y": 92,
+        "left": 22.5,
+        "top": 45.089036,
+        "right": 23.90625,
+        "bottom": 44.087585,
+        "countries": [
+            "bulgaria",
+            "serbia",
+            "romania"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 92,
+        "left": 26.71875,
+        "top": 45.089036,
+        "right": 28.125,
+        "bottom": 44.087585,
+        "countries": [
+            "bulgaria",
+            "romania"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 93,
+        "left": 22.5,
+        "top": 44.087585,
+        "right": 23.90625,
+        "bottom": 43.068888,
+        "countries": [
+            "bulgaria",
+            "serbia",
+            "romania"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 93,
+        "left": 23.90625,
+        "top": 44.087585,
+        "right": 25.3125,
+        "bottom": 43.068888,
+        "countries": [
+            "bulgaria",
+            "romania"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 93,
+        "left": 25.3125,
+        "top": 44.087585,
+        "right": 26.71875,
+        "bottom": 43.068888,
+        "countries": [
+            "bulgaria",
+            "romania"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 93,
+        "left": 26.71875,
+        "top": 44.087585,
+        "right": 28.125,
+        "bottom": 43.068888,
+        "countries": [
+            "bulgaria",
+            "romania"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 93,
+        "left": 28.125,
+        "top": 44.087585,
+        "right": 29.53125,
+        "bottom": 43.068888,
+        "countries": [
+            "bulgaria",
+            "romania"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 88,
+        "left": 22.5,
+        "top": 48.922499,
+        "right": 23.90625,
+        "bottom": 47.989922,
+        "countries": [
+            "romania",
+            "ukraine",
+            "hungary"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 89,
+        "left": 21.09375,
+        "top": 47.989922,
+        "right": 22.5,
+        "bottom": 47.040182,
+        "countries": [
+            "romania",
+            "hungary"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 89,
+        "left": 22.5,
+        "top": 47.989922,
+        "right": 23.90625,
+        "bottom": 47.040182,
+        "countries": [
+            "romania",
+            "ukraine",
+            "hungary"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 90,
+        "left": 19.6875,
+        "top": 47.040182,
+        "right": 21.09375,
+        "bottom": 46.073231,
+        "countries": [
+            "romania",
+            "serbia",
+            "hungary"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 90,
+        "left": 21.09375,
+        "top": 47.040182,
+        "right": 22.5,
+        "bottom": 46.073231,
+        "countries": [
+            "romania",
+            "hungary"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 88,
+        "left": 25.3125,
+        "top": 48.922499,
+        "right": 26.71875,
+        "bottom": 47.989922,
+        "countries": [
+            "moldova",
+            "ukraine",
+            "romania"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 88,
+        "left": 26.71875,
+        "top": 48.922499,
+        "right": 28.125,
+        "bottom": 47.989922,
+        "countries": [
+            "moldova",
+            "ukraine",
+            "romania"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 89,
+        "left": 26.71875,
+        "top": 47.989922,
+        "right": 28.125,
+        "bottom": 47.040182,
+        "countries": [
+            "moldova",
+            "romania"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 90,
+        "left": 26.71875,
+        "top": 47.040182,
+        "right": 28.125,
+        "bottom": 46.073231,
+        "countries": [
+            "moldova",
+            "romania"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 90,
+        "left": 28.125,
+        "top": 47.040182,
+        "right": 29.53125,
+        "bottom": 46.073231,
+        "countries": [
+            "moldova",
+            "ukraine",
+            "romania"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 91,
+        "left": 26.71875,
+        "top": 46.073231,
+        "right": 28.125,
+        "bottom": 45.089036,
+        "countries": [
+            "moldova",
+            "romania"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 91,
+        "left": 28.125,
+        "top": 46.073231,
+        "right": 29.53125,
+        "bottom": 45.089036,
+        "countries": [
+            "moldova",
+            "ukraine",
+            "romania"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 89,
+        "left": 23.90625,
+        "top": 47.989922,
+        "right": 25.3125,
+        "bottom": 47.040182,
+        "countries": [
+            "ukraine",
+            "romania"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 89,
+        "left": 25.3125,
+        "top": 47.989922,
+        "right": 26.71875,
+        "bottom": 47.040182,
+        "countries": [
+            "ukraine",
+            "romania"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 90,
+        "left": 22.5,
+        "top": 47.040182,
+        "right": 23.90625,
+        "bottom": 46.073231,
+        "countries": [
+            "romania"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 90,
+        "left": 23.90625,
+        "top": 47.040182,
+        "right": 25.3125,
+        "bottom": 46.073231,
+        "countries": [
+            "romania"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 90,
+        "left": 25.3125,
+        "top": 47.040182,
+        "right": 26.71875,
+        "bottom": 46.073231,
+        "countries": [
+            "romania"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 91,
+        "left": 19.6875,
+        "top": 46.073231,
+        "right": 21.09375,
+        "bottom": 45.089036,
+        "countries": [
+            "serbia",
+            "romania"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 91,
+        "left": 21.09375,
+        "top": 46.073231,
+        "right": 22.5,
+        "bottom": 45.089036,
+        "countries": [
+            "serbia",
+            "romania"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 91,
+        "left": 22.5,
+        "top": 46.073231,
+        "right": 23.90625,
+        "bottom": 45.089036,
+        "countries": [
+            "romania"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 91,
+        "left": 23.90625,
+        "top": 46.073231,
+        "right": 25.3125,
+        "bottom": 45.089036,
+        "countries": [
+            "romania"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 91,
+        "left": 25.3125,
+        "top": 46.073231,
+        "right": 26.71875,
+        "bottom": 45.089036,
+        "countries": [
+            "romania"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 91,
+        "left": 29.53125,
+        "top": 46.073231,
+        "right": 30.9375,
+        "bottom": 45.089036,
+        "countries": [
+            "ukraine",
+            "romania"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 92,
+        "left": 21.09375,
+        "top": 45.089036,
+        "right": 22.5,
+        "bottom": 44.087585,
+        "countries": [
+            "serbia",
+            "romania"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 92,
+        "left": 23.90625,
+        "top": 45.089036,
+        "right": 25.3125,
+        "bottom": 44.087585,
+        "countries": [
+            "romania"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 92,
+        "left": 25.3125,
+        "top": 45.089036,
+        "right": 26.71875,
+        "bottom": 44.087585,
+        "countries": [
+            "romania"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 92,
+        "left": 28.125,
+        "top": 45.089036,
+        "right": 29.53125,
+        "bottom": 44.087585,
+        "countries": [
+            "romania"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 92,
+        "left": 29.53125,
+        "top": 45.089036,
+        "right": 30.9375,
+        "bottom": 44.087585,
+        "countries": [
+            "romania"
+        ]
+    }
+]

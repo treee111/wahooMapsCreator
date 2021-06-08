@@ -1,0 +1,30 @@
+[
+    {
+        "x": 83,
+        "y": 115,
+        "left": -63.28125,
+        "top": 17.978733,
+        "right": -61.875,
+        "bottom": 16.636192,
+        "countries": [
+            "bonaire_saint_eustatius_and_saba",
+            "saint_kitts_and_nevis",
+            "antigua_and_barbuda",
+            "saint-barth\u00e9lemy",
+            "montserrat"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 119,
+        "left": -68.90625,
+        "top": 12.554564,
+        "right": -67.5,
+        "bottom": 11.178402,
+        "countries": [
+            "bonaire_saint_eustatius_and_saba",
+            "venezuela",
+            "curacao"
+        ]
+    }
+]

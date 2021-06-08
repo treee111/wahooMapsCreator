@@ -1,0 +1,232 @@
+[
+    {
+        "x": 65,
+        "y": 101,
+        "left": -88.59375,
+        "top": 35.46067,
+        "right": -87.1875,
+        "bottom": 34.307144,
+        "countries": [
+            "alabama",
+            "tennessee",
+            "mississippi"
+        ]
+    },
+    {
+        "x": 66,
+        "y": 101,
+        "left": -87.1875,
+        "top": 35.46067,
+        "right": -85.78125,
+        "bottom": 34.307144,
+        "countries": [
+            "alabama",
+            "tennessee"
+        ]
+    },
+    {
+        "x": 67,
+        "y": 101,
+        "left": -85.78125,
+        "top": 35.46067,
+        "right": -84.375,
+        "bottom": 34.307144,
+        "countries": [
+            "georgia",
+            "alabama",
+            "tennessee"
+        ]
+    },
+    {
+        "x": 63,
+        "y": 100,
+        "left": -91.40625,
+        "top": 36.597889,
+        "right": -90.0,
+        "bottom": 35.46067,
+        "countries": [
+            "tennessee",
+            "arkansas",
+            "missouri"
+        ]
+    },
+    {
+        "x": 64,
+        "y": 100,
+        "left": -90.0,
+        "top": 36.597889,
+        "right": -88.59375,
+        "bottom": 35.46067,
+        "countries": [
+            "tennessee",
+            "arkansas",
+            "missouri",
+            "kentucky"
+        ]
+    },
+    {
+        "x": 63,
+        "y": 101,
+        "left": -91.40625,
+        "top": 35.46067,
+        "right": -90.0,
+        "bottom": 34.307144,
+        "countries": [
+            "tennessee",
+            "arkansas",
+            "mississippi"
+        ]
+    },
+    {
+        "x": 68,
+        "y": 101,
+        "left": -84.375,
+        "top": 35.46067,
+        "right": -82.96875,
+        "bottom": 34.307144,
+        "countries": [
+            "georgia",
+            "north_carolina",
+            "tennessee",
+            "south_carolina"
+        ]
+    },
+    {
+        "x": 65,
+        "y": 99,
+        "left": -88.59375,
+        "top": 37.71859,
+        "right": -87.1875,
+        "bottom": 36.597889,
+        "countries": [
+            "tennessee",
+            "illinois",
+            "kentucky"
+        ]
+    },
+    {
+        "x": 66,
+        "y": 99,
+        "left": -87.1875,
+        "top": 37.71859,
+        "right": -85.78125,
+        "bottom": 36.597889,
+        "countries": [
+            "tennessee",
+            "kentucky"
+        ]
+    },
+    {
+        "x": 67,
+        "y": 99,
+        "left": -85.78125,
+        "top": 37.71859,
+        "right": -84.375,
+        "bottom": 36.597889,
+        "countries": [
+            "tennessee",
+            "kentucky"
+        ]
+    },
+    {
+        "x": 68,
+        "y": 99,
+        "left": -84.375,
+        "top": 37.71859,
+        "right": -82.96875,
+        "bottom": 36.597889,
+        "countries": [
+            "tennessee",
+            "virginia",
+            "kentucky"
+        ]
+    },
+    {
+        "x": 69,
+        "y": 99,
+        "left": -82.96875,
+        "top": 37.71859,
+        "right": -81.5625,
+        "bottom": 36.597889,
+        "countries": [
+            "tennessee",
+            "west_virginia",
+            "virginia",
+            "kentucky"
+        ]
+    },
+    {
+        "x": 65,
+        "y": 100,
+        "left": -88.59375,
+        "top": 36.597889,
+        "right": -87.1875,
+        "bottom": 35.46067,
+        "countries": [
+            "tennessee",
+            "kentucky"
+        ]
+    },
+    {
+        "x": 67,
+        "y": 100,
+        "left": -85.78125,
+        "top": 36.597889,
+        "right": -84.375,
+        "bottom": 35.46067,
+        "countries": [
+            "tennessee",
+            "kentucky"
+        ]
+    },
+    {
+        "x": 68,
+        "y": 100,
+        "left": -84.375,
+        "top": 36.597889,
+        "right": -82.96875,
+        "bottom": 35.46067,
+        "countries": [
+            "north_carolina",
+            "tennessee",
+            "virginia",
+            "kentucky"
+        ]
+    },
+    {
+        "x": 64,
+        "y": 101,
+        "left": -90.0,
+        "top": 35.46067,
+        "right": -88.59375,
+        "bottom": 34.307144,
+        "countries": [
+            "tennessee",
+            "mississippi"
+        ]
+    },
+    {
+        "x": 69,
+        "y": 100,
+        "left": -82.96875,
+        "top": 36.597889,
+        "right": -81.5625,
+        "bottom": 35.46067,
+        "countries": [
+            "north_carolina",
+            "tennessee",
+            "virginia"
+        ]
+    },
+    {
+        "x": 66,
+        "y": 100,
+        "left": -87.1875,
+        "top": 36.597889,
+        "right": -85.78125,
+        "bottom": 35.46067,
+        "countries": [
+            "tennessee"
+        ]
+    }
+]

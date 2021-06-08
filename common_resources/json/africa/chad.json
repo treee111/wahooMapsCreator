@@ -1,0 +1,958 @@
+[
+    {
+        "x": 138,
+        "y": 118,
+        "left": 14.0625,
+        "top": 13.923404,
+        "right": 15.46875,
+        "bottom": 12.554564,
+        "countries": [
+            "cameroon",
+            "nigeria",
+            "chad"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 119,
+        "left": 14.0625,
+        "top": 12.554564,
+        "right": 15.46875,
+        "bottom": 11.178402,
+        "countries": [
+            "cameroon",
+            "nigeria",
+            "chad"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 120,
+        "left": 14.0625,
+        "top": 11.178402,
+        "right": 15.46875,
+        "bottom": 9.795678,
+        "countries": [
+            "cameroon",
+            "chad"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 120,
+        "left": 15.46875,
+        "top": 11.178402,
+        "right": 16.875,
+        "bottom": 9.795678,
+        "countries": [
+            "cameroon",
+            "chad"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 121,
+        "left": 12.65625,
+        "top": 9.795678,
+        "right": 14.0625,
+        "bottom": 8.407168,
+        "countries": [
+            "cameroon",
+            "nigeria",
+            "chad"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 121,
+        "left": 14.0625,
+        "top": 9.795678,
+        "right": 15.46875,
+        "bottom": 8.407168,
+        "countries": [
+            "cameroon",
+            "chad"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 122,
+        "left": 14.0625,
+        "top": 8.407168,
+        "right": 15.46875,
+        "bottom": 7.013668,
+        "countries": [
+            "cameroon",
+            "central_african_republic",
+            "chad"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 122,
+        "left": 15.46875,
+        "top": 8.407168,
+        "right": 16.875,
+        "bottom": 7.013668,
+        "countries": [
+            "cameroon",
+            "central_african_republic",
+            "chad"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 120,
+        "left": 21.09375,
+        "top": 11.178402,
+        "right": 22.5,
+        "bottom": 9.795678,
+        "countries": [
+            "chad",
+            "central_african_republic"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 120,
+        "left": 22.5,
+        "top": 11.178402,
+        "right": 23.90625,
+        "bottom": 9.795678,
+        "countries": [
+            "chad",
+            "sudan",
+            "central_african_republic"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 121,
+        "left": 18.28125,
+        "top": 9.795678,
+        "right": 19.6875,
+        "bottom": 8.407168,
+        "countries": [
+            "chad",
+            "central_african_republic"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 121,
+        "left": 19.6875,
+        "top": 9.795678,
+        "right": 21.09375,
+        "bottom": 8.407168,
+        "countries": [
+            "chad",
+            "central_african_republic"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 121,
+        "left": 21.09375,
+        "top": 9.795678,
+        "right": 22.5,
+        "bottom": 8.407168,
+        "countries": [
+            "chad",
+            "central_african_republic"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 122,
+        "left": 16.875,
+        "top": 8.407168,
+        "right": 18.28125,
+        "bottom": 7.013668,
+        "countries": [
+            "chad",
+            "central_african_republic"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 122,
+        "left": 18.28125,
+        "top": 8.407168,
+        "right": 19.6875,
+        "bottom": 7.013668,
+        "countries": [
+            "chad",
+            "central_african_republic"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 110,
+        "left": 15.46875,
+        "top": 24.527135,
+        "right": 16.875,
+        "bottom": 23.241346,
+        "countries": [
+            "libya",
+            "chad"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 111,
+        "left": 14.0625,
+        "top": 23.241346,
+        "right": 15.46875,
+        "bottom": 21.943046,
+        "countries": [
+            "libya",
+            "chad",
+            "niger"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 111,
+        "left": 15.46875,
+        "top": 23.241346,
+        "right": 16.875,
+        "bottom": 21.943046,
+        "countries": [
+            "libya",
+            "chad"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 111,
+        "left": 16.875,
+        "top": 23.241346,
+        "right": 18.28125,
+        "bottom": 21.943046,
+        "countries": [
+            "libya",
+            "chad"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 111,
+        "left": 18.28125,
+        "top": 23.241346,
+        "right": 19.6875,
+        "bottom": 21.943046,
+        "countries": [
+            "libya",
+            "chad"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 112,
+        "left": 14.0625,
+        "top": 21.943046,
+        "right": 15.46875,
+        "bottom": 20.632784,
+        "countries": [
+            "chad",
+            "niger"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 112,
+        "left": 15.46875,
+        "top": 21.943046,
+        "right": 16.875,
+        "bottom": 20.632784,
+        "countries": [
+            "chad",
+            "niger"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 112,
+        "left": 16.875,
+        "top": 21.943046,
+        "right": 18.28125,
+        "bottom": 20.632784,
+        "countries": [
+            "chad"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 112,
+        "left": 18.28125,
+        "top": 21.943046,
+        "right": 19.6875,
+        "bottom": 20.632784,
+        "countries": [
+            "libya",
+            "chad"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 112,
+        "left": 19.6875,
+        "top": 21.943046,
+        "right": 21.09375,
+        "bottom": 20.632784,
+        "countries": [
+            "libya",
+            "chad"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 112,
+        "left": 21.09375,
+        "top": 21.943046,
+        "right": 22.5,
+        "bottom": 20.632784,
+        "countries": [
+            "libya",
+            "chad"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 113,
+        "left": 15.46875,
+        "top": 20.632784,
+        "right": 16.875,
+        "bottom": 19.311143,
+        "countries": [
+            "chad",
+            "niger"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 113,
+        "left": 16.875,
+        "top": 20.632784,
+        "right": 18.28125,
+        "bottom": 19.311143,
+        "countries": [
+            "chad"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 113,
+        "left": 18.28125,
+        "top": 20.632784,
+        "right": 19.6875,
+        "bottom": 19.311143,
+        "countries": [
+            "chad"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 113,
+        "left": 19.6875,
+        "top": 20.632784,
+        "right": 21.09375,
+        "bottom": 19.311143,
+        "countries": [
+            "chad"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 113,
+        "left": 21.09375,
+        "top": 20.632784,
+        "right": 22.5,
+        "bottom": 19.311143,
+        "countries": [
+            "libya",
+            "chad"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 113,
+        "left": 22.5,
+        "top": 20.632784,
+        "right": 23.90625,
+        "bottom": 19.311143,
+        "countries": [
+            "libya",
+            "chad"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 113,
+        "left": 23.90625,
+        "top": 20.632784,
+        "right": 25.3125,
+        "bottom": 19.311143,
+        "countries": [
+            "libya",
+            "chad",
+            "sudan"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 114,
+        "left": 15.46875,
+        "top": 19.311143,
+        "right": 16.875,
+        "bottom": 17.978733,
+        "countries": [
+            "chad",
+            "niger"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 114,
+        "left": 16.875,
+        "top": 19.311143,
+        "right": 18.28125,
+        "bottom": 17.978733,
+        "countries": [
+            "chad"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 114,
+        "left": 18.28125,
+        "top": 19.311143,
+        "right": 19.6875,
+        "bottom": 17.978733,
+        "countries": [
+            "chad"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 114,
+        "left": 19.6875,
+        "top": 19.311143,
+        "right": 21.09375,
+        "bottom": 17.978733,
+        "countries": [
+            "chad"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 114,
+        "left": 21.09375,
+        "top": 19.311143,
+        "right": 22.5,
+        "bottom": 17.978733,
+        "countries": [
+            "chad"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 114,
+        "left": 22.5,
+        "top": 19.311143,
+        "right": 23.90625,
+        "bottom": 17.978733,
+        "countries": [
+            "chad"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 114,
+        "left": 23.90625,
+        "top": 19.311143,
+        "right": 25.3125,
+        "bottom": 17.978733,
+        "countries": [
+            "chad",
+            "sudan"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 115,
+        "left": 14.0625,
+        "top": 17.978733,
+        "right": 15.46875,
+        "bottom": 16.636192,
+        "countries": [
+            "chad",
+            "niger"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 115,
+        "left": 15.46875,
+        "top": 17.978733,
+        "right": 16.875,
+        "bottom": 16.636192,
+        "countries": [
+            "chad",
+            "niger"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 115,
+        "left": 16.875,
+        "top": 17.978733,
+        "right": 18.28125,
+        "bottom": 16.636192,
+        "countries": [
+            "chad"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 115,
+        "left": 18.28125,
+        "top": 17.978733,
+        "right": 19.6875,
+        "bottom": 16.636192,
+        "countries": [
+            "chad"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 115,
+        "left": 19.6875,
+        "top": 17.978733,
+        "right": 21.09375,
+        "bottom": 16.636192,
+        "countries": [
+            "chad"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 115,
+        "left": 21.09375,
+        "top": 17.978733,
+        "right": 22.5,
+        "bottom": 16.636192,
+        "countries": [
+            "chad"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 115,
+        "left": 22.5,
+        "top": 17.978733,
+        "right": 23.90625,
+        "bottom": 16.636192,
+        "countries": [
+            "chad"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 115,
+        "left": 23.90625,
+        "top": 17.978733,
+        "right": 25.3125,
+        "bottom": 16.636192,
+        "countries": [
+            "chad",
+            "sudan"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 116,
+        "left": 12.65625,
+        "top": 16.636192,
+        "right": 14.0625,
+        "bottom": 15.284185,
+        "countries": [
+            "chad",
+            "niger"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 116,
+        "left": 14.0625,
+        "top": 16.636192,
+        "right": 15.46875,
+        "bottom": 15.284185,
+        "countries": [
+            "chad",
+            "niger"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 116,
+        "left": 15.46875,
+        "top": 16.636192,
+        "right": 16.875,
+        "bottom": 15.284185,
+        "countries": [
+            "chad"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 116,
+        "left": 16.875,
+        "top": 16.636192,
+        "right": 18.28125,
+        "bottom": 15.284185,
+        "countries": [
+            "chad"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 116,
+        "left": 18.28125,
+        "top": 16.636192,
+        "right": 19.6875,
+        "bottom": 15.284185,
+        "countries": [
+            "chad"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 116,
+        "left": 19.6875,
+        "top": 16.636192,
+        "right": 21.09375,
+        "bottom": 15.284185,
+        "countries": [
+            "chad"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 116,
+        "left": 21.09375,
+        "top": 16.636192,
+        "right": 22.5,
+        "bottom": 15.284185,
+        "countries": [
+            "chad"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 116,
+        "left": 22.5,
+        "top": 16.636192,
+        "right": 23.90625,
+        "bottom": 15.284185,
+        "countries": [
+            "chad",
+            "sudan"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 116,
+        "left": 23.90625,
+        "top": 16.636192,
+        "right": 25.3125,
+        "bottom": 15.284185,
+        "countries": [
+            "chad",
+            "sudan"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 117,
+        "left": 12.65625,
+        "top": 15.284185,
+        "right": 14.0625,
+        "bottom": 13.923404,
+        "countries": [
+            "chad",
+            "niger"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 117,
+        "left": 14.0625,
+        "top": 15.284185,
+        "right": 15.46875,
+        "bottom": 13.923404,
+        "countries": [
+            "chad"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 117,
+        "left": 15.46875,
+        "top": 15.284185,
+        "right": 16.875,
+        "bottom": 13.923404,
+        "countries": [
+            "chad"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 117,
+        "left": 16.875,
+        "top": 15.284185,
+        "right": 18.28125,
+        "bottom": 13.923404,
+        "countries": [
+            "chad"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 117,
+        "left": 18.28125,
+        "top": 15.284185,
+        "right": 19.6875,
+        "bottom": 13.923404,
+        "countries": [
+            "chad"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 117,
+        "left": 19.6875,
+        "top": 15.284185,
+        "right": 21.09375,
+        "bottom": 13.923404,
+        "countries": [
+            "chad"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 117,
+        "left": 21.09375,
+        "top": 15.284185,
+        "right": 22.5,
+        "bottom": 13.923404,
+        "countries": [
+            "chad",
+            "sudan"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 117,
+        "left": 22.5,
+        "top": 15.284185,
+        "right": 23.90625,
+        "bottom": 13.923404,
+        "countries": [
+            "chad",
+            "sudan"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 118,
+        "left": 12.65625,
+        "top": 13.923404,
+        "right": 14.0625,
+        "bottom": 12.554564,
+        "countries": [
+            "chad",
+            "nigeria",
+            "niger"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 118,
+        "left": 15.46875,
+        "top": 13.923404,
+        "right": 16.875,
+        "bottom": 12.554564,
+        "countries": [
+            "chad"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 118,
+        "left": 16.875,
+        "top": 13.923404,
+        "right": 18.28125,
+        "bottom": 12.554564,
+        "countries": [
+            "chad"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 118,
+        "left": 18.28125,
+        "top": 13.923404,
+        "right": 19.6875,
+        "bottom": 12.554564,
+        "countries": [
+            "chad"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 118,
+        "left": 19.6875,
+        "top": 13.923404,
+        "right": 21.09375,
+        "bottom": 12.554564,
+        "countries": [
+            "chad"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 118,
+        "left": 21.09375,
+        "top": 13.923404,
+        "right": 22.5,
+        "bottom": 12.554564,
+        "countries": [
+            "chad",
+            "sudan"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 119,
+        "left": 15.46875,
+        "top": 12.554564,
+        "right": 16.875,
+        "bottom": 11.178402,
+        "countries": [
+            "chad"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 119,
+        "left": 16.875,
+        "top": 12.554564,
+        "right": 18.28125,
+        "bottom": 11.178402,
+        "countries": [
+            "chad"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 119,
+        "left": 18.28125,
+        "top": 12.554564,
+        "right": 19.6875,
+        "bottom": 11.178402,
+        "countries": [
+            "chad"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 119,
+        "left": 19.6875,
+        "top": 12.554564,
+        "right": 21.09375,
+        "bottom": 11.178402,
+        "countries": [
+            "chad"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 119,
+        "left": 21.09375,
+        "top": 12.554564,
+        "right": 22.5,
+        "bottom": 11.178402,
+        "countries": [
+            "chad",
+            "sudan"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 119,
+        "left": 22.5,
+        "top": 12.554564,
+        "right": 23.90625,
+        "bottom": 11.178402,
+        "countries": [
+            "chad",
+            "sudan"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 120,
+        "left": 16.875,
+        "top": 11.178402,
+        "right": 18.28125,
+        "bottom": 9.795678,
+        "countries": [
+            "chad"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 120,
+        "left": 18.28125,
+        "top": 11.178402,
+        "right": 19.6875,
+        "bottom": 9.795678,
+        "countries": [
+            "chad"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 120,
+        "left": 19.6875,
+        "top": 11.178402,
+        "right": 21.09375,
+        "bottom": 9.795678,
+        "countries": [
+            "chad"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 121,
+        "left": 15.46875,
+        "top": 9.795678,
+        "right": 16.875,
+        "bottom": 8.407168,
+        "countries": [
+            "chad"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 121,
+        "left": 16.875,
+        "top": 9.795678,
+        "right": 18.28125,
+        "bottom": 8.407168,
+        "countries": [
+            "chad"
+        ]
+    }
+]

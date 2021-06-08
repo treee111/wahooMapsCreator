@@ -1,0 +1,37 @@
+[
+    {
+        "x": 76,
+        "y": 111,
+        "left": -73.125,
+        "top": 23.241346,
+        "right": -71.71875,
+        "bottom": 21.943046,
+        "countries": [
+            "turks_and_caicos_islands",
+            "bahamas"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 112,
+        "left": -73.125,
+        "top": 21.943046,
+        "right": -71.71875,
+        "bottom": 20.632784,
+        "countries": [
+            "turks_and_caicos_islands",
+            "bahamas"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 112,
+        "left": -71.71875,
+        "top": 21.943046,
+        "right": -70.3125,
+        "bottom": 20.632784,
+        "countries": [
+            "turks_and_caicos_islands"
+        ]
+    }
+]

@@ -1,0 +1,178 @@
+[
+    {
+        "x": 156,
+        "y": 144,
+        "left": 39.375,
+        "top": -21.943046,
+        "right": 40.78125,
+        "bottom": -23.241346,
+        "countries": [
+            "french_southern_territories"
+        ]
+    },
+    {
+        "x": 183,
+        "y": 157,
+        "left": 77.34375,
+        "top": -37.71859,
+        "right": 78.75,
+        "bottom": -38.822591,
+        "countries": [
+            "french_southern_territories"
+        ]
+    },
+    {
+        "x": 163,
+        "y": 164,
+        "left": 49.21875,
+        "top": -45.089036,
+        "right": 50.625,
+        "bottom": -46.073231,
+        "countries": [
+            "french_southern_territories"
+        ]
+    },
+    {
+        "x": 163,
+        "y": 165,
+        "left": 49.21875,
+        "top": -46.073231,
+        "right": 50.625,
+        "bottom": -47.040182,
+        "countries": [
+            "french_southern_territories"
+        ]
+    },
+    {
+        "x": 164,
+        "y": 165,
+        "left": 50.625,
+        "top": -46.073231,
+        "right": 52.03125,
+        "bottom": -47.040182,
+        "countries": [
+            "french_southern_territories"
+        ]
+    },
+    {
+        "x": 165,
+        "y": 165,
+        "left": 52.03125,
+        "top": -46.073231,
+        "right": 53.4375,
+        "bottom": -47.040182,
+        "countries": [
+            "french_southern_territories"
+        ]
+    },
+    {
+        "x": 176,
+        "y": 167,
+        "left": 67.5,
+        "top": -47.989922,
+        "right": 68.90625,
+        "bottom": -48.922499,
+        "countries": [
+            "french_southern_territories"
+        ]
+    },
+    {
+        "x": 177,
+        "y": 167,
+        "left": 68.90625,
+        "top": -47.989922,
+        "right": 70.3125,
+        "bottom": -48.922499,
+        "countries": [
+            "french_southern_territories"
+        ]
+    },
+    {
+        "x": 176,
+        "y": 168,
+        "left": 67.5,
+        "top": -48.922499,
+        "right": 68.90625,
+        "bottom": -49.837982,
+        "countries": [
+            "french_southern_territories"
+        ]
+    },
+    {
+        "x": 177,
+        "y": 168,
+        "left": 68.90625,
+        "top": -48.922499,
+        "right": 70.3125,
+        "bottom": -49.837982,
+        "countries": [
+            "french_southern_territories"
+        ]
+    },
+    {
+        "x": 178,
+        "y": 168,
+        "left": 70.3125,
+        "top": -48.922499,
+        "right": 71.71875,
+        "bottom": -49.837982,
+        "countries": [
+            "french_southern_territories"
+        ]
+    },
+    {
+        "x": 176,
+        "y": 169,
+        "left": 67.5,
+        "top": -49.837982,
+        "right": 68.90625,
+        "bottom": -50.736455,
+        "countries": [
+            "french_southern_territories"
+        ]
+    },
+    {
+        "x": 177,
+        "y": 169,
+        "left": 68.90625,
+        "top": -49.837982,
+        "right": 70.3125,
+        "bottom": -50.736455,
+        "countries": [
+            "french_southern_territories"
+        ]
+    },
+    {
+        "x": 161,
+        "y": 136,
+        "left": 46.40625,
+        "top": -11.178402,
+        "right": 47.8125,
+        "bottom": -12.554564,
+        "countries": [
+            "french_southern_territories"
+        ]
+    },
+    {
+        "x": 158,
+        "y": 140,
+        "left": 42.1875,
+        "top": -16.636192,
+        "right": 43.59375,
+        "bottom": -17.978733,
+        "countries": [
+            "french_southern_territories"
+        ]
+    },
+    {
+        "x": 166,
+        "y": 139,
+        "left": 53.4375,
+        "top": -15.284185,
+        "right": 54.84375,
+        "bottom": -16.636192,
+        "countries": [
+            "french_southern_territories"
+        ]
+    }
+]

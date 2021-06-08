@@ -1,0 +1,128 @@
+[
+    {
+        "x": 129,
+        "y": 85,
+        "left": 1.40625,
+        "top": 51.618017,
+        "right": 2.8125,
+        "bottom": 50.736455,
+        "countries": [
+            "united_kingdom",
+            "france",
+            "belgium"
+        ]
+    },
+    {
+        "x": 130,
+        "y": 85,
+        "left": 2.8125,
+        "top": 51.618017,
+        "right": 4.21875,
+        "bottom": 50.736455,
+        "countries": [
+            "france",
+            "belgium",
+            "netherlands"
+        ]
+    },
+    {
+        "x": 131,
+        "y": 85,
+        "left": 4.21875,
+        "top": 51.618017,
+        "right": 5.625,
+        "bottom": 50.736455,
+        "countries": [
+            "netherlands",
+            "belgium"
+        ]
+    },
+    {
+        "x": 132,
+        "y": 85,
+        "left": 5.625,
+        "top": 51.618017,
+        "right": 7.03125,
+        "bottom": 50.736455,
+        "countries": [
+            "netherlands",
+            "belgium",
+            "germany"
+        ]
+    },
+    {
+        "x": 129,
+        "y": 86,
+        "left": 1.40625,
+        "top": 50.736455,
+        "right": 2.8125,
+        "bottom": 49.837982,
+        "countries": [
+            "france",
+            "belgium"
+        ]
+    },
+    {
+        "x": 130,
+        "y": 86,
+        "left": 2.8125,
+        "top": 50.736455,
+        "right": 4.21875,
+        "bottom": 49.837982,
+        "countries": [
+            "france",
+            "belgium"
+        ]
+    },
+    {
+        "x": 131,
+        "y": 86,
+        "left": 4.21875,
+        "top": 50.736455,
+        "right": 5.625,
+        "bottom": 49.837982,
+        "countries": [
+            "france",
+            "belgium"
+        ]
+    },
+    {
+        "x": 132,
+        "y": 86,
+        "left": 5.625,
+        "top": 50.736455,
+        "right": 7.03125,
+        "bottom": 49.837982,
+        "countries": [
+            "luxembourg",
+            "belgium",
+            "germany"
+        ]
+    },
+    {
+        "x": 131,
+        "y": 87,
+        "left": 4.21875,
+        "top": 49.837982,
+        "right": 5.625,
+        "bottom": 48.922499,
+        "countries": [
+            "france",
+            "belgium"
+        ]
+    },
+    {
+        "x": 132,
+        "y": 87,
+        "left": 5.625,
+        "top": 49.837982,
+        "right": 7.03125,
+        "bottom": 48.922499,
+        "countries": [
+            "luxembourg",
+            "france",
+            "belgium",
+            "germany"
+        ]
+    }
+]

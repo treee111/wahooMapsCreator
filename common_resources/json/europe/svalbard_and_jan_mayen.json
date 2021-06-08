@@ -1,0 +1,1688 @@
+[
+    {
+        "x": 141,
+        "y": 29,
+        "left": 18.28125,
+        "top": 79.935918,
+        "right": 19.6875,
+        "bottom": 79.687184,
+        "countries": [
+            "svalbard_and_jan_mayen",
+            "norway"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 29,
+        "left": 19.6875,
+        "top": 79.935918,
+        "right": 21.09375,
+        "bottom": 79.687184,
+        "countries": [
+            "svalbard_and_jan_mayen",
+            "norway"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 30,
+        "left": 18.28125,
+        "top": 79.687184,
+        "right": 19.6875,
+        "bottom": 79.432371,
+        "countries": [
+            "svalbard_and_jan_mayen",
+            "norway"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 30,
+        "left": 19.6875,
+        "top": 79.687184,
+        "right": 21.09375,
+        "bottom": 79.432371,
+        "countries": [
+            "svalbard_and_jan_mayen",
+            "norway"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 31,
+        "left": 21.09375,
+        "top": 79.432371,
+        "right": 22.5,
+        "bottom": 79.171335,
+        "countries": [
+            "svalbard_and_jan_mayen",
+            "norway"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 32,
+        "left": 21.09375,
+        "top": 79.171335,
+        "right": 22.5,
+        "bottom": 78.903929,
+        "countries": [
+            "svalbard_and_jan_mayen",
+            "norway"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 33,
+        "left": 28.125,
+        "top": 78.903929,
+        "right": 29.53125,
+        "bottom": 78.630006,
+        "countries": [
+            "svalbard_and_jan_mayen",
+            "norway"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 35,
+        "left": 19.6875,
+        "top": 78.349411,
+        "right": 21.09375,
+        "bottom": 78.061989,
+        "countries": [
+            "svalbard_and_jan_mayen",
+            "norway"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 35,
+        "left": 21.09375,
+        "top": 78.349411,
+        "right": 22.5,
+        "bottom": 78.061989,
+        "countries": [
+            "svalbard_and_jan_mayen",
+            "norway"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 36,
+        "left": 23.90625,
+        "top": 78.061989,
+        "right": 25.3125,
+        "bottom": 77.767582,
+        "countries": [
+            "svalbard_and_jan_mayen",
+            "norway"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 37,
+        "left": 23.90625,
+        "top": 77.767582,
+        "right": 25.3125,
+        "bottom": 77.466028,
+        "countries": [
+            "svalbard_and_jan_mayen",
+            "norway"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 38,
+        "left": 21.09375,
+        "top": 77.466028,
+        "right": 22.5,
+        "bottom": 77.157163,
+        "countries": [
+            "svalbard_and_jan_mayen",
+            "norway"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 38,
+        "left": 22.5,
+        "top": 77.466028,
+        "right": 23.90625,
+        "bottom": 77.157163,
+        "countries": [
+            "svalbard_and_jan_mayen",
+            "norway"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 39,
+        "left": 21.09375,
+        "top": 77.157163,
+        "right": 22.5,
+        "bottom": 76.840816,
+        "countries": [
+            "svalbard_and_jan_mayen",
+            "norway"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 25,
+        "left": 19.6875,
+        "top": 80.872827,
+        "right": 21.09375,
+        "bottom": 80.647035,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 25,
+        "left": 21.09375,
+        "top": 80.872827,
+        "right": 22.5,
+        "bottom": 80.647035,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 25,
+        "left": 23.90625,
+        "top": 80.872827,
+        "right": 25.3125,
+        "bottom": 80.647035,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 26,
+        "left": 18.28125,
+        "top": 80.647035,
+        "right": 19.6875,
+        "bottom": 80.415707,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 26,
+        "left": 19.6875,
+        "top": 80.647035,
+        "right": 21.09375,
+        "bottom": 80.415707,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 26,
+        "left": 21.09375,
+        "top": 80.647035,
+        "right": 22.5,
+        "bottom": 80.415707,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 26,
+        "left": 22.5,
+        "top": 80.647035,
+        "right": 23.90625,
+        "bottom": 80.415707,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 26,
+        "left": 23.90625,
+        "top": 80.647035,
+        "right": 25.3125,
+        "bottom": 80.415707,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 26,
+        "left": 25.3125,
+        "top": 80.647035,
+        "right": 26.71875,
+        "bottom": 80.415707,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 27,
+        "left": 16.875,
+        "top": 80.415707,
+        "right": 18.28125,
+        "bottom": 80.178713,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 27,
+        "left": 18.28125,
+        "top": 80.415707,
+        "right": 19.6875,
+        "bottom": 80.178713,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 27,
+        "left": 19.6875,
+        "top": 80.415707,
+        "right": 21.09375,
+        "bottom": 80.178713,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 27,
+        "left": 21.09375,
+        "top": 80.415707,
+        "right": 22.5,
+        "bottom": 80.178713,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 27,
+        "left": 22.5,
+        "top": 80.415707,
+        "right": 23.90625,
+        "bottom": 80.178713,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 27,
+        "left": 23.90625,
+        "top": 80.415707,
+        "right": 25.3125,
+        "bottom": 80.178713,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 27,
+        "left": 25.3125,
+        "top": 80.415707,
+        "right": 26.71875,
+        "bottom": 80.178713,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 27,
+        "left": 26.71875,
+        "top": 80.415707,
+        "right": 28.125,
+        "bottom": 80.178713,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 27,
+        "left": 32.34375,
+        "top": 80.415707,
+        "right": 33.75,
+        "bottom": 80.178713,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 28,
+        "left": 14.0625,
+        "top": 80.178713,
+        "right": 15.46875,
+        "bottom": 79.935918,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 28,
+        "left": 15.46875,
+        "top": 80.178713,
+        "right": 16.875,
+        "bottom": 79.935918,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 28,
+        "left": 16.875,
+        "top": 80.178713,
+        "right": 18.28125,
+        "bottom": 79.935918,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 28,
+        "left": 18.28125,
+        "top": 80.178713,
+        "right": 19.6875,
+        "bottom": 79.935918,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 28,
+        "left": 19.6875,
+        "top": 80.178713,
+        "right": 21.09375,
+        "bottom": 79.935918,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 28,
+        "left": 21.09375,
+        "top": 80.178713,
+        "right": 22.5,
+        "bottom": 79.935918,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 28,
+        "left": 22.5,
+        "top": 80.178713,
+        "right": 23.90625,
+        "bottom": 79.935918,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 28,
+        "left": 23.90625,
+        "top": 80.178713,
+        "right": 25.3125,
+        "bottom": 79.935918,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 28,
+        "left": 25.3125,
+        "top": 80.178713,
+        "right": 26.71875,
+        "bottom": 79.935918,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 28,
+        "left": 26.71875,
+        "top": 80.178713,
+        "right": 28.125,
+        "bottom": 79.935918,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 28,
+        "left": 28.125,
+        "top": 80.178713,
+        "right": 29.53125,
+        "bottom": 79.935918,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 28,
+        "left": 30.9375,
+        "top": 80.178713,
+        "right": 32.34375,
+        "bottom": 79.935918,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 28,
+        "left": 32.34375,
+        "top": 80.178713,
+        "right": 33.75,
+        "bottom": 79.935918,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 28,
+        "left": 36.5625,
+        "top": 80.178713,
+        "right": 37.96875,
+        "bottom": 79.935918,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 135,
+        "y": 29,
+        "left": 9.84375,
+        "top": 79.935918,
+        "right": 11.25,
+        "bottom": 79.687184,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 29,
+        "left": 11.25,
+        "top": 79.935918,
+        "right": 12.65625,
+        "bottom": 79.687184,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 29,
+        "left": 12.65625,
+        "top": 79.935918,
+        "right": 14.0625,
+        "bottom": 79.687184,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 29,
+        "left": 14.0625,
+        "top": 79.935918,
+        "right": 15.46875,
+        "bottom": 79.687184,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 29,
+        "left": 15.46875,
+        "top": 79.935918,
+        "right": 16.875,
+        "bottom": 79.687184,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 29,
+        "left": 16.875,
+        "top": 79.935918,
+        "right": 18.28125,
+        "bottom": 79.687184,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 29,
+        "left": 21.09375,
+        "top": 79.935918,
+        "right": 22.5,
+        "bottom": 79.687184,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 29,
+        "left": 22.5,
+        "top": 79.935918,
+        "right": 23.90625,
+        "bottom": 79.687184,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 29,
+        "left": 23.90625,
+        "top": 79.935918,
+        "right": 25.3125,
+        "bottom": 79.687184,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 29,
+        "left": 25.3125,
+        "top": 79.935918,
+        "right": 26.71875,
+        "bottom": 79.687184,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 29,
+        "left": 26.71875,
+        "top": 79.935918,
+        "right": 28.125,
+        "bottom": 79.687184,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 135,
+        "y": 30,
+        "left": 9.84375,
+        "top": 79.687184,
+        "right": 11.25,
+        "bottom": 79.432371,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 30,
+        "left": 11.25,
+        "top": 79.687184,
+        "right": 12.65625,
+        "bottom": 79.432371,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 30,
+        "left": 12.65625,
+        "top": 79.687184,
+        "right": 14.0625,
+        "bottom": 79.432371,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 30,
+        "left": 14.0625,
+        "top": 79.687184,
+        "right": 15.46875,
+        "bottom": 79.432371,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 30,
+        "left": 15.46875,
+        "top": 79.687184,
+        "right": 16.875,
+        "bottom": 79.432371,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 30,
+        "left": 16.875,
+        "top": 79.687184,
+        "right": 18.28125,
+        "bottom": 79.432371,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 30,
+        "left": 21.09375,
+        "top": 79.687184,
+        "right": 22.5,
+        "bottom": 79.432371,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 30,
+        "left": 22.5,
+        "top": 79.687184,
+        "right": 23.90625,
+        "bottom": 79.432371,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 30,
+        "left": 23.90625,
+        "top": 79.687184,
+        "right": 25.3125,
+        "bottom": 79.432371,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 30,
+        "left": 25.3125,
+        "top": 79.687184,
+        "right": 26.71875,
+        "bottom": 79.432371,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 135,
+        "y": 31,
+        "left": 9.84375,
+        "top": 79.432371,
+        "right": 11.25,
+        "bottom": 79.171335,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 31,
+        "left": 11.25,
+        "top": 79.432371,
+        "right": 12.65625,
+        "bottom": 79.171335,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 31,
+        "left": 12.65625,
+        "top": 79.432371,
+        "right": 14.0625,
+        "bottom": 79.171335,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 31,
+        "left": 14.0625,
+        "top": 79.432371,
+        "right": 15.46875,
+        "bottom": 79.171335,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 31,
+        "left": 15.46875,
+        "top": 79.432371,
+        "right": 16.875,
+        "bottom": 79.171335,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 31,
+        "left": 16.875,
+        "top": 79.432371,
+        "right": 18.28125,
+        "bottom": 79.171335,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 31,
+        "left": 18.28125,
+        "top": 79.432371,
+        "right": 19.6875,
+        "bottom": 79.171335,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 31,
+        "left": 19.6875,
+        "top": 79.432371,
+        "right": 21.09375,
+        "bottom": 79.171335,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 31,
+        "left": 22.5,
+        "top": 79.432371,
+        "right": 23.90625,
+        "bottom": 79.171335,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 31,
+        "left": 23.90625,
+        "top": 79.432371,
+        "right": 25.3125,
+        "bottom": 79.171335,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 31,
+        "left": 25.3125,
+        "top": 79.432371,
+        "right": 26.71875,
+        "bottom": 79.171335,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 135,
+        "y": 32,
+        "left": 9.84375,
+        "top": 79.171335,
+        "right": 11.25,
+        "bottom": 78.903929,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 32,
+        "left": 11.25,
+        "top": 79.171335,
+        "right": 12.65625,
+        "bottom": 78.903929,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 32,
+        "left": 12.65625,
+        "top": 79.171335,
+        "right": 14.0625,
+        "bottom": 78.903929,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 32,
+        "left": 14.0625,
+        "top": 79.171335,
+        "right": 15.46875,
+        "bottom": 78.903929,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 32,
+        "left": 15.46875,
+        "top": 79.171335,
+        "right": 16.875,
+        "bottom": 78.903929,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 32,
+        "left": 16.875,
+        "top": 79.171335,
+        "right": 18.28125,
+        "bottom": 78.903929,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 32,
+        "left": 18.28125,
+        "top": 79.171335,
+        "right": 19.6875,
+        "bottom": 78.903929,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 32,
+        "left": 19.6875,
+        "top": 79.171335,
+        "right": 21.09375,
+        "bottom": 78.903929,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 32,
+        "left": 28.125,
+        "top": 79.171335,
+        "right": 29.53125,
+        "bottom": 78.903929,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 32,
+        "left": 29.53125,
+        "top": 79.171335,
+        "right": 30.9375,
+        "bottom": 78.903929,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 135,
+        "y": 33,
+        "left": 9.84375,
+        "top": 78.903929,
+        "right": 11.25,
+        "bottom": 78.630006,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 33,
+        "left": 11.25,
+        "top": 78.903929,
+        "right": 12.65625,
+        "bottom": 78.630006,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 33,
+        "left": 12.65625,
+        "top": 78.903929,
+        "right": 14.0625,
+        "bottom": 78.630006,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 33,
+        "left": 14.0625,
+        "top": 78.903929,
+        "right": 15.46875,
+        "bottom": 78.630006,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 33,
+        "left": 15.46875,
+        "top": 78.903929,
+        "right": 16.875,
+        "bottom": 78.630006,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 33,
+        "left": 16.875,
+        "top": 78.903929,
+        "right": 18.28125,
+        "bottom": 78.630006,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 33,
+        "left": 18.28125,
+        "top": 78.903929,
+        "right": 19.6875,
+        "bottom": 78.630006,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 33,
+        "left": 19.6875,
+        "top": 78.903929,
+        "right": 21.09375,
+        "bottom": 78.630006,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 33,
+        "left": 21.09375,
+        "top": 78.903929,
+        "right": 22.5,
+        "bottom": 78.630006,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 33,
+        "left": 25.3125,
+        "top": 78.903929,
+        "right": 26.71875,
+        "bottom": 78.630006,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 33,
+        "left": 26.71875,
+        "top": 78.903929,
+        "right": 28.125,
+        "bottom": 78.630006,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 33,
+        "left": 29.53125,
+        "top": 78.903929,
+        "right": 30.9375,
+        "bottom": 78.630006,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 135,
+        "y": 34,
+        "left": 9.84375,
+        "top": 78.630006,
+        "right": 11.25,
+        "bottom": 78.349411,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 34,
+        "left": 11.25,
+        "top": 78.630006,
+        "right": 12.65625,
+        "bottom": 78.349411,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 34,
+        "left": 12.65625,
+        "top": 78.630006,
+        "right": 14.0625,
+        "bottom": 78.349411,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 34,
+        "left": 14.0625,
+        "top": 78.630006,
+        "right": 15.46875,
+        "bottom": 78.349411,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 34,
+        "left": 15.46875,
+        "top": 78.630006,
+        "right": 16.875,
+        "bottom": 78.349411,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 34,
+        "left": 16.875,
+        "top": 78.630006,
+        "right": 18.28125,
+        "bottom": 78.349411,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 34,
+        "left": 18.28125,
+        "top": 78.630006,
+        "right": 19.6875,
+        "bottom": 78.349411,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 34,
+        "left": 19.6875,
+        "top": 78.630006,
+        "right": 21.09375,
+        "bottom": 78.349411,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 34,
+        "left": 21.09375,
+        "top": 78.630006,
+        "right": 22.5,
+        "bottom": 78.349411,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 35,
+        "left": 11.25,
+        "top": 78.349411,
+        "right": 12.65625,
+        "bottom": 78.061989,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 35,
+        "left": 12.65625,
+        "top": 78.349411,
+        "right": 14.0625,
+        "bottom": 78.061989,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 35,
+        "left": 14.0625,
+        "top": 78.349411,
+        "right": 15.46875,
+        "bottom": 78.061989,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 35,
+        "left": 15.46875,
+        "top": 78.349411,
+        "right": 16.875,
+        "bottom": 78.061989,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 35,
+        "left": 16.875,
+        "top": 78.349411,
+        "right": 18.28125,
+        "bottom": 78.061989,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 35,
+        "left": 18.28125,
+        "top": 78.349411,
+        "right": 19.6875,
+        "bottom": 78.061989,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 35,
+        "left": 22.5,
+        "top": 78.349411,
+        "right": 23.90625,
+        "bottom": 78.061989,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 36,
+        "left": 12.65625,
+        "top": 78.061989,
+        "right": 14.0625,
+        "bottom": 77.767582,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 36,
+        "left": 14.0625,
+        "top": 78.061989,
+        "right": 15.46875,
+        "bottom": 77.767582,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 36,
+        "left": 15.46875,
+        "top": 78.061989,
+        "right": 16.875,
+        "bottom": 77.767582,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 36,
+        "left": 16.875,
+        "top": 78.061989,
+        "right": 18.28125,
+        "bottom": 77.767582,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 36,
+        "left": 18.28125,
+        "top": 78.061989,
+        "right": 19.6875,
+        "bottom": 77.767582,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 36,
+        "left": 19.6875,
+        "top": 78.061989,
+        "right": 21.09375,
+        "bottom": 77.767582,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 36,
+        "left": 21.09375,
+        "top": 78.061989,
+        "right": 22.5,
+        "bottom": 77.767582,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 36,
+        "left": 22.5,
+        "top": 78.061989,
+        "right": 23.90625,
+        "bottom": 77.767582,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 37,
+        "left": 12.65625,
+        "top": 77.767582,
+        "right": 14.0625,
+        "bottom": 77.466028,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 37,
+        "left": 14.0625,
+        "top": 77.767582,
+        "right": 15.46875,
+        "bottom": 77.466028,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 37,
+        "left": 15.46875,
+        "top": 77.767582,
+        "right": 16.875,
+        "bottom": 77.466028,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 37,
+        "left": 16.875,
+        "top": 77.767582,
+        "right": 18.28125,
+        "bottom": 77.466028,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 37,
+        "left": 18.28125,
+        "top": 77.767582,
+        "right": 19.6875,
+        "bottom": 77.466028,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 37,
+        "left": 19.6875,
+        "top": 77.767582,
+        "right": 21.09375,
+        "bottom": 77.466028,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 37,
+        "left": 21.09375,
+        "top": 77.767582,
+        "right": 22.5,
+        "bottom": 77.466028,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 37,
+        "left": 22.5,
+        "top": 77.767582,
+        "right": 23.90625,
+        "bottom": 77.466028,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 38,
+        "left": 12.65625,
+        "top": 77.466028,
+        "right": 14.0625,
+        "bottom": 77.157163,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 38,
+        "left": 14.0625,
+        "top": 77.466028,
+        "right": 15.46875,
+        "bottom": 77.157163,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 38,
+        "left": 15.46875,
+        "top": 77.466028,
+        "right": 16.875,
+        "bottom": 77.157163,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 38,
+        "left": 16.875,
+        "top": 77.466028,
+        "right": 18.28125,
+        "bottom": 77.157163,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 38,
+        "left": 19.6875,
+        "top": 77.466028,
+        "right": 21.09375,
+        "bottom": 77.157163,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 39,
+        "left": 14.0625,
+        "top": 77.157163,
+        "right": 15.46875,
+        "bottom": 76.840816,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 39,
+        "left": 15.46875,
+        "top": 77.157163,
+        "right": 16.875,
+        "bottom": 76.840816,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 39,
+        "left": 16.875,
+        "top": 77.157163,
+        "right": 18.28125,
+        "bottom": 76.840816,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 39,
+        "left": 22.5,
+        "top": 77.157163,
+        "right": 23.90625,
+        "bottom": 76.840816,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 40,
+        "left": 15.46875,
+        "top": 76.840816,
+        "right": 16.875,
+        "bottom": 76.516819,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 40,
+        "left": 16.875,
+        "top": 76.840816,
+        "right": 18.28125,
+        "bottom": 76.516819,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 40,
+        "left": 23.90625,
+        "top": 76.840816,
+        "right": 25.3125,
+        "bottom": 76.516819,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 40,
+        "left": 25.3125,
+        "top": 76.840816,
+        "right": 26.71875,
+        "bottom": 76.516819,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 41,
+        "left": 15.46875,
+        "top": 76.516819,
+        "right": 16.875,
+        "bottom": 76.184995,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 41,
+        "left": 23.90625,
+        "top": 76.516819,
+        "right": 25.3125,
+        "bottom": 76.184995,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 46,
+        "left": 18.28125,
+        "top": 74.775843,
+        "right": 19.6875,
+        "bottom": 74.402163,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 47,
+        "left": 18.28125,
+        "top": 74.402163,
+        "right": 19.6875,
+        "bottom": 74.019543,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 54,
+        "left": -8.4375,
+        "top": 71.524909,
+        "right": -7.03125,
+        "bottom": 71.074056,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 121,
+        "y": 55,
+        "left": -9.84375,
+        "top": 71.074056,
+        "right": -8.4375,
+        "bottom": 70.612614,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 55,
+        "left": -8.4375,
+        "top": 71.074056,
+        "right": -7.03125,
+        "bottom": 70.612614,
+        "countries": [
+            "svalbard_and_jan_mayen"
+        ]
+    }
+]

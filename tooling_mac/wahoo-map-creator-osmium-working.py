@@ -1,25 +1,25 @@
 #!/usr/bin/python
 
-import getopt
+# import official python packages
 import glob
 import json
 import os
 import subprocess
 import sys
 
-
-
+# import custom python packages
+from os import sys, path
+sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
+from common_resources import file_directory_functions
 
 # logging
 # # means top-level command
 # ! means error
 # + means additional comment in a working-unit
 
-def getGitRoot():
-    return subprocess.Popen(['git', 'rev-parse', '--show-toplevel'], stdout=subprocess.PIPE).communicate()[0].rstrip().decode('utf-8')
-
 # script_path = os.path.abspath(__file__) # i.e. /path/to/dir/foobar.py
-ROOT_PATH = getGitRoot()
+
+ROOT_PATH = file_directory_functions.getGitRoot()
 COMMON_PATH = os.path.join(ROOT_PATH, 'common_resources')
 OUT_PATH = os.path.join(ROOT_PATH, 'output')
 MAP_PATH = os.path.join(COMMON_PATH, 'maps')

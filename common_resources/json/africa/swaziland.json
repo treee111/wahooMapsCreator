@@ -1,0 +1,52 @@
+[
+    {
+        "x": 150,
+        "y": 146,
+        "left": 30.9375,
+        "top": -24.527135,
+        "right": 32.34375,
+        "bottom": -25.799891,
+        "countries": [
+            "mozambique",
+            "south_africa",
+            "swaziland"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 147,
+        "left": 30.9375,
+        "top": -25.799891,
+        "right": 32.34375,
+        "bottom": -27.059126,
+        "countries": [
+            "mozambique",
+            "south_africa",
+            "swaziland"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 147,
+        "left": 29.53125,
+        "top": -25.799891,
+        "right": 30.9375,
+        "bottom": -27.059126,
+        "countries": [
+            "south_africa",
+            "swaziland"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 148,
+        "left": 30.9375,
+        "top": -27.059126,
+        "right": 32.34375,
+        "bottom": -28.304381,
+        "countries": [
+            "south_africa",
+            "swaziland"
+        ]
+    }
+]

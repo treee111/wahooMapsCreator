@@ -1,0 +1,1029 @@
+[
+    {
+        "x": 144,
+        "y": 84,
+        "left": 22.5,
+        "top": 52.48278,
+        "right": 23.90625,
+        "bottom": 51.618017,
+        "countries": [
+            "belarus",
+            "poland",
+            "ukraine"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 84,
+        "left": 23.90625,
+        "top": 52.48278,
+        "right": 25.3125,
+        "bottom": 51.618017,
+        "countries": [
+            "belarus",
+            "ukraine"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 84,
+        "left": 25.3125,
+        "top": 52.48278,
+        "right": 26.71875,
+        "bottom": 51.618017,
+        "countries": [
+            "belarus",
+            "ukraine"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 84,
+        "left": 26.71875,
+        "top": 52.48278,
+        "right": 28.125,
+        "bottom": 51.618017,
+        "countries": [
+            "belarus",
+            "ukraine"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 84,
+        "left": 28.125,
+        "top": 52.48278,
+        "right": 29.53125,
+        "bottom": 51.618017,
+        "countries": [
+            "belarus",
+            "ukraine"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 84,
+        "left": 29.53125,
+        "top": 52.48278,
+        "right": 30.9375,
+        "bottom": 51.618017,
+        "countries": [
+            "belarus",
+            "ukraine"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 84,
+        "left": 30.9375,
+        "top": 52.48278,
+        "right": 32.34375,
+        "bottom": 51.618017,
+        "countries": [
+            "belarus",
+            "russia",
+            "ukraine"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 85,
+        "left": 22.5,
+        "top": 51.618017,
+        "right": 23.90625,
+        "bottom": 50.736455,
+        "countries": [
+            "belarus",
+            "poland",
+            "ukraine"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 85,
+        "left": 23.90625,
+        "top": 51.618017,
+        "right": 25.3125,
+        "bottom": 50.736455,
+        "countries": [
+            "belarus",
+            "poland",
+            "ukraine"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 85,
+        "left": 26.71875,
+        "top": 51.618017,
+        "right": 28.125,
+        "bottom": 50.736455,
+        "countries": [
+            "belarus",
+            "ukraine"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 85,
+        "left": 28.125,
+        "top": 51.618017,
+        "right": 29.53125,
+        "bottom": 50.736455,
+        "countries": [
+            "belarus",
+            "ukraine"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 85,
+        "left": 29.53125,
+        "top": 51.618017,
+        "right": 30.9375,
+        "bottom": 50.736455,
+        "countries": [
+            "belarus",
+            "ukraine"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 88,
+        "left": 21.09375,
+        "top": 48.922499,
+        "right": 22.5,
+        "bottom": 47.989922,
+        "countries": [
+            "slovakia",
+            "ukraine",
+            "hungary"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 88,
+        "left": 22.5,
+        "top": 48.922499,
+        "right": 23.90625,
+        "bottom": 47.989922,
+        "countries": [
+            "romania",
+            "ukraine",
+            "hungary"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 89,
+        "left": 22.5,
+        "top": 47.989922,
+        "right": 23.90625,
+        "bottom": 47.040182,
+        "countries": [
+            "romania",
+            "ukraine",
+            "hungary"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 88,
+        "left": 25.3125,
+        "top": 48.922499,
+        "right": 26.71875,
+        "bottom": 47.989922,
+        "countries": [
+            "moldova",
+            "ukraine",
+            "romania"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 88,
+        "left": 26.71875,
+        "top": 48.922499,
+        "right": 28.125,
+        "bottom": 47.989922,
+        "countries": [
+            "moldova",
+            "ukraine",
+            "romania"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 88,
+        "left": 28.125,
+        "top": 48.922499,
+        "right": 29.53125,
+        "bottom": 47.989922,
+        "countries": [
+            "moldova",
+            "ukraine"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 89,
+        "left": 28.125,
+        "top": 47.989922,
+        "right": 29.53125,
+        "bottom": 47.040182,
+        "countries": [
+            "moldova",
+            "ukraine"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 89,
+        "left": 29.53125,
+        "top": 47.989922,
+        "right": 30.9375,
+        "bottom": 47.040182,
+        "countries": [
+            "moldova",
+            "ukraine"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 90,
+        "left": 28.125,
+        "top": 47.040182,
+        "right": 29.53125,
+        "bottom": 46.073231,
+        "countries": [
+            "moldova",
+            "ukraine",
+            "romania"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 90,
+        "left": 29.53125,
+        "top": 47.040182,
+        "right": 30.9375,
+        "bottom": 46.073231,
+        "countries": [
+            "moldova",
+            "ukraine"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 91,
+        "left": 28.125,
+        "top": 46.073231,
+        "right": 29.53125,
+        "bottom": 45.089036,
+        "countries": [
+            "moldova",
+            "ukraine",
+            "romania"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 86,
+        "left": 22.5,
+        "top": 50.736455,
+        "right": 23.90625,
+        "bottom": 49.837982,
+        "countries": [
+            "poland",
+            "ukraine"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 86,
+        "left": 23.90625,
+        "top": 50.736455,
+        "right": 25.3125,
+        "bottom": 49.837982,
+        "countries": [
+            "poland",
+            "ukraine"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 87,
+        "left": 21.09375,
+        "top": 49.837982,
+        "right": 22.5,
+        "bottom": 48.922499,
+        "countries": [
+            "poland",
+            "ukraine",
+            "slovakia"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 87,
+        "left": 22.5,
+        "top": 49.837982,
+        "right": 23.90625,
+        "bottom": 48.922499,
+        "countries": [
+            "poland",
+            "ukraine",
+            "slovakia"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 89,
+        "left": 23.90625,
+        "top": 47.989922,
+        "right": 25.3125,
+        "bottom": 47.040182,
+        "countries": [
+            "ukraine",
+            "romania"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 89,
+        "left": 25.3125,
+        "top": 47.989922,
+        "right": 26.71875,
+        "bottom": 47.040182,
+        "countries": [
+            "ukraine",
+            "romania"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 91,
+        "left": 29.53125,
+        "top": 46.073231,
+        "right": 30.9375,
+        "bottom": 45.089036,
+        "countries": [
+            "ukraine",
+            "romania"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 84,
+        "left": 32.34375,
+        "top": 52.48278,
+        "right": 33.75,
+        "bottom": 51.618017,
+        "countries": [
+            "russia",
+            "ukraine"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 84,
+        "left": 33.75,
+        "top": 52.48278,
+        "right": 35.15625,
+        "bottom": 51.618017,
+        "countries": [
+            "russia",
+            "ukraine"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 85,
+        "left": 33.75,
+        "top": 51.618017,
+        "right": 35.15625,
+        "bottom": 50.736455,
+        "countries": [
+            "russia",
+            "ukraine"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 85,
+        "left": 35.15625,
+        "top": 51.618017,
+        "right": 36.5625,
+        "bottom": 50.736455,
+        "countries": [
+            "russia",
+            "ukraine"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 86,
+        "left": 35.15625,
+        "top": 50.736455,
+        "right": 36.5625,
+        "bottom": 49.837982,
+        "countries": [
+            "russia",
+            "ukraine"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 86,
+        "left": 36.5625,
+        "top": 50.736455,
+        "right": 37.96875,
+        "bottom": 49.837982,
+        "countries": [
+            "russia",
+            "ukraine"
+        ]
+    },
+    {
+        "x": 155,
+        "y": 86,
+        "left": 37.96875,
+        "top": 50.736455,
+        "right": 39.375,
+        "bottom": 49.837982,
+        "countries": [
+            "russia",
+            "ukraine"
+        ]
+    },
+    {
+        "x": 155,
+        "y": 87,
+        "left": 37.96875,
+        "top": 49.837982,
+        "right": 39.375,
+        "bottom": 48.922499,
+        "countries": [
+            "russia",
+            "ukraine"
+        ]
+    },
+    {
+        "x": 156,
+        "y": 87,
+        "left": 39.375,
+        "top": 49.837982,
+        "right": 40.78125,
+        "bottom": 48.922499,
+        "countries": [
+            "russia",
+            "ukraine"
+        ]
+    },
+    {
+        "x": 156,
+        "y": 88,
+        "left": 39.375,
+        "top": 48.922499,
+        "right": 40.78125,
+        "bottom": 47.989922,
+        "countries": [
+            "russia",
+            "ukraine"
+        ]
+    },
+    {
+        "x": 155,
+        "y": 89,
+        "left": 37.96875,
+        "top": 47.989922,
+        "right": 39.375,
+        "bottom": 47.040182,
+        "countries": [
+            "russia",
+            "ukraine"
+        ]
+    },
+    {
+        "x": 156,
+        "y": 89,
+        "left": 39.375,
+        "top": 47.989922,
+        "right": 40.78125,
+        "bottom": 47.040182,
+        "countries": [
+            "russia",
+            "ukraine"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 90,
+        "left": 36.5625,
+        "top": 47.040182,
+        "right": 37.96875,
+        "bottom": 46.073231,
+        "countries": [
+            "russia",
+            "ukraine"
+        ]
+    },
+    {
+        "x": 155,
+        "y": 90,
+        "left": 37.96875,
+        "top": 47.040182,
+        "right": 39.375,
+        "bottom": 46.073231,
+        "countries": [
+            "russia",
+            "ukraine"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 91,
+        "left": 35.15625,
+        "top": 46.073231,
+        "right": 36.5625,
+        "bottom": 45.089036,
+        "countries": [
+            "russia",
+            "ukraine"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 91,
+        "left": 36.5625,
+        "top": 46.073231,
+        "right": 37.96875,
+        "bottom": 45.089036,
+        "countries": [
+            "russia",
+            "ukraine"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 85,
+        "left": 25.3125,
+        "top": 51.618017,
+        "right": 26.71875,
+        "bottom": 50.736455,
+        "countries": [
+            "ukraine"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 85,
+        "left": 30.9375,
+        "top": 51.618017,
+        "right": 32.34375,
+        "bottom": 50.736455,
+        "countries": [
+            "ukraine"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 85,
+        "left": 32.34375,
+        "top": 51.618017,
+        "right": 33.75,
+        "bottom": 50.736455,
+        "countries": [
+            "ukraine"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 86,
+        "left": 25.3125,
+        "top": 50.736455,
+        "right": 26.71875,
+        "bottom": 49.837982,
+        "countries": [
+            "ukraine"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 86,
+        "left": 26.71875,
+        "top": 50.736455,
+        "right": 28.125,
+        "bottom": 49.837982,
+        "countries": [
+            "ukraine"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 86,
+        "left": 28.125,
+        "top": 50.736455,
+        "right": 29.53125,
+        "bottom": 49.837982,
+        "countries": [
+            "ukraine"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 86,
+        "left": 29.53125,
+        "top": 50.736455,
+        "right": 30.9375,
+        "bottom": 49.837982,
+        "countries": [
+            "ukraine"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 86,
+        "left": 30.9375,
+        "top": 50.736455,
+        "right": 32.34375,
+        "bottom": 49.837982,
+        "countries": [
+            "ukraine"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 86,
+        "left": 32.34375,
+        "top": 50.736455,
+        "right": 33.75,
+        "bottom": 49.837982,
+        "countries": [
+            "ukraine"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 86,
+        "left": 33.75,
+        "top": 50.736455,
+        "right": 35.15625,
+        "bottom": 49.837982,
+        "countries": [
+            "ukraine"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 87,
+        "left": 23.90625,
+        "top": 49.837982,
+        "right": 25.3125,
+        "bottom": 48.922499,
+        "countries": [
+            "ukraine"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 87,
+        "left": 25.3125,
+        "top": 49.837982,
+        "right": 26.71875,
+        "bottom": 48.922499,
+        "countries": [
+            "ukraine"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 87,
+        "left": 26.71875,
+        "top": 49.837982,
+        "right": 28.125,
+        "bottom": 48.922499,
+        "countries": [
+            "ukraine"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 87,
+        "left": 28.125,
+        "top": 49.837982,
+        "right": 29.53125,
+        "bottom": 48.922499,
+        "countries": [
+            "ukraine"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 87,
+        "left": 29.53125,
+        "top": 49.837982,
+        "right": 30.9375,
+        "bottom": 48.922499,
+        "countries": [
+            "ukraine"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 87,
+        "left": 30.9375,
+        "top": 49.837982,
+        "right": 32.34375,
+        "bottom": 48.922499,
+        "countries": [
+            "ukraine"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 87,
+        "left": 32.34375,
+        "top": 49.837982,
+        "right": 33.75,
+        "bottom": 48.922499,
+        "countries": [
+            "ukraine"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 87,
+        "left": 33.75,
+        "top": 49.837982,
+        "right": 35.15625,
+        "bottom": 48.922499,
+        "countries": [
+            "ukraine"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 87,
+        "left": 35.15625,
+        "top": 49.837982,
+        "right": 36.5625,
+        "bottom": 48.922499,
+        "countries": [
+            "ukraine"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 87,
+        "left": 36.5625,
+        "top": 49.837982,
+        "right": 37.96875,
+        "bottom": 48.922499,
+        "countries": [
+            "ukraine"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 88,
+        "left": 23.90625,
+        "top": 48.922499,
+        "right": 25.3125,
+        "bottom": 47.989922,
+        "countries": [
+            "ukraine"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 88,
+        "left": 29.53125,
+        "top": 48.922499,
+        "right": 30.9375,
+        "bottom": 47.989922,
+        "countries": [
+            "ukraine"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 88,
+        "left": 30.9375,
+        "top": 48.922499,
+        "right": 32.34375,
+        "bottom": 47.989922,
+        "countries": [
+            "ukraine"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 88,
+        "left": 32.34375,
+        "top": 48.922499,
+        "right": 33.75,
+        "bottom": 47.989922,
+        "countries": [
+            "ukraine"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 88,
+        "left": 33.75,
+        "top": 48.922499,
+        "right": 35.15625,
+        "bottom": 47.989922,
+        "countries": [
+            "ukraine"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 88,
+        "left": 35.15625,
+        "top": 48.922499,
+        "right": 36.5625,
+        "bottom": 47.989922,
+        "countries": [
+            "ukraine"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 88,
+        "left": 36.5625,
+        "top": 48.922499,
+        "right": 37.96875,
+        "bottom": 47.989922,
+        "countries": [
+            "ukraine"
+        ]
+    },
+    {
+        "x": 155,
+        "y": 88,
+        "left": 37.96875,
+        "top": 48.922499,
+        "right": 39.375,
+        "bottom": 47.989922,
+        "countries": [
+            "ukraine"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 89,
+        "left": 30.9375,
+        "top": 47.989922,
+        "right": 32.34375,
+        "bottom": 47.040182,
+        "countries": [
+            "ukraine"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 89,
+        "left": 32.34375,
+        "top": 47.989922,
+        "right": 33.75,
+        "bottom": 47.040182,
+        "countries": [
+            "ukraine"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 89,
+        "left": 33.75,
+        "top": 47.989922,
+        "right": 35.15625,
+        "bottom": 47.040182,
+        "countries": [
+            "ukraine"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 89,
+        "left": 35.15625,
+        "top": 47.989922,
+        "right": 36.5625,
+        "bottom": 47.040182,
+        "countries": [
+            "ukraine"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 89,
+        "left": 36.5625,
+        "top": 47.989922,
+        "right": 37.96875,
+        "bottom": 47.040182,
+        "countries": [
+            "ukraine"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 90,
+        "left": 30.9375,
+        "top": 47.040182,
+        "right": 32.34375,
+        "bottom": 46.073231,
+        "countries": [
+            "ukraine"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 90,
+        "left": 32.34375,
+        "top": 47.040182,
+        "right": 33.75,
+        "bottom": 46.073231,
+        "countries": [
+            "ukraine"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 90,
+        "left": 33.75,
+        "top": 47.040182,
+        "right": 35.15625,
+        "bottom": 46.073231,
+        "countries": [
+            "ukraine"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 90,
+        "left": 35.15625,
+        "top": 47.040182,
+        "right": 36.5625,
+        "bottom": 46.073231,
+        "countries": [
+            "ukraine"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 91,
+        "left": 32.34375,
+        "top": 46.073231,
+        "right": 33.75,
+        "bottom": 45.089036,
+        "countries": [
+            "ukraine"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 91,
+        "left": 33.75,
+        "top": 46.073231,
+        "right": 35.15625,
+        "bottom": 45.089036,
+        "countries": [
+            "ukraine"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 92,
+        "left": 32.34375,
+        "top": 45.089036,
+        "right": 33.75,
+        "bottom": 44.087585,
+        "countries": [
+            "ukraine"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 92,
+        "left": 33.75,
+        "top": 45.089036,
+        "right": 35.15625,
+        "bottom": 44.087585,
+        "countries": [
+            "ukraine"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 92,
+        "left": 35.15625,
+        "top": 45.089036,
+        "right": 36.5625,
+        "bottom": 44.087585,
+        "countries": [
+            "ukraine"
+        ]
+    }
+]

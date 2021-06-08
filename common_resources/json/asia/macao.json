@@ -1,0 +1,15 @@
+[
+    {
+        "x": 208,
+        "y": 111,
+        "left": 112.5,
+        "top": 23.241346,
+        "right": 113.90625,
+        "bottom": 21.943046,
+        "countries": [
+            "hong_kong",
+            "macao",
+            "china"
+        ]
+    }
+]

@@ -1,0 +1,148 @@
+[
+    {
+        "x": 121,
+        "y": 122,
+        "left": -9.84375,
+        "top": 8.407168,
+        "right": -8.4375,
+        "bottom": 7.013668,
+        "countries": [
+            "cote_d_ivoire",
+            "liberia",
+            "guinea"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 122,
+        "left": -8.4375,
+        "top": 8.407168,
+        "right": -7.03125,
+        "bottom": 7.013668,
+        "countries": [
+            "cote_d_ivoire",
+            "liberia",
+            "guinea"
+        ]
+    },
+    {
+        "x": 121,
+        "y": 123,
+        "left": -9.84375,
+        "top": 7.013668,
+        "right": -8.4375,
+        "bottom": 5.615986,
+        "countries": [
+            "cote_d_ivoire",
+            "liberia"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 123,
+        "left": -8.4375,
+        "top": 7.013668,
+        "right": -7.03125,
+        "bottom": 5.615986,
+        "countries": [
+            "cote_d_ivoire",
+            "liberia"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 124,
+        "left": -8.4375,
+        "top": 5.615986,
+        "right": -7.03125,
+        "bottom": 4.214943,
+        "countries": [
+            "cote_d_ivoire",
+            "liberia"
+        ]
+    },
+    {
+        "x": 120,
+        "y": 121,
+        "left": -11.25,
+        "top": 9.795678,
+        "right": -9.84375,
+        "bottom": 8.407168,
+        "countries": [
+            "sierra_leone",
+            "liberia",
+            "guinea"
+        ]
+    },
+    {
+        "x": 121,
+        "y": 121,
+        "left": -9.84375,
+        "top": 9.795678,
+        "right": -8.4375,
+        "bottom": 8.407168,
+        "countries": [
+            "liberia",
+            "guinea"
+        ]
+    },
+    {
+        "x": 120,
+        "y": 122,
+        "left": -11.25,
+        "top": 8.407168,
+        "right": -9.84375,
+        "bottom": 7.013668,
+        "countries": [
+            "sierra_leone",
+            "liberia",
+            "guinea"
+        ]
+    },
+    {
+        "x": 119,
+        "y": 122,
+        "left": -12.65625,
+        "top": 8.407168,
+        "right": -11.25,
+        "bottom": 7.013668,
+        "countries": [
+            "sierra_leone",
+            "liberia"
+        ]
+    },
+    {
+        "x": 119,
+        "y": 123,
+        "left": -12.65625,
+        "top": 7.013668,
+        "right": -11.25,
+        "bottom": 5.615986,
+        "countries": [
+            "sierra_leone",
+            "liberia"
+        ]
+    },
+    {
+        "x": 120,
+        "y": 123,
+        "left": -11.25,
+        "top": 7.013668,
+        "right": -9.84375,
+        "bottom": 5.615986,
+        "countries": [
+            "liberia"
+        ]
+    },
+    {
+        "x": 121,
+        "y": 124,
+        "left": -9.84375,
+        "top": 5.615986,
+        "right": -8.4375,
+        "bottom": 4.214943,
+        "countries": [
+            "liberia"
+        ]
+    }
+]

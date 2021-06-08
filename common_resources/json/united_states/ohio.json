@@ -1,0 +1,174 @@
+[
+    {
+        "x": 68,
+        "y": 95,
+        "left": -84.375,
+        "top": 42.032974,
+        "right": -82.96875,
+        "bottom": 40.979898,
+        "countries": [
+            "michigan",
+            "ohio",
+            "canada"
+        ]
+    },
+    {
+        "x": 69,
+        "y": 95,
+        "left": -82.96875,
+        "top": 42.032974,
+        "right": -81.5625,
+        "bottom": 40.979898,
+        "countries": [
+            "ohio",
+            "canada"
+        ]
+    },
+    {
+        "x": 67,
+        "y": 95,
+        "left": -85.78125,
+        "top": 42.032974,
+        "right": -84.375,
+        "bottom": 40.979898,
+        "countries": [
+            "michigan",
+            "indiana",
+            "ohio"
+        ]
+    },
+    {
+        "x": 67,
+        "y": 96,
+        "left": -85.78125,
+        "top": 40.979898,
+        "right": -84.375,
+        "bottom": 39.909736,
+        "countries": [
+            "indiana",
+            "ohio"
+        ]
+    },
+    {
+        "x": 67,
+        "y": 97,
+        "left": -85.78125,
+        "top": 39.909736,
+        "right": -84.375,
+        "bottom": 38.822591,
+        "countries": [
+            "indiana",
+            "ohio",
+            "kentucky"
+        ]
+    },
+    {
+        "x": 68,
+        "y": 97,
+        "left": -84.375,
+        "top": 39.909736,
+        "right": -82.96875,
+        "bottom": 38.822591,
+        "countries": [
+            "ohio",
+            "kentucky"
+        ]
+    },
+    {
+        "x": 68,
+        "y": 98,
+        "left": -84.375,
+        "top": 38.822591,
+        "right": -82.96875,
+        "bottom": 37.71859,
+        "countries": [
+            "ohio",
+            "kentucky"
+        ]
+    },
+    {
+        "x": 69,
+        "y": 98,
+        "left": -82.96875,
+        "top": 38.822591,
+        "right": -81.5625,
+        "bottom": 37.71859,
+        "countries": [
+            "west_virginia",
+            "ohio",
+            "kentucky"
+        ]
+    },
+    {
+        "x": 70,
+        "y": 95,
+        "left": -81.5625,
+        "top": 42.032974,
+        "right": -80.15625,
+        "bottom": 40.979898,
+        "countries": [
+            "pennsylvania",
+            "ohio"
+        ]
+    },
+    {
+        "x": 68,
+        "y": 96,
+        "left": -84.375,
+        "top": 40.979898,
+        "right": -82.96875,
+        "bottom": 39.909736,
+        "countries": [
+            "ohio"
+        ]
+    },
+    {
+        "x": 69,
+        "y": 96,
+        "left": -82.96875,
+        "top": 40.979898,
+        "right": -81.5625,
+        "bottom": 39.909736,
+        "countries": [
+            "ohio"
+        ]
+    },
+    {
+        "x": 70,
+        "y": 96,
+        "left": -81.5625,
+        "top": 40.979898,
+        "right": -80.15625,
+        "bottom": 39.909736,
+        "countries": [
+            "pennsylvania",
+            "west_virginia",
+            "ohio"
+        ]
+    },
+    {
+        "x": 69,
+        "y": 97,
+        "left": -82.96875,
+        "top": 39.909736,
+        "right": -81.5625,
+        "bottom": 38.822591,
+        "countries": [
+            "west_virginia",
+            "ohio"
+        ]
+    },
+    {
+        "x": 70,
+        "y": 97,
+        "left": -81.5625,
+        "top": 39.909736,
+        "right": -80.15625,
+        "bottom": 38.822591,
+        "countries": [
+            "pennsylvania",
+            "west_virginia",
+            "ohio"
+        ]
+    }
+]

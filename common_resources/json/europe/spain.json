@@ -1,0 +1,821 @@
+[
+    {
+        "x": 126,
+        "y": 101,
+        "left": -2.8125,
+        "top": 35.46067,
+        "right": -1.40625,
+        "bottom": 34.307144,
+        "countries": [
+            "spain",
+            "algeria",
+            "morocco"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 100,
+        "left": -7.03125,
+        "top": 36.597889,
+        "right": -5.625,
+        "bottom": 35.46067,
+        "countries": [
+            "spain",
+            "morocco"
+        ]
+    },
+    {
+        "x": 124,
+        "y": 100,
+        "left": -5.625,
+        "top": 36.597889,
+        "right": -4.21875,
+        "bottom": 35.46067,
+        "countries": [
+            "gibraltar",
+            "spain",
+            "morocco"
+        ]
+    },
+    {
+        "x": 125,
+        "y": 101,
+        "left": -4.21875,
+        "top": 35.46067,
+        "right": -2.8125,
+        "bottom": 34.307144,
+        "countries": [
+            "spain",
+            "morocco"
+        ]
+    },
+    {
+        "x": 118,
+        "y": 107,
+        "left": -14.0625,
+        "top": 28.304381,
+        "right": -12.65625,
+        "bottom": 27.059126,
+        "countries": [
+            "spain",
+            "western_sahara",
+            "morocco"
+        ]
+    },
+    {
+        "x": 129,
+        "y": 94,
+        "left": 1.40625,
+        "top": 43.068888,
+        "right": 2.8125,
+        "bottom": 42.032974,
+        "countries": [
+            "andorra",
+            "spain",
+            "france"
+        ]
+    },
+    {
+        "x": 126,
+        "y": 93,
+        "left": -2.8125,
+        "top": 44.087585,
+        "right": -1.40625,
+        "bottom": 43.068888,
+        "countries": [
+            "spain",
+            "france"
+        ]
+    },
+    {
+        "x": 127,
+        "y": 93,
+        "left": -1.40625,
+        "top": 44.087585,
+        "right": 0.0,
+        "bottom": 43.068888,
+        "countries": [
+            "spain",
+            "france"
+        ]
+    },
+    {
+        "x": 126,
+        "y": 94,
+        "left": -2.8125,
+        "top": 43.068888,
+        "right": -1.40625,
+        "bottom": 42.032974,
+        "countries": [
+            "spain",
+            "france"
+        ]
+    },
+    {
+        "x": 127,
+        "y": 94,
+        "left": -1.40625,
+        "top": 43.068888,
+        "right": 0.0,
+        "bottom": 42.032974,
+        "countries": [
+            "spain",
+            "france"
+        ]
+    },
+    {
+        "x": 130,
+        "y": 94,
+        "left": 2.8125,
+        "top": 43.068888,
+        "right": 4.21875,
+        "bottom": 42.032974,
+        "countries": [
+            "spain",
+            "france"
+        ]
+    },
+    {
+        "x": 128,
+        "y": 94,
+        "left": 0.0,
+        "top": 43.068888,
+        "right": 1.40625,
+        "bottom": 42.032974,
+        "countries": [
+            "spain",
+            "france"
+        ]
+    },
+    {
+        "x": 121,
+        "y": 94,
+        "left": -9.84375,
+        "top": 43.068888,
+        "right": -8.4375,
+        "bottom": 42.032974,
+        "countries": [
+            "portugal",
+            "spain"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 94,
+        "left": -8.4375,
+        "top": 43.068888,
+        "right": -7.03125,
+        "bottom": 42.032974,
+        "countries": [
+            "portugal",
+            "spain"
+        ]
+    },
+    {
+        "x": 121,
+        "y": 95,
+        "left": -9.84375,
+        "top": 42.032974,
+        "right": -8.4375,
+        "bottom": 40.979898,
+        "countries": [
+            "portugal",
+            "spain"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 95,
+        "left": -8.4375,
+        "top": 42.032974,
+        "right": -7.03125,
+        "bottom": 40.979898,
+        "countries": [
+            "portugal",
+            "spain"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 95,
+        "left": -7.03125,
+        "top": 42.032974,
+        "right": -5.625,
+        "bottom": 40.979898,
+        "countries": [
+            "portugal",
+            "spain"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 96,
+        "left": -7.03125,
+        "top": 40.979898,
+        "right": -5.625,
+        "bottom": 39.909736,
+        "countries": [
+            "portugal",
+            "spain"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 97,
+        "left": -8.4375,
+        "top": 39.909736,
+        "right": -7.03125,
+        "bottom": 38.822591,
+        "countries": [
+            "portugal",
+            "spain"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 97,
+        "left": -7.03125,
+        "top": 39.909736,
+        "right": -5.625,
+        "bottom": 38.822591,
+        "countries": [
+            "portugal",
+            "spain"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 98,
+        "left": -8.4375,
+        "top": 38.822591,
+        "right": -7.03125,
+        "bottom": 37.71859,
+        "countries": [
+            "portugal",
+            "spain"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 98,
+        "left": -7.03125,
+        "top": 38.822591,
+        "right": -5.625,
+        "bottom": 37.71859,
+        "countries": [
+            "portugal",
+            "spain"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 99,
+        "left": -8.4375,
+        "top": 37.71859,
+        "right": -7.03125,
+        "bottom": 36.597889,
+        "countries": [
+            "portugal",
+            "spain"
+        ]
+    },
+    {
+        "x": 121,
+        "y": 93,
+        "left": -9.84375,
+        "top": 44.087585,
+        "right": -8.4375,
+        "bottom": 43.068888,
+        "countries": [
+            "spain"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 93,
+        "left": -8.4375,
+        "top": 44.087585,
+        "right": -7.03125,
+        "bottom": 43.068888,
+        "countries": [
+            "spain"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 93,
+        "left": -7.03125,
+        "top": 44.087585,
+        "right": -5.625,
+        "bottom": 43.068888,
+        "countries": [
+            "spain"
+        ]
+    },
+    {
+        "x": 124,
+        "y": 93,
+        "left": -5.625,
+        "top": 44.087585,
+        "right": -4.21875,
+        "bottom": 43.068888,
+        "countries": [
+            "spain"
+        ]
+    },
+    {
+        "x": 125,
+        "y": 93,
+        "left": -4.21875,
+        "top": 44.087585,
+        "right": -2.8125,
+        "bottom": 43.068888,
+        "countries": [
+            "spain"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 94,
+        "left": -7.03125,
+        "top": 43.068888,
+        "right": -5.625,
+        "bottom": 42.032974,
+        "countries": [
+            "spain"
+        ]
+    },
+    {
+        "x": 124,
+        "y": 94,
+        "left": -5.625,
+        "top": 43.068888,
+        "right": -4.21875,
+        "bottom": 42.032974,
+        "countries": [
+            "spain"
+        ]
+    },
+    {
+        "x": 125,
+        "y": 94,
+        "left": -4.21875,
+        "top": 43.068888,
+        "right": -2.8125,
+        "bottom": 42.032974,
+        "countries": [
+            "spain"
+        ]
+    },
+    {
+        "x": 124,
+        "y": 95,
+        "left": -5.625,
+        "top": 42.032974,
+        "right": -4.21875,
+        "bottom": 40.979898,
+        "countries": [
+            "spain"
+        ]
+    },
+    {
+        "x": 125,
+        "y": 95,
+        "left": -4.21875,
+        "top": 42.032974,
+        "right": -2.8125,
+        "bottom": 40.979898,
+        "countries": [
+            "spain"
+        ]
+    },
+    {
+        "x": 126,
+        "y": 95,
+        "left": -2.8125,
+        "top": 42.032974,
+        "right": -1.40625,
+        "bottom": 40.979898,
+        "countries": [
+            "spain"
+        ]
+    },
+    {
+        "x": 127,
+        "y": 95,
+        "left": -1.40625,
+        "top": 42.032974,
+        "right": 0.0,
+        "bottom": 40.979898,
+        "countries": [
+            "spain"
+        ]
+    },
+    {
+        "x": 128,
+        "y": 95,
+        "left": 0.0,
+        "top": 42.032974,
+        "right": 1.40625,
+        "bottom": 40.979898,
+        "countries": [
+            "spain"
+        ]
+    },
+    {
+        "x": 129,
+        "y": 95,
+        "left": 1.40625,
+        "top": 42.032974,
+        "right": 2.8125,
+        "bottom": 40.979898,
+        "countries": [
+            "spain"
+        ]
+    },
+    {
+        "x": 130,
+        "y": 95,
+        "left": 2.8125,
+        "top": 42.032974,
+        "right": 4.21875,
+        "bottom": 40.979898,
+        "countries": [
+            "spain"
+        ]
+    },
+    {
+        "x": 124,
+        "y": 96,
+        "left": -5.625,
+        "top": 40.979898,
+        "right": -4.21875,
+        "bottom": 39.909736,
+        "countries": [
+            "spain"
+        ]
+    },
+    {
+        "x": 125,
+        "y": 96,
+        "left": -4.21875,
+        "top": 40.979898,
+        "right": -2.8125,
+        "bottom": 39.909736,
+        "countries": [
+            "spain"
+        ]
+    },
+    {
+        "x": 126,
+        "y": 96,
+        "left": -2.8125,
+        "top": 40.979898,
+        "right": -1.40625,
+        "bottom": 39.909736,
+        "countries": [
+            "spain"
+        ]
+    },
+    {
+        "x": 127,
+        "y": 96,
+        "left": -1.40625,
+        "top": 40.979898,
+        "right": 0.0,
+        "bottom": 39.909736,
+        "countries": [
+            "spain"
+        ]
+    },
+    {
+        "x": 128,
+        "y": 96,
+        "left": 0.0,
+        "top": 40.979898,
+        "right": 1.40625,
+        "bottom": 39.909736,
+        "countries": [
+            "spain"
+        ]
+    },
+    {
+        "x": 130,
+        "y": 96,
+        "left": 2.8125,
+        "top": 40.979898,
+        "right": 4.21875,
+        "bottom": 39.909736,
+        "countries": [
+            "spain"
+        ]
+    },
+    {
+        "x": 131,
+        "y": 96,
+        "left": 4.21875,
+        "top": 40.979898,
+        "right": 5.625,
+        "bottom": 39.909736,
+        "countries": [
+            "spain"
+        ]
+    },
+    {
+        "x": 124,
+        "y": 97,
+        "left": -5.625,
+        "top": 39.909736,
+        "right": -4.21875,
+        "bottom": 38.822591,
+        "countries": [
+            "spain"
+        ]
+    },
+    {
+        "x": 125,
+        "y": 97,
+        "left": -4.21875,
+        "top": 39.909736,
+        "right": -2.8125,
+        "bottom": 38.822591,
+        "countries": [
+            "spain"
+        ]
+    },
+    {
+        "x": 126,
+        "y": 97,
+        "left": -2.8125,
+        "top": 39.909736,
+        "right": -1.40625,
+        "bottom": 38.822591,
+        "countries": [
+            "spain"
+        ]
+    },
+    {
+        "x": 127,
+        "y": 97,
+        "left": -1.40625,
+        "top": 39.909736,
+        "right": 0.0,
+        "bottom": 38.822591,
+        "countries": [
+            "spain"
+        ]
+    },
+    {
+        "x": 128,
+        "y": 97,
+        "left": 0.0,
+        "top": 39.909736,
+        "right": 1.40625,
+        "bottom": 38.822591,
+        "countries": [
+            "spain"
+        ]
+    },
+    {
+        "x": 129,
+        "y": 97,
+        "left": 1.40625,
+        "top": 39.909736,
+        "right": 2.8125,
+        "bottom": 38.822591,
+        "countries": [
+            "spain"
+        ]
+    },
+    {
+        "x": 130,
+        "y": 97,
+        "left": 2.8125,
+        "top": 39.909736,
+        "right": 4.21875,
+        "bottom": 38.822591,
+        "countries": [
+            "spain"
+        ]
+    },
+    {
+        "x": 131,
+        "y": 97,
+        "left": 4.21875,
+        "top": 39.909736,
+        "right": 5.625,
+        "bottom": 38.822591,
+        "countries": [
+            "spain"
+        ]
+    },
+    {
+        "x": 124,
+        "y": 98,
+        "left": -5.625,
+        "top": 38.822591,
+        "right": -4.21875,
+        "bottom": 37.71859,
+        "countries": [
+            "spain"
+        ]
+    },
+    {
+        "x": 125,
+        "y": 98,
+        "left": -4.21875,
+        "top": 38.822591,
+        "right": -2.8125,
+        "bottom": 37.71859,
+        "countries": [
+            "spain"
+        ]
+    },
+    {
+        "x": 126,
+        "y": 98,
+        "left": -2.8125,
+        "top": 38.822591,
+        "right": -1.40625,
+        "bottom": 37.71859,
+        "countries": [
+            "spain"
+        ]
+    },
+    {
+        "x": 127,
+        "y": 98,
+        "left": -1.40625,
+        "top": 38.822591,
+        "right": 0.0,
+        "bottom": 37.71859,
+        "countries": [
+            "spain"
+        ]
+    },
+    {
+        "x": 128,
+        "y": 98,
+        "left": 0.0,
+        "top": 38.822591,
+        "right": 1.40625,
+        "bottom": 37.71859,
+        "countries": [
+            "spain"
+        ]
+    },
+    {
+        "x": 129,
+        "y": 98,
+        "left": 1.40625,
+        "top": 38.822591,
+        "right": 2.8125,
+        "bottom": 37.71859,
+        "countries": [
+            "spain"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 99,
+        "left": -7.03125,
+        "top": 37.71859,
+        "right": -5.625,
+        "bottom": 36.597889,
+        "countries": [
+            "spain"
+        ]
+    },
+    {
+        "x": 124,
+        "y": 99,
+        "left": -5.625,
+        "top": 37.71859,
+        "right": -4.21875,
+        "bottom": 36.597889,
+        "countries": [
+            "spain"
+        ]
+    },
+    {
+        "x": 125,
+        "y": 99,
+        "left": -4.21875,
+        "top": 37.71859,
+        "right": -2.8125,
+        "bottom": 36.597889,
+        "countries": [
+            "spain"
+        ]
+    },
+    {
+        "x": 126,
+        "y": 99,
+        "left": -2.8125,
+        "top": 37.71859,
+        "right": -1.40625,
+        "bottom": 36.597889,
+        "countries": [
+            "spain"
+        ]
+    },
+    {
+        "x": 127,
+        "y": 99,
+        "left": -1.40625,
+        "top": 37.71859,
+        "right": 0.0,
+        "bottom": 36.597889,
+        "countries": [
+            "spain"
+        ]
+    },
+    {
+        "x": 125,
+        "y": 100,
+        "left": -4.21875,
+        "top": 36.597889,
+        "right": -2.8125,
+        "bottom": 35.46067,
+        "countries": [
+            "spain"
+        ]
+    },
+    {
+        "x": 115,
+        "y": 106,
+        "left": -18.28125,
+        "top": 29.53523,
+        "right": -16.875,
+        "bottom": 28.304381,
+        "countries": [
+            "spain"
+        ]
+    },
+    {
+        "x": 116,
+        "y": 106,
+        "left": -16.875,
+        "top": 29.53523,
+        "right": -15.46875,
+        "bottom": 28.304381,
+        "countries": [
+            "spain"
+        ]
+    },
+    {
+        "x": 117,
+        "y": 106,
+        "left": -15.46875,
+        "top": 29.53523,
+        "right": -14.0625,
+        "bottom": 28.304381,
+        "countries": [
+            "spain"
+        ]
+    },
+    {
+        "x": 118,
+        "y": 106,
+        "left": -14.0625,
+        "top": 29.53523,
+        "right": -12.65625,
+        "bottom": 28.304381,
+        "countries": [
+            "spain"
+        ]
+    },
+    {
+        "x": 115,
+        "y": 107,
+        "left": -18.28125,
+        "top": 28.304381,
+        "right": -16.875,
+        "bottom": 27.059126,
+        "countries": [
+            "spain"
+        ]
+    },
+    {
+        "x": 116,
+        "y": 107,
+        "left": -16.875,
+        "top": 28.304381,
+        "right": -15.46875,
+        "bottom": 27.059126,
+        "countries": [
+            "spain"
+        ]
+    },
+    {
+        "x": 117,
+        "y": 107,
+        "left": -15.46875,
+        "top": 28.304381,
+        "right": -14.0625,
+        "bottom": 27.059126,
+        "countries": [
+            "spain"
+        ]
+    }
+]

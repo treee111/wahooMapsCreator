@@ -1,0 +1,284 @@
+[
+    {
+        "x": 121,
+        "y": 107,
+        "left": -9.84375,
+        "top": 28.304381,
+        "right": -8.4375,
+        "bottom": 27.059126,
+        "countries": [
+            "morocco",
+            "algeria",
+            "western_sahara",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 119,
+        "y": 108,
+        "left": -12.65625,
+        "top": 27.059126,
+        "right": -11.25,
+        "bottom": 25.799891,
+        "countries": [
+            "western_sahara",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 120,
+        "y": 108,
+        "left": -11.25,
+        "top": 27.059126,
+        "right": -9.84375,
+        "bottom": 25.799891,
+        "countries": [
+            "western_sahara",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 121,
+        "y": 108,
+        "left": -9.84375,
+        "top": 27.059126,
+        "right": -8.4375,
+        "bottom": 25.799891,
+        "countries": [
+            "western_sahara",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 119,
+        "y": 109,
+        "left": -12.65625,
+        "top": 25.799891,
+        "right": -11.25,
+        "bottom": 24.527135,
+        "countries": [
+            "western_sahara",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 118,
+        "y": 110,
+        "left": -14.0625,
+        "top": 24.527135,
+        "right": -12.65625,
+        "bottom": 23.241346,
+        "countries": [
+            "western_sahara",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 119,
+        "y": 110,
+        "left": -12.65625,
+        "top": 24.527135,
+        "right": -11.25,
+        "bottom": 23.241346,
+        "countries": [
+            "western_sahara",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 118,
+        "y": 111,
+        "left": -14.0625,
+        "top": 23.241346,
+        "right": -12.65625,
+        "bottom": 21.943046,
+        "countries": [
+            "western_sahara",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 115,
+        "y": 112,
+        "left": -18.28125,
+        "top": 21.943046,
+        "right": -16.875,
+        "bottom": 20.632784,
+        "countries": [
+            "western_sahara",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 116,
+        "y": 112,
+        "left": -16.875,
+        "top": 21.943046,
+        "right": -15.46875,
+        "bottom": 20.632784,
+        "countries": [
+            "western_sahara",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 117,
+        "y": 112,
+        "left": -15.46875,
+        "top": 21.943046,
+        "right": -14.0625,
+        "bottom": 20.632784,
+        "countries": [
+            "western_sahara",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 118,
+        "y": 112,
+        "left": -14.0625,
+        "top": 21.943046,
+        "right": -12.65625,
+        "bottom": 20.632784,
+        "countries": [
+            "western_sahara",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 118,
+        "y": 107,
+        "left": -14.0625,
+        "top": 28.304381,
+        "right": -12.65625,
+        "bottom": 27.059126,
+        "countries": [
+            "spain",
+            "western_sahara",
+            "morocco"
+        ]
+    },
+    {
+        "x": 119,
+        "y": 107,
+        "left": -12.65625,
+        "top": 28.304381,
+        "right": -11.25,
+        "bottom": 27.059126,
+        "countries": [
+            "western_sahara",
+            "morocco"
+        ]
+    },
+    {
+        "x": 120,
+        "y": 107,
+        "left": -11.25,
+        "top": 28.304381,
+        "right": -9.84375,
+        "bottom": 27.059126,
+        "countries": [
+            "western_sahara",
+            "morocco"
+        ]
+    },
+    {
+        "x": 117,
+        "y": 108,
+        "left": -15.46875,
+        "top": 27.059126,
+        "right": -14.0625,
+        "bottom": 25.799891,
+        "countries": [
+            "western_sahara"
+        ]
+    },
+    {
+        "x": 118,
+        "y": 108,
+        "left": -14.0625,
+        "top": 27.059126,
+        "right": -12.65625,
+        "bottom": 25.799891,
+        "countries": [
+            "western_sahara"
+        ]
+    },
+    {
+        "x": 117,
+        "y": 109,
+        "left": -15.46875,
+        "top": 25.799891,
+        "right": -14.0625,
+        "bottom": 24.527135,
+        "countries": [
+            "western_sahara"
+        ]
+    },
+    {
+        "x": 118,
+        "y": 109,
+        "left": -14.0625,
+        "top": 25.799891,
+        "right": -12.65625,
+        "bottom": 24.527135,
+        "countries": [
+            "western_sahara"
+        ]
+    },
+    {
+        "x": 116,
+        "y": 110,
+        "left": -16.875,
+        "top": 24.527135,
+        "right": -15.46875,
+        "bottom": 23.241346,
+        "countries": [
+            "western_sahara"
+        ]
+    },
+    {
+        "x": 117,
+        "y": 110,
+        "left": -15.46875,
+        "top": 24.527135,
+        "right": -14.0625,
+        "bottom": 23.241346,
+        "countries": [
+            "western_sahara"
+        ]
+    },
+    {
+        "x": 115,
+        "y": 111,
+        "left": -18.28125,
+        "top": 23.241346,
+        "right": -16.875,
+        "bottom": 21.943046,
+        "countries": [
+            "western_sahara"
+        ]
+    },
+    {
+        "x": 116,
+        "y": 111,
+        "left": -16.875,
+        "top": 23.241346,
+        "right": -15.46875,
+        "bottom": 21.943046,
+        "countries": [
+            "western_sahara"
+        ]
+    },
+    {
+        "x": 117,
+        "y": 111,
+        "left": -15.46875,
+        "top": 23.241346,
+        "right": -14.0625,
+        "bottom": 21.943046,
+        "countries": [
+            "western_sahara"
+        ]
+    }
+]

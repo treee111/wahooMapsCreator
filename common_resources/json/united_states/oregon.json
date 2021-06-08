@@ -1,0 +1,385 @@
+[
+    {
+        "x": 39,
+        "y": 95,
+        "left": -125.15625,
+        "top": 42.032974,
+        "right": -123.75,
+        "bottom": 40.979898,
+        "countries": [
+            "oregon",
+            "california"
+        ]
+    },
+    {
+        "x": 40,
+        "y": 95,
+        "left": -123.75,
+        "top": 42.032974,
+        "right": -122.34375,
+        "bottom": 40.979898,
+        "countries": [
+            "oregon",
+            "california"
+        ]
+    },
+    {
+        "x": 41,
+        "y": 95,
+        "left": -122.34375,
+        "top": 42.032974,
+        "right": -120.9375,
+        "bottom": 40.979898,
+        "countries": [
+            "oregon",
+            "california"
+        ]
+    },
+    {
+        "x": 42,
+        "y": 95,
+        "left": -120.9375,
+        "top": 42.032974,
+        "right": -119.53125,
+        "bottom": 40.979898,
+        "countries": [
+            "nevada",
+            "california",
+            "oregon"
+        ]
+    },
+    {
+        "x": 44,
+        "y": 91,
+        "left": -118.125,
+        "top": 46.073231,
+        "right": -116.71875,
+        "bottom": 45.089036,
+        "countries": [
+            "idaho",
+            "oregon",
+            "washington"
+        ]
+    },
+    {
+        "x": 45,
+        "y": 91,
+        "left": -116.71875,
+        "top": 46.073231,
+        "right": -115.3125,
+        "bottom": 45.089036,
+        "countries": [
+            "idaho",
+            "oregon"
+        ]
+    },
+    {
+        "x": 44,
+        "y": 92,
+        "left": -118.125,
+        "top": 45.089036,
+        "right": -116.71875,
+        "bottom": 44.087585,
+        "countries": [
+            "idaho",
+            "oregon"
+        ]
+    },
+    {
+        "x": 44,
+        "y": 93,
+        "left": -118.125,
+        "top": 44.087585,
+        "right": -116.71875,
+        "bottom": 43.068888,
+        "countries": [
+            "idaho",
+            "oregon"
+        ]
+    },
+    {
+        "x": 44,
+        "y": 94,
+        "left": -118.125,
+        "top": 43.068888,
+        "right": -116.71875,
+        "bottom": 42.032974,
+        "countries": [
+            "idaho",
+            "oregon"
+        ]
+    },
+    {
+        "x": 44,
+        "y": 95,
+        "left": -118.125,
+        "top": 42.032974,
+        "right": -116.71875,
+        "bottom": 40.979898,
+        "countries": [
+            "idaho",
+            "oregon",
+            "nevada"
+        ]
+    },
+    {
+        "x": 43,
+        "y": 95,
+        "left": -119.53125,
+        "top": 42.032974,
+        "right": -118.125,
+        "bottom": 40.979898,
+        "countries": [
+            "oregon",
+            "nevada"
+        ]
+    },
+    {
+        "x": 39,
+        "y": 90,
+        "left": -125.15625,
+        "top": 47.040182,
+        "right": -123.75,
+        "bottom": 46.073231,
+        "countries": [
+            "oregon",
+            "washington"
+        ]
+    },
+    {
+        "x": 40,
+        "y": 90,
+        "left": -123.75,
+        "top": 47.040182,
+        "right": -122.34375,
+        "bottom": 46.073231,
+        "countries": [
+            "oregon",
+            "washington"
+        ]
+    },
+    {
+        "x": 39,
+        "y": 91,
+        "left": -125.15625,
+        "top": 46.073231,
+        "right": -123.75,
+        "bottom": 45.089036,
+        "countries": [
+            "oregon"
+        ]
+    },
+    {
+        "x": 40,
+        "y": 91,
+        "left": -123.75,
+        "top": 46.073231,
+        "right": -122.34375,
+        "bottom": 45.089036,
+        "countries": [
+            "oregon",
+            "washington"
+        ]
+    },
+    {
+        "x": 41,
+        "y": 91,
+        "left": -122.34375,
+        "top": 46.073231,
+        "right": -120.9375,
+        "bottom": 45.089036,
+        "countries": [
+            "oregon",
+            "washington"
+        ]
+    },
+    {
+        "x": 42,
+        "y": 91,
+        "left": -120.9375,
+        "top": 46.073231,
+        "right": -119.53125,
+        "bottom": 45.089036,
+        "countries": [
+            "oregon",
+            "washington"
+        ]
+    },
+    {
+        "x": 43,
+        "y": 91,
+        "left": -119.53125,
+        "top": 46.073231,
+        "right": -118.125,
+        "bottom": 45.089036,
+        "countries": [
+            "oregon",
+            "washington"
+        ]
+    },
+    {
+        "x": 39,
+        "y": 92,
+        "left": -125.15625,
+        "top": 45.089036,
+        "right": -123.75,
+        "bottom": 44.087585,
+        "countries": [
+            "oregon"
+        ]
+    },
+    {
+        "x": 40,
+        "y": 92,
+        "left": -123.75,
+        "top": 45.089036,
+        "right": -122.34375,
+        "bottom": 44.087585,
+        "countries": [
+            "oregon"
+        ]
+    },
+    {
+        "x": 41,
+        "y": 92,
+        "left": -122.34375,
+        "top": 45.089036,
+        "right": -120.9375,
+        "bottom": 44.087585,
+        "countries": [
+            "oregon"
+        ]
+    },
+    {
+        "x": 42,
+        "y": 92,
+        "left": -120.9375,
+        "top": 45.089036,
+        "right": -119.53125,
+        "bottom": 44.087585,
+        "countries": [
+            "oregon"
+        ]
+    },
+    {
+        "x": 43,
+        "y": 92,
+        "left": -119.53125,
+        "top": 45.089036,
+        "right": -118.125,
+        "bottom": 44.087585,
+        "countries": [
+            "oregon"
+        ]
+    },
+    {
+        "x": 39,
+        "y": 93,
+        "left": -125.15625,
+        "top": 44.087585,
+        "right": -123.75,
+        "bottom": 43.068888,
+        "countries": [
+            "oregon"
+        ]
+    },
+    {
+        "x": 40,
+        "y": 93,
+        "left": -123.75,
+        "top": 44.087585,
+        "right": -122.34375,
+        "bottom": 43.068888,
+        "countries": [
+            "oregon"
+        ]
+    },
+    {
+        "x": 41,
+        "y": 93,
+        "left": -122.34375,
+        "top": 44.087585,
+        "right": -120.9375,
+        "bottom": 43.068888,
+        "countries": [
+            "oregon"
+        ]
+    },
+    {
+        "x": 42,
+        "y": 93,
+        "left": -120.9375,
+        "top": 44.087585,
+        "right": -119.53125,
+        "bottom": 43.068888,
+        "countries": [
+            "oregon"
+        ]
+    },
+    {
+        "x": 43,
+        "y": 93,
+        "left": -119.53125,
+        "top": 44.087585,
+        "right": -118.125,
+        "bottom": 43.068888,
+        "countries": [
+            "oregon"
+        ]
+    },
+    {
+        "x": 39,
+        "y": 94,
+        "left": -125.15625,
+        "top": 43.068888,
+        "right": -123.75,
+        "bottom": 42.032974,
+        "countries": [
+            "oregon"
+        ]
+    },
+    {
+        "x": 40,
+        "y": 94,
+        "left": -123.75,
+        "top": 43.068888,
+        "right": -122.34375,
+        "bottom": 42.032974,
+        "countries": [
+            "oregon"
+        ]
+    },
+    {
+        "x": 41,
+        "y": 94,
+        "left": -122.34375,
+        "top": 43.068888,
+        "right": -120.9375,
+        "bottom": 42.032974,
+        "countries": [
+            "oregon"
+        ]
+    },
+    {
+        "x": 42,
+        "y": 94,
+        "left": -120.9375,
+        "top": 43.068888,
+        "right": -119.53125,
+        "bottom": 42.032974,
+        "countries": [
+            "oregon"
+        ]
+    },
+    {
+        "x": 43,
+        "y": 94,
+        "left": -119.53125,
+        "top": 43.068888,
+        "right": -118.125,
+        "bottom": 42.032974,
+        "countries": [
+            "oregon"
+        ]
+    }
+]

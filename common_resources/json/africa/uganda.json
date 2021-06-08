@@ -1,0 +1,211 @@
+[
+    {
+        "x": 149,
+        "y": 129,
+        "left": 29.53125,
+        "top": -1.406109,
+        "right": 30.9375,
+        "bottom": -2.811371,
+        "countries": [
+            "burundi",
+            "democratic_republic_of_the_congo",
+            "tanzania",
+            "rwanda",
+            "uganda"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 125,
+        "left": 29.53125,
+        "top": 4.214943,
+        "right": 30.9375,
+        "bottom": 2.811371,
+        "countries": [
+            "uganda",
+            "sudan",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 126,
+        "left": 29.53125,
+        "top": 2.811371,
+        "right": 30.9375,
+        "bottom": 1.406109,
+        "countries": [
+            "uganda",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 126,
+        "left": 30.9375,
+        "top": 2.811371,
+        "right": 32.34375,
+        "bottom": 1.406109,
+        "countries": [
+            "uganda",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 127,
+        "left": 29.53125,
+        "top": 1.406109,
+        "right": 30.9375,
+        "bottom": 0.0,
+        "countries": [
+            "uganda",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 128,
+        "left": 29.53125,
+        "top": 0.0,
+        "right": 30.9375,
+        "bottom": -1.406109,
+        "countries": [
+            "uganda",
+            "tanzania",
+            "democratic_republic_of_the_congo",
+            "rwanda"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 125,
+        "left": 33.75,
+        "top": 4.214943,
+        "right": 35.15625,
+        "bottom": 2.811371,
+        "countries": [
+            "uganda",
+            "sudan",
+            "kenya"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 126,
+        "left": 33.75,
+        "top": 2.811371,
+        "right": 35.15625,
+        "bottom": 1.406109,
+        "countries": [
+            "uganda",
+            "kenya"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 127,
+        "left": 33.75,
+        "top": 1.406109,
+        "right": 35.15625,
+        "bottom": 0.0,
+        "countries": [
+            "uganda",
+            "kenya"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 128,
+        "left": 33.75,
+        "top": 0.0,
+        "right": 35.15625,
+        "bottom": -1.406109,
+        "countries": [
+            "uganda",
+            "kenya",
+            "tanzania"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 125,
+        "left": 30.9375,
+        "top": 4.214943,
+        "right": 32.34375,
+        "bottom": 2.811371,
+        "countries": [
+            "uganda",
+            "sudan"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 125,
+        "left": 32.34375,
+        "top": 4.214943,
+        "right": 33.75,
+        "bottom": 2.811371,
+        "countries": [
+            "uganda",
+            "sudan"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 128,
+        "left": 30.9375,
+        "top": 0.0,
+        "right": 32.34375,
+        "bottom": -1.406109,
+        "countries": [
+            "uganda",
+            "tanzania"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 128,
+        "left": 32.34375,
+        "top": 0.0,
+        "right": 33.75,
+        "bottom": -1.406109,
+        "countries": [
+            "uganda",
+            "tanzania"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 126,
+        "left": 32.34375,
+        "top": 2.811371,
+        "right": 33.75,
+        "bottom": 1.406109,
+        "countries": [
+            "uganda"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 127,
+        "left": 30.9375,
+        "top": 1.406109,
+        "right": 32.34375,
+        "bottom": 0.0,
+        "countries": [
+            "uganda"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 127,
+        "left": 32.34375,
+        "top": 1.406109,
+        "right": 33.75,
+        "bottom": 0.0,
+        "countries": [
+            "uganda"
+        ]
+    }
+]

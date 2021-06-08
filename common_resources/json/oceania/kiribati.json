@@ -1,0 +1,310 @@
+[
+    {
+        "x": 13,
+        "y": 124,
+        "left": -161.71875,
+        "top": 5.615986,
+        "right": -160.3125,
+        "bottom": 4.214943,
+        "countries": [
+            "kiribati"
+        ]
+    },
+    {
+        "x": 14,
+        "y": 125,
+        "left": -160.3125,
+        "top": 4.214943,
+        "right": -158.90625,
+        "bottom": 2.811371,
+        "countries": [
+            "kiribati"
+        ]
+    },
+    {
+        "x": 250,
+        "y": 125,
+        "left": 171.5625,
+        "top": 4.214943,
+        "right": 172.96875,
+        "bottom": 2.811371,
+        "countries": [
+            "kiribati"
+        ]
+    },
+    {
+        "x": 251,
+        "y": 125,
+        "left": 172.96875,
+        "top": 4.214943,
+        "right": 174.375,
+        "bottom": 2.811371,
+        "countries": [
+            "kiribati"
+        ]
+    },
+    {
+        "x": 15,
+        "y": 126,
+        "left": -158.90625,
+        "top": 2.811371,
+        "right": -157.5,
+        "bottom": 1.406109,
+        "countries": [
+            "kiribati"
+        ]
+    },
+    {
+        "x": 16,
+        "y": 126,
+        "left": -157.5,
+        "top": 2.811371,
+        "right": -156.09375,
+        "bottom": 1.406109,
+        "countries": [
+            "kiribati"
+        ]
+    },
+    {
+        "x": 250,
+        "y": 126,
+        "left": 171.5625,
+        "top": 2.811371,
+        "right": 172.96875,
+        "bottom": 1.406109,
+        "countries": [
+            "kiribati"
+        ]
+    },
+    {
+        "x": 251,
+        "y": 126,
+        "left": 172.96875,
+        "top": 2.811371,
+        "right": 174.375,
+        "bottom": 1.406109,
+        "countries": [
+            "kiribati"
+        ]
+    },
+    {
+        "x": 250,
+        "y": 127,
+        "left": 171.5625,
+        "top": 1.406109,
+        "right": 172.96875,
+        "bottom": 0.0,
+        "countries": [
+            "kiribati"
+        ]
+    },
+    {
+        "x": 251,
+        "y": 127,
+        "left": 172.96875,
+        "top": 1.406109,
+        "right": 174.375,
+        "bottom": 0.0,
+        "countries": [
+            "kiribati"
+        ]
+    },
+    {
+        "x": 248,
+        "y": 128,
+        "left": 168.75,
+        "top": 0.0,
+        "right": 170.15625,
+        "bottom": -1.406109,
+        "countries": [
+            "kiribati"
+        ]
+    },
+    {
+        "x": 251,
+        "y": 128,
+        "left": 172.96875,
+        "top": 0.0,
+        "right": 174.375,
+        "bottom": -1.406109,
+        "countries": [
+            "kiribati"
+        ]
+    },
+    {
+        "x": 252,
+        "y": 128,
+        "left": 174.375,
+        "top": 0.0,
+        "right": 175.78125,
+        "bottom": -1.406109,
+        "countries": [
+            "kiribati"
+        ]
+    },
+    {
+        "x": 253,
+        "y": 128,
+        "left": 175.78125,
+        "top": 0.0,
+        "right": 177.1875,
+        "bottom": -1.406109,
+        "countries": [
+            "kiribati"
+        ]
+    },
+    {
+        "x": 5,
+        "y": 129,
+        "left": -172.96875,
+        "top": -1.406109,
+        "right": -171.5625,
+        "bottom": -2.811371,
+        "countries": [
+            "kiribati"
+        ]
+    },
+    {
+        "x": 252,
+        "y": 129,
+        "left": 174.375,
+        "top": -1.406109,
+        "right": 175.78125,
+        "bottom": -2.811371,
+        "countries": [
+            "kiribati"
+        ]
+    },
+    {
+        "x": 253,
+        "y": 129,
+        "left": 175.78125,
+        "top": -1.406109,
+        "right": 177.1875,
+        "bottom": -2.811371,
+        "countries": [
+            "kiribati"
+        ]
+    },
+    {
+        "x": 4,
+        "y": 130,
+        "left": -174.375,
+        "top": -2.811371,
+        "right": -172.96875,
+        "bottom": -4.214943,
+        "countries": [
+            "kiribati"
+        ]
+    },
+    {
+        "x": 5,
+        "y": 130,
+        "left": -172.96875,
+        "top": -2.811371,
+        "right": -171.5625,
+        "bottom": -4.214943,
+        "countries": [
+            "kiribati"
+        ]
+    },
+    {
+        "x": 6,
+        "y": 130,
+        "left": -171.5625,
+        "top": -2.811371,
+        "right": -170.15625,
+        "bottom": -4.214943,
+        "countries": [
+            "kiribati"
+        ]
+    },
+    {
+        "x": 17,
+        "y": 130,
+        "left": -156.09375,
+        "top": -2.811371,
+        "right": -154.6875,
+        "bottom": -4.214943,
+        "countries": [
+            "kiribati"
+        ]
+    },
+    {
+        "x": 3,
+        "y": 131,
+        "left": -175.78125,
+        "top": -4.214943,
+        "right": -174.375,
+        "bottom": -5.615986,
+        "countries": [
+            "kiribati"
+        ]
+    },
+    {
+        "x": 5,
+        "y": 131,
+        "left": -172.96875,
+        "top": -4.214943,
+        "right": -171.5625,
+        "bottom": -5.615986,
+        "countries": [
+            "kiribati"
+        ]
+    },
+    {
+        "x": 6,
+        "y": 131,
+        "left": -171.5625,
+        "top": -4.214943,
+        "right": -170.15625,
+        "bottom": -5.615986,
+        "countries": [
+            "kiribati"
+        ]
+    },
+    {
+        "x": 17,
+        "y": 131,
+        "left": -156.09375,
+        "top": -4.214943,
+        "right": -154.6875,
+        "bottom": -5.615986,
+        "countries": [
+            "kiribati"
+        ]
+    },
+    {
+        "x": 17,
+        "y": 132,
+        "left": -156.09375,
+        "top": -5.615986,
+        "right": -154.6875,
+        "bottom": -7.013668,
+        "countries": [
+            "kiribati"
+        ]
+    },
+    {
+        "x": 21,
+        "y": 135,
+        "left": -150.46875,
+        "top": -9.795678,
+        "right": -149.0625,
+        "bottom": -11.178402,
+        "countries": [
+            "kiribati"
+        ]
+    },
+    {
+        "x": 20,
+        "y": 136,
+        "left": -151.875,
+        "top": -11.178402,
+        "right": -150.46875,
+        "bottom": -12.554564,
+        "countries": [
+            "kiribati"
+        ]
+    }
+]

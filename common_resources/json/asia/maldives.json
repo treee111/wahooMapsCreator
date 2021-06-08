@@ -1,0 +1,146 @@
+[
+    {
+        "x": 179,
+        "y": 122,
+        "left": 71.71875,
+        "top": 8.407168,
+        "right": 73.125,
+        "bottom": 7.013668,
+        "countries": [
+            "maldives",
+            "india"
+        ]
+    },
+    {
+        "x": 179,
+        "y": 123,
+        "left": 71.71875,
+        "top": 7.013668,
+        "right": 73.125,
+        "bottom": 5.615986,
+        "countries": [
+            "maldives"
+        ]
+    },
+    {
+        "x": 180,
+        "y": 123,
+        "left": 73.125,
+        "top": 7.013668,
+        "right": 74.53125,
+        "bottom": 5.615986,
+        "countries": [
+            "maldives"
+        ]
+    },
+    {
+        "x": 179,
+        "y": 124,
+        "left": 71.71875,
+        "top": 5.615986,
+        "right": 73.125,
+        "bottom": 4.214943,
+        "countries": [
+            "maldives"
+        ]
+    },
+    {
+        "x": 180,
+        "y": 124,
+        "left": 73.125,
+        "top": 5.615986,
+        "right": 74.53125,
+        "bottom": 4.214943,
+        "countries": [
+            "maldives"
+        ]
+    },
+    {
+        "x": 179,
+        "y": 125,
+        "left": 71.71875,
+        "top": 4.214943,
+        "right": 73.125,
+        "bottom": 2.811371,
+        "countries": [
+            "maldives"
+        ]
+    },
+    {
+        "x": 180,
+        "y": 125,
+        "left": 73.125,
+        "top": 4.214943,
+        "right": 74.53125,
+        "bottom": 2.811371,
+        "countries": [
+            "maldives"
+        ]
+    },
+    {
+        "x": 179,
+        "y": 126,
+        "left": 71.71875,
+        "top": 2.811371,
+        "right": 73.125,
+        "bottom": 1.406109,
+        "countries": [
+            "maldives"
+        ]
+    },
+    {
+        "x": 180,
+        "y": 126,
+        "left": 73.125,
+        "top": 2.811371,
+        "right": 74.53125,
+        "bottom": 1.406109,
+        "countries": [
+            "maldives"
+        ]
+    },
+    {
+        "x": 179,
+        "y": 127,
+        "left": 71.71875,
+        "top": 1.406109,
+        "right": 73.125,
+        "bottom": 0.0,
+        "countries": [
+            "maldives"
+        ]
+    },
+    {
+        "x": 180,
+        "y": 127,
+        "left": 73.125,
+        "top": 1.406109,
+        "right": 74.53125,
+        "bottom": 0.0,
+        "countries": [
+            "maldives"
+        ]
+    },
+    {
+        "x": 179,
+        "y": 128,
+        "left": 71.71875,
+        "top": 0.0,
+        "right": 73.125,
+        "bottom": -1.406109,
+        "countries": [
+            "maldives"
+        ]
+    },
+    {
+        "x": 180,
+        "y": 128,
+        "left": 73.125,
+        "top": 0.0,
+        "right": 74.53125,
+        "bottom": -1.406109,
+        "countries": [
+            "maldives"
+        ]
+    }
+]

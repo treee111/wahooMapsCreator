@@ -1,0 +1,114 @@
+[
+    {
+        "x": 184,
+        "y": 120,
+        "left": 78.75,
+        "top": 11.178402,
+        "right": 80.15625,
+        "bottom": 9.795678,
+        "countries": [
+            "sri_lanka",
+            "india"
+        ]
+    },
+    {
+        "x": 184,
+        "y": 121,
+        "left": 78.75,
+        "top": 9.795678,
+        "right": 80.15625,
+        "bottom": 8.407168,
+        "countries": [
+            "sri_lanka",
+            "india"
+        ]
+    },
+    {
+        "x": 185,
+        "y": 120,
+        "left": 80.15625,
+        "top": 11.178402,
+        "right": 81.5625,
+        "bottom": 9.795678,
+        "countries": [
+            "sri_lanka"
+        ]
+    },
+    {
+        "x": 185,
+        "y": 121,
+        "left": 80.15625,
+        "top": 9.795678,
+        "right": 81.5625,
+        "bottom": 8.407168,
+        "countries": [
+            "sri_lanka"
+        ]
+    },
+    {
+        "x": 184,
+        "y": 122,
+        "left": 78.75,
+        "top": 8.407168,
+        "right": 80.15625,
+        "bottom": 7.013668,
+        "countries": [
+            "sri_lanka"
+        ]
+    },
+    {
+        "x": 185,
+        "y": 122,
+        "left": 80.15625,
+        "top": 8.407168,
+        "right": 81.5625,
+        "bottom": 7.013668,
+        "countries": [
+            "sri_lanka"
+        ]
+    },
+    {
+        "x": 186,
+        "y": 122,
+        "left": 81.5625,
+        "top": 8.407168,
+        "right": 82.96875,
+        "bottom": 7.013668,
+        "countries": [
+            "sri_lanka"
+        ]
+    },
+    {
+        "x": 184,
+        "y": 123,
+        "left": 78.75,
+        "top": 7.013668,
+        "right": 80.15625,
+        "bottom": 5.615986,
+        "countries": [
+            "sri_lanka"
+        ]
+    },
+    {
+        "x": 185,
+        "y": 123,
+        "left": 80.15625,
+        "top": 7.013668,
+        "right": 81.5625,
+        "bottom": 5.615986,
+        "countries": [
+            "sri_lanka"
+        ]
+    },
+    {
+        "x": 186,
+        "y": 123,
+        "left": 81.5625,
+        "top": 7.013668,
+        "right": 82.96875,
+        "bottom": 5.615986,
+        "countries": [
+            "sri_lanka"
+        ]
+    }
+]

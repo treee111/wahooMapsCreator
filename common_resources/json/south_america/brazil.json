@@ -1,0 +1,4975 @@
+[
+    {
+        "x": 89,
+        "y": 146,
+        "left": -54.84375,
+        "top": -24.527135,
+        "right": -53.4375,
+        "bottom": -25.799891,
+        "countries": [
+            "brazil",
+            "argentina",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 89,
+        "y": 147,
+        "left": -54.84375,
+        "top": -25.799891,
+        "right": -53.4375,
+        "bottom": -27.059126,
+        "countries": [
+            "brazil",
+            "argentina",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 88,
+        "y": 148,
+        "left": -56.25,
+        "top": -27.059126,
+        "right": -54.84375,
+        "bottom": -28.304381,
+        "countries": [
+            "brazil",
+            "argentina",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 89,
+        "y": 148,
+        "left": -54.84375,
+        "top": -27.059126,
+        "right": -53.4375,
+        "bottom": -28.304381,
+        "countries": [
+            "brazil",
+            "argentina"
+        ]
+    },
+    {
+        "x": 87,
+        "y": 149,
+        "left": -57.65625,
+        "top": -28.304381,
+        "right": -56.25,
+        "bottom": -29.53523,
+        "countries": [
+            "brazil",
+            "argentina"
+        ]
+    },
+    {
+        "x": 88,
+        "y": 149,
+        "left": -56.25,
+        "top": -28.304381,
+        "right": -54.84375,
+        "bottom": -29.53523,
+        "countries": [
+            "brazil",
+            "argentina"
+        ]
+    },
+    {
+        "x": 87,
+        "y": 150,
+        "left": -57.65625,
+        "top": -29.53523,
+        "right": -56.25,
+        "bottom": -30.751278,
+        "countries": [
+            "brazil",
+            "uruguay",
+            "argentina"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 134,
+        "left": -67.5,
+        "top": -8.407168,
+        "right": -66.09375,
+        "bottom": -9.795678,
+        "countries": [
+            "brazil",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 81,
+        "y": 134,
+        "left": -66.09375,
+        "top": -8.407168,
+        "right": -64.6875,
+        "bottom": -9.795678,
+        "countries": [
+            "brazil",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 135,
+        "left": -70.3125,
+        "top": -9.795678,
+        "right": -68.90625,
+        "bottom": -11.178402,
+        "countries": [
+            "peru",
+            "brazil",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 135,
+        "left": -68.90625,
+        "top": -9.795678,
+        "right": -67.5,
+        "bottom": -11.178402,
+        "countries": [
+            "brazil",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 135,
+        "left": -67.5,
+        "top": -9.795678,
+        "right": -66.09375,
+        "bottom": -11.178402,
+        "countries": [
+            "brazil",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 81,
+        "y": 135,
+        "left": -66.09375,
+        "top": -9.795678,
+        "right": -64.6875,
+        "bottom": -11.178402,
+        "countries": [
+            "brazil",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 81,
+        "y": 136,
+        "left": -66.09375,
+        "top": -11.178402,
+        "right": -64.6875,
+        "bottom": -12.554564,
+        "countries": [
+            "brazil",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 82,
+        "y": 136,
+        "left": -64.6875,
+        "top": -11.178402,
+        "right": -63.28125,
+        "bottom": -12.554564,
+        "countries": [
+            "brazil",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 82,
+        "y": 137,
+        "left": -64.6875,
+        "top": -12.554564,
+        "right": -63.28125,
+        "bottom": -13.923404,
+        "countries": [
+            "brazil",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 83,
+        "y": 137,
+        "left": -63.28125,
+        "top": -12.554564,
+        "right": -61.875,
+        "bottom": -13.923404,
+        "countries": [
+            "brazil",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 84,
+        "y": 137,
+        "left": -61.875,
+        "top": -12.554564,
+        "right": -60.46875,
+        "bottom": -13.923404,
+        "countries": [
+            "brazil",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 85,
+        "y": 137,
+        "left": -60.46875,
+        "top": -12.554564,
+        "right": -59.0625,
+        "bottom": -13.923404,
+        "countries": [
+            "brazil",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 84,
+        "y": 138,
+        "left": -61.875,
+        "top": -13.923404,
+        "right": -60.46875,
+        "bottom": -15.284185,
+        "countries": [
+            "brazil",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 85,
+        "y": 138,
+        "left": -60.46875,
+        "top": -13.923404,
+        "right": -59.0625,
+        "bottom": -15.284185,
+        "countries": [
+            "brazil",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 85,
+        "y": 139,
+        "left": -60.46875,
+        "top": -15.284185,
+        "right": -59.0625,
+        "bottom": -16.636192,
+        "countries": [
+            "brazil",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 139,
+        "left": -59.0625,
+        "top": -15.284185,
+        "right": -57.65625,
+        "bottom": -16.636192,
+        "countries": [
+            "brazil",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 140,
+        "left": -59.0625,
+        "top": -16.636192,
+        "right": -57.65625,
+        "bottom": -17.978733,
+        "countries": [
+            "brazil",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 87,
+        "y": 140,
+        "left": -57.65625,
+        "top": -16.636192,
+        "right": -56.25,
+        "bottom": -17.978733,
+        "countries": [
+            "brazil",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 141,
+        "left": -59.0625,
+        "top": -17.978733,
+        "right": -57.65625,
+        "bottom": -19.311143,
+        "countries": [
+            "brazil",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 87,
+        "y": 141,
+        "left": -57.65625,
+        "top": -17.978733,
+        "right": -56.25,
+        "bottom": -19.311143,
+        "countries": [
+            "brazil",
+            "bolivia"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 142,
+        "left": -59.0625,
+        "top": -19.311143,
+        "right": -57.65625,
+        "bottom": -20.632784,
+        "countries": [
+            "brazil",
+            "bolivia",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 81,
+        "y": 124,
+        "left": -66.09375,
+        "top": 5.615986,
+        "right": -64.6875,
+        "bottom": 4.214943,
+        "countries": [
+            "brazil",
+            "venezuela"
+        ]
+    },
+    {
+        "x": 82,
+        "y": 124,
+        "left": -64.6875,
+        "top": 5.615986,
+        "right": -63.28125,
+        "bottom": 4.214943,
+        "countries": [
+            "brazil",
+            "venezuela"
+        ]
+    },
+    {
+        "x": 84,
+        "y": 124,
+        "left": -61.875,
+        "top": 5.615986,
+        "right": -60.46875,
+        "bottom": 4.214943,
+        "countries": [
+            "brazil",
+            "venezuela",
+            "guyana"
+        ]
+    },
+    {
+        "x": 85,
+        "y": 124,
+        "left": -60.46875,
+        "top": 5.615986,
+        "right": -59.0625,
+        "bottom": 4.214943,
+        "countries": [
+            "brazil",
+            "guyana"
+        ]
+    },
+    {
+        "x": 91,
+        "y": 124,
+        "left": -52.03125,
+        "top": 5.615986,
+        "right": -50.625,
+        "bottom": 4.214943,
+        "countries": [
+            "brazil",
+            "french_guiana"
+        ]
+    },
+    {
+        "x": 81,
+        "y": 125,
+        "left": -66.09375,
+        "top": 4.214943,
+        "right": -64.6875,
+        "bottom": 2.811371,
+        "countries": [
+            "brazil",
+            "venezuela"
+        ]
+    },
+    {
+        "x": 82,
+        "y": 125,
+        "left": -64.6875,
+        "top": 4.214943,
+        "right": -63.28125,
+        "bottom": 2.811371,
+        "countries": [
+            "brazil",
+            "venezuela"
+        ]
+    },
+    {
+        "x": 83,
+        "y": 125,
+        "left": -63.28125,
+        "top": 4.214943,
+        "right": -61.875,
+        "bottom": 2.811371,
+        "countries": [
+            "brazil",
+            "venezuela"
+        ]
+    },
+    {
+        "x": 84,
+        "y": 125,
+        "left": -61.875,
+        "top": 4.214943,
+        "right": -60.46875,
+        "bottom": 2.811371,
+        "countries": [
+            "brazil",
+            "venezuela"
+        ]
+    },
+    {
+        "x": 85,
+        "y": 125,
+        "left": -60.46875,
+        "top": 4.214943,
+        "right": -59.0625,
+        "bottom": 2.811371,
+        "countries": [
+            "brazil",
+            "guyana"
+        ]
+    },
+    {
+        "x": 90,
+        "y": 125,
+        "left": -53.4375,
+        "top": 4.214943,
+        "right": -52.03125,
+        "bottom": 2.811371,
+        "countries": [
+            "brazil",
+            "french_guiana"
+        ]
+    },
+    {
+        "x": 91,
+        "y": 125,
+        "left": -52.03125,
+        "top": 4.214943,
+        "right": -50.625,
+        "bottom": 2.811371,
+        "countries": [
+            "brazil",
+            "french_guiana"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 126,
+        "left": -70.3125,
+        "top": 2.811371,
+        "right": -68.90625,
+        "bottom": 1.406109,
+        "countries": [
+            "brazil",
+            "colombia"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 126,
+        "left": -68.90625,
+        "top": 2.811371,
+        "right": -67.5,
+        "bottom": 1.406109,
+        "countries": [
+            "brazil",
+            "venezuela",
+            "colombia"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 126,
+        "left": -67.5,
+        "top": 2.811371,
+        "right": -66.09375,
+        "bottom": 1.406109,
+        "countries": [
+            "brazil",
+            "venezuela",
+            "colombia"
+        ]
+    },
+    {
+        "x": 82,
+        "y": 126,
+        "left": -64.6875,
+        "top": 2.811371,
+        "right": -63.28125,
+        "bottom": 1.406109,
+        "countries": [
+            "brazil",
+            "venezuela"
+        ]
+    },
+    {
+        "x": 83,
+        "y": 126,
+        "left": -63.28125,
+        "top": 2.811371,
+        "right": -61.875,
+        "bottom": 1.406109,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 84,
+        "y": 126,
+        "left": -61.875,
+        "top": 2.811371,
+        "right": -60.46875,
+        "bottom": 1.406109,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 85,
+        "y": 126,
+        "left": -60.46875,
+        "top": 2.811371,
+        "right": -59.0625,
+        "bottom": 1.406109,
+        "countries": [
+            "brazil",
+            "guyana"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 126,
+        "left": -59.0625,
+        "top": 2.811371,
+        "right": -57.65625,
+        "bottom": 1.406109,
+        "countries": [
+            "brazil",
+            "guyana"
+        ]
+    },
+    {
+        "x": 87,
+        "y": 126,
+        "left": -57.65625,
+        "top": 2.811371,
+        "right": -56.25,
+        "bottom": 1.406109,
+        "countries": [
+            "brazil",
+            "guyana",
+            "suriname"
+        ]
+    },
+    {
+        "x": 88,
+        "y": 126,
+        "left": -56.25,
+        "top": 2.811371,
+        "right": -54.84375,
+        "bottom": 1.406109,
+        "countries": [
+            "brazil",
+            "suriname"
+        ]
+    },
+    {
+        "x": 89,
+        "y": 126,
+        "left": -54.84375,
+        "top": 2.811371,
+        "right": -53.4375,
+        "bottom": 1.406109,
+        "countries": [
+            "brazil",
+            "suriname",
+            "french_guiana"
+        ]
+    },
+    {
+        "x": 90,
+        "y": 126,
+        "left": -53.4375,
+        "top": 2.811371,
+        "right": -52.03125,
+        "bottom": 1.406109,
+        "countries": [
+            "brazil",
+            "french_guiana"
+        ]
+    },
+    {
+        "x": 91,
+        "y": 126,
+        "left": -52.03125,
+        "top": 2.811371,
+        "right": -50.625,
+        "bottom": 1.406109,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 92,
+        "y": 126,
+        "left": -50.625,
+        "top": 2.811371,
+        "right": -49.21875,
+        "bottom": 1.406109,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 127,
+        "left": -70.3125,
+        "top": 1.406109,
+        "right": -68.90625,
+        "bottom": 0.0,
+        "countries": [
+            "brazil",
+            "colombia"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 127,
+        "left": -68.90625,
+        "top": 1.406109,
+        "right": -67.5,
+        "bottom": 0.0,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 127,
+        "left": -67.5,
+        "top": 1.406109,
+        "right": -66.09375,
+        "bottom": 0.0,
+        "countries": [
+            "brazil",
+            "venezuela",
+            "colombia"
+        ]
+    },
+    {
+        "x": 81,
+        "y": 127,
+        "left": -66.09375,
+        "top": 1.406109,
+        "right": -64.6875,
+        "bottom": 0.0,
+        "countries": [
+            "brazil",
+            "venezuela"
+        ]
+    },
+    {
+        "x": 82,
+        "y": 127,
+        "left": -64.6875,
+        "top": 1.406109,
+        "right": -63.28125,
+        "bottom": 0.0,
+        "countries": [
+            "brazil",
+            "venezuela"
+        ]
+    },
+    {
+        "x": 83,
+        "y": 127,
+        "left": -63.28125,
+        "top": 1.406109,
+        "right": -61.875,
+        "bottom": 0.0,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 84,
+        "y": 127,
+        "left": -61.875,
+        "top": 1.406109,
+        "right": -60.46875,
+        "bottom": 0.0,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 85,
+        "y": 127,
+        "left": -60.46875,
+        "top": 1.406109,
+        "right": -59.0625,
+        "bottom": 0.0,
+        "countries": [
+            "brazil",
+            "guyana"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 127,
+        "left": -59.0625,
+        "top": 1.406109,
+        "right": -57.65625,
+        "bottom": 0.0,
+        "countries": [
+            "brazil",
+            "guyana"
+        ]
+    },
+    {
+        "x": 87,
+        "y": 127,
+        "left": -57.65625,
+        "top": 1.406109,
+        "right": -56.25,
+        "bottom": 0.0,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 88,
+        "y": 127,
+        "left": -56.25,
+        "top": 1.406109,
+        "right": -54.84375,
+        "bottom": 0.0,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 89,
+        "y": 127,
+        "left": -54.84375,
+        "top": 1.406109,
+        "right": -53.4375,
+        "bottom": 0.0,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 90,
+        "y": 127,
+        "left": -53.4375,
+        "top": 1.406109,
+        "right": -52.03125,
+        "bottom": 0.0,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 91,
+        "y": 127,
+        "left": -52.03125,
+        "top": 1.406109,
+        "right": -50.625,
+        "bottom": 0.0,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 92,
+        "y": 127,
+        "left": -50.625,
+        "top": 1.406109,
+        "right": -49.21875,
+        "bottom": 0.0,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 128,
+        "left": -70.3125,
+        "top": 0.0,
+        "right": -68.90625,
+        "bottom": -1.406109,
+        "countries": [
+            "brazil",
+            "colombia"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 128,
+        "left": -68.90625,
+        "top": 0.0,
+        "right": -67.5,
+        "bottom": -1.406109,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 128,
+        "left": -67.5,
+        "top": 0.0,
+        "right": -66.09375,
+        "bottom": -1.406109,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 81,
+        "y": 128,
+        "left": -66.09375,
+        "top": 0.0,
+        "right": -64.6875,
+        "bottom": -1.406109,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 82,
+        "y": 128,
+        "left": -64.6875,
+        "top": 0.0,
+        "right": -63.28125,
+        "bottom": -1.406109,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 83,
+        "y": 128,
+        "left": -63.28125,
+        "top": 0.0,
+        "right": -61.875,
+        "bottom": -1.406109,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 84,
+        "y": 128,
+        "left": -61.875,
+        "top": 0.0,
+        "right": -60.46875,
+        "bottom": -1.406109,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 85,
+        "y": 128,
+        "left": -60.46875,
+        "top": 0.0,
+        "right": -59.0625,
+        "bottom": -1.406109,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 128,
+        "left": -59.0625,
+        "top": 0.0,
+        "right": -57.65625,
+        "bottom": -1.406109,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 87,
+        "y": 128,
+        "left": -57.65625,
+        "top": 0.0,
+        "right": -56.25,
+        "bottom": -1.406109,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 88,
+        "y": 128,
+        "left": -56.25,
+        "top": 0.0,
+        "right": -54.84375,
+        "bottom": -1.406109,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 89,
+        "y": 128,
+        "left": -54.84375,
+        "top": 0.0,
+        "right": -53.4375,
+        "bottom": -1.406109,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 90,
+        "y": 128,
+        "left": -53.4375,
+        "top": 0.0,
+        "right": -52.03125,
+        "bottom": -1.406109,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 91,
+        "y": 128,
+        "left": -52.03125,
+        "top": 0.0,
+        "right": -50.625,
+        "bottom": -1.406109,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 92,
+        "y": 128,
+        "left": -50.625,
+        "top": 0.0,
+        "right": -49.21875,
+        "bottom": -1.406109,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 93,
+        "y": 128,
+        "left": -49.21875,
+        "top": 0.0,
+        "right": -47.8125,
+        "bottom": -1.406109,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 94,
+        "y": 128,
+        "left": -47.8125,
+        "top": 0.0,
+        "right": -46.40625,
+        "bottom": -1.406109,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 95,
+        "y": 128,
+        "left": -46.40625,
+        "top": 0.0,
+        "right": -45.0,
+        "bottom": -1.406109,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 96,
+        "y": 128,
+        "left": -45.0,
+        "top": 0.0,
+        "right": -43.59375,
+        "bottom": -1.406109,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 129,
+        "left": -70.3125,
+        "top": -1.406109,
+        "right": -68.90625,
+        "bottom": -2.811371,
+        "countries": [
+            "peru",
+            "brazil",
+            "colombia"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 129,
+        "left": -68.90625,
+        "top": -1.406109,
+        "right": -67.5,
+        "bottom": -2.811371,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 129,
+        "left": -67.5,
+        "top": -1.406109,
+        "right": -66.09375,
+        "bottom": -2.811371,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 81,
+        "y": 129,
+        "left": -66.09375,
+        "top": -1.406109,
+        "right": -64.6875,
+        "bottom": -2.811371,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 82,
+        "y": 129,
+        "left": -64.6875,
+        "top": -1.406109,
+        "right": -63.28125,
+        "bottom": -2.811371,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 83,
+        "y": 129,
+        "left": -63.28125,
+        "top": -1.406109,
+        "right": -61.875,
+        "bottom": -2.811371,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 84,
+        "y": 129,
+        "left": -61.875,
+        "top": -1.406109,
+        "right": -60.46875,
+        "bottom": -2.811371,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 85,
+        "y": 129,
+        "left": -60.46875,
+        "top": -1.406109,
+        "right": -59.0625,
+        "bottom": -2.811371,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 129,
+        "left": -59.0625,
+        "top": -1.406109,
+        "right": -57.65625,
+        "bottom": -2.811371,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 87,
+        "y": 129,
+        "left": -57.65625,
+        "top": -1.406109,
+        "right": -56.25,
+        "bottom": -2.811371,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 88,
+        "y": 129,
+        "left": -56.25,
+        "top": -1.406109,
+        "right": -54.84375,
+        "bottom": -2.811371,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 89,
+        "y": 129,
+        "left": -54.84375,
+        "top": -1.406109,
+        "right": -53.4375,
+        "bottom": -2.811371,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 90,
+        "y": 129,
+        "left": -53.4375,
+        "top": -1.406109,
+        "right": -52.03125,
+        "bottom": -2.811371,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 91,
+        "y": 129,
+        "left": -52.03125,
+        "top": -1.406109,
+        "right": -50.625,
+        "bottom": -2.811371,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 92,
+        "y": 129,
+        "left": -50.625,
+        "top": -1.406109,
+        "right": -49.21875,
+        "bottom": -2.811371,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 93,
+        "y": 129,
+        "left": -49.21875,
+        "top": -1.406109,
+        "right": -47.8125,
+        "bottom": -2.811371,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 94,
+        "y": 129,
+        "left": -47.8125,
+        "top": -1.406109,
+        "right": -46.40625,
+        "bottom": -2.811371,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 95,
+        "y": 129,
+        "left": -46.40625,
+        "top": -1.406109,
+        "right": -45.0,
+        "bottom": -2.811371,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 96,
+        "y": 129,
+        "left": -45.0,
+        "top": -1.406109,
+        "right": -43.59375,
+        "bottom": -2.811371,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 97,
+        "y": 129,
+        "left": -43.59375,
+        "top": -1.406109,
+        "right": -42.1875,
+        "bottom": -2.811371,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 98,
+        "y": 129,
+        "left": -42.1875,
+        "top": -1.406109,
+        "right": -40.78125,
+        "bottom": -2.811371,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 99,
+        "y": 129,
+        "left": -40.78125,
+        "top": -1.406109,
+        "right": -39.375,
+        "bottom": -2.811371,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 130,
+        "left": -71.71875,
+        "top": -2.811371,
+        "right": -70.3125,
+        "bottom": -4.214943,
+        "countries": [
+            "peru",
+            "brazil",
+            "colombia"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 130,
+        "left": -70.3125,
+        "top": -2.811371,
+        "right": -68.90625,
+        "bottom": -4.214943,
+        "countries": [
+            "peru",
+            "brazil",
+            "colombia"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 130,
+        "left": -68.90625,
+        "top": -2.811371,
+        "right": -67.5,
+        "bottom": -4.214943,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 130,
+        "left": -67.5,
+        "top": -2.811371,
+        "right": -66.09375,
+        "bottom": -4.214943,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 81,
+        "y": 130,
+        "left": -66.09375,
+        "top": -2.811371,
+        "right": -64.6875,
+        "bottom": -4.214943,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 82,
+        "y": 130,
+        "left": -64.6875,
+        "top": -2.811371,
+        "right": -63.28125,
+        "bottom": -4.214943,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 83,
+        "y": 130,
+        "left": -63.28125,
+        "top": -2.811371,
+        "right": -61.875,
+        "bottom": -4.214943,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 84,
+        "y": 130,
+        "left": -61.875,
+        "top": -2.811371,
+        "right": -60.46875,
+        "bottom": -4.214943,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 85,
+        "y": 130,
+        "left": -60.46875,
+        "top": -2.811371,
+        "right": -59.0625,
+        "bottom": -4.214943,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 130,
+        "left": -59.0625,
+        "top": -2.811371,
+        "right": -57.65625,
+        "bottom": -4.214943,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 87,
+        "y": 130,
+        "left": -57.65625,
+        "top": -2.811371,
+        "right": -56.25,
+        "bottom": -4.214943,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 88,
+        "y": 130,
+        "left": -56.25,
+        "top": -2.811371,
+        "right": -54.84375,
+        "bottom": -4.214943,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 89,
+        "y": 130,
+        "left": -54.84375,
+        "top": -2.811371,
+        "right": -53.4375,
+        "bottom": -4.214943,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 90,
+        "y": 130,
+        "left": -53.4375,
+        "top": -2.811371,
+        "right": -52.03125,
+        "bottom": -4.214943,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 91,
+        "y": 130,
+        "left": -52.03125,
+        "top": -2.811371,
+        "right": -50.625,
+        "bottom": -4.214943,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 92,
+        "y": 130,
+        "left": -50.625,
+        "top": -2.811371,
+        "right": -49.21875,
+        "bottom": -4.214943,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 93,
+        "y": 130,
+        "left": -49.21875,
+        "top": -2.811371,
+        "right": -47.8125,
+        "bottom": -4.214943,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 94,
+        "y": 130,
+        "left": -47.8125,
+        "top": -2.811371,
+        "right": -46.40625,
+        "bottom": -4.214943,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 95,
+        "y": 130,
+        "left": -46.40625,
+        "top": -2.811371,
+        "right": -45.0,
+        "bottom": -4.214943,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 96,
+        "y": 130,
+        "left": -45.0,
+        "top": -2.811371,
+        "right": -43.59375,
+        "bottom": -4.214943,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 97,
+        "y": 130,
+        "left": -43.59375,
+        "top": -2.811371,
+        "right": -42.1875,
+        "bottom": -4.214943,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 98,
+        "y": 130,
+        "left": -42.1875,
+        "top": -2.811371,
+        "right": -40.78125,
+        "bottom": -4.214943,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 99,
+        "y": 130,
+        "left": -40.78125,
+        "top": -2.811371,
+        "right": -39.375,
+        "bottom": -4.214943,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 100,
+        "y": 130,
+        "left": -39.375,
+        "top": -2.811371,
+        "right": -37.96875,
+        "bottom": -4.214943,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 103,
+        "y": 130,
+        "left": -35.15625,
+        "top": -2.811371,
+        "right": -33.75,
+        "bottom": -4.214943,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 104,
+        "y": 130,
+        "left": -33.75,
+        "top": -2.811371,
+        "right": -32.34375,
+        "bottom": -4.214943,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 131,
+        "left": -73.125,
+        "top": -4.214943,
+        "right": -71.71875,
+        "bottom": -5.615986,
+        "countries": [
+            "peru",
+            "brazil"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 131,
+        "left": -71.71875,
+        "top": -4.214943,
+        "right": -70.3125,
+        "bottom": -5.615986,
+        "countries": [
+            "peru",
+            "brazil"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 131,
+        "left": -70.3125,
+        "top": -4.214943,
+        "right": -68.90625,
+        "bottom": -5.615986,
+        "countries": [
+            "peru",
+            "brazil",
+            "colombia"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 131,
+        "left": -68.90625,
+        "top": -4.214943,
+        "right": -67.5,
+        "bottom": -5.615986,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 131,
+        "left": -67.5,
+        "top": -4.214943,
+        "right": -66.09375,
+        "bottom": -5.615986,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 81,
+        "y": 131,
+        "left": -66.09375,
+        "top": -4.214943,
+        "right": -64.6875,
+        "bottom": -5.615986,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 82,
+        "y": 131,
+        "left": -64.6875,
+        "top": -4.214943,
+        "right": -63.28125,
+        "bottom": -5.615986,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 83,
+        "y": 131,
+        "left": -63.28125,
+        "top": -4.214943,
+        "right": -61.875,
+        "bottom": -5.615986,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 84,
+        "y": 131,
+        "left": -61.875,
+        "top": -4.214943,
+        "right": -60.46875,
+        "bottom": -5.615986,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 85,
+        "y": 131,
+        "left": -60.46875,
+        "top": -4.214943,
+        "right": -59.0625,
+        "bottom": -5.615986,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 131,
+        "left": -59.0625,
+        "top": -4.214943,
+        "right": -57.65625,
+        "bottom": -5.615986,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 87,
+        "y": 131,
+        "left": -57.65625,
+        "top": -4.214943,
+        "right": -56.25,
+        "bottom": -5.615986,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 88,
+        "y": 131,
+        "left": -56.25,
+        "top": -4.214943,
+        "right": -54.84375,
+        "bottom": -5.615986,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 89,
+        "y": 131,
+        "left": -54.84375,
+        "top": -4.214943,
+        "right": -53.4375,
+        "bottom": -5.615986,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 90,
+        "y": 131,
+        "left": -53.4375,
+        "top": -4.214943,
+        "right": -52.03125,
+        "bottom": -5.615986,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 91,
+        "y": 131,
+        "left": -52.03125,
+        "top": -4.214943,
+        "right": -50.625,
+        "bottom": -5.615986,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 92,
+        "y": 131,
+        "left": -50.625,
+        "top": -4.214943,
+        "right": -49.21875,
+        "bottom": -5.615986,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 93,
+        "y": 131,
+        "left": -49.21875,
+        "top": -4.214943,
+        "right": -47.8125,
+        "bottom": -5.615986,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 94,
+        "y": 131,
+        "left": -47.8125,
+        "top": -4.214943,
+        "right": -46.40625,
+        "bottom": -5.615986,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 95,
+        "y": 131,
+        "left": -46.40625,
+        "top": -4.214943,
+        "right": -45.0,
+        "bottom": -5.615986,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 96,
+        "y": 131,
+        "left": -45.0,
+        "top": -4.214943,
+        "right": -43.59375,
+        "bottom": -5.615986,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 97,
+        "y": 131,
+        "left": -43.59375,
+        "top": -4.214943,
+        "right": -42.1875,
+        "bottom": -5.615986,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 98,
+        "y": 131,
+        "left": -42.1875,
+        "top": -4.214943,
+        "right": -40.78125,
+        "bottom": -5.615986,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 99,
+        "y": 131,
+        "left": -40.78125,
+        "top": -4.214943,
+        "right": -39.375,
+        "bottom": -5.615986,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 100,
+        "y": 131,
+        "left": -39.375,
+        "top": -4.214943,
+        "right": -37.96875,
+        "bottom": -5.615986,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 101,
+        "y": 131,
+        "left": -37.96875,
+        "top": -4.214943,
+        "right": -36.5625,
+        "bottom": -5.615986,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 102,
+        "y": 131,
+        "left": -36.5625,
+        "top": -4.214943,
+        "right": -35.15625,
+        "bottom": -5.615986,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 75,
+        "y": 132,
+        "left": -74.53125,
+        "top": -5.615986,
+        "right": -73.125,
+        "bottom": -7.013668,
+        "countries": [
+            "peru",
+            "brazil"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 132,
+        "left": -73.125,
+        "top": -5.615986,
+        "right": -71.71875,
+        "bottom": -7.013668,
+        "countries": [
+            "peru",
+            "brazil"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 132,
+        "left": -71.71875,
+        "top": -5.615986,
+        "right": -70.3125,
+        "bottom": -7.013668,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 132,
+        "left": -70.3125,
+        "top": -5.615986,
+        "right": -68.90625,
+        "bottom": -7.013668,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 132,
+        "left": -68.90625,
+        "top": -5.615986,
+        "right": -67.5,
+        "bottom": -7.013668,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 132,
+        "left": -67.5,
+        "top": -5.615986,
+        "right": -66.09375,
+        "bottom": -7.013668,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 81,
+        "y": 132,
+        "left": -66.09375,
+        "top": -5.615986,
+        "right": -64.6875,
+        "bottom": -7.013668,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 82,
+        "y": 132,
+        "left": -64.6875,
+        "top": -5.615986,
+        "right": -63.28125,
+        "bottom": -7.013668,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 83,
+        "y": 132,
+        "left": -63.28125,
+        "top": -5.615986,
+        "right": -61.875,
+        "bottom": -7.013668,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 84,
+        "y": 132,
+        "left": -61.875,
+        "top": -5.615986,
+        "right": -60.46875,
+        "bottom": -7.013668,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 85,
+        "y": 132,
+        "left": -60.46875,
+        "top": -5.615986,
+        "right": -59.0625,
+        "bottom": -7.013668,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 132,
+        "left": -59.0625,
+        "top": -5.615986,
+        "right": -57.65625,
+        "bottom": -7.013668,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 87,
+        "y": 132,
+        "left": -57.65625,
+        "top": -5.615986,
+        "right": -56.25,
+        "bottom": -7.013668,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 88,
+        "y": 132,
+        "left": -56.25,
+        "top": -5.615986,
+        "right": -54.84375,
+        "bottom": -7.013668,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 89,
+        "y": 132,
+        "left": -54.84375,
+        "top": -5.615986,
+        "right": -53.4375,
+        "bottom": -7.013668,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 90,
+        "y": 132,
+        "left": -53.4375,
+        "top": -5.615986,
+        "right": -52.03125,
+        "bottom": -7.013668,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 91,
+        "y": 132,
+        "left": -52.03125,
+        "top": -5.615986,
+        "right": -50.625,
+        "bottom": -7.013668,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 92,
+        "y": 132,
+        "left": -50.625,
+        "top": -5.615986,
+        "right": -49.21875,
+        "bottom": -7.013668,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 93,
+        "y": 132,
+        "left": -49.21875,
+        "top": -5.615986,
+        "right": -47.8125,
+        "bottom": -7.013668,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 94,
+        "y": 132,
+        "left": -47.8125,
+        "top": -5.615986,
+        "right": -46.40625,
+        "bottom": -7.013668,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 95,
+        "y": 132,
+        "left": -46.40625,
+        "top": -5.615986,
+        "right": -45.0,
+        "bottom": -7.013668,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 96,
+        "y": 132,
+        "left": -45.0,
+        "top": -5.615986,
+        "right": -43.59375,
+        "bottom": -7.013668,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 97,
+        "y": 132,
+        "left": -43.59375,
+        "top": -5.615986,
+        "right": -42.1875,
+        "bottom": -7.013668,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 98,
+        "y": 132,
+        "left": -42.1875,
+        "top": -5.615986,
+        "right": -40.78125,
+        "bottom": -7.013668,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 99,
+        "y": 132,
+        "left": -40.78125,
+        "top": -5.615986,
+        "right": -39.375,
+        "bottom": -7.013668,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 100,
+        "y": 132,
+        "left": -39.375,
+        "top": -5.615986,
+        "right": -37.96875,
+        "bottom": -7.013668,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 101,
+        "y": 132,
+        "left": -37.96875,
+        "top": -5.615986,
+        "right": -36.5625,
+        "bottom": -7.013668,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 102,
+        "y": 132,
+        "left": -36.5625,
+        "top": -5.615986,
+        "right": -35.15625,
+        "bottom": -7.013668,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 103,
+        "y": 132,
+        "left": -35.15625,
+        "top": -5.615986,
+        "right": -33.75,
+        "bottom": -7.013668,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 75,
+        "y": 133,
+        "left": -74.53125,
+        "top": -7.013668,
+        "right": -73.125,
+        "bottom": -8.407168,
+        "countries": [
+            "peru",
+            "brazil"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 133,
+        "left": -73.125,
+        "top": -7.013668,
+        "right": -71.71875,
+        "bottom": -8.407168,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 133,
+        "left": -71.71875,
+        "top": -7.013668,
+        "right": -70.3125,
+        "bottom": -8.407168,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 133,
+        "left": -70.3125,
+        "top": -7.013668,
+        "right": -68.90625,
+        "bottom": -8.407168,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 133,
+        "left": -68.90625,
+        "top": -7.013668,
+        "right": -67.5,
+        "bottom": -8.407168,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 133,
+        "left": -67.5,
+        "top": -7.013668,
+        "right": -66.09375,
+        "bottom": -8.407168,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 81,
+        "y": 133,
+        "left": -66.09375,
+        "top": -7.013668,
+        "right": -64.6875,
+        "bottom": -8.407168,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 82,
+        "y": 133,
+        "left": -64.6875,
+        "top": -7.013668,
+        "right": -63.28125,
+        "bottom": -8.407168,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 83,
+        "y": 133,
+        "left": -63.28125,
+        "top": -7.013668,
+        "right": -61.875,
+        "bottom": -8.407168,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 84,
+        "y": 133,
+        "left": -61.875,
+        "top": -7.013668,
+        "right": -60.46875,
+        "bottom": -8.407168,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 85,
+        "y": 133,
+        "left": -60.46875,
+        "top": -7.013668,
+        "right": -59.0625,
+        "bottom": -8.407168,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 133,
+        "left": -59.0625,
+        "top": -7.013668,
+        "right": -57.65625,
+        "bottom": -8.407168,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 87,
+        "y": 133,
+        "left": -57.65625,
+        "top": -7.013668,
+        "right": -56.25,
+        "bottom": -8.407168,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 88,
+        "y": 133,
+        "left": -56.25,
+        "top": -7.013668,
+        "right": -54.84375,
+        "bottom": -8.407168,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 89,
+        "y": 133,
+        "left": -54.84375,
+        "top": -7.013668,
+        "right": -53.4375,
+        "bottom": -8.407168,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 90,
+        "y": 133,
+        "left": -53.4375,
+        "top": -7.013668,
+        "right": -52.03125,
+        "bottom": -8.407168,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 91,
+        "y": 133,
+        "left": -52.03125,
+        "top": -7.013668,
+        "right": -50.625,
+        "bottom": -8.407168,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 92,
+        "y": 133,
+        "left": -50.625,
+        "top": -7.013668,
+        "right": -49.21875,
+        "bottom": -8.407168,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 93,
+        "y": 133,
+        "left": -49.21875,
+        "top": -7.013668,
+        "right": -47.8125,
+        "bottom": -8.407168,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 94,
+        "y": 133,
+        "left": -47.8125,
+        "top": -7.013668,
+        "right": -46.40625,
+        "bottom": -8.407168,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 95,
+        "y": 133,
+        "left": -46.40625,
+        "top": -7.013668,
+        "right": -45.0,
+        "bottom": -8.407168,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 96,
+        "y": 133,
+        "left": -45.0,
+        "top": -7.013668,
+        "right": -43.59375,
+        "bottom": -8.407168,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 97,
+        "y": 133,
+        "left": -43.59375,
+        "top": -7.013668,
+        "right": -42.1875,
+        "bottom": -8.407168,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 98,
+        "y": 133,
+        "left": -42.1875,
+        "top": -7.013668,
+        "right": -40.78125,
+        "bottom": -8.407168,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 99,
+        "y": 133,
+        "left": -40.78125,
+        "top": -7.013668,
+        "right": -39.375,
+        "bottom": -8.407168,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 100,
+        "y": 133,
+        "left": -39.375,
+        "top": -7.013668,
+        "right": -37.96875,
+        "bottom": -8.407168,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 101,
+        "y": 133,
+        "left": -37.96875,
+        "top": -7.013668,
+        "right": -36.5625,
+        "bottom": -8.407168,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 102,
+        "y": 133,
+        "left": -36.5625,
+        "top": -7.013668,
+        "right": -35.15625,
+        "bottom": -8.407168,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 103,
+        "y": 133,
+        "left": -35.15625,
+        "top": -7.013668,
+        "right": -33.75,
+        "bottom": -8.407168,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 75,
+        "y": 134,
+        "left": -74.53125,
+        "top": -8.407168,
+        "right": -73.125,
+        "bottom": -9.795678,
+        "countries": [
+            "peru",
+            "brazil"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 134,
+        "left": -73.125,
+        "top": -8.407168,
+        "right": -71.71875,
+        "bottom": -9.795678,
+        "countries": [
+            "peru",
+            "brazil"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 134,
+        "left": -71.71875,
+        "top": -8.407168,
+        "right": -70.3125,
+        "bottom": -9.795678,
+        "countries": [
+            "peru",
+            "brazil"
+        ]
+    },
+    {
+        "x": 78,
+        "y": 134,
+        "left": -70.3125,
+        "top": -8.407168,
+        "right": -68.90625,
+        "bottom": -9.795678,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 79,
+        "y": 134,
+        "left": -68.90625,
+        "top": -8.407168,
+        "right": -67.5,
+        "bottom": -9.795678,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 82,
+        "y": 134,
+        "left": -64.6875,
+        "top": -8.407168,
+        "right": -63.28125,
+        "bottom": -9.795678,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 83,
+        "y": 134,
+        "left": -63.28125,
+        "top": -8.407168,
+        "right": -61.875,
+        "bottom": -9.795678,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 84,
+        "y": 134,
+        "left": -61.875,
+        "top": -8.407168,
+        "right": -60.46875,
+        "bottom": -9.795678,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 85,
+        "y": 134,
+        "left": -60.46875,
+        "top": -8.407168,
+        "right": -59.0625,
+        "bottom": -9.795678,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 134,
+        "left": -59.0625,
+        "top": -8.407168,
+        "right": -57.65625,
+        "bottom": -9.795678,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 87,
+        "y": 134,
+        "left": -57.65625,
+        "top": -8.407168,
+        "right": -56.25,
+        "bottom": -9.795678,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 88,
+        "y": 134,
+        "left": -56.25,
+        "top": -8.407168,
+        "right": -54.84375,
+        "bottom": -9.795678,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 89,
+        "y": 134,
+        "left": -54.84375,
+        "top": -8.407168,
+        "right": -53.4375,
+        "bottom": -9.795678,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 90,
+        "y": 134,
+        "left": -53.4375,
+        "top": -8.407168,
+        "right": -52.03125,
+        "bottom": -9.795678,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 91,
+        "y": 134,
+        "left": -52.03125,
+        "top": -8.407168,
+        "right": -50.625,
+        "bottom": -9.795678,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 92,
+        "y": 134,
+        "left": -50.625,
+        "top": -8.407168,
+        "right": -49.21875,
+        "bottom": -9.795678,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 93,
+        "y": 134,
+        "left": -49.21875,
+        "top": -8.407168,
+        "right": -47.8125,
+        "bottom": -9.795678,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 94,
+        "y": 134,
+        "left": -47.8125,
+        "top": -8.407168,
+        "right": -46.40625,
+        "bottom": -9.795678,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 95,
+        "y": 134,
+        "left": -46.40625,
+        "top": -8.407168,
+        "right": -45.0,
+        "bottom": -9.795678,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 96,
+        "y": 134,
+        "left": -45.0,
+        "top": -8.407168,
+        "right": -43.59375,
+        "bottom": -9.795678,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 97,
+        "y": 134,
+        "left": -43.59375,
+        "top": -8.407168,
+        "right": -42.1875,
+        "bottom": -9.795678,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 98,
+        "y": 134,
+        "left": -42.1875,
+        "top": -8.407168,
+        "right": -40.78125,
+        "bottom": -9.795678,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 99,
+        "y": 134,
+        "left": -40.78125,
+        "top": -8.407168,
+        "right": -39.375,
+        "bottom": -9.795678,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 100,
+        "y": 134,
+        "left": -39.375,
+        "top": -8.407168,
+        "right": -37.96875,
+        "bottom": -9.795678,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 101,
+        "y": 134,
+        "left": -37.96875,
+        "top": -8.407168,
+        "right": -36.5625,
+        "bottom": -9.795678,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 102,
+        "y": 134,
+        "left": -36.5625,
+        "top": -8.407168,
+        "right": -35.15625,
+        "bottom": -9.795678,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 103,
+        "y": 134,
+        "left": -35.15625,
+        "top": -8.407168,
+        "right": -33.75,
+        "bottom": -9.795678,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 135,
+        "left": -73.125,
+        "top": -9.795678,
+        "right": -71.71875,
+        "bottom": -11.178402,
+        "countries": [
+            "peru",
+            "brazil"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 135,
+        "left": -71.71875,
+        "top": -9.795678,
+        "right": -70.3125,
+        "bottom": -11.178402,
+        "countries": [
+            "peru",
+            "brazil"
+        ]
+    },
+    {
+        "x": 82,
+        "y": 135,
+        "left": -64.6875,
+        "top": -9.795678,
+        "right": -63.28125,
+        "bottom": -11.178402,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 83,
+        "y": 135,
+        "left": -63.28125,
+        "top": -9.795678,
+        "right": -61.875,
+        "bottom": -11.178402,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 84,
+        "y": 135,
+        "left": -61.875,
+        "top": -9.795678,
+        "right": -60.46875,
+        "bottom": -11.178402,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 85,
+        "y": 135,
+        "left": -60.46875,
+        "top": -9.795678,
+        "right": -59.0625,
+        "bottom": -11.178402,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 135,
+        "left": -59.0625,
+        "top": -9.795678,
+        "right": -57.65625,
+        "bottom": -11.178402,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 87,
+        "y": 135,
+        "left": -57.65625,
+        "top": -9.795678,
+        "right": -56.25,
+        "bottom": -11.178402,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 88,
+        "y": 135,
+        "left": -56.25,
+        "top": -9.795678,
+        "right": -54.84375,
+        "bottom": -11.178402,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 89,
+        "y": 135,
+        "left": -54.84375,
+        "top": -9.795678,
+        "right": -53.4375,
+        "bottom": -11.178402,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 90,
+        "y": 135,
+        "left": -53.4375,
+        "top": -9.795678,
+        "right": -52.03125,
+        "bottom": -11.178402,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 91,
+        "y": 135,
+        "left": -52.03125,
+        "top": -9.795678,
+        "right": -50.625,
+        "bottom": -11.178402,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 92,
+        "y": 135,
+        "left": -50.625,
+        "top": -9.795678,
+        "right": -49.21875,
+        "bottom": -11.178402,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 93,
+        "y": 135,
+        "left": -49.21875,
+        "top": -9.795678,
+        "right": -47.8125,
+        "bottom": -11.178402,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 94,
+        "y": 135,
+        "left": -47.8125,
+        "top": -9.795678,
+        "right": -46.40625,
+        "bottom": -11.178402,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 95,
+        "y": 135,
+        "left": -46.40625,
+        "top": -9.795678,
+        "right": -45.0,
+        "bottom": -11.178402,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 96,
+        "y": 135,
+        "left": -45.0,
+        "top": -9.795678,
+        "right": -43.59375,
+        "bottom": -11.178402,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 97,
+        "y": 135,
+        "left": -43.59375,
+        "top": -9.795678,
+        "right": -42.1875,
+        "bottom": -11.178402,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 98,
+        "y": 135,
+        "left": -42.1875,
+        "top": -9.795678,
+        "right": -40.78125,
+        "bottom": -11.178402,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 99,
+        "y": 135,
+        "left": -40.78125,
+        "top": -9.795678,
+        "right": -39.375,
+        "bottom": -11.178402,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 100,
+        "y": 135,
+        "left": -39.375,
+        "top": -9.795678,
+        "right": -37.96875,
+        "bottom": -11.178402,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 101,
+        "y": 135,
+        "left": -37.96875,
+        "top": -9.795678,
+        "right": -36.5625,
+        "bottom": -11.178402,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 102,
+        "y": 135,
+        "left": -36.5625,
+        "top": -9.795678,
+        "right": -35.15625,
+        "bottom": -11.178402,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 83,
+        "y": 136,
+        "left": -63.28125,
+        "top": -11.178402,
+        "right": -61.875,
+        "bottom": -12.554564,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 84,
+        "y": 136,
+        "left": -61.875,
+        "top": -11.178402,
+        "right": -60.46875,
+        "bottom": -12.554564,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 85,
+        "y": 136,
+        "left": -60.46875,
+        "top": -11.178402,
+        "right": -59.0625,
+        "bottom": -12.554564,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 136,
+        "left": -59.0625,
+        "top": -11.178402,
+        "right": -57.65625,
+        "bottom": -12.554564,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 87,
+        "y": 136,
+        "left": -57.65625,
+        "top": -11.178402,
+        "right": -56.25,
+        "bottom": -12.554564,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 88,
+        "y": 136,
+        "left": -56.25,
+        "top": -11.178402,
+        "right": -54.84375,
+        "bottom": -12.554564,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 89,
+        "y": 136,
+        "left": -54.84375,
+        "top": -11.178402,
+        "right": -53.4375,
+        "bottom": -12.554564,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 90,
+        "y": 136,
+        "left": -53.4375,
+        "top": -11.178402,
+        "right": -52.03125,
+        "bottom": -12.554564,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 91,
+        "y": 136,
+        "left": -52.03125,
+        "top": -11.178402,
+        "right": -50.625,
+        "bottom": -12.554564,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 92,
+        "y": 136,
+        "left": -50.625,
+        "top": -11.178402,
+        "right": -49.21875,
+        "bottom": -12.554564,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 93,
+        "y": 136,
+        "left": -49.21875,
+        "top": -11.178402,
+        "right": -47.8125,
+        "bottom": -12.554564,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 94,
+        "y": 136,
+        "left": -47.8125,
+        "top": -11.178402,
+        "right": -46.40625,
+        "bottom": -12.554564,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 95,
+        "y": 136,
+        "left": -46.40625,
+        "top": -11.178402,
+        "right": -45.0,
+        "bottom": -12.554564,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 96,
+        "y": 136,
+        "left": -45.0,
+        "top": -11.178402,
+        "right": -43.59375,
+        "bottom": -12.554564,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 97,
+        "y": 136,
+        "left": -43.59375,
+        "top": -11.178402,
+        "right": -42.1875,
+        "bottom": -12.554564,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 98,
+        "y": 136,
+        "left": -42.1875,
+        "top": -11.178402,
+        "right": -40.78125,
+        "bottom": -12.554564,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 99,
+        "y": 136,
+        "left": -40.78125,
+        "top": -11.178402,
+        "right": -39.375,
+        "bottom": -12.554564,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 100,
+        "y": 136,
+        "left": -39.375,
+        "top": -11.178402,
+        "right": -37.96875,
+        "bottom": -12.554564,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 101,
+        "y": 136,
+        "left": -37.96875,
+        "top": -11.178402,
+        "right": -36.5625,
+        "bottom": -12.554564,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 137,
+        "left": -59.0625,
+        "top": -12.554564,
+        "right": -57.65625,
+        "bottom": -13.923404,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 87,
+        "y": 137,
+        "left": -57.65625,
+        "top": -12.554564,
+        "right": -56.25,
+        "bottom": -13.923404,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 88,
+        "y": 137,
+        "left": -56.25,
+        "top": -12.554564,
+        "right": -54.84375,
+        "bottom": -13.923404,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 89,
+        "y": 137,
+        "left": -54.84375,
+        "top": -12.554564,
+        "right": -53.4375,
+        "bottom": -13.923404,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 90,
+        "y": 137,
+        "left": -53.4375,
+        "top": -12.554564,
+        "right": -52.03125,
+        "bottom": -13.923404,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 91,
+        "y": 137,
+        "left": -52.03125,
+        "top": -12.554564,
+        "right": -50.625,
+        "bottom": -13.923404,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 92,
+        "y": 137,
+        "left": -50.625,
+        "top": -12.554564,
+        "right": -49.21875,
+        "bottom": -13.923404,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 93,
+        "y": 137,
+        "left": -49.21875,
+        "top": -12.554564,
+        "right": -47.8125,
+        "bottom": -13.923404,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 94,
+        "y": 137,
+        "left": -47.8125,
+        "top": -12.554564,
+        "right": -46.40625,
+        "bottom": -13.923404,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 95,
+        "y": 137,
+        "left": -46.40625,
+        "top": -12.554564,
+        "right": -45.0,
+        "bottom": -13.923404,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 96,
+        "y": 137,
+        "left": -45.0,
+        "top": -12.554564,
+        "right": -43.59375,
+        "bottom": -13.923404,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 97,
+        "y": 137,
+        "left": -43.59375,
+        "top": -12.554564,
+        "right": -42.1875,
+        "bottom": -13.923404,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 98,
+        "y": 137,
+        "left": -42.1875,
+        "top": -12.554564,
+        "right": -40.78125,
+        "bottom": -13.923404,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 99,
+        "y": 137,
+        "left": -40.78125,
+        "top": -12.554564,
+        "right": -39.375,
+        "bottom": -13.923404,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 100,
+        "y": 137,
+        "left": -39.375,
+        "top": -12.554564,
+        "right": -37.96875,
+        "bottom": -13.923404,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 138,
+        "left": -59.0625,
+        "top": -13.923404,
+        "right": -57.65625,
+        "bottom": -15.284185,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 87,
+        "y": 138,
+        "left": -57.65625,
+        "top": -13.923404,
+        "right": -56.25,
+        "bottom": -15.284185,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 88,
+        "y": 138,
+        "left": -56.25,
+        "top": -13.923404,
+        "right": -54.84375,
+        "bottom": -15.284185,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 89,
+        "y": 138,
+        "left": -54.84375,
+        "top": -13.923404,
+        "right": -53.4375,
+        "bottom": -15.284185,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 90,
+        "y": 138,
+        "left": -53.4375,
+        "top": -13.923404,
+        "right": -52.03125,
+        "bottom": -15.284185,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 91,
+        "y": 138,
+        "left": -52.03125,
+        "top": -13.923404,
+        "right": -50.625,
+        "bottom": -15.284185,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 92,
+        "y": 138,
+        "left": -50.625,
+        "top": -13.923404,
+        "right": -49.21875,
+        "bottom": -15.284185,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 93,
+        "y": 138,
+        "left": -49.21875,
+        "top": -13.923404,
+        "right": -47.8125,
+        "bottom": -15.284185,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 94,
+        "y": 138,
+        "left": -47.8125,
+        "top": -13.923404,
+        "right": -46.40625,
+        "bottom": -15.284185,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 95,
+        "y": 138,
+        "left": -46.40625,
+        "top": -13.923404,
+        "right": -45.0,
+        "bottom": -15.284185,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 96,
+        "y": 138,
+        "left": -45.0,
+        "top": -13.923404,
+        "right": -43.59375,
+        "bottom": -15.284185,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 97,
+        "y": 138,
+        "left": -43.59375,
+        "top": -13.923404,
+        "right": -42.1875,
+        "bottom": -15.284185,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 98,
+        "y": 138,
+        "left": -42.1875,
+        "top": -13.923404,
+        "right": -40.78125,
+        "bottom": -15.284185,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 99,
+        "y": 138,
+        "left": -40.78125,
+        "top": -13.923404,
+        "right": -39.375,
+        "bottom": -15.284185,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 100,
+        "y": 138,
+        "left": -39.375,
+        "top": -13.923404,
+        "right": -37.96875,
+        "bottom": -15.284185,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 87,
+        "y": 139,
+        "left": -57.65625,
+        "top": -15.284185,
+        "right": -56.25,
+        "bottom": -16.636192,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 88,
+        "y": 139,
+        "left": -56.25,
+        "top": -15.284185,
+        "right": -54.84375,
+        "bottom": -16.636192,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 89,
+        "y": 139,
+        "left": -54.84375,
+        "top": -15.284185,
+        "right": -53.4375,
+        "bottom": -16.636192,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 90,
+        "y": 139,
+        "left": -53.4375,
+        "top": -15.284185,
+        "right": -52.03125,
+        "bottom": -16.636192,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 91,
+        "y": 139,
+        "left": -52.03125,
+        "top": -15.284185,
+        "right": -50.625,
+        "bottom": -16.636192,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 92,
+        "y": 139,
+        "left": -50.625,
+        "top": -15.284185,
+        "right": -49.21875,
+        "bottom": -16.636192,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 93,
+        "y": 139,
+        "left": -49.21875,
+        "top": -15.284185,
+        "right": -47.8125,
+        "bottom": -16.636192,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 94,
+        "y": 139,
+        "left": -47.8125,
+        "top": -15.284185,
+        "right": -46.40625,
+        "bottom": -16.636192,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 95,
+        "y": 139,
+        "left": -46.40625,
+        "top": -15.284185,
+        "right": -45.0,
+        "bottom": -16.636192,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 96,
+        "y": 139,
+        "left": -45.0,
+        "top": -15.284185,
+        "right": -43.59375,
+        "bottom": -16.636192,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 97,
+        "y": 139,
+        "left": -43.59375,
+        "top": -15.284185,
+        "right": -42.1875,
+        "bottom": -16.636192,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 98,
+        "y": 139,
+        "left": -42.1875,
+        "top": -15.284185,
+        "right": -40.78125,
+        "bottom": -16.636192,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 99,
+        "y": 139,
+        "left": -40.78125,
+        "top": -15.284185,
+        "right": -39.375,
+        "bottom": -16.636192,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 100,
+        "y": 139,
+        "left": -39.375,
+        "top": -15.284185,
+        "right": -37.96875,
+        "bottom": -16.636192,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 88,
+        "y": 140,
+        "left": -56.25,
+        "top": -16.636192,
+        "right": -54.84375,
+        "bottom": -17.978733,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 89,
+        "y": 140,
+        "left": -54.84375,
+        "top": -16.636192,
+        "right": -53.4375,
+        "bottom": -17.978733,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 90,
+        "y": 140,
+        "left": -53.4375,
+        "top": -16.636192,
+        "right": -52.03125,
+        "bottom": -17.978733,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 91,
+        "y": 140,
+        "left": -52.03125,
+        "top": -16.636192,
+        "right": -50.625,
+        "bottom": -17.978733,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 92,
+        "y": 140,
+        "left": -50.625,
+        "top": -16.636192,
+        "right": -49.21875,
+        "bottom": -17.978733,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 93,
+        "y": 140,
+        "left": -49.21875,
+        "top": -16.636192,
+        "right": -47.8125,
+        "bottom": -17.978733,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 94,
+        "y": 140,
+        "left": -47.8125,
+        "top": -16.636192,
+        "right": -46.40625,
+        "bottom": -17.978733,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 95,
+        "y": 140,
+        "left": -46.40625,
+        "top": -16.636192,
+        "right": -45.0,
+        "bottom": -17.978733,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 96,
+        "y": 140,
+        "left": -45.0,
+        "top": -16.636192,
+        "right": -43.59375,
+        "bottom": -17.978733,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 97,
+        "y": 140,
+        "left": -43.59375,
+        "top": -16.636192,
+        "right": -42.1875,
+        "bottom": -17.978733,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 98,
+        "y": 140,
+        "left": -42.1875,
+        "top": -16.636192,
+        "right": -40.78125,
+        "bottom": -17.978733,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 99,
+        "y": 140,
+        "left": -40.78125,
+        "top": -16.636192,
+        "right": -39.375,
+        "bottom": -17.978733,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 100,
+        "y": 140,
+        "left": -39.375,
+        "top": -16.636192,
+        "right": -37.96875,
+        "bottom": -17.978733,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 88,
+        "y": 141,
+        "left": -56.25,
+        "top": -17.978733,
+        "right": -54.84375,
+        "bottom": -19.311143,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 89,
+        "y": 141,
+        "left": -54.84375,
+        "top": -17.978733,
+        "right": -53.4375,
+        "bottom": -19.311143,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 90,
+        "y": 141,
+        "left": -53.4375,
+        "top": -17.978733,
+        "right": -52.03125,
+        "bottom": -19.311143,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 91,
+        "y": 141,
+        "left": -52.03125,
+        "top": -17.978733,
+        "right": -50.625,
+        "bottom": -19.311143,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 92,
+        "y": 141,
+        "left": -50.625,
+        "top": -17.978733,
+        "right": -49.21875,
+        "bottom": -19.311143,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 93,
+        "y": 141,
+        "left": -49.21875,
+        "top": -17.978733,
+        "right": -47.8125,
+        "bottom": -19.311143,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 94,
+        "y": 141,
+        "left": -47.8125,
+        "top": -17.978733,
+        "right": -46.40625,
+        "bottom": -19.311143,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 95,
+        "y": 141,
+        "left": -46.40625,
+        "top": -17.978733,
+        "right": -45.0,
+        "bottom": -19.311143,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 96,
+        "y": 141,
+        "left": -45.0,
+        "top": -17.978733,
+        "right": -43.59375,
+        "bottom": -19.311143,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 97,
+        "y": 141,
+        "left": -43.59375,
+        "top": -17.978733,
+        "right": -42.1875,
+        "bottom": -19.311143,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 98,
+        "y": 141,
+        "left": -42.1875,
+        "top": -17.978733,
+        "right": -40.78125,
+        "bottom": -19.311143,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 99,
+        "y": 141,
+        "left": -40.78125,
+        "top": -17.978733,
+        "right": -39.375,
+        "bottom": -19.311143,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 100,
+        "y": 141,
+        "left": -39.375,
+        "top": -17.978733,
+        "right": -37.96875,
+        "bottom": -19.311143,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 87,
+        "y": 142,
+        "left": -57.65625,
+        "top": -19.311143,
+        "right": -56.25,
+        "bottom": -20.632784,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 88,
+        "y": 142,
+        "left": -56.25,
+        "top": -19.311143,
+        "right": -54.84375,
+        "bottom": -20.632784,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 89,
+        "y": 142,
+        "left": -54.84375,
+        "top": -19.311143,
+        "right": -53.4375,
+        "bottom": -20.632784,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 90,
+        "y": 142,
+        "left": -53.4375,
+        "top": -19.311143,
+        "right": -52.03125,
+        "bottom": -20.632784,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 91,
+        "y": 142,
+        "left": -52.03125,
+        "top": -19.311143,
+        "right": -50.625,
+        "bottom": -20.632784,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 92,
+        "y": 142,
+        "left": -50.625,
+        "top": -19.311143,
+        "right": -49.21875,
+        "bottom": -20.632784,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 93,
+        "y": 142,
+        "left": -49.21875,
+        "top": -19.311143,
+        "right": -47.8125,
+        "bottom": -20.632784,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 94,
+        "y": 142,
+        "left": -47.8125,
+        "top": -19.311143,
+        "right": -46.40625,
+        "bottom": -20.632784,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 95,
+        "y": 142,
+        "left": -46.40625,
+        "top": -19.311143,
+        "right": -45.0,
+        "bottom": -20.632784,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 96,
+        "y": 142,
+        "left": -45.0,
+        "top": -19.311143,
+        "right": -43.59375,
+        "bottom": -20.632784,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 97,
+        "y": 142,
+        "left": -43.59375,
+        "top": -19.311143,
+        "right": -42.1875,
+        "bottom": -20.632784,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 98,
+        "y": 142,
+        "left": -42.1875,
+        "top": -19.311143,
+        "right": -40.78125,
+        "bottom": -20.632784,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 99,
+        "y": 142,
+        "left": -40.78125,
+        "top": -19.311143,
+        "right": -39.375,
+        "bottom": -20.632784,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 107,
+        "y": 142,
+        "left": -29.53125,
+        "top": -19.311143,
+        "right": -28.125,
+        "bottom": -20.632784,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 143,
+        "left": -59.0625,
+        "top": -20.632784,
+        "right": -57.65625,
+        "bottom": -21.943046,
+        "countries": [
+            "brazil",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 87,
+        "y": 143,
+        "left": -57.65625,
+        "top": -20.632784,
+        "right": -56.25,
+        "bottom": -21.943046,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 88,
+        "y": 143,
+        "left": -56.25,
+        "top": -20.632784,
+        "right": -54.84375,
+        "bottom": -21.943046,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 89,
+        "y": 143,
+        "left": -54.84375,
+        "top": -20.632784,
+        "right": -53.4375,
+        "bottom": -21.943046,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 90,
+        "y": 143,
+        "left": -53.4375,
+        "top": -20.632784,
+        "right": -52.03125,
+        "bottom": -21.943046,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 91,
+        "y": 143,
+        "left": -52.03125,
+        "top": -20.632784,
+        "right": -50.625,
+        "bottom": -21.943046,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 92,
+        "y": 143,
+        "left": -50.625,
+        "top": -20.632784,
+        "right": -49.21875,
+        "bottom": -21.943046,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 93,
+        "y": 143,
+        "left": -49.21875,
+        "top": -20.632784,
+        "right": -47.8125,
+        "bottom": -21.943046,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 94,
+        "y": 143,
+        "left": -47.8125,
+        "top": -20.632784,
+        "right": -46.40625,
+        "bottom": -21.943046,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 95,
+        "y": 143,
+        "left": -46.40625,
+        "top": -20.632784,
+        "right": -45.0,
+        "bottom": -21.943046,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 96,
+        "y": 143,
+        "left": -45.0,
+        "top": -20.632784,
+        "right": -43.59375,
+        "bottom": -21.943046,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 97,
+        "y": 143,
+        "left": -43.59375,
+        "top": -20.632784,
+        "right": -42.1875,
+        "bottom": -21.943046,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 98,
+        "y": 143,
+        "left": -42.1875,
+        "top": -20.632784,
+        "right": -40.78125,
+        "bottom": -21.943046,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 99,
+        "y": 143,
+        "left": -40.78125,
+        "top": -20.632784,
+        "right": -39.375,
+        "bottom": -21.943046,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 144,
+        "left": -59.0625,
+        "top": -21.943046,
+        "right": -57.65625,
+        "bottom": -23.241346,
+        "countries": [
+            "brazil",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 87,
+        "y": 144,
+        "left": -57.65625,
+        "top": -21.943046,
+        "right": -56.25,
+        "bottom": -23.241346,
+        "countries": [
+            "brazil",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 88,
+        "y": 144,
+        "left": -56.25,
+        "top": -21.943046,
+        "right": -54.84375,
+        "bottom": -23.241346,
+        "countries": [
+            "brazil",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 89,
+        "y": 144,
+        "left": -54.84375,
+        "top": -21.943046,
+        "right": -53.4375,
+        "bottom": -23.241346,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 90,
+        "y": 144,
+        "left": -53.4375,
+        "top": -21.943046,
+        "right": -52.03125,
+        "bottom": -23.241346,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 91,
+        "y": 144,
+        "left": -52.03125,
+        "top": -21.943046,
+        "right": -50.625,
+        "bottom": -23.241346,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 92,
+        "y": 144,
+        "left": -50.625,
+        "top": -21.943046,
+        "right": -49.21875,
+        "bottom": -23.241346,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 93,
+        "y": 144,
+        "left": -49.21875,
+        "top": -21.943046,
+        "right": -47.8125,
+        "bottom": -23.241346,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 94,
+        "y": 144,
+        "left": -47.8125,
+        "top": -21.943046,
+        "right": -46.40625,
+        "bottom": -23.241346,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 95,
+        "y": 144,
+        "left": -46.40625,
+        "top": -21.943046,
+        "right": -45.0,
+        "bottom": -23.241346,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 96,
+        "y": 144,
+        "left": -45.0,
+        "top": -21.943046,
+        "right": -43.59375,
+        "bottom": -23.241346,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 97,
+        "y": 144,
+        "left": -43.59375,
+        "top": -21.943046,
+        "right": -42.1875,
+        "bottom": -23.241346,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 98,
+        "y": 144,
+        "left": -42.1875,
+        "top": -21.943046,
+        "right": -40.78125,
+        "bottom": -23.241346,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 88,
+        "y": 145,
+        "left": -56.25,
+        "top": -23.241346,
+        "right": -54.84375,
+        "bottom": -24.527135,
+        "countries": [
+            "brazil",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 89,
+        "y": 145,
+        "left": -54.84375,
+        "top": -23.241346,
+        "right": -53.4375,
+        "bottom": -24.527135,
+        "countries": [
+            "brazil",
+            "paraguay"
+        ]
+    },
+    {
+        "x": 90,
+        "y": 145,
+        "left": -53.4375,
+        "top": -23.241346,
+        "right": -52.03125,
+        "bottom": -24.527135,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 91,
+        "y": 145,
+        "left": -52.03125,
+        "top": -23.241346,
+        "right": -50.625,
+        "bottom": -24.527135,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 92,
+        "y": 145,
+        "left": -50.625,
+        "top": -23.241346,
+        "right": -49.21875,
+        "bottom": -24.527135,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 93,
+        "y": 145,
+        "left": -49.21875,
+        "top": -23.241346,
+        "right": -47.8125,
+        "bottom": -24.527135,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 94,
+        "y": 145,
+        "left": -47.8125,
+        "top": -23.241346,
+        "right": -46.40625,
+        "bottom": -24.527135,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 95,
+        "y": 145,
+        "left": -46.40625,
+        "top": -23.241346,
+        "right": -45.0,
+        "bottom": -24.527135,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 96,
+        "y": 145,
+        "left": -45.0,
+        "top": -23.241346,
+        "right": -43.59375,
+        "bottom": -24.527135,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 90,
+        "y": 146,
+        "left": -53.4375,
+        "top": -24.527135,
+        "right": -52.03125,
+        "bottom": -25.799891,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 91,
+        "y": 146,
+        "left": -52.03125,
+        "top": -24.527135,
+        "right": -50.625,
+        "bottom": -25.799891,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 92,
+        "y": 146,
+        "left": -50.625,
+        "top": -24.527135,
+        "right": -49.21875,
+        "bottom": -25.799891,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 93,
+        "y": 146,
+        "left": -49.21875,
+        "top": -24.527135,
+        "right": -47.8125,
+        "bottom": -25.799891,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 94,
+        "y": 146,
+        "left": -47.8125,
+        "top": -24.527135,
+        "right": -46.40625,
+        "bottom": -25.799891,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 90,
+        "y": 147,
+        "left": -53.4375,
+        "top": -25.799891,
+        "right": -52.03125,
+        "bottom": -27.059126,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 91,
+        "y": 147,
+        "left": -52.03125,
+        "top": -25.799891,
+        "right": -50.625,
+        "bottom": -27.059126,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 92,
+        "y": 147,
+        "left": -50.625,
+        "top": -25.799891,
+        "right": -49.21875,
+        "bottom": -27.059126,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 93,
+        "y": 147,
+        "left": -49.21875,
+        "top": -25.799891,
+        "right": -47.8125,
+        "bottom": -27.059126,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 90,
+        "y": 148,
+        "left": -53.4375,
+        "top": -27.059126,
+        "right": -52.03125,
+        "bottom": -28.304381,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 91,
+        "y": 148,
+        "left": -52.03125,
+        "top": -27.059126,
+        "right": -50.625,
+        "bottom": -28.304381,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 92,
+        "y": 148,
+        "left": -50.625,
+        "top": -27.059126,
+        "right": -49.21875,
+        "bottom": -28.304381,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 93,
+        "y": 148,
+        "left": -49.21875,
+        "top": -27.059126,
+        "right": -47.8125,
+        "bottom": -28.304381,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 89,
+        "y": 149,
+        "left": -54.84375,
+        "top": -28.304381,
+        "right": -53.4375,
+        "bottom": -29.53523,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 90,
+        "y": 149,
+        "left": -53.4375,
+        "top": -28.304381,
+        "right": -52.03125,
+        "bottom": -29.53523,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 91,
+        "y": 149,
+        "left": -52.03125,
+        "top": -28.304381,
+        "right": -50.625,
+        "bottom": -29.53523,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 92,
+        "y": 149,
+        "left": -50.625,
+        "top": -28.304381,
+        "right": -49.21875,
+        "bottom": -29.53523,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 93,
+        "y": 149,
+        "left": -49.21875,
+        "top": -28.304381,
+        "right": -47.8125,
+        "bottom": -29.53523,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 88,
+        "y": 150,
+        "left": -56.25,
+        "top": -29.53523,
+        "right": -54.84375,
+        "bottom": -30.751278,
+        "countries": [
+            "brazil",
+            "uruguay"
+        ]
+    },
+    {
+        "x": 89,
+        "y": 150,
+        "left": -54.84375,
+        "top": -29.53523,
+        "right": -53.4375,
+        "bottom": -30.751278,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 90,
+        "y": 150,
+        "left": -53.4375,
+        "top": -29.53523,
+        "right": -52.03125,
+        "bottom": -30.751278,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 91,
+        "y": 150,
+        "left": -52.03125,
+        "top": -29.53523,
+        "right": -50.625,
+        "bottom": -30.751278,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 92,
+        "y": 150,
+        "left": -50.625,
+        "top": -29.53523,
+        "right": -49.21875,
+        "bottom": -30.751278,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 88,
+        "y": 151,
+        "left": -56.25,
+        "top": -30.751278,
+        "right": -54.84375,
+        "bottom": -31.952162,
+        "countries": [
+            "brazil",
+            "uruguay"
+        ]
+    },
+    {
+        "x": 89,
+        "y": 151,
+        "left": -54.84375,
+        "top": -30.751278,
+        "right": -53.4375,
+        "bottom": -31.952162,
+        "countries": [
+            "brazil",
+            "uruguay"
+        ]
+    },
+    {
+        "x": 90,
+        "y": 151,
+        "left": -53.4375,
+        "top": -30.751278,
+        "right": -52.03125,
+        "bottom": -31.952162,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 91,
+        "y": 151,
+        "left": -52.03125,
+        "top": -30.751278,
+        "right": -50.625,
+        "bottom": -31.952162,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 92,
+        "y": 151,
+        "left": -50.625,
+        "top": -30.751278,
+        "right": -49.21875,
+        "bottom": -31.952162,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 89,
+        "y": 152,
+        "left": -54.84375,
+        "top": -31.952162,
+        "right": -53.4375,
+        "bottom": -33.137551,
+        "countries": [
+            "brazil",
+            "uruguay"
+        ]
+    },
+    {
+        "x": 90,
+        "y": 152,
+        "left": -53.4375,
+        "top": -31.952162,
+        "right": -52.03125,
+        "bottom": -33.137551,
+        "countries": [
+            "brazil",
+            "uruguay"
+        ]
+    },
+    {
+        "x": 91,
+        "y": 152,
+        "left": -52.03125,
+        "top": -31.952162,
+        "right": -50.625,
+        "bottom": -33.137551,
+        "countries": [
+            "brazil"
+        ]
+    },
+    {
+        "x": 89,
+        "y": 153,
+        "left": -54.84375,
+        "top": -33.137551,
+        "right": -53.4375,
+        "bottom": -34.307144,
+        "countries": [
+            "brazil",
+            "uruguay"
+        ]
+    },
+    {
+        "x": 90,
+        "y": 153,
+        "left": -53.4375,
+        "top": -33.137551,
+        "right": -52.03125,
+        "bottom": -34.307144,
+        "countries": [
+            "brazil",
+            "uruguay"
+        ]
+    }
+]

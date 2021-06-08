@@ -1,0 +1,348 @@
+[
+    {
+        "x": 71,
+        "y": 126,
+        "left": -80.15625,
+        "top": 2.811371,
+        "right": -78.75,
+        "bottom": 1.406109,
+        "countries": [
+            "ecuador",
+            "colombia"
+        ]
+    },
+    {
+        "x": 71,
+        "y": 127,
+        "left": -80.15625,
+        "top": 1.406109,
+        "right": -78.75,
+        "bottom": 0.0,
+        "countries": [
+            "ecuador",
+            "colombia"
+        ]
+    },
+    {
+        "x": 72,
+        "y": 127,
+        "left": -78.75,
+        "top": 1.406109,
+        "right": -77.34375,
+        "bottom": 0.0,
+        "countries": [
+            "ecuador",
+            "colombia"
+        ]
+    },
+    {
+        "x": 73,
+        "y": 127,
+        "left": -77.34375,
+        "top": 1.406109,
+        "right": -75.9375,
+        "bottom": 0.0,
+        "countries": [
+            "ecuador",
+            "colombia"
+        ]
+    },
+    {
+        "x": 74,
+        "y": 127,
+        "left": -75.9375,
+        "top": 1.406109,
+        "right": -74.53125,
+        "bottom": 0.0,
+        "countries": [
+            "ecuador",
+            "colombia"
+        ]
+    },
+    {
+        "x": 74,
+        "y": 128,
+        "left": -75.9375,
+        "top": 0.0,
+        "right": -74.53125,
+        "bottom": -1.406109,
+        "countries": [
+            "peru",
+            "ecuador",
+            "colombia"
+        ]
+    },
+    {
+        "x": 62,
+        "y": 126,
+        "left": -92.8125,
+        "top": 2.811371,
+        "right": -91.40625,
+        "bottom": 1.406109,
+        "countries": [
+            "ecuador"
+        ]
+    },
+    {
+        "x": 62,
+        "y": 127,
+        "left": -92.8125,
+        "top": 1.406109,
+        "right": -91.40625,
+        "bottom": 0.0,
+        "countries": [
+            "ecuador"
+        ]
+    },
+    {
+        "x": 63,
+        "y": 127,
+        "left": -91.40625,
+        "top": 1.406109,
+        "right": -90.0,
+        "bottom": 0.0,
+        "countries": [
+            "ecuador"
+        ]
+    },
+    {
+        "x": 64,
+        "y": 127,
+        "left": -90.0,
+        "top": 1.406109,
+        "right": -88.59375,
+        "bottom": 0.0,
+        "countries": [
+            "ecuador"
+        ]
+    },
+    {
+        "x": 62,
+        "y": 128,
+        "left": -92.8125,
+        "top": 0.0,
+        "right": -91.40625,
+        "bottom": -1.406109,
+        "countries": [
+            "ecuador"
+        ]
+    },
+    {
+        "x": 63,
+        "y": 128,
+        "left": -91.40625,
+        "top": 0.0,
+        "right": -90.0,
+        "bottom": -1.406109,
+        "countries": [
+            "ecuador"
+        ]
+    },
+    {
+        "x": 64,
+        "y": 128,
+        "left": -90.0,
+        "top": 0.0,
+        "right": -88.59375,
+        "bottom": -1.406109,
+        "countries": [
+            "ecuador"
+        ]
+    },
+    {
+        "x": 70,
+        "y": 128,
+        "left": -81.5625,
+        "top": 0.0,
+        "right": -80.15625,
+        "bottom": -1.406109,
+        "countries": [
+            "ecuador"
+        ]
+    },
+    {
+        "x": 71,
+        "y": 128,
+        "left": -80.15625,
+        "top": 0.0,
+        "right": -78.75,
+        "bottom": -1.406109,
+        "countries": [
+            "ecuador"
+        ]
+    },
+    {
+        "x": 72,
+        "y": 128,
+        "left": -78.75,
+        "top": 0.0,
+        "right": -77.34375,
+        "bottom": -1.406109,
+        "countries": [
+            "ecuador"
+        ]
+    },
+    {
+        "x": 73,
+        "y": 128,
+        "left": -77.34375,
+        "top": 0.0,
+        "right": -75.9375,
+        "bottom": -1.406109,
+        "countries": [
+            "ecuador"
+        ]
+    },
+    {
+        "x": 64,
+        "y": 129,
+        "left": -90.0,
+        "top": -1.406109,
+        "right": -88.59375,
+        "bottom": -2.811371,
+        "countries": [
+            "ecuador"
+        ]
+    },
+    {
+        "x": 70,
+        "y": 129,
+        "left": -81.5625,
+        "top": -1.406109,
+        "right": -80.15625,
+        "bottom": -2.811371,
+        "countries": [
+            "ecuador"
+        ]
+    },
+    {
+        "x": 71,
+        "y": 129,
+        "left": -80.15625,
+        "top": -1.406109,
+        "right": -78.75,
+        "bottom": -2.811371,
+        "countries": [
+            "ecuador"
+        ]
+    },
+    {
+        "x": 72,
+        "y": 129,
+        "left": -78.75,
+        "top": -1.406109,
+        "right": -77.34375,
+        "bottom": -2.811371,
+        "countries": [
+            "ecuador"
+        ]
+    },
+    {
+        "x": 73,
+        "y": 129,
+        "left": -77.34375,
+        "top": -1.406109,
+        "right": -75.9375,
+        "bottom": -2.811371,
+        "countries": [
+            "peru",
+            "ecuador"
+        ]
+    },
+    {
+        "x": 74,
+        "y": 129,
+        "left": -75.9375,
+        "top": -1.406109,
+        "right": -74.53125,
+        "bottom": -2.811371,
+        "countries": [
+            "peru",
+            "ecuador"
+        ]
+    },
+    {
+        "x": 70,
+        "y": 130,
+        "left": -81.5625,
+        "top": -2.811371,
+        "right": -80.15625,
+        "bottom": -4.214943,
+        "countries": [
+            "peru",
+            "ecuador"
+        ]
+    },
+    {
+        "x": 71,
+        "y": 130,
+        "left": -80.15625,
+        "top": -2.811371,
+        "right": -78.75,
+        "bottom": -4.214943,
+        "countries": [
+            "peru",
+            "ecuador"
+        ]
+    },
+    {
+        "x": 72,
+        "y": 130,
+        "left": -78.75,
+        "top": -2.811371,
+        "right": -77.34375,
+        "bottom": -4.214943,
+        "countries": [
+            "peru",
+            "ecuador"
+        ]
+    },
+    {
+        "x": 73,
+        "y": 130,
+        "left": -77.34375,
+        "top": -2.811371,
+        "right": -75.9375,
+        "bottom": -4.214943,
+        "countries": [
+            "peru",
+            "ecuador"
+        ]
+    },
+    {
+        "x": 70,
+        "y": 131,
+        "left": -81.5625,
+        "top": -4.214943,
+        "right": -80.15625,
+        "bottom": -5.615986,
+        "countries": [
+            "peru",
+            "ecuador"
+        ]
+    },
+    {
+        "x": 71,
+        "y": 131,
+        "left": -80.15625,
+        "top": -4.214943,
+        "right": -78.75,
+        "bottom": -5.615986,
+        "countries": [
+            "peru",
+            "ecuador"
+        ]
+    },
+    {
+        "x": 72,
+        "y": 131,
+        "left": -78.75,
+        "top": -4.214943,
+        "right": -77.34375,
+        "bottom": -5.615986,
+        "countries": [
+            "peru",
+            "ecuador"
+        ]
+    }
+]

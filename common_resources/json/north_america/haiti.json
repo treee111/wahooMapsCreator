@@ -1,0 +1,73 @@
+[
+    {
+        "x": 75,
+        "y": 113,
+        "left": -74.53125,
+        "top": 20.632784,
+        "right": -73.125,
+        "bottom": 19.311143,
+        "countries": [
+            "haiti",
+            "cuba"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 113,
+        "left": -73.125,
+        "top": 20.632784,
+        "right": -71.71875,
+        "bottom": 19.311143,
+        "countries": [
+            "dominican_republic",
+            "haiti"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 113,
+        "left": -71.71875,
+        "top": 20.632784,
+        "right": -70.3125,
+        "bottom": 19.311143,
+        "countries": [
+            "dominican_republic",
+            "haiti"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 114,
+        "left": -73.125,
+        "top": 19.311143,
+        "right": -71.71875,
+        "bottom": 17.978733,
+        "countries": [
+            "dominican_republic",
+            "haiti"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 114,
+        "left": -71.71875,
+        "top": 19.311143,
+        "right": -70.3125,
+        "bottom": 17.978733,
+        "countries": [
+            "dominican_republic",
+            "haiti"
+        ]
+    },
+    {
+        "x": 75,
+        "y": 114,
+        "left": -74.53125,
+        "top": 19.311143,
+        "right": -73.125,
+        "bottom": 17.978733,
+        "countries": [
+            "haiti"
+        ]
+    }
+]

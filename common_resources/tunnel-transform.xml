@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<translations>
+  <translation>
+    <name>Adjust tunnel Layers</name>
+    <description>Adjust tunnel Layers</description>
+    <match type="way" mode="or">
+      <match mode="and">
+        <tag k="highway" v=".*"/>
+        <tag k="tunnel" v="yes"/>
+      </match>
+      <match mode="and">
+        <tag k="railway" v=".*"/>
+        <tag k="tunnel" v="yes"/>
+      </match>
+    </match>
+    <output>
+      <copy-all/>
+      <tag k="layer" v="2"/>
+    </output>
+  </translation>
+</translations>

@@ -1,0 +1,24 @@
+[
+    {
+        "x": 2,
+        "y": 137,
+        "left": -177.1875,
+        "top": -12.554564,
+        "right": -175.78125,
+        "bottom": -13.923404,
+        "countries": [
+            "wallis_and_futuna"
+        ]
+    },
+    {
+        "x": 1,
+        "y": 138,
+        "left": -178.59375,
+        "top": -13.923404,
+        "right": -177.1875,
+        "bottom": -15.284185,
+        "countries": [
+            "wallis_and_futuna"
+        ]
+    }
+]

@@ -1,0 +1,918 @@
+[
+    {
+        "x": 158,
+        "y": 95,
+        "left": 42.1875,
+        "top": 42.032974,
+        "right": 43.59375,
+        "bottom": 40.979898,
+        "countries": [
+            "georgia",
+            "armenia",
+            "turkey"
+        ]
+    },
+    {
+        "x": 159,
+        "y": 95,
+        "left": 43.59375,
+        "top": 42.032974,
+        "right": 45.0,
+        "bottom": 40.979898,
+        "countries": [
+            "georgia",
+            "azerbaijan",
+            "armenia",
+            "turkey"
+        ]
+    },
+    {
+        "x": 158,
+        "y": 96,
+        "left": 42.1875,
+        "top": 40.979898,
+        "right": 43.59375,
+        "bottom": 39.909736,
+        "countries": [
+            "armenia",
+            "turkey"
+        ]
+    },
+    {
+        "x": 159,
+        "y": 96,
+        "left": 43.59375,
+        "top": 40.979898,
+        "right": 45.0,
+        "bottom": 39.909736,
+        "countries": [
+            "armenia",
+            "turkey"
+        ]
+    },
+    {
+        "x": 159,
+        "y": 97,
+        "left": 43.59375,
+        "top": 39.909736,
+        "right": 45.0,
+        "bottom": 38.822591,
+        "countries": [
+            "iran",
+            "azerbaijan",
+            "armenia",
+            "turkey"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 100,
+        "left": 33.75,
+        "top": 36.597889,
+        "right": 35.15625,
+        "bottom": 35.46067,
+        "countries": [
+            "turkey",
+            "cyprus"
+        ]
+    },
+    {
+        "x": 157,
+        "y": 95,
+        "left": 40.78125,
+        "top": 42.032974,
+        "right": 42.1875,
+        "bottom": 40.979898,
+        "countries": [
+            "georgia",
+            "turkey"
+        ]
+    },
+    {
+        "x": 159,
+        "y": 98,
+        "left": 43.59375,
+        "top": 38.822591,
+        "right": 45.0,
+        "bottom": 37.71859,
+        "countries": [
+            "iran",
+            "turkey"
+        ]
+    },
+    {
+        "x": 159,
+        "y": 99,
+        "left": 43.59375,
+        "top": 37.71859,
+        "right": 45.0,
+        "bottom": 36.597889,
+        "countries": [
+            "iran",
+            "turkey",
+            "iraq"
+        ]
+    },
+    {
+        "x": 157,
+        "y": 99,
+        "left": 40.78125,
+        "top": 37.71859,
+        "right": 42.1875,
+        "bottom": 36.597889,
+        "countries": [
+            "turkey",
+            "syria",
+            "iraq"
+        ]
+    },
+    {
+        "x": 158,
+        "y": 99,
+        "left": 42.1875,
+        "top": 37.71859,
+        "right": 43.59375,
+        "bottom": 36.597889,
+        "countries": [
+            "turkey",
+            "syria",
+            "iraq"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 99,
+        "left": 36.5625,
+        "top": 37.71859,
+        "right": 37.96875,
+        "bottom": 36.597889,
+        "countries": [
+            "syria",
+            "turkey"
+        ]
+    },
+    {
+        "x": 155,
+        "y": 99,
+        "left": 37.96875,
+        "top": 37.71859,
+        "right": 39.375,
+        "bottom": 36.597889,
+        "countries": [
+            "syria",
+            "turkey"
+        ]
+    },
+    {
+        "x": 156,
+        "y": 99,
+        "left": 39.375,
+        "top": 37.71859,
+        "right": 40.78125,
+        "bottom": 36.597889,
+        "countries": [
+            "syria",
+            "turkey"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 100,
+        "left": 35.15625,
+        "top": 36.597889,
+        "right": 36.5625,
+        "bottom": 35.46067,
+        "countries": [
+            "syria",
+            "turkey"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 100,
+        "left": 36.5625,
+        "top": 36.597889,
+        "right": 37.96875,
+        "bottom": 35.46067,
+        "countries": [
+            "syria",
+            "turkey"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 94,
+        "left": 26.71875,
+        "top": 43.068888,
+        "right": 28.125,
+        "bottom": 42.032974,
+        "countries": [
+            "bulgaria",
+            "turkey"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 94,
+        "left": 33.75,
+        "top": 43.068888,
+        "right": 35.15625,
+        "bottom": 42.032974,
+        "countries": [
+            "turkey"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 94,
+        "left": 35.15625,
+        "top": 43.068888,
+        "right": 36.5625,
+        "bottom": 42.032974,
+        "countries": [
+            "turkey"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 95,
+        "left": 25.3125,
+        "top": 42.032974,
+        "right": 26.71875,
+        "bottom": 40.979898,
+        "countries": [
+            "bulgaria",
+            "turkey",
+            "greece"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 95,
+        "left": 26.71875,
+        "top": 42.032974,
+        "right": 28.125,
+        "bottom": 40.979898,
+        "countries": [
+            "bulgaria",
+            "turkey"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 95,
+        "left": 28.125,
+        "top": 42.032974,
+        "right": 29.53125,
+        "bottom": 40.979898,
+        "countries": [
+            "turkey"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 95,
+        "left": 29.53125,
+        "top": 42.032974,
+        "right": 30.9375,
+        "bottom": 40.979898,
+        "countries": [
+            "turkey"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 95,
+        "left": 30.9375,
+        "top": 42.032974,
+        "right": 32.34375,
+        "bottom": 40.979898,
+        "countries": [
+            "turkey"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 95,
+        "left": 32.34375,
+        "top": 42.032974,
+        "right": 33.75,
+        "bottom": 40.979898,
+        "countries": [
+            "turkey"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 95,
+        "left": 33.75,
+        "top": 42.032974,
+        "right": 35.15625,
+        "bottom": 40.979898,
+        "countries": [
+            "turkey"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 95,
+        "left": 35.15625,
+        "top": 42.032974,
+        "right": 36.5625,
+        "bottom": 40.979898,
+        "countries": [
+            "turkey"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 95,
+        "left": 36.5625,
+        "top": 42.032974,
+        "right": 37.96875,
+        "bottom": 40.979898,
+        "countries": [
+            "turkey"
+        ]
+    },
+    {
+        "x": 155,
+        "y": 95,
+        "left": 37.96875,
+        "top": 42.032974,
+        "right": 39.375,
+        "bottom": 40.979898,
+        "countries": [
+            "turkey"
+        ]
+    },
+    {
+        "x": 156,
+        "y": 95,
+        "left": 39.375,
+        "top": 42.032974,
+        "right": 40.78125,
+        "bottom": 40.979898,
+        "countries": [
+            "turkey"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 96,
+        "left": 25.3125,
+        "top": 40.979898,
+        "right": 26.71875,
+        "bottom": 39.909736,
+        "countries": [
+            "turkey",
+            "greece"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 96,
+        "left": 26.71875,
+        "top": 40.979898,
+        "right": 28.125,
+        "bottom": 39.909736,
+        "countries": [
+            "turkey"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 96,
+        "left": 28.125,
+        "top": 40.979898,
+        "right": 29.53125,
+        "bottom": 39.909736,
+        "countries": [
+            "turkey"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 96,
+        "left": 29.53125,
+        "top": 40.979898,
+        "right": 30.9375,
+        "bottom": 39.909736,
+        "countries": [
+            "turkey"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 96,
+        "left": 30.9375,
+        "top": 40.979898,
+        "right": 32.34375,
+        "bottom": 39.909736,
+        "countries": [
+            "turkey"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 96,
+        "left": 32.34375,
+        "top": 40.979898,
+        "right": 33.75,
+        "bottom": 39.909736,
+        "countries": [
+            "turkey"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 96,
+        "left": 33.75,
+        "top": 40.979898,
+        "right": 35.15625,
+        "bottom": 39.909736,
+        "countries": [
+            "turkey"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 96,
+        "left": 35.15625,
+        "top": 40.979898,
+        "right": 36.5625,
+        "bottom": 39.909736,
+        "countries": [
+            "turkey"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 96,
+        "left": 36.5625,
+        "top": 40.979898,
+        "right": 37.96875,
+        "bottom": 39.909736,
+        "countries": [
+            "turkey"
+        ]
+    },
+    {
+        "x": 155,
+        "y": 96,
+        "left": 37.96875,
+        "top": 40.979898,
+        "right": 39.375,
+        "bottom": 39.909736,
+        "countries": [
+            "turkey"
+        ]
+    },
+    {
+        "x": 156,
+        "y": 96,
+        "left": 39.375,
+        "top": 40.979898,
+        "right": 40.78125,
+        "bottom": 39.909736,
+        "countries": [
+            "turkey"
+        ]
+    },
+    {
+        "x": 157,
+        "y": 96,
+        "left": 40.78125,
+        "top": 40.979898,
+        "right": 42.1875,
+        "bottom": 39.909736,
+        "countries": [
+            "turkey"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 97,
+        "left": 25.3125,
+        "top": 39.909736,
+        "right": 26.71875,
+        "bottom": 38.822591,
+        "countries": [
+            "turkey",
+            "greece"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 97,
+        "left": 26.71875,
+        "top": 39.909736,
+        "right": 28.125,
+        "bottom": 38.822591,
+        "countries": [
+            "turkey"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 97,
+        "left": 28.125,
+        "top": 39.909736,
+        "right": 29.53125,
+        "bottom": 38.822591,
+        "countries": [
+            "turkey"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 97,
+        "left": 29.53125,
+        "top": 39.909736,
+        "right": 30.9375,
+        "bottom": 38.822591,
+        "countries": [
+            "turkey"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 97,
+        "left": 30.9375,
+        "top": 39.909736,
+        "right": 32.34375,
+        "bottom": 38.822591,
+        "countries": [
+            "turkey"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 97,
+        "left": 32.34375,
+        "top": 39.909736,
+        "right": 33.75,
+        "bottom": 38.822591,
+        "countries": [
+            "turkey"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 97,
+        "left": 33.75,
+        "top": 39.909736,
+        "right": 35.15625,
+        "bottom": 38.822591,
+        "countries": [
+            "turkey"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 97,
+        "left": 35.15625,
+        "top": 39.909736,
+        "right": 36.5625,
+        "bottom": 38.822591,
+        "countries": [
+            "turkey"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 97,
+        "left": 36.5625,
+        "top": 39.909736,
+        "right": 37.96875,
+        "bottom": 38.822591,
+        "countries": [
+            "turkey"
+        ]
+    },
+    {
+        "x": 155,
+        "y": 97,
+        "left": 37.96875,
+        "top": 39.909736,
+        "right": 39.375,
+        "bottom": 38.822591,
+        "countries": [
+            "turkey"
+        ]
+    },
+    {
+        "x": 156,
+        "y": 97,
+        "left": 39.375,
+        "top": 39.909736,
+        "right": 40.78125,
+        "bottom": 38.822591,
+        "countries": [
+            "turkey"
+        ]
+    },
+    {
+        "x": 157,
+        "y": 97,
+        "left": 40.78125,
+        "top": 39.909736,
+        "right": 42.1875,
+        "bottom": 38.822591,
+        "countries": [
+            "turkey"
+        ]
+    },
+    {
+        "x": 158,
+        "y": 97,
+        "left": 42.1875,
+        "top": 39.909736,
+        "right": 43.59375,
+        "bottom": 38.822591,
+        "countries": [
+            "turkey"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 98,
+        "left": 25.3125,
+        "top": 38.822591,
+        "right": 26.71875,
+        "bottom": 37.71859,
+        "countries": [
+            "turkey",
+            "greece"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 98,
+        "left": 26.71875,
+        "top": 38.822591,
+        "right": 28.125,
+        "bottom": 37.71859,
+        "countries": [
+            "turkey",
+            "greece"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 98,
+        "left": 28.125,
+        "top": 38.822591,
+        "right": 29.53125,
+        "bottom": 37.71859,
+        "countries": [
+            "turkey"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 98,
+        "left": 29.53125,
+        "top": 38.822591,
+        "right": 30.9375,
+        "bottom": 37.71859,
+        "countries": [
+            "turkey"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 98,
+        "left": 30.9375,
+        "top": 38.822591,
+        "right": 32.34375,
+        "bottom": 37.71859,
+        "countries": [
+            "turkey"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 98,
+        "left": 32.34375,
+        "top": 38.822591,
+        "right": 33.75,
+        "bottom": 37.71859,
+        "countries": [
+            "turkey"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 98,
+        "left": 33.75,
+        "top": 38.822591,
+        "right": 35.15625,
+        "bottom": 37.71859,
+        "countries": [
+            "turkey"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 98,
+        "left": 35.15625,
+        "top": 38.822591,
+        "right": 36.5625,
+        "bottom": 37.71859,
+        "countries": [
+            "turkey"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 98,
+        "left": 36.5625,
+        "top": 38.822591,
+        "right": 37.96875,
+        "bottom": 37.71859,
+        "countries": [
+            "turkey"
+        ]
+    },
+    {
+        "x": 155,
+        "y": 98,
+        "left": 37.96875,
+        "top": 38.822591,
+        "right": 39.375,
+        "bottom": 37.71859,
+        "countries": [
+            "turkey"
+        ]
+    },
+    {
+        "x": 156,
+        "y": 98,
+        "left": 39.375,
+        "top": 38.822591,
+        "right": 40.78125,
+        "bottom": 37.71859,
+        "countries": [
+            "turkey"
+        ]
+    },
+    {
+        "x": 157,
+        "y": 98,
+        "left": 40.78125,
+        "top": 38.822591,
+        "right": 42.1875,
+        "bottom": 37.71859,
+        "countries": [
+            "turkey"
+        ]
+    },
+    {
+        "x": 158,
+        "y": 98,
+        "left": 42.1875,
+        "top": 38.822591,
+        "right": 43.59375,
+        "bottom": 37.71859,
+        "countries": [
+            "turkey"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 99,
+        "left": 26.71875,
+        "top": 37.71859,
+        "right": 28.125,
+        "bottom": 36.597889,
+        "countries": [
+            "turkey",
+            "greece"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 99,
+        "left": 28.125,
+        "top": 37.71859,
+        "right": 29.53125,
+        "bottom": 36.597889,
+        "countries": [
+            "turkey"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 99,
+        "left": 29.53125,
+        "top": 37.71859,
+        "right": 30.9375,
+        "bottom": 36.597889,
+        "countries": [
+            "turkey"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 99,
+        "left": 30.9375,
+        "top": 37.71859,
+        "right": 32.34375,
+        "bottom": 36.597889,
+        "countries": [
+            "turkey"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 99,
+        "left": 32.34375,
+        "top": 37.71859,
+        "right": 33.75,
+        "bottom": 36.597889,
+        "countries": [
+            "turkey"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 99,
+        "left": 33.75,
+        "top": 37.71859,
+        "right": 35.15625,
+        "bottom": 36.597889,
+        "countries": [
+            "turkey"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 99,
+        "left": 35.15625,
+        "top": 37.71859,
+        "right": 36.5625,
+        "bottom": 36.597889,
+        "countries": [
+            "turkey"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 100,
+        "left": 26.71875,
+        "top": 36.597889,
+        "right": 28.125,
+        "bottom": 35.46067,
+        "countries": [
+            "turkey",
+            "greece"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 100,
+        "left": 28.125,
+        "top": 36.597889,
+        "right": 29.53125,
+        "bottom": 35.46067,
+        "countries": [
+            "turkey",
+            "greece"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 100,
+        "left": 29.53125,
+        "top": 36.597889,
+        "right": 30.9375,
+        "bottom": 35.46067,
+        "countries": [
+            "turkey",
+            "greece"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 100,
+        "left": 30.9375,
+        "top": 36.597889,
+        "right": 32.34375,
+        "bottom": 35.46067,
+        "countries": [
+            "turkey"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 100,
+        "left": 32.34375,
+        "top": 36.597889,
+        "right": 33.75,
+        "bottom": 35.46067,
+        "countries": [
+            "turkey"
+        ]
+    }
+]

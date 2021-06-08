@@ -1,0 +1,368 @@
+[
+    {
+        "x": 158,
+        "y": 95,
+        "left": 42.1875,
+        "top": 42.032974,
+        "right": 43.59375,
+        "bottom": 40.979898,
+        "countries": [
+            "georgia",
+            "armenia",
+            "turkey"
+        ]
+    },
+    {
+        "x": 159,
+        "y": 95,
+        "left": 43.59375,
+        "top": 42.032974,
+        "right": 45.0,
+        "bottom": 40.979898,
+        "countries": [
+            "georgia",
+            "azerbaijan",
+            "armenia",
+            "turkey"
+        ]
+    },
+    {
+        "x": 160,
+        "y": 95,
+        "left": 45.0,
+        "top": 42.032974,
+        "right": 46.40625,
+        "bottom": 40.979898,
+        "countries": [
+            "georgia",
+            "azerbaijan",
+            "armenia",
+            "russia"
+        ]
+    },
+    {
+        "x": 161,
+        "y": 95,
+        "left": 46.40625,
+        "top": 42.032974,
+        "right": 47.8125,
+        "bottom": 40.979898,
+        "countries": [
+            "georgia",
+            "azerbaijan",
+            "russia"
+        ]
+    },
+    {
+        "x": 156,
+        "y": 93,
+        "left": 39.375,
+        "top": 44.087585,
+        "right": 40.78125,
+        "bottom": 43.068888,
+        "countries": [
+            "georgia",
+            "russia"
+        ]
+    },
+    {
+        "x": 157,
+        "y": 93,
+        "left": 40.78125,
+        "top": 44.087585,
+        "right": 42.1875,
+        "bottom": 43.068888,
+        "countries": [
+            "georgia",
+            "russia"
+        ]
+    },
+    {
+        "x": 158,
+        "y": 93,
+        "left": 42.1875,
+        "top": 44.087585,
+        "right": 43.59375,
+        "bottom": 43.068888,
+        "countries": [
+            "georgia",
+            "russia"
+        ]
+    },
+    {
+        "x": 157,
+        "y": 94,
+        "left": 40.78125,
+        "top": 43.068888,
+        "right": 42.1875,
+        "bottom": 42.032974,
+        "countries": [
+            "georgia"
+        ]
+    },
+    {
+        "x": 158,
+        "y": 94,
+        "left": 42.1875,
+        "top": 43.068888,
+        "right": 43.59375,
+        "bottom": 42.032974,
+        "countries": [
+            "georgia",
+            "russia"
+        ]
+    },
+    {
+        "x": 159,
+        "y": 94,
+        "left": 43.59375,
+        "top": 43.068888,
+        "right": 45.0,
+        "bottom": 42.032974,
+        "countries": [
+            "georgia",
+            "russia"
+        ]
+    },
+    {
+        "x": 160,
+        "y": 94,
+        "left": 45.0,
+        "top": 43.068888,
+        "right": 46.40625,
+        "bottom": 42.032974,
+        "countries": [
+            "georgia",
+            "russia"
+        ]
+    },
+    {
+        "x": 157,
+        "y": 95,
+        "left": 40.78125,
+        "top": 42.032974,
+        "right": 42.1875,
+        "bottom": 40.979898,
+        "countries": [
+            "georgia",
+            "turkey"
+        ]
+    },
+    {
+        "x": 67,
+        "y": 101,
+        "left": -85.78125,
+        "top": 35.46067,
+        "right": -84.375,
+        "bottom": 34.307144,
+        "countries": [
+            "georgia",
+            "alabama",
+            "tennessee"
+        ]
+    },
+    {
+        "x": 67,
+        "y": 102,
+        "left": -85.78125,
+        "top": 34.307144,
+        "right": -84.375,
+        "bottom": 33.137551,
+        "countries": [
+            "georgia",
+            "alabama"
+        ]
+    },
+    {
+        "x": 67,
+        "y": 103,
+        "left": -85.78125,
+        "top": 33.137551,
+        "right": -84.375,
+        "bottom": 31.952162,
+        "countries": [
+            "georgia",
+            "alabama"
+        ]
+    },
+    {
+        "x": 67,
+        "y": 104,
+        "left": -85.78125,
+        "top": 31.952162,
+        "right": -84.375,
+        "bottom": 30.751278,
+        "countries": [
+            "georgia",
+            "alabama",
+            "florida"
+        ]
+    },
+    {
+        "x": 69,
+        "y": 104,
+        "left": -82.96875,
+        "top": 31.952162,
+        "right": -81.5625,
+        "bottom": 30.751278,
+        "countries": [
+            "georgia",
+            "florida"
+        ]
+    },
+    {
+        "x": 67,
+        "y": 105,
+        "left": -85.78125,
+        "top": 30.751278,
+        "right": -84.375,
+        "bottom": 29.53523,
+        "countries": [
+            "georgia",
+            "florida"
+        ]
+    },
+    {
+        "x": 68,
+        "y": 105,
+        "left": -84.375,
+        "top": 30.751278,
+        "right": -82.96875,
+        "bottom": 29.53523,
+        "countries": [
+            "georgia",
+            "florida"
+        ]
+    },
+    {
+        "x": 69,
+        "y": 105,
+        "left": -82.96875,
+        "top": 30.751278,
+        "right": -81.5625,
+        "bottom": 29.53523,
+        "countries": [
+            "georgia",
+            "florida"
+        ]
+    },
+    {
+        "x": 70,
+        "y": 105,
+        "left": -81.5625,
+        "top": 30.751278,
+        "right": -80.15625,
+        "bottom": 29.53523,
+        "countries": [
+            "georgia",
+            "florida"
+        ]
+    },
+    {
+        "x": 68,
+        "y": 101,
+        "left": -84.375,
+        "top": 35.46067,
+        "right": -82.96875,
+        "bottom": 34.307144,
+        "countries": [
+            "georgia",
+            "north_carolina",
+            "tennessee",
+            "south_carolina"
+        ]
+    },
+    {
+        "x": 69,
+        "y": 101,
+        "left": -82.96875,
+        "top": 35.46067,
+        "right": -81.5625,
+        "bottom": 34.307144,
+        "countries": [
+            "georgia",
+            "north_carolina",
+            "south_carolina"
+        ]
+    },
+    {
+        "x": 68,
+        "y": 102,
+        "left": -84.375,
+        "top": 34.307144,
+        "right": -82.96875,
+        "bottom": 33.137551,
+        "countries": [
+            "georgia"
+        ]
+    },
+    {
+        "x": 69,
+        "y": 102,
+        "left": -82.96875,
+        "top": 34.307144,
+        "right": -81.5625,
+        "bottom": 33.137551,
+        "countries": [
+            "georgia",
+            "south_carolina"
+        ]
+    },
+    {
+        "x": 68,
+        "y": 103,
+        "left": -84.375,
+        "top": 33.137551,
+        "right": -82.96875,
+        "bottom": 31.952162,
+        "countries": [
+            "georgia"
+        ]
+    },
+    {
+        "x": 69,
+        "y": 103,
+        "left": -82.96875,
+        "top": 33.137551,
+        "right": -81.5625,
+        "bottom": 31.952162,
+        "countries": [
+            "georgia",
+            "south_carolina"
+        ]
+    },
+    {
+        "x": 70,
+        "y": 103,
+        "left": -81.5625,
+        "top": 33.137551,
+        "right": -80.15625,
+        "bottom": 31.952162,
+        "countries": [
+            "georgia",
+            "south_carolina"
+        ]
+    },
+    {
+        "x": 68,
+        "y": 104,
+        "left": -84.375,
+        "top": 31.952162,
+        "right": -82.96875,
+        "bottom": 30.751278,
+        "countries": [
+            "georgia"
+        ]
+    },
+    {
+        "x": 70,
+        "y": 104,
+        "left": -81.5625,
+        "top": 31.952162,
+        "right": -80.15625,
+        "bottom": 30.751278,
+        "countries": [
+            "georgia"
+        ]
+    }
+]

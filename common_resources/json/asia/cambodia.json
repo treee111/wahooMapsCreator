@@ -1,0 +1,195 @@
+[
+    {
+        "x": 201,
+        "y": 117,
+        "left": 102.65625,
+        "top": 15.284185,
+        "right": 104.0625,
+        "bottom": 13.923404,
+        "countries": [
+            "cambodia",
+            "thailand"
+        ]
+    },
+    {
+        "x": 202,
+        "y": 117,
+        "left": 104.0625,
+        "top": 15.284185,
+        "right": 105.46875,
+        "bottom": 13.923404,
+        "countries": [
+            "cambodia",
+            "thailand",
+            "laos"
+        ]
+    },
+    {
+        "x": 203,
+        "y": 117,
+        "left": 105.46875,
+        "top": 15.284185,
+        "right": 106.875,
+        "bottom": 13.923404,
+        "countries": [
+            "cambodia",
+            "thailand",
+            "laos"
+        ]
+    },
+    {
+        "x": 204,
+        "y": 117,
+        "left": 106.875,
+        "top": 15.284185,
+        "right": 108.28125,
+        "bottom": 13.923404,
+        "countries": [
+            "cambodia",
+            "vietnam",
+            "laos"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 118,
+        "left": 101.25,
+        "top": 13.923404,
+        "right": 102.65625,
+        "bottom": 12.554564,
+        "countries": [
+            "cambodia",
+            "thailand"
+        ]
+    },
+    {
+        "x": 201,
+        "y": 118,
+        "left": 102.65625,
+        "top": 13.923404,
+        "right": 104.0625,
+        "bottom": 12.554564,
+        "countries": [
+            "cambodia",
+            "thailand"
+        ]
+    },
+    {
+        "x": 202,
+        "y": 118,
+        "left": 104.0625,
+        "top": 13.923404,
+        "right": 105.46875,
+        "bottom": 12.554564,
+        "countries": [
+            "cambodia"
+        ]
+    },
+    {
+        "x": 203,
+        "y": 118,
+        "left": 105.46875,
+        "top": 13.923404,
+        "right": 106.875,
+        "bottom": 12.554564,
+        "countries": [
+            "cambodia",
+            "laos"
+        ]
+    },
+    {
+        "x": 204,
+        "y": 118,
+        "left": 106.875,
+        "top": 13.923404,
+        "right": 108.28125,
+        "bottom": 12.554564,
+        "countries": [
+            "cambodia",
+            "vietnam"
+        ]
+    },
+    {
+        "x": 201,
+        "y": 119,
+        "left": 102.65625,
+        "top": 12.554564,
+        "right": 104.0625,
+        "bottom": 11.178402,
+        "countries": [
+            "cambodia",
+            "thailand"
+        ]
+    },
+    {
+        "x": 202,
+        "y": 119,
+        "left": 104.0625,
+        "top": 12.554564,
+        "right": 105.46875,
+        "bottom": 11.178402,
+        "countries": [
+            "cambodia"
+        ]
+    },
+    {
+        "x": 203,
+        "y": 119,
+        "left": 105.46875,
+        "top": 12.554564,
+        "right": 106.875,
+        "bottom": 11.178402,
+        "countries": [
+            "cambodia",
+            "vietnam"
+        ]
+    },
+    {
+        "x": 204,
+        "y": 119,
+        "left": 106.875,
+        "top": 12.554564,
+        "right": 108.28125,
+        "bottom": 11.178402,
+        "countries": [
+            "cambodia",
+            "vietnam"
+        ]
+    },
+    {
+        "x": 201,
+        "y": 120,
+        "left": 102.65625,
+        "top": 11.178402,
+        "right": 104.0625,
+        "bottom": 9.795678,
+        "countries": [
+            "cambodia",
+            "vietnam"
+        ]
+    },
+    {
+        "x": 202,
+        "y": 120,
+        "left": 104.0625,
+        "top": 11.178402,
+        "right": 105.46875,
+        "bottom": 9.795678,
+        "countries": [
+            "cambodia",
+            "vietnam"
+        ]
+    },
+    {
+        "x": 203,
+        "y": 120,
+        "left": 105.46875,
+        "top": 11.178402,
+        "right": 106.875,
+        "bottom": 9.795678,
+        "countries": [
+            "cambodia",
+            "vietnam"
+        ]
+    }
+]

@@ -1,0 +1,198 @@
+[
+    {
+        "x": 159,
+        "y": 95,
+        "left": 43.59375,
+        "top": 42.032974,
+        "right": 45.0,
+        "bottom": 40.979898,
+        "countries": [
+            "georgia",
+            "azerbaijan",
+            "armenia",
+            "turkey"
+        ]
+    },
+    {
+        "x": 160,
+        "y": 95,
+        "left": 45.0,
+        "top": 42.032974,
+        "right": 46.40625,
+        "bottom": 40.979898,
+        "countries": [
+            "georgia",
+            "azerbaijan",
+            "armenia",
+            "russia"
+        ]
+    },
+    {
+        "x": 160,
+        "y": 96,
+        "left": 45.0,
+        "top": 40.979898,
+        "right": 46.40625,
+        "bottom": 39.909736,
+        "countries": [
+            "azerbaijan",
+            "armenia"
+        ]
+    },
+    {
+        "x": 159,
+        "y": 97,
+        "left": 43.59375,
+        "top": 39.909736,
+        "right": 45.0,
+        "bottom": 38.822591,
+        "countries": [
+            "iran",
+            "azerbaijan",
+            "armenia",
+            "turkey"
+        ]
+    },
+    {
+        "x": 160,
+        "y": 97,
+        "left": 45.0,
+        "top": 39.909736,
+        "right": 46.40625,
+        "bottom": 38.822591,
+        "countries": [
+            "iran",
+            "azerbaijan",
+            "armenia"
+        ]
+    },
+    {
+        "x": 161,
+        "y": 97,
+        "left": 46.40625,
+        "top": 39.909736,
+        "right": 47.8125,
+        "bottom": 38.822591,
+        "countries": [
+            "iran",
+            "azerbaijan",
+            "armenia"
+        ]
+    },
+    {
+        "x": 161,
+        "y": 95,
+        "left": 46.40625,
+        "top": 42.032974,
+        "right": 47.8125,
+        "bottom": 40.979898,
+        "countries": [
+            "georgia",
+            "azerbaijan",
+            "russia"
+        ]
+    },
+    {
+        "x": 162,
+        "y": 95,
+        "left": 47.8125,
+        "top": 42.032974,
+        "right": 49.21875,
+        "bottom": 40.979898,
+        "countries": [
+            "russia",
+            "azerbaijan"
+        ]
+    },
+    {
+        "x": 163,
+        "y": 95,
+        "left": 49.21875,
+        "top": 42.032974,
+        "right": 50.625,
+        "bottom": 40.979898,
+        "countries": [
+            "azerbaijan"
+        ]
+    },
+    {
+        "x": 161,
+        "y": 96,
+        "left": 46.40625,
+        "top": 40.979898,
+        "right": 47.8125,
+        "bottom": 39.909736,
+        "countries": [
+            "azerbaijan"
+        ]
+    },
+    {
+        "x": 162,
+        "y": 96,
+        "left": 47.8125,
+        "top": 40.979898,
+        "right": 49.21875,
+        "bottom": 39.909736,
+        "countries": [
+            "azerbaijan"
+        ]
+    },
+    {
+        "x": 163,
+        "y": 96,
+        "left": 49.21875,
+        "top": 40.979898,
+        "right": 50.625,
+        "bottom": 39.909736,
+        "countries": [
+            "azerbaijan"
+        ]
+    },
+    {
+        "x": 162,
+        "y": 97,
+        "left": 47.8125,
+        "top": 39.909736,
+        "right": 49.21875,
+        "bottom": 38.822591,
+        "countries": [
+            "iran",
+            "azerbaijan"
+        ]
+    },
+    {
+        "x": 163,
+        "y": 97,
+        "left": 49.21875,
+        "top": 39.909736,
+        "right": 50.625,
+        "bottom": 38.822591,
+        "countries": [
+            "azerbaijan"
+        ]
+    },
+    {
+        "x": 160,
+        "y": 98,
+        "left": 45.0,
+        "top": 38.822591,
+        "right": 46.40625,
+        "bottom": 37.71859,
+        "countries": [
+            "iran",
+            "azerbaijan"
+        ]
+    },
+    {
+        "x": 162,
+        "y": 98,
+        "left": 47.8125,
+        "top": 38.822591,
+        "right": 49.21875,
+        "bottom": 37.71859,
+        "countries": [
+            "iran",
+            "azerbaijan"
+        ]
+    }
+]

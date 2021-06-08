@@ -1,0 +1,1604 @@
+[
+    {
+        "x": 144,
+        "y": 120,
+        "left": 22.5,
+        "top": 11.178402,
+        "right": 23.90625,
+        "bottom": 9.795678,
+        "countries": [
+            "chad",
+            "sudan",
+            "central_african_republic"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 121,
+        "left": 22.5,
+        "top": 9.795678,
+        "right": 23.90625,
+        "bottom": 8.407168,
+        "countries": [
+            "sudan",
+            "central_african_republic"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 121,
+        "left": 23.90625,
+        "top": 9.795678,
+        "right": 25.3125,
+        "bottom": 8.407168,
+        "countries": [
+            "sudan",
+            "central_african_republic"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 122,
+        "left": 23.90625,
+        "top": 8.407168,
+        "right": 25.3125,
+        "bottom": 7.013668,
+        "countries": [
+            "sudan",
+            "central_african_republic"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 122,
+        "left": 25.3125,
+        "top": 8.407168,
+        "right": 26.71875,
+        "bottom": 7.013668,
+        "countries": [
+            "sudan",
+            "central_african_republic"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 123,
+        "left": 25.3125,
+        "top": 7.013668,
+        "right": 26.71875,
+        "bottom": 5.615986,
+        "countries": [
+            "sudan",
+            "central_african_republic"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 123,
+        "left": 26.71875,
+        "top": 7.013668,
+        "right": 28.125,
+        "bottom": 5.615986,
+        "countries": [
+            "sudan",
+            "central_african_republic"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 124,
+        "left": 26.71875,
+        "top": 5.615986,
+        "right": 28.125,
+        "bottom": 4.214943,
+        "countries": [
+            "sudan",
+            "central_african_republic",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 113,
+        "left": 23.90625,
+        "top": 20.632784,
+        "right": 25.3125,
+        "bottom": 19.311143,
+        "countries": [
+            "libya",
+            "chad",
+            "sudan"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 114,
+        "left": 23.90625,
+        "top": 19.311143,
+        "right": 25.3125,
+        "bottom": 17.978733,
+        "countries": [
+            "chad",
+            "sudan"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 115,
+        "left": 23.90625,
+        "top": 17.978733,
+        "right": 25.3125,
+        "bottom": 16.636192,
+        "countries": [
+            "chad",
+            "sudan"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 116,
+        "left": 22.5,
+        "top": 16.636192,
+        "right": 23.90625,
+        "bottom": 15.284185,
+        "countries": [
+            "chad",
+            "sudan"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 116,
+        "left": 23.90625,
+        "top": 16.636192,
+        "right": 25.3125,
+        "bottom": 15.284185,
+        "countries": [
+            "chad",
+            "sudan"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 117,
+        "left": 21.09375,
+        "top": 15.284185,
+        "right": 22.5,
+        "bottom": 13.923404,
+        "countries": [
+            "chad",
+            "sudan"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 117,
+        "left": 22.5,
+        "top": 15.284185,
+        "right": 23.90625,
+        "bottom": 13.923404,
+        "countries": [
+            "chad",
+            "sudan"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 118,
+        "left": 21.09375,
+        "top": 13.923404,
+        "right": 22.5,
+        "bottom": 12.554564,
+        "countries": [
+            "chad",
+            "sudan"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 119,
+        "left": 21.09375,
+        "top": 12.554564,
+        "right": 22.5,
+        "bottom": 11.178402,
+        "countries": [
+            "chad",
+            "sudan"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 119,
+        "left": 22.5,
+        "top": 12.554564,
+        "right": 23.90625,
+        "bottom": 11.178402,
+        "countries": [
+            "chad",
+            "sudan"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 124,
+        "left": 28.125,
+        "top": 5.615986,
+        "right": 29.53125,
+        "bottom": 4.214943,
+        "countries": [
+            "sudan",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 124,
+        "left": 29.53125,
+        "top": 5.615986,
+        "right": 30.9375,
+        "bottom": 4.214943,
+        "countries": [
+            "sudan",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 125,
+        "left": 29.53125,
+        "top": 4.214943,
+        "right": 30.9375,
+        "bottom": 2.811371,
+        "countries": [
+            "uganda",
+            "sudan",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 111,
+        "left": 23.90625,
+        "top": 23.241346,
+        "right": 25.3125,
+        "bottom": 21.943046,
+        "countries": [
+            "libya",
+            "sudan",
+            "egypt"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 111,
+        "left": 25.3125,
+        "top": 23.241346,
+        "right": 26.71875,
+        "bottom": 21.943046,
+        "countries": [
+            "sudan",
+            "egypt"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 111,
+        "left": 26.71875,
+        "top": 23.241346,
+        "right": 28.125,
+        "bottom": 21.943046,
+        "countries": [
+            "sudan",
+            "egypt"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 111,
+        "left": 28.125,
+        "top": 23.241346,
+        "right": 29.53125,
+        "bottom": 21.943046,
+        "countries": [
+            "sudan",
+            "egypt"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 111,
+        "left": 29.53125,
+        "top": 23.241346,
+        "right": 30.9375,
+        "bottom": 21.943046,
+        "countries": [
+            "sudan",
+            "egypt"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 111,
+        "left": 30.9375,
+        "top": 23.241346,
+        "right": 32.34375,
+        "bottom": 21.943046,
+        "countries": [
+            "sudan",
+            "egypt"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 111,
+        "left": 32.34375,
+        "top": 23.241346,
+        "right": 33.75,
+        "bottom": 21.943046,
+        "countries": [
+            "sudan",
+            "egypt"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 111,
+        "left": 33.75,
+        "top": 23.241346,
+        "right": 35.15625,
+        "bottom": 21.943046,
+        "countries": [
+            "sudan",
+            "egypt"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 111,
+        "left": 35.15625,
+        "top": 23.241346,
+        "right": 36.5625,
+        "bottom": 21.943046,
+        "countries": [
+            "sudan",
+            "egypt"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 112,
+        "left": 32.34375,
+        "top": 21.943046,
+        "right": 33.75,
+        "bottom": 20.632784,
+        "countries": [
+            "sudan",
+            "egypt"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 112,
+        "left": 33.75,
+        "top": 21.943046,
+        "right": 35.15625,
+        "bottom": 20.632784,
+        "countries": [
+            "sudan",
+            "egypt"
+        ]
+    },
+    {
+        "x": 155,
+        "y": 114,
+        "left": 37.96875,
+        "top": 19.311143,
+        "right": 39.375,
+        "bottom": 17.978733,
+        "countries": [
+            "sudan",
+            "eritrea"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 115,
+        "left": 36.5625,
+        "top": 17.978733,
+        "right": 37.96875,
+        "bottom": 16.636192,
+        "countries": [
+            "sudan",
+            "eritrea"
+        ]
+    },
+    {
+        "x": 155,
+        "y": 115,
+        "left": 37.96875,
+        "top": 17.978733,
+        "right": 39.375,
+        "bottom": 16.636192,
+        "countries": [
+            "sudan",
+            "eritrea"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 116,
+        "left": 35.15625,
+        "top": 16.636192,
+        "right": 36.5625,
+        "bottom": 15.284185,
+        "countries": [
+            "sudan",
+            "eritrea"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 116,
+        "left": 36.5625,
+        "top": 16.636192,
+        "right": 37.96875,
+        "bottom": 15.284185,
+        "countries": [
+            "sudan",
+            "eritrea"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 117,
+        "left": 35.15625,
+        "top": 15.284185,
+        "right": 36.5625,
+        "bottom": 13.923404,
+        "countries": [
+            "sudan",
+            "ethiopia",
+            "eritrea"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 118,
+        "left": 35.15625,
+        "top": 13.923404,
+        "right": 36.5625,
+        "bottom": 12.554564,
+        "countries": [
+            "sudan",
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 119,
+        "left": 33.75,
+        "top": 12.554564,
+        "right": 35.15625,
+        "bottom": 11.178402,
+        "countries": [
+            "sudan",
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 119,
+        "left": 35.15625,
+        "top": 12.554564,
+        "right": 36.5625,
+        "bottom": 11.178402,
+        "countries": [
+            "sudan",
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 120,
+        "left": 33.75,
+        "top": 11.178402,
+        "right": 35.15625,
+        "bottom": 9.795678,
+        "countries": [
+            "sudan",
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 121,
+        "left": 32.34375,
+        "top": 9.795678,
+        "right": 33.75,
+        "bottom": 8.407168,
+        "countries": [
+            "sudan",
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 121,
+        "left": 33.75,
+        "top": 9.795678,
+        "right": 35.15625,
+        "bottom": 8.407168,
+        "countries": [
+            "sudan",
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 122,
+        "left": 32.34375,
+        "top": 8.407168,
+        "right": 33.75,
+        "bottom": 7.013668,
+        "countries": [
+            "sudan",
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 122,
+        "left": 33.75,
+        "top": 8.407168,
+        "right": 35.15625,
+        "bottom": 7.013668,
+        "countries": [
+            "sudan",
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 123,
+        "left": 33.75,
+        "top": 7.013668,
+        "right": 35.15625,
+        "bottom": 5.615986,
+        "countries": [
+            "sudan",
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 124,
+        "left": 33.75,
+        "top": 5.615986,
+        "right": 35.15625,
+        "bottom": 4.214943,
+        "countries": [
+            "kenya",
+            "sudan",
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 124,
+        "left": 35.15625,
+        "top": 5.615986,
+        "right": 36.5625,
+        "bottom": 4.214943,
+        "countries": [
+            "kenya",
+            "sudan",
+            "ethiopia"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 125,
+        "left": 33.75,
+        "top": 4.214943,
+        "right": 35.15625,
+        "bottom": 2.811371,
+        "countries": [
+            "uganda",
+            "sudan",
+            "kenya"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 112,
+        "left": 23.90625,
+        "top": 21.943046,
+        "right": 25.3125,
+        "bottom": 20.632784,
+        "countries": [
+            "libya",
+            "sudan"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 111,
+        "left": 36.5625,
+        "top": 23.241346,
+        "right": 37.96875,
+        "bottom": 21.943046,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 112,
+        "left": 25.3125,
+        "top": 21.943046,
+        "right": 26.71875,
+        "bottom": 20.632784,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 112,
+        "left": 26.71875,
+        "top": 21.943046,
+        "right": 28.125,
+        "bottom": 20.632784,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 112,
+        "left": 28.125,
+        "top": 21.943046,
+        "right": 29.53125,
+        "bottom": 20.632784,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 112,
+        "left": 29.53125,
+        "top": 21.943046,
+        "right": 30.9375,
+        "bottom": 20.632784,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 112,
+        "left": 30.9375,
+        "top": 21.943046,
+        "right": 32.34375,
+        "bottom": 20.632784,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 112,
+        "left": 35.15625,
+        "top": 21.943046,
+        "right": 36.5625,
+        "bottom": 20.632784,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 112,
+        "left": 36.5625,
+        "top": 21.943046,
+        "right": 37.96875,
+        "bottom": 20.632784,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 113,
+        "left": 25.3125,
+        "top": 20.632784,
+        "right": 26.71875,
+        "bottom": 19.311143,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 113,
+        "left": 26.71875,
+        "top": 20.632784,
+        "right": 28.125,
+        "bottom": 19.311143,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 113,
+        "left": 28.125,
+        "top": 20.632784,
+        "right": 29.53125,
+        "bottom": 19.311143,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 113,
+        "left": 29.53125,
+        "top": 20.632784,
+        "right": 30.9375,
+        "bottom": 19.311143,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 113,
+        "left": 30.9375,
+        "top": 20.632784,
+        "right": 32.34375,
+        "bottom": 19.311143,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 113,
+        "left": 32.34375,
+        "top": 20.632784,
+        "right": 33.75,
+        "bottom": 19.311143,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 113,
+        "left": 33.75,
+        "top": 20.632784,
+        "right": 35.15625,
+        "bottom": 19.311143,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 113,
+        "left": 35.15625,
+        "top": 20.632784,
+        "right": 36.5625,
+        "bottom": 19.311143,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 113,
+        "left": 36.5625,
+        "top": 20.632784,
+        "right": 37.96875,
+        "bottom": 19.311143,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 114,
+        "left": 25.3125,
+        "top": 19.311143,
+        "right": 26.71875,
+        "bottom": 17.978733,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 114,
+        "left": 26.71875,
+        "top": 19.311143,
+        "right": 28.125,
+        "bottom": 17.978733,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 114,
+        "left": 28.125,
+        "top": 19.311143,
+        "right": 29.53125,
+        "bottom": 17.978733,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 114,
+        "left": 29.53125,
+        "top": 19.311143,
+        "right": 30.9375,
+        "bottom": 17.978733,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 114,
+        "left": 30.9375,
+        "top": 19.311143,
+        "right": 32.34375,
+        "bottom": 17.978733,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 114,
+        "left": 32.34375,
+        "top": 19.311143,
+        "right": 33.75,
+        "bottom": 17.978733,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 114,
+        "left": 33.75,
+        "top": 19.311143,
+        "right": 35.15625,
+        "bottom": 17.978733,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 114,
+        "left": 35.15625,
+        "top": 19.311143,
+        "right": 36.5625,
+        "bottom": 17.978733,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 114,
+        "left": 36.5625,
+        "top": 19.311143,
+        "right": 37.96875,
+        "bottom": 17.978733,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 115,
+        "left": 25.3125,
+        "top": 17.978733,
+        "right": 26.71875,
+        "bottom": 16.636192,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 115,
+        "left": 26.71875,
+        "top": 17.978733,
+        "right": 28.125,
+        "bottom": 16.636192,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 115,
+        "left": 28.125,
+        "top": 17.978733,
+        "right": 29.53125,
+        "bottom": 16.636192,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 115,
+        "left": 29.53125,
+        "top": 17.978733,
+        "right": 30.9375,
+        "bottom": 16.636192,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 115,
+        "left": 30.9375,
+        "top": 17.978733,
+        "right": 32.34375,
+        "bottom": 16.636192,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 115,
+        "left": 32.34375,
+        "top": 17.978733,
+        "right": 33.75,
+        "bottom": 16.636192,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 115,
+        "left": 33.75,
+        "top": 17.978733,
+        "right": 35.15625,
+        "bottom": 16.636192,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 115,
+        "left": 35.15625,
+        "top": 17.978733,
+        "right": 36.5625,
+        "bottom": 16.636192,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 116,
+        "left": 25.3125,
+        "top": 16.636192,
+        "right": 26.71875,
+        "bottom": 15.284185,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 116,
+        "left": 26.71875,
+        "top": 16.636192,
+        "right": 28.125,
+        "bottom": 15.284185,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 116,
+        "left": 28.125,
+        "top": 16.636192,
+        "right": 29.53125,
+        "bottom": 15.284185,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 116,
+        "left": 29.53125,
+        "top": 16.636192,
+        "right": 30.9375,
+        "bottom": 15.284185,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 116,
+        "left": 30.9375,
+        "top": 16.636192,
+        "right": 32.34375,
+        "bottom": 15.284185,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 116,
+        "left": 32.34375,
+        "top": 16.636192,
+        "right": 33.75,
+        "bottom": 15.284185,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 116,
+        "left": 33.75,
+        "top": 16.636192,
+        "right": 35.15625,
+        "bottom": 15.284185,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 117,
+        "left": 23.90625,
+        "top": 15.284185,
+        "right": 25.3125,
+        "bottom": 13.923404,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 117,
+        "left": 25.3125,
+        "top": 15.284185,
+        "right": 26.71875,
+        "bottom": 13.923404,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 117,
+        "left": 26.71875,
+        "top": 15.284185,
+        "right": 28.125,
+        "bottom": 13.923404,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 117,
+        "left": 28.125,
+        "top": 15.284185,
+        "right": 29.53125,
+        "bottom": 13.923404,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 117,
+        "left": 29.53125,
+        "top": 15.284185,
+        "right": 30.9375,
+        "bottom": 13.923404,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 117,
+        "left": 30.9375,
+        "top": 15.284185,
+        "right": 32.34375,
+        "bottom": 13.923404,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 117,
+        "left": 32.34375,
+        "top": 15.284185,
+        "right": 33.75,
+        "bottom": 13.923404,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 117,
+        "left": 33.75,
+        "top": 15.284185,
+        "right": 35.15625,
+        "bottom": 13.923404,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 118,
+        "left": 22.5,
+        "top": 13.923404,
+        "right": 23.90625,
+        "bottom": 12.554564,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 118,
+        "left": 23.90625,
+        "top": 13.923404,
+        "right": 25.3125,
+        "bottom": 12.554564,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 118,
+        "left": 25.3125,
+        "top": 13.923404,
+        "right": 26.71875,
+        "bottom": 12.554564,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 118,
+        "left": 26.71875,
+        "top": 13.923404,
+        "right": 28.125,
+        "bottom": 12.554564,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 118,
+        "left": 28.125,
+        "top": 13.923404,
+        "right": 29.53125,
+        "bottom": 12.554564,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 118,
+        "left": 29.53125,
+        "top": 13.923404,
+        "right": 30.9375,
+        "bottom": 12.554564,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 118,
+        "left": 30.9375,
+        "top": 13.923404,
+        "right": 32.34375,
+        "bottom": 12.554564,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 118,
+        "left": 32.34375,
+        "top": 13.923404,
+        "right": 33.75,
+        "bottom": 12.554564,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 118,
+        "left": 33.75,
+        "top": 13.923404,
+        "right": 35.15625,
+        "bottom": 12.554564,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 119,
+        "left": 23.90625,
+        "top": 12.554564,
+        "right": 25.3125,
+        "bottom": 11.178402,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 119,
+        "left": 25.3125,
+        "top": 12.554564,
+        "right": 26.71875,
+        "bottom": 11.178402,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 119,
+        "left": 26.71875,
+        "top": 12.554564,
+        "right": 28.125,
+        "bottom": 11.178402,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 119,
+        "left": 28.125,
+        "top": 12.554564,
+        "right": 29.53125,
+        "bottom": 11.178402,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 119,
+        "left": 29.53125,
+        "top": 12.554564,
+        "right": 30.9375,
+        "bottom": 11.178402,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 119,
+        "left": 30.9375,
+        "top": 12.554564,
+        "right": 32.34375,
+        "bottom": 11.178402,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 119,
+        "left": 32.34375,
+        "top": 12.554564,
+        "right": 33.75,
+        "bottom": 11.178402,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 120,
+        "left": 23.90625,
+        "top": 11.178402,
+        "right": 25.3125,
+        "bottom": 9.795678,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 120,
+        "left": 25.3125,
+        "top": 11.178402,
+        "right": 26.71875,
+        "bottom": 9.795678,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 120,
+        "left": 26.71875,
+        "top": 11.178402,
+        "right": 28.125,
+        "bottom": 9.795678,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 120,
+        "left": 28.125,
+        "top": 11.178402,
+        "right": 29.53125,
+        "bottom": 9.795678,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 120,
+        "left": 29.53125,
+        "top": 11.178402,
+        "right": 30.9375,
+        "bottom": 9.795678,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 120,
+        "left": 30.9375,
+        "top": 11.178402,
+        "right": 32.34375,
+        "bottom": 9.795678,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 120,
+        "left": 32.34375,
+        "top": 11.178402,
+        "right": 33.75,
+        "bottom": 9.795678,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 121,
+        "left": 25.3125,
+        "top": 9.795678,
+        "right": 26.71875,
+        "bottom": 8.407168,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 121,
+        "left": 26.71875,
+        "top": 9.795678,
+        "right": 28.125,
+        "bottom": 8.407168,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 121,
+        "left": 28.125,
+        "top": 9.795678,
+        "right": 29.53125,
+        "bottom": 8.407168,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 121,
+        "left": 29.53125,
+        "top": 9.795678,
+        "right": 30.9375,
+        "bottom": 8.407168,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 121,
+        "left": 30.9375,
+        "top": 9.795678,
+        "right": 32.34375,
+        "bottom": 8.407168,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 122,
+        "left": 26.71875,
+        "top": 8.407168,
+        "right": 28.125,
+        "bottom": 7.013668,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 122,
+        "left": 28.125,
+        "top": 8.407168,
+        "right": 29.53125,
+        "bottom": 7.013668,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 122,
+        "left": 29.53125,
+        "top": 8.407168,
+        "right": 30.9375,
+        "bottom": 7.013668,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 122,
+        "left": 30.9375,
+        "top": 8.407168,
+        "right": 32.34375,
+        "bottom": 7.013668,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 123,
+        "left": 28.125,
+        "top": 7.013668,
+        "right": 29.53125,
+        "bottom": 5.615986,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 123,
+        "left": 29.53125,
+        "top": 7.013668,
+        "right": 30.9375,
+        "bottom": 5.615986,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 123,
+        "left": 30.9375,
+        "top": 7.013668,
+        "right": 32.34375,
+        "bottom": 5.615986,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 123,
+        "left": 32.34375,
+        "top": 7.013668,
+        "right": 33.75,
+        "bottom": 5.615986,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 124,
+        "left": 30.9375,
+        "top": 5.615986,
+        "right": 32.34375,
+        "bottom": 4.214943,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 124,
+        "left": 32.34375,
+        "top": 5.615986,
+        "right": 33.75,
+        "bottom": 4.214943,
+        "countries": [
+            "sudan"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 125,
+        "left": 30.9375,
+        "top": 4.214943,
+        "right": 32.34375,
+        "bottom": 2.811371,
+        "countries": [
+            "uganda",
+            "sudan"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 125,
+        "left": 32.34375,
+        "top": 4.214943,
+        "right": 33.75,
+        "bottom": 2.811371,
+        "countries": [
+            "uganda",
+            "sudan"
+        ]
+    }
+]

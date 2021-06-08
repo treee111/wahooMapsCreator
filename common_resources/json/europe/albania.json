@@ -1,0 +1,92 @@
+[
+    {
+        "x": 141,
+        "y": 94,
+        "left": 18.28125,
+        "top": 43.068888,
+        "right": 19.6875,
+        "bottom": 42.032974,
+        "countries": [
+            "montenegro",
+            "bosnia_and_herzegovina",
+            "albania",
+            "croatia"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 94,
+        "left": 19.6875,
+        "top": 43.068888,
+        "right": 21.09375,
+        "bottom": 42.032974,
+        "countries": [
+            "montenegro",
+            "serbia",
+            "macedonia",
+            "albania"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 95,
+        "left": 18.28125,
+        "top": 42.032974,
+        "right": 19.6875,
+        "bottom": 40.979898,
+        "countries": [
+            "montenegro",
+            "albania"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 95,
+        "left": 19.6875,
+        "top": 42.032974,
+        "right": 21.09375,
+        "bottom": 40.979898,
+        "countries": [
+            "serbia",
+            "macedonia",
+            "albania"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 96,
+        "left": 18.28125,
+        "top": 40.979898,
+        "right": 19.6875,
+        "bottom": 39.909736,
+        "countries": [
+            "albania",
+            "italy"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 96,
+        "left": 19.6875,
+        "top": 40.979898,
+        "right": 21.09375,
+        "bottom": 39.909736,
+        "countries": [
+            "macedonia",
+            "albania",
+            "greece"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 97,
+        "left": 19.6875,
+        "top": 39.909736,
+        "right": 21.09375,
+        "bottom": 38.822591,
+        "countries": [
+            "albania",
+            "greece"
+        ]
+    }
+]

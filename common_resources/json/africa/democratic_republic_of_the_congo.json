@@ -1,0 +1,1499 @@
+[
+    {
+        "x": 136,
+        "y": 131,
+        "left": 11.25,
+        "top": -4.214943,
+        "right": 12.65625,
+        "bottom": -5.615986,
+        "countries": [
+            "republic_of_congo",
+            "angola",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 131,
+        "left": 12.65625,
+        "top": -4.214943,
+        "right": 14.0625,
+        "bottom": -5.615986,
+        "countries": [
+            "republic_of_congo",
+            "angola",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 132,
+        "left": 11.25,
+        "top": -5.615986,
+        "right": 12.65625,
+        "bottom": -7.013668,
+        "countries": [
+            "angola",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 132,
+        "left": 12.65625,
+        "top": -5.615986,
+        "right": 14.0625,
+        "bottom": -7.013668,
+        "countries": [
+            "angola",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 132,
+        "left": 14.0625,
+        "top": -5.615986,
+        "right": 15.46875,
+        "bottom": -7.013668,
+        "countries": [
+            "angola",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 132,
+        "left": 15.46875,
+        "top": -5.615986,
+        "right": 16.875,
+        "bottom": -7.013668,
+        "countries": [
+            "angola",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 132,
+        "left": 16.875,
+        "top": -5.615986,
+        "right": 18.28125,
+        "bottom": -7.013668,
+        "countries": [
+            "angola",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 132,
+        "left": 18.28125,
+        "top": -5.615986,
+        "right": 19.6875,
+        "bottom": -7.013668,
+        "countries": [
+            "angola",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 132,
+        "left": 19.6875,
+        "top": -5.615986,
+        "right": 21.09375,
+        "bottom": -7.013668,
+        "countries": [
+            "angola",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 133,
+        "left": 16.875,
+        "top": -7.013668,
+        "right": 18.28125,
+        "bottom": -8.407168,
+        "countries": [
+            "angola",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 133,
+        "left": 18.28125,
+        "top": -7.013668,
+        "right": 19.6875,
+        "bottom": -8.407168,
+        "countries": [
+            "angola",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 133,
+        "left": 19.6875,
+        "top": -7.013668,
+        "right": 21.09375,
+        "bottom": -8.407168,
+        "countries": [
+            "angola",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 133,
+        "left": 21.09375,
+        "top": -7.013668,
+        "right": 22.5,
+        "bottom": -8.407168,
+        "countries": [
+            "angola",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 134,
+        "left": 21.09375,
+        "top": -8.407168,
+        "right": 22.5,
+        "bottom": -9.795678,
+        "countries": [
+            "angola",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 135,
+        "left": 21.09375,
+        "top": -9.795678,
+        "right": 22.5,
+        "bottom": -11.178402,
+        "countries": [
+            "angola",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 135,
+        "left": 22.5,
+        "top": -9.795678,
+        "right": 23.90625,
+        "bottom": -11.178402,
+        "countries": [
+            "angola",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 135,
+        "left": 23.90625,
+        "top": -9.795678,
+        "right": 25.3125,
+        "bottom": -11.178402,
+        "countries": [
+            "zambia",
+            "angola",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 136,
+        "left": 21.09375,
+        "top": -11.178402,
+        "right": 22.5,
+        "bottom": -12.554564,
+        "countries": [
+            "angola",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 136,
+        "left": 23.90625,
+        "top": -11.178402,
+        "right": 25.3125,
+        "bottom": -12.554564,
+        "countries": [
+            "zambia",
+            "angola",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 129,
+        "left": 28.125,
+        "top": -1.406109,
+        "right": 29.53125,
+        "bottom": -2.811371,
+        "countries": [
+            "rwanda",
+            "democratic_republic_of_the_congo",
+            "burundi"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 129,
+        "left": 29.53125,
+        "top": -1.406109,
+        "right": 30.9375,
+        "bottom": -2.811371,
+        "countries": [
+            "burundi",
+            "democratic_republic_of_the_congo",
+            "tanzania",
+            "rwanda",
+            "uganda"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 130,
+        "left": 28.125,
+        "top": -2.811371,
+        "right": 29.53125,
+        "bottom": -4.214943,
+        "countries": [
+            "rwanda",
+            "democratic_republic_of_the_congo",
+            "burundi"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 131,
+        "left": 28.125,
+        "top": -4.214943,
+        "right": 29.53125,
+        "bottom": -5.615986,
+        "countries": [
+            "tanzania",
+            "democratic_republic_of_the_congo",
+            "burundi"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 131,
+        "left": 29.53125,
+        "top": -4.214943,
+        "right": 30.9375,
+        "bottom": -5.615986,
+        "countries": [
+            "tanzania",
+            "democratic_republic_of_the_congo",
+            "burundi"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 124,
+        "left": 18.28125,
+        "top": 5.615986,
+        "right": 19.6875,
+        "bottom": 4.214943,
+        "countries": [
+            "central_african_republic",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 124,
+        "left": 19.6875,
+        "top": 5.615986,
+        "right": 21.09375,
+        "bottom": 4.214943,
+        "countries": [
+            "central_african_republic",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 124,
+        "left": 21.09375,
+        "top": 5.615986,
+        "right": 22.5,
+        "bottom": 4.214943,
+        "countries": [
+            "central_african_republic",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 124,
+        "left": 22.5,
+        "top": 5.615986,
+        "right": 23.90625,
+        "bottom": 4.214943,
+        "countries": [
+            "central_african_republic",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 124,
+        "left": 23.90625,
+        "top": 5.615986,
+        "right": 25.3125,
+        "bottom": 4.214943,
+        "countries": [
+            "central_african_republic",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 124,
+        "left": 25.3125,
+        "top": 5.615986,
+        "right": 26.71875,
+        "bottom": 4.214943,
+        "countries": [
+            "central_african_republic",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 124,
+        "left": 26.71875,
+        "top": 5.615986,
+        "right": 28.125,
+        "bottom": 4.214943,
+        "countries": [
+            "sudan",
+            "central_african_republic",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 125,
+        "left": 18.28125,
+        "top": 4.214943,
+        "right": 19.6875,
+        "bottom": 2.811371,
+        "countries": [
+            "republic_of_congo",
+            "central_african_republic",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 125,
+        "left": 21.09375,
+        "top": 4.214943,
+        "right": 22.5,
+        "bottom": 2.811371,
+        "countries": [
+            "central_african_republic",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 125,
+        "left": 22.5,
+        "top": 4.214943,
+        "right": 23.90625,
+        "bottom": 2.811371,
+        "countries": [
+            "central_african_republic",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 124,
+        "left": 28.125,
+        "top": 5.615986,
+        "right": 29.53125,
+        "bottom": 4.214943,
+        "countries": [
+            "sudan",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 124,
+        "left": 29.53125,
+        "top": 5.615986,
+        "right": 30.9375,
+        "bottom": 4.214943,
+        "countries": [
+            "sudan",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 125,
+        "left": 19.6875,
+        "top": 4.214943,
+        "right": 21.09375,
+        "bottom": 2.811371,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 125,
+        "left": 23.90625,
+        "top": 4.214943,
+        "right": 25.3125,
+        "bottom": 2.811371,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 125,
+        "left": 25.3125,
+        "top": 4.214943,
+        "right": 26.71875,
+        "bottom": 2.811371,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 125,
+        "left": 26.71875,
+        "top": 4.214943,
+        "right": 28.125,
+        "bottom": 2.811371,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 125,
+        "left": 28.125,
+        "top": 4.214943,
+        "right": 29.53125,
+        "bottom": 2.811371,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 125,
+        "left": 29.53125,
+        "top": 4.214943,
+        "right": 30.9375,
+        "bottom": 2.811371,
+        "countries": [
+            "uganda",
+            "sudan",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 126,
+        "left": 16.875,
+        "top": 2.811371,
+        "right": 18.28125,
+        "bottom": 1.406109,
+        "countries": [
+            "republic_of_congo",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 126,
+        "left": 18.28125,
+        "top": 2.811371,
+        "right": 19.6875,
+        "bottom": 1.406109,
+        "countries": [
+            "republic_of_congo",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 126,
+        "left": 19.6875,
+        "top": 2.811371,
+        "right": 21.09375,
+        "bottom": 1.406109,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 126,
+        "left": 21.09375,
+        "top": 2.811371,
+        "right": 22.5,
+        "bottom": 1.406109,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 126,
+        "left": 22.5,
+        "top": 2.811371,
+        "right": 23.90625,
+        "bottom": 1.406109,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 126,
+        "left": 23.90625,
+        "top": 2.811371,
+        "right": 25.3125,
+        "bottom": 1.406109,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 126,
+        "left": 25.3125,
+        "top": 2.811371,
+        "right": 26.71875,
+        "bottom": 1.406109,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 126,
+        "left": 26.71875,
+        "top": 2.811371,
+        "right": 28.125,
+        "bottom": 1.406109,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 126,
+        "left": 28.125,
+        "top": 2.811371,
+        "right": 29.53125,
+        "bottom": 1.406109,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 126,
+        "left": 29.53125,
+        "top": 2.811371,
+        "right": 30.9375,
+        "bottom": 1.406109,
+        "countries": [
+            "uganda",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 126,
+        "left": 30.9375,
+        "top": 2.811371,
+        "right": 32.34375,
+        "bottom": 1.406109,
+        "countries": [
+            "uganda",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 127,
+        "left": 16.875,
+        "top": 1.406109,
+        "right": 18.28125,
+        "bottom": 0.0,
+        "countries": [
+            "republic_of_congo",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 127,
+        "left": 18.28125,
+        "top": 1.406109,
+        "right": 19.6875,
+        "bottom": 0.0,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 127,
+        "left": 19.6875,
+        "top": 1.406109,
+        "right": 21.09375,
+        "bottom": 0.0,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 127,
+        "left": 21.09375,
+        "top": 1.406109,
+        "right": 22.5,
+        "bottom": 0.0,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 127,
+        "left": 22.5,
+        "top": 1.406109,
+        "right": 23.90625,
+        "bottom": 0.0,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 127,
+        "left": 23.90625,
+        "top": 1.406109,
+        "right": 25.3125,
+        "bottom": 0.0,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 127,
+        "left": 25.3125,
+        "top": 1.406109,
+        "right": 26.71875,
+        "bottom": 0.0,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 127,
+        "left": 26.71875,
+        "top": 1.406109,
+        "right": 28.125,
+        "bottom": 0.0,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 127,
+        "left": 28.125,
+        "top": 1.406109,
+        "right": 29.53125,
+        "bottom": 0.0,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 127,
+        "left": 29.53125,
+        "top": 1.406109,
+        "right": 30.9375,
+        "bottom": 0.0,
+        "countries": [
+            "uganda",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 128,
+        "left": 15.46875,
+        "top": 0.0,
+        "right": 16.875,
+        "bottom": -1.406109,
+        "countries": [
+            "republic_of_congo",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 128,
+        "left": 16.875,
+        "top": 0.0,
+        "right": 18.28125,
+        "bottom": -1.406109,
+        "countries": [
+            "republic_of_congo",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 128,
+        "left": 18.28125,
+        "top": 0.0,
+        "right": 19.6875,
+        "bottom": -1.406109,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 128,
+        "left": 19.6875,
+        "top": 0.0,
+        "right": 21.09375,
+        "bottom": -1.406109,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 128,
+        "left": 21.09375,
+        "top": 0.0,
+        "right": 22.5,
+        "bottom": -1.406109,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 128,
+        "left": 22.5,
+        "top": 0.0,
+        "right": 23.90625,
+        "bottom": -1.406109,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 128,
+        "left": 23.90625,
+        "top": 0.0,
+        "right": 25.3125,
+        "bottom": -1.406109,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 128,
+        "left": 25.3125,
+        "top": 0.0,
+        "right": 26.71875,
+        "bottom": -1.406109,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 128,
+        "left": 26.71875,
+        "top": 0.0,
+        "right": 28.125,
+        "bottom": -1.406109,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 128,
+        "left": 28.125,
+        "top": 0.0,
+        "right": 29.53125,
+        "bottom": -1.406109,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 128,
+        "left": 29.53125,
+        "top": 0.0,
+        "right": 30.9375,
+        "bottom": -1.406109,
+        "countries": [
+            "uganda",
+            "tanzania",
+            "democratic_republic_of_the_congo",
+            "rwanda"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 129,
+        "left": 15.46875,
+        "top": -1.406109,
+        "right": 16.875,
+        "bottom": -2.811371,
+        "countries": [
+            "republic_of_congo",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 129,
+        "left": 16.875,
+        "top": -1.406109,
+        "right": 18.28125,
+        "bottom": -2.811371,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 129,
+        "left": 18.28125,
+        "top": -1.406109,
+        "right": 19.6875,
+        "bottom": -2.811371,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 129,
+        "left": 19.6875,
+        "top": -1.406109,
+        "right": 21.09375,
+        "bottom": -2.811371,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 129,
+        "left": 21.09375,
+        "top": -1.406109,
+        "right": 22.5,
+        "bottom": -2.811371,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 129,
+        "left": 22.5,
+        "top": -1.406109,
+        "right": 23.90625,
+        "bottom": -2.811371,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 129,
+        "left": 23.90625,
+        "top": -1.406109,
+        "right": 25.3125,
+        "bottom": -2.811371,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 129,
+        "left": 25.3125,
+        "top": -1.406109,
+        "right": 26.71875,
+        "bottom": -2.811371,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 129,
+        "left": 26.71875,
+        "top": -1.406109,
+        "right": 28.125,
+        "bottom": -2.811371,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 130,
+        "left": 15.46875,
+        "top": -2.811371,
+        "right": 16.875,
+        "bottom": -4.214943,
+        "countries": [
+            "republic_of_congo",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 130,
+        "left": 16.875,
+        "top": -2.811371,
+        "right": 18.28125,
+        "bottom": -4.214943,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 130,
+        "left": 18.28125,
+        "top": -2.811371,
+        "right": 19.6875,
+        "bottom": -4.214943,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 130,
+        "left": 19.6875,
+        "top": -2.811371,
+        "right": 21.09375,
+        "bottom": -4.214943,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 130,
+        "left": 21.09375,
+        "top": -2.811371,
+        "right": 22.5,
+        "bottom": -4.214943,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 130,
+        "left": 22.5,
+        "top": -2.811371,
+        "right": 23.90625,
+        "bottom": -4.214943,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 130,
+        "left": 23.90625,
+        "top": -2.811371,
+        "right": 25.3125,
+        "bottom": -4.214943,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 130,
+        "left": 25.3125,
+        "top": -2.811371,
+        "right": 26.71875,
+        "bottom": -4.214943,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 130,
+        "left": 26.71875,
+        "top": -2.811371,
+        "right": 28.125,
+        "bottom": -4.214943,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 131,
+        "left": 14.0625,
+        "top": -4.214943,
+        "right": 15.46875,
+        "bottom": -5.615986,
+        "countries": [
+            "republic_of_congo",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 131,
+        "left": 15.46875,
+        "top": -4.214943,
+        "right": 16.875,
+        "bottom": -5.615986,
+        "countries": [
+            "republic_of_congo",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 131,
+        "left": 16.875,
+        "top": -4.214943,
+        "right": 18.28125,
+        "bottom": -5.615986,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 131,
+        "left": 18.28125,
+        "top": -4.214943,
+        "right": 19.6875,
+        "bottom": -5.615986,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 131,
+        "left": 19.6875,
+        "top": -4.214943,
+        "right": 21.09375,
+        "bottom": -5.615986,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 131,
+        "left": 21.09375,
+        "top": -4.214943,
+        "right": 22.5,
+        "bottom": -5.615986,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 131,
+        "left": 22.5,
+        "top": -4.214943,
+        "right": 23.90625,
+        "bottom": -5.615986,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 131,
+        "left": 23.90625,
+        "top": -4.214943,
+        "right": 25.3125,
+        "bottom": -5.615986,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 131,
+        "left": 25.3125,
+        "top": -4.214943,
+        "right": 26.71875,
+        "bottom": -5.615986,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 131,
+        "left": 26.71875,
+        "top": -4.214943,
+        "right": 28.125,
+        "bottom": -5.615986,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 132,
+        "left": 21.09375,
+        "top": -5.615986,
+        "right": 22.5,
+        "bottom": -7.013668,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 132,
+        "left": 22.5,
+        "top": -5.615986,
+        "right": 23.90625,
+        "bottom": -7.013668,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 132,
+        "left": 23.90625,
+        "top": -5.615986,
+        "right": 25.3125,
+        "bottom": -7.013668,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 132,
+        "left": 25.3125,
+        "top": -5.615986,
+        "right": 26.71875,
+        "bottom": -7.013668,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 132,
+        "left": 26.71875,
+        "top": -5.615986,
+        "right": 28.125,
+        "bottom": -7.013668,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 132,
+        "left": 28.125,
+        "top": -5.615986,
+        "right": 29.53125,
+        "bottom": -7.013668,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 132,
+        "left": 29.53125,
+        "top": -5.615986,
+        "right": 30.9375,
+        "bottom": -7.013668,
+        "countries": [
+            "tanzania",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 133,
+        "left": 22.5,
+        "top": -7.013668,
+        "right": 23.90625,
+        "bottom": -8.407168,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 133,
+        "left": 23.90625,
+        "top": -7.013668,
+        "right": 25.3125,
+        "bottom": -8.407168,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 133,
+        "left": 25.3125,
+        "top": -7.013668,
+        "right": 26.71875,
+        "bottom": -8.407168,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 133,
+        "left": 26.71875,
+        "top": -7.013668,
+        "right": 28.125,
+        "bottom": -8.407168,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 133,
+        "left": 28.125,
+        "top": -7.013668,
+        "right": 29.53125,
+        "bottom": -8.407168,
+        "countries": [
+            "zambia",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 133,
+        "left": 29.53125,
+        "top": -7.013668,
+        "right": 30.9375,
+        "bottom": -8.407168,
+        "countries": [
+            "zambia",
+            "tanzania",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 134,
+        "left": 22.5,
+        "top": -8.407168,
+        "right": 23.90625,
+        "bottom": -9.795678,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 134,
+        "left": 23.90625,
+        "top": -8.407168,
+        "right": 25.3125,
+        "bottom": -9.795678,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 134,
+        "left": 25.3125,
+        "top": -8.407168,
+        "right": 26.71875,
+        "bottom": -9.795678,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 134,
+        "left": 26.71875,
+        "top": -8.407168,
+        "right": 28.125,
+        "bottom": -9.795678,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 134,
+        "left": 28.125,
+        "top": -8.407168,
+        "right": 29.53125,
+        "bottom": -9.795678,
+        "countries": [
+            "zambia",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 135,
+        "left": 25.3125,
+        "top": -9.795678,
+        "right": 26.71875,
+        "bottom": -11.178402,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 135,
+        "left": 26.71875,
+        "top": -9.795678,
+        "right": 28.125,
+        "bottom": -11.178402,
+        "countries": [
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 135,
+        "left": 28.125,
+        "top": -9.795678,
+        "right": 29.53125,
+        "bottom": -11.178402,
+        "countries": [
+            "zambia",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 136,
+        "left": 25.3125,
+        "top": -11.178402,
+        "right": 26.71875,
+        "bottom": -12.554564,
+        "countries": [
+            "zambia",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 136,
+        "left": 26.71875,
+        "top": -11.178402,
+        "right": 28.125,
+        "bottom": -12.554564,
+        "countries": [
+            "zambia",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 136,
+        "left": 28.125,
+        "top": -11.178402,
+        "right": 29.53125,
+        "bottom": -12.554564,
+        "countries": [
+            "zambia",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 136,
+        "left": 29.53125,
+        "top": -11.178402,
+        "right": 30.9375,
+        "bottom": -12.554564,
+        "countries": [
+            "zambia",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 137,
+        "left": 28.125,
+        "top": -12.554564,
+        "right": 29.53125,
+        "bottom": -13.923404,
+        "countries": [
+            "zambia",
+            "democratic_republic_of_the_congo"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 137,
+        "left": 29.53125,
+        "top": -12.554564,
+        "right": 30.9375,
+        "bottom": -13.923404,
+        "countries": [
+            "zambia",
+            "democratic_republic_of_the_congo"
+        ]
+    }
+]

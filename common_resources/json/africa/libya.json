@@ -1,0 +1,1222 @@
+[
+    {
+        "x": 134,
+        "y": 105,
+        "left": 8.4375,
+        "top": 30.751278,
+        "right": 9.84375,
+        "bottom": 29.53523,
+        "countries": [
+            "libya",
+            "tunisia",
+            "algeria"
+        ]
+    },
+    {
+        "x": 134,
+        "y": 106,
+        "left": 8.4375,
+        "top": 29.53523,
+        "right": 9.84375,
+        "bottom": 28.304381,
+        "countries": [
+            "libya",
+            "algeria"
+        ]
+    },
+    {
+        "x": 135,
+        "y": 106,
+        "left": 9.84375,
+        "top": 29.53523,
+        "right": 11.25,
+        "bottom": 28.304381,
+        "countries": [
+            "libya",
+            "algeria"
+        ]
+    },
+    {
+        "x": 134,
+        "y": 107,
+        "left": 8.4375,
+        "top": 28.304381,
+        "right": 9.84375,
+        "bottom": 27.059126,
+        "countries": [
+            "libya",
+            "algeria"
+        ]
+    },
+    {
+        "x": 135,
+        "y": 107,
+        "left": 9.84375,
+        "top": 28.304381,
+        "right": 11.25,
+        "bottom": 27.059126,
+        "countries": [
+            "libya",
+            "algeria"
+        ]
+    },
+    {
+        "x": 134,
+        "y": 108,
+        "left": 8.4375,
+        "top": 27.059126,
+        "right": 9.84375,
+        "bottom": 25.799891,
+        "countries": [
+            "libya",
+            "algeria"
+        ]
+    },
+    {
+        "x": 135,
+        "y": 108,
+        "left": 9.84375,
+        "top": 27.059126,
+        "right": 11.25,
+        "bottom": 25.799891,
+        "countries": [
+            "libya",
+            "algeria"
+        ]
+    },
+    {
+        "x": 134,
+        "y": 109,
+        "left": 8.4375,
+        "top": 25.799891,
+        "right": 9.84375,
+        "bottom": 24.527135,
+        "countries": [
+            "libya",
+            "algeria"
+        ]
+    },
+    {
+        "x": 135,
+        "y": 109,
+        "left": 9.84375,
+        "top": 25.799891,
+        "right": 11.25,
+        "bottom": 24.527135,
+        "countries": [
+            "libya",
+            "algeria"
+        ]
+    },
+    {
+        "x": 135,
+        "y": 110,
+        "left": 9.84375,
+        "top": 24.527135,
+        "right": 11.25,
+        "bottom": 23.241346,
+        "countries": [
+            "libya",
+            "algeria"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 110,
+        "left": 11.25,
+        "top": 24.527135,
+        "right": 12.65625,
+        "bottom": 23.241346,
+        "countries": [
+            "libya",
+            "algeria",
+            "niger"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 110,
+        "left": 15.46875,
+        "top": 24.527135,
+        "right": 16.875,
+        "bottom": 23.241346,
+        "countries": [
+            "libya",
+            "chad"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 111,
+        "left": 14.0625,
+        "top": 23.241346,
+        "right": 15.46875,
+        "bottom": 21.943046,
+        "countries": [
+            "libya",
+            "chad",
+            "niger"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 111,
+        "left": 15.46875,
+        "top": 23.241346,
+        "right": 16.875,
+        "bottom": 21.943046,
+        "countries": [
+            "libya",
+            "chad"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 111,
+        "left": 16.875,
+        "top": 23.241346,
+        "right": 18.28125,
+        "bottom": 21.943046,
+        "countries": [
+            "libya",
+            "chad"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 111,
+        "left": 18.28125,
+        "top": 23.241346,
+        "right": 19.6875,
+        "bottom": 21.943046,
+        "countries": [
+            "libya",
+            "chad"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 112,
+        "left": 18.28125,
+        "top": 21.943046,
+        "right": 19.6875,
+        "bottom": 20.632784,
+        "countries": [
+            "libya",
+            "chad"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 112,
+        "left": 19.6875,
+        "top": 21.943046,
+        "right": 21.09375,
+        "bottom": 20.632784,
+        "countries": [
+            "libya",
+            "chad"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 112,
+        "left": 21.09375,
+        "top": 21.943046,
+        "right": 22.5,
+        "bottom": 20.632784,
+        "countries": [
+            "libya",
+            "chad"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 113,
+        "left": 21.09375,
+        "top": 20.632784,
+        "right": 22.5,
+        "bottom": 19.311143,
+        "countries": [
+            "libya",
+            "chad"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 113,
+        "left": 22.5,
+        "top": 20.632784,
+        "right": 23.90625,
+        "bottom": 19.311143,
+        "countries": [
+            "libya",
+            "chad"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 113,
+        "left": 23.90625,
+        "top": 20.632784,
+        "right": 25.3125,
+        "bottom": 19.311143,
+        "countries": [
+            "libya",
+            "chad",
+            "sudan"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 104,
+        "left": 23.90625,
+        "top": 31.952162,
+        "right": 25.3125,
+        "bottom": 30.751278,
+        "countries": [
+            "libya",
+            "egypt"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 105,
+        "left": 23.90625,
+        "top": 30.751278,
+        "right": 25.3125,
+        "bottom": 29.53523,
+        "countries": [
+            "libya",
+            "egypt"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 106,
+        "left": 23.90625,
+        "top": 29.53523,
+        "right": 25.3125,
+        "bottom": 28.304381,
+        "countries": [
+            "libya",
+            "egypt"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 107,
+        "left": 23.90625,
+        "top": 28.304381,
+        "right": 25.3125,
+        "bottom": 27.059126,
+        "countries": [
+            "libya",
+            "egypt"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 108,
+        "left": 23.90625,
+        "top": 27.059126,
+        "right": 25.3125,
+        "bottom": 25.799891,
+        "countries": [
+            "libya",
+            "egypt"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 109,
+        "left": 23.90625,
+        "top": 25.799891,
+        "right": 25.3125,
+        "bottom": 24.527135,
+        "countries": [
+            "libya",
+            "egypt"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 110,
+        "left": 23.90625,
+        "top": 24.527135,
+        "right": 25.3125,
+        "bottom": 23.241346,
+        "countries": [
+            "libya",
+            "egypt"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 111,
+        "left": 23.90625,
+        "top": 23.241346,
+        "right": 25.3125,
+        "bottom": 21.943046,
+        "countries": [
+            "libya",
+            "sudan",
+            "egypt"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 102,
+        "left": 11.25,
+        "top": 34.307144,
+        "right": 12.65625,
+        "bottom": 33.137551,
+        "countries": [
+            "libya",
+            "tunisia"
+        ]
+    },
+    {
+        "x": 135,
+        "y": 103,
+        "left": 9.84375,
+        "top": 33.137551,
+        "right": 11.25,
+        "bottom": 31.952162,
+        "countries": [
+            "libya",
+            "tunisia"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 103,
+        "left": 11.25,
+        "top": 33.137551,
+        "right": 12.65625,
+        "bottom": 31.952162,
+        "countries": [
+            "libya",
+            "tunisia"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 103,
+        "left": 12.65625,
+        "top": 33.137551,
+        "right": 14.0625,
+        "bottom": 31.952162,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 103,
+        "left": 14.0625,
+        "top": 33.137551,
+        "right": 15.46875,
+        "bottom": 31.952162,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 103,
+        "left": 19.6875,
+        "top": 33.137551,
+        "right": 21.09375,
+        "bottom": 31.952162,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 103,
+        "left": 21.09375,
+        "top": 33.137551,
+        "right": 22.5,
+        "bottom": 31.952162,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 103,
+        "left": 22.5,
+        "top": 33.137551,
+        "right": 23.90625,
+        "bottom": 31.952162,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 103,
+        "left": 23.90625,
+        "top": 33.137551,
+        "right": 25.3125,
+        "bottom": 31.952162,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 135,
+        "y": 104,
+        "left": 9.84375,
+        "top": 31.952162,
+        "right": 11.25,
+        "bottom": 30.751278,
+        "countries": [
+            "libya",
+            "tunisia"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 104,
+        "left": 11.25,
+        "top": 31.952162,
+        "right": 12.65625,
+        "bottom": 30.751278,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 104,
+        "left": 12.65625,
+        "top": 31.952162,
+        "right": 14.0625,
+        "bottom": 30.751278,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 104,
+        "left": 14.0625,
+        "top": 31.952162,
+        "right": 15.46875,
+        "bottom": 30.751278,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 104,
+        "left": 15.46875,
+        "top": 31.952162,
+        "right": 16.875,
+        "bottom": 30.751278,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 104,
+        "left": 16.875,
+        "top": 31.952162,
+        "right": 18.28125,
+        "bottom": 30.751278,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 104,
+        "left": 19.6875,
+        "top": 31.952162,
+        "right": 21.09375,
+        "bottom": 30.751278,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 104,
+        "left": 21.09375,
+        "top": 31.952162,
+        "right": 22.5,
+        "bottom": 30.751278,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 104,
+        "left": 22.5,
+        "top": 31.952162,
+        "right": 23.90625,
+        "bottom": 30.751278,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 135,
+        "y": 105,
+        "left": 9.84375,
+        "top": 30.751278,
+        "right": 11.25,
+        "bottom": 29.53523,
+        "countries": [
+            "libya",
+            "tunisia"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 105,
+        "left": 11.25,
+        "top": 30.751278,
+        "right": 12.65625,
+        "bottom": 29.53523,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 105,
+        "left": 12.65625,
+        "top": 30.751278,
+        "right": 14.0625,
+        "bottom": 29.53523,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 105,
+        "left": 14.0625,
+        "top": 30.751278,
+        "right": 15.46875,
+        "bottom": 29.53523,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 105,
+        "left": 15.46875,
+        "top": 30.751278,
+        "right": 16.875,
+        "bottom": 29.53523,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 105,
+        "left": 16.875,
+        "top": 30.751278,
+        "right": 18.28125,
+        "bottom": 29.53523,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 105,
+        "left": 18.28125,
+        "top": 30.751278,
+        "right": 19.6875,
+        "bottom": 29.53523,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 105,
+        "left": 19.6875,
+        "top": 30.751278,
+        "right": 21.09375,
+        "bottom": 29.53523,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 105,
+        "left": 21.09375,
+        "top": 30.751278,
+        "right": 22.5,
+        "bottom": 29.53523,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 105,
+        "left": 22.5,
+        "top": 30.751278,
+        "right": 23.90625,
+        "bottom": 29.53523,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 106,
+        "left": 11.25,
+        "top": 29.53523,
+        "right": 12.65625,
+        "bottom": 28.304381,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 106,
+        "left": 12.65625,
+        "top": 29.53523,
+        "right": 14.0625,
+        "bottom": 28.304381,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 106,
+        "left": 14.0625,
+        "top": 29.53523,
+        "right": 15.46875,
+        "bottom": 28.304381,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 106,
+        "left": 15.46875,
+        "top": 29.53523,
+        "right": 16.875,
+        "bottom": 28.304381,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 106,
+        "left": 16.875,
+        "top": 29.53523,
+        "right": 18.28125,
+        "bottom": 28.304381,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 106,
+        "left": 18.28125,
+        "top": 29.53523,
+        "right": 19.6875,
+        "bottom": 28.304381,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 106,
+        "left": 19.6875,
+        "top": 29.53523,
+        "right": 21.09375,
+        "bottom": 28.304381,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 106,
+        "left": 21.09375,
+        "top": 29.53523,
+        "right": 22.5,
+        "bottom": 28.304381,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 106,
+        "left": 22.5,
+        "top": 29.53523,
+        "right": 23.90625,
+        "bottom": 28.304381,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 107,
+        "left": 11.25,
+        "top": 28.304381,
+        "right": 12.65625,
+        "bottom": 27.059126,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 107,
+        "left": 12.65625,
+        "top": 28.304381,
+        "right": 14.0625,
+        "bottom": 27.059126,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 107,
+        "left": 14.0625,
+        "top": 28.304381,
+        "right": 15.46875,
+        "bottom": 27.059126,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 107,
+        "left": 15.46875,
+        "top": 28.304381,
+        "right": 16.875,
+        "bottom": 27.059126,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 107,
+        "left": 16.875,
+        "top": 28.304381,
+        "right": 18.28125,
+        "bottom": 27.059126,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 107,
+        "left": 18.28125,
+        "top": 28.304381,
+        "right": 19.6875,
+        "bottom": 27.059126,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 107,
+        "left": 19.6875,
+        "top": 28.304381,
+        "right": 21.09375,
+        "bottom": 27.059126,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 107,
+        "left": 21.09375,
+        "top": 28.304381,
+        "right": 22.5,
+        "bottom": 27.059126,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 107,
+        "left": 22.5,
+        "top": 28.304381,
+        "right": 23.90625,
+        "bottom": 27.059126,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 108,
+        "left": 11.25,
+        "top": 27.059126,
+        "right": 12.65625,
+        "bottom": 25.799891,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 108,
+        "left": 12.65625,
+        "top": 27.059126,
+        "right": 14.0625,
+        "bottom": 25.799891,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 108,
+        "left": 14.0625,
+        "top": 27.059126,
+        "right": 15.46875,
+        "bottom": 25.799891,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 108,
+        "left": 15.46875,
+        "top": 27.059126,
+        "right": 16.875,
+        "bottom": 25.799891,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 108,
+        "left": 16.875,
+        "top": 27.059126,
+        "right": 18.28125,
+        "bottom": 25.799891,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 108,
+        "left": 18.28125,
+        "top": 27.059126,
+        "right": 19.6875,
+        "bottom": 25.799891,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 108,
+        "left": 19.6875,
+        "top": 27.059126,
+        "right": 21.09375,
+        "bottom": 25.799891,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 108,
+        "left": 21.09375,
+        "top": 27.059126,
+        "right": 22.5,
+        "bottom": 25.799891,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 108,
+        "left": 22.5,
+        "top": 27.059126,
+        "right": 23.90625,
+        "bottom": 25.799891,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 109,
+        "left": 11.25,
+        "top": 25.799891,
+        "right": 12.65625,
+        "bottom": 24.527135,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 109,
+        "left": 12.65625,
+        "top": 25.799891,
+        "right": 14.0625,
+        "bottom": 24.527135,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 109,
+        "left": 14.0625,
+        "top": 25.799891,
+        "right": 15.46875,
+        "bottom": 24.527135,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 109,
+        "left": 15.46875,
+        "top": 25.799891,
+        "right": 16.875,
+        "bottom": 24.527135,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 109,
+        "left": 16.875,
+        "top": 25.799891,
+        "right": 18.28125,
+        "bottom": 24.527135,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 109,
+        "left": 18.28125,
+        "top": 25.799891,
+        "right": 19.6875,
+        "bottom": 24.527135,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 109,
+        "left": 19.6875,
+        "top": 25.799891,
+        "right": 21.09375,
+        "bottom": 24.527135,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 109,
+        "left": 21.09375,
+        "top": 25.799891,
+        "right": 22.5,
+        "bottom": 24.527135,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 109,
+        "left": 22.5,
+        "top": 25.799891,
+        "right": 23.90625,
+        "bottom": 24.527135,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 110,
+        "left": 12.65625,
+        "top": 24.527135,
+        "right": 14.0625,
+        "bottom": 23.241346,
+        "countries": [
+            "libya",
+            "niger"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 110,
+        "left": 14.0625,
+        "top": 24.527135,
+        "right": 15.46875,
+        "bottom": 23.241346,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 110,
+        "left": 16.875,
+        "top": 24.527135,
+        "right": 18.28125,
+        "bottom": 23.241346,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 110,
+        "left": 18.28125,
+        "top": 24.527135,
+        "right": 19.6875,
+        "bottom": 23.241346,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 110,
+        "left": 19.6875,
+        "top": 24.527135,
+        "right": 21.09375,
+        "bottom": 23.241346,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 110,
+        "left": 21.09375,
+        "top": 24.527135,
+        "right": 22.5,
+        "bottom": 23.241346,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 110,
+        "left": 22.5,
+        "top": 24.527135,
+        "right": 23.90625,
+        "bottom": 23.241346,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 111,
+        "left": 12.65625,
+        "top": 23.241346,
+        "right": 14.0625,
+        "bottom": 21.943046,
+        "countries": [
+            "libya",
+            "niger"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 111,
+        "left": 19.6875,
+        "top": 23.241346,
+        "right": 21.09375,
+        "bottom": 21.943046,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 111,
+        "left": 21.09375,
+        "top": 23.241346,
+        "right": 22.5,
+        "bottom": 21.943046,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 111,
+        "left": 22.5,
+        "top": 23.241346,
+        "right": 23.90625,
+        "bottom": 21.943046,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 112,
+        "left": 22.5,
+        "top": 21.943046,
+        "right": 23.90625,
+        "bottom": 20.632784,
+        "countries": [
+            "libya"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 112,
+        "left": 23.90625,
+        "top": 21.943046,
+        "right": 25.3125,
+        "bottom": 20.632784,
+        "countries": [
+            "libya",
+            "sudan"
+        ]
+    }
+]
