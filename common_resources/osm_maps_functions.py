@@ -33,7 +33,7 @@ class OSM_Maps:
         self.tilesFromJson = []
         self.border_countries = {}
 
-        self.countryName = os.path.split(sys.argv[1])[1][:-5]
+        self.countryName = os.path.split(inputFile)[1][:-5]
    
 
     def readJsonFile(self):
@@ -68,9 +68,9 @@ class OSM_Maps:
             if FileCreation < To_Old:
                 print (f'# Deleting old land polygons file')
                 os.remove(file_directory_functions.LAND_POLYGONS_PATH)
-                Force_Processing = 1
+                self.Force_Processing = 1
         except:
-            Force_Processing = 1
+            self.Force_Processing = 1
 
         if not os.path.exists(file_directory_functions.LAND_POLYGONS_PATH) or not os.path.isfile(file_directory_functions.LAND_POLYGONS_PATH) or self.Force_Processing == 1:
             print('# Downloading land polygons file')
