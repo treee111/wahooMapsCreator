@@ -68,9 +68,9 @@ class OSM_Maps:
             if FileCreation < To_Old:
                 print (f'# Deleting old land polygons file')
                 os.remove(file_directory_functions.LAND_POLYGONS_PATH)
-                Force_Processing = 1
+                self.Force_Processing = 1
         except:
-            Force_Processing = 1
+            self.Force_Processing = 1
 
         if not os.path.exists(file_directory_functions.LAND_POLYGONS_PATH) or not os.path.isfile(file_directory_functions.LAND_POLYGONS_PATH) or self.Force_Processing == 1:
             print('# Downloading land polygons file')
