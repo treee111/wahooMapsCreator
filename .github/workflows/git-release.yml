@@ -17,7 +17,7 @@ jobs:
         uses: docker://antonyurchenko/git-release:latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          TAG_PREFIX_REGEX: "true"
+          TAG_PREFIX_REGEX: "v"
         with:
           args: |
             darwin-amd64.zip
