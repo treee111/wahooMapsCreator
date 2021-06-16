@@ -36,11 +36,15 @@ Follow the Quick Start guide depending on your OS:
 Clone this repository or download the latest Release from the ["Releases" Section](https://github.com/treee111/wahooMapsCreator/releases) and Save the folder anywhere on your drive.
 
 ### Run wahooMapsCreator for your country
-From the root folder of wahooMapsCreator, run:
-- Windows: `python3 windows-wahoo-map-creator.py <country_name>`
+macOS: From the tooling_mac folder of wahooMapsCreator, run:
 - macOS: `python3 mac-wahoo-map-creator.py <country_name>`
 
 Example for Malta on MacOS: `python3 mac-wahoo-map-creator.py malta`
+
+Windows: From the tooling_windows folder of wahooMapsCreator, run:
+- Windows: `python3 windows-wahoo-map-creator.py <country_name>`
+
+Example for Ireland on Windows: `python3 windows-wahoo-map-creator.py ireland`
 
 ### Copy the map-files to your device
 When file-creation is finished copy the map-files to your device:
