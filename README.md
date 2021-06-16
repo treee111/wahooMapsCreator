@@ -12,21 +12,43 @@
 </div>
 A tool to create up-to-date maps for your wahoo ELEMENT and BOLT!
 
-
 # Basic Overview
-Here, you will find a tool to create updated maps for Wahoo ELEMNT and Wahoo ELEMENT BOLT devices.
-There is a file to be used in macOS/Unix and one for Windows. 
-
-## Structure of the repository
-It exists a version of the python files for Windows and for Mac.
-Differences between the different OS are the used programs and the way of accessing/creating files.
-Furthermore there are files which can be the same for the Windows and Mac python files. These are stored in the common_resources folder.
-
-Coding is updated in the develop-branch and merged into master if tested carefully!
+WahooMapsCreator is a tool to create updated maps for Wahoo ELEMNT and Wahoo ELEMNT BOLT devices for your country.
+The maps of your device may be old because Wahoo did not release a newer version in the last years. OSM maps are constantly updated and with this program, the updated maps can be used on our Wahoo bike-computers.
 
 ## Get it running
-You have to install several programs first.
-Clone the repo or download a Release
+The instructens are intended to be suitable for beginners.
+If anything is unclear or just wrong, write an issue!
+
+### Overview of the steps
+The steps for both OS are similar:
+- Download and Install required programs
+- Clone wahooMapsCreator Repository or download a Release
+- Run wahooMapsCreator for your country
+- copy the map-files to your device
+
+### Download and Install required programs
+Follow the Quick Start guide depending on your OS:
+- [Quick Start Guide for Windows](docs/QUICKSTART_WINDOWS.md)
+- [Quick Start Guide for macOS](docs/QUICKSTART_MACOS.md)
+
+### Clone wahooMapsCreator Repository or download a Release
+Clone this repository or download the latest Release from the ["Releases" Section](https://github.com/treee111/wahooMapsCreator/releases) and Save the folder anywhere on your drive.
+
+### Run wahooMapsCreator for your country
+macOS: From the tooling_mac folder of wahooMapsCreator, run:
+- macOS: `python3 mac-wahoo-map-creator.py <country_name>`
+
+Example for Malta on MacOS: `python3 mac-wahoo-map-creator.py malta`
+
+Windows: From the tooling_windows folder of wahooMapsCreator, run:
+- Windows: `python3 windows-wahoo-map-creator.py <country_name>`
+
+Example for Ireland on Windows: `python3 windows-wahoo-map-creator.py ireland`
+
+### Copy the map-files to your device
+When file-creation is finished copy the map-files to your device:
+-  [Copy maps files to Wahoo](docs/COPY_TO_WAHOO.md)
 
 ## Contribution
 You are welcome to provide input via Pull Requests, Issues or in any other way!
@@ -34,7 +56,9 @@ Discussion goes on:
 - in this telegram channel: https://t.me/joinchat/TaMhjouxlsAzNWZk
 - in this google group: https://groups.google.com/g/wahoo-elemnt-users/c/PSrdapfWLUE
 
+More details can be found here: [CONTRIBUTING](.github/CONTRIBUTING.md#Contributing-to-wahooMapsCreator)
+
 ## Thanks to
 @Intyre/Hank for the initial version of the script
 
-@Higli and @ebo for the Windows- port 
+@Higli and @ebo for the Windows- port

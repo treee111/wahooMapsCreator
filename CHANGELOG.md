@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+_No unreleased changes_
+
+## [0.3.0] - 2021-06-16
+### Added
+- README, Quick Start Guides & documentation written
+- Refactoring & Renaming of .py files
+
 ## [0.2.0] - 2021-06-10
 ### Added
 - bat file with GUI for Windows (with corresponding python file)
@@ -36,6 +43,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 
-[unreleased]: https://github.com/treee111/wahooMapsCreator/compare/v0.1.1...HEAD
-[0.1.1]: https://github.com/treee111/wahooMapsCreator/compare/v0.1.0...v0.1.1
+[unreleased]: https://github.com/treee111/wahooMapsCreator/compare/v0.3.0...HEAD
+[0.3.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.2.0...v0.3.0
+[0.2.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/treee111/wahooMapsCreator/releases/tag/v0.1.0

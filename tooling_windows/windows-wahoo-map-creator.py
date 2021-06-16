@@ -1,6 +1,7 @@
 #!/usr/bin/python
 #-*- coding:utf-8 -*-
 
+# import official python packages
 import getopt
 import glob
 import json
@@ -12,8 +13,8 @@ import subprocess
 import sys
 import time
 
-# ToDo: This might not work - Properly import in Windows!
 # import custom python packages
+# ToDo: This might not work - Properly import in Windows!
 from os import sys, path
 sys.path.append(path.dirname(path.dirname(path.dirname(path.abspath(__file__)))))
 from common_resources import file_directory_functions
@@ -50,43 +51,43 @@ if len(sys.argv) != 2:
     print(f'Usage: {sys.argv[0]} Country name part of a .json file.')
     sys.exit()
 
-x = OSM_Maps(sys.argv[1], Max_Days_Old, Force_Processing, workers, threads, Save_Cruiser)
+oOSMmaps = OSM_Maps(sys.argv[1], Max_Days_Old, Force_Processing, workers, threads, Save_Cruiser)
 
 # if x.region == '' :
 #     print ('Invalid country name.')
 #     sys.exit()
 
 # Read json file
-x.readJsonFile()
+oOSMmaps.readJsonFile()
 
 # Check for expired land polygons file and download, if too old
 # osm_maps_functions.checkAndDownloadLandPoligonsFile(Max_Days_Old, Force_Processing)
-x.checkAndDownloadLandPoligonsFile()
+oOSMmaps.checkAndDownloadLandPoligonsFile()
 
 # Check for expired .osm.pbf files and download, if too old
-# osm_maps_functions.checkAndDownloadOsmPbfFile(country, Max_Days_Old, Force_Processing)
-x.checkAndDownloadOsmPbfFile()
+# osm_maps_functions.checkAndDownloadOsmPbfFile(country, MaoOSMmaps_Days_Old, Force_Processing)
+oOSMmaps.checkAndDownloadOsmPbfFile()
 
 # Filter tags from country osm.pbf files'
-x.filterTagsFromCountryOsmPbfFiles()
+oOSMmaps.filterTagsFromCountryOsmPbfFiles()
 
 # Generate land
-x.generateLand()
+oOSMmaps.generateLand()
 
 # Generate sea
-x.generateSea()
+oOSMmaps.generateSea()
 
 # Split filtered country files to tiles
-x.splitFilteredCountryFilesToTiles()
+oOSMmaps.splitFilteredCountryFilesToTiles()
 
 # Merge splitted tiles with land an sea   
-x.mergeSplittedTilesWithLandAndSea()
+oOSMmaps.mergeSplittedTilesWithLandAndSea()
 
 # Creating .map files
-x.createMapFiles()
+oOSMmaps.createMapFiles()
 
 # Zip .map.lzma files
-x.zipMapFiles()
+oOSMmaps.zipMapFiles()
 
 # Make Cruiser map files zip file
-x.makeCruiserFiles()
+oOSMmaps.makeCruiserFiles()
