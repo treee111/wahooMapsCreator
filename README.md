@@ -10,10 +10,10 @@
     </p>
     <h1>Wahoo Maps Creator</h1>
 </div>
-A tool to create up-to-date maps for your wahoo ELEMENT and BOLT!
+A tool to create up-to-date maps for your Wahoo ELEMNT BOLT and Wahoo ELEMNT!
 
 # Basic Overview
-WahooMapsCreator is a tool to create updated maps for Wahoo ELEMNT and Wahoo ELEMNT BOLT devices for your country.
+WahooMapsCreator is a tool to create updated maps for Wahoo ELEMNT BOLT and Wahoo ELEMNT devices for your country.
 The maps of your device may be old because Wahoo did not release a newer version in the last years. OSM maps are constantly updated and with this program, the updated maps can be used on our Wahoo bike-computers.
 
 ## Get it running
@@ -39,12 +39,14 @@ Clone this repository or download the latest Release from the ["Releases" Sectio
 It might be a good idea to run wahooMapsCreator first for a small country e.g. Malta to check if everything is running fine.
 In a next step you can run it for your own country.
 
-macOS: From the `tooling_mac` folder of wahooMapsCreator, run:
+#### macOS
+From the `tooling_mac` folder of wahooMapsCreator, run:
 - macOS: `python3 mac-wahoo-map-creator.py <country_name>`
 
 Example for Malta on MacOS: `python3 mac-wahoo-map-creator.py malta`
 
-Windows: From the `tooling_windows` folder of wahooMapsCreator, run:
+#### Windows
+From the `tooling_windows` folder of wahooMapsCreator, run:
 - Windows: `python3 windows-wahoo-map-creator.py <country_name>`
 
 Example for Ireland on Windows: `python3 windows-wahoo-map-creator.py ireland`
