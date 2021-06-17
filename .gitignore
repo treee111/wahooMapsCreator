@@ -1,3 +1,7 @@
+# IDE
+.vscode/*
+!.vscode/launch.json
+
 # top level
 maps/*
 output/*

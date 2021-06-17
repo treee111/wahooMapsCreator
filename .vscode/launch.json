@@ -2,58 +2,26 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "common-only1-tile",
+            "name": "mac-only1-tile",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceRoot}/tooling_mac/wahoo-map-creator-osmium-using-common.py",
+            "program": "${workspaceRoot}/tooling_mac/mac-wahoo-map-creator.py",
             "console": "integratedTerminal",
             "args": ["${workspaceRoot}/common_resources/germany-only1.json"]
         },
         {
-            "name": "common-only5-tile",
+            "name": "mac-only5-tile",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceRoot}/tooling_mac/wahoo-map-creator-osmium-using-common.py",
+            "program": "${workspaceRoot}/tooling_mac/mac-wahoo-map-creator.py",
             "console": "integratedTerminal",
             "args": ["${workspaceRoot}/common_resources/germany-only5.json"]
         },
         {
-            "name": "common-germany",
+            "name": "mac-germany",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceRoot}/tooling_mac/wahoo-map-creator-osmium-using-common.py",
-            "console": "integratedTerminal",
-            "args": ["${workspaceRoot}/common_resources/germany.json"]
-        },
-        {
-            "name": "works-only1-tile",
-            "type": "python",
-            "request": "launch",
-            "program": "${workspaceRoot}/tooling_mac/wahoo-map-creator-osmium-working.py",
-            "console": "integratedTerminal",
-            "args": ["${workspaceRoot}/common_resources/germany-only1.json"]
-        },
-        {
-            "name": "works-germany",
-            "type": "python",
-            "request": "launch",
-            "program": "${workspaceRoot}/tooling_mac/wahoo-map-creator-osmium-working.py",
-            "console": "integratedTerminal",
-            "args": ["${workspaceRoot}/common_resources/germany.json"]
-        },
-        {
-            "name": "new-only1-tile",
-            "type": "python",
-            "request": "launch",
-            "program": "${workspaceRoot}/tooling_mac/wahoo-map-creator-osmium-new.py",
-            "console": "integratedTerminal",
-            "args": ["${workspaceRoot}/common_resources/germany-only1.json"]
-        },
-        {
-            "name": "new-germany",
-            "type": "python",
-            "request": "launch",
-            "program": "${workspaceRoot}/tooling_mac/wahoo-map-creator-osmium-new.py",
+            "program": "${workspaceRoot}/tooling_mac/mac-wahoo-map-creator.py",
             "console": "integratedTerminal",
             "args": ["${workspaceRoot}/common_resources/germany.json"]
         }
