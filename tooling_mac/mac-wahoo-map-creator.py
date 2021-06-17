@@ -7,8 +7,6 @@ import sys
 # import custom python packages
 from os import sys, path
 sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
-from common_resources import file_directory_functions
-from common_resources import osm_maps_functions
 from common_resources.osm_maps_functions import OSM_Maps
 
 ########### Configurable Parameters
