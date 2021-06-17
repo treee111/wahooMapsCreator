@@ -3,6 +3,7 @@ maps/*
 output/*
 output*/*
 tools_dl/
+venv/*
 
 # common resources
 common_resources/land-polygons-split-4326/
