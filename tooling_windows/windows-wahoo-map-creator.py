@@ -2,23 +2,13 @@
 #-*- coding:utf-8 -*-
 
 # import official python packages
-import getopt
-import glob
-import json
 import multiprocessing
-import os
-import os.path
-import requests
-import subprocess
 import sys
-import time
 
 # import custom python packages
 # ToDo: This might not work - Properly import in Windows!
 from os import sys, path
-sys.path.append(path.dirname(path.dirname(path.dirname(path.abspath(__file__)))))
-from common_resources import file_directory_functions
-from common_resources import osm_maps_functions
+sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
 from common_resources.osm_maps_functions import OSM_Maps
 
 ########### Configurable Parameters
