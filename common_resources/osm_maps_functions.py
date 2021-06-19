@@ -22,10 +22,11 @@ class OSM_Maps:
     "This is a OSM data class"
 
 
-    def __init__(self, inputFile, Max_Days_Old, Force_Processing, workers, threads, Save_Cruiser):
+    def __init__(self, inputFile, Max_Days_Old, Force_Download, Force_Processing, workers, threads, Save_Cruiser):
         self.inputArgument1 = inputFile
         self.region = constants_functions.getRegionOfCountry(inputFile)
         self.Max_Days_Old = Max_Days_Old
+        self.Force_Download = Force_Download
         self.Force_Processing = Force_Processing
         self.workers = workers
         self.threads = threads
@@ -68,11 +69,13 @@ class OSM_Maps:
             if FileCreation < To_Old:
                 print (f'# Deleting old land polygons file')
                 os.remove(file_directory_functions.LAND_POLYGONS_PATH)
+                self.Force_Download = 1
                 self.Force_Processing = 1
         except:
+            self.Force_Download = 1
             self.Force_Processing = 1
 
-        if not os.path.exists(file_directory_functions.LAND_POLYGONS_PATH) or not os.path.isfile(file_directory_functions.LAND_POLYGONS_PATH) or self.Force_Processing == 1:
+        if not os.path.exists(file_directory_functions.LAND_POLYGONS_PATH) or not os.path.isfile(file_directory_functions.LAND_POLYGONS_PATH) or self.Force_Download == 1:
             print('# Downloading land polygons file')
             url = 'https://osmdata.openstreetmap.de/download/land-polygons-split-4326.zip'
             r = requests.get(url, allow_redirects=True, stream = True)
@@ -131,7 +134,7 @@ class OSM_Maps:
                 map_files = glob.glob(f'{file_directory_functions.MAPS_DIR}/**/{country}*.osm.pbf')
             if len(map_files) == 1 and os.path.isfile(map_files[0]):
                 FileCreation = os.path.getctime(map_files[0])
-                if FileCreation < To_Old or self.Force_Processing == 1:
+                if FileCreation < To_Old or self.Force_Download == 1:
                     print(f'+ mapfile for {country}: deleted')
                     os.remove(map_files[0])
                     self.Force_Processing = 1

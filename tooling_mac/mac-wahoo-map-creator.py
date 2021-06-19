@@ -14,9 +14,14 @@ from common_resources.osm_maps_functions import OSM_Maps
 # Maximum age of source maps or land shape files before they are redownloaded
 Max_Days_Old = 14
 
+# Force download of source maps and the land shape file
+# If 0 use Max_Days_Old to check for expired maps
+# If 1 force redownloading of maps and landshape 
+Force_Download = 0
+
 # Force (re)processing of source maps and the land shape file
 # If 0 use Max_Days_Old to check for expired maps
-# If 1 force redownloading/processing of maps and landshape 
+# If 1 force processing of maps and landshape 
 Force_Processing = 0
 
 # Save uncompressed maps for Cruiser
@@ -44,7 +49,7 @@ if len(sys.argv) != 2:
     print(f'! Usage: {sys.argv[0]} Country name part of a .json file.')
     sys.exit()
 
-oOSMmaps = OSM_Maps(sys.argv[1], Max_Days_Old, Force_Processing, workers, threads, Save_Cruiser)
+oOSMmaps = OSM_Maps(sys.argv[1], Max_Days_Old, Force_Download, Force_Processing, workers, threads, Save_Cruiser)
 
 # Read json file
 oOSMmaps.readJsonFile()

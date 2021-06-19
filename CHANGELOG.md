@@ -6,7 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-_No unreleased changes_
+### Added
+- parameter force_download to differentiate between forcing download of new maps and force of processing maps
 
 ## [0.3.1] - 2021-06-17
 ### Added
