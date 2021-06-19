@@ -5,7 +5,7 @@
             "name": "mac-only1-tile",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceRoot}/tooling_mac/mac-wahoo-map-creator.py",
+            "program": "${workspaceRoot}/mac_wahoo_map_creator.py",
             "console": "integratedTerminal",
             "args": ["${workspaceRoot}/common_resources/germany-only1.json"]
         },
@@ -13,7 +13,7 @@
             "name": "mac-only5-tile",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceRoot}/tooling_mac/mac-wahoo-map-creator.py",
+            "program": "${workspaceRoot}/mac_wahoo_map_creator.py",
             "console": "integratedTerminal",
             "args": ["${workspaceRoot}/common_resources/germany-only5.json"]
         },
@@ -21,7 +21,7 @@
             "name": "mac-germany",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceRoot}/tooling_mac/mac-wahoo-map-creator.py",
+            "program": "${workspaceRoot}/mac_wahoo_map_creator.py",
             "console": "integratedTerminal",
             "args": ["${workspaceRoot}/common_resources/germany.json"]
         }

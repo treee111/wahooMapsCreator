@@ -40,8 +40,8 @@ It might be a good idea to run wahooMapsCreator first for a small country e.g. M
 In a next step you can run it for your own country.
 
 #### macOS
-From the `tooling_mac` folder of wahooMapsCreator, run:
-- macOS: `python3 mac-wahoo-map-creator.py <country_name>`
+From the `root` folder of wahooMapsCreator, run:
+- macOS: `python3 mac_wahoo_map_creator.py <country_name>`
 
 Example for Malta on MacOS: `python3 mac-wahoo-map-creator.py malta`
 

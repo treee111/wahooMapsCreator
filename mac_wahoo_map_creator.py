@@ -5,14 +5,13 @@ import multiprocessing
 import sys
 
 # import custom python packages
-from os import sys, path
-sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
 from common_resources.osm_maps_functions import OsmMaps
 
 ########### Configurable Parameters
 
 # Maximum age of source maps or land shape files before they are redownloaded
 MAX_DAYS_OLD = 14
+
 
 # Force download of source maps and the land shape file
 # If 0 use Max_Days_Old to check for expired maps
