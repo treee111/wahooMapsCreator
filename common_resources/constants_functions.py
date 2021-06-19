@@ -8,7 +8,7 @@ sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
 from common_resources import constants
 
 
-def getRegionOfCountry(county):
+def get_region_of_country(county):
     region = ''
     if county in constants.africa :
         region = 'africa'
@@ -30,8 +30,8 @@ def getRegionOfCountry(county):
     return region
 
 
-def getGeofabrikRegionOfCountry(inputCounty):
-    c_translated = translateInputCountryToOsm(inputCounty)
+def get_geofabrik_region_of_country(input_county):
+    c_translated = translate_input_country_to_osm(input_county)
 
     region = ''
     if c_translated in constants.africa_geofabrik :
@@ -53,7 +53,7 @@ def getGeofabrikRegionOfCountry(inputCounty):
     if c_translated in constants.germany_subregions_geofabrik :
         region = 'europe\\germany'
     if c_translated in constants.noregion_geofabrik :
-        region = 'no'                    
+        region = 'no'
     if region == '':
         print(f'\n! No Geofabrik region match for country: {c_translated}')
         sys.exit()
@@ -61,10 +61,10 @@ def getGeofabrikRegionOfCountry(inputCounty):
     return region
 
 
-def translateInputCountryToOsm(county):
+def translate_input_country_to_osm(county):
     try:
         c_translated = constants.Translate_Country[f'{county}']
     except:
         c_translated = county
-    
+
     return c_translated

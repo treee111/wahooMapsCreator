@@ -25,7 +25,7 @@ class OsmMaps:
     def __init__(self, inputFile, Max_Days_Old, Force_Download,
      Force_Processing, workers, threads, Save_Cruiser):
         self.input_argument1 = inputFile
-        self.region = constants_functions.getRegionOfCountry(inputFile)
+        self.region = constants_functions.get_region_of_country(inputFile)
         self.max_days_old = Max_Days_Old
         self.force_download = Force_Download
         self.force_processing = Force_Processing
@@ -149,7 +149,7 @@ class OsmMaps:
 
         # time.sleep(60)
 
-        file_directory_functions.createEmptyDirectories(self.tilesf_from_json)
+        file_directory_functions.create_empty_directories(self.tilesf_from_json)
 
         for country in border_countries:
             print(f'+ Checking mapfile for {country}')
@@ -195,7 +195,7 @@ class OsmMaps:
                     print(f'\n# Filtering unwanted map objects out of map of {key}')
                     cmd = ['osmfilter']
                     cmd.append(out_file_o5m)
-                    cmd.append('--keep="' + constants.filtered_tags_win + '"')
+                    cmd.append('--keep="' + constants.FILTERED_TAGS_WIN + '"')
                     cmd.append('-o=' + out_file_o5m_filtered)
                     # print(cmd)
                     result = subprocess.run(cmd)
@@ -490,8 +490,8 @@ class OsmMaps:
         print(f'+ Trying to download missing map of {country}.')
 
         # get Geofabrik region of country
-        translated_country = constants_functions.translateInputCountryToOsm(country)
-        region = constants_functions.getGeofabrikRegionOfCountry(f'{country}')
+        translated_country = constants_functions.translate_input_country_to_osm(country)
+        region = constants_functions.get_geofabrik_region_of_country(f'{country}')
 
         if region != 'no':
             url = 'https://download.geofabrik.de/'+ region + '/' + translated_country + '-latest.osm.pbf'

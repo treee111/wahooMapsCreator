@@ -2,10 +2,10 @@
 
 Translate_Country = {
             'alaska':                           'united_states_of_america',
-            'anguilla':                         'central-america', 
+            'anguilla':                         'central-america',
             'bahrain':                          'gcc-states',
             'bosnia_and_herzegovina':           'bosnia-herzegovina',
-            'british_virgin_islands':           'central-america', 
+            'british_virgin_islands':           'central-america',
             'british_indian_ocean_territory':   'asia',
             'brunei':                           'malaysia-singapore-brunei',
             'burkina_faso':                     'burkina-faso',
@@ -48,15 +48,16 @@ Translate_Country = {
             'svalbard_and_jan_mayen':           'norway',
             'united_arab_emirates':             'gcc-states',
             'united_kingdom':                   'great-britain',
-            'united_states_virgin_islands':     'central-america', 
+            'united_states_virgin_islands':     'central-america',
             'vatican_city':                     'italy',
-            'virgin_islands_u.s.':              'central-america', 
+            'virgin_islands_u.s.':              'central-america',
             'western_sahara':                   'morocco',
             'qatar':                            'gcc-states',
             'åland':                            'finland'
         }
 
-continents = ['europe', 'unitedstates', 'north-america', 'south-america', 'asia', 'oceania', 'africa', 'antarctica']
+continents = ['europe', 'unitedstates', 'north-america', 'south-america', 'asia', 'oceania',
+            'africa', 'antarctica']
 
 africa = ['algeria', 'angola', 'benin', 'botswana', 'burkina_faso', 'burundi',
             'cameroon', 'cape_verde', 'central_african_republic', 'chad', 'comoros',
@@ -97,8 +98,8 @@ northamerica = ['anguilla', 'antigua_and_barbuda', 'bahamas', 'barbados', 'beliz
             'cuba', 'dominica', 'dominican_republic', 'el_salvador', 'greenland', 'grenada',
             'guadeloupe', 'guatemala', 'haiti', 'honduras', 'jamaica', 'martinique',
             'mexico', 'montserrat', 'nicaragua', 'panama', 'saint-barth‚lemy', 'saint-martin',
-            'saint_kitts_and_nevis', 'saint_lucia', 'saint_vincent_and_the_grenadines', 'sint_maarten',
-            'turks_and_caicos_islands', 'virgin_islands_u.s.']
+            'saint_kitts_and_nevis', 'saint_lucia', 'saint_vincent_and_the_grenadines',
+            'sint_maarten', 'turks_and_caicos_islands', 'virgin_islands_u.s.']
 
 oceania = ['australia', 'cook_islands', 'fiji', 'french_polynesia', 'kiribati',
             'marshall_islands', 'micronesia', 'nauru', 'new_caledonia', 'new_zealand', 'niue',
@@ -122,58 +123,66 @@ unitedstates = ['alabama', 'alaska', 'american_samoa', 'arizona', 'arkansas',
             'oregon', 'pennsylvania', 'puerto_rico', 'rhode_island', 'south_carolina',
             'south_dakota', 'tennessee', 'texas', 'united_states_virgin_islands', 'utah',
             'vermont', 'virginia', 'washington', 'west_virginia', 'wisconsin', 'wyoming']
-            
+
 africa_geofabrik = ['algeria', 'angola', 'benin', 'botswana', 'burkina-faso', 'burundi',
-            'cameroon', 'Canary Islands', 'cape-verde', 'central african republic', 'chad', 'comores',
-            'Congo (Republic/Brazzaville)', 'congo-democratic-republic', 'djibouti','egypt',
-            'Equatorial Guinea', 'eritrea', 'ethiopia', 'gabon', 'ghana', 'guinea', 'guinea-bissau', 'ivory-coast',
-            'kenya', 'lesotho', 'liberia', 'libya', 'madagascar', 'malawi', 'mali', 'mauritania', 'mauritius',
-            'morocco', 'mozambique', 'namibia', 'niger','nigeria', 'rwanda', 'saint-helena-ascension-and-tristan-da-cunha',
-            'Sao Tome and Principe', 'Senegal and Gambia', 'seychelles', 'Sierra Leone', 'somalia', 'south-africa',
-            'South Sudan','sudan', 'swaziland', 'tanzania', 'togo', 'tunisia', 'uganda', 'zambia', 'zimbabwe']
+            'cameroon', 'Canary Islands', 'cape-verde', 'central african republic', 'chad',
+            'comores', 'Congo (Republic/Brazzaville)', 'congo-democratic-republic', 'djibouti',
+            'egypt', 'Equatorial Guinea', 'eritrea', 'ethiopia', 'gabon', 'ghana', 'guinea',
+            'guinea-bissau', 'ivory-coast', 'kenya', 'lesotho', 'liberia', 'libya', 'madagascar',
+            'malawi', 'mali', 'mauritania', 'mauritius', 'morocco', 'mozambique', 'namibia',
+            'niger','nigeria', 'rwanda', 'saint-helena-ascension-and-tristan-da-cunha',
+            'Sao Tome and Principe', 'Senegal and Gambia', 'seychelles', 'Sierra Leone',
+            'somalia', 'south-africa', 'South Sudan','sudan', 'swaziland', 'tanzania', 'togo',
+            'tunisia', 'uganda', 'zambia', 'zimbabwe']
 
 antarctica_geofabrik = ['antarctica']
 
-asia_geofabrik = ['afghanistan', 'armenia', 'azerbaijan', 'bangladesh', 'bhutan', 'cambodia', 'china', 'gcc-states',
-            'india', 'indonesia', 'iran', 'iraq', 'israel-and-palestine', 'japan', 'jordan', 'kazakhstan', 'kyrgyzstan',
-            'laos', 'lebanon', 'malaysia-singapore-brunei', 'maldives', 'mongolia', 'myanmar',
-            'nepal', 'north-korea', 'pakistan', 'philippines', 'russian federation', 'south-korea', 'sri-lanka', 'syria',
+asia_geofabrik = ['afghanistan', 'armenia', 'azerbaijan', 'bangladesh', 'bhutan', 'cambodia',
+            'china', 'gcc-states', 'india', 'indonesia', 'iran', 'iraq', 'israel-and-palestine',
+            'japan', 'jordan', 'kazakhstan', 'kyrgyzstan', 'laos', 'lebanon',
+            'malaysia-singapore-brunei', 'maldives', 'mongolia', 'myanmar', 'nepal', 'north-korea',
+            'pakistan', 'philippines', 'russian federation', 'south-korea', 'sri-lanka', 'syria',
             'taiwan', 'tajikistan', 'thailand', 'turkmenistan', 'uzbekistan', 'vietnam', 'yemen']
 
-australiaoceania_geofabrik = ['american oceania', 'australia', 'cook islands', 'fiji', 'île de clipperton',
-            'kiribati', 'marshall islands', 'micronesia', 'nauru', 'new caledonia', 'new zealand', 'niue', 'palau',
-            'papua new guinea', 'pitcairn islands', 'polynesie-francaise', 'samoa', 'solomon islands', 'tokelau',
+australiaoceania_geofabrik = ['american oceania', 'australia', 'cook islands', 'fiji',
+            'île de clipperton', 'kiribati', 'marshall islands', 'micronesia', 'nauru',
+            'new caledonia', 'new zealand', 'niue', 'palau', 'papua new guinea',
+            'pitcairn islands', 'polynesie-francaise', 'samoa', 'solomon islands', 'tokelau',
             'tonga', 'tuvalu', 'vanuatu', 'wallis et futuna']
 
 centralamerica_geofabrik = ['bahamas', 'belize', 'costa rica', 'cuba', 'el salvador', 'guatemala',
             'haiti and dominican republic', 'honduras', 'jamaica', 'nicaragua']
 
-europe_geofabrik = ['albania', 'andorra', 'austria', 'azores', 'belarus', 'belgium', 'bosnia-herzegovina',
-            'bulgaria', 'croatia', 'cyprus', 'czech-republic', 'denmark', 'estonia', 'faroe-islands', 'finland',
-            'france', 'georgia', 'germany', 'great-britain', 'greece', 'guernsey-jersey', 'hungary', 'iceland',
-            'ireland-and-northern-ireland', 'isle-of-man', 'italy', 'kosovo', 'latvia', 'liechtenstein', 'lithuania',
-            'luxembourg', 'macedonia', 'malta', 'moldova', 'monaco', 'montenegro', 'netherlands', 'norway', 'poland',
-            'portugal', 'romania', 'russian federation', 'serbia', 'slovakia', 'slovenia', 'spain', 'sweden',
-            'switzerland', 'turkey', 'ukraine (with crimea)']
+europe_geofabrik = ['albania', 'andorra', 'austria', 'azores', 'belarus', 'belgium',
+            'bosnia-herzegovina', 'bulgaria', 'croatia', 'cyprus', 'czech-republic', 'denmark',
+            'estonia', 'faroe-islands', 'finland', 'france', 'georgia', 'germany', 'great-britain',
+            'greece', 'guernsey-jersey', 'hungary', 'iceland', 'ireland-and-northern-ireland',
+            'isle-of-man', 'italy', 'kosovo', 'latvia', 'liechtenstein', 'lithuania', 'luxembourg',
+            'macedonia', 'malta', 'moldova', 'monaco', 'montenegro', 'netherlands', 'norway',
+            'poland', 'portugal', 'romania', 'russian federation', 'serbia', 'slovakia',
+            'slovenia', 'spain', 'sweden', 'switzerland', 'turkey', 'ukraine (with crimea)']
 
-northamerica_geofabrik = ['canada', 'greenland', 'mexico', 'us midwest', 'us northeast', 'us pacific',
-            'us south', 'us west']
+northamerica_geofabrik = ['canada', 'greenland', 'mexico', 'us midwest', 'us northeast',
+            'us pacific', 'us south', 'us west']
 
-southamerica_geofabrik = ['argentina', 'bolivia', 'brazil', 'chile', 'colombia', 'ecuador', 'paraguay',
-            'peru', 'suriname', 'uruguay', 'venezuela']
+southamerica_geofabrik = ['argentina', 'bolivia', 'brazil', 'chile', 'colombia', 'ecuador',
+            'paraguay', 'peru', 'suriname', 'uruguay', 'venezuela']
 
-germany_subregions_geofabrik = ['baden-württemberg', 'bayern', 'berlin', 'brandenburg (mit berlin)', 'bremen', 'hamburg',
-            'hessen', 'mecklenburg-vorpommern', 'niedersachsen', 'nordrhein-westfalen', 'rheinland-pfalz', 'saarland',
-            'sachsen', 'sachsen-anhalt', 'schleswig-holstein', 'thüringen'] 
+germany_subregions_geofabrik = ['baden-württemberg', 'bayern', 'berlin',
+            'brandenburg (mit berlin)', 'bremen', 'hamburg', 'hessen', 'mecklenburg-vorpommern',
+            'niedersachsen', 'nordrhein-westfalen', 'rheinland-pfalz', 'saarland', 'sachsen',
+            'sachsen-anhalt', 'schleswig-holstein', 'thüringen']
 
-france_subregions_geofabrik = ['alsace', 'aquitaine', 'auvergne', 'basse-normandie', 'bourgogne', 'bretagne', 'centre',
-            'champagne ardenne', 'corse', 'franche comte', 'guadeloupe', 'guyane', 'haute-normandie', 'ile-de-france',
-            'languedoc-roussillon', 'limousin', 'lorraine', 'martinique', 'mayotte', 'midi-pyrenees', 'nord-pas-de-calais',
-            'pays de la loire', 'picardie', 'poitou-charentes', 'provence alpes-cote-d\'azur', 'reunion', 'rhone-alpes']
+france_subregions_geofabrik = ['alsace', 'aquitaine', 'auvergne', 'basse-normandie', 'bourgogne',
+            'bretagne', 'centre', 'champagne ardenne', 'corse', 'franche comte', 'guadeloupe',
+            'guyane', 'haute-normandie', 'ile-de-france', 'languedoc-roussillon', 'limousin',
+            'lorraine', 'martinique', 'mayotte', 'midi-pyrenees', 'nord-pas-de-calais',
+            'pays de la loire', 'picardie', 'poitou-charentes', 'provence alpes-cote-d\'azur',
+            'reunion', 'rhone-alpes']
         #great-britain_subregions_geofabrik = ['england', 'scotland', 'wales']
-        
+
 italy_subregions_geofabrik = ['Centro', 'Isole', 'Nord-Est', 'Nord-Ovest', 'Sud']
-        
+
 noregion_geofabrik = ['russia','asia']
 
 # Tags to keep
@@ -181,4 +190,4 @@ filtered_tags = ['access', 'admin_level', 'aerialway', 'aeroway', 'barrier',
                'boundary', 'bridge', 'highway', 'natural', 'oneway', 'place',
                'railway', 'tracktype', 'tunnel', 'waterway']
 
-filtered_tags_win = 'access= admin_level= aerialway= aeroway= barrier= boundary= bridge= highway= natural= oneway= place= railway= tracktype= tunnel= waterway='
+FILTERED_TAGS_WIN = 'access= admin_level= aerialway= aeroway= barrier= boundary= bridge= highway= natural= oneway= place= railway= tracktype= tunnel= waterway='
