@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - parameter force_download to differentiate between forcing download of new maps and force of processing maps
 
+### Changed
+- correct pylint findings
+
 ## [0.3.1] - 2021-06-17
 ### Added
 - configuration for virtual python environment (venv)
