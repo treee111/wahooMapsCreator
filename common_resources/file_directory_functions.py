@@ -1,9 +1,12 @@
 #!/usr/bin/python
 
 # import official python packages
+import json
 import os
 import subprocess
+import sys
 import zipfile
+
 
 
 def get_git_root():
@@ -18,7 +21,6 @@ COMMON_DIR = os.path.join(ROOT_DIR, 'common_resources')
 OUTPUT_DIR = os.path.join(ROOT_DIR, 'output')
 MAPS_DIR = os.path.join(COMMON_DIR, 'maps')
 LAND_POLYGONS_PATH = os.path.join(COMMON_DIR, 'land-polygons-split-4326', 'land_polygons.shp')
-
 
 def unzip(source_filename, dest_dir):
     with zipfile.ZipFile(source_filename) as zip_file:
@@ -46,3 +48,35 @@ def create_empty_directories(tiles_from_json):
         outdir = os.path.join(OUTPUT_DIR, f'{tile["x"]}', f'{tile["y"]}')
         if not os.path.isdir(outdir):
             os.makedirs(outdir)
+
+class FileDir:
+    "This is the class to check and download maps / artifacts"
+
+    def __init__(self, inputFile, input_region):
+        self.input_argument1 = inputFile
+        self.region = input_region
+
+        self.tiles_from_json = []
+
+
+    def read_json_file(self):
+        print('\n# Read json file')
+
+        # option 1: have a .json file as input parameter
+        if os.path.isfile(self.input_argument1):
+            json_file_path = self.input_argument1
+        # option 2: input a country as parameter, e.g. germany
+        else:
+            json_file_path = os.path.join (COMMON_DIR,
+             'json', self.region, self.input_argument1 + '.json')
+
+        with open(json_file_path) as json_file:
+            self.tiles_from_json = json.load(json_file)
+            json_file.close()
+        if self.tiles_from_json == '' :
+            print ('! Json file could not be opened.')
+            sys.exit()
+
+        # logging
+        print(f'+ Use json file {json_file.name} with {len(self.tiles_from_json)} tiles')
+        print('# Read json file: OK')

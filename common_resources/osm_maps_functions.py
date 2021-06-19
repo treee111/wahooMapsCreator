@@ -18,6 +18,9 @@ from common_resources import file_directory_functions
 from common_resources import constants
 from common_resources import constants_functions
 
+from common_resources.file_directory_functions import FileDir
+
+
 class OsmMaps:
     "This is a OSM data class"
 
@@ -37,28 +40,11 @@ class OsmMaps:
 
         self.country_name = os.path.split(inputFile)[1][:-5]
 
+        self.o_file = FileDir(inputFile,
+         constants_functions.get_region_of_country(inputFile))
 
-    def read_json_file(self):
-        print('\n# Read json file')
-
-        # option 1: have a .json file as input parameter
-        if os.path.isfile(self.input_argument1):
-            json_file_path = self.input_argument1
-        # option 2: input a country as parameter, e.g. germany
-        else:
-            json_file_path = os.path.join (file_directory_functions.COMMON_DIR,
-             'json', self.region, self.input_argument1 + '.json')
-
-        with open(json_file_path) as json_file:
-            self.tiles_from_json = json.load(json_file)
-            json_file.close()
-        if self.tiles_from_json == '' :
-            print ('! Json file could not be opened.')
-            sys.exit()
-
-        # logging
-        print(f'+ Use json file {json_file.name} with {len(self.tiles_from_json)} tiles')
-        print('# Read json file: OK')
+    def read_process_input(self):
+        self.o_file.read_json_file()
 
 
     def check_and_download_land_poligons_file(self):
