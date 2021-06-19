@@ -6,7 +6,6 @@ import multiprocessing
 import sys
 
 # import custom python packages
-# ToDo: This might not work - Properly import in Windows!
 from os import sys, path
 sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
 from common_resources.osm_maps_functions import OsmMaps

@@ -5,13 +5,13 @@ import glob
 import json
 import os
 import os.path
-import requests
 import subprocess
 import sys
 import time
 import platform
 
 # import custom python packages
+import requests
 from os import sys, path
 sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
 from common_resources import file_directory_functions
@@ -22,7 +22,8 @@ class OsmMaps:
     "This is a OSM data class"
 
 
-    def __init__(self, inputFile, Max_Days_Old, Force_Download, Force_Processing, workers, threads, Save_Cruiser):
+    def __init__(self, inputFile, Max_Days_Old, Force_Download,
+     Force_Processing, workers, threads, Save_Cruiser):
         self.input_argument1 = inputFile
         self.region = constants_functions.getRegionOfCountry(inputFile)
         self.max_days_old = Max_Days_Old
@@ -45,7 +46,8 @@ class OsmMaps:
             json_file_path = self.input_argument1
         # option 2: input a country as parameter, e.g. germany
         else:
-            json_file_path = os.path.join (file_directory_functions.COMMON_DIR, 'json', self.region, self.input_argument1 + '.json')
+            json_file_path = os.path.join (file_directory_functions.COMMON_DIR,
+             'json', self.region, self.input_argument1 + '.json')
 
         with open(json_file_path) as json_file:
             self.tilesf_from_json = json.load(json_file)
@@ -82,18 +84,21 @@ class OsmMaps:
             if request_land_polygons.status_code != 200:
                 print('failed to find or download land polygons file')
                 sys.exit()
-            download=open(os.path.join (file_directory_functions.COMMON_DIR, 'land-polygons-split-4326.zip'), 'wb')
+            download=open(os.path.join (file_directory_functions.COMMON_DIR,
+             'land-polygons-split-4326.zip'), 'wb')
             for chunk in request_land_polygons.iter_content(chunk_size=1024*100):
                 download.write(chunk)
             download.close()
             # unpack it
             # should work on macOS and Windows
-            file_directory_functions.unzip(os.path.join (file_directory_functions.COMMON_DIR, 'land-polygons-split-4326.zip'), file_directory_functions.COMMON_DIR)
+            file_directory_functions.unzip(os.path.join (file_directory_functions.COMMON_DIR,
+             'land-polygons-split-4326.zip'), file_directory_functions.COMMON_DIR)
             # Windows-Version
             # cmd = ['7za', 'x', '-y', os.path.join (file_directory_functions.COMMON_DIR, 'land-polygons-split-4326.zip')]
             #print(cmd)
             # result = subprocess.run(cmd)
-            os.remove(os.path.join (file_directory_functions.COMMON_DIR, 'land-polygons-split-4326.zip'))
+            os.remove(os.path.join (file_directory_functions.COMMON_DIR,
+             'land-polygons-split-4326.zip'))
             # if result.returncode != 0:
             #     print(f'Error unpacking land polygons file')
             #     sys.exit()
@@ -168,9 +173,12 @@ class OsmMaps:
         if platform.system() == "Windows":
             for key, val in self.border_countries.items():
             # print(key, val)
-                out_file = os.path.join(file_directory_functions.OUTPUT_DIR, f'filtered-{key}.osm.pbf')
-                out_file_o5m = os.path.join(file_directory_functions.OUTPUT_DIR, f'outFile-{key}.o5m')
-                out_file_o5m_filtered = os.path.join(file_directory_functions.OUTPUT_DIR, f'outFileFiltered-{key}.o5m')
+                out_file = os.path.join(file_directory_functions.OUTPUT_DIR,
+                 f'filtered-{key}.osm.pbf')
+                out_file_o5m = os.path.join(file_directory_functions.OUTPUT_DIR,
+                 f'outFile-{key}.o5m')
+                out_file_o5m_filtered = os.path.join(file_directory_functions.OUTPUT_DIR,
+                 f'outFileFiltered-{key}.o5m')
 
                 if not os.path.isfile(out_file) or self.force_processing == 1:
                     print(f'\n+ Converting map of {key} to o5m format')
@@ -235,8 +243,10 @@ class OsmMaps:
 
         tile_count = 1
         for tile in self.tilesf_from_json:
-            land_file = os.path.join(file_directory_functions.OUTPUT_DIR, f'{tile["x"]}', f'{tile["y"]}', 'land.shp')
-            out_file = os.path.join(file_directory_functions.OUTPUT_DIR, f'{tile["x"]}', f'{tile["y"]}', 'land')
+            land_file = os.path.join(file_directory_functions.OUTPUT_DIR,
+             f'{tile["x"]}', f'{tile["y"]}', 'land.shp')
+            out_file = os.path.join(file_directory_functions.OUTPUT_DIR,
+             f'{tile["x"]}', f'{tile["y"]}', 'land')
 
             if not os.path.isfile(land_file) or self.force_processing == 1:
                 print(f'+ Generate land {tile_count} of {len(self.tilesf_from_json)} for Coordinates: {tile["x"]} {tile["y"]}')
@@ -253,10 +263,12 @@ class OsmMaps:
             if not os.path.isfile(out_file+'1.osm') or self.force_processing == 1:
                 # Windows
                 if platform.system() == "Windows":
-                    cmd = ['python', os.path.join(file_directory_functions.COMMON_DIR, 'shape2osm.py'), '-l', out_file, land_file]
+                    cmd = ['python', os.path.join(file_directory_functions.COMMON_DIR,
+                     'shape2osm.py'), '-l', out_file, land_file]
                 # Non-Windows
                 else:
-                    cmd = ['python3', os.path.join(file_directory_functions.COMMON_DIR, 'shape2osm.py'), '-l', out_file, land_file]
+                    cmd = ['python3', os.path.join(file_directory_functions.COMMON_DIR,
+                     'shape2osm.py'), '-l', out_file, land_file]
                 #print(cmd)
                 subprocess.run(cmd)
             tile_count += 1
@@ -368,10 +380,13 @@ class OsmMaps:
                 else:
                     cmd = ['osmium', 'merge', '--overwrite']
                     for country in tile['countries']:
-                        cmd.append(os.path.join(file_directory_functions.OUTPUT_DIR, f'{tile["x"]}', f'{tile["y"]}', f'split-{country}.osm.pbf'))
+                        cmd.append(os.path.join(file_directory_functions.OUTPUT_DIR,
+                         f'{tile["x"]}', f'{tile["y"]}', f'split-{country}.osm.pbf'))
 
-                    cmd.append(os.path.join(file_directory_functions.OUTPUT_DIR, f'{tile["x"]}', f'{tile["y"]}', 'land1.osm'))
-                    cmd.append(os.path.join(file_directory_functions.OUTPUT_DIR, f'{tile["x"]}', f'{tile["y"]}', 'sea.osm'))
+                    cmd.append(os.path.join(file_directory_functions.OUTPUT_DIR,
+                     f'{tile["x"]}', f'{tile["y"]}', 'land1.osm'))
+                    cmd.append(os.path.join(file_directory_functions.OUTPUT_DIR,
+                     f'{tile["x"]}', f'{tile["y"]}', 'sea.osm'))
                     cmd.extend(['-o', out_file])
 
                     #print(cmd)
