@@ -32,7 +32,7 @@ class OsmMaps:
         self.workers = workers
         self.threads = threads
         self.save_cruiser = Save_Cruiser
-        self.tilesf_from_json = []
+        self.tiles_from_json = []
         self.border_countries = {}
 
         self.country_name = os.path.split(inputFile)[1][:-5]
@@ -50,14 +50,14 @@ class OsmMaps:
              'json', self.region, self.input_argument1 + '.json')
 
         with open(json_file_path) as json_file:
-            self.tilesf_from_json = json.load(json_file)
+            self.tiles_from_json = json.load(json_file)
             json_file.close()
-        if self.tilesf_from_json == '' :
+        if self.tiles_from_json == '' :
             print ('! Json file could not be opened.')
             sys.exit()
 
         # logging
-        print(f'+ Use json file {json_file.name} with {len(self.tilesf_from_json)} tiles')
+        print(f'+ Use json file {json_file.name} with {len(self.tiles_from_json)} tiles')
         print('# Read json file: OK')
 
 
@@ -116,7 +116,7 @@ class OsmMaps:
         print('\n# check countries .osm.pbf files')
         # Build list of countries needed
         border_countries = {}
-        for tile in self.tilesf_from_json:
+        for tile in self.tiles_from_json:
             for country in tile['countries']:
                 if country not in border_countries:
                     border_countries[country] = {'map_file':country}
@@ -149,7 +149,7 @@ class OsmMaps:
 
         # time.sleep(60)
 
-        file_directory_functions.create_empty_directories(self.tilesf_from_json)
+        file_directory_functions.create_empty_directories(self.tiles_from_json)
 
         for country in border_countries:
             print(f'+ Checking mapfile for {country}')
@@ -221,7 +221,8 @@ class OsmMaps:
         else:
             for key, val  in self.border_countries.items():
                 ## print(key, val)
-                out_file = os.path.join(file_directory_functions.OUTPUT_DIR, f'filtered-{key}.osm.pbf')
+                out_file = os.path.join(file_directory_functions.OUTPUT_DIR,
+                 f'filtered-{key}.osm.pbf')
                 ## print(outFile)
                 if not os.path.isfile(out_file):
                     print(f'+ Create filtered country file for {key}')
@@ -242,14 +243,14 @@ class OsmMaps:
         print('\n# Generate land')
 
         tile_count = 1
-        for tile in self.tilesf_from_json:
+        for tile in self.tiles_from_json:
             land_file = os.path.join(file_directory_functions.OUTPUT_DIR,
              f'{tile["x"]}', f'{tile["y"]}', 'land.shp')
             out_file = os.path.join(file_directory_functions.OUTPUT_DIR,
              f'{tile["x"]}', f'{tile["y"]}', 'land')
 
             if not os.path.isfile(land_file) or self.force_processing == 1:
-                print(f'+ Generate land {tile_count} of {len(self.tilesf_from_json)} for Coordinates: {tile["x"]} {tile["y"]}')
+                print(f'+ Generate land {tile_count} of {len(self.tiles_from_json)} for Coordinates: {tile["x"]} {tile["y"]}')
                 cmd = ['ogr2ogr', '-overwrite', '-skipfailures']
                 cmd.extend(['-spat', f'{tile["left"]-0.1:.6f}',
                             f'{tile["bottom"]-0.1:.6f}',
@@ -281,10 +282,11 @@ class OsmMaps:
         print('\n# Generate sea')
 
         tile_count = 1
-        for tile in self.tilesf_from_json:
-            out_file = os.path.join(file_directory_functions.OUTPUT_DIR, f'{tile["x"]}', f'{tile["y"]}', 'sea.osm')
+        for tile in self.tiles_from_json:
+            out_file = os.path.join(file_directory_functions.OUTPUT_DIR,
+             f'{tile["x"]}', f'{tile["y"]}', 'sea.osm')
             if not os.path.isfile(out_file) or self.force_processing == 1:
-                print(f'+ Generate sea {tile_count} of {len(self.tilesf_from_json)} for Coordinates: {tile["x"]} {tile["y"]}')
+                print(f'+ Generate sea {tile_count} of {len(self.tiles_from_json)} for Coordinates: {tile["x"]} {tile["y"]}')
                 with open(os.path.join(file_directory_functions.COMMON_DIR, 'sea.osm')) as sea_file:
                     sea_data = sea_file.read()
 
@@ -304,12 +306,13 @@ class OsmMaps:
     def split_filtered_country_files_to_tiles(self):
         print('\n# Split filtered country files to tiles')
         tile_count = 1
-        for tile in self.tilesf_from_json:
+        for tile in self.tiles_from_json:
 
             for country in tile['countries']:
                 print(f'+ Split filtered country {country}')
-                print(f'+ Splitting tile {tile_count} of {len(self.tilesf_from_json)} for Coordinates: {tile["x"]},{tile["y"]} from map of {country}')
-                out_file = os.path.join(file_directory_functions.OUTPUT_DIR, f'{tile["x"]}', f'{tile["y"]}', f'split-{country}.osm.pbf')
+                print(f'+ Splitting tile {tile_count} of {len(self.tiles_from_json)} for Coordinates: {tile["x"]},{tile["y"]} from map of {country}')
+                out_file = os.path.join(file_directory_functions.OUTPUT_DIR,
+                 f'{tile["x"]}', f'{tile["y"]}', f'split-{country}.osm.pbf')
                 if not os.path.isfile(out_file) or self.force_processing == 1:
                     # Windows
                     if platform.system() == "Windows":
@@ -350,25 +353,31 @@ class OsmMaps:
     def merge_splitted_tiles_with_land_and_sea(self):
         print('\n# Merge splitted tiles with land an sea')
         tile_count = 1
-        for tile in self.tilesf_from_json:
-            print(f'+ Merging tiles for tile {tile_count} of {len(self.tilesf_from_json)} for Coordinates: {tile["x"]},{tile["y"]}')
-            out_file = os.path.join(file_directory_functions.OUTPUT_DIR, f'{tile["x"]}', f'{tile["y"]}', 'merged.osm.pbf')
+        for tile in self.tiles_from_json:
+            print(f'+ Merging tiles for tile {tile_count} of {len(self.tiles_from_json)} for Coordinates: {tile["x"]},{tile["y"]}')
+            out_file = os.path.join(file_directory_functions.OUTPUT_DIR,
+             f'{tile["x"]}', f'{tile["y"]}', 'merged.osm.pbf')
             if not os.path.isfile(out_file) or self.force_processing == 1:
                 # Windows
                 if platform.system() == "Windows":
-                    cmd = [os.path.join (file_directory_functions.COMMON_DIR, 'Osmosis', 'bin', 'osmosis.bat')]
+                    cmd = [os.path.join (file_directory_functions.COMMON_DIR,
+                     'Osmosis', 'bin', 'osmosis.bat')]
                     loop=0
                     for country in tile['countries']:
                         cmd.append('--rbf')
-                        cmd.append(os.path.join(file_directory_functions.OUTPUT_DIR, f'{tile["x"]}', f'{tile["y"]}', f'split-{country}.osm.pbf'))
+                        cmd.append(os.path.join(file_directory_functions.OUTPUT_DIR,
+                         f'{tile["x"]}', f'{tile["y"]}', f'split-{country}.osm.pbf'))
                         cmd.append('workers='+ self.workers)
                         if loop > 0:
                             cmd.append('--merge')
                         loop+=1
-                    land_files = glob.glob(os.path.join(file_directory_functions.OUTPUT_DIR, f'{tile["x"]}', f'{tile["y"]}', 'land*.osm'))
+                    land_files = glob.glob(os.path.join(file_directory_functions.OUTPUT_DIR,
+                     f'{tile["x"]}', f'{tile["y"]}', 'land*.osm'))
                     for land in land_files:
-                        cmd.extend(['--rx', 'file='+os.path.join(file_directory_functions.OUTPUT_DIR, f'{tile["x"]}', f'{tile["y"]}', f'{land}'), '--s', '--m'])
-                    cmd.extend(['--rx', 'file='+os.path.join(file_directory_functions.OUTPUT_DIR, f'{tile["x"]}', f'{tile["y"]}', 'sea.osm'), '--s', '--m'])
+                        cmd.extend(['--rx', 'file='+os.path.join(file_directory_functions.OUTPUT_DIR,
+                         f'{tile["x"]}', f'{tile["y"]}', f'{land}'), '--s', '--m'])
+                    cmd.extend(['--rx', 'file='+os.path.join(file_directory_functions.OUTPUT_DIR,
+                     f'{tile["x"]}', f'{tile["y"]}', 'sea.osm'), '--s', '--m'])
                     cmd.extend(['--tag-transform', 'file=' + os.path.join (file_directory_functions.COMMON_DIR, 'tunnel-transform.xml'), '--wb', out_file, 'omitmetadata=true'])
 
                     #print(cmd)
@@ -400,11 +409,13 @@ class OsmMaps:
     def create_map_files(self):
         print('\n# Creating .map files')
         tile_count = 1
-        for tile in self.tilesf_from_json:
-            print(f'+ Creating map file for tile {tile_count} of {len(self.tilesf_from_json)} for Coordinates: {tile["x"]}, {tile["y"]}')
-            out_file = os.path.join(file_directory_functions.OUTPUT_DIR, f'{tile["x"]}', f'{tile["y"]}.map')
+        for tile in self.tiles_from_json:
+            print(f'+ Creating map file for tile {tile_count} of {len(self.tiles_from_json)} for Coordinates: {tile["x"]}, {tile["y"]}')
+            out_file = os.path.join(file_directory_functions.OUTPUT_DIR,
+             f'{tile["x"]}', f'{tile["y"]}.map')
             if not os.path.isfile(out_file+'.lzma') or self.force_processing == 1:
-                merged_file = os.path.join(file_directory_functions.OUTPUT_DIR, f'{tile["x"]}', f'{tile["y"]}', 'merged.osm.pbf')
+                merged_file = os.path.join(file_directory_functions.OUTPUT_DIR,
+                 f'{tile["x"]}', f'{tile["y"]}', 'merged.osm.pbf')
 
                 # Windows
                 if platform.system() == "Windows":
@@ -458,7 +469,7 @@ class OsmMaps:
         else:
             cmd = ['zip', '-r', self.country_name + '.zip']
 
-        for tile in self.tilesf_from_json:
+        for tile in self.tiles_from_json:
             cmd.append(os.path.join(f'{tile["x"]}', f'{tile["y"]}.map.lzma'))
         #print(cmd)
         subprocess.run(cmd, cwd=file_directory_functions.OUTPUT_DIR)
@@ -477,7 +488,7 @@ class OsmMaps:
             else:
                 cmd = ['zip', '-r', self.country_name + '-maps.zip']
 
-            for tile in self.tilesf_from_json:
+            for tile in self.tiles_from_json:
                 cmd.append(os.path.join(f'{tile["x"]}', f'{tile["y"]}.map'))
             #print(cmd)
             subprocess.run(cmd, cwd=file_directory_functions.OUTPUT_DIR)
