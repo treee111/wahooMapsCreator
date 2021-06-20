@@ -31,7 +31,8 @@ def get_region_of_country(county):
 
 
 def get_geofabrik_region_of_country(input_county):
-    c_translated = translate_input_country_to_osm(input_county)
+    # search for country match in geofabrik tables to determine region to use for map download
+    c_translated = translate_country_input_to_geofabrik(input_county)
 
     region = ''
     if c_translated in constants.africa_geofabrik :
@@ -61,7 +62,9 @@ def get_geofabrik_region_of_country(input_county):
     return region
 
 
-def translate_input_country_to_osm(county):
+def translate_country_input_to_geofabrik(county):
+    # search for user entered country name in translated (to geofabrik). if match continue with matched else continue with user entered country
+
     try:
         c_translated = constants.Translate_Country[f'{county}']
     except:
