@@ -6,34 +6,38 @@ import multiprocessing
 import sys
 
 # import custom python packages
-# ToDo: This might not work - Properly import in Windows!
 from os import sys, path
 sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
-from common_resources.osm_maps_functions import OSM_Maps
+from common_resources.osm_maps_functions import OsmMaps
 
 ########### Configurable Parameters
 
 # Maximum age of source maps or land shape files before they are redownloaded
-Max_Days_Old = 14
+MAX_DAYS_OLD = 14
+
+# Force download of source maps and the land shape file
+# If False use Max_Days_Old to check for expired maps
+# If True force redownloading of maps and landshape
+FORCE_DOWNLOAD = False
 
 # Force (re)processing of source maps and the land shape file
-# If 0 use Max_Days_Old to check for expired maps
-# If 1 force redownloading/processing of maps and landshape 
-Force_Processing = 0
+# If False use Max_Days_Old to check for expired maps
+# If True force processing of maps and landshape
+FORCE_PROCESSING = False
 
 # Save uncompressed maps for Cruiser
-Save_Cruiser = 0
+SAVE_CRUISER = 0
 
 # Number of threads to use in the mapwriter plug-in
-threads = str(multiprocessing.cpu_count() - 1)
-if int(threads) < 1:
-    threads = 1
+THREADS = str(multiprocessing.cpu_count() - 1)
+if int(THREADS) < 1:
+    THREADS = 1
 # Or set it manually to:
 #threads = 1
 #print(f'threads = {threads}/n')
 
 # Number of workers for the Osmosis read binary fast function
-workers = '1'
+WORKERS = '1'
 
 ########### End of Configurable Parameters
 
@@ -41,43 +45,45 @@ if len(sys.argv) != 2:
     print(f'Usage: {sys.argv[0]} Country name part of a .json file.')
     sys.exit()
 
-oOSMmaps = OSM_Maps(sys.argv[1], Max_Days_Old, Force_Processing, workers, threads, Save_Cruiser)
+oOSMmaps = OsmMaps(sys.argv[1], MAX_DAYS_OLD,
+                FORCE_DOWNLOAD, FORCE_PROCESSING,
+                WORKERS, THREADS, SAVE_CRUISER)
 
 # if x.region == '' :
 #     print ('Invalid country name.')
 #     sys.exit()
 
 # Read json file
-oOSMmaps.readJsonFile()
+oOSMmaps.read_json_file()
 
 # Check for expired land polygons file and download, if too old
 # osm_maps_functions.checkAndDownloadLandPoligonsFile(Max_Days_Old, Force_Processing)
-oOSMmaps.checkAndDownloadLandPoligonsFile()
+oOSMmaps.check_and_download_land_poligons_file()
 
 # Check for expired .osm.pbf files and download, if too old
 # osm_maps_functions.checkAndDownloadOsmPbfFile(country, MaoOSMmaps_Days_Old, Force_Processing)
-oOSMmaps.checkAndDownloadOsmPbfFile()
+oOSMmaps.check_and_download_osm_pbf_file()
 
 # Filter tags from country osm.pbf files'
-oOSMmaps.filterTagsFromCountryOsmPbfFiles()
+oOSMmaps.filter_tags_from_country_osm_pbf_files()
 
 # Generate land
-oOSMmaps.generateLand()
+oOSMmaps.generate_land()
 
 # Generate sea
-oOSMmaps.generateSea()
+oOSMmaps.generate_sea()
 
 # Split filtered country files to tiles
-oOSMmaps.splitFilteredCountryFilesToTiles()
+oOSMmaps.split_filtered_country_files_to_tiles()
 
-# Merge splitted tiles with land an sea   
-oOSMmaps.mergeSplittedTilesWithLandAndSea()
+# Merge splitted tiles with land an sea
+oOSMmaps.merge_splitted_tiles_with_land_and_sea()
 
 # Creating .map files
-oOSMmaps.createMapFiles()
+oOSMmaps.create_map_files()
 
 # Zip .map.lzma files
-oOSMmaps.zipMapFiles()
+oOSMmaps.zip_map_files()
 
 # Make Cruiser map files zip file
-oOSMmaps.makeCruiserFiles()
+oOSMmaps.make_cruiser_files()

@@ -1,15 +1,14 @@
 [
     {
-        "x": 137,
+        "x": 133,
         "y": 88,
-        "left": 12.65625,
+        "left": 7.03125,
         "top": 48.922499,
-        "right": 14.0625,
+        "right": 8.4375,
         "bottom": 47.989922,
         "countries": [
-            "czech_republic",
-            "germany",
-            "austria"
+            "france",
+            "germany"
         ]
     }
 ]

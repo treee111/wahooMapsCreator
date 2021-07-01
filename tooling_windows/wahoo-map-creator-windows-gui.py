@@ -24,31 +24,31 @@ sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
 from common_resources import file_directory_functions
 from common_resources import osm_maps_functions
 from common_resources import constants
-from common_resources.osm_maps_functions import OSM_Maps
+from common_resources.osm_maps_functions import OsmMaps
 
 ########### Configurable Parameters
 
 # Maximum age of source maps or land shape files before they are redownloaded
-Max_Days_Old = 14
+MAX_DAYS_OLD = 14
 
 # Force (re)processing of source maps and the land shape file
 # If 0 use Max_Days_Old to check for expired maps
-# If 1 force redownloading/processing of maps and landshape 
-Force_Processing = 0
+# If 1 force redownloading/processing of maps and landshape
+FORCE_PROCESSING = 0
 
 # Save uncompressed maps for Cruiser
-Save_Cruiser = 0
+SAVE_CRUISER = 0
 
 # Number of threads to use in the mapwriter plug-in
-threads = str(multiprocessing.cpu_count() - 1)
-if int(threads) < 1:
-    threads = 1
+THREADS = str(multiprocessing.cpu_count() - 1)
+if int(THREADS) < 1:
+    THREADS = 1
 # Or set it manually to:
 #threads = 1
 #print(f'threads = {threads}/n')
 
 # Number of workers for the Osmosis read binary fast function
-workers = '1'
+WORKERS = '1'
 
 ########### End of Configurable Parameters
 
@@ -107,11 +107,11 @@ cboCountry.current(14)
 cboContinent.bind("<<ComboboxSelected>>", callback_continent)
 
 fp = IntVar()
-fp.set(Force_Processing)
+fp.set(FORCE_PROCESSING)
 maxdays = StringVar()
-maxdays.set(str(Max_Days_Old))
+maxdays.set(str(MAX_DAYS_OLD))
 save_cruiser_maps = IntVar()
-save_cruiser_maps.set(Save_Cruiser)
+save_cruiser_maps.set(SAVE_CRUISER)
 enMaxOldDays = tk.Entry(app, textvar=maxdays, width=5)
 enMaxOldDays.grid(column=1, row=4, sticky=SW, padx=10)
 chkReloadMaps = Checkbutton(app, text="Force reload maps", var=fp, command=switch_reload)
@@ -125,13 +125,13 @@ btnCancel = tk.Button(app, text="Exit", width=15, command=app.destroy).grid(colu
 switch_reload()
 app.mainloop()  # show gui
 
-Force_Processing = fp.get()
-Save_Cruiser = save_cruiser_maps.get()
-Max_Days_Old = int(maxdays.get())
+FORCE_PROCESSING = fp.get()
+SAVE_CRUISER = save_cruiser_maps.get()
+MAX_DAYS_OLD = int(maxdays.get())
 
-print('# Force Processing = ' + str(Force_Processing))
-print('# Max Days Old = ' + str(Max_Days_Old))
-print('# Save Cruiser maps = ' + str(Save_Cruiser))
+print('# Force Processing = ' + str(FORCE_PROCESSING))
+print('# Max Days Old = ' + str(MAX_DAYS_OLD))
+print('# Save Cruiser maps = ' + str(SAVE_CRUISER))
 print(f"# GUI exits with {country_gui} in {region_gui}")
 if country_gui == "none":
     sys.exit()
@@ -144,43 +144,43 @@ if country_gui == "none":
 #     print(f'Usage: {sys.argv[0]} Country name part of a .json file.')
 #     sys.exit()
 
-x = OSM_Maps(country_gui, Max_Days_Old, Force_Processing, workers, threads, Save_Cruiser)
+x = OsmMaps(country_gui, MAX_DAYS_OLD, FORCE_PROCESSING, WORKERS, THREADS, SAVE_CRUISER)
 
 # if x.region == '' :
 #     print ('Invalid country name.')
 #     sys.exit()
 
 # Read json file
-x.readJsonFile()
+x.read_json_file()
 
 # Check for expired land polygons file and download, if too old
 # osm_maps_functions.checkAndDownloadLandPoligonsFile(Max_Days_Old, Force_Processing)
-x.checkAndDownloadLandPoligonsFile()
+x.check_and_download_land_poligons_file()
 
 # Check for expired .osm.pbf files and download, if too old
 # osm_maps_functions.checkAndDownloadOsmPbfFile(country, Max_Days_Old, Force_Processing)
-x.checkAndDownloadOsmPbfFile()
+x.check_and_download_osm_pbf_file()
 
 # Filter tags from country osm.pbf files'
-x.filterTagsFromCountryOsmPbfFiles()
+x.filter_tags_from_country_osm_pbf_files()
 
 # Generate land
-x.generateLand()
+x.generate_land()
 
 # Generate sea
-x.generateSea()
+x.generate_sea()
 
 # Split filtered country files to tiles
-x.splitFilteredCountryFilesToTiles()
+x.split_filtered_country_files_to_tiles()
 
-# Merge splitted tiles with land an sea   
-x.mergeSplittedTilesWithLandAndSea()
+# Merge splitted tiles with land an sea
+x.merge_splitted_tiles_with_land_and_sea()
 
 # Creating .map files
-x.createMapFiles()
+x.create_map_files()
 
 # Zip .map.lzma files
-x.zipMapFiles()
+x.zip_map_files()
 
 # Make Cruiser map files zip file
-x.makeCruiserFiles()
+x.make_cruiser_files()
