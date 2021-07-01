@@ -16,14 +16,14 @@ from common_resources.osm_maps_functions import OsmMaps
 MAX_DAYS_OLD = 14
 
 # Force download of source maps and the land shape file
-# If 0 use Max_Days_Old to check for expired maps
-# If 1 force redownloading of maps and landshape
-FORCE_DOWNLOAD = 0
+# If False use Max_Days_Old to check for expired maps
+# If True force redownloading of maps and landshape
+FORCE_DOWNLOAD = False
 
 # Force (re)processing of source maps and the land shape file
-# If 0 use Max_Days_Old to check for expired maps
-# If 1 force processing of maps and landshape
-FORCE_PROCESSING = 0
+# If False use Max_Days_Old to check for expired maps
+# If True force processing of maps and landshape
+FORCE_PROCESSING = False
 
 # Save uncompressed maps for Cruiser
 SAVE_CRUISER = 0
