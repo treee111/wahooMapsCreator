@@ -105,7 +105,7 @@ class Downloader:
         for tile in self.tiles_from_json:
             for country in tile['countries']:
                 if country not in border_countries:
-                    border_countries[country] = {'map_file':country}
+                    border_countries[country] = {}
 
         # logging
         print(f'+ Border countries of json file: {len(border_countries)}')
@@ -121,23 +121,24 @@ class Downloader:
             # print(f'+ mapfile for {c}')
 
             # check for already existing .osm.pbf file
-            map_files = glob.glob(f'{file_directory_functions.MAPS_DIR}/{country}*.osm.pbf')
-            if len(map_files) != 1:
-                map_files = glob.glob(f'{file_directory_functions.MAPS_DIR}/**/{country}*.osm.pbf')
+            map_file_path = glob.glob(f'{file_directory_functions.MAPS_DIR}/{country}*.osm.pbf')
+            if len(map_file_path) != 1:
+                map_file_path = glob.glob(f'{file_directory_functions.MAPS_DIR}/**/{country}*.osm.pbf')
 
             # delete .osm.pbf file if out of date
-            if len(map_files) == 1 and os.path.isfile(map_files[0]):
-                file_creation_timestamp = os.path.getctime(map_files[0])
+            if len(map_file_path) == 1 and os.path.isfile(map_file_path[0]):
+                file_creation_timestamp = os.path.getctime(map_file_path[0])
                 if file_creation_timestamp < to_old_timestamp or self.force_download == 1:
                     print(f'+ mapfile for {country}: deleted')
-                    os.remove(map_files[0])
+                    os.remove(map_file_path[0])
                     need_to_download = True
                 else:
-                    border_countries[country] = {'map_file':map_files[0]}
+                    border_countries[country] = {'map_file':map_file_path[0]}
                     print(f'+ mapfile for {country}: up-to-date')
 
             # download country .osm.pbf file if not existing
-            if not os.path.isfile(border_countries[country]['map_file']) or self.force_download is True:
+            map_file_path = border_countries[country].get('map_file')
+            if map_file_path is not None and ( not os.path.isfile(map_file_path) or self.force_download is True ):
                 # if there exists no file or it is no file --> download
                 border_countries[country]['download'] = True
                 need_to_download = True
@@ -154,8 +155,8 @@ class Downloader:
         for country in self.border_countries:
             try:
                 if self.border_countries[country]['download'] is True:
-                    map_files = self.download_map(country)
-                    self.border_countries[country] = {'map_file':map_files[0]}
+                    map_file_path = self.download_map(country)
+                    self.border_countries[country] = {'map_file':map_file_path[0]}
             except KeyError:
                 pass
 
@@ -179,7 +180,7 @@ class Downloader:
         for chunk in request_geofabrik.iter_content(chunk_size=1024*100):
             download.write(chunk)
         download.close()
-        map_files = [os.path.join (file_directory_functions.MAPS_DIR, f'{country}' + '-latest.osm.pbf')]
+        map_file_path = [os.path.join (file_directory_functions.MAPS_DIR, f'{country}' + '-latest.osm.pbf')]
         print(f'+ Map of {country} downloaded.')
 
-        return map_files
+        return map_file_path
