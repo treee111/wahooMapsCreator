@@ -12,7 +12,6 @@ from common_resources.osm_maps_functions import OsmMaps
 # Maximum age of source maps or land shape files before they are redownloaded
 MAX_DAYS_OLD = 14
 
-
 # Force download of source maps and the land shape file
 # If False use Max_Days_Old to check for expired maps
 # If True force redownloading of maps and landshape

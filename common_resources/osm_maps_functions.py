@@ -45,6 +45,8 @@ class OsmMaps:
          constants_functions.get_region_of_country(input_file))
 
         self.country_name = os.path.split(input_file)[1][:-5]
+        if self.country_name is '':
+            self.country_name = input_file
 
         force_processing = self.o_downloader.download_if_needed(self.tiles)
         if force_processing == 1:
@@ -70,7 +72,7 @@ class OsmMaps:
 
                 if not os.path.isfile(out_file) or self.force_processing == 1:
                     print(f'\n+ Converting map of {key} to o5m format')
-                    cmd = ['osmconvert']
+                    cmd = [os.path.join(file_directory_functions.TOOLING_WIN_DIR, 'osmconvert')]
                     cmd.extend(['-v', '--hash-memory=2500', '--complete-ways', '--complete-multipolygons', '--complete-boundaries', '--drop-author', '--drop-version'])
                     cmd.append(val['map_file'])
                     cmd.append('-o='+out_file_o5m)
@@ -81,7 +83,7 @@ class OsmMaps:
                         sys.exit()
 
                     print(f'\n# Filtering unwanted map objects out of map of {key}')
-                    cmd = ['osmfilter']
+                    cmd = [os.path.join(file_directory_functions.TOOLING_WIN_DIR, 'osmfilter')]
                     cmd.append(out_file_o5m)
                     cmd.append('--keep="' + constants.FILTERED_TAGS_WIN + '"')
                     cmd.append('-o=' + out_file_o5m_filtered)
@@ -92,7 +94,7 @@ class OsmMaps:
                         sys.exit()
 
                     print(f'\n# Converting map of {key} back to osm.pbf format')
-                    cmd = ['osmconvert', '-v', '--hash-memory=2500', out_file_o5m_filtered]
+                    cmd = [os.path.join(file_directory_functions.TOOLING_WIN_DIR, 'osmconvert'), '-v', '--hash-memory=2500', out_file_o5m_filtered]
                     cmd.append('-o='+out_file)
                     # print(cmd)
                     result = subprocess.run(cmd)
@@ -208,7 +210,7 @@ class OsmMaps:
                         #cmd.extend(['left='+f'{tile["left"]}', 'bottom='+f'{tile["bottom"]}', 'right='+f'{tile["right"]}', 'top='+f'{tile["top"]}', '--buffer', 'bufferCapacity=12000', '--wb'])
                         #cmd.append('file='+outFile)
                         #cmd.append('omitmetadata=true')
-                        cmd = ['osmconvert', '-v', '--hash-memory=2500']
+                        cmd = [os.path.join(file_directory_functions.TOOLING_WIN_DIR, 'osmconvert'), '-v', '--hash-memory=2500']
                         cmd.append('-b='+f'{tile["left"]}' + ',' + f'{tile["bottom"]}' + ',' + f'{tile["right"]}' + ',' + f'{tile["top"]}')
                         cmd.extend(['--complete-ways', '--complete-multipolygons', '--complete-boundaries'])
                         cmd.append(self.border_countries[country]['filtered_file'])
@@ -325,7 +327,7 @@ class OsmMaps:
 
                 # Windows
                 if platform.system() == "Windows":
-                    cmd = ['lzma', 'e', out_file, out_file+'.lzma', f'-mt{self.threads}', '-d27', '-fb273', '-eos']
+                    cmd = [os.path.join(file_directory_functions.TOOLING_WIN_DIR, 'lzma'), 'e', out_file, out_file+'.lzma', f'-mt{self.threads}', '-d27', '-fb273', '-eos']
                 # Non-Windows
                 else:
                     cmd = ['lzma', out_file]
@@ -349,7 +351,8 @@ class OsmMaps:
         # Make Wahoo zip file
         # Windows
         if platform.system() == "Windows":
-            cmd = ['7za', 'a', '-tzip', '-m0=lzma', '-mx9', '-mfb=273', '-md=1536m', self.country_name + '.zip']
+            path_7za = os.path.join(file_directory_functions.TOOLING_WIN_DIR, '7za')
+            cmd = [path_7za, 'a', '-tzip', '-m0=lzma', '-mx9', '-mfb=273', '-md=1536m', self.country_name + '.zip']
             #cmd = ['7za', 'a', '-tzip', '-m0=lzma', countryName[1] + '.zip']
         # Non-Windows
         else:
@@ -369,7 +372,7 @@ class OsmMaps:
         if self.save_cruiser == 1:
             # Windows
             if platform.system() == "Windows":
-                cmd = ['7za', 'a', '-tzip', '-m0=lzma', self.country_name + '-maps.zip']
+                cmd = [os.path.join(file_directory_functions.TOOLING_WIN_DIR, '7za'), 'a', '-tzip', '-m0=lzma', self.country_name + '-maps.zip']
             # Non-Windows
             else:
                 cmd = ['zip', '-r', self.country_name + '-maps.zip']

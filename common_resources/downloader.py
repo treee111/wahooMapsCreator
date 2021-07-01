@@ -44,6 +44,7 @@ class Downloader:
         print('# Check countries .osm.pbf files: OK')
 
         if self.force_processing is True:
+            file_directory_functions.create_empty_directories(self.tiles_from_json)
             return 1
 
 
@@ -138,7 +139,7 @@ class Downloader:
 
             # download country .osm.pbf file if not existing
             map_file_path = border_countries[country].get('map_file')
-            if map_file_path is not None and ( not os.path.isfile(map_file_path) or self.force_download is True ):
+            if map_file_path is None or ( not os.path.isfile(map_file_path) or self.force_download is True ):
                 # if there exists no file or it is no file --> download
                 border_countries[country]['download'] = True
                 need_to_download = True

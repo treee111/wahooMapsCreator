@@ -24,6 +24,14 @@
             "program": "${workspaceRoot}/mac_wahoo_map_creator.py",
             "console": "integratedTerminal",
             "args": ["${workspaceRoot}/common_resources/germany.json"]
+        },
+        {
+            "name": "win-malta",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceRoot}/mac_wahoo_map_creator.py",
+            "console": "integratedTerminal",
+            "args": ["malta"]
         }
     ]
 }
