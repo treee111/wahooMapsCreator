@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.4.0] - 2021-07-01
 ### Added
 - parameter force_download to differentiate between forcing download of new maps and force of processing maps
 - enable selective download of .osm.pdf files. Only download out-of-date files
@@ -13,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - correct pylint findings
 - location and name of mac_wahoo_map_creator.py
+- a lot of refactoring: move coding to class FileDir and Downloader
 
 ## [0.3.1] - 2021-06-17
 ### Added
