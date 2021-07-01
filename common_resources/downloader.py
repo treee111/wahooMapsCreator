@@ -36,7 +36,7 @@ class Downloader:
         print('# check land_polygons.shp file: OK')
 
 
-        if self.check_osm_pbf_file() is True or self.force_download is True:
+        if self.check_osm_pbf_file() is True:
             self.download_osm_pbf_file()
             self.force_processing = True
 
@@ -121,12 +121,11 @@ class Downloader:
             # print(f'+ mapfile for {c}')
 
             # check for already existing .osm.pbf file
-            # ToDo: comment
             map_files = glob.glob(f'{file_directory_functions.MAPS_DIR}/{country}*.osm.pbf')
             if len(map_files) != 1:
                 map_files = glob.glob(f'{file_directory_functions.MAPS_DIR}/**/{country}*.osm.pbf')
 
-            # ToDo: comment
+            # delete .osm.pbf file if out of date
             if len(map_files) == 1 and os.path.isfile(map_files[0]):
                 file_creation_timestamp = os.path.getctime(map_files[0])
                 if file_creation_timestamp < to_old_timestamp or self.force_download == 1:
@@ -137,8 +136,10 @@ class Downloader:
                     border_countries[country] = {'map_file':map_files[0]}
                     print(f'+ mapfile for {country}: up-to-date')
 
-            if len(border_countries[country]) != 1 or not os.path.isfile(border_countries[country]['map_file']):
+            # download country .osm.pbf file if not existing
+            if not os.path.isfile(border_countries[country]['map_file']) or self.force_download is True:
                 # if there exists no file or it is no file --> download
+                border_countries[country]['download'] = True
                 need_to_download = True
 
         self.border_countries = border_countries
@@ -151,9 +152,12 @@ class Downloader:
         file_directory_functions.create_empty_directories(self.tiles_from_json)
 
         for country in self.border_countries:
-            map_files = self.download_map(country)
-            self.border_countries[country] = {'map_file':map_files[0]}
-
+            try:
+                if self.border_countries[country]['download'] is True:
+                    map_files = self.download_map(country)
+                    self.border_countries[country] = {'map_file':map_files[0]}
+            except KeyError:
+                pass
 
     def download_map(self, country):
         print(f'+ Trying to download missing map of {country}.')
