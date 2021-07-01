@@ -39,17 +39,13 @@ Clone this repository or download the latest Release from the ["Releases" Sectio
 It might be a good idea to run wahooMapsCreator first for a small country e.g. Malta to check if everything is running fine.
 In a next step you can run it for your own country.
 
-#### macOS
+#### macOS and Windows
 From the `root` folder of wahooMapsCreator, run:
-- macOS: `python3 mac_wahoo_map_creator.py <country_name>`
+- `python3 wahoo_map_creator.py <country_name>` or
+- `python wahoo_map_creator.py <country_name>`
 
-Example for Malta on MacOS: `python3 mac-wahoo-map-creator.py malta`
-
-#### Windows
-From the `tooling_windows` folder of wahooMapsCreator, run:
-- Windows: `python3 windows-wahoo-map-creator.py <country_name>`
-
-Example for Ireland on Windows: `python3 windows-wahoo-map-creator.py ireland`
+Example for Malta: `python3 wahoo_map_creator.py malta`
+Example for Ireland: `python3 wahoo_map_creator.py ireland`
 
 ### Copy the map-files to your device
 When file-creation is finished copy the map-files to your device:
