@@ -44,8 +44,9 @@ From the `root` folder of wahooMapsCreator, run:
 - `python3 wahoo_map_creator.py <country_name>` or
 - `python wahoo_map_creator.py <country_name>`
 
-Example for Malta: `python3 wahoo_map_creator.py malta`
-Example for Ireland: `python3 wahoo_map_creator.py ireland`
+Examples:
+- for Malta: `python3 wahoo_map_creator.py malta`
+- for Ireland: `python3 wahoo_map_creator.py ireland`
 
 ### Copy the map-files to your device
 When file-creation is finished copy the map-files to your device:

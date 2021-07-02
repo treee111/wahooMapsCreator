@@ -61,7 +61,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - Windows:    `tooling_windows/Windows-Wahoo-Map-Creator-Osmosis/wahoo-map-creator-osmosis.py`
 
 
-[unreleased]: https://github.com/treee111/wahooMapsCreator/compare/v0.3.1...HEAD
+[unreleased]: https://github.com/treee111/wahooMapsCreator/compare/v0.4.0...HEAD
+[0.4.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.3.1...v0.4.0
 [0.3.1]: https://github.com/treee111/wahooMapsCreator/compare/v0.3.0...v0.3.1
 [0.3.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.1.0...v0.2.0
