@@ -1,15 +1,16 @@
 """
 tests for the downloader file
 """
+import os
+import sys
 import unittest
 import time
 
 # import custom python packages
-from os import sys, path
-
-sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from common_resources.downloader import check_older_than_x_days
+
 
 class TestDownloader(unittest.TestCase):
     """

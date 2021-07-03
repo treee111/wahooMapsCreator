@@ -11,7 +11,6 @@ import sys
 import zipfile
 
 
-
 def get_git_root():
     """
     get the root directory of the git repository

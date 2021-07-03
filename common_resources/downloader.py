@@ -9,13 +9,13 @@ import os
 import os.path
 import sys
 import time
-from os import sys, path
 
 # import custom python packages
 import requests
-sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from common_resources import file_directory_functions as fdf
 from common_resources import constants_functions
+
 
 def check_older_than_x_days(file_creation_timestamp, max_days_old):
     """

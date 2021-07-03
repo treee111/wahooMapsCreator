@@ -6,15 +6,12 @@ functions and object for managing OSM maps
 # import official python packages
 import glob
 import os
-import os.path
 import subprocess
 import sys
 import platform
 
 # import custom python packages
-from os import sys, path
-
-sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from common_resources import file_directory_functions as fdf
 from common_resources import constants
 from common_resources import constants_functions
