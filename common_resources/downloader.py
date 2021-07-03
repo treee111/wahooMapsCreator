@@ -31,7 +31,7 @@ class Downloader:
         self.border_countries = {}
 
 
-    def download_if_needed(self):
+    def download_files_if_needed(self):
         force_processing = False
 
         if self.check_poligons_file() is True or self.force_download is True:

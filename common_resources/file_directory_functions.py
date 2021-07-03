@@ -51,16 +51,8 @@ def create_empty_directories(tiles_from_json):
             os.makedirs(outdir)
 
 
-def read_json_file(input_argument1, region):
+def read_json_file(json_file_path):
     print('\n# Read json file')
-
-    # option 1: have a .json file as input parameter
-    if os.path.isfile(input_argument1):
-        json_file_path = input_argument1
-    # option 2: input a country as parameter, e.g. germany
-    else:
-        json_file_path = os.path.join (COMMON_DIR,
-            'json', region, input_argument1 + '.json')
 
     with open(json_file_path) as json_file:
         tiles_from_json = json.load(json_file)

@@ -39,18 +39,29 @@ class OsmMaps:
         self.o_downloader = Downloader(Max_Days_Old, Force_Download)
 
 
-    def read_process_input(self, input_file):
-        self.tiles = fdf.read_json_file(input_file,
-         constants_functions.get_region_of_country(input_file))
+    def process_input(self, input_argument):
 
-        self.country_name = os.path.split(input_file)[1][:-5]
+        # option 1: have a .json file as input parameter
+        if os.path.isfile(input_argument):
+            self.tiles = fdf.read_json_file(input_argument)
+        # option 2: input a country as parameter, e.g. germany
+        else:
+            json_file_path = os.path.join (fdf.COMMON_DIR,
+                'json', constants_functions.get_region_of_country(input_argument), input_argument + '.json')
+            self.tiles = fdf.read_json_file(json_file_path)
+
+        # country name is the input argument or the last part of the input filename
+        self.country_name = input_argument
         if self.country_name == '':
-            self.country_name = input_file
+            self.country_name = os.path.split(input_argument)[1][:-5]
 
         # Build list of countries needed
         self.o_downloader.calc_border_countries(self.tiles)
 
-        force_processing = self.o_downloader.download_if_needed()
+
+    def check_and_download_files(self):
+
+        force_processing = self.o_downloader.download_files_if_needed()
         if force_processing is True:
             self.force_processing = force_processing
 
