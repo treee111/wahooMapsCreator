@@ -11,16 +11,14 @@ import time
 import requests
 from os import sys, path
 sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
-from common_resources import file_directory_functions
+from common_resources import file_directory_functions as fdf
 from common_resources import constants_functions
 
-def check_if_file_is_outdated(file_creation_timestamp, max_days_old):
+def check_older_than_x_days(file_creation_timestamp, max_days_old):
     to_old_timestamp = time.time() - 60 * 60 * 24 * max_days_old
-    
-    if file_creation_timestamp < to_old_timestamp:
-        return True
-    else:
-        return False  
+
+    return bool(file_creation_timestamp < to_old_timestamp)
+
 
 class Downloader:
     "This is the class to check and download maps / artifacts"
@@ -52,7 +50,7 @@ class Downloader:
         print('# Check countries .osm.pbf files: OK')
 
         if self.force_processing is True:
-            file_directory_functions.create_empty_directories(self.tiles_from_json)
+            fdf.create_empty_directories(self.tiles_from_json)
             return 1
 
 
@@ -61,16 +59,16 @@ class Downloader:
         print('\n# check land_polygons.shp file')
         # Check for expired land polygons file and delete it
         try:
-            if check_if_file_is_outdated(os.path.getctime(file_directory_functions.LAND_POLYGONS_PATH), self.max_days_old):
+            if check_older_than_x_days(os.path.getctime(fdf.LAND_POLYGONS_PATH), self.max_days_old):
                 print ('# Deleting old land polygons file')
-                os.remove(file_directory_functions.LAND_POLYGONS_PATH)
+                os.remove(fdf.LAND_POLYGONS_PATH)
                 need_to_download = True
 
         except:
             need_to_download = True
 
         # if landpoligony file does not exists --> download
-        if not os.path.exists(file_directory_functions.LAND_POLYGONS_PATH) or not os.path.isfile(file_directory_functions.LAND_POLYGONS_PATH):
+        if not os.path.exists(fdf.LAND_POLYGONS_PATH) or not os.path.isfile(fdf.LAND_POLYGONS_PATH):
             need_to_download = True
             # logging
             print('# land_polygons.shp file needs to be downloaded')
@@ -85,21 +83,21 @@ class Downloader:
         if request_land_polygons.status_code != 200:
             print('failed to find or download land polygons file')
             sys.exit()
-        land_poligons_dl=open(os.path.join (file_directory_functions.COMMON_DIR,
+        land_poligons_dl=open(os.path.join (fdf.COMMON_DIR,
             'land-polygons-split-4326.zip'), 'wb')
         for chunk in request_land_polygons.iter_content(chunk_size=1024*100):
             land_poligons_dl.write(chunk)
         land_poligons_dl.close()
 
         # unpack it - should work on macOS and Windows
-        file_directory_functions.unzip(os.path.join (file_directory_functions.COMMON_DIR,
-            'land-polygons-split-4326.zip'), file_directory_functions.COMMON_DIR)
-        os.remove(os.path.join (file_directory_functions.COMMON_DIR,
+        fdf.unzip(os.path.join (fdf.COMMON_DIR,
+            'land-polygons-split-4326.zip'), fdf.COMMON_DIR)
+        os.remove(os.path.join (fdf.COMMON_DIR,
             'land-polygons-split-4326.zip'))
 
         # Check if land polygons file exists
-        if not os.path.isfile(file_directory_functions.LAND_POLYGONS_PATH):
-            print(f'! failed to find {file_directory_functions.LAND_POLYGONS_PATH}')
+        if not os.path.isfile(fdf.LAND_POLYGONS_PATH):
+            print(f'! failed to find {fdf.LAND_POLYGONS_PATH}')
             sys.exit()
 
 
@@ -120,18 +118,18 @@ class Downloader:
 
         # Check for expired maps and delete them
         print(f'+ Checking for old maps and remove them and for mapfile for  {country}')
-        
+
         for country in border_countries:
             # print(f'+ mapfile for {c}')
 
             # check for already existing .osm.pbf file
-            map_file_path = glob.glob(f'{file_directory_functions.MAPS_DIR}/{country}*.osm.pbf')
+            map_file_path = glob.glob(f'{fdf.MAPS_DIR}/{country}*.osm.pbf')
             if len(map_file_path) != 1:
-                map_file_path = glob.glob(f'{file_directory_functions.MAPS_DIR}/**/{country}*.osm.pbf')
+                map_file_path = glob.glob(f'{fdf.MAPS_DIR}/**/{country}*.osm.pbf')
 
             # delete .osm.pbf file if out of date
             if len(map_file_path) == 1 and os.path.isfile(map_file_path[0]):
-                if check_if_file_is_outdated(os.path.getctime(map_file_path[0]), self.max_days_old) or self.force_download is True:
+                if check_older_than_x_days(os.path.getctime(map_file_path[0]), self.max_days_old) or self.force_download is True:
                     print(f'+ mapfile for {country}: deleted')
                     os.remove(map_file_path[0])
                     need_to_download = True
@@ -153,7 +151,7 @@ class Downloader:
 
     def download_osm_pbf_file(self):
 
-        file_directory_functions.create_empty_directories(self.tiles_from_json)
+        fdf.create_empty_directories(self.tiles_from_json)
 
         for country in self.border_countries:
             try:
@@ -179,11 +177,11 @@ class Downloader:
         if request_geofabrik.status_code != 200:
             print(f'! failed to find or download country: {country}')
             sys.exit()
-        download=open(os.path.join (file_directory_functions.MAPS_DIR, f'{country}' + '-latest.osm.pbf'), 'wb')
+        download=open(os.path.join (fdf.MAPS_DIR, f'{country}' + '-latest.osm.pbf'), 'wb')
         for chunk in request_geofabrik.iter_content(chunk_size=1024*100):
             download.write(chunk)
         download.close()
-        map_file_path = [os.path.join (file_directory_functions.MAPS_DIR, f'{country}' + '-latest.osm.pbf')]
+        map_file_path = [os.path.join (fdf.MAPS_DIR, f'{country}' + '-latest.osm.pbf')]
         print(f'+ Map of {country} downloaded.')
 
         return map_file_path

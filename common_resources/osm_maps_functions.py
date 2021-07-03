@@ -13,7 +13,7 @@ from os import sys, path
 
 from common_resources import downloader
 sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
-from common_resources import file_directory_functions
+from common_resources import file_directory_functions as fdf
 from common_resources import constants
 from common_resources import constants_functions
 
@@ -41,7 +41,7 @@ class OsmMaps:
 
 
     def read_process_input(self, input_file):
-        self.tiles = file_directory_functions.read_json_file(input_file,
+        self.tiles = fdf.read_json_file(input_file,
          constants_functions.get_region_of_country(input_file))
 
         self.country_name = os.path.split(input_file)[1][:-5]
@@ -63,16 +63,16 @@ class OsmMaps:
         if platform.system() == "Windows":
             for key, val in self.border_countries.items():
             # print(key, val)
-                out_file = os.path.join(file_directory_functions.OUTPUT_DIR,
+                out_file = os.path.join(fdf.OUTPUT_DIR,
                  f'filtered-{key}.osm.pbf')
-                out_file_o5m = os.path.join(file_directory_functions.OUTPUT_DIR,
+                out_file_o5m = os.path.join(fdf.OUTPUT_DIR,
                  f'outFile-{key}.o5m')
-                out_file_o5m_filtered = os.path.join(file_directory_functions.OUTPUT_DIR,
+                out_file_o5m_filtered = os.path.join(fdf.OUTPUT_DIR,
                  f'outFileFiltered-{key}.o5m')
 
                 if not os.path.isfile(out_file) or self.force_processing is True:
                     print(f'\n+ Converting map of {key} to o5m format')
-                    cmd = [os.path.join(file_directory_functions.TOOLING_WIN_DIR, 'osmconvert')]
+                    cmd = [os.path.join(fdf.TOOLING_WIN_DIR, 'osmconvert')]
                     cmd.extend(['-v', '--hash-memory=2500', '--complete-ways', '--complete-multipolygons', '--complete-boundaries', '--drop-author', '--drop-version'])
                     cmd.append(val['map_file'])
                     cmd.append('-o='+out_file_o5m)
@@ -83,7 +83,7 @@ class OsmMaps:
                         sys.exit()
 
                     print(f'\n# Filtering unwanted map objects out of map of {key}')
-                    cmd = [os.path.join(file_directory_functions.TOOLING_WIN_DIR, 'osmfilter')]
+                    cmd = [os.path.join(fdf.TOOLING_WIN_DIR, 'osmfilter')]
                     cmd.append(out_file_o5m)
                     cmd.append('--keep="' + constants.FILTERED_TAGS_WIN + '"')
                     cmd.append('-o=' + out_file_o5m_filtered)
@@ -94,7 +94,7 @@ class OsmMaps:
                         sys.exit()
 
                     print(f'\n# Converting map of {key} back to osm.pbf format')
-                    cmd = [os.path.join(file_directory_functions.TOOLING_WIN_DIR, 'osmconvert'), '-v', '--hash-memory=2500', out_file_o5m_filtered]
+                    cmd = [os.path.join(fdf.TOOLING_WIN_DIR, 'osmconvert'), '-v', '--hash-memory=2500', out_file_o5m_filtered]
                     cmd.append('-o='+out_file)
                     # print(cmd)
                     result = subprocess.run(cmd)
@@ -111,7 +111,7 @@ class OsmMaps:
         else:
             for key, val  in self.border_countries.items():
                 ## print(key, val)
-                out_file = os.path.join(file_directory_functions.OUTPUT_DIR,
+                out_file = os.path.join(fdf.OUTPUT_DIR,
                  f'filtered-{key}.osm.pbf')
                 ## print(outFile)
                 if not os.path.isfile(out_file):
@@ -134,9 +134,9 @@ class OsmMaps:
 
         tile_count = 1
         for tile in self.tiles:
-            land_file = os.path.join(file_directory_functions.OUTPUT_DIR,
+            land_file = os.path.join(fdf.OUTPUT_DIR,
              f'{tile["x"]}', f'{tile["y"]}', 'land.shp')
-            out_file = os.path.join(file_directory_functions.OUTPUT_DIR,
+            out_file = os.path.join(fdf.OUTPUT_DIR,
              f'{tile["x"]}', f'{tile["y"]}', 'land')
 
             if not os.path.isfile(land_file) or self.force_processing is True:
@@ -147,18 +147,18 @@ class OsmMaps:
                             f'{tile["right"]+0.1:.6f}',
                             f'{tile["top"]+0.1:.6f}'])
                 cmd.append(land_file)
-                cmd.append(file_directory_functions.LAND_POLYGONS_PATH)
+                cmd.append(fdf.LAND_POLYGONS_PATH)
                 #print(cmd)
                 subprocess.run(cmd)
 
             if not os.path.isfile(out_file+'1.osm') or self.force_processing is True:
                 # Windows
                 if platform.system() == "Windows":
-                    cmd = ['python', os.path.join(file_directory_functions.COMMON_DIR,
+                    cmd = ['python', os.path.join(fdf.COMMON_DIR,
                      'shape2osm.py'), '-l', out_file, land_file]
                 # Non-Windows
                 else:
-                    cmd = ['python3', os.path.join(file_directory_functions.COMMON_DIR,
+                    cmd = ['python3', os.path.join(fdf.COMMON_DIR,
                      'shape2osm.py'), '-l', out_file, land_file]
                 #print(cmd)
                 subprocess.run(cmd)
@@ -173,11 +173,11 @@ class OsmMaps:
 
         tile_count = 1
         for tile in self.tiles:
-            out_file = os.path.join(file_directory_functions.OUTPUT_DIR,
+            out_file = os.path.join(fdf.OUTPUT_DIR,
              f'{tile["x"]}', f'{tile["y"]}', 'sea.osm')
             if not os.path.isfile(out_file) or self.force_processing is True:
                 print(f'+ Generate sea {tile_count} of {len(self.tiles)} for Coordinates: {tile["x"]} {tile["y"]}')
-                with open(os.path.join(file_directory_functions.COMMON_DIR, 'sea.osm')) as sea_file:
+                with open(os.path.join(fdf.COMMON_DIR, 'sea.osm')) as sea_file:
                     sea_data = sea_file.read()
 
                     sea_data = sea_data.replace('$LEFT', f'{tile["left"]-0.1:.6f}')
@@ -201,7 +201,7 @@ class OsmMaps:
             for country in tile['countries']:
                 print(f'+ Split filtered country {country}')
                 print(f'+ Splitting tile {tile_count} of {len(self.tiles)} for Coordinates: {tile["x"]},{tile["y"]} from map of {country}')
-                out_file = os.path.join(file_directory_functions.OUTPUT_DIR,
+                out_file = os.path.join(fdf.OUTPUT_DIR,
                  f'{tile["x"]}', f'{tile["y"]}', f'split-{country}.osm.pbf')
                 if not os.path.isfile(out_file) or self.force_processing is True:
                     # Windows
@@ -210,7 +210,7 @@ class OsmMaps:
                         #cmd.extend(['left='+f'{tile["left"]}', 'bottom='+f'{tile["bottom"]}', 'right='+f'{tile["right"]}', 'top='+f'{tile["top"]}', '--buffer', 'bufferCapacity=12000', '--wb'])
                         #cmd.append('file='+outFile)
                         #cmd.append('omitmetadata=true')
-                        cmd = [os.path.join(file_directory_functions.TOOLING_WIN_DIR, 'osmconvert'), '-v', '--hash-memory=2500']
+                        cmd = [os.path.join(fdf.TOOLING_WIN_DIR, 'osmconvert'), '-v', '--hash-memory=2500']
                         cmd.append('-b='+f'{tile["left"]}' + ',' + f'{tile["bottom"]}' + ',' + f'{tile["right"]}' + ',' + f'{tile["top"]}')
                         cmd.extend(['--complete-ways', '--complete-multipolygons', '--complete-boundaries'])
                         cmd.append(self.border_countries[country]['filtered_file'])
@@ -245,30 +245,30 @@ class OsmMaps:
         tile_count = 1
         for tile in self.tiles:
             print(f'+ Merging tiles for tile {tile_count} of {len(self.tiles)} for Coordinates: {tile["x"]},{tile["y"]}')
-            out_file = os.path.join(file_directory_functions.OUTPUT_DIR,
+            out_file = os.path.join(fdf.OUTPUT_DIR,
              f'{tile["x"]}', f'{tile["y"]}', 'merged.osm.pbf')
             if not os.path.isfile(out_file) or self.force_processing is True:
                 # Windows
                 if platform.system() == "Windows":
-                    cmd = [os.path.join (file_directory_functions.COMMON_DIR,
+                    cmd = [os.path.join (fdf.COMMON_DIR,
                      'Osmosis', 'bin', 'osmosis.bat')]
                     loop=0
                     for country in tile['countries']:
                         cmd.append('--rbf')
-                        cmd.append(os.path.join(file_directory_functions.OUTPUT_DIR,
+                        cmd.append(os.path.join(fdf.OUTPUT_DIR,
                          f'{tile["x"]}', f'{tile["y"]}', f'split-{country}.osm.pbf'))
                         cmd.append('workers='+ self.workers)
                         if loop > 0:
                             cmd.append('--merge')
                         loop+=1
-                    land_files = glob.glob(os.path.join(file_directory_functions.OUTPUT_DIR,
+                    land_files = glob.glob(os.path.join(fdf.OUTPUT_DIR,
                      f'{tile["x"]}', f'{tile["y"]}', 'land*.osm'))
                     for land in land_files:
-                        cmd.extend(['--rx', 'file='+os.path.join(file_directory_functions.OUTPUT_DIR,
+                        cmd.extend(['--rx', 'file='+os.path.join(fdf.OUTPUT_DIR,
                          f'{tile["x"]}', f'{tile["y"]}', f'{land}'), '--s', '--m'])
-                    cmd.extend(['--rx', 'file='+os.path.join(file_directory_functions.OUTPUT_DIR,
+                    cmd.extend(['--rx', 'file='+os.path.join(fdf.OUTPUT_DIR,
                      f'{tile["x"]}', f'{tile["y"]}', 'sea.osm'), '--s', '--m'])
-                    cmd.extend(['--tag-transform', 'file=' + os.path.join (file_directory_functions.COMMON_DIR, 'tunnel-transform.xml'), '--wb', out_file, 'omitmetadata=true'])
+                    cmd.extend(['--tag-transform', 'file=' + os.path.join (fdf.COMMON_DIR, 'tunnel-transform.xml'), '--wb', out_file, 'omitmetadata=true'])
 
                     #print(cmd)
                     result = subprocess.run(cmd)
@@ -279,12 +279,12 @@ class OsmMaps:
                 else:
                     cmd = ['osmium', 'merge', '--overwrite']
                     for country in tile['countries']:
-                        cmd.append(os.path.join(file_directory_functions.OUTPUT_DIR,
+                        cmd.append(os.path.join(fdf.OUTPUT_DIR,
                          f'{tile["x"]}', f'{tile["y"]}', f'split-{country}.osm.pbf'))
 
-                    cmd.append(os.path.join(file_directory_functions.OUTPUT_DIR,
+                    cmd.append(os.path.join(fdf.OUTPUT_DIR,
                      f'{tile["x"]}', f'{tile["y"]}', 'land1.osm'))
-                    cmd.append(os.path.join(file_directory_functions.OUTPUT_DIR,
+                    cmd.append(os.path.join(fdf.OUTPUT_DIR,
                      f'{tile["x"]}', f'{tile["y"]}', 'sea.osm'))
                     cmd.extend(['-o', out_file])
 
@@ -301,15 +301,15 @@ class OsmMaps:
         tile_count = 1
         for tile in self.tiles:
             print(f'+ Creating map file for tile {tile_count} of {len(self.tiles)} for Coordinates: {tile["x"]}, {tile["y"]}')
-            out_file = os.path.join(file_directory_functions.OUTPUT_DIR,
+            out_file = os.path.join(fdf.OUTPUT_DIR,
              f'{tile["x"]}', f'{tile["y"]}.map')
             if not os.path.isfile(out_file+'.lzma') or self.force_processing is True:
-                merged_file = os.path.join(file_directory_functions.OUTPUT_DIR,
+                merged_file = os.path.join(fdf.OUTPUT_DIR,
                  f'{tile["x"]}', f'{tile["y"]}', 'merged.osm.pbf')
 
                 # Windows
                 if platform.system() == "Windows":
-                    cmd = [os.path.join (file_directory_functions.COMMON_DIR, 'Osmosis', 'bin', 'osmosis.bat'), '--rbf', merged_file, 'workers=' + self.workers, '--mw', 'file='+out_file]
+                    cmd = [os.path.join (fdf.COMMON_DIR, 'Osmosis', 'bin', 'osmosis.bat'), '--rbf', merged_file, 'workers=' + self.workers, '--mw', 'file='+out_file]
                 # Non-Windows
                 else:
                     cmd = ['osmosis', '--rb', merged_file, '--mw', 'file='+out_file]
@@ -318,7 +318,7 @@ class OsmMaps:
                 cmd.append('zoom-interval-conf=10,0,17')
                 cmd.append('threads='+ self.threads)
                 # should work on macOS and Windows
-                cmd.append(f'tag-conf-file={os.path.join(file_directory_functions.COMMON_DIR, "tag-wahoo.xml")}')
+                cmd.append(f'tag-conf-file={os.path.join(fdf.COMMON_DIR, "tag-wahoo.xml")}')
                 # print(cmd)
                 result = subprocess.run(cmd)
                 if result.returncode != 0:
@@ -327,7 +327,7 @@ class OsmMaps:
 
                 # Windows
                 if platform.system() == "Windows":
-                    cmd = [os.path.join(file_directory_functions.TOOLING_WIN_DIR, 'lzma'), 'e', out_file, out_file+'.lzma', f'-mt{self.threads}', '-d27', '-fb273', '-eos']
+                    cmd = [os.path.join(fdf.TOOLING_WIN_DIR, 'lzma'), 'e', out_file, out_file+'.lzma', f'-mt{self.threads}', '-d27', '-fb273', '-eos']
                 # Non-Windows
                 else:
                     cmd = ['lzma', out_file]
@@ -351,7 +351,7 @@ class OsmMaps:
         # Make Wahoo zip file
         # Windows
         if platform.system() == "Windows":
-            path_7za = os.path.join(file_directory_functions.TOOLING_WIN_DIR, '7za')
+            path_7za = os.path.join(fdf.TOOLING_WIN_DIR, '7za')
             cmd = [path_7za, 'a', '-tzip', '-m0=lzma', '-mx9', '-mfb=273', '-md=1536m', self.country_name + '.zip']
             #cmd = ['7za', 'a', '-tzip', '-m0=lzma', countryName[1] + '.zip']
         # Non-Windows
@@ -361,7 +361,7 @@ class OsmMaps:
         for tile in self.tiles:
             cmd.append(os.path.join(f'{tile["x"]}', f'{tile["y"]}.map.lzma'))
         #print(cmd)
-        subprocess.run(cmd, cwd=file_directory_functions.OUTPUT_DIR)
+        subprocess.run(cmd, cwd=fdf.OUTPUT_DIR)
 
         # logging
         print('# Zip .map.lzma files: OK \n')
@@ -372,7 +372,7 @@ class OsmMaps:
         if self.save_cruiser == 1:
             # Windows
             if platform.system() == "Windows":
-                cmd = [os.path.join(file_directory_functions.TOOLING_WIN_DIR, '7za'), 'a', '-tzip', '-m0=lzma', self.country_name + '-maps.zip']
+                cmd = [os.path.join(fdf.TOOLING_WIN_DIR, '7za'), 'a', '-tzip', '-m0=lzma', self.country_name + '-maps.zip']
             # Non-Windows
             else:
                 cmd = ['zip', '-r', self.country_name + '-maps.zip']
@@ -380,4 +380,4 @@ class OsmMaps:
             for tile in self.tiles:
                 cmd.append(os.path.join(f'{tile["x"]}', f'{tile["y"]}.map'))
             #print(cmd)
-            subprocess.run(cmd, cwd=file_directory_functions.OUTPUT_DIR)
+            subprocess.run(cmd, cwd=fdf.OUTPUT_DIR)
