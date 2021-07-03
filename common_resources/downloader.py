@@ -26,17 +26,18 @@ class Downloader:
     def __init__(self, Max_Days_Old, Force_Download):
         self.max_days_old = Max_Days_Old
         self.force_download = Force_Download
-        self.force_processing = False
+        # self.force_processing = False
         self.tiles_from_json = []
         self.border_countries = {}
 
 
     def download_if_needed(self, tiles_from_json):
         self.tiles_from_json = tiles_from_json
+        force_processing = False
 
         if self.check_poligons_file() is True or self.force_download is True:
             self.download_land_poligons_file()
-            self.force_processing = True
+            force_processing = True
 
          # logging
         print('# check land_polygons.shp file: OK')
@@ -44,14 +45,15 @@ class Downloader:
 
         if self.check_osm_pbf_file() is True:
             self.download_osm_pbf_file()
-            self.force_processing = True
+            force_processing = True
 
         # logging
         print('# Check countries .osm.pbf files: OK')
 
-        if self.force_processing is True:
+        if force_processing is True:
             fdf.create_empty_directories(self.tiles_from_json)
-            return 1
+
+        return force_processing
 
 
     def check_poligons_file(self):
