@@ -137,8 +137,6 @@ class Downloader:
             if len(map_file_path) != 1:
                 map_file_path = glob.glob(f'{fdf.MAPS_DIR}/**/{country}*.osm.pbf')
 
-            self.border_countries[country] = map_file_path[0]
-
             # delete .osm.pbf file if out of date
             if len(map_file_path) == 1 and os.path.isfile(map_file_path[0]):
                 if check_older_than_x_days(os.path.getctime(map_file_path[0]), self.max_days_old) or self.force_download is True:
@@ -158,24 +156,6 @@ class Downloader:
         # self.border_countries = border_countries
 
         return need_to_download
-
-    def calc_border_countries(self, tiles_from_json):
-        """
-        calculate relevant border countries for the given tiles
-        """
-        self.tiles_from_json = tiles_from_json
-
-        # Build list of countries needed
-        self.border_countries = {}
-        for tile in self.tiles_from_json:
-            for country in tile['countries']:
-                if country not in self.border_countries:
-                    self.border_countries[country] = {}
-
-        # logging
-        print(f'+ Count of Border countries: {len(self.border_countries)}')
-        for country in self.border_countries:
-            print(f'+ Border country: {country}')
 
 
     def download_osm_pbf_file(self):

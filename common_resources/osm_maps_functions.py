@@ -61,7 +61,7 @@ class OsmMaps:
             self.country_name = os.path.split(input_argument)[1][:-5]
 
         # Build list of countries needed
-        self.o_downloader.calc_border_countries(self.tiles)
+        self.calc_border_countries()
 
 
     def check_and_download_files(self):
@@ -69,11 +69,31 @@ class OsmMaps:
         trigger check of land_poligons and OSM map files if not existing or are not up-to-date
         """
 
+        self.o_downloader.tiles_from_json = self.tiles
+        self.o_downloader.border_countries = self.border_countries
         force_processing = self.o_downloader.check_and_download_files_if_needed()
         if force_processing is True:
             self.force_processing = force_processing
 
         self.border_countries = self.o_downloader.border_countries
+
+
+    def calc_border_countries(self):
+        """
+        calculate relevant border countries for the given tiles
+        """
+
+        # Build list of countries needed
+        self.border_countries = {}
+        for tile in self.tiles:
+            for country in tile['countries']:
+                if country not in self.border_countries:
+                    self.border_countries[country] = {}
+
+        # logging
+        print(f'+ Count of Border countries: {len(self.border_countries)}')
+        for country in self.border_countries:
+            print(f'+ Border country: {country}')
 
 
     def filter_tags_from_country_osm_pbf_files(self):
