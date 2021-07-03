@@ -49,7 +49,7 @@ class OsmMaps:
             self.country_name = input_file
 
         force_processing = self.o_downloader.download_if_needed(self.tiles)
-        if force_processing == 1:
+        if force_processing is True:
             self.force_processing = force_processing
 
         self.border_countries = self.o_downloader.border_countries
@@ -70,7 +70,7 @@ class OsmMaps:
                 out_file_o5m_filtered = os.path.join(file_directory_functions.OUTPUT_DIR,
                  f'outFileFiltered-{key}.o5m')
 
-                if not os.path.isfile(out_file) or self.force_processing == 1:
+                if not os.path.isfile(out_file) or self.force_processing is True:
                     print(f'\n+ Converting map of {key} to o5m format')
                     cmd = [os.path.join(file_directory_functions.TOOLING_WIN_DIR, 'osmconvert')]
                     cmd.extend(['-v', '--hash-memory=2500', '--complete-ways', '--complete-multipolygons', '--complete-boundaries', '--drop-author', '--drop-version'])
@@ -139,7 +139,7 @@ class OsmMaps:
             out_file = os.path.join(file_directory_functions.OUTPUT_DIR,
              f'{tile["x"]}', f'{tile["y"]}', 'land')
 
-            if not os.path.isfile(land_file) or self.force_processing == 1:
+            if not os.path.isfile(land_file) or self.force_processing is True:
                 print(f'+ Generate land {tile_count} of {len(self.tiles)} for Coordinates: {tile["x"]} {tile["y"]}')
                 cmd = ['ogr2ogr', '-overwrite', '-skipfailures']
                 cmd.extend(['-spat', f'{tile["left"]-0.1:.6f}',
@@ -151,7 +151,7 @@ class OsmMaps:
                 #print(cmd)
                 subprocess.run(cmd)
 
-            if not os.path.isfile(out_file+'1.osm') or self.force_processing == 1:
+            if not os.path.isfile(out_file+'1.osm') or self.force_processing is True:
                 # Windows
                 if platform.system() == "Windows":
                     cmd = ['python', os.path.join(file_directory_functions.COMMON_DIR,
@@ -175,7 +175,7 @@ class OsmMaps:
         for tile in self.tiles:
             out_file = os.path.join(file_directory_functions.OUTPUT_DIR,
              f'{tile["x"]}', f'{tile["y"]}', 'sea.osm')
-            if not os.path.isfile(out_file) or self.force_processing == 1:
+            if not os.path.isfile(out_file) or self.force_processing is True:
                 print(f'+ Generate sea {tile_count} of {len(self.tiles)} for Coordinates: {tile["x"]} {tile["y"]}')
                 with open(os.path.join(file_directory_functions.COMMON_DIR, 'sea.osm')) as sea_file:
                     sea_data = sea_file.read()
@@ -203,7 +203,7 @@ class OsmMaps:
                 print(f'+ Splitting tile {tile_count} of {len(self.tiles)} for Coordinates: {tile["x"]},{tile["y"]} from map of {country}')
                 out_file = os.path.join(file_directory_functions.OUTPUT_DIR,
                  f'{tile["x"]}', f'{tile["y"]}', f'split-{country}.osm.pbf')
-                if not os.path.isfile(out_file) or self.force_processing == 1:
+                if not os.path.isfile(out_file) or self.force_processing is True:
                     # Windows
                     if platform.system() == "Windows":
                         #cmd = ['.\\osmosis\\bin\\osmosis.bat', '--rbf',border_countries[c]['filtered_file'],'workers='+workers, '--buffer', 'bufferCapacity=12000', '--bounding-box', 'completeWays=yes', 'completeRelations=yes']
@@ -247,7 +247,7 @@ class OsmMaps:
             print(f'+ Merging tiles for tile {tile_count} of {len(self.tiles)} for Coordinates: {tile["x"]},{tile["y"]}')
             out_file = os.path.join(file_directory_functions.OUTPUT_DIR,
              f'{tile["x"]}', f'{tile["y"]}', 'merged.osm.pbf')
-            if not os.path.isfile(out_file) or self.force_processing == 1:
+            if not os.path.isfile(out_file) or self.force_processing is True:
                 # Windows
                 if platform.system() == "Windows":
                     cmd = [os.path.join (file_directory_functions.COMMON_DIR,
@@ -303,7 +303,7 @@ class OsmMaps:
             print(f'+ Creating map file for tile {tile_count} of {len(self.tiles)} for Coordinates: {tile["x"]}, {tile["y"]}')
             out_file = os.path.join(file_directory_functions.OUTPUT_DIR,
              f'{tile["x"]}', f'{tile["y"]}.map')
-            if not os.path.isfile(out_file+'.lzma') or self.force_processing == 1:
+            if not os.path.isfile(out_file+'.lzma') or self.force_processing is True:
                 merged_file = os.path.join(file_directory_functions.OUTPUT_DIR,
                  f'{tile["x"]}', f'{tile["y"]}', 'merged.osm.pbf')
 

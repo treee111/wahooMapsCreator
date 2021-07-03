@@ -131,7 +131,7 @@ class Downloader:
 
             # delete .osm.pbf file if out of date
             if len(map_file_path) == 1 and os.path.isfile(map_file_path[0]):
-                if check_if_file_is_outdated(os.path.getctime(map_file_path[0]), self.max_days_old) or self.force_download == 1:
+                if check_if_file_is_outdated(os.path.getctime(map_file_path[0]), self.max_days_old) or self.force_download is True:
                     print(f'+ mapfile for {country}: deleted')
                     os.remove(map_file_path[0])
                     need_to_download = True
