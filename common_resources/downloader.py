@@ -31,8 +31,7 @@ class Downloader:
         self.border_countries = {}
 
 
-    def download_if_needed(self, tiles_from_json):
-        self.tiles_from_json = tiles_from_json
+    def download_if_needed(self):
         force_processing = False
 
         if self.check_poligons_file() is True or self.force_download is True:
@@ -59,6 +58,7 @@ class Downloader:
     def check_poligons_file(self):
         need_to_download = False
         print('\n# check land_polygons.shp file')
+
         # Check for expired land polygons file and delete it
         try:
             if check_older_than_x_days(os.path.getctime(fdf.LAND_POLYGONS_PATH), self.max_days_old):
@@ -69,7 +69,7 @@ class Downloader:
         except:
             need_to_download = True
 
-        # if landpoligony file does not exists --> download
+        # if land poligons file does not exists --> download
         if not os.path.exists(fdf.LAND_POLYGONS_PATH) or not os.path.isfile(fdf.LAND_POLYGONS_PATH):
             need_to_download = True
             # logging
@@ -106,17 +106,17 @@ class Downloader:
     def check_osm_pbf_file(self):
         need_to_download = False
         print('\n# check countries .osm.pbf files')
-        # Build list of countries needed
-        border_countries = self.calc_border_countries()
 
         # Check for expired maps and delete them
-        print(f'+ Checking for old maps and remove them')
+        print('+ Checking for old maps and remove them')
 
-        for country in border_countries:
+        for country in self.border_countries:
             # check for already existing .osm.pbf file
             map_file_path = glob.glob(f'{fdf.MAPS_DIR}/{country}*.osm.pbf')
             if len(map_file_path) != 1:
                 map_file_path = glob.glob(f'{fdf.MAPS_DIR}/**/{country}*.osm.pbf')
+            
+            self.border_countries[country] = map_file_path[0]
 
             # delete .osm.pbf file if out of date
             if len(map_file_path) == 1 and os.path.isfile(map_file_path[0]):
@@ -125,33 +125,33 @@ class Downloader:
                     os.remove(map_file_path[0])
                     need_to_download = True
                 else:
-                    border_countries[country] = {'map_file':map_file_path[0]}
+                    self.border_countries[country] = {'map_file':map_file_path[0]}
                     print(f'+ mapfile for {country}: up-to-date')
 
             # mark country .osm.pbf file for download if there exists no file or it is no file
-            map_file_path = border_countries[country].get('map_file')
+            map_file_path = self.border_countries[country].get('map_file')
             if map_file_path is None or ( not os.path.isfile(map_file_path) or self.force_download is True ):
-                border_countries[country]['download'] = True
+                self.border_countries[country]['download'] = True
                 need_to_download = True
 
-        self.border_countries = border_countries
+        # self.border_countries = border_countries
 
         return need_to_download
 
-    def calc_border_countries(self):
+    def calc_border_countries(self, tiles_from_json):
+        self.tiles_from_json = tiles_from_json
+
         # Build list of countries needed
-        border_countries = {}
+        self.border_countries = {}
         for tile in self.tiles_from_json:
             for country in tile['countries']:
-                if country not in border_countries:
-                    border_countries[country] = {}
+                if country not in self.border_countries:
+                    self.border_countries[country] = {}
 
         # logging
-        print(f'+ Count of Border countries: {len(border_countries)}')
-        for country in border_countries:
+        print(f'+ Count of Border countries: {len(self.border_countries)}')
+        for country in self.border_countries:
             print(f'+ Border country: {country}')
-
-        return border_countries
 
 
     def download_osm_pbf_file(self):

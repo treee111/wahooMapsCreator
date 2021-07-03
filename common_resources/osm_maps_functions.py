@@ -27,7 +27,6 @@ class OsmMaps:
 
     def __init__(self, Max_Days_Old, Force_Download,
      Force_Processing, workers, threads, Save_Cruiser):
-        #self.max_days_old = Max_Days_Old
         self.force_processing = Force_Processing
         self.workers = workers
         self.threads = threads
@@ -45,10 +44,13 @@ class OsmMaps:
          constants_functions.get_region_of_country(input_file))
 
         self.country_name = os.path.split(input_file)[1][:-5]
-        if self.country_name is '':
+        if self.country_name == '':
             self.country_name = input_file
 
-        force_processing = self.o_downloader.download_if_needed(self.tiles)
+        # Build list of countries needed
+        self.o_downloader.calc_border_countries(self.tiles)
+
+        force_processing = self.o_downloader.download_if_needed()
         if force_processing is True:
             self.force_processing = force_processing
 
