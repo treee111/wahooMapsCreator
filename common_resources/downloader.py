@@ -107,23 +107,12 @@ class Downloader:
         need_to_download = False
         print('\n# check countries .osm.pbf files')
         # Build list of countries needed
-        border_countries = {}
-        for tile in self.tiles_from_json:
-            for country in tile['countries']:
-                if country not in border_countries:
-                    border_countries[country] = {}
-
-        # logging
-        print(f'+ Border countries of json file: {len(border_countries)}')
-        for country in border_countries:
-            print(f'+ Border country: {country}')
+        border_countries = self.calc_border_countries()
 
         # Check for expired maps and delete them
-        print(f'+ Checking for old maps and remove them and for mapfile for  {country}')
+        print(f'+ Checking for old maps and remove them')
 
         for country in border_countries:
-            # print(f'+ mapfile for {c}')
-
             # check for already existing .osm.pbf file
             map_file_path = glob.glob(f'{fdf.MAPS_DIR}/{country}*.osm.pbf')
             if len(map_file_path) != 1:
@@ -139,16 +128,30 @@ class Downloader:
                     border_countries[country] = {'map_file':map_file_path[0]}
                     print(f'+ mapfile for {country}: up-to-date')
 
-            # download country .osm.pbf file if not existing
+            # mark country .osm.pbf file for download if there exists no file or it is no file
             map_file_path = border_countries[country].get('map_file')
             if map_file_path is None or ( not os.path.isfile(map_file_path) or self.force_download is True ):
-                # if there exists no file or it is no file --> download
                 border_countries[country]['download'] = True
                 need_to_download = True
 
         self.border_countries = border_countries
 
         return need_to_download
+
+    def calc_border_countries(self):
+        # Build list of countries needed
+        border_countries = {}
+        for tile in self.tiles_from_json:
+            for country in tile['countries']:
+                if country not in border_countries:
+                    border_countries[country] = {}
+
+        # logging
+        print(f'+ Count of Border countries: {len(border_countries)}')
+        for country in border_countries:
+            print(f'+ Border country: {country}')
+
+        return border_countries
 
 
     def download_osm_pbf_file(self):
