@@ -55,7 +55,8 @@ oOSMmaps = OsmMaps(MAX_DAYS_OLD, FORCE_DOWNLOAD, FORCE_PROCESSING, WORKERS, THRE
 # Read json file
 # Check for expired land polygons file and download, if too old
 # Check for expired .osm.pbf files and download, if too old
-oOSMmaps.read_process_input(sys.argv[1])
+oOSMmaps.process_input(sys.argv[1])
+oOSMmaps.check_and_download_files()
 
 # Filter tags from country osm.pbf files'
 oOSMmaps.filter_tags_from_country_osm_pbf_files()

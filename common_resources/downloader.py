@@ -39,7 +39,7 @@ class Downloader:
         self.border_countries = {}
 
 
-    def download_files_if_needed(self):
+    def check_and_download_files_if_needed(self):
         """
         check land_poligons and OSM map files if not existing or are not up-to-date
         """
@@ -53,7 +53,7 @@ class Downloader:
         print('# check land_polygons.shp file: OK')
 
 
-        if self.check_osm_pbf_file() is True:
+        if self.check_osm_pbf_file() is True or self.force_download is True:
             self.download_osm_pbf_file()
             force_processing = True
 

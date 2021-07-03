@@ -69,7 +69,7 @@ class OsmMaps:
         trigger check of land_poligons and OSM map files if not existing or are not up-to-date
         """
 
-        force_processing = self.o_downloader.download_files_if_needed()
+        force_processing = self.o_downloader.check_and_download_files_if_needed()
         if force_processing is True:
             self.force_processing = force_processing
 
