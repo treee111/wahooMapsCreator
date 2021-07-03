@@ -4,7 +4,24 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## Types of changes
+
+- `Added` for new features.
+- `Changed` for changes in existing functionality.
+- `Deprecated` for soon-to-be removed features.
+- `Removed` for now removed features.
+- `Fixed` for any bug fixes.
+- `Security` in case of vulnerabilities.
+
 ## [Unreleased]
+### Added
+- unittests for downloader.py methods
+### Changed
+- pylint findings corrected
+- a lot of refactored (focus methods)
+- refactor downloader-methods for testing with unittests
+- correctly check force_download and force_processing against boolean
+- fix pylint findings (focus documentation)
 
 ## [0.4.0] - 2021-07-01
 ### Added
