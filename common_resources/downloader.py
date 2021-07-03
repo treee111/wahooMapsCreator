@@ -14,6 +14,14 @@ sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
 from common_resources import file_directory_functions
 from common_resources import constants_functions
 
+def check_if_file_is_outdated(file_creation_timestamp, max_days_old):
+    to_old_timestamp = time.time() - 60 * 60 * 24 * max_days_old
+    
+    if file_creation_timestamp < to_old_timestamp:
+        return True
+    else:
+        return False  
+
 class Downloader:
     "This is the class to check and download maps / artifacts"
 
@@ -52,11 +60,8 @@ class Downloader:
         need_to_download = False
         print('\n# check land_polygons.shp file')
         # Check for expired land polygons file and delete it
-        now = time.time()
-        to_old_timestamp = now - 60 * 60 * 24 * self.max_days_old
         try:
-            file_creation_timestamp = os.path.getctime(file_directory_functions.LAND_POLYGONS_PATH)
-            if file_creation_timestamp < to_old_timestamp:
+            if check_if_file_is_outdated(os.path.getctime(file_directory_functions.LAND_POLYGONS_PATH), self.max_days_old):
                 print ('# Deleting old land polygons file')
                 os.remove(file_directory_functions.LAND_POLYGONS_PATH)
                 need_to_download = True
@@ -115,9 +120,7 @@ class Downloader:
 
         # Check for expired maps and delete them
         print(f'+ Checking for old maps and remove them and for mapfile for  {country}')
-
-        now = time.time()
-        to_old_timestamp = now - 60 * 60 * 24 * self.max_days_old
+        
         for country in border_countries:
             # print(f'+ mapfile for {c}')
 
@@ -128,8 +131,7 @@ class Downloader:
 
             # delete .osm.pbf file if out of date
             if len(map_file_path) == 1 and os.path.isfile(map_file_path[0]):
-                file_creation_timestamp = os.path.getctime(map_file_path[0])
-                if file_creation_timestamp < to_old_timestamp or self.force_download == 1:
+                if check_if_file_is_outdated(os.path.getctime(map_file_path[0]), self.max_days_old) or self.force_download == 1:
                     print(f'+ mapfile for {country}: deleted')
                     os.remove(map_file_path[0])
                     need_to_download = True
