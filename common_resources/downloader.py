@@ -1,3 +1,6 @@
+"""
+functions and object for checking for up-to-date & downloading land_poligons file and OSM maps
+"""
 #!/usr/bin/python
 
 # import official python packages
@@ -6,22 +9,27 @@ import os
 import os.path
 import sys
 import time
+from os import sys, path
 
 # import custom python packages
 import requests
-from os import sys, path
 sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
 from common_resources import file_directory_functions as fdf
 from common_resources import constants_functions
 
 def check_older_than_x_days(file_creation_timestamp, max_days_old):
+    """
+    check if given timestamp is older that given days
+    """
     to_old_timestamp = time.time() - 60 * 60 * 24 * max_days_old
 
     return bool(file_creation_timestamp < to_old_timestamp)
 
 
 class Downloader:
-    "This is the class to check and download maps / artifacts"
+    """
+    This is the class to check and download maps / artifacts"
+    """
 
     def __init__(self, Max_Days_Old, Force_Download):
         self.max_days_old = Max_Days_Old
@@ -32,6 +40,9 @@ class Downloader:
 
 
     def download_files_if_needed(self):
+        """
+        check land_poligons and OSM map files if not existing or are not up-to-date
+        """
         force_processing = False
 
         if self.check_poligons_file() is True or self.force_download is True:
@@ -56,6 +67,9 @@ class Downloader:
 
 
     def check_poligons_file(self):
+        """
+        check if land_poligons file is up-to-date
+        """
         need_to_download = False
         print('\n# check land_polygons.shp file')
 
@@ -79,6 +93,10 @@ class Downloader:
 
 
     def download_land_poligons_file(self):
+        """
+        download land_poligons file
+        """
+
         print('# Downloading land polygons file')
         url = 'https://osmdata.openstreetmap.de/download/land-polygons-split-4326.zip'
         request_land_polygons = requests.get(url, allow_redirects=True, stream = True)
@@ -104,6 +122,9 @@ class Downloader:
 
 
     def check_osm_pbf_file(self):
+        """
+        check if the relevant countries' OSM files are up-to-date
+        """
         need_to_download = False
         print('\n# check countries .osm.pbf files')
 
@@ -115,7 +136,7 @@ class Downloader:
             map_file_path = glob.glob(f'{fdf.MAPS_DIR}/{country}*.osm.pbf')
             if len(map_file_path) != 1:
                 map_file_path = glob.glob(f'{fdf.MAPS_DIR}/**/{country}*.osm.pbf')
-            
+
             self.border_countries[country] = map_file_path[0]
 
             # delete .osm.pbf file if out of date
@@ -139,6 +160,9 @@ class Downloader:
         return need_to_download
 
     def calc_border_countries(self, tiles_from_json):
+        """
+        calculate relevant border countries for the given tiles
+        """
         self.tiles_from_json = tiles_from_json
 
         # Build list of countries needed
@@ -155,6 +179,9 @@ class Downloader:
 
 
     def download_osm_pbf_file(self):
+        """
+        trigger download of relevant countries' OSM files
+        """
 
         fdf.create_empty_directories(self.tiles_from_json)
 
@@ -167,6 +194,9 @@ class Downloader:
                 pass
 
     def download_map(self, country):
+        """
+        download a countries' OSM file
+        """
         print(f'+ Trying to download missing map of {country}.')
 
         # get Geofabrik region of country

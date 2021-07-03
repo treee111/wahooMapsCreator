@@ -1,3 +1,6 @@
+"""
+constants, functions and object for file-system operations
+"""
 #!/usr/bin/python
 
 # import official python packages
@@ -10,6 +13,9 @@ import zipfile
 
 
 def get_git_root():
+    """
+    get the root directory of the git repository
+    """
     return subprocess.Popen(['git', 'rev-parse', '--show-toplevel'],
      stdout=subprocess.PIPE).communicate()[0].rstrip().decode('utf-8')
 
@@ -24,6 +30,9 @@ TOOLING_WIN_DIR = os.path.join(ROOT_DIR, 'tooling_windows')
 LAND_POLYGONS_PATH = os.path.join(COMMON_DIR, 'land-polygons-split-4326', 'land_polygons.shp')
 
 def unzip(source_filename, dest_dir):
+    """
+    unzip the given file into the given directory
+    """
     with zipfile.ZipFile(source_filename) as zip_file:
         for member in zip_file.infolist():
             # Path traversal defense copied from
@@ -45,6 +54,9 @@ def unzip(source_filename, dest_dir):
 
 
 def create_empty_directories(tiles_from_json):
+    """
+    create empty directory for the files
+    """
     for tile in tiles_from_json:
         outdir = os.path.join(OUTPUT_DIR, f'{tile["x"]}', f'{tile["y"]}')
         if not os.path.isdir(outdir):
@@ -52,6 +64,9 @@ def create_empty_directories(tiles_from_json):
 
 
 def read_json_file(json_file_path):
+    """
+    read the tiles from the given json file
+    """
     print('\n# Read json file')
 
     with open(json_file_path) as json_file:
@@ -68,7 +83,9 @@ def read_json_file(json_file_path):
     return tiles_from_json
 
 class FileDir:
-    "This is the class to check and download maps / artifacts"
+    """
+    this is the class to check and download maps / artifacts
+    """
 
     def __init__(self, inputFile, input_region):
         self.input_argument1 = inputFile

@@ -1,3 +1,6 @@
+"""
+executable file to create up-to-date map-files for the Wahoo ELEMNT and Wahoo ELEMNT BOLT
+"""
 #!/usr/bin/python
 
 # import official python packages

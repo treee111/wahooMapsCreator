@@ -1,3 +1,6 @@
+"""
+functions and object for managing OSM maps
+"""
 #!/usr/bin/python
 
 # import official python packages
@@ -11,19 +14,18 @@ import platform
 # import custom python packages
 from os import sys, path
 
-from common_resources import downloader
 sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
 from common_resources import file_directory_functions as fdf
 from common_resources import constants
 from common_resources import constants_functions
 
-from common_resources.file_directory_functions import FileDir
 from common_resources.downloader import Downloader
 
 
 class OsmMaps:
-    "This is a OSM data class"
-
+    """
+    This is a OSM data class
+    """
 
     def __init__(self, Max_Days_Old, Force_Download,
      Force_Processing, workers, threads, Save_Cruiser):
@@ -40,6 +42,9 @@ class OsmMaps:
 
 
     def process_input(self, input_argument):
+        """
+        get relevant tiles for given input and calc border countries of these tiles
+        """
 
         # option 1: have a .json file as input parameter
         if os.path.isfile(input_argument):
@@ -60,6 +65,9 @@ class OsmMaps:
 
 
     def check_and_download_files(self):
+        """
+        trigger check of land_poligons and OSM map files if not existing or are not up-to-date
+        """
 
         force_processing = self.o_downloader.download_files_if_needed()
         if force_processing is True:
@@ -69,6 +77,9 @@ class OsmMaps:
 
 
     def filter_tags_from_country_osm_pbf_files(self):
+        """
+        Filter tags from country osm.pbf files
+        """
 
         print('\n# Filter tags from country osm.pbf files')
 
@@ -143,6 +154,10 @@ class OsmMaps:
 
 
     def generate_land(self):
+        """
+        Generate land for all tiles
+        """
+
         print('\n# Generate land')
 
         tile_count = 1
@@ -182,6 +197,10 @@ class OsmMaps:
 
 
     def generate_sea(self):
+        """
+        Generate sea for all tiles
+        """
+
         print('\n# Generate sea')
 
         tile_count = 1
@@ -207,6 +226,10 @@ class OsmMaps:
 
 
     def split_filtered_country_files_to_tiles(self):
+        """
+        Split filtered country files to tiles
+        """
+
         print('\n# Split filtered country files to tiles')
         tile_count = 1
         for tile in self.tiles:
@@ -254,6 +277,10 @@ class OsmMaps:
 
 
     def merge_splitted_tiles_with_land_and_sea(self):
+        """
+        Merge splitted tiles with land an sea
+        """
+
         print('\n# Merge splitted tiles with land an sea')
         tile_count = 1
         for tile in self.tiles:
@@ -310,6 +337,10 @@ class OsmMaps:
 
 
     def create_map_files(self):
+        """
+        Creating .map files
+        """
+
         print('\n# Creating .map files')
         tile_count = 1
         for tile in self.tiles:
@@ -358,6 +389,10 @@ class OsmMaps:
 
 
     def zip_map_files(self):
+        """
+        Zip .map.lzma files
+        """
+
         print('\n# Zip .map.lzma files')
         print(f'+ Country: {self.country_name}')
 
@@ -381,6 +416,10 @@ class OsmMaps:
 
 
     def make_cruiser_files(self):
+        """
+        Make Cruiser map files zip file
+        """
+
         # Make Cruiser map files zip file
         if self.save_cruiser == 1:
             # Windows
