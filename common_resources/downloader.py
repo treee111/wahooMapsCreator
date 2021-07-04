@@ -60,8 +60,8 @@ class Downloader:
         # logging
         print('# Check countries .osm.pbf files: OK')
 
-        if force_processing is True:
-            fdf.create_empty_directories(self.tiles_from_json)
+        # if force_processing is True:
+        fdf.create_empty_directories(self.tiles_from_json)
 
         return force_processing
 
@@ -165,8 +165,6 @@ class Downloader:
         """
         trigger download of relevant countries' OSM files
         """
-
-        fdf.create_empty_directories(self.tiles_from_json)
 
         for country in self.border_countries:
             try:
