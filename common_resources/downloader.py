@@ -12,7 +12,6 @@ import time
 
 # import custom python packages
 import requests
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from common_resources import file_directory_functions as fdf
 from common_resources import constants_functions
 

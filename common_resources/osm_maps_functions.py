@@ -11,7 +11,6 @@ import sys
 import platform
 
 # import custom python packages
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from common_resources import file_directory_functions as fdf
 from common_resources import constants
 from common_resources import constants_functions
@@ -280,6 +279,8 @@ class OsmMaps:
                         cmd.append(self.border_countries[country]['filtered_file'])
                         cmd.extend(['-s', 'smart'])
                         cmd.extend(['-o', out_file])
+                        cmd.extend(['--overwrite'])
+
                         # print(cmd)
                         subprocess.run(cmd, check=True)
                         print(self.border_countries[country]['filtered_file'])
@@ -388,6 +389,7 @@ class OsmMaps:
                 # Non-Windows
                 else:
                     cmd = ['lzma', out_file]
+                    cmd.extend(['-f']) # force overwrite of output file and (de)compress links
 
                     # --keep: do not delete source file
                     if self.save_cruiser:

@@ -4,11 +4,9 @@ functions and object for constants
 #!/usr/bin/python
 
 # import official python packages
-import os
 import sys
 
 # import custom python packages
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from common_resources import constants
 
 
