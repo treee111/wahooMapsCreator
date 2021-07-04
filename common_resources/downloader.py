@@ -101,14 +101,9 @@ class Downloader:
 
         url = 'https://osmdata.openstreetmap.de/download/land-polygons-split-4326.zip'
 
-        request_land_polygons = requests.get(url, allow_redirects=True, stream = True)
-        if request_land_polygons.status_code != 200:
-            print('failed to find or download land polygons file')
-            sys.exit()
-
-        # write content to file
+        # download URL to file
         land_poligons_file_path = os.path.join (fdf.COMMON_DIR, 'land-polygons-split-4326.zip')
-        self.write_to_file(land_poligons_file_path, request_land_polygons)
+        self.download_url_to_file(url, land_poligons_file_path)
 
         # unpack it - should work on macOS and Windows
         fdf.unzip(land_poligons_file_path, fdf.COMMON_DIR)
@@ -121,6 +116,8 @@ class Downloader:
         if not os.path.isfile(fdf.LAND_POLYGONS_PATH):
             print(f'! failed to find {fdf.LAND_POLYGONS_PATH}')
             sys.exit()
+        else:
+            print(f'+ Downloaded: {fdf.LAND_POLYGONS_PATH}')
 
 
     def check_osm_pbf_file(self):
@@ -189,18 +186,30 @@ class Downloader:
         else:
             url = 'https://download.geofabrik.de/' + translated_country + '-latest.osm.pbf'
 
+        # download URL to file
+        map_file_path = os.path.join (fdf.MAPS_DIR, f'{country}' + '-latest.osm.pbf')
+        self.download_url_to_file(url, map_file_path)
+
+        if not os.path.isfile(map_file_path):
+            print(f'! failed to find or download country: {country}')
+            sys.exit()
+        else:
+            print(f'+ Map of {country} downloaded.')
+
+        return map_file_path
+
+    def download_url_to_file(self, url, map_file_path):
+        """
+        download the content of a ULR to file
+        """
         request_geofabrik = requests.get(url, allow_redirects = True, stream = True)
         if request_geofabrik.status_code != 200:
-            print(f'! failed to find or download country: {country}')
+            print(f'! failed download URL: {url}')
             sys.exit()
 
         # write content to file
-        map_file_path = os.path.join (fdf.MAPS_DIR, f'{country}' + '-latest.osm.pbf')
         self.write_to_file(map_file_path, request_geofabrik)
 
-        print(f'+ Map of {country} downloaded.')
-
-        return map_file_path
 
     def write_to_file(self, file_path, request):
         """
