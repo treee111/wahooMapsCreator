@@ -9,6 +9,6 @@
 # can either give multiple identifier separated by comma (,) or put this option
 # multiple time (only on the command line, not in the configuration file where
 # it should appear only once).
-disable=line-too-long, wrong-import-position
+disable=line-too-long
 
-#import-error
+#import-error, wrong-import-position
