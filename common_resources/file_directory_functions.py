@@ -1,3 +1,6 @@
+"""
+constants, functions and object for file-system operations
+"""
 #!/usr/bin/python
 
 # import official python packages
@@ -8,8 +11,10 @@ import sys
 import zipfile
 
 
-
 def get_git_root():
+    """
+    get the root directory of the git repository
+    """
     return subprocess.Popen(['git', 'rev-parse', '--show-toplevel'],
      stdout=subprocess.PIPE).communicate()[0].rstrip().decode('utf-8')
 
@@ -24,6 +29,9 @@ TOOLING_WIN_DIR = os.path.join(ROOT_DIR, 'tooling_windows')
 LAND_POLYGONS_PATH = os.path.join(COMMON_DIR, 'land-polygons-split-4326', 'land_polygons.shp')
 
 def unzip(source_filename, dest_dir):
+    """
+    unzip the given file into the given directory
+    """
     with zipfile.ZipFile(source_filename) as zip_file:
         for member in zip_file.infolist():
             # Path traversal defense copied from
@@ -39,28 +47,26 @@ def unzip(source_filename, dest_dir):
                 if word in (os.curdir, os.pardir, ''):
                     continue
                 path = os.path.join(path, word)
-            if(member.filename.split('/').pop()):
+            if member.filename.split('/').pop():
                 member.filename = member.filename.split('/').pop()
             zip_file.extract(member, path)
 
 
 def create_empty_directories(tiles_from_json):
+    """
+    create empty directory for the files
+    """
     for tile in tiles_from_json:
         outdir = os.path.join(OUTPUT_DIR, f'{tile["x"]}', f'{tile["y"]}')
         if not os.path.isdir(outdir):
             os.makedirs(outdir)
 
 
-def read_json_file(input_argument1, region):
+def read_json_file(json_file_path):
+    """
+    read the tiles from the given json file
+    """
     print('\n# Read json file')
-
-    # option 1: have a .json file as input parameter
-    if os.path.isfile(input_argument1):
-        json_file_path = input_argument1
-    # option 2: input a country as parameter, e.g. germany
-    else:
-        json_file_path = os.path.join (COMMON_DIR,
-            'json', region, input_argument1 + '.json')
 
     with open(json_file_path) as json_file:
         tiles_from_json = json.load(json_file)
@@ -76,7 +82,9 @@ def read_json_file(input_argument1, region):
     return tiles_from_json
 
 class FileDir:
-    "This is the class to check and download maps / artifacts"
+    """
+    this is the class to check and download maps / artifacts
+    """
 
     def __init__(self, inputFile, input_region):
         self.input_argument1 = inputFile

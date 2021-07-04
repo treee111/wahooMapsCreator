@@ -1,3 +1,6 @@
+"""
+constants
+"""
 #!/usr/bin/python
 
 Translate_Country = {
