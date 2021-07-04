@@ -72,8 +72,6 @@ class OsmMaps:
         if force_processing is True:
             self.force_processing = force_processing
 
-        self.border_countries = self.o_downloader.border_countries
-
 
     def calc_border_countries(self):
         """

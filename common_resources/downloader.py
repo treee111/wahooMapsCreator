@@ -70,6 +70,7 @@ class Downloader:
         """
         check if land_poligons file is up-to-date
         """
+
         need_to_download = False
         print('\n# check land_polygons.shp file')
 
@@ -89,7 +90,7 @@ class Downloader:
             # logging
             print('# land_polygons.shp file needs to be downloaded')
 
-            return need_to_download
+        return need_to_download
 
 
     def download_land_poligons_file(self):
@@ -98,20 +99,22 @@ class Downloader:
         """
 
         print('# Downloading land polygons file')
+
         url = 'https://osmdata.openstreetmap.de/download/land-polygons-split-4326.zip'
+
         request_land_polygons = requests.get(url, allow_redirects=True, stream = True)
         if request_land_polygons.status_code != 200:
             print('failed to find or download land polygons file')
             sys.exit()
-        land_poligons_dl=open(os.path.join (fdf.COMMON_DIR,
-            'land-polygons-split-4326.zip'), 'wb')
-        for chunk in request_land_polygons.iter_content(chunk_size=1024*100):
-            land_poligons_dl.write(chunk)
-        land_poligons_dl.close()
+
+        # write content to file
+        land_poligons_file_path = os.path.join (fdf.COMMON_DIR, 'land-polygons-split-4326.zip')
+        self.write_to_file(land_poligons_file_path, request_land_polygons)
 
         # unpack it - should work on macOS and Windows
-        fdf.unzip(os.path.join (fdf.COMMON_DIR,
-            'land-polygons-split-4326.zip'), fdf.COMMON_DIR)
+        fdf.unzip(land_poligons_file_path, fdf.COMMON_DIR)
+
+        # delete .zip file
         os.remove(os.path.join (fdf.COMMON_DIR,
             'land-polygons-split-4326.zip'))
 
@@ -169,7 +172,7 @@ class Downloader:
             try:
                 if self.border_countries[country]['download'] is True:
                     map_file_path = self.download_map(country)
-                    self.border_countries[country] = {'map_file':map_file_path[0]}
+                    self.border_countries[country] = {'map_file':map_file_path}
             except KeyError:
                 pass
 
@@ -177,26 +180,35 @@ class Downloader:
         """
         download a countries' OSM file
         """
+
         print(f'+ Trying to download missing map of {country}.')
 
         # get Geofabrik region of country
         translated_country = constants_functions.translate_country_input_to_geofabrik(country)
-        region = constants_functions.get_geofabrik_region_of_country(f'{country}')
+        region = constants_functions.get_geofabrik_region_of_country(country)
 
         if region != 'no':
             url = 'https://download.geofabrik.de/'+ region + '/' + translated_country + '-latest.osm.pbf'
         else:
             url = 'https://download.geofabrik.de/' + translated_country + '-latest.osm.pbf'
 
-        request_geofabrik = requests.get(url, allow_redirects=True, stream = True)
+        request_geofabrik = requests.get(url, allow_redirects = True, stream = True)
         if request_geofabrik.status_code != 200:
             print(f'! failed to find or download country: {country}')
             sys.exit()
-        download=open(os.path.join (fdf.MAPS_DIR, f'{country}' + '-latest.osm.pbf'), 'wb')
-        for chunk in request_geofabrik.iter_content(chunk_size=1024*100):
-            download.write(chunk)
-        download.close()
-        map_file_path = [os.path.join (fdf.MAPS_DIR, f'{country}' + '-latest.osm.pbf')]
+
+        # write content to file
+        map_file_path = os.path.join (fdf.MAPS_DIR, f'{country}' + '-latest.osm.pbf')
+        self.write_to_file(map_file_path, request_geofabrik)
+
         print(f'+ Map of {country} downloaded.')
 
         return map_file_path
+
+    def write_to_file(self, file_path, request):
+        """
+        write content of request into given file path
+        """
+        with open(file_path, 'wb') as file_handle:
+            for chunk in request.iter_content(chunk_size=1024*100):
+                file_handle.write(chunk)
