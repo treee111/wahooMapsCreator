@@ -43,16 +43,18 @@ class OsmMaps:
         # option 1: have a .json file as input parameter
         if os.path.isfile(input_argument):
             self.tiles = fdf.read_json_file(input_argument)
+
+            # country name is the last part of the input filename
+            self.country_name = os.path.split(input_argument)[1][:-5]
+
         # option 2: input a country as parameter, e.g. germany
         else:
             json_file_path = os.path.join (fdf.COMMON_DIR,
                 'json', constants_functions.get_region_of_country(input_argument), input_argument + '.json')
             self.tiles = fdf.read_json_file(json_file_path)
 
-        # country name is the input argument or the last part of the input filename
-        self.country_name = input_argument
-        if self.country_name == '':
-            self.country_name = os.path.split(input_argument)[1][:-5]
+            # country name is the input argument
+            self.country_name = input_argument
 
         # Build list of countries needed
         self.calc_border_countries()
