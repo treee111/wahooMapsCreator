@@ -15,10 +15,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
-- unittests for downloader.py methods
+- Paramater to control download and processing of border countries or not
+- unittests for downloader.py and osm_maps_functions.py files
 ### Changed
 - pylint findings corrected
-- a lot of refactored (focus methods)
+- a lot of refactored (focus methods, constructors)
 - refactor downloader-methods for testing with unittests
 - correctly check force_download and force_processing against boolean
 - fix pylint findings (focus documentation and imports)

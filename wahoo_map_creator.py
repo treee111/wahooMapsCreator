@@ -15,6 +15,9 @@ from common_resources.osm_maps_functions import OsmMaps
 # Maximum age of source maps or land shape files before they are redownloaded
 MAX_DAYS_OLD = 14
 
+# Calculate also border countries of input country or not
+CALC_BORDER_COUNTRIES = True
+
 # Force download of source maps and the land shape file
 # If False use Max_Days_Old to check for expired maps
 # If True force redownloading of maps and landshape
@@ -55,7 +58,7 @@ oOSMmaps = OsmMaps(FORCE_PROCESSING, WORKERS, SAVE_CRUISER)
 # Read json file
 # Check for expired land polygons file and download, if too old
 # Check for expired .osm.pbf files and download, if too old
-oOSMmaps.process_input(sys.argv[1])
+oOSMmaps.process_input(sys.argv[1], CALC_BORDER_COUNTRIES)
 oOSMmaps.check_and_download_files(MAX_DAYS_OLD, FORCE_DOWNLOAD)
 
 # Filter tags from country osm.pbf files'

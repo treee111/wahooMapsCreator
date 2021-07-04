@@ -34,7 +34,7 @@ class OsmMaps:
         self.country_name = ''
 
 
-    def process_input(self, input_argument):
+    def process_input(self, input_argument, calc_border_countries):
         """
         get relevant tiles for given input and calc border countries of these tiles
         """
@@ -56,7 +56,11 @@ class OsmMaps:
             self.country_name = input_argument
 
         # Build list of countries needed
-        self.calc_border_countries()
+        self.border_countries = {}
+        if calc_border_countries or os.path.isfile(input_argument):
+            self.calc_border_countries()
+        else:
+            self.border_countries[self.country_name] = {}
 
 
     def check_and_download_files(self, max_days_old, force_download):
@@ -77,7 +81,6 @@ class OsmMaps:
         """
 
         # Build list of countries needed
-        self.border_countries = {}
         for tile in self.tiles:
             for country in tile['countries']:
                 if country not in self.border_countries:
