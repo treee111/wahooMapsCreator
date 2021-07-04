@@ -14,8 +14,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `Security` in case of vulnerabilities.
 
 ## [Unreleased]
+
+## [0.5.0] - 2021-07-04
 ### Added
-- Paramater to control download and processing of border countries or not
+- Parameter to control download and processing of border countries or not
 - unittests for downloader.py and osm_maps_functions.py files
 ### Changed
 - pylint findings corrected
@@ -24,7 +26,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - correctly check force_download and force_processing against boolean
 - fix pylint findings (focus documentation and imports)
 - reduce (double) imported standard modules & delete unused imports
-- position of creation of empty directories in `output` folder
+- move call of empty directories-creation
 
 ## [0.4.0] - 2021-07-01
 ### Added
