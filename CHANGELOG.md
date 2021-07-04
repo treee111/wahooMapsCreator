@@ -17,8 +17,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.5.0] - 2021-07-04
 ### Added
-- Parameter to control download and processing of border countries or not
-- unittests for downloader.py and osm_maps_functions.py files
+- Parameter to control download and processing of border countries or not #18
+- unittests for downloader.py and osm_maps_functions.py files #16
 ### Changed
 - pylint findings corrected
 - a lot of refactored (focus methods, constructors)
@@ -76,14 +76,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - created two files which use mainly the coding from `common_resources`:
   - macOS/Unix: `tooling_mac/wahoo-map-creator-osmium-using-common.py`
   - Windows:    `tooling_windows/Windows-Wahoo-Map-Creator-Osmosis/wahoo-map-creator-osmosis-using-common.py`
-- `common_resources`: directory for common coding & resources
+- `common_resources`: directory for common coding & resources #8
   - with folders for resources and files generally needed 
   - with extracted common coding from these two files
     - macOS/Unix: `tooling_mac/wahoo-map-creator-osmium-working.py`
     - Windows:    `tooling_windows/Windows-Wahoo-Map-Creator-Osmosis/wahoo-map-creator-osmosis.py`
 
 
-[unreleased]: https://github.com/treee111/wahooMapsCreator/compare/v0.4.0...HEAD
+[unreleased]: https://github.com/treee111/wahooMapsCreator/compare/v0.5.0...HEAD
+[0.5.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.3.1...v0.4.0
 [0.3.1]: https://github.com/treee111/wahooMapsCreator/compare/v0.3.0...v0.3.1
 [0.3.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.2.0...v0.3.0
