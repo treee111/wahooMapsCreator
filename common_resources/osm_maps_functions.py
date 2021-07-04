@@ -116,7 +116,7 @@ class OsmMaps:
                     cmd.append(val['map_file'])
                     cmd.append('-o='+out_file_o5m)
                     # print(cmd)
-                    result = subprocess.run(cmd)
+                    result = subprocess.run(cmd, check=True)
                     if result.returncode != 0:
                         print(f'Error in OSMConvert with country: {key}')
                         sys.exit()
@@ -127,7 +127,7 @@ class OsmMaps:
                     cmd.append('--keep="' + constants.FILTERED_TAGS_WIN + '"')
                     cmd.append('-o=' + out_file_o5m_filtered)
                     # print(cmd)
-                    result = subprocess.run(cmd)
+                    result = subprocess.run(cmd, check=True)
                     if result.returncode != 0:
                         print(f'Error in OSMFilter with country: {key}')
                         sys.exit()
@@ -136,7 +136,7 @@ class OsmMaps:
                     cmd = [os.path.join(fdf.TOOLING_WIN_DIR, 'osmconvert'), '-v', '--hash-memory=2500', out_file_o5m_filtered]
                     cmd.append('-o='+out_file)
                     # print(cmd)
-                    result = subprocess.run(cmd)
+                    result = subprocess.run(cmd, check=True)
                     if result.returncode != 0:
                         print(f'Error in OSMConvert with country: {key}')
                         sys.exit()
@@ -161,7 +161,7 @@ class OsmMaps:
                     cmd.extend(constants.filtered_tags)
                     cmd.extend(['-o', out_file])
                     # print(cmd)
-                    subprocess.run(cmd)
+                    subprocess.run(cmd, check=True)
                 self.border_countries[key]['filtered_file'] = out_file
 
         # logging
@@ -192,7 +192,7 @@ class OsmMaps:
                 cmd.append(land_file)
                 cmd.append(fdf.LAND_POLYGONS_PATH)
                 #print(cmd)
-                subprocess.run(cmd)
+                subprocess.run(cmd, check=True)
 
             if not os.path.isfile(out_file+'1.osm') or self.force_processing is True:
                 # Windows
@@ -204,7 +204,7 @@ class OsmMaps:
                     cmd = ['python3', os.path.join(fdf.COMMON_DIR,
                      'shape2osm.py'), '-l', out_file, land_file]
                 #print(cmd)
-                subprocess.run(cmd)
+                subprocess.run(cmd, check=True)
             tile_count += 1
 
         # logging
@@ -268,7 +268,7 @@ class OsmMaps:
                         cmd.append('-o='+out_file)
 
                         # print(cmd)
-                        result = subprocess.run(cmd)
+                        result = subprocess.run(cmd, check=True)
                         if result.returncode != 0:
                             print(f'Error in Osmosis with country: {country}')
                             sys.exit()
@@ -282,7 +282,7 @@ class OsmMaps:
                         cmd.extend(['-s', 'smart'])
                         cmd.extend(['-o', out_file])
                         # print(cmd)
-                        subprocess.run(cmd)
+                        subprocess.run(cmd, check=True)
                         print(self.border_countries[country]['filtered_file'])
 
             tile_count += 1
@@ -326,7 +326,7 @@ class OsmMaps:
                     cmd.extend(['--tag-transform', 'file=' + os.path.join (fdf.COMMON_DIR, 'tunnel-transform.xml'), '--wb', out_file, 'omitmetadata=true'])
 
                     #print(cmd)
-                    result = subprocess.run(cmd)
+                    result = subprocess.run(cmd, check=True)
                     if result.returncode != 0:
                         print(f'Error in Osmosis with country: {country}')
                         sys.exit()
@@ -344,7 +344,7 @@ class OsmMaps:
                     cmd.extend(['-o', out_file])
 
                     #print(cmd)
-                    subprocess.run(cmd)
+                    subprocess.run(cmd, check=True)
             tile_count += 1
 
         # logging
@@ -379,7 +379,7 @@ class OsmMaps:
                 # should work on macOS and Windows
                 cmd.append(f'tag-conf-file={os.path.join(fdf.COMMON_DIR, "tag-wahoo.xml")}')
                 # print(cmd)
-                result = subprocess.run(cmd)
+                result = subprocess.run(cmd, check=True)
                 if result.returncode != 0:
                     print(f'Error in Osmosis with country: c // tile: {tile["x"]}, {tile["y"]}')
                     sys.exit()
@@ -396,7 +396,7 @@ class OsmMaps:
                         cmd.append('--keep')
 
                 # print(cmd)
-                subprocess.run(cmd)
+                subprocess.run(cmd, check=True)
             tile_count += 1
 
         # logging
@@ -424,7 +424,7 @@ class OsmMaps:
         for tile in self.tiles:
             cmd.append(os.path.join(f'{tile["x"]}', f'{tile["y"]}.map.lzma'))
         #print(cmd)
-        subprocess.run(cmd, cwd=fdf.OUTPUT_DIR)
+        subprocess.run(cmd, cwd=fdf.OUTPUT_DIR, check=True)
 
         # logging
         print('# Zip .map.lzma files: OK \n')
@@ -447,4 +447,4 @@ class OsmMaps:
             for tile in self.tiles:
                 cmd.append(os.path.join(f'{tile["x"]}', f'{tile["y"]}.map'))
             #print(cmd)
-            subprocess.run(cmd, cwd=fdf.OUTPUT_DIR)
+            subprocess.run(cmd, cwd=fdf.OUTPUT_DIR, check=True)
