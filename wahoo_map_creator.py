@@ -50,13 +50,13 @@ if len(sys.argv) != 2:
     print(f'! Usage: {sys.argv[0]} Country name part of a .json file.')
     sys.exit()
 
-oOSMmaps = OsmMaps(MAX_DAYS_OLD, FORCE_DOWNLOAD, FORCE_PROCESSING, WORKERS, THREADS, SAVE_CRUISER)
+oOSMmaps = OsmMaps(FORCE_PROCESSING, WORKERS, SAVE_CRUISER)
 
 # Read json file
 # Check for expired land polygons file and download, if too old
 # Check for expired .osm.pbf files and download, if too old
 oOSMmaps.process_input(sys.argv[1])
-oOSMmaps.check_and_download_files()
+oOSMmaps.check_and_download_files(MAX_DAYS_OLD, FORCE_DOWNLOAD)
 
 # Filter tags from country osm.pbf files'
 oOSMmaps.filter_tags_from_country_osm_pbf_files()
@@ -74,7 +74,7 @@ oOSMmaps.split_filtered_country_files_to_tiles()
 oOSMmaps.merge_splitted_tiles_with_land_and_sea()
 
 # Creating .map files
-oOSMmaps.create_map_files()
+oOSMmaps.create_map_files(THREADS)
 
 # Zip .map.lzma files
 oOSMmaps.zip_map_files()

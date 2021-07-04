@@ -24,18 +24,15 @@ class OsmMaps:
     This is a OSM data class
     """
 
-    def __init__(self, Max_Days_Old, Force_Download,
-     Force_Processing, workers, threads, Save_Cruiser):
+    def __init__(self, Force_Processing, workers, Save_Cruiser):
+        # input parameters
         self.force_processing = Force_Processing
         self.workers = workers
-        self.threads = threads
         self.save_cruiser = Save_Cruiser
+
         self.tiles = []
         self.border_countries = {}
-
         self.country_name = ''
-
-        self.o_downloader = Downloader(Max_Days_Old, Force_Download)
 
 
     def process_input(self, input_argument):
@@ -61,14 +58,14 @@ class OsmMaps:
         self.calc_border_countries()
 
 
-    def check_and_download_files(self):
+    def check_and_download_files(self, max_days_old, force_download):
         """
         trigger check of land_poligons and OSM map files if not existing or are not up-to-date
         """
 
-        self.o_downloader.tiles_from_json = self.tiles
-        self.o_downloader.border_countries = self.border_countries
-        force_processing = self.o_downloader.check_and_download_files_if_needed()
+        o_downloader = Downloader(max_days_old, force_download, self.tiles, self.border_countries)
+
+        force_processing = o_downloader.check_and_download_files_if_needed()
         if force_processing is True:
             self.force_processing = force_processing
 
@@ -350,7 +347,7 @@ class OsmMaps:
         print('# Merge splitted tiles with land an sea: OK')
 
 
-    def create_map_files(self):
+    def create_map_files(self, threads):
         """
         Creating .map files
         """
@@ -374,7 +371,7 @@ class OsmMaps:
 
                 cmd.append(f'bbox={tile["bottom"]:.6f},{tile["left"]:.6f},{tile["top"]:.6f},{tile["right"]:.6f}')
                 cmd.append('zoom-interval-conf=10,0,17')
-                cmd.append('threads='+ self.threads)
+                cmd.append('threads='+ threads)
                 # should work on macOS and Windows
                 cmd.append(f'tag-conf-file={os.path.join(fdf.COMMON_DIR, "tag-wahoo.xml")}')
                 # print(cmd)
@@ -385,7 +382,7 @@ class OsmMaps:
 
                 # Windows
                 if platform.system() == "Windows":
-                    cmd = [os.path.join(fdf.TOOLING_WIN_DIR, 'lzma'), 'e', out_file, out_file+'.lzma', f'-mt{self.threads}', '-d27', '-fb273', '-eos']
+                    cmd = [os.path.join(fdf.TOOLING_WIN_DIR, 'lzma'), 'e', out_file, out_file+'.lzma', f'-mt{threads}', '-d27', '-fb273', '-eos']
                 # Non-Windows
                 else:
                     cmd = ['lzma', out_file]
