@@ -21,8 +21,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - a lot of refactored (focus methods)
 - refactor downloader-methods for testing with unittests
 - correctly check force_download and force_processing against boolean
-- fix pylint findings (focus documentation)
-- reduce (double) imported standard modules
+- fix pylint findings (focus documentation and imports)
+- reduce (double) imported standard modules & delete unused imports
+- position of creation of empty directories in `output` folder
 
 ## [0.4.0] - 2021-07-01
 ### Added
