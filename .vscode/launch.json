@@ -2,34 +2,42 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "mac-only1-tile",
+            "name": "only1-tile",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceRoot}/mac_wahoo_map_creator.py",
+            "program": "${workspaceRoot}/wahoo_map_creator.py",
             "console": "integratedTerminal",
             "args": ["${workspaceRoot}/common_resources/germany-only1.json"]
         },
         {
-            "name": "mac-only5-tile",
+            "name": "only2-tile",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceRoot}/mac_wahoo_map_creator.py",
+            "program": "${workspaceRoot}/wahoo_map_creator.py",
+            "console": "integratedTerminal",
+            "args": ["${workspaceRoot}/common_resources/germany-only2.json"]
+        },
+        {
+            "name": "only5-tile",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceRoot}/wahoo_map_creator.py",
             "console": "integratedTerminal",
             "args": ["${workspaceRoot}/common_resources/germany-only5.json"]
         },
         {
-            "name": "mac-germany",
+            "name": "germany",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceRoot}/mac_wahoo_map_creator.py",
+            "program": "${workspaceRoot}/wahoo_map_creator.py",
             "console": "integratedTerminal",
             "args": ["${workspaceRoot}/common_resources/germany.json"]
         },
         {
-            "name": "win-malta",
+            "name": "malta",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceRoot}/mac_wahoo_map_creator.py",
+            "program": "${workspaceRoot}/wahoo_map_creator.py",
             "console": "integratedTerminal",
             "args": ["malta"]
         }

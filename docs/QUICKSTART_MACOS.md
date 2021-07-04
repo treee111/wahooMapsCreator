@@ -1,6 +1,6 @@
 
 
-# Quickstart Guide for Windows <!-- omit in toc -->
+# Quick Start Guide for macOS <!-- omit in toc -->
 
 #### Table of contents <!-- omit in toc -->
 

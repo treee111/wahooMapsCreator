@@ -1,14 +1,19 @@
+"""
+functions and object for constants
+"""
 #!/usr/bin/python
 
 # import official python packages
+import sys
 
 # import custom python packages
-from os import sys, path
-sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
 from common_resources import constants
 
 
 def get_region_of_country(county):
+    """
+    returns the region / continent of a given country
+    """
     region = ''
     if county in constants.africa :
         region = 'africa'
@@ -31,6 +36,10 @@ def get_region_of_country(county):
 
 
 def get_geofabrik_region_of_country(input_county):
+    """
+    returns the geofabrik region / continent of a given country
+    the geofabrik region is sometimes written different than the get_region_of_country() region
+    """
     # search for country match in geofabrik tables to determine region to use for map download
     c_translated = translate_country_input_to_geofabrik(input_county)
 
@@ -63,6 +72,10 @@ def get_geofabrik_region_of_country(input_county):
 
 
 def translate_country_input_to_geofabrik(county):
+    """
+    translates the given country to the  geofabrik country
+    the geofabrik country is sometimes written different
+    """
     # search for user entered country name in translated (to geofabrik). if match continue with matched else continue with user entered country
 
     try:

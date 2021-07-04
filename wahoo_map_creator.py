@@ -1,3 +1,6 @@
+"""
+executable file to create up-to-date map-files for the Wahoo ELEMNT and Wahoo ELEMNT BOLT
+"""
 #!/usr/bin/python
 
 # import official python packages
@@ -11,6 +14,9 @@ from common_resources.osm_maps_functions import OsmMaps
 
 # Maximum age of source maps or land shape files before they are redownloaded
 MAX_DAYS_OLD = 14
+
+# Calculate also border countries of input country or not
+CALC_BORDER_COUNTRIES = True
 
 # Force download of source maps and the land shape file
 # If False use Max_Days_Old to check for expired maps
@@ -47,12 +53,13 @@ if len(sys.argv) != 2:
     print(f'! Usage: {sys.argv[0]} Country name part of a .json file.')
     sys.exit()
 
-oOSMmaps = OsmMaps(MAX_DAYS_OLD, FORCE_DOWNLOAD, FORCE_PROCESSING, WORKERS, THREADS, SAVE_CRUISER)
+oOSMmaps = OsmMaps(FORCE_PROCESSING, WORKERS, SAVE_CRUISER)
 
 # Read json file
 # Check for expired land polygons file and download, if too old
 # Check for expired .osm.pbf files and download, if too old
-oOSMmaps.read_process_input(sys.argv[1])
+oOSMmaps.process_input(sys.argv[1], CALC_BORDER_COUNTRIES)
+oOSMmaps.check_and_download_files(MAX_DAYS_OLD, FORCE_DOWNLOAD)
 
 # Filter tags from country osm.pbf files'
 oOSMmaps.filter_tags_from_country_osm_pbf_files()
@@ -70,7 +77,7 @@ oOSMmaps.split_filtered_country_files_to_tiles()
 oOSMmaps.merge_splitted_tiles_with_land_and_sea()
 
 # Creating .map files
-oOSMmaps.create_map_files()
+oOSMmaps.create_map_files(THREADS)
 
 # Zip .map.lzma files
 oOSMmaps.zip_map_files()

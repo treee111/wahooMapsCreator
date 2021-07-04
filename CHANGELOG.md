@@ -4,7 +4,29 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## Types of changes
+
+- `Added` for new features.
+- `Changed` for changes in existing functionality.
+- `Deprecated` for soon-to-be removed features.
+- `Removed` for now removed features.
+- `Fixed` for any bug fixes.
+- `Security` in case of vulnerabilities.
+
 ## [Unreleased]
+
+## [0.5.0] - 2021-07-04
+### Added
+- Parameter to control download and processing of border countries or not
+- unittests for downloader.py and osm_maps_functions.py files
+### Changed
+- pylint findings corrected
+- a lot of refactored (focus methods, constructors)
+- refactor downloader-methods for testing with unittests
+- correctly check force_download and force_processing against boolean
+- fix pylint findings (focus documentation and imports)
+- reduce (double) imported standard modules & delete unused imports
+- move call of empty directories-creation
 
 ## [0.4.0] - 2021-07-01
 ### Added
@@ -61,7 +83,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - Windows:    `tooling_windows/Windows-Wahoo-Map-Creator-Osmosis/wahoo-map-creator-osmosis.py`
 
 
-[unreleased]: https://github.com/treee111/wahooMapsCreator/compare/v0.3.1...HEAD
+[unreleased]: https://github.com/treee111/wahooMapsCreator/compare/v0.4.0...HEAD
+[0.4.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.3.1...v0.4.0
 [0.3.1]: https://github.com/treee111/wahooMapsCreator/compare/v0.3.0...v0.3.1
 [0.3.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.1.0...v0.2.0
