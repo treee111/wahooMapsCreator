@@ -47,7 +47,7 @@ def unzip(source_filename, dest_dir):
                 if word in (os.curdir, os.pardir, ''):
                     continue
                 path = os.path.join(path, word)
-            if(member.filename.split('/').pop()):
+            if member.filename.split('/').pop():
                 member.filename = member.filename.split('/').pop()
             zip_file.extract(member, path)
 

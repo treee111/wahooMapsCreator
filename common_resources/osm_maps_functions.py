@@ -325,11 +325,6 @@ class OsmMaps:
                      f'{tile["x"]}', f'{tile["y"]}', 'sea.osm'), '--s', '--m'])
                     cmd.extend(['--tag-transform', 'file=' + os.path.join (fdf.COMMON_DIR, 'tunnel-transform.xml'), '--wb', out_file, 'omitmetadata=true'])
 
-                    #print(cmd)
-                    result = subprocess.run(cmd, check=True)
-                    if result.returncode != 0:
-                        print(f'Error in Osmosis with country: {country}')
-                        sys.exit()
                 # Non-Windows
                 else:
                     cmd = ['osmium', 'merge', '--overwrite']
@@ -343,8 +338,12 @@ class OsmMaps:
                      f'{tile["x"]}', f'{tile["y"]}', 'sea.osm'))
                     cmd.extend(['-o', out_file])
 
-                    #print(cmd)
-                    subprocess.run(cmd, check=True)
+                #print(cmd)
+                result = subprocess.run(cmd, check=True)
+                if result.returncode != 0:
+                    print(f'Error in Osmosis with tile: {tile["x"]},{tile["y"]}')
+                    sys.exit()
+
             tile_count += 1
 
         # logging
