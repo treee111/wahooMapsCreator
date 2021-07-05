@@ -4,43 +4,37 @@ executable file to create up-to-date map-files for the Wahoo ELEMNT and Wahoo EL
 #!/usr/bin/python
 
 # import official python packages
-import multiprocessing
-import sys
+import argparse
 
 # import custom python packages
 from common_resources.osm_maps_functions import OsmMaps
 
-########### Configurable Parameters
+# input argument creation and processing
+parser = argparse.ArgumentParser(description='Create up-to-date maps for your Wahoo ELEMNT and Wahoo ELEMNT BOLT')
 
+# country or file to create maps for
+parser.add_argument("country", help="country to generate maps for")
 # Maximum age of source maps or land shape files before they are redownloaded
-MAX_DAYS_OLD = 14
-
+parser.add_argument('-md', '--maxdays', help="maximum age of source maps and other files", type=int, default=14)
 # Calculate also border countries of input country or not
-CALC_BORDER_COUNTRIES = True
-
+parser.add_argument('-bc', '--bordercountries', action='store_true', help="process whole tiles which involve border countries")
 # Force download of source maps and the land shape file
 # If False use Max_Days_Old to check for expired maps
 # If True force redownloading of maps and landshape
-FORCE_DOWNLOAD = False
-
+parser.add_argument('-d', '--forcedownload', action='store_true', help="force download of files")
 # Force (re)processing of source maps and the land shape file
 # If False use Max_Days_Old to check for expired maps
 # If True force processing of maps and landshape
-FORCE_PROCESSING = False
+parser.add_argument('-p', '--forceprocessing', action='store_true', help="force processing of files")
 
-# Save uncompressed maps for Cruiser
-SAVE_CRUISER = True
+args = parser.parse_args()
 
-# Number of threads to use in the mapwriter plug-in
-THREADS = str(multiprocessing.cpu_count() - 1)
-if int(THREADS) < 1:
-    THREADS = 1
-# Or set it manually to:
-#threads = 1
-#print(f'threads = {threads}/n')
-
-# Number of workers for the Osmosis read binary fast function
-WORKERS = '1'
+# print(args.country)
+# print(args.maxdays)
+# print(args.bordercountries)
+# print(args.forcedownload)
+# print(args.forceprocessing)
+# sys.exit()
 
 ########### End of Configurable Parameters
 
@@ -49,17 +43,15 @@ WORKERS = '1'
 # ! means error
 # + means additional comment in a working-unit
 
-if len(sys.argv) != 2:
-    print(f'! Usage: {sys.argv[0]} Country name part of a .json file.')
-    sys.exit()
 
-oOSMmaps = OsmMaps(FORCE_PROCESSING, WORKERS, SAVE_CRUISER)
+# Save uncompressed maps for Cruiser = 0
+oOSMmaps = OsmMaps(args.forceprocessing, 0)
 
 # Read json file
 # Check for expired land polygons file and download, if too old
 # Check for expired .osm.pbf files and download, if too old
-oOSMmaps.process_input(sys.argv[1], CALC_BORDER_COUNTRIES)
-oOSMmaps.check_and_download_files(MAX_DAYS_OLD, FORCE_DOWNLOAD)
+oOSMmaps.process_input(args.country, args.bordercountries)
+oOSMmaps.check_and_download_files(args.maxdays, args.forcedownload)
 
 # Filter tags from country osm.pbf files'
 oOSMmaps.filter_tags_from_country_osm_pbf_files()
@@ -77,7 +69,7 @@ oOSMmaps.split_filtered_country_files_to_tiles()
 oOSMmaps.merge_splitted_tiles_with_land_and_sea()
 
 # Creating .map files
-oOSMmaps.create_map_files(THREADS)
+oOSMmaps.create_map_files()
 
 # Zip .map.lzma files
 oOSMmaps.zip_map_files()

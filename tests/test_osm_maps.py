@@ -17,7 +17,7 @@ class TestOsmMaps(unittest.TestCase):
     """
 
     def setUp(self):
-        self.o_osm_maps = OsmMaps(False, 1, 1)
+        self.o_osm_maps = OsmMaps(False, 0)
 
         self.file_path_common = os.path.join(os.getcwd(), 'common_resources')
 
