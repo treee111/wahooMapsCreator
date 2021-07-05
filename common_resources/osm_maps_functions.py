@@ -5,6 +5,7 @@ functions and object for managing OSM maps
 
 # import official python packages
 import glob
+import multiprocessing
 import os
 import subprocess
 import sys
@@ -23,10 +24,11 @@ class OsmMaps:
     This is a OSM data class
     """
 
-    def __init__(self, Force_Processing, workers, Save_Cruiser):
+    def __init__(self, Force_Processing, Save_Cruiser):
         # input parameters
         self.force_processing = Force_Processing
-        self.workers = workers
+        # Number of workers for the Osmosis read binary fast function
+        self.workers = '1'
         self.save_cruiser = Save_Cruiser
 
         self.tiles = []
@@ -353,12 +355,18 @@ class OsmMaps:
         print('# Merge splitted tiles with land an sea: OK')
 
 
-    def create_map_files(self, threads):
+    def create_map_files(self):
         """
         Creating .map files
         """
 
         print('\n# Creating .map files')
+
+        # Number of threads to use in the mapwriter plug-in
+        threads = str(multiprocessing.cpu_count() - 1)
+        if int(threads) < 1:
+            threads = 1
+
         tile_count = 1
         for tile in self.tiles:
             print(f'+ Creating map file for tile {tile_count} of {len(self.tiles)} for Coordinates: {tile["x"]}, {tile["y"]}')
