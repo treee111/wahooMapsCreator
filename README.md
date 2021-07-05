@@ -28,12 +28,14 @@ The steps for both OS are similar:
 - copy the map-files to your device
 
 ### Download and Install required programs
+The initial setup takes some minutes but is only a one-timer!
+
 Follow the Quick Start guide depending on your OS:
 - [Quick Start Guide for Windows](docs/QUICKSTART_WINDOWS.md)
 - [Quick Start Guide for macOS](docs/QUICKSTART_MACOS.md)
 
 ### Get wahooMapsCreator
-Download the latest Release from the ["Releases" Section](https://github.com/treee111/wahooMapsCreator/releases) and Save the folder anywhere on your drive.
+Download the latest Release from the ["Releases" Section](https://github.com/treee111/wahooMapsCreator/releases) and Save the folder on your drive. You can also clone the repository and have the latest coding.
 
 ### Run wahooMapsCreator for your country
 It might be a good idea to run wahooMapsCreator first for a small country e.g. Malta to check if everything is running fine.
