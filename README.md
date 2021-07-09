@@ -23,7 +23,7 @@ If anything is unclear or just wrong, write an issue!
 ### Overview of the steps
 The steps for both OS are similar:
 - Download and Install required programs
-- Clone wahooMapsCreator Repository or download a Release
+- Sownload a release of wahooMapsCreator or clone Repository
 - Run wahooMapsCreator for your country
 - copy the map-files to your device
 
