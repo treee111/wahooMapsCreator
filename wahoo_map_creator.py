@@ -29,7 +29,7 @@ FORCE_DOWNLOAD = False
 FORCE_PROCESSING = False
 
 # Save uncompressed maps for Cruiser
-SAVE_CRUISER = 0
+SAVE_CRUISER = True
 
 # Number of threads to use in the mapwriter plug-in
 THREADS = str(multiprocessing.cpu_count() - 1)
