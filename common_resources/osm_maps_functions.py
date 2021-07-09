@@ -439,7 +439,7 @@ class OsmMaps:
         """
 
         # Make Cruiser map files zip file
-        if self.save_cruiser == 1:
+        if self.save_cruiser is True:
             # Windows
             if platform.system() == "Windows":
                 cmd = [os.path.join(fdf.TOOLING_WIN_DIR, '7za'), 'a', '-tzip', '-m0=lzma', self.country_name + '-maps.zip']
