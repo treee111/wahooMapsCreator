@@ -9,6 +9,12 @@ import argparse
 # import custom python packages
 from common_resources.osm_maps_functions import OsmMaps
 
+# logging used in the terminal output:
+# # means top-level command
+# ! means error
+# + means additional comment in a working-unit
+
+
 # input argument creation and processing
 parser = argparse.ArgumentParser(description='Create up-to-date maps for your Wahoo ELEMNT and Wahoo ELEMNT BOLT')
 
@@ -23,27 +29,14 @@ parser.add_argument('-bc', '--bordercountries', action='store_true', help="proce
 # If True force redownloading of maps and landshape
 parser.add_argument('-d', '--forcedownload', action='store_true', help="force download of files")
 # Force (re)processing of source maps and the land shape file
-# If False use Max_Days_Old to check for expired maps
-# If True force processing of maps and landshape
+# If False only process files if not existing
+# If True force processing of files
 parser.add_argument('-p', '--forceprocessing', action='store_true', help="force processing of files")
-# Save uncompressed maps for Cruiser = 0
+# Save uncompressed maps for Cruiser if True
 parser.add_argument('-c', '--cruiser', action='store_true', help="save uncompressed maps for Cruiser")
 
+# get all entered arguments
 args = parser.parse_args()
-
-# print(args.country)
-# print(args.maxdays)
-# print(args.bordercountries)
-# print(args.forcedownload)
-# print(args.forceprocessing)
-# sys.exit()
-
-########### End of Configurable Parameters
-
-# logging
-# # means top-level command
-# ! means error
-# + means additional comment in a working-unit
 
 
 oOSMmaps = OsmMaps(args.forceprocessing, args.cruiser)
