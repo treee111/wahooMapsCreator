@@ -26,6 +26,8 @@ parser.add_argument('-d', '--forcedownload', action='store_true', help="force do
 # If False use Max_Days_Old to check for expired maps
 # If True force processing of maps and landshape
 parser.add_argument('-p', '--forceprocessing', action='store_true', help="force processing of files")
+# Save uncompressed maps for Cruiser = 0
+parser.add_argument('-c', '--cruiser', action='store_true', help="save uncompressed maps for Cruiser")
 
 args = parser.parse_args()
 
@@ -44,8 +46,7 @@ args = parser.parse_args()
 # + means additional comment in a working-unit
 
 
-# Save uncompressed maps for Cruiser = 0
-oOSMmaps = OsmMaps(args.forceprocessing, 0)
+oOSMmaps = OsmMaps(args.forceprocessing, args.cruiser)
 
 # Read json file
 # Check for expired land polygons file and download, if too old
