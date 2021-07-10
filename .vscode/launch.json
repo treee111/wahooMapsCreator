@@ -39,7 +39,7 @@
             "request": "launch",
             "program": "${workspaceRoot}/wahoo_map_creator.py",
             "console": "integratedTerminal",
-            "args": ["malta"]
+            "args": ["malta", "-tag", "tag-wahoo_2.xml", "-fp", "-c"]
         }
     ]
 }

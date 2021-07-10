@@ -30,16 +30,19 @@ parser.add_argument('-bc', '--bordercountries', action='store_true',
 # Force download of source maps and the land shape file
 # If False use Max_Days_Old to check for expired maps
 # If True force redownloading of maps and landshape
-parser.add_argument('-d', '--forcedownload', action='store_true',
+parser.add_argument('-fd', '--forcedownload', action='store_true',
                     help="force download of files")
 # Force (re)processing of source maps and the land shape file
 # If False only process files if not existing
 # If True force processing of files
-parser.add_argument('-p', '--forceprocessing', action='store_true',
+parser.add_argument('-fp', '--forceprocessing', action='store_true',
                     help="force processing of files")
 # Save uncompressed maps for Cruiser if True
 parser.add_argument('-c', '--cruiser', action='store_true',
                     help="save uncompressed maps for Cruiser")
+# specify the file with tags to keep in the output // file needs to be in common_resources
+parser.add_argument('-tag', '--tag_wahoo_xml', default="tag-wahoo.xml",
+                    help="file with tags to keep in the output")
 
 # get all entered arguments
 args = parser.parse_args()
@@ -69,7 +72,7 @@ oOSMmaps.split_filtered_country_files_to_tiles()
 oOSMmaps.merge_splitted_tiles_with_land_and_sea()
 
 # Creating .map files
-oOSMmaps.create_map_files(args.cruiser)
+oOSMmaps.create_map_files(args.cruiser, args.tag_wahoo_xml)
 
 # Zip .map.lzma files
 oOSMmaps.zip_map_files()

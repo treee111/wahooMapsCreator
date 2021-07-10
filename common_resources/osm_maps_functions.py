@@ -357,7 +357,7 @@ class OsmMaps:
         print('# Merge splitted tiles with land an sea: OK')
 
 
-    def create_map_files(self, save_cruiser):
+    def create_map_files(self, save_cruiser, tag_wahoo_xml):
         """
         Creating .map files
         """
@@ -389,7 +389,7 @@ class OsmMaps:
                 cmd.append('zoom-interval-conf=10,0,17')
                 cmd.append('threads='+ threads)
                 # should work on macOS and Windows
-                cmd.append(f'tag-conf-file={os.path.join(fd_fct.COMMON_DIR, "tag-wahoo.xml")}')
+                cmd.append(f'tag-conf-file={os.path.join(fd_fct.COMMON_DIR, tag_wahoo_xml)}')
                 # print(cmd)
                 result = subprocess.run(cmd, check=True)
                 if result.returncode != 0:
