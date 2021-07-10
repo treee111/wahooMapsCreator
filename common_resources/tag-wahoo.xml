@@ -105,7 +105,7 @@
         <osm-tag key="place" value="country" zoom-appear="3" />
         <osm-tag key="place" value="hamlet" zoom-appear="10" />
         <osm-tag key="place" value="island" zoom-appear="14" />
-        <osm-tag key="place" value="locality" zoom-appear="14" />
+    <!--    <osm-tag key="place" value="locality" zoom-appear="14" /> -->
         <osm-tag key="place" value="suburb" zoom-appear="11" />
         <osm-tag key="place" value="town" zoom-appear="8" />
         <osm-tag key="place" value="village" zoom-appear="12" />
