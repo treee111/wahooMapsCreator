@@ -17,7 +17,7 @@ class TestOsmMaps(unittest.TestCase):
     """
 
     def setUp(self):
-        self.o_osm_maps = OsmMaps(False, 0)
+        self.o_osm_maps = OsmMaps(False)
 
         self.file_path_common = os.path.join(os.getcwd(), 'common_resources')
 
@@ -52,21 +52,23 @@ class TestOsmMaps(unittest.TestCase):
         """
 
         # malta
-        self.process_input_and_check_border_countries('malta', True, {'malta': {}})
+        self.process_and_check_border_countries('malta', True, {'malta': {}})
 
         # germany
-        expected_result = {'czech_republic': {}, 'germany': {}, 'austria': {}, 'liechtenstein': {}, 'switzerland': {}, 'italy': {}, 'netherlands': {}, 'belgium': {}, 'luxembourg': {}, 'france': {}, 'poland': {}, 'denmark': {}}
-        self.process_input_and_check_border_countries('germany', True, expected_result)
+        expected_result = {'czech_republic': {}, 'germany': {}, 'austria': {}, 'liechtenstein': {},
+                            'switzerland': {}, 'italy': {}, 'netherlands': {}, 'belgium': {},
+                            'luxembourg': {}, 'france': {}, 'poland': {}, 'denmark': {}}
+        self.process_and_check_border_countries('germany', True, expected_result)
 
         # one tile - france and germany
         input_file = os.path.join(self.file_path_common, 'germany-only1.json')
         expected_result = {'france': {}, 'germany': {}}
-        self.process_input_and_check_border_countries(input_file, True, expected_result)
+        self.process_and_check_border_countries(input_file, True, expected_result)
 
         # two tiles - germany
         input_file = os.path.join(self.file_path_common, 'germany-only2.json')
         expected_result = {'germany': {}}
-        self.process_input_and_check_border_countries(input_file, True, expected_result)
+        self.process_and_check_border_countries(input_file, True, expected_result)
 
     def test_calc_without_border_countries(self):
         """
@@ -77,22 +79,22 @@ class TestOsmMaps(unittest.TestCase):
         """
 
         # germany
-        self.process_input_and_check_border_countries('germany', False, {'germany': {}})
+        self.process_and_check_border_countries('germany', False, {'germany': {}})
 
         # china
-        self.process_input_and_check_border_countries('china', False, {'china': {}})
+        self.process_and_check_border_countries('china', False, {'china': {}})
 
         # one tile - france and germany
         input_file = os.path.join(self.file_path_common, 'germany-only1.json')
         expected_result = {'france': {}, 'germany': {}}
-        self.process_input_and_check_border_countries(input_file, False, expected_result)
+        self.process_and_check_border_countries(input_file, False, expected_result)
 
         # two tiles - germany
         input_file = os.path.join(self.file_path_common, 'germany-only2.json')
         expected_result = {'germany': {}}
-        self.process_input_and_check_border_countries(input_file, False, expected_result)
+        self.process_and_check_border_countries(input_file, False, expected_result)
 
-    def process_input_and_check_border_countries(self, country, calc_border_countries, expected_result):
+    def process_and_check_border_countries(self, country, calc_border_countries, expected_result):
         """
         helper method to check a country without border countries
         """
