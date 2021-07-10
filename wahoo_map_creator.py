@@ -39,7 +39,7 @@ parser.add_argument('-c', '--cruiser', action='store_true', help="save uncompres
 args = parser.parse_args()
 
 
-oOSMmaps = OsmMaps(args.forceprocessing, args.cruiser)
+oOSMmaps = OsmMaps(args.forceprocessing)
 
 # Read json file
 # Check for expired land polygons file and download, if too old
@@ -63,10 +63,11 @@ oOSMmaps.split_filtered_country_files_to_tiles()
 oOSMmaps.merge_splitted_tiles_with_land_and_sea()
 
 # Creating .map files
-oOSMmaps.create_map_files()
+oOSMmaps.create_map_files(args.cruiser)
 
 # Zip .map.lzma files
 oOSMmaps.zip_map_files()
 
 # Make Cruiser map files zip file
-oOSMmaps.make_cruiser_files()
+if args.cruiser is True:
+    oOSMmaps.make_cruiser_files()
