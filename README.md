@@ -23,30 +23,44 @@ If anything is unclear or just wrong, write an issue!
 ### Overview of the steps
 The steps for both OS are similar:
 - Download and Install required programs
-- Clone wahooMapsCreator Repository or download a Release
+- Sownload a release of wahooMapsCreator or clone Repository
 - Run wahooMapsCreator for your country
 - copy the map-files to your device
 
 ### Download and Install required programs
+The initial setup takes some minutes but is only a one-timer!
+
 Follow the Quick Start guide depending on your OS:
 - [Quick Start Guide for Windows](docs/QUICKSTART_WINDOWS.md)
 - [Quick Start Guide for macOS](docs/QUICKSTART_MACOS.md)
 
 ### Get wahooMapsCreator
-Download the latest Release from the ["Releases" Section](https://github.com/treee111/wahooMapsCreator/releases) and Save the folder anywhere on your drive.
+Download the latest Release from the ["Releases" Section](https://github.com/treee111/wahooMapsCreator/releases) and Save the folder on your drive. You can also clone the repository and have the latest coding.
 
 ### Run wahooMapsCreator for your country
 It might be a good idea to run wahooMapsCreator first for a small country e.g. Malta to check if everything is running fine.
 In a next step you can run it for your own country.
 
-#### macOS and Windows
-From the `root` folder of wahooMapsCreator, run:
+#### Basic Usage (macOS and Windows)
+from the `root` folder of wahooMapsCreator, run:
 - `python3 wahoo_map_creator.py <country_name>` or
 - `python wahoo_map_creator.py <country_name>`
 
 Examples:
 - for Malta: `python3 wahoo_map_creator.py malta`
 - for Ireland: `python3 wahoo_map_creator.py ireland`
+
+#### Advanced Usage (macOS and Windows)
+The script supports many arguments.
+For a list of all supported arguments, run:
+- `python3 wahoo_map_creator.py -h` or
+- `python wahoo_map_creator.py -h`
+
+Examples:
+- for Malta, download new maps if existing maps are older than 100 days and process files even if files exist
+  - `python3 wahoo_map_creator.py malta -md 100 -fp`
+- for Germany, download and process whole tiles which involves other countries than the given
+  - `python3 wahoo_map_creator.py germany -bc`
 
 ### Copy the map-files to your device
 When file-creation is finished copy the map-files to your device:

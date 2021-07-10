@@ -15,10 +15,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.6.0] - 2021-07-10
+### Added
+- CLI arguments for relevant settings. No more editing of python files needed #19
+  - see `python3 wahoo_map_creator.py -h` or `python wahoo_map_creator.py -h` for possible arguments
+### Changed
+- pylint findings corrected
+### Removed
+- settings for processing should no longer be made in the file wahoo_map_creator.py. --> Use CLI arguments
+### Fixed
+- unittests run also on windows (paths are now OS-independent)
+
 ## [0.5.0] - 2021-07-04
 ### Added
-- Parameter to control download and processing of border countries or not
-- unittests for downloader.py and osm_maps_functions.py files
+- Parameter to control download and processing of border countries or not #18
+- unittests for downloader.py and osm_maps_functions.py files #16
 ### Changed
 - pylint findings corrected
 - a lot of refactored (focus methods, constructors)
@@ -76,14 +87,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - created two files which use mainly the coding from `common_resources`:
   - macOS/Unix: `tooling_mac/wahoo-map-creator-osmium-using-common.py`
   - Windows:    `tooling_windows/Windows-Wahoo-Map-Creator-Osmosis/wahoo-map-creator-osmosis-using-common.py`
-- `common_resources`: directory for common coding & resources
+- `common_resources`: directory for common coding & resources #8
   - with folders for resources and files generally needed 
   - with extracted common coding from these two files
     - macOS/Unix: `tooling_mac/wahoo-map-creator-osmium-working.py`
     - Windows:    `tooling_windows/Windows-Wahoo-Map-Creator-Osmosis/wahoo-map-creator-osmosis.py`
 
 
-[unreleased]: https://github.com/treee111/wahooMapsCreator/compare/v0.4.0...HEAD
+[unreleased]: https://github.com/treee111/wahooMapsCreator/compare/v0.6.0...HEAD
+[0.6.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.5.0...v0.6.0
+[0.5.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.3.1...v0.4.0
 [0.3.1]: https://github.com/treee111/wahooMapsCreator/compare/v0.3.0...v0.3.1
 [0.3.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.2.0...v0.3.0
