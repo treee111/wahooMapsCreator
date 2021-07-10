@@ -15,6 +15,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.6.0] - 2021-07-10
+### Added
+- CLI arguments for relevant settings. No more editing of python files needed #19
+  - see `python3 wahoo_map_creator.py -h` or `python wahoo_map_creator.py -h` for possible arguments
+### Changed
+- pylint findings corrected
+### Removed
+- settings for processing should no longer be made in the file wahoo_map_creator.py. --> Use CLI arguments
+### Fixed
+- unittests run also on windows (paths are now OS-independent)
+
 ## [0.5.0] - 2021-07-04
 ### Added
 - Parameter to control download and processing of border countries or not #18
@@ -83,7 +94,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - Windows:    `tooling_windows/Windows-Wahoo-Map-Creator-Osmosis/wahoo-map-creator-osmosis.py`
 
 
-[unreleased]: https://github.com/treee111/wahooMapsCreator/compare/v0.5.0...HEAD
+[unreleased]: https://github.com/treee111/wahooMapsCreator/compare/v0.6.0...HEAD
+[0.6.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.5.0...v0.6.0
 [0.5.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.3.1...v0.4.0
 [0.3.1]: https://github.com/treee111/wahooMapsCreator/compare/v0.3.0...v0.3.1
