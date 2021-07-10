@@ -24,12 +24,11 @@ class OsmMaps:
     This is a OSM data class
     """
 
-    def __init__(self, Force_Processing, Save_Cruiser):
+    def __init__(self, Force_Processing):
         # input parameters
         self.force_processing = Force_Processing
         # Number of workers for the Osmosis read binary fast function
         self.workers = '1'
-        self.save_cruiser = Save_Cruiser
 
         self.tiles = []
         self.border_countries = {}
@@ -355,7 +354,7 @@ class OsmMaps:
         print('# Merge splitted tiles with land an sea: OK')
 
 
-    def create_map_files(self):
+    def create_map_files(self, save_cruiser):
         """
         Creating .map files
         """
@@ -403,7 +402,7 @@ class OsmMaps:
                     cmd.extend(['-f']) # force overwrite of output file and (de)compress links
 
                     # --keep: do not delete source file
-                    if self.save_cruiser:
+                    if save_cruiser:
                         cmd.append('--keep')
 
                 # print(cmd)
@@ -447,15 +446,14 @@ class OsmMaps:
         """
 
         # Make Cruiser map files zip file
-        if self.save_cruiser is True:
-            # Windows
-            if platform.system() == "Windows":
-                cmd = [os.path.join(fdf.TOOLING_WIN_DIR, '7za'), 'a', '-tzip', '-m0=lzma', self.country_name + '-maps.zip']
-            # Non-Windows
-            else:
-                cmd = ['zip', '-r', self.country_name + '-maps.zip']
+        # Windows
+        if platform.system() == "Windows":
+            cmd = [os.path.join(fdf.TOOLING_WIN_DIR, '7za'), 'a', '-tzip', '-m0=lzma', self.country_name + '-maps.zip']
+        # Non-Windows
+        else:
+            cmd = ['zip', '-r', self.country_name + '-maps.zip']
 
-            for tile in self.tiles:
-                cmd.append(os.path.join(f'{tile["x"]}', f'{tile["y"]}.map'))
-            #print(cmd)
-            subprocess.run(cmd, cwd=fdf.OUTPUT_DIR, check=True)
+        for tile in self.tiles:
+            cmd.append(os.path.join(f'{tile["x"]}', f'{tile["y"]}.map'))
+        #print(cmd)
+        subprocess.run(cmd, cwd=fdf.OUTPUT_DIR, check=True)
