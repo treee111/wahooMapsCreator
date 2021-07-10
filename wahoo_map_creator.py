@@ -16,24 +16,30 @@ from common_resources.osm_maps_functions import OsmMaps
 
 
 # input argument creation and processing
-parser = argparse.ArgumentParser(description='Create up-to-date maps for your Wahoo ELEMNT and Wahoo ELEMNT BOLT')
+DESC = "Create up-to-date maps for your Wahoo ELEMNT and Wahoo ELEMNT BOLT"
+parser = argparse.ArgumentParser(description=DESC)
 
 # country or file to create maps for
 parser.add_argument("country", help="country to generate maps for")
 # Maximum age of source maps or land shape files before they are redownloaded
-parser.add_argument('-md', '--maxdays', help="maximum age of source maps and other files", type=int, default=14)
+parser.add_argument('-md', '--maxdays', type=int, default=14,
+                    help="maximum age of source maps and other files")
 # Calculate also border countries of input country or not
-parser.add_argument('-bc', '--bordercountries', action='store_true', help="process whole tiles which involve border countries")
+parser.add_argument('-bc', '--bordercountries', action='store_true',
+                    help="process whole tiles which involve border countries")
 # Force download of source maps and the land shape file
 # If False use Max_Days_Old to check for expired maps
 # If True force redownloading of maps and landshape
-parser.add_argument('-d', '--forcedownload', action='store_true', help="force download of files")
+parser.add_argument('-d', '--forcedownload', action='store_true',
+                    help="force download of files")
 # Force (re)processing of source maps and the land shape file
 # If False only process files if not existing
 # If True force processing of files
-parser.add_argument('-p', '--forceprocessing', action='store_true', help="force processing of files")
+parser.add_argument('-p', '--forceprocessing', action='store_true',
+                    help="force processing of files")
 # Save uncompressed maps for Cruiser if True
-parser.add_argument('-c', '--cruiser', action='store_true', help="save uncompressed maps for Cruiser")
+parser.add_argument('-c', '--cruiser', action='store_true',
+                    help="save uncompressed maps for Cruiser")
 
 # get all entered arguments
 args = parser.parse_args()
