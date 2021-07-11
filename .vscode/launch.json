@@ -7,7 +7,7 @@
             "request": "launch",
             "program": "${workspaceRoot}/wahoo_map_creator.py",
             "console": "integratedTerminal",
-            "args": ["${workspaceRoot}/common_resources/germany-only1.json"]
+            "args": ["${workspaceRoot}/tests/json/germany-only1.json"]
         },
         {
             "name": "only2-tile",
@@ -15,7 +15,7 @@
             "request": "launch",
             "program": "${workspaceRoot}/wahoo_map_creator.py",
             "console": "integratedTerminal",
-            "args": ["${workspaceRoot}/common_resources/germany-only2.json"]
+            "args": ["${workspaceRoot}/tests/json/germany-only2.json"]
         },
         {
             "name": "only5-tile",
@@ -23,7 +23,7 @@
             "request": "launch",
             "program": "${workspaceRoot}/wahoo_map_creator.py",
             "console": "integratedTerminal",
-            "args": ["${workspaceRoot}/common_resources/germany-only5.json"]
+            "args": ["${workspaceRoot}/tests/json/germany-only5.json"]
         },
         {
             "name": "germany",
@@ -31,7 +31,7 @@
             "request": "launch",
             "program": "${workspaceRoot}/wahoo_map_creator.py",
             "console": "integratedTerminal",
-            "args": ["${workspaceRoot}/common_resources/germany.json"]
+            "args": ["${workspaceRoot}/tests/json/germany.json"]
         },
         {
             "name": "malta",
