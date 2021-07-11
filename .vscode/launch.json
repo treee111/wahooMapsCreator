@@ -7,7 +7,7 @@
             "request": "launch",
             "program": "${workspaceRoot}/wahoo_map_creator.py",
             "console": "integratedTerminal",
-            "args": ["${workspaceRoot}/common_resources/germany-only1.json", "-md", "100", "-fp", "-c"]
+            "args": ["${workspaceRoot}/tests/json/germany-only1.json", "-md", "100", "-fp", "-c"]
         },
         {
             "name": "only2-tile",
@@ -15,7 +15,15 @@
             "request": "launch",
             "program": "${workspaceRoot}/wahoo_map_creator.py",
             "console": "integratedTerminal",
-            "args": ["${workspaceRoot}/tests/json/germany-only2.json"]
+            "args": ["${workspaceRoot}/tests/json/germany-only2.json", "-md", "100", "-fp", "-c", "-om"]
+        },
+        {
+            "name": "only4-tile",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceRoot}/wahoo_map_creator.py",
+            "console": "integratedTerminal",
+            "args": ["${workspaceRoot}/tests/json/germany-only4.json", "-md", "100", "-fp", "-c"]
         },
         {
             "name": "only5-tile",
