@@ -15,6 +15,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- move contents into the correct directory
+### Removed
+- doubled / not needed files and folders
+
 ## [0.6.0] - 2021-07-10
 ### Added
 - CLI arguments for relevant settings. No more editing of python files needed #19
