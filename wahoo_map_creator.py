@@ -5,7 +5,6 @@ executable file to create up-to-date map-files for the Wahoo ELEMNT and Wahoo EL
 
 # import custom python packages
 from common_resources.osm_maps_functions import OsmMaps
-# import common_resources.input_functions as in_fct
 from common_resources.input import Input
 
 # logging used in the terminal output:
@@ -13,13 +12,7 @@ from common_resources.input import Input
 # ! means error
 # + means additional comment in a working-unit
 
-# if __name__ == "__main__":
-# root = tk.Tk()
-# MainApplication(root).pack(side="top", fill="both", expand=True)
-# root.mainloop()
-# window = tk.Tk()
 oInput = Input()
-# oInput.pack(side="top", fill="both", expand=True)
 
 oInputData = oInput.cli_arguments()
 if oInputData is False:
