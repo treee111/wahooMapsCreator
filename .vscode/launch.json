@@ -42,7 +42,7 @@
             "args": ["malta", "-tag", "tag-wahoo.xml", "-fp", "-c"]
         },
         {
-            "name": "malta_gui",
+            "name": "gui",
             "type": "python",
             "request": "launch",
             "program": "${workspaceRoot}/wahoo_map_creator.py",
