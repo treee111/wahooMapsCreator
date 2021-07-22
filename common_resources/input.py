@@ -74,7 +74,7 @@ class Input(tk.Tk):
             return self.o_input_data
 
 
-    def handle_create_map(self):
+    def handle_create_map(self, event):
         """
         run when Button "Create" is pressed
         """
@@ -90,7 +90,7 @@ class Input(tk.Tk):
         self.destroy()
 
 
-    def switch_reload(self):
+    def switch_reload(self, event):
         """
         switch edit-mode of max-days field
         """
@@ -196,7 +196,7 @@ class ComboboxesEntryField(tk.Frame):
         self.en_max_days_old.grid(column = 1, row = 3, sticky = tk.W, padx = 10)
 
 
-    def callback_continent(self):
+    def callback_continent(self, event):
         """
         set value-list of countries after changing continent
         """
