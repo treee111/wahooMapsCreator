@@ -254,7 +254,7 @@ class OsmMaps:
         tile_count = 1
         for tile in self.tiles:
 
-            for country in tile['countries']:
+            for country, val in self.border_countries.items():
                 print(f'+ Split filtered country {country}')
                 print(f'+ Splitting tile {tile_count} of {len(self.tiles)} for Coordinates: {tile["x"]},{tile["y"]} from map of {country}')
                 out_file = os.path.join(fd_fct.OUTPUT_DIR,
@@ -269,7 +269,7 @@ class OsmMaps:
                         cmd = [os.path.join(fd_fct.TOOLING_WIN_DIR, 'osmconvert'), '-v', '--hash-memory=2500']
                         cmd.append('-b='+f'{tile["left"]}' + ',' + f'{tile["bottom"]}' + ',' + f'{tile["right"]}' + ',' + f'{tile["top"]}')
                         cmd.extend(['--complete-ways', '--complete-multipolygons', '--complete-boundaries'])
-                        cmd.append(self.border_countries[country]['filtered_file'])
+                        cmd.append(val['filtered_file'])
                         cmd.append('-o='+out_file)
 
                         # print(cmd)
@@ -283,14 +283,14 @@ class OsmMaps:
                     else:
                         cmd = ['osmium', 'extract']
                         cmd.extend(['-b',f'{tile["left"]},{tile["bottom"]},{tile["right"]},{tile["top"]}'])
-                        cmd.append(self.border_countries[country]['filtered_file'])
+                        cmd.append(val['filtered_file'])
                         cmd.extend(['-s', 'smart'])
                         cmd.extend(['-o', out_file])
                         cmd.extend(['--overwrite'])
 
                         # print(cmd)
                         subprocess.run(cmd, check=True)
-                        print(self.border_countries[country]['filtered_file'])
+                        print(val['filtered_file'])
 
             tile_count += 1
 
@@ -298,7 +298,7 @@ class OsmMaps:
             print('# Split filtered country files to tiles: OK')
 
 
-    def merge_splitted_tiles_with_land_and_sea(self):
+    def merge_splitted_tiles_with_land_and_sea(self, calc_border_countries):
         """
         Merge splitted tiles with land an sea
         """
@@ -315,14 +315,17 @@ class OsmMaps:
                     cmd = [os.path.join (fd_fct.COMMON_DIR,
                      'Osmosis', 'bin', 'osmosis.bat')]
                     loop=0
+                    # loop through all countries of tile, if border-countries should be processed.
+                    # if border-countries should not be processed, only process the "entered" country
                     for country in tile['countries']:
-                        cmd.append('--rbf')
-                        cmd.append(os.path.join(fd_fct.OUTPUT_DIR,
-                         f'{tile["x"]}', f'{tile["y"]}', f'split-{country}.osm.pbf'))
-                        cmd.append('workers='+ self.workers)
-                        if loop > 0:
-                            cmd.append('--merge')
-                        loop+=1
+                        if calc_border_countries or country in self.border_countries :
+                            cmd.append('--rbf')
+                            cmd.append(os.path.join(fd_fct.OUTPUT_DIR,
+                            f'{tile["x"]}', f'{tile["y"]}', f'split-{country}.osm.pbf'))
+                            cmd.append('workers='+ self.workers)
+                            if loop > 0:
+                                cmd.append('--merge')
+                            loop+=1
                     land_files = glob.glob(os.path.join(fd_fct.OUTPUT_DIR,
                      f'{tile["x"]}', f'{tile["y"]}', 'land*.osm'))
                     for land in land_files:
@@ -335,9 +338,12 @@ class OsmMaps:
                 # Non-Windows
                 else:
                     cmd = ['osmium', 'merge', '--overwrite']
+                    # loop through all countries of tile, if border-countries should be processed.
+                    # if border-countries should not be processed, only process the "entered" country
                     for country in tile['countries']:
-                        cmd.append(os.path.join(fd_fct.OUTPUT_DIR,
-                         f'{tile["x"]}', f'{tile["y"]}', f'split-{country}.osm.pbf'))
+                        if calc_border_countries or country in self.border_countries :
+                            cmd.append(os.path.join(fd_fct.OUTPUT_DIR,
+                            f'{tile["x"]}', f'{tile["y"]}', f'split-{country}.osm.pbf'))
 
                     cmd.append(os.path.join(fd_fct.OUTPUT_DIR,
                      f'{tile["x"]}', f'{tile["y"]}', 'land1.osm'))

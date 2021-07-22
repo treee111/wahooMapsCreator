@@ -14,6 +14,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `Security` in case of vulnerabilities.
 
 ## [Unreleased]
+### Fixed
+- When running without calculation of border countries, ignore border countries in all steps
 
 ### Changed
 - move contents into the correct directory

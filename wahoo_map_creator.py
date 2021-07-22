@@ -39,7 +39,7 @@ oOSMmaps.generate_sea()
 oOSMmaps.split_filtered_country_files_to_tiles()
 
 # Merge splitted tiles with land an sea
-oOSMmaps.merge_splitted_tiles_with_land_and_sea()
+oOSMmaps.merge_splitted_tiles_with_land_and_sea(oInputData.border_countries)
 
 # Creating .map files
 oOSMmaps.create_map_files(oInputData.save_cruiser, oInputData.tag_wahoo_xml)
