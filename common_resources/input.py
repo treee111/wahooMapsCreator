@@ -240,9 +240,9 @@ class Checkbuttons(tk.Frame):
         self.chk_save_cruiser = tk.Checkbutton(self, text = "Save uncompressed maps for Cruiser",
                                 var = self.checkb_save_cruiser)
 
-        self.chk_force_download.grid(column = 0, row = 0, sticky = tk.W, padx = 15, pady = 5)
-        self.chk_force_processing.grid(column = 0, row = 1, sticky = tk.W, padx = 15, pady = 5)
-        self.chk_border_countries.grid(column = 0, row = 2, sticky = tk.W, padx = 15, pady = 5)
+        self.chk_border_countries.grid(column = 0, row = 0, sticky = tk.W, padx = 15, pady = 5)
+        self.chk_force_download.grid(column = 0, row = 1, sticky = tk.W, padx = 15, pady = 5)
+        self.chk_force_processing.grid(column = 0, row = 2, sticky = tk.W, padx = 15, pady = 5)
         self.chk_save_cruiser.grid(column = 0, row = 3, columnspan = 2, sticky = tk.W,
                                         padx = 15, pady = 5)
 
