@@ -17,7 +17,7 @@ from common_resources import constants
 
 class InputData():
     """
-    object with all parameters to process maps
+    object with all parameters to process maps and default values
     """
     def __init__(self):
         self.region = ""
@@ -52,16 +52,16 @@ class Input(tk.Tk):
         self.option_add("*Font", "Calibri 16")
 
         container = tk.Frame(self)
-        container.pack(side="top", fill = "both", expand = True)
+        container.pack(side = tk.TOP, fill = tk.BOTH, expand = True)
 
         self.first = ComboboxesEntryField(container, self.o_input_data.max_days_old)
-        self.first.pack(side="top", fill="x")
+        self.first.pack(side = tk.TOP, fill = tk.X)
 
         self.third = Checkbuttons(container, self.o_input_data, controller = self)
-        self.third.pack(side="top", fill="x")
+        self.third.pack(side = tk.TOP, fill = tk.X)
 
         self.four = Buttons(container, controller = self)
-        self.four.pack(side="top", fill="x")
+        self.four.pack(side = tk.TOP, fill = tk.X)
 
     def start_gui(self):
         """
@@ -256,10 +256,10 @@ class Buttons(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent, bg="light grey")
         self.controller = controller
-        self.btn_ok = tk.Button(self, text = "Create map", width = 15)
+        self.btn_ok = tk.Button(self, text = "Create map")
         self.btn_ok.bind("<Button-1>", self.controller.handle_create_map)
 
-        self.btn_cancel = tk.Button(self, text="Exit", width = 15, command = parent.destroy)
+        self.btn_cancel = tk.Button(self, text="Exit", command = parent.destroy)
 
-        self.btn_ok.pack(side = "left")
-        self.btn_cancel.pack(side = "right")
+        self.btn_ok.pack(side = tk.LEFT, fill = tk.X, expand = True)
+        self.btn_cancel.pack(side = tk.RIGHT, fill = tk.X, expand = True)
