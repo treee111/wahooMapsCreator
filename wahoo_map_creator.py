@@ -14,9 +14,10 @@ from common_resources.input import Input
 
 oInput = Input()
 
-oInputData = oInput.cli_arguments()
-if oInputData is False:
+if oInput.gui_mode:
     oInputData = oInput.start_gui()
+else:
+    oInputData = oInput.cli_arguments()
 
 oOSMmaps = OsmMaps(oInputData.force_processing)
 

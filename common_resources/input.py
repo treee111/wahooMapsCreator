@@ -37,8 +37,10 @@ class Input(tk.Tk):
     """
 
     def __init__(self, *args, **kwargs):
-        self.region = ""
-        self.country = ""
+        if len(sys.argv) == 1:
+            self.gui_mode = True
+        else:
+            self.gui_mode = False
 
         self.o_input_data = InputData()
 
