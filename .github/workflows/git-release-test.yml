@@ -1,0 +1,37 @@
+name: Git Release Test
+
+on:
+  push:
+    branches:
+      - git-release
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Set output
+        id: vars
+        run: echo ::set-output name=tag::${GITHUB_REF#refs/*/}
+      - name: Check output
+        env:
+          RELEASE_VERSION: ${{ steps.vars.outputs.tag }}
+        run: |
+          echo $RELEASE_VERSION
+          echo ${{ steps.vars.outputs.tag }}
+      - name: Moving build to dist-directory
+        run: ./copyFilesToDist.sh
+        shell: bash
+      - name: Release
+        uses: docker://antonyurchenko/git-release:latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          UNRELEASED: "update"
+        with:
+          args: |
+            dist/wahooMapsCreator-release*.zip
+            darwin-amd64.zip
+            linux-amd64.zip
+            windows-amd64.zip
