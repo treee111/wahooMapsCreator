@@ -10,7 +10,7 @@
     </p>
     <h1>Wahoo Maps Creator</h1>
 </div>
-A tool to create up-to-date maps for your Wahoo ELEMNT BOLT and Wahoo ELEMNT!
+A tool to create up-to-date maps for your Wahoo ELEMNT BOLT and Wahoo ELEMNT! It runs on macOS, Unix as well as on Windows!
 
 # Basic Overview
 WahooMapsCreator is a tool to create updated maps for Wahoo ELEMNT BOLT and Wahoo ELEMNT devices for your country.
@@ -21,11 +21,11 @@ The instructens are intended to be suitable for beginners.
 If anything is unclear or just wrong, write an issue!
 
 ### Overview of the steps
-The steps for both OS are similar:
+The steps for all OS are similar:
 - Download and Install required programs
-- Sownload a release of wahooMapsCreator or clone Repository
+- Download a release of wahooMapsCreator or clone Repository
 - Run wahooMapsCreator for your country
-- copy the map-files to your device
+- Copy the map-files to your device
 
 ### Download and Install required programs
 The initial setup takes some minutes but is only a one-timer!
@@ -37,11 +37,28 @@ Follow the Quick Start guide depending on your OS:
 ### Get wahooMapsCreator
 Download the latest Release from the ["Releases" Section](https://github.com/treee111/wahooMapsCreator/releases) and Save the folder on your drive. You can also clone the repository and have the latest coding.
 
+## Run wahooMapsCreator
+wahooMapsCreator can be used in two different ways.
+
+Both ways support the same arguments to be used for the map-creation process. You can choose them via GUI or as [CLI-arguments](#advanced-cli-usage).
+### GUI (Graphical User Interface)
+
+From the `root` folder of wahooMapsCreator, run:
+  - `python3 wahoo_map_creator.py` or
+  - `python wahoo_map_creator.py`
+  - <img src="https://github.com/treee111/wahooMapsCreator/blob/develop/docs/gui.png" alt="wahooMapsCreator GUI" width=50%>
+
+### CLI (Command Line Interfaces)
+
+From the `root` folder of wahooMapsCreator, run:
+  - `python3 wahoo_map_creator.py <country_name>` or
+  - `python wahoo_map_creator.py <country_name>`
+
 ### Run wahooMapsCreator for your country
 It might be a good idea to run wahooMapsCreator first for a small country e.g. Malta to check if everything is running fine.
 In a next step you can run it for your own country.
 
-#### Basic Usage (macOS and Windows)
+### Basic CLI-Usage
 from the `root` folder of wahooMapsCreator, run:
 - `python3 wahoo_map_creator.py <country_name>` or
 - `python wahoo_map_creator.py <country_name>`
@@ -50,7 +67,7 @@ Examples:
 - for Malta: `python3 wahoo_map_creator.py malta`
 - for Ireland: `python3 wahoo_map_creator.py ireland`
 
-#### Advanced Usage (macOS and Windows)
+### Advanced CLI-Usage
 The script supports many arguments.
 For a list of all supported arguments, run:
 - `python3 wahoo_map_creator.py -h` or
@@ -62,7 +79,7 @@ Examples:
 - for Germany, download and process whole tiles which involves other countries than the given
   - `python3 wahoo_map_creator.py germany -bc`
 
-### Copy the map-files to your device
+## Copy the map-files to your device
 When file-creation is finished copy the map-files to your device:
 -  [Copy maps files to Wahoo](docs/COPY_TO_WAHOO.md)
 

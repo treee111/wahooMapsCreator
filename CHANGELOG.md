@@ -15,6 +15,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.7.0] - 2021-07-25
+### Added
+- GUI functionality with all relevant settings (equals CLI arguments) #24
+  - start gui via `python3 wahoo_map_creator.py` or `python wahoo_map_creator.py`
+- Release .zip file will only contain relevant files for execution #25
+### Fixed
+- When running without calculation of border countries, ignore border countries in all steps #24
+### Changed
+- move contents into the correct directory #23
+### Removed
+- doubled / not needed files and folders #23
+
 ## [0.6.0] - 2021-07-10
 ### Added
 - CLI arguments for relevant settings. No more editing of python files needed #19
