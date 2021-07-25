@@ -1,20 +1,28 @@
-# create folder
+FOLDER_NAME="wahooMapsCreator-"${GITHUB_REF_VARIABLE}
+echo "Foldername: ${FOLDER_NAME}"
+echo "Github-Ref: ${GITHUB_REF_VARIABLE}"
+
+# create folders and move into dist-folder
 mkdir -p dist
-mkdir -p dist/common_resources
-mkdir -p dist/common_resources/maps
-mkdir -p dist/output
+cd dist
+mkdir -p ${FOLDER_NAME}
+mkdir -p ${FOLDER_NAME}/common_resources
+mkdir -p ${FOLDER_NAME}/common_resources/maps
+mkdir -p ${FOLDER_NAME}/output
 
 # copy files into dist-folder
-cp -a ./common_resources/json/ ./dist/common_resources/json
-cp -a ./common_resources/Osmosis/ ./dist/common_resources/Osmosis
-cp -a ./common_resources/*.py ./dist/common_resources/
-cp -a ./common_resources/*.xml ./dist/common_resources/
-cp -a ./common_resources/*.osm ./dist/common_resources/
-cp -a ./docs ./dist/docs
+cp -a ../common_resources/json/ ${FOLDER_NAME}/common_resources/json
+cp -a ../common_resources/Osmosis/ ${FOLDER_NAME}/common_resources/Osmosis
+cp -a ../common_resources/*.py ${FOLDER_NAME}/common_resources/
+cp -a ../common_resources/*.xml ${FOLDER_NAME}/common_resources/
+cp -a ../common_resources/*.osm ${FOLDER_NAME}/common_resources/
+cp -a ../docs ${FOLDER_NAME}/docs
 # cp -a ./output ./dist/output
-cp -a ./tooling ./dist/tooling
-cp -a ./tooling_windows ./dist/tooling_windows
-cp -a ./wahoo_map_creator.py ./CHANGELOG.md ./README.md ./dist/
+cp -a ../tooling ${FOLDER_NAME}/tooling
+cp -a ../tooling_windows ${FOLDER_NAME}/tooling_windows
+cp -a ../wahoo_map_creator.py ../CHANGELOG.md ../README.md ${FOLDER_NAME}/
 
 # zip content into .zip file
-zip -r dist/wahooMapsCreator-release.zip ./dist
+# cd wahooMapsCreator-${GITHUB_REF_VARIABLE}
+zip -r ${FOLDER_NAME}.zip ./${FOLDER_NAME}
+ls

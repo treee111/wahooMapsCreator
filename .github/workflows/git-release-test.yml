@@ -24,6 +24,8 @@ jobs:
       - name: Moving build to dist-directory
         run: ./copyFilesToDist.sh
         shell: bash
+        env:
+          GITHUB_REF_VARIABLE: ${{ steps.vars.outputs.tag }}
       - name: Release
         uses: docker://antonyurchenko/git-release:latest
         env:
@@ -31,7 +33,7 @@ jobs:
           UNRELEASED: "update"
         with:
           args: |
-            dist/wahooMapsCreator-release*.zip
+            dist/wahooMapsCreator-*.zip
             darwin-amd64.zip
             linux-amd64.zip
             windows-amd64.zip
