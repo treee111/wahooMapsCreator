@@ -1,9 +1,9 @@
-name: Git Release
+name: Git Release Test
 
 on:
   push:
-    tags:
-    - 'v*'
+    branches:
+      - git-release
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -15,6 +15,12 @@ jobs:
       - name: Set output
         id: vars
         run: echo ::set-output name=tag::${GITHUB_REF#refs/*/}
+      - name: Check output
+        env:
+          RELEASE_VERSION: ${{ steps.vars.outputs.tag }}
+        run: |
+          echo $RELEASE_VERSION
+          echo ${{ steps.vars.outputs.tag }}
       - name: Moving build to dist-directory
         run: ./copyFilesToDist.sh
         shell: bash
@@ -24,7 +30,7 @@ jobs:
         uses: docker://antonyurchenko/git-release:latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          RELEASE_NAME_PREFIX: "Release "
+          UNRELEASED: "update"
         with:
           args: |
             dist/wahooMapsCreator-*.zip

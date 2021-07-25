@@ -8,6 +8,7 @@ output/*
 output*/*
 tools_dl/
 venv/*
+dist/**
 
 # in all folders
 **/__pycache__/*
