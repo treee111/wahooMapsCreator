@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+# pylint: skip-file
 
 """
 This script is designed to act as assistance in converting shapefiles
