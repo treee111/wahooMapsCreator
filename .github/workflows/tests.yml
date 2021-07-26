@@ -22,11 +22,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install pylint pytest
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-      - name: GitHub Action for pylint
-        uses: cclauss/GitHub-Action-for-pylint@0.7.0
+      - name: Python Code Quality and Lint
+        uses: ricardochaves/python-lint@v1.3.0
         with:
-          args: |
-             pylint **/*.py
+          python-root-list: ". common_resources tests"
+          use-pylint: true
+
 
   unittest:
     runs-on: ubuntu-latest
