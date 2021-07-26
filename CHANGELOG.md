@@ -14,6 +14,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `Security` in case of vulnerabilities.
 
 ## [Unreleased]
+### Fixed
+- Release .zip file without doubled subfolder. Directly zip content
 
 ## [0.7.0] - 2021-07-25
 ### Added
