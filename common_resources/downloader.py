@@ -84,7 +84,8 @@ class Downloader:
             need_to_download = True
 
         # if land poligons file does not exists --> download
-        if not os.path.exists(fd_fct.LAND_POLYGONS_PATH) or not os.path.isfile(fd_fct.LAND_POLYGONS_PATH):
+        if  not os.path.exists(fd_fct.LAND_POLYGONS_PATH) or \
+            not os.path.isfile(fd_fct.LAND_POLYGONS_PATH):
             need_to_download = True
             # logging
             print('# land_polygons.shp file needs to be downloaded')
@@ -188,7 +189,8 @@ class Downloader:
         region = const_fct.get_geofabrik_region_of_country(country)
 
         if region != 'no':
-            url = 'https://download.geofabrik.de/' + region + '/' + transl_c + '-latest.osm.pbf'
+            url = 'https://download.geofabrik.de/' + region + \
+            '/' + transl_c + '-latest.osm.pbf'
         else:
             url = 'https://download.geofabrik.de/' + transl_c + '-latest.osm.pbf'
 
