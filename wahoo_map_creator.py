@@ -27,17 +27,19 @@ oOSMmaps = OsmMaps(oInputData.force_processing)
 oOSMmaps.process_input(oInputData.country, oInputData.border_countries)
 oOSMmaps.check_and_download_files(oInputData.max_days_old, oInputData.force_download)
 
-# Filter tags from country osm.pbf files'
-oOSMmaps.filter_tags_from_country_osm_pbf_files()
 
-# Generate land
-oOSMmaps.generate_land()
+if oInputData.only_merge is False:
+    # Filter tags from country osm.pbf files'
+    oOSMmaps.filter_tags_from_country_osm_pbf_files()
 
-# Generate sea
-oOSMmaps.generate_sea()
+    # Generate land
+    oOSMmaps.generate_land()
 
-# Split filtered country files to tiles
-oOSMmaps.split_filtered_country_files_to_tiles()
+    # Generate sea
+    oOSMmaps.generate_sea()
+
+    # Split filtered country files to tiles
+    oOSMmaps.split_filtered_country_files_to_tiles()
 
 # Merge splitted tiles with land an sea
 oOSMmaps.merge_splitted_tiles_with_land_and_sea(oInputData.border_countries)

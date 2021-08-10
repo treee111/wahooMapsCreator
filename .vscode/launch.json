@@ -39,7 +39,7 @@
             "request": "launch",
             "program": "${workspaceRoot}/wahoo_map_creator.py",
             "console": "integratedTerminal",
-            "args": ["malta", "-tag", "tag-wahoo.xml", "-fp", "-c"]
+            "args": ["malta", "-tag", "tag-wahoo.xml", "-fp", "-c", "-md", "100"]
         },
         {
             "name": "gui",
@@ -48,6 +48,30 @@
             "program": "${workspaceRoot}/wahoo_map_creator.py",
             "console": "integratedTerminal",
             "args": []
+        },
+        {
+            "name": "cli help",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceRoot}/wahoo_map_creator.py",
+            "console": "integratedTerminal",
+            "args": ["-h"]
+        },
+        {
+            "name": "hong_kong",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceRoot}/wahoo_map_creator.py",
+            "console": "integratedTerminal",
+            "args": ["hong_kong", "-fp", "-c", "-bc", "-md", "100"]
+        },
+        {
+            "name": "macao",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceRoot}/wahoo_map_creator.py",
+            "console": "integratedTerminal",
+            "args": ["macao", "-fp", "-c", "-bc", "-md", "100"]
         }
     ]
 }
