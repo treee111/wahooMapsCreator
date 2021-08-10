@@ -28,6 +28,7 @@ class InputData():
         self.force_processing = False
         self.border_countries = False
         self.save_cruiser = False
+        self.only_merge = False
 
         self.tag_wahoo_xml = "tag-wahoo.xml"
 
@@ -137,6 +138,9 @@ class Input(tk.Tk):
         # specify the file with tags to keep in the output // file needs to be in common_resources
         parser.add_argument('-tag', '--tag_wahoo_xml', default=self.o_input_data.tag_wahoo_xml,
                             help="file with tags to keep in the output")
+        # specify the file with tags to keep in the output // file needs to be in common_resources
+        parser.add_argument('-om', '--only_merge', action='store_true',
+                            help="only merge, do no other processing")
 
 
         # set instance-attributes of class
@@ -151,6 +155,7 @@ class Input(tk.Tk):
         o_input_data.force_processing = args.forceprocessing
         o_input_data.border_countries = args.bordercountries
         o_input_data.save_cruiser = args.tag_wahoo_xml
+        o_input_data.only_merge = args.only_merge
 
         return o_input_data
 

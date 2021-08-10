@@ -40,6 +40,9 @@ class OsmMaps:
         get relevant tiles for given input and calc border countries of these tiles
         """
 
+        # logging
+        print(f'+ Input country or json file: {input_argument}.')
+
         # option 1: have a .json file as input parameter
         if os.path.isfile(input_argument):
             self.tiles = fd_fct.read_json_file(input_argument)

@@ -19,7 +19,7 @@ class TestOsmMaps(unittest.TestCase):
     def setUp(self):
         self.o_osm_maps = OsmMaps(False)
 
-        self.file_path_common = os.path.join(os.getcwd(), 'common_resources')
+        self.file_path_test_json = os.path.join(os.getcwd(), 'tests', 'json')
 
     def test_input_country_malta(self):
         """
@@ -36,7 +36,7 @@ class TestOsmMaps(unittest.TestCase):
         Test a json file as input to the wahooMapsCreator
         """
 
-        json_file_path = os.path.join(self.file_path_common, 'germany-only1.json')
+        json_file_path = os.path.join(self.file_path_test_json, 'germany-only1.json')
         self.o_osm_maps.process_input(json_file_path, True)
 
         result = self.o_osm_maps.country_name
@@ -61,12 +61,12 @@ class TestOsmMaps(unittest.TestCase):
         self.process_and_check_border_countries('germany', True, expected_result)
 
         # one tile - france and germany
-        input_file = os.path.join(self.file_path_common, 'germany-only1.json')
+        input_file = os.path.join(self.file_path_test_json, 'germany-only1.json')
         expected_result = {'france': {}, 'germany': {}}
         self.process_and_check_border_countries(input_file, True, expected_result)
 
         # two tiles - germany
-        input_file = os.path.join(self.file_path_common, 'germany-only2.json')
+        input_file = os.path.join(self.file_path_test_json, 'germany-only2.json')
         expected_result = {'germany': {}}
         self.process_and_check_border_countries(input_file, True, expected_result)
 
@@ -85,12 +85,12 @@ class TestOsmMaps(unittest.TestCase):
         self.process_and_check_border_countries('china', False, {'china': {}})
 
         # one tile - france and germany
-        input_file = os.path.join(self.file_path_common, 'germany-only1.json')
+        input_file = os.path.join(self.file_path_test_json, 'germany-only1.json')
         expected_result = {'france': {}, 'germany': {}}
         self.process_and_check_border_countries(input_file, False, expected_result)
 
         # two tiles - germany
-        input_file = os.path.join(self.file_path_common, 'germany-only2.json')
+        input_file = os.path.join(self.file_path_test_json, 'germany-only2.json')
         expected_result = {'germany': {}}
         self.process_and_check_border_countries(input_file, False, expected_result)
 
