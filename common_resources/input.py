@@ -140,22 +140,22 @@ class Input(tk.Tk):
 
 
         # set instance-attributes of class
-        try:
-            args = parser.parse_args()
+        # try:
+        args = parser.parse_args()
 
-            o_input_data = InputData()
-            o_input_data.country = args.country
-            o_input_data.max_days_old = args.maxdays
+        o_input_data = InputData()
+        o_input_data.country = args.country
+        o_input_data.max_days_old = args.maxdays
 
-            o_input_data.force_download = args.forcedownload
-            o_input_data.force_processing = args.forceprocessing
-            o_input_data.border_countries = args.bordercountries
-            o_input_data.save_cruiser = args.tag_wahoo_xml
+        o_input_data.force_download = args.forcedownload
+        o_input_data.force_processing = args.forceprocessing
+        o_input_data.border_countries = args.bordercountries
+        o_input_data.save_cruiser = args.tag_wahoo_xml
 
-            return o_input_data
+        return o_input_data
 
-        except SystemExit:
-            return False
+        # except SystemExit:
+        #     return False
 
 
 class ComboboxesEntryField(tk.Frame):

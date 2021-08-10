@@ -14,6 +14,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `Security` in case of vulnerabilities.
 
 ## [Unreleased]
+### Fixed
+- `-h` and `--help` works again
 
 ## [0.7.1] - 2021-07-26
 ### Fixed
