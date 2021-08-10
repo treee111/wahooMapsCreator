@@ -56,6 +56,22 @@
             "program": "${workspaceRoot}/wahoo_map_creator.py",
             "console": "integratedTerminal",
             "args": ["-h"]
+        },
+        {
+            "name": "hong_kong",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceRoot}/wahoo_map_creator.py",
+            "console": "integratedTerminal",
+            "args": ["hong_kong", "-fp", "-c", "-bc", "-md", "100"]
+        },
+        {
+            "name": "macao",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceRoot}/wahoo_map_creator.py",
+            "console": "integratedTerminal",
+            "args": ["macao", "-fp", "-c", "-bc", "-md", "100"]
         }
     ]
 }

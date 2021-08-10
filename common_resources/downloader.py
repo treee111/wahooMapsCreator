@@ -131,21 +131,26 @@ class Downloader:
         print('+ Checking for old maps and remove them')
 
         for country in self.border_countries:
+            # get translated country (geofabrik) of country
+            # do not download the same file for different countries
+            # --> e.g. China, Hong Kong and Macao, see Issue #11
+            transl_c = const_fct.translate_country_input_to_geofabrik(country)
+
             # check for already existing .osm.pbf file
-            map_file_path = glob.glob(f'{fd_fct.MAPS_DIR}/{country}*.osm.pbf')
+            map_file_path = glob.glob(f'{fd_fct.MAPS_DIR}/{transl_c}*.osm.pbf')
             if len(map_file_path) != 1:
-                map_file_path = glob.glob(f'{fd_fct.MAPS_DIR}/**/{country}*.osm.pbf')
+                map_file_path = glob.glob(f'{fd_fct.MAPS_DIR}/**/{transl_c}*.osm.pbf')
 
             # delete .osm.pbf file if out of date
             if len(map_file_path) == 1 and os.path.isfile(map_file_path[0]):
                 chg_time = os.path.getctime(map_file_path[0])
                 if older_than_x_days(chg_time, self.max_days_old) or self.force_download is True:
-                    print(f'+ mapfile for {country}: deleted')
+                    print(f'+ mapfile for {transl_c}: deleted. Input: {country}.')
                     os.remove(map_file_path[0])
                     need_to_download = True
                 else:
                     self.border_countries[country] = {'map_file':map_file_path[0]}
-                    print(f'+ mapfile for {country}: up-to-date')
+                    print(f'+ mapfile for {transl_c}: up-to-date. Input: {country}.')
 
             # mark country .osm.pbf file for download if there exists no file or it is no file
             map_file_path = self.border_countries[country].get('map_file')
@@ -179,23 +184,23 @@ class Downloader:
         print(f'+ Trying to download missing map of {country}.')
 
         # get Geofabrik region of country
-        translated_country = const_fct.translate_country_input_to_geofabrik(country)
+        transl_c = const_fct.translate_country_input_to_geofabrik(country)
         region = const_fct.get_geofabrik_region_of_country(country)
 
         if region != 'no':
-            url = 'https://download.geofabrik.de/' + region + '/' + translated_country + '-latest.osm.pbf'
+            url = 'https://download.geofabrik.de/' + region + '/' + transl_c + '-latest.osm.pbf'
         else:
-            url = 'https://download.geofabrik.de/' + translated_country + '-latest.osm.pbf'
+            url = 'https://download.geofabrik.de/' + transl_c + '-latest.osm.pbf'
 
         # download URL to file
-        map_file_path = os.path.join (fd_fct.MAPS_DIR, f'{country}' + '-latest.osm.pbf')
+        map_file_path = os.path.join (fd_fct.MAPS_DIR, f'{transl_c}' + '-latest.osm.pbf')
         self.download_url_to_file(url, map_file_path)
 
         if not os.path.isfile(map_file_path):
-            print(f'! failed to find or download country: {country}')
+            print(f'! failed to find or download country: {transl_c}. Input: {country}.')
             sys.exit()
         else:
-            print(f'+ Map of {country} downloaded.')
+            print(f'+ Map of {transl_c} downloaded. Input: {country}.')
 
         return map_file_path
 
