@@ -14,6 +14,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `Security` in case of vulnerabilities.
 
 ## [Unreleased]
+### Added
+- download a geofabrik file only once if more countries are in the same geofabrik-country #11
 ### Fixed
 - `-h` and `--help` works again
 
