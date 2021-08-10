@@ -15,7 +15,7 @@ https://brew.sh/
 Install using homebrew in terminal:
 `brew install osmfilter`
 
-## Install Osmfilter
+## Install osmium-tool
 Install using homebrew in terminal:
 `brew install osmium-tool`
 
@@ -31,8 +31,10 @@ Linux/macOS ~/.openstreetmap/osmosis/plugins
 https://github.com/mapsforge/mapsforge/blob/master/docs/Getting-Started-Map-Writer.md#plugin-installation
 
 ## Install osmctools
-Install using terminal
-`apt install osmctools`
+*I'm not really sure, if this is relevant. try to install if a error concerning osmconvert occurs*
+Install using terminal:
+* with homebrew: `brew install interline-io/planetutils/osmctools` or
+* `apt install osmctools` (this may only work on linux and not macOS)
 
 https://gitlab.com/osm-c-tools/osmctools
 
