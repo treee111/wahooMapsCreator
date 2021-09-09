@@ -26,6 +26,14 @@
             "args": ["${workspaceRoot}/tests/json/germany-only5.json"]
         },
         {
+            "name": "koblenz",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceRoot}/wahoo_map_creator.py",
+            "console": "integratedTerminal",
+            "args": ["${workspaceRoot}/tests/json/germany-koblenz.json"]
+        },
+        {
             "name": "germany",
             "type": "python",
             "request": "launch",
