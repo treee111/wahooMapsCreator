@@ -209,7 +209,7 @@ class ComboboxesEntryField(tk.Frame):
         """
         continent = self.cb_continent.get()
         # get countries for selected region and set for combobox
-        self.cb_country["values"] = ast.literal_eval('constants.' + continent.replace("-", ""))
+        self.cb_country["values"] = getattr(constants, continent.replace("-", ""))
         self.cb_country.current(0)
 
 

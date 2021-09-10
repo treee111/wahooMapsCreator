@@ -14,6 +14,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `Security` in case of vulnerabilities.
 
 ## [Unreleased]
+### Fixed
+- change dynamic access to constants-values to prevent console-errors [#29](https://github.com/treee111/wahooMapsCreator/issues/29) [PR30](https://github.com/treee111/wahooMapsCreator/issues/30)
 
 ## [0.8.0] - 2021-08-11
 ### Added
