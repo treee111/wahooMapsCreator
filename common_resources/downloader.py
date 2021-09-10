@@ -11,7 +11,6 @@ import sys
 import time
 
 # import custom python packages
-import requests
 from common_resources import file_directory_functions as fd_fct
 from common_resources import constants_functions as const_fct
 
@@ -104,7 +103,7 @@ class Downloader:
 
         # download URL to file
         land_poligons_file_path = os.path.join (fd_fct.COMMON_DIR, 'land-polygons-split-4326.zip')
-        self.download_url_to_file(url, land_poligons_file_path)
+        fd_fct.download_url_to_file(url, land_poligons_file_path)
 
         # unpack it - should work on macOS and Windows
         fd_fct.unzip(land_poligons_file_path, fd_fct.COMMON_DIR)
@@ -196,7 +195,7 @@ class Downloader:
 
         # download URL to file
         map_file_path = os.path.join (fd_fct.MAPS_DIR, f'{transl_c}' + '-latest.osm.pbf')
-        self.download_url_to_file(url, map_file_path)
+        fd_fct.download_url_to_file(url, map_file_path)
 
         if not os.path.isfile(map_file_path):
             print(f'! failed to find or download country: {transl_c}. Input: {country}.')
@@ -205,24 +204,3 @@ class Downloader:
             print(f'+ Map of {transl_c} downloaded. Input: {country}.')
 
         return map_file_path
-
-    def download_url_to_file(self, url, map_file_path):
-        """
-        download the content of a ULR to file
-        """
-        request_geofabrik = requests.get(url, allow_redirects = True, stream = True)
-        if request_geofabrik.status_code != 200:
-            print(f'! failed download URL: {url}')
-            sys.exit()
-
-        # write content to file
-        self.write_to_file(map_file_path, request_geofabrik)
-
-
-    def write_to_file(self, file_path, request):
-        """
-        write content of request into given file path
-        """
-        with open(file_path, 'wb') as file_handle:
-            for chunk in request.iter_content(chunk_size=1024*100):
-                file_handle.write(chunk)

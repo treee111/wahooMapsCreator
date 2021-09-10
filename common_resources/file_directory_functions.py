@@ -10,6 +10,8 @@ import subprocess
 import sys
 import zipfile
 
+# import custom python packages
+import requests
 
 def get_git_root():
     """
@@ -80,6 +82,28 @@ def read_json_file(json_file_path):
     print('# Read json file: OK')
 
     return tiles_from_json
+
+
+def download_url_to_file(url, map_file_path):
+    """
+    download the content of a ULR to file
+    """
+    request_geofabrik = requests.get(url, allow_redirects = True, stream = True)
+    if request_geofabrik.status_code != 200:
+        print(f'! failed download URL: {url}')
+        sys.exit()
+
+    # write content to file
+    write_to_file(map_file_path, request_geofabrik)
+
+
+def write_to_file(file_path, request):
+    """
+    write content of request into given file path
+    """
+    with open(file_path, 'wb') as file_handle:
+        for chunk in request.iter_content(chunk_size=1024*100):
+            file_handle.write(chunk)
 
 class FileDir:
     """
