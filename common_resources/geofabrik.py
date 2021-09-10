@@ -7,12 +7,11 @@ functions and object for managing OSM maps
 import sys
 
 import math
-import geojson #pylint: disable=import-error
-from shapely.geometry import Polygon, shape #pylint: disable=import-error
+import geojson
+from shapely.geometry import Polygon, shape
 
 # import custom python packages
 from common_resources import file_directory_functions as fd_fct
-from common_resources import constants_functions as const_fct
 from common_resources import constants
 
 
@@ -49,29 +48,29 @@ class Geofabrik:
             #print(f'geom={wanted_map_geom}, url={wanted_url}')
             #sys.exit()
 
-            # convert to shape (multipolygon)
+        # convert to shape (multipolygon)
         wanted_region = shape(wanted_map_geom)
-            #print (f'shape = {wanted_region}')
+        #print (f'shape = {wanted_region}')
 
-            # get bounding box
+        # get bounding box
         (bbox_left, bbox_bottom, bbox_right, bbox_top) = wanted_region.bounds
 
-            # convert bounding box to list of tiles at zoom level 8
+        # convert bounding box to list of tiles at zoom level 8
         (top_x,top_y)=deg2num(bbox_top,bbox_left)
         (bot_x,bot_y)=deg2num(bbox_bottom,bbox_right)
 
-            # Build list of tiles from the bounding box
+        # Build list of tiles from the bounding box
         bbox_tiles=[]
-        for x in range(top_x, bot_x + 1):
-            for y in range(top_y, bot_y + 1):
-                (tile_top,tile_left)=num2deg(x, y)
-                (tile_bottom,tile_right)=num2deg(x+1, y+1)
-                bbox_tiles.append ({'x':x, 'y':y, 'tile_left':tile_left, 'tile_top':tile_top,
+        for x_value in range(top_x, bot_x + 1):
+            for y_value in range(top_y, bot_y + 1):
+                (tile_top,tile_left)=num2deg(x_value, y_value)
+                (tile_bottom,tile_right)=num2deg(x_value+1, y_value+1)
+                bbox_tiles.append ({'x':x_value, 'y':y_value, 'tile_left':tile_left, 'tile_top':tile_top,
                                     'tile_right':tile_right, 'tile_bottom':tile_bottom})
 
         print ('\nSearching for needed maps, this can take a while.\n')
         tiles_of_input = find_needed_countries (bbox_tiles, self.wanted_map, wanted_region)
-            #print (f'Country= {country}')
+        #print (f'Country= {country}')
 
         return tiles_of_input
 
@@ -95,15 +94,15 @@ def num2deg(xtile, ytile, zoom=8):
 # Get the Geofabrik outline of the desired country/region from the Geofabrik json fiule and the download url of the map.
 # input parameter is the name of the desired country/region as use by Geofabric in their json file.
 def geom(wanted):
-    with open(fd_fct.GEOFABRIK_PATH, encoding='utf8') as f:
-        data = geojson.load(f)
-    f.close()
+    with open(fd_fct.GEOFABRIK_PATH, encoding='utf8') as file_handle:
+        data = geojson.load(file_handle)
+    file_handle.close()
 
     # loop through all entries in the json file to find the one we want
     for x in data.features:
         props = x.properties
-        id = props.get('id', '')
-        if id != wanted:
+        ident_no = props.get('id', '')
+        if ident_no != wanted:
             continue
         #print (props.get('urls', ''))
         wurls = props.get('urls', '')
@@ -114,8 +113,8 @@ def geom(wanted):
 def find_geofbrik_parent (name, geofabrik_json):
     for x in geofabrik_json.features:
         props = x.properties
-        id = props.get('id', '')
-        if id != name:
+        ident_no = props.get('id', '')
+        if ident_no != name:
             continue
         return (props.get ('parent', ''), props.get ('id', ''))
     return None, None
@@ -124,8 +123,8 @@ def find_geofbrik_parent (name, geofabrik_json):
 def find_geofbrik_url (name, geofabrik_json):
     for x in geofabrik_json.features:
         props = x.properties
-        id = props.get('id', '')
-        if id != name:
+        ident_no = props.get('id', '')
+        if ident_no != name:
             continue
         #print (props.get('urls', ''))
         wurls = props.get('urls', '')
@@ -140,9 +139,9 @@ def find_geofbrik_url (name, geofabrik_json):
 def find_needed_countries(bbox_tiles, wanted_map, wanted_region_polygon):
     output = []
 
-    with open(fd_fct.GEOFABRIK_PATH, encoding='utf8') as f:
-        geofabrik_json_data = geojson.load(f)
-    f.close()
+    with open(fd_fct.GEOFABRIK_PATH, encoding='utf8') as file_handle:
+        geofabrik_json_data = geojson.load(file_handle)
+    file_handle.close()
 
     # itterate through tiles and find Geofabrik regions that are in the tiles
     counter = 1
@@ -177,10 +176,10 @@ def find_needed_countries(bbox_tiles, wanted_map, wanted_region_polygon):
 
             # check if the region we are processing is needed for the tile we are processing
 
-            # If currently processing country/region IS the desired country/region 
+            # If currently processing country/region IS the desired country/region
             if regionname == wanted_map:
                 # Check if it is part of the tile we are processing
-                if rshape.intersects(poly): # if so 
+                if rshape.intersects(poly): # if so
                     # If we are proseccing a sub-region add the parent of this sub-region to the must download list.
                     # This to prevent downloading several small regions AND it's containing region
                     if parent not in constants.geofabrik_regions: # we are processing a sub-regiongo find the parent region
@@ -236,6 +235,6 @@ def find_needed_countries(bbox_tiles, wanted_map, wanted_region_polygon):
             # first replace any forward slashes with underscores (us/texas to us_texas)
             must_download_maps = [sub.replace('/', '_') for sub in must_download_maps]
             output.append ({'x':tile['x'], 'y':tile['y'], 'left':tile['tile_left'], 'top':tile['tile_top'], 'right':tile['tile_right'], 'bottom':tile['tile_bottom'], 'countries':must_download_maps, 'urls':must_download_urls})
-        #print (f'\nmust_download: {must_download_maps}')    
+        #print (f'\nmust_download: {must_download_maps}')
         #print (f'must_download: {must_download_urls}')
     return output
