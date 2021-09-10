@@ -15,9 +15,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.8.1] - 2021-09-10
+### Fixed
+- change dynamic access to constants-values to prevent console-errors [#29](https://github.com/treee111/wahooMapsCreator/issues/29) [PR30](https://github.com/treee111/wahooMapsCreator/issues/30)
+
 ## [0.8.0] - 2021-08-11
 ### Added
-- download a geofabrik file only once if more countries are in the same geofabrik-country #11
+- download a geofabrik file only once if more countries are in the same geofabrik-country [#11](https://github.com/treee111/wahooMapsCreator/issues/11) [PR28](https://github.com/treee111/wahooMapsCreator/issues/28)
 ### Fixed
 - `-h` and `--help` works again
 
@@ -27,19 +31,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.7.0] - 2021-07-25
 ### Added
-- GUI functionality with all relevant settings (equals CLI arguments) #24
+- GUI functionality with all relevant settings (equals CLI arguments) [#21](https://github.com/treee111/wahooMapsCreator/issues/21) [PR24](https://github.com/treee111/wahooMapsCreator/issues/24)
   - start gui via `python3 wahoo_map_creator.py` or `python wahoo_map_creator.py`
-- Release .zip file will only contain relevant files for execution #25
+- Release .zip file will only contain relevant files for execution [PR25](https://github.com/treee111/wahooMapsCreator/issues/25)
 ### Fixed
-- When running without calculation of border countries, ignore border countries in all steps #24
+- When running without calculation of border countries, ignore border countries in all steps [PR24](https://github.com/treee111/wahooMapsCreator/issues/24)
 ### Changed
-- move contents into the correct directory #23
+- move contents into the correct directory [PR23](https://github.com/treee111/wahooMapsCreator/issues/23)
 ### Removed
-- doubled / not needed files and folders #23
+- doubled / not needed files and folders [PR23](https://github.com/treee111/wahooMapsCreator/issues/23)
 
 ## [0.6.0] - 2021-07-10
 ### Added
-- CLI arguments for relevant settings. No more editing of python files needed #19
+- CLI arguments for relevant settings. No more editing of python files needed [#15](https://github.com/treee111/wahooMapsCreator/issues/15) [PR19](https://github.com/treee111/wahooMapsCreator/issues/19)
   - see `python3 wahoo_map_creator.py -h` or `python wahoo_map_creator.py -h` for possible arguments
 ### Changed
 - pylint findings corrected
@@ -50,8 +54,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.5.0] - 2021-07-04
 ### Added
-- Parameter to control download and processing of border countries or not #18
-- unittests for downloader.py and osm_maps_functions.py files #16
+- Parameter to control download and processing of border countries or not [PR18](https://github.com/treee111/wahooMapsCreator/issues/18)
+- unittests for downloader.py and osm_maps_functions.py files [PR16](https://github.com/treee111/wahooMapsCreator/issues/16)
 ### Changed
 - pylint findings corrected
 - a lot of refactored (focus methods, constructors)
@@ -116,7 +120,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - Windows:    `tooling_windows/Windows-Wahoo-Map-Creator-Osmosis/wahoo-map-creator-osmosis.py`
 
 
-[unreleased]: https://github.com/treee111/wahooMapsCreator/compare/v0.8.0...HEAD
+[unreleased]: https://github.com/treee111/wahooMapsCreator/compare/v0.8.1...HEAD
+[0.8.1]: https://github.com/treee111/wahooMapsCreator/compare/v0.8.0...v0.8.1
 [0.8.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.7.1...v0.8.0
 [0.7.1]: https://github.com/treee111/wahooMapsCreator/compare/v0.7.0...v0.7.1
 [0.7.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.6.0...v0.7.0
