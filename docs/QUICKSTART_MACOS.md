@@ -49,3 +49,7 @@ After this, we can finally install GDAL for Python
 `pip3 install gdal`
 
 https://medium.com/@vascofernandes_13322/how-to-install-gdal-on-macos-6a76fb5e24a4
+
+## Install additional Python modules
+Move to the root-folder of wahooMapsCreator and install required Python modules:
+`pip install -r requirements.txt`
