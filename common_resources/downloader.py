@@ -35,10 +35,28 @@ class Downloader:
         self.tiles_from_json = []
         self.border_countries = {}
 
+    def check_and_download_geofabrik_if_needed(self):
+        """
+        check geofabrik file if not existing or is not up-to-date
+        and download if needed
+        """
+        force_processing = False
+
+        if  self.check_file(fd_fct.GEOFABRIK_PATH) is True or \
+            self.force_download is True:
+            self.download_file(fd_fct.GEOFABRIK_PATH,
+                'https://download.geofabrik.de/index-v1.json', False)
+            force_processing = True
+
+         # logging
+        print('# check geofabrik.json file: OK')
+
+        return force_processing
+
 
     def check_and_download_files_if_needed(self):
         """
-        check geofabrik, land_poligons and OSM map files if not existing or are not up-to-date
+        check land_poligons and OSM map files if not existing or are not up-to-date
         and download if needed
         """
         force_processing = False

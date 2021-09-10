@@ -17,6 +17,7 @@ from common_resources import constants
 from common_resources import constants_functions as const_fct
 
 from common_resources.downloader import Downloader
+from common_resources.geofabrik import Geofabrik
 
 
 class OsmMaps:
@@ -54,9 +55,16 @@ class OsmMaps:
 
         # option 2: input a country as parameter, e.g. germany
         else:
-            json_file_path = os.path.join (fd_fct.COMMON_DIR, 'json',
-                const_fct.get_region_of_country(input_argument), input_argument + '.json')
-            self.tiles = fd_fct.read_json_file(json_file_path)
+            # using URL instead of static json file
+            self.force_processing = self.o_downloader.check_and_download_geofabrik_if_needed()
+
+            o_geofabrik = Geofabrik(input_argument)
+            self.tiles = o_geofabrik.get_tiles_of_country()
+
+            # using the json files in the repo
+            # json_file_path = os.path.join (fd_fct.COMMON_DIR, 'json',
+            #     const_fct.get_region_of_country(input_argument), input_argument + '.json')
+            # self.tiles = fd_fct.read_json_file(json_file_path)
 
             # country name is the input argument
             self.country_name = input_argument
