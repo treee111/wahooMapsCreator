@@ -19,13 +19,13 @@ if oInput.gui_mode:
 else:
     oInputData = oInput.cli_arguments()
 
-oOSMmaps = OsmMaps(oInputData.force_processing)
+oOSMmaps = OsmMaps(oInputData)
 
 # Read json file
 # Check for expired land polygons file and download, if too old
 # Check for expired .osm.pbf files and download, if too old
 oOSMmaps.process_input(oInputData.country, oInputData.border_countries)
-oOSMmaps.check_and_download_files(oInputData.max_days_old, oInputData.force_download)
+oOSMmaps.check_and_download_files()
 
 
 if oInputData.only_merge is False:

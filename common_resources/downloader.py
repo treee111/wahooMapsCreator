@@ -29,11 +29,11 @@ class Downloader:
     This is the class to check and download maps / artifacts"
     """
 
-    def __init__(self, max_days_old, force_download, tiles, border_countries):
+    def __init__(self, max_days_old, force_download):
         self.max_days_old = max_days_old
         self.force_download = force_download
-        self.tiles_from_json = tiles
-        self.border_countries = border_countries
+        self.tiles_from_json = []
+        self.border_countries = {}
 
 
     def check_and_download_files_if_needed(self):
