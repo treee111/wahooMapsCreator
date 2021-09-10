@@ -10,6 +10,8 @@ import time
 # sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from common_resources.downloader import older_than_x_days
+from common_resources.downloader import Downloader
+
 
 
 class TestDownloader(unittest.TestCase):
@@ -20,9 +22,11 @@ class TestDownloader(unittest.TestCase):
     def setUp(self):
         self.max_days_old = 14
 
+        self.o_downloader = Downloader(24, False, [], [])
+
     def test_outdated_timestamp(self):
         """
-        Test a outdated timestamp against against 14 days ago
+        Test a outdated timestamp against 14 days ago
         """
 
         past = time.time() - ( 60 * 60 * 24 * 20 )
@@ -32,7 +36,7 @@ class TestDownloader(unittest.TestCase):
 
     def test_outdated_timestamp_2(self):
         """
-        Test a outdated timestamp against against 14 days ago
+        Test a outdated timestamp against 14 days ago
         """
 
         result = older_than_x_days( 1601097377.792748, self.max_days_old)
@@ -40,7 +44,7 @@ class TestDownloader(unittest.TestCase):
 
     def test_today_timestamp(self):
         """
-        Test today timestamp against against 14 days ago
+        Test today timestamp against 14 days ago
         """
 
         today = time.time()
@@ -57,6 +61,25 @@ class TestDownloader(unittest.TestCase):
 
         result = older_than_x_days( future, self.max_days_old)
         self.assertFalse(result)
+
+    def test_download_polygons_file(self):
+        """
+        Test the download of land poligons file via URL
+        """
+        path = os.path.join(os.getcwd(), 'common_resources', 'land-polygons-split-4326',
+            'land_polygons.shp')
+        self.o_downloader.download_file(path,
+            'https://osmdata.openstreetmap.de/download/land-polygons-split-4326.zip', True)
+
+        # self.assert
+
+    def test_download_geofabrik_file(self):
+        """
+        Test the download of land poligons file via URL
+        """
+        path = os.path.join(os.getcwd(), 'common_resources', 'geofabrik.json')
+        self.o_downloader.download_file(path, 'https://download.geofabrik.de/index-v1.json', False)
+
 
 if __name__ == '__main__':
     unittest.main()

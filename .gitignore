@@ -17,6 +17,7 @@ dist/**
 common_resources/land-polygons-split-4326/
 common_resources/land-polygons-split-4326.zip
 common_resources/*.pyc
+common_resources/geofabrik.json
 
 # mac/unix
 

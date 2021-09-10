@@ -29,6 +29,7 @@ OUTPUT_DIR = os.path.join(ROOT_DIR, 'output')
 MAPS_DIR = os.path.join(COMMON_DIR, 'maps')
 TOOLING_WIN_DIR = os.path.join(ROOT_DIR, 'tooling_windows')
 LAND_POLYGONS_PATH = os.path.join(COMMON_DIR, 'land-polygons-split-4326', 'land_polygons.shp')
+GEOFABRIK_PATH = os.path.join(COMMON_DIR, 'geofabrik.json')
 
 def unzip(source_filename, dest_dir):
     """
