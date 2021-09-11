@@ -12,11 +12,11 @@ import sys
 import platform
 
 # import custom python packages
-from common_resources import file_directory_functions as fd_fct
-from common_resources import constants
-from common_resources import constants_functions as const_fct
+from common_python import file_directory_functions as fd_fct
+from common_python import constants
+from common_python import constants_functions as const_fct
 
-from common_resources.downloader import Downloader
+from common_python.downloader import Downloader
 
 
 class OsmMaps:
@@ -205,11 +205,11 @@ class OsmMaps:
             if not os.path.isfile(out_file+'1.osm') or self.force_processing is True:
                 # Windows
                 if platform.system() == "Windows":
-                    cmd = ['python', os.path.join(fd_fct.COMMON_DIR,
+                    cmd = ['python', os.path.join(fd_fct.TOOLING_DIR,
                      'shape2osm.py'), '-l', out_file, land_file]
                 # Non-Windows
                 else:
-                    cmd = ['python3', os.path.join(fd_fct.COMMON_DIR,
+                    cmd = ['python3', os.path.join(fd_fct.TOOLING_DIR,
                      'shape2osm.py'), '-l', out_file, land_file]
                 #print(cmd)
                 subprocess.run(cmd, check=True)
@@ -232,7 +232,7 @@ class OsmMaps:
              f'{tile["x"]}', f'{tile["y"]}', 'sea.osm')
             if not os.path.isfile(out_file) or self.force_processing is True:
                 print(f'+ Generate sea {tile_count} of {len(self.tiles)} for Coordinates: {tile["x"]} {tile["y"]}')
-                with open(os.path.join(fd_fct.COMMON_DIR, 'sea.osm')) as sea_file:
+                with open(os.path.join(fd_fct.TOOLING_DIR, 'sea.osm')) as sea_file:
                     sea_data = sea_file.read()
 
                     sea_data = sea_data.replace('$LEFT', f'{tile["left"]-0.1:.6f}')
@@ -315,7 +315,7 @@ class OsmMaps:
             if not os.path.isfile(out_file) or self.force_processing is True:
                 # Windows
                 if platform.system() == "Windows":
-                    cmd = [os.path.join (fd_fct.COMMON_DIR,
+                    cmd = [os.path.join (fd_fct.TOOLING_DIR,
                      'Osmosis', 'bin', 'osmosis.bat')]
                     loop=0
                     # loop through all countries of tile, if border-countries should be processed.
@@ -389,7 +389,7 @@ class OsmMaps:
 
                 # Windows
                 if platform.system() == "Windows":
-                    cmd = [os.path.join (fd_fct.COMMON_DIR, 'Osmosis', 'bin', 'osmosis.bat'), '--rbf', merged_file, 'workers=' + self.workers, '--mw', 'file='+out_file]
+                    cmd = [os.path.join (fd_fct.TOOLING_DIR, 'Osmosis', 'bin', 'osmosis.bat'), '--rbf', merged_file, 'workers=' + self.workers, '--mw', 'file='+out_file]
                 # Non-Windows
                 else:
                     cmd = ['osmosis', '--rb', merged_file, '--mw', 'file='+out_file]

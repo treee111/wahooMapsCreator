@@ -11,8 +11,8 @@ import sys
 import time
 
 # import custom python packages
-from common_resources import file_directory_functions as fd_fct
-from common_resources import constants_functions as const_fct
+from common_python import file_directory_functions as fd_fct
+from common_python import constants_functions as const_fct
 
 
 def older_than_x_days(file_creation_timestamp, max_days_old):
