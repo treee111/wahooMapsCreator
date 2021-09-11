@@ -14,12 +14,15 @@ dist/**
 **/__pycache__/*
 
 # common resources
-common_resources/land-polygons-split-4326/
-common_resources/land-polygons-split-4326.zip
 common_resources/*.pyc
 
 # common python
 common_python/*.pyc
+
+# common download
+common_download/land-polygons-split-4326/
+common_download/land-polygons-split-4326.zip
+common_download/*.pyc
 
 # mac/unix
 

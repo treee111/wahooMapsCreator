@@ -7,7 +7,8 @@ mkdir -p dist
 mkdir -p dist/${FOLDER_NAME}
 cd dist/${FOLDER_NAME}
 mkdir -p ./common_resources
-mkdir -p ./common_resources/maps
+mkdir -p ./common_download
+mkdir -p ./common_download/maps
 mkdir -p ./output
 mkdir -p ./common_python
 
