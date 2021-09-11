@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tag-mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-zoom-appear="16"
+             profile-name="default-profile" xmlns="http://mapsforge.org/tag-mapping"
+             xsi:schemaLocation="http://mapsforge.org/tag-mapping https://raw.githubusercontent.com/mapsforge/mapsforge/master/resources/tag-mapping.xsd">
+
+  <!-- ************* POIS *************** -->
+  <!-- TOURISM TAGS -->
+  <pois>
+    <osm-tag key="tourism" value="attraction" zoom-appear="17" />
+    <osm-tag key="tourism" value="information" zoom-appear="17" />
+    <osm-tag key="tourism" value="museum" zoom-appear="17" />
+    <osm-tag key="tourism" value="viewpoint" zoom-appear="15" />
+  </pois>
+
+  <!-- PLACES TAGS -->
+  <pois>
+    <osm-tag key="place" value="city" zoom-appear="6" />
+    <osm-tag key="place" value="hamlet" zoom-appear="10" />
+    <osm-tag key="place" value="island" zoom-appear="14" />
+    <osm-tag key="place" value="locality" zoom-appear="14" />
+    <osm-tag key="place" value="suburb" zoom-appear="11" />
+    <osm-tag key="place" value="town" zoom-appear="8" />
+    <osm-tag key="place" value="village" zoom-appear="12" />
+  </pois>
+
+  <!-- ************* WAYS *************** -->
+
+  <!-- HIGHWAY TAGS -->
+  <ways>
+    <osm-tag key="highway" value="bridleway" zoom-appear="13" />
+    <osm-tag key="highway" value="bus_guideway" zoom-appear="13" />
+    <osm-tag key="highway" value="construction" zoom-appear="13" />
+    <osm-tag key="highway" value="cycleway" zoom-appear="13" />
+    <osm-tag key="highway" value="footway" zoom-appear="13" />
+    <osm-tag key="highway" value="living_street" zoom-appear="13" />
+    <osm-tag key="highway" value="motorway" zoom-appear="8" />
+    <osm-tag key="highway" value="motorway_link" zoom-appear="13" />
+    <osm-tag key="highway" value="path" zoom-appear="13" />
+    <osm-tag key="highway" value="pedestrian" zoom-appear="13" />
+    <osm-tag key="highway" value="primary" zoom-appear="13" />
+    <osm-tag key="highway" value="primary_link" zoom-appear="13" />
+    <osm-tag key="highway" value="residential" zoom-appear="13" />
+    <osm-tag key="highway" value="road" zoom-appear="13" />
+    <osm-tag key="highway" value="secondary" zoom-appear="13" />
+    <osm-tag key="highway" value="secondary_link" zoom-appear="13" />
+    <osm-tag key="highway" value="service" zoom-appear="13" />
+    <osm-tag key="highway" value="steps" zoom-appear="16" />
+    <osm-tag key="highway" value="tertiary" zoom-appear="13" />
+    <osm-tag key="highway" value="tertiary_link" zoom-appear="13" />
+    <osm-tag key="highway" value="track" zoom-appear="13" />
+    <osm-tag key="highway" value="trunk" zoom-appear="11" />
+    <osm-tag key="highway" value="trunk_link" zoom-appear="11" />
+    <osm-tag key="highway" value="unclassified" zoom-appear="13" />
+  </ways>
+
+  <!-- NATURAL / WATERWAY TAGS -->
+  <ways>
+    <osm-tag key="natural" value="nosea" zoom-appear="0" />
+    <osm-tag key="natural" value="sea" zoom-appear="0" />
+    
+    <osm-tag key="natural" value="beach" zoom-appear="12" />
+    <osm-tag key="natural" value="scrub" zoom-appear="10" />
+    <osm-tag key="natural" value="water" zoom-appear="8" />
+    <osm-tag key="natural" value="wetland" zoom-appear="12" />
+    <osm-tag key="natural" value="wood" zoom-appear="8" />
+    
+    <osm-tag key="waterway" value="drain" zoom-appear="14"/>
+    <osm-tag key="waterway" value="river" zoom-appear="12"/>
+    <osm-tag key="waterway" value="riverbank" zoom-appear="12"/>
+  </ways>
+
+  <!-- LEISURE/SPORT TAGS -->
+  <ways>
+    <osm-tag key="leisure" value="nature_reserve" zoom-appear="12" />
+    <osm-tag key="leisure" value="park" zoom-appear="12" />
+  </ways>
+
+  <!-- PUBLIC TRANSPORT -->
+  <ways>
+    <osm-tag key="railway" value="disused" zoom-appear="12" />
+    <osm-tag key="railway" value="funicular" zoom-appear="12" />
+    <osm-tag key="railway" value="light_rail" zoom-appear="12" />
+    <osm-tag key="railway" value="miniature" zoom-appear="12" />
+    <osm-tag key="railway" value="narrow_gauge" zoom-appear="12" />
+    <osm-tag key="railway" value="preserved" zoom-appear="12" />
+    <osm-tag key="railway" value="rail" zoom-appear="16" />
+    <osm-tag key="railway" value="subway" zoom-appear="12" />
+    <osm-tag key="railway" value="tram" zoom-appear="12" />
+  </ways>
+
+  <!-- OTHER TAGS -->
+  <ways>
+    <osm-tag key="place" value="locality" zoom-appear="14" />
+    <osm-tag key="area" value="yes" zoom-appear="12" />
+  </ways>
+
+  <!-- NOT TO RENDER -->
+  <ways>
+    <osm-tag key="id" renderable="false" value="%f" />
+  
+    <osm-tag key="access" value="destination" renderable="false"/>
+    <osm-tag key="access" value="private" renderable="false"/>
+    
+    <osm-tag key="bridge" value="yes" renderable="false"/>
+    
+    <osm-tag key="tracktype" value="grade1" renderable="false"/>
+    <osm-tag key="tracktype" value="grade2" renderable="false"/>
+    <osm-tag key="tracktype" value="grade3" renderable="false"/>
+    <osm-tag key="tracktype" value="grade4" renderable="false"/>
+    <osm-tag key="tracktype" value="grade5" renderable="false"/>
+    
+    <osm-tag key="tunnel" value="yes" renderable="false"/>
+    <osm-tag key="tunnel" value="no" renderable="false"/>
+    
+    <osm-tag key="wood" renderable="false" value="deciduous" />
+  </ways>
+</tag-mapping>
