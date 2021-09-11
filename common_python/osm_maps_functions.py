@@ -205,11 +205,11 @@ class OsmMaps:
             if not os.path.isfile(out_file+'1.osm') or self.force_processing is True:
                 # Windows
                 if platform.system() == "Windows":
-                    cmd = ['python', os.path.join(fd_fct.COMMON_DIR,
+                    cmd = ['python', os.path.join(fd_fct.TOOLING_DIR,
                      'shape2osm.py'), '-l', out_file, land_file]
                 # Non-Windows
                 else:
-                    cmd = ['python3', os.path.join(fd_fct.COMMON_DIR,
+                    cmd = ['python3', os.path.join(fd_fct.TOOLING_DIR,
                      'shape2osm.py'), '-l', out_file, land_file]
                 #print(cmd)
                 subprocess.run(cmd, check=True)
@@ -232,7 +232,7 @@ class OsmMaps:
              f'{tile["x"]}', f'{tile["y"]}', 'sea.osm')
             if not os.path.isfile(out_file) or self.force_processing is True:
                 print(f'+ Generate sea {tile_count} of {len(self.tiles)} for Coordinates: {tile["x"]} {tile["y"]}')
-                with open(os.path.join(fd_fct.COMMON_DIR, 'sea.osm')) as sea_file:
+                with open(os.path.join(fd_fct.TOOLING_DIR, 'sea.osm')) as sea_file:
                     sea_data = sea_file.read()
 
                     sea_data = sea_data.replace('$LEFT', f'{tile["left"]-0.1:.6f}')
