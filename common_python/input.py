@@ -13,7 +13,7 @@ import tkinter as tk
 from tkinter import ttk
 
 # import custom python packages
-from common_resources import constants
+from common_python import constants
 
 class InputData():
     """
@@ -144,23 +144,23 @@ class Input(tk.Tk):
 
 
         # set instance-attributes of class
-        try:
-            args = parser.parse_args()
+        # try:
+        args = parser.parse_args()
 
-            o_input_data = InputData()
-            o_input_data.country = args.country
-            o_input_data.max_days_old = args.maxdays
+        o_input_data = InputData()
+        o_input_data.country = args.country
+        o_input_data.max_days_old = args.maxdays
 
-            o_input_data.force_download = args.forcedownload
-            o_input_data.force_processing = args.forceprocessing
-            o_input_data.border_countries = args.bordercountries
-            o_input_data.save_cruiser = args.tag_wahoo_xml
-            o_input_data.only_merge = args.only_merge
+        o_input_data.force_download = args.forcedownload
+        o_input_data.force_processing = args.forceprocessing
+        o_input_data.border_countries = args.bordercountries
+        o_input_data.save_cruiser = args.tag_wahoo_xml
+        o_input_data.only_merge = args.only_merge
 
-            return o_input_data
+        return o_input_data
 
-        except SystemExit:
-            return False
+        # except SystemExit:
+        #     return False
 
 
 class ComboboxesEntryField(tk.Frame):
@@ -209,7 +209,7 @@ class ComboboxesEntryField(tk.Frame):
         """
         continent = self.cb_continent.get()
         # get countries for selected region and set for combobox
-        self.cb_country["values"] = ast.literal_eval('constants.' + continent.replace("-", ""))
+        self.cb_country["values"] = getattr(constants, continent.replace("-", ""))
         self.cb_country.current(0)
 
 

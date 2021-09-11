@@ -7,7 +7,7 @@ functions and object for constants
 import sys
 
 # import custom python packages
-from common_resources import constants
+from common_python import constants
 
 
 def get_region_of_country(county):
