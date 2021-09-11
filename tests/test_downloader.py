@@ -1,17 +1,15 @@
 """
 tests for the downloader file
 """
-# import os
+import os
 # import sys
 import unittest
 import time
 
 # import custom python packages
 # sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
 from common_resources.downloader import older_than_x_days
 from common_resources.downloader import Downloader
-
 
 
 class TestDownloader(unittest.TestCase):
@@ -22,7 +20,7 @@ class TestDownloader(unittest.TestCase):
     def setUp(self):
         self.max_days_old = 14
 
-        self.o_downloader = Downloader(24, False, [], [])
+        self.o_downloader = Downloader(24, False)
 
     def test_outdated_timestamp(self):
         """
