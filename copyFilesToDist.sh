@@ -14,12 +14,12 @@ mkdir -p ./common_python
 
 # copy files into dist-folder
 cp -a ../../common_resources/json/ ./common_resources/json
-cp -a ../../common_resources/Osmosis/ ./common_resources/Osmosis
 cp -a ../../common_python/*.py ./common_python/
 cp -a ../../common_resources/*.xml ./common_resources/
 cp -a ../../common_resources/*.osm ./common_resources/
 cp -a ../../docs ./docs
 cp -a ../../tooling ./tooling
+cp -a ../../tooling/Osmosis/ ./tooling/Osmosis
 cp -a ../../tooling_windows ./tooling_windows
 cp -a ../../wahoo_map_creator.py ../../CHANGELOG.md ../../README.md ./
 

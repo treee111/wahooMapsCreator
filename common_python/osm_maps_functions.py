@@ -315,7 +315,7 @@ class OsmMaps:
             if not os.path.isfile(out_file) or self.force_processing is True:
                 # Windows
                 if platform.system() == "Windows":
-                    cmd = [os.path.join (fd_fct.COMMON_DIR,
+                    cmd = [os.path.join (fd_fct.TOOLING_DIR,
                      'Osmosis', 'bin', 'osmosis.bat')]
                     loop=0
                     # loop through all countries of tile, if border-countries should be processed.
@@ -389,7 +389,7 @@ class OsmMaps:
 
                 # Windows
                 if platform.system() == "Windows":
-                    cmd = [os.path.join (fd_fct.COMMON_DIR, 'Osmosis', 'bin', 'osmosis.bat'), '--rbf', merged_file, 'workers=' + self.workers, '--mw', 'file='+out_file]
+                    cmd = [os.path.join (fd_fct.TOOLING_DIR, 'Osmosis', 'bin', 'osmosis.bat'), '--rbf', merged_file, 'workers=' + self.workers, '--mw', 'file='+out_file]
                 # Non-Windows
                 else:
                     cmd = ['osmosis', '--rb', merged_file, '--mw', 'file='+out_file]
