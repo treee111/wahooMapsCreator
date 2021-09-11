@@ -18,6 +18,9 @@ common_resources/land-polygons-split-4326/
 common_resources/land-polygons-split-4326.zip
 common_resources/*.pyc
 
+# common python
+common_python/*.pyc
+
 # mac/unix
 
 #windows

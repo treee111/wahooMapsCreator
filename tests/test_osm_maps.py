@@ -8,7 +8,7 @@ import unittest
 # import custom python packages
 # sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from common_resources.osm_maps_functions import OsmMaps
+from common_python.osm_maps_functions import OsmMaps
 
 
 class TestOsmMaps(unittest.TestCase):

@@ -9,11 +9,12 @@ cd dist/${FOLDER_NAME}
 mkdir -p ./common_resources
 mkdir -p ./common_resources/maps
 mkdir -p ./output
+mkdir -p ./common_python
 
 # copy files into dist-folder
 cp -a ../../common_resources/json/ ./common_resources/json
 cp -a ../../common_resources/Osmosis/ ./common_resources/Osmosis
-cp -a ../../common_resources/*.py ./common_resources/
+cp -a ../../common_python/*.py ./common_python/
 cp -a ../../common_resources/*.xml ./common_resources/
 cp -a ../../common_resources/*.osm ./common_resources/
 cp -a ../../docs ./docs
