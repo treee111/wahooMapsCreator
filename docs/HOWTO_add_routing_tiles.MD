@@ -56,10 +56,9 @@ After decoding the routing tile IDs into index, it is fairly easy to download al
 And the latest map version is 12; level is 2; x, y are both 3 digitals map tile index.
 
 Note:
-		- Please use 3 digitals for x and y, and add "0" if x or y is less than 100. e.g. use "003" instead "3" when trying to download them
-		- Some tiles may be missing, and the reason and impact are unclear. But it still can work.
+- Please use 3 digitals for x and y, and add "0" if x or y is less than 100. e.g. use "003" instead "3" when trying to download them
+- Some tiles may be missing, and the reason and impact are unclear. But it still can work.
 
 ### Option b (to be validated) : generate by using valhalla/mjolnir
 Since valhalla is used as routing service, it should work by using valhalla tools (mjolnir) to generate routing tiles from pbf file directly. Need to be validated later. And more information can be found from:
-
-	https://valhalla.readthedocs.io/en/latest/mjolnir/getting_started_guide/
+https://valhalla.readthedocs.io/en/latest/mjolnir/getting_started_guide/
