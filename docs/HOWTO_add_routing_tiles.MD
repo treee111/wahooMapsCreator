@@ -8,18 +8,18 @@ maps
    | - routing
    |      | - routing-config.json
    |      | - 2
-   |           |- 000
-   |               | - xxx
-   |               |    |- yyy.gph.lzma
-   |               |    | -  ……
-   |               |    | - yyy.gph.lzma
-   |               | - ……
-   |               | - ……
-   |               | - ……
-   |               | - xxx
-   |               |    | - yyy.gph.lzma
-   |               |    | -  ……
-   |               |    | - yyy.gph.lzma
+   |          |- 000
+   |              | - xxx
+   |              |    |- yyy.gph.lzma
+   |              |    | -  ……
+   |              |    | - yyy.gph.lzma
+   |              | - ……
+   |              | - ……
+   |              | - ……
+   |              | - xxx
+   |              |    | - yyy.gph.lzma
+   |              |    | -  ……
+   |              |    | - yyy.gph.lzma
    | - tiles
  	 | - 8
 	     | - xxx
@@ -36,7 +36,7 @@ maps
 ```
 
 ## How to get routing tiles?
-	a. Option a: download from wahoo update server
+	### Option a: download from wahoo update server
 	First of all, index numbers for the routing tiles of target country are required before trying to download them from wahoo update server. Since wahoo use the routing tiles ID ("routing_coordinates") instead of index in mappack-gzip.json, the python script from valhalla are required to decode the ID  into six digital index (first three are the folder name and last three are filename).
 
 	Following are the python code for the decode function. More details and full python script can be found from: https://valhalla.readthedocs.io/en/latest/tiles/
@@ -59,7 +59,7 @@ maps
 			- Please use 3 digitals for x and y, and add "0" if x or y is less than 100. e.g. use "003" instead "3" when trying to download them
 			- Some tiles may be missing, and the reason and impact are unclear. But it still can work.
 
-	b. Option b (to be validated) - generate by using valhalla/mjolnir
+	### Option b (to be validated) : generate by using valhalla/mjolnir
 	Since valhalla is used as routing service, it should work by using valhalla tools (mjolnir) to generate routing tiles from pbf file directly. Need to be validated later. And more information can be found from:
 
 	https://valhalla.readthedocs.io/en/latest/mjolnir/getting_started_guide/
