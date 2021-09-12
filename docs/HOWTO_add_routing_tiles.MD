@@ -36,12 +36,12 @@ maps
 ```
 
 ## How to get routing tiles?
-	### Option a: download from wahoo update server
-	First of all, index numbers for the routing tiles of target country are required before trying to download them from wahoo update server. Since wahoo use the routing tiles ID ("routing_coordinates") instead of index in mappack-gzip.json, the python script from valhalla are required to decode the ID  into six digital index (first three are the folder name and last three are filename).
+### Option a: download from wahoo update server
+First of all, index numbers for the routing tiles of target country are required before trying to download them from wahoo update server. Since wahoo use the routing tiles ID ("routing_coordinates") instead of index in mappack-gzip.json, the python script from valhalla are required to decode the ID  into six digital index (first three are the folder name and last three are filename).
 
-	Following are the python code for the decode function. More details and full python script can be found from: https://valhalla.readthedocs.io/en/latest/tiles/
+Following are the python code for the decode function. More details and full python script can be found from: https://valhalla.readthedocs.io/en/latest/tiles/
 
-```python
+```
 	#!/usr/bin/env python
 
 	LEVEL_BITS = 3 
@@ -51,15 +51,15 @@ maps
 	  return (id >> LEVEL_BITS) & TILE_INDEX_MASK
 ```
 
-	After decoding the routing tile IDs into index, it is fairly easy to download all routing tiles from wahoo update server. Following are the URL:
+After decoding the routing tile IDs into index, it is fairly easy to download all routing tiles from wahoo update server. Following are the URL:
 		https://cdn.wahooligan.com/wahoo-maps/{version}/routing/tiles/{level}/000/{x}/{y}.gph.lzma
-	And the latest map version is 12; level is 2; x, y are both 3 digitals map tile index.
+And the latest map version is 12; level is 2; x, y are both 3 digitals map tile index.
 
-	Note:
-			- Please use 3 digitals for x and y, and add "0" if x or y is less than 100. e.g. use "003" instead "3" when trying to download them
-			- Some tiles may be missing, and the reason and impact are unclear. But it still can work.
+Note:
+		- Please use 3 digitals for x and y, and add "0" if x or y is less than 100. e.g. use "003" instead "3" when trying to download them
+		- Some tiles may be missing, and the reason and impact are unclear. But it still can work.
 
-	### Option b (to be validated) : generate by using valhalla/mjolnir
-	Since valhalla is used as routing service, it should work by using valhalla tools (mjolnir) to generate routing tiles from pbf file directly. Need to be validated later. And more information can be found from:
+### Option b (to be validated) : generate by using valhalla/mjolnir
+Since valhalla is used as routing service, it should work by using valhalla tools (mjolnir) to generate routing tiles from pbf file directly. Need to be validated later. And more information can be found from:
 
 	https://valhalla.readthedocs.io/en/latest/mjolnir/getting_started_guide/
