@@ -20,7 +20,7 @@ class TestOsmMaps(unittest.TestCase):
     def setUp(self):
         o_input_data = InputData()
 
-        self.o_osm_maps = OsmMaps(False, o_input_data)
+        self.o_osm_maps = OsmMaps(o_input_data)
 
         self.file_path_test_json = os.path.join(os.getcwd(), 'tests', 'json')
 

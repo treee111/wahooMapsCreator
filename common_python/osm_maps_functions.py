@@ -14,10 +14,8 @@ import platform
 # import custom python packages
 from common_python import file_directory_functions as fd_fct
 from common_python import constants
-from common_python import constants_functions as const_fct
-
 from common_python.downloader import Downloader
-from common_resources.geofabrik import Geofabrik
+from common_python.geofabrik import Geofabrik
 
 
 class OsmMaps:

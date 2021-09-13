@@ -6,10 +6,10 @@ import os
 import unittest
 
 # import custom python packages
-from common_resources.geofabrik import Geofabrik
-from common_resources import file_directory_functions as fd_fct
-from common_resources import constants_functions as const_fct
-from common_resources.downloader import Downloader
+from common_python.geofabrik import Geofabrik
+from common_python import file_directory_functions as fd_fct
+from common_python import constants_functions as const_fct
+from common_python.downloader import Downloader
 
 
 class TestDownloader(unittest.TestCase):

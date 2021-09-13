@@ -11,8 +11,8 @@ import geojson
 from shapely.geometry import Polygon, shape
 
 # import custom python packages
-from common_resources import file_directory_functions as fd_fct
-from common_resources import constants
+from common_python import file_directory_functions as fd_fct
+from common_python import constants
 
 
 class Geofabrik:
