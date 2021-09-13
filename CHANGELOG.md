@@ -14,6 +14,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `Security` in case of vulnerabilities.
 
 ## [Unreleased]
+### Added
+- have more different tag-wahoo-xml files and move them to folders. Modify tag-wahoo.xml to differently display some "place"-tags [PR34](https://github.com/treee111/wahooMapsCreator/issues/34)
 ### Changed
 - move "central" download functions from downloader to file_directory_functions
 - move files from common_resources into two new folders: common_download & common_python and into tooling [PR33](https://github.com/treee111/wahooMapsCreator/issues/33)
