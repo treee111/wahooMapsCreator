@@ -13,7 +13,7 @@ import tkinter as tk
 from tkinter import ttk
 
 # import custom python packages
-from common_resources import constants
+from common_python import constants
 
 class InputData():
     """

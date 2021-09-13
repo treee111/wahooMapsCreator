@@ -4,8 +4,8 @@ executable file to create up-to-date map-files for the Wahoo ELEMNT and Wahoo EL
 #!/usr/bin/python
 
 # import custom python packages
-from common_resources.osm_maps_functions import OsmMaps
-from common_resources.input import Input
+from common_python.osm_maps_functions import OsmMaps
+from common_python.input import Input
 
 # logging used in the terminal output:
 # # means top-level command

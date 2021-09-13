@@ -25,10 +25,12 @@ def get_git_root():
 
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname( __file__ ), os.pardir))
 COMMON_DIR = os.path.join(ROOT_DIR, 'common_resources')
+COMMON_DL_DIR = os.path.join(ROOT_DIR, 'common_download')
 OUTPUT_DIR = os.path.join(ROOT_DIR, 'output')
-MAPS_DIR = os.path.join(COMMON_DIR, 'maps')
+MAPS_DIR = os.path.join(COMMON_DL_DIR, 'maps')
+TOOLING_DIR = os.path.join(ROOT_DIR, 'tooling')
 TOOLING_WIN_DIR = os.path.join(ROOT_DIR, 'tooling_windows')
-LAND_POLYGONS_PATH = os.path.join(COMMON_DIR, 'land-polygons-split-4326', 'land_polygons.shp')
+LAND_POLYGONS_PATH = os.path.join(COMMON_DL_DIR, 'land-polygons-split-4326', 'land_polygons.shp')
 GEOFABRIK_PATH = os.path.join(COMMON_DIR, 'geofabrik.json')
 
 def unzip(source_filename, dest_dir):

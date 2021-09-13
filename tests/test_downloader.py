@@ -8,8 +8,9 @@ import time
 
 # import custom python packages
 # sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from common_resources.downloader import older_than_x_days
-from common_resources.downloader import Downloader
+
+from common_python.downloader import older_than_x_days
+from common_python.downloader import Downloader
 
 
 class TestDownloader(unittest.TestCase):
