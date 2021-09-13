@@ -16,14 +16,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - have more different tag-wahoo-xml files and move them to folders. Modify tag-wahoo.xml to differently display some "place"-tags [PR34](https://github.com/treee111/wahooMapsCreator/issues/34)
+- Calculate tiles using a downloadable geofabrik.json file instead of static json files [#13](https://github.com/treee111/wahooMapsCreator/issues/13) [PR31](https://github.com/treee111/wahooMapsCreator/issues/31)
+  - Breaking Change - additional python modules need to be installed --> Link to doku Win & macOS
 ### Changed
 - move "central" download functions from downloader to file_directory_functions
 - move files from common_resources into two new folders: common_download & common_python and into tooling [PR33](https://github.com/treee111/wahooMapsCreator/issues/33)
 
 ## [0.8.1] - 2021-09-10
-### Added
-- Calculate tiles using a downloadable geofabrik.json file instead of static json files [#13](https://github.com/treee111/wahooMapsCreator/issues/13) [PR31](https://github.com/treee111/wahooMapsCreator/issues/31)
-  - Breaking Change - additional python modules need to be installed --> Link to doku Win & macOS
 ### Fixed
 - change dynamic access to constants-values to prevent console-errors [#29](https://github.com/treee111/wahooMapsCreator/issues/29) [PR30](https://github.com/treee111/wahooMapsCreator/issues/30)
 
