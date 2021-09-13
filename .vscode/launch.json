@@ -7,7 +7,15 @@
             "request": "launch",
             "program": "${workspaceRoot}/wahoo_map_creator.py",
             "console": "integratedTerminal",
-            "args": ["${workspaceRoot}/tests/json/germany-only1.json"]
+            "args": ["${workspaceRoot}/tests/json/germany-only1.json", "-md", "100", "-fp", "-c", "-om"]
+        },
+        {
+            "name": "only1-tag-hidrive2",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceRoot}/wahoo_map_creator.py",
+            "console": "integratedTerminal",
+            "args": ["${workspaceRoot}/tests/json/germany-only1.json", "-tag", "tag-wahoo-hidrive2.xml", "-md", "100", "-fp", "-c", "-om"]
         },
         {
             "name": "only2-tile",
@@ -15,15 +23,15 @@
             "request": "launch",
             "program": "${workspaceRoot}/wahoo_map_creator.py",
             "console": "integratedTerminal",
-            "args": ["${workspaceRoot}/tests/json/germany-only2.json"]
+            "args": ["${workspaceRoot}/tests/json/germany-only2.json", "-md", "100", "-fp", "-c", "-om"]
         },
         {
-            "name": "only5-tile",
+            "name": "only9",
             "type": "python",
             "request": "launch",
             "program": "${workspaceRoot}/wahoo_map_creator.py",
             "console": "integratedTerminal",
-            "args": ["${workspaceRoot}/tests/json/germany-only5.json"]
+            "args": ["${workspaceRoot}/tests/json/germany-only9.json", "-tag", "tag-wahoo.xml", "-md", "100", "-fp", "-c"]
         },
         {
             "name": "koblenz",
