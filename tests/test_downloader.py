@@ -11,6 +11,7 @@ import time
 
 from common_python.downloader import older_than_x_days
 from common_python.downloader import Downloader
+from common_python import file_directory_functions as fd_fct
 
 
 class TestDownloader(unittest.TestCase):
@@ -65,18 +66,16 @@ class TestDownloader(unittest.TestCase):
         """
         Test the download of land poligons file via URL
         """
-        path = os.path.join(os.getcwd(), 'common_resources', 'land-polygons-split-4326',
+        path = os.path.join(fd_fct.COMMON_DL_DIR, 'land-polygons-split-4326',
             'land_polygons.shp')
         self.o_downloader.download_file(path,
             'https://osmdata.openstreetmap.de/download/land-polygons-split-4326.zip', True)
-
-        # self.assert
 
     def test_download_geofabrik_file(self):
         """
         Test the download of land poligons file via URL
         """
-        path = os.path.join(os.getcwd(), 'common_resources', 'geofabrik.json')
+        path = os.path.join(fd_fct.COMMON_DL_DIR, 'geofabrik.json')
         self.o_downloader.download_file(path, 'https://download.geofabrik.de/index-v1.json', False)
 
 
