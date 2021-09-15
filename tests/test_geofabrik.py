@@ -29,13 +29,19 @@ class TestGeofabrik(unittest.TestCase):
         """
         Test the retrieval of tiles via geofabrik URL against hardcoded data
         """
-        item_0 = {'x': 137, 'y': 100, 'left': 12.65625, 'top': 36.59788913307021, 'right': 14.0625, 'bottom': 35.4606699514953, 'countries': ['italy', 'malta'], 'urls': ['https://download.geofabrik.de/europe/italy-latest.osm.pbf', 'https://download.geofabrik.de/europe/malta-latest.osm.pbf']}
-        item_1 = {'x': 138, 'y': 100, 'left': 14.0625, 'top': 36.59788913307021, 'right': 15.46875, 'bottom': 35.4606699514953, 'countries': ['italy', 'malta'], 'urls': ['https://download.geofabrik.de/europe/italy-latest.osm.pbf', 'https://download.geofabrik.de/europe/malta-latest.osm.pbf']}
+        item_0 = {'x': 137, 'y': 100, 'left': 12.65625, 'top': 36.59788913307021,
+                'right': 14.0625, 'bottom': 35.4606699514953, 'countries': ['italy', 'malta'],
+                'urls': ['https://download.geofabrik.de/europe/italy-latest.osm.pbf',
+                'https://download.geofabrik.de/europe/malta-latest.osm.pbf']}
+        item_1 = {'x': 138, 'y': 100, 'left': 14.0625, 'top': 36.59788913307021,
+                'right': 15.46875, 'bottom': 35.4606699514953, 'countries': ['italy', 'malta'],
+                'urls': ['https://download.geofabrik.de/europe/italy-latest.osm.pbf',
+                'https://download.geofabrik.de/europe/malta-latest.osm.pbf']}
 
         geofabrik_tiles = self.calc_tiles_via_geofabrik_json('malta')
 
         self.assertEqual(item_0, geofabrik_tiles[0])
-        self.assertEqual(item_1, geofabrik_tiles[1])        
+        self.assertEqual(item_1, geofabrik_tiles[1])
 
     # def test_tiles_via_url_germany(self):
     #     """

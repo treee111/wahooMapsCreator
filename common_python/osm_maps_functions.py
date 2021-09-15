@@ -54,9 +54,9 @@ class OsmMaps:
 
         # option 2: input a country as parameter, e.g. germany
         else:
-            
+
             use_geofabrik_for_tiles = False
-            
+
             if use_geofabrik_for_tiles:
                 # use geofabrik-URL to calculate the relevant tiles
                 self.force_processing = self.o_downloader.check_and_download_geofabrik_if_needed()

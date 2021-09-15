@@ -102,7 +102,8 @@ class TestOsmMaps(unittest.TestCase):
         """
         Test the retrieval of tiles via geofabrik URL against hardcoded data for germany
         """
-        expected_tiles = [{'x': 138, 'y': 100, 'left': 14.0625, 'top': 36.597889, 'right': 15.46875, 'bottom': 35.46067, 'countries': ['malta']}]
+        expected_tiles = [{'x': 138, 'y': 100, 'left': 14.0625, 'top': 36.597889,
+                            'right': 15.46875, 'bottom': 35.46067, 'countries': ['malta']}]
         self.calculate_tiles_via_static_json('malta', expected_tiles)
 
     def process_and_check_border_countries(self, country, calc_border_countries, expected_result):

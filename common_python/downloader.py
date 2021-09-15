@@ -206,9 +206,9 @@ class Downloader:
         trigger download of relevant countries' OSM files
         """
 
-        for country in self.border_countries:
+        for country, item in self.border_countries.items():
             try:
-                if self.border_countries[country]['download'] is True:
+                if item['download'] is True:
                     map_file_path = self.download_map(country)
                     self.border_countries[country] = {'map_file':map_file_path}
             except KeyError:
