@@ -1,5 +1,5 @@
 """
-functions and object for checking for up-to-date & downloading land_poligons file and OSM maps
+functions and object for checking for up-to-date & downloading land_polygons file and OSM maps
 """
 #!/usr/bin/python
 
@@ -37,12 +37,12 @@ class Downloader:
 
     def check_and_download_files_if_needed(self):
         """
-        check land_poligons and OSM map files if not existing or are not up-to-date
+        check land_polygons and OSM map files if not existing or are not up-to-date
         """
         force_processing = False
 
-        if self.check_poligons_file() is True or self.force_download is True:
-            self.download_land_poligons_file()
+        if self.check_polygons_file() is True or self.force_download is True:
+            self.download_land_polygons_file()
             force_processing = True
 
         # logging
@@ -60,9 +60,9 @@ class Downloader:
 
         return force_processing
 
-    def check_poligons_file(self):
+    def check_polygons_file(self):
         """
-        check if land_poligons file is up-to-date
+        check if land_polygons file is up-to-date
         """
 
         need_to_download = False
@@ -79,7 +79,7 @@ class Downloader:
         except:
             need_to_download = True
 
-        # if land poligons file does not exists --> download
+        # if land polygons file does not exists --> download
         if not os.path.exists(fd_fct.LAND_POLYGONS_PATH) or \
                 not os.path.isfile(fd_fct.LAND_POLYGONS_PATH):
             need_to_download = True
@@ -88,9 +88,9 @@ class Downloader:
 
         return need_to_download
 
-    def download_land_poligons_file(self):
+    def download_land_polygons_file(self):
         """
-        download land_poligons file
+        download land_polygons file
         """
 
         print('# Downloading land polygons file')
@@ -98,15 +98,15 @@ class Downloader:
         url = 'https://osmdata.openstreetmap.de/download/land-polygons-split-4326.zip'
 
         # download URL to file
-        land_poligons_download_path = os.path.join(
+        land_polygons_download_path = os.path.join(
             fd_fct.COMMON_DL_DIR, 'land-polygons-split-4326.zip')
-        fd_fct.download_url_to_file(url, land_poligons_download_path)
+        fd_fct.download_url_to_file(url, land_polygons_download_path)
 
         # unpack it - should work on macOS and Windows
-        fd_fct.unzip(land_poligons_download_path, fd_fct.COMMON_DL_DIR)
+        fd_fct.unzip(land_polygons_download_path, fd_fct.COMMON_DL_DIR)
 
         # delete .zip file
-        os.remove(land_poligons_download_path)
+        os.remove(land_polygons_download_path)
 
         # Check if land polygons file exists
         if not os.path.isfile(fd_fct.LAND_POLYGONS_PATH):
