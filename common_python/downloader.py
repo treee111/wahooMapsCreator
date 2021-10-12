@@ -1,5 +1,5 @@
 """
-functions and object for checking for up-to-date & downloading land_poligons file and OSM maps
+functions and object for checking for up-to-date & downloading land_polygons file and OSM maps
 """
 #!/usr/bin/python
 
@@ -35,20 +35,18 @@ class Downloader:
         self.tiles_from_json = tiles
         self.border_countries = border_countries
 
-
     def check_and_download_files_if_needed(self):
         """
-        check land_poligons and OSM map files if not existing or are not up-to-date
+        check land_polygons and OSM map files if not existing or are not up-to-date
         """
         force_processing = False
 
-        if self.check_poligons_file() is True or self.force_download is True:
-            self.download_land_poligons_file()
+        if self.check_polygons_file() is True or self.force_download is True:
+            self.download_land_polygons_file()
             force_processing = True
 
-         # logging
+        # logging
         print('# check land_polygons.shp file: OK')
-
 
         if self.check_osm_pbf_file() is True or self.force_download is True:
             self.download_osm_pbf_file()
@@ -62,10 +60,9 @@ class Downloader:
 
         return force_processing
 
-
-    def check_poligons_file(self):
+    def check_polygons_file(self):
         """
-        check if land_poligons file is up-to-date
+        check if land_polygons file is up-to-date
         """
 
         need_to_download = False
@@ -75,26 +72,25 @@ class Downloader:
         try:
             chg_time = os.path.getctime(fd_fct.LAND_POLYGONS_PATH)
             if older_than_x_days(chg_time, self.max_days_old):
-                print ('# Deleting old land polygons file')
+                print('# Deleting old land polygons file')
                 os.remove(fd_fct.LAND_POLYGONS_PATH)
                 need_to_download = True
 
         except:
             need_to_download = True
 
-        # if land poligons file does not exists --> download
-        if  not os.path.exists(fd_fct.LAND_POLYGONS_PATH) or \
-            not os.path.isfile(fd_fct.LAND_POLYGONS_PATH):
+        # if land polygons file does not exists --> download
+        if not os.path.exists(fd_fct.LAND_POLYGONS_PATH) or \
+                not os.path.isfile(fd_fct.LAND_POLYGONS_PATH):
             need_to_download = True
             # logging
             print('# land_polygons.shp file needs to be downloaded')
 
         return need_to_download
 
-
-    def download_land_poligons_file(self):
+    def download_land_polygons_file(self):
         """
-        download land_poligons file
+        download land_polygons file
         """
 
         print('# Downloading land polygons file')
@@ -102,15 +98,15 @@ class Downloader:
         url = 'https://osmdata.openstreetmap.de/download/land-polygons-split-4326.zip'
 
         # download URL to file
-        land_poligons_file_path = os.path.join (fd_fct.COMMON_DIR, 'land-polygons-split-4326.zip')
-        fd_fct.download_url_to_file(url, land_poligons_file_path)
+        land_polygons_download_path = os.path.join(
+            fd_fct.COMMON_DL_DIR, 'land-polygons-split-4326.zip')
+        fd_fct.download_url_to_file(url, land_polygons_download_path)
 
         # unpack it - should work on macOS and Windows
-        fd_fct.unzip(land_poligons_file_path, fd_fct.COMMON_DIR)
+        fd_fct.unzip(land_polygons_download_path, fd_fct.COMMON_DL_DIR)
 
         # delete .zip file
-        os.remove(os.path.join (fd_fct.COMMON_DIR,
-            'land-polygons-split-4326.zip'))
+        os.remove(land_polygons_download_path)
 
         # Check if land polygons file exists
         if not os.path.isfile(fd_fct.LAND_POLYGONS_PATH):
@@ -118,7 +114,6 @@ class Downloader:
             sys.exit()
         else:
             print(f'+ Downloaded: {fd_fct.LAND_POLYGONS_PATH}')
-
 
     def check_osm_pbf_file(self):
         """
@@ -139,18 +134,22 @@ class Downloader:
             # check for already existing .osm.pbf file
             map_file_path = glob.glob(f'{fd_fct.MAPS_DIR}/{transl_c}*.osm.pbf')
             if len(map_file_path) != 1:
-                map_file_path = glob.glob(f'{fd_fct.MAPS_DIR}/**/{transl_c}*.osm.pbf')
+                map_file_path = glob.glob(
+                    f'{fd_fct.MAPS_DIR}/**/{transl_c}*.osm.pbf')
 
             # delete .osm.pbf file if out of date
             if len(map_file_path) == 1 and os.path.isfile(map_file_path[0]):
                 chg_time = os.path.getctime(map_file_path[0])
                 if older_than_x_days(chg_time, self.max_days_old) or self.force_download is True:
-                    print(f'+ mapfile for {transl_c}: deleted. Input: {country}.')
+                    print(
+                        f'+ mapfile for {transl_c}: deleted. Input: {country}.')
                     os.remove(map_file_path[0])
                     need_to_download = True
                 else:
-                    self.border_countries[country] = {'map_file':map_file_path[0]}
-                    print(f'+ mapfile for {transl_c}: up-to-date. Input: {country}.')
+                    self.border_countries[country] = {
+                        'map_file': map_file_path[0]}
+                    print(
+                        f'+ mapfile for {transl_c}: up-to-date. Input: {country}.')
 
             # mark country .osm.pbf file for download if there exists no file or it is no file
             map_file_path = self.border_countries[country].get('map_file')
@@ -162,7 +161,6 @@ class Downloader:
 
         return need_to_download
 
-
     def download_osm_pbf_file(self):
         """
         trigger download of relevant countries' OSM files
@@ -172,7 +170,8 @@ class Downloader:
             try:
                 if self.border_countries[country]['download'] is True:
                     map_file_path = self.download_map(country)
-                    self.border_countries[country] = {'map_file':map_file_path}
+                    self.border_countries[country] = {
+                        'map_file': map_file_path}
             except KeyError:
                 pass
 
@@ -189,16 +188,18 @@ class Downloader:
 
         if region != 'no':
             url = 'https://download.geofabrik.de/' + region + \
-            '/' + transl_c + '-latest.osm.pbf'
+                '/' + transl_c + '-latest.osm.pbf'
         else:
             url = 'https://download.geofabrik.de/' + transl_c + '-latest.osm.pbf'
 
         # download URL to file
-        map_file_path = os.path.join (fd_fct.MAPS_DIR, f'{transl_c}' + '-latest.osm.pbf')
+        map_file_path = os.path.join(
+            fd_fct.MAPS_DIR, f'{transl_c}' + '-latest.osm.pbf')
         fd_fct.download_url_to_file(url, map_file_path)
 
         if not os.path.isfile(map_file_path):
-            print(f'! failed to find or download country: {transl_c}. Input: {country}.')
+            print(
+                f'! failed to find or download country: {transl_c}. Input: {country}.')
             sys.exit()
         else:
             print(f'+ Map of {transl_c} downloaded. Input: {country}.')
