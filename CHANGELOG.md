@@ -19,8 +19,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - move "central" download functions from downloader to file_directory_functions
 - move files from common_resources into two new folders: common_download & common_python and into tooling [PR33](https://github.com/treee111/wahooMapsCreator/pull/33)
-- fix bug in download handling of land polygons file which was introduced with [PR33](https://github.com/treee111/wahooMapsCreator/pull/33) [PR35](https://github.com/treee111/wahooMapsCreator/pull/35)
-- format the common_python files using "autopep8"
+- format python files in directory common_python using "autopep8" [PR35](https://github.com/treee111/wahooMapsCreator/pull/35) [PR37](https://github.com/treee111/wahooMapsCreator/pull/37)
+### Fixed
+- fix bug in download handling of land polygons file which was introduced with [PR33](https://github.com/treee111/wahooMapsCreator/pull/33). [PR35](https://github.com/treee111/wahooMapsCreator/pull/35)
 
 ## [0.8.1] - 2021-09-10
 ### Fixed
