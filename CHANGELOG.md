@@ -15,6 +15,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
+- tag-wahoo-v12.xml which is a updated version of the current tag-wahoo-hidrive2.xml. Bus_guideways have been removed and the zoom-appear levels are copied from the original wahoo maps.
+  This really should replace tag-wahoo.xml eventually when v12 maps are created.
+### Changed
+- Replaced the publicly available osmconvert.exe (https://wiki.openstreetmap.org/wiki/Osmconvert) 0.8.8 with a special newer version 0.8.10. 
+  This version does NOT include the zlib library which enables processing of .osm.pbf files larger then 4GB on windows. The old version did have zlib which prevented processing of > 4Gb .osm.pbf files on windows. [PR38](https://github.com/treee111/wahooMapsCreator/pull/38)
+
+## [Unreleased]
+### Added
 - have more different tag-wahoo-xml files and move them to folders. Modify tag-wahoo.xml to differently display some "place"-tags [PR34](https://github.com/treee111/wahooMapsCreator/issues/34)
 ### Changed
 - move "central" download functions from downloader to file_directory_functions
