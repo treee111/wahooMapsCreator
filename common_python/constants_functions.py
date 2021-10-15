@@ -15,21 +15,21 @@ def get_region_of_country(county):
     returns the region / continent of a given country
     """
     region = ''
-    if county in constants.africa :
+    if county in constants.africa:
         region = 'africa'
-    if county in constants.antarctica :
+    if county in constants.antarctica:
         region = 'antarctica'
-    if county in constants.asia :
+    if county in constants.asia:
         region = 'asia'
-    if county in constants.europe :
+    if county in constants.europe:
         region = 'europe'
-    if county in constants.northamerica :
+    if county in constants.northamerica:
         region = 'north-america'
-    if county in constants.oceania :
+    if county in constants.oceania:
         region = 'oceania'
-    if county in constants.southamerica :
+    if county in constants.southamerica:
         region = 'south-america'
-    if county in constants.unitedstates :
+    if county in constants.unitedstates:
         region = 'united-states'
 
     return region
@@ -44,25 +44,25 @@ def get_geofabrik_region_of_country(input_county):
     c_translated = translate_country_input_to_geofabrik(input_county)
 
     region = ''
-    if c_translated in constants.africa_geofabrik :
+    if c_translated in constants.africa_geofabrik:
         region = 'africa'
-    if c_translated in constants.antarctica_geofabrik :
+    if c_translated in constants.antarctica_geofabrik:
         region = 'antarctica'
-    if c_translated in constants.asia_geofabrik :
+    if c_translated in constants.asia_geofabrik:
         region = 'asia'
-    if c_translated in constants.australiaoceania_geofabrik :
+    if c_translated in constants.australiaoceania_geofabrik:
         region = 'australia-oceania'
-    if c_translated in constants.centralamerica_geofabrik :
+    if c_translated in constants.centralamerica_geofabrik:
         region = 'central-america'
-    if c_translated in constants.europe_geofabrik :
+    if c_translated in constants.europe_geofabrik:
         region = 'europe'
-    if c_translated in constants.northamerica_geofabrik :
+    if c_translated in constants.northamerica_geofabrik:
         region = 'north-america'
-    if c_translated in constants.southamerica_geofabrik :
+    if c_translated in constants.southamerica_geofabrik:
         region = 'south-america'
-    if c_translated in constants.germany_subregions_geofabrik :
+    if c_translated in constants.germany_subregions_geofabrik:
         region = 'europe\\germany'
-    if c_translated in constants.noregion_geofabrik :
+    if c_translated in constants.noregion_geofabrik:
         region = 'no'
     if region == '':
         print(f'\n! No Geofabrik region match for country: {c_translated}')
