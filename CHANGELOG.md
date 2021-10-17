@@ -30,7 +30,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Added advantage: Optionally you can choose to keep these folders so you can instandly copy the files to your device or check them in Cruiser.
 - In the "are files older then x days" stage use the files modification date, not the creation time. On windows this seemed to occasionally see newly downloaded files as the ones they replaced.
 - When checking for existing maps, check for a full match instead of doing a wildcard match. This prevents matching to multiple maps like australia and australia-oceania.
-[PR39](https://github.com/treee111/wahooMapsCreator/pull/39)
+[PR40](https://github.com/treee111/wahooMapsCreator/pull/40)
 
 ## [Unreleased]
 ### Added
