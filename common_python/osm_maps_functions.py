@@ -504,7 +504,7 @@ class OsmMaps:
                 subprocess.run(cmd, check=True)
 
             # Create "tile present" file
-            f = open(out_file + '.lzma.v12', 'wb')
+            f = open(out_file + '.lzma.12', 'wb')
             f.close()
 
             tile_count += 1
@@ -541,8 +541,8 @@ class OsmMaps:
                 print (f'Error copying tiles of country {self.country_name}')
                 sys.exit()
         
-            src = os.path.join(f'{fd_fct.OUTPUT_DIR}', f'{tile["x"]}', f'{tile["y"]}.map.lzma.v12')
-            dst = os.path.join(f'{fd_fct.OUTPUT_DIR}', f'{self.country_name}', f'{tile["x"]}', f'{tile["y"]}.map.lzma.v12')
+            src = os.path.join(f'{fd_fct.OUTPUT_DIR}', f'{tile["x"]}', f'{tile["y"]}.map.lzma.12')
+            dst = os.path.join(f'{fd_fct.OUTPUT_DIR}', f'{self.country_name}', f'{tile["x"]}', f'{tile["y"]}.map.lzma.12')
             outdir = os.path.join(f'{fd_fct.OUTPUT_DIR}', f'{self.country_name}', f'{tile["x"]}')
             if not os.path.isdir(outdir):
                 os.makedirs(outdir)
