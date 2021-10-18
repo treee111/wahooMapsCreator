@@ -3,6 +3,9 @@ executable file to create up-to-date map-files for the Wahoo ELEMNT and Wahoo EL
 """
 #!/usr/bin/python
 
+# import official python packages
+import sys
+
 # import custom python packages
 from common_python.osm_maps_functions import OsmMaps
 from common_python.input import Input
@@ -18,6 +21,11 @@ if oInput.gui_mode:
     oInputData = oInput.start_gui()
 else:
     oInputData = oInput.cli_arguments()
+
+# Is there something to do?
+if oInputData.country == "none" or oInputData.country == "":
+    sys.exit("Nothing to do. Start with -h or --help to see command line options."
+             "Or in the GUI select a country to create maps for.")
 
 oOSMmaps = OsmMaps(oInputData.force_processing)
 
