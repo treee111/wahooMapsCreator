@@ -31,6 +31,9 @@ class InputData():
         self.only_merge = False
 
         self.tag_wahoo_xml = "tag-wahoo.xml"
+        # Keep (1) or delete (0) the country/region map folders after compression
+        #self.keep_map_folders = 0
+        self.keep_map_folders = 1
 
 class Input(tk.Tk):
     """

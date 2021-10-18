@@ -7,6 +7,8 @@ executable file to create up-to-date map-files for the Wahoo ELEMNT and Wahoo EL
 from common_python.osm_maps_functions import OsmMaps
 from common_python.input import Input
 
+import sys
+
 # logging used in the terminal output:
 # # means top-level command
 # ! means error
@@ -18,6 +20,10 @@ if oInput.gui_mode:
     oInputData = oInput.start_gui()
 else:
     oInputData = oInput.cli_arguments()
+
+# Is there something to do?
+if oInputData.country == "":
+    sys.exit("Nothing to do. Start with -h or --help to see command line options. Or in the GUI select a country to create maps for.")
 
 oOSMmaps = OsmMaps(oInputData.force_processing)
 
@@ -48,8 +54,8 @@ oOSMmaps.merge_splitted_tiles_with_land_and_sea(oInputData.border_countries)
 oOSMmaps.create_map_files(oInputData.save_cruiser, oInputData.tag_wahoo_xml)
 
 # Zip .map.lzma files
-oOSMmaps.zip_map_files()
+oOSMmaps.zip_map_files(oInputData.keep_map_folders)
 
 # Make Cruiser map files zip file
 if oInputData.save_cruiser is True:
-    oOSMmaps.make_cruiser_files()
+    oOSMmaps.make_cruiser_files(oInputData.keep_map_folders)

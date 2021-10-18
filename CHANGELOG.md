@@ -16,20 +16,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - Added a little error checking here and there.
+- Added a check at the start to see if a country is to process is specified. Otherwise closing the GUI without selecting anything resulted in a runtime error.
 ### Changed
 - In the filter stage, do not re-convert the result file(s) back to .osm.pbf format. This saves some time here but more importantly osmconvert is much faster in cutting tiles out of o5m 
   files then .osm.pbf files.
 - Switched to using 'v12' tag (keep) filters. This only keeps the tags used by Wahoo's devices render themes.
   Additionally, filter out all names tags except for those used, like city names. So highway names for example or filtered out.  
-- At the start of the splitting phase check for the existance of a merged.osm.pbf file. This prevents unnecessary splitting tiles out of for instance Europe when the tile is already 
+- At the start of the splitting phase check for the existence of a merged .osm.pbf file. This prevents unnecessary splitting tiles out of for instance Europe when the tile is already 
   processed from a smaller, so faster, part like Germany.
 - Create Wahoo tile present/version indicator files like 84.map.lzma.v12 
 - Changed how the resulting tiles.zip and maps.zip file is made. Now files are copied from the 'tilestore' to a country-name and country-name-maps folder. This folder is then passed
   to the compressor instead of building an enormous command line with all file names specified. This would, for large countries like Russia, result in errors because the command line
   was to long.
-  - Added advantage: Optionally you can choose to keep these folders so you can instandly copy the files to your device or check them in Cruiser.
+  - Added advantage: Optionally you can choose to keep these folders so you can instantly copy the files to your device or check them in Cruiser.
 - In the "are files older then x days" stage use the files modification date, not the creation time. On windows this seemed to occasionally see newly downloaded files as the ones they replaced.
 - When checking for existing maps, check for a full match instead of doing a wildcard match. This prevents matching to multiple maps like australia and australia-oceania.
+- Moved the keep_map_folder flag to the more appropriate input module.
 [PR40](https://github.com/treee111/wahooMapsCreator/pull/40)
 
 ## [Unreleased]

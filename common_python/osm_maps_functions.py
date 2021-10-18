@@ -512,7 +512,7 @@ class OsmMaps:
         # logging
         print('# Creating .map files: OK')
 
-    def zip_map_files(self):
+    def zip_map_files(self, keep_map_folders):
         """
         Zip .map.lzma files
         """
@@ -565,11 +565,7 @@ class OsmMaps:
         # print(cmd)
         subprocess.run(cmd, cwd=fd_fct.OUTPUT_DIR, check=True)
 
-        # Keep (1) or delete (0) the country/region map folders after compression
-        #keep_folders = 0
-        keep_folders = 1
-
-        if keep_folders == 0:
+        if keep_map_folders == 0:
             try:
                 shutil.rmtree(os.path.join(f'{fd_fct.OUTPUT_DIR}', f'{self.country_name}'))
             except OSError as e:
@@ -578,7 +574,7 @@ class OsmMaps:
         # logging
         print('# Zip .map.lzma files: OK \n')
 
-    def make_cruiser_files(self):
+    def make_cruiser_files(self, keep_map_folders):
         """
         Make Cruiser map files zip file
         """
@@ -615,10 +611,8 @@ class OsmMaps:
         subprocess.run(cmd, cwd=fd_fct.OUTPUT_DIR, check=True)
 
         # Keep (1) or delete (0) the country/region map folders after compression
-        #keep_folders = 0
-        keep_folders = 1
 
-        if keep_folders == 0:
+        if keep_map_folders == 0:
             try:
                 shutil.rmtree(os.path.join(f'{fd_fct.OUTPUT_DIR}', f'{self.country_name}-maps'))
             except OSError as e:
