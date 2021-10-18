@@ -60,6 +60,15 @@ def unzip(source_filename, dest_dir):
             zip_file.extract(member, path)
 
 
+def initialize_work_directories():
+    """
+    Initialize work directories
+    """
+    os.makedirs(COMMON_DL_DIR, exist_ok=True)
+    os.makedirs(MAPS_DIR, exist_ok=True)
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+
 def create_empty_directories(tiles_from_json):
     """
     create empty directory for the files

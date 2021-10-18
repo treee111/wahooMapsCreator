@@ -1,29 +1,19 @@
 # IDE
-.vscode/*
-!.vscode/launch.json
-!.vscode/settings.json
+/.vscode/*
+/!.vscode/launch.json
+/!.vscode/settings.json
 
 # top level
-maps/*
-output*/*
-venv/*
-dist/**
+/common_download
+/dist
+/output
+/venv
 
 # in all folders
 **/__pycache__/*
 **/*.pyc
 
-# common resources
-
-# common python
-
-# common download
-common_download/land-polygons-split-4326/
-common_download/land-polygons-split-4326.zip
-common_download/*.pyc
-common_download/geofabrik.json
-
 # mac/unix
 
 #windows
-tooling_windows/osmconvert_tempfile.*
+/tooling_windows/osmconvert_tempfile.*
