@@ -76,10 +76,7 @@ class Input(tk.Tk):
         # start GUI
         self.mainloop()
 
-        if self.o_input_data.country == "none" or self.o_input_data.country == " ":
-            sys.exit()
-        else:
-            return self.o_input_data
+        return self.o_input_data
 
     def handle_create_map(self, event):
         """

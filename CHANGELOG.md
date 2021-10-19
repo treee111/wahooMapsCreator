@@ -14,20 +14,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `Security` in case of vulnerabilities.
 
 ## [Unreleased]
-### Added
-- tag-wahoo-v12.xml which is a updated version of the current tag-wahoo-hidrive2.xml. Bus_guideways have been removed and the zoom-appear levels are copied from the original wahoo maps.
-  This really should replace tag-wahoo.xml eventually when v12 maps are created.
-### Changed
-- Replaced the publicly available osmconvert.exe (https://wiki.openstreetmap.org/wiki/Osmconvert) 0.8.8 with a special newer version 0.8.10. 
-  This version does NOT include the zlib library which enables processing of .osm.pbf files larger then 4GB on windows. The old version did have zlib which prevented processing of > 4Gb .osm.pbf files on windows. [PR38](https://github.com/treee111/wahooMapsCreator/pull/38)
-
-## [Unreleased]
+## [0.9.0] - 2021-10-19
 ### Added
 - have more different tag-wahoo-xml files and move them to folders. Modify tag-wahoo.xml to differently display some "place"-tags [PR34](https://github.com/treee111/wahooMapsCreator/issues/34)
+- tag-wahoo-v12.xml which is a updated version of the current tag-wahoo-hidrive2.xml. Bus_guideways have been removed and the zoom-appear levels are copied from the original wahoo maps. This really should replace tag-wahoo.xml eventually when v12 maps are created. [PR38](https://github.com/treee111/wahooMapsCreator/pull/38)
+- Howto doc for manually adding routing tiles [PR32](https://github.com/treee111/wahooMapsCreator/pull/32)
 ### Changed
 - move "central" download functions from downloader to file_directory_functions
 - move files from common_resources into two new folders: common_download & common_python and into tooling [PR33](https://github.com/treee111/wahooMapsCreator/pull/33)
 - format python files in directory common_python using "autopep8" [PR35](https://github.com/treee111/wahooMapsCreator/pull/35) [PR37](https://github.com/treee111/wahooMapsCreator/pull/37)
+- Replaced the publicly available osmconvert.exe (https://wiki.openstreetmap.org/wiki/Osmconvert) 0.8.8 with a special newer version 0.8.10. This version does NOT include the zlib library which enables processing of .osm.pbf files larger then 4GB on windows. The old version did have zlib which prevented processing of > 4Gb .osm.pbf files on windows. [PR38](https://github.com/treee111/wahooMapsCreator/pull/38)
 ### Fixed
 - fix bug in download handling of land polygons file which was introduced with [PR33](https://github.com/treee111/wahooMapsCreator/pull/33). [PR35](https://github.com/treee111/wahooMapsCreator/pull/35)
 
@@ -136,7 +132,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - Windows:    `tooling_windows/Windows-Wahoo-Map-Creator-Osmosis/wahoo-map-creator-osmosis.py`
 
 
-[unreleased]: https://github.com/treee111/wahooMapsCreator/compare/v0.8.1...HEAD
+[unreleased]: https://github.com/treee111/wahooMapsCreator/compare/v0.9.0...HEAD
+[0.9.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.8.1...v0.9.0
 [0.8.1]: https://github.com/treee111/wahooMapsCreator/compare/v0.8.0...v0.8.1
 [0.8.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.7.1...v0.8.0
 [0.7.1]: https://github.com/treee111/wahooMapsCreator/compare/v0.7.0...v0.7.1
