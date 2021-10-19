@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tag-mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-zoom-appear="16"
+             profile-name="default-profile" xmlns="http://mapsforge.org/tag-mapping"
+             xsi:schemaLocation="http://mapsforge.org/tag-mapping https://raw.githubusercontent.com/mapsforge/mapsforge/master/resources/tag-mapping.xsd">
+
+  <!-- ************* POIS *************** -->
+
+  <!-- HIGHWAY TAGS -->
+  <pois>
+    <osm-tag key="highway" value="mini_roundabout" zoom-appear="17" />
+    <osm-tag key="highway" value="traffic_signals" zoom-appear="17" />
+    <osm-tag key="highway" value="turning_circle" zoom-appear="15" />
+  </pois>
+
+  <!-- PLACES TAGS -->
+  <pois>
+    <osm-tag key="place" value="city" zoom-appear="6" />
+    <osm-tag key="place" value="country" zoom-appear="3" />
+    <osm-tag key="place" value="hamlet" zoom-appear="13" />
+    <osm-tag key="place" value="suburb" zoom-appear="12" />
+    <osm-tag key="place" value="town" zoom-appear="9" />
+    <osm-tag key="place" value="village" zoom-appear="12" />
+  </pois>
+
+  <!-- ************* WAYS *************** -->
+
+  <!-- HIGHWAY TAGS -->
+  <ways>
+    <osm-tag key="highway" value="bridleway" zoom-appear="13" />
+    <osm-tag key="highway" value="construction" zoom-appear="13" />
+    <osm-tag key="highway" value="cycleway" zoom-appear="13" />
+    <osm-tag key="highway" value="footway" zoom-appear="13" />
+    <osm-tag key="highway" value="living_street" zoom-appear="13" />
+    <osm-tag key="highway" value="motorway" zoom-appear="6" />
+    <osm-tag key="highway" value="motorway_link" zoom-appear="6" />
+    <osm-tag key="highway" value="path" zoom-appear="14" />
+    <osm-tag key="highway" value="pedestrian" zoom-appear="14" />
+    <osm-tag key="highway" value="primary" zoom-appear="8" />
+    <osm-tag key="highway" value="primary_link" zoom-appear="8" />
+    <osm-tag key="highway" value="raceway" zoom-appear="12" />
+    <osm-tag key="highway" value="residential" zoom-appear="12" />
+    <osm-tag key="highway" value="road" zoom-appear="12" />
+    <osm-tag key="highway" value="secondary" zoom-appear="12" />
+    <osm-tag key="highway" value="secondary_link" zoom-appear="12" />
+    <osm-tag key="highway" value="service" zoom-appear="14" />
+    <osm-tag key="highway" value="steps" zoom-appear="16" />
+    <osm-tag key="highway" value="tertiary" zoom-appear="12" />
+    <osm-tag key="highway" value="tertiary_link" zoom-appear="12" />
+    <osm-tag key="highway" value="track" zoom-appear="13" />
+    <osm-tag key="highway" value="trunk" zoom-appear="6" />
+    <osm-tag key="highway" value="trunk_link" zoom-appear="6" />
+    <osm-tag key="highway" value="unclassified" zoom-appear="13" />
+  </ways>
+
+  <ways>
+    <osm-tag key="natural" value="nosea" zoom-appear="0" />
+    <osm-tag key="natural" value="sea" zoom-appear="0" />
+    <osm-tag key="natural" value="water" zoom-appear="8" />
+  </ways>
+
+  <ways>
+    <osm-tag key="oneway" value="yes" equivalent-values="1,true" renderable="false"/>
+  </ways>
+
+  <ways>
+    <osm-tag key="railway" value="disused" zoom-appear="15"/>
+    <osm-tag key="railway" value="funicular" zoom-appear="12"/>
+    <osm-tag key="railway" value="miniature" zoom-appear="14"/>
+    <osm-tag key="railway" value="light_rail" zoom-appear="12"/>
+    <osm-tag key="railway" value="monorail" zoom-appear="14"/>
+    <osm-tag key="railway" value="narrow_gauge" zoom-appear="14"/>
+    <osm-tag key="railway" value="platform" zoom-appear="14"/>
+    <osm-tag key="railway" value="preserved" zoom-appear="14"/>
+    <osm-tag key="railway" value="rail" zoom-appear="10"/>
+    <osm-tag key="railway" value="subway" zoom-appear="15"/>
+    <osm-tag key="railway" value="tram" zoom-appear="15"/>
+  </ways>
+
+  <ways>
+    <osm-tag key="tracktype" value="grade1" renderable="false"/>
+    <osm-tag key="tracktype" value="grade2" renderable="false"/>
+    <osm-tag key="tracktype" value="grade3" renderable="false"/>
+    <osm-tag key="tracktype" value="grade4" renderable="false"/>
+    <osm-tag key="tracktype" value="grade5" renderable="false"/>
+  </ways>
+
+  <ways>
+    <osm-tag key="tunnel" value="yes" renderable="false"/>
+    <osm-tag key="tunnel" value="no" renderable="false"/>
+  </ways>
+
+  <ways>
+    <osm-tag key="waterway" value="canal" zoom-appear="10"/>
+    <osm-tag key="waterway" value="dam" zoom-appear="10"/>
+    <osm-tag key="waterway" value="drain" zoom-appear="13"/>
+    <osm-tag key="waterway" value="river" zoom-appear="8"/>
+    <osm-tag key="waterway" value="riverbank" zoom-appear="8"/>
+    <osm-tag key="waterway" value="stream" zoom-appear="13"/>
+  </ways>
+
+  <ways>
+    <osm-tag key="access" value="destination" renderable="false"/>
+    <osm-tag key="access" value="private" renderable="false"/>
+  </ways>
+
+  <ways>
+    <osm-tag key="aerialway" value="rope_tow" zoom-appear="13"/>
+  </ways>
+
+  <ways>
+    <osm-tag key="aeroway" value="runway" zoom-appear="10"/>
+    <osm-tag key="aeroway" value="taxiway" zoom-appear="10"/>
+    <osm-tag key="aeroway" value="helipad" zoom-appear="17" />
+  </ways>
+
+  <ways>
+    <osm-tag force-polygon-line="true" key="boundary" value="administrative" zoom-appear="0"/>
+  </ways>
+
+  <ways>
+    <osm-tag key="bridge" value="yes" renderable="false"/>
+  </ways>
+
+  <ways>
+     <osm-tag force-polygon-line="true" key="admin_level" value="1" zoom-appear="4">
+         <zoom-override key="boundary" value="administrative" />
+     </osm-tag>
+     <osm-tag force-polygon-line="true" key="admin_level" value="2" zoom-appear="4">
+         <zoom-override key="boundary" value="administrative" />
+     </osm-tag>
+     <osm-tag force-polygon-line="true" key="admin_level" value="3" zoom-appear="4">
+         <zoom-override key="boundary" value="administrative" />
+     </osm-tag>
+     <osm-tag force-polygon-line="true" key="admin_level" value="4" zoom-appear="6">
+         <zoom-override key="boundary" value="administrative" />
+     </osm-tag>
+     <osm-tag force-polygon-line="true" key="admin_level" value="5" zoom-appear="6">
+         <zoom-override key="boundary" value="administrative" />
+     </osm-tag>
+     <osm-tag force-polygon-line="true" key="admin_level" value="6" zoom-appear="6">
+         <zoom-override key="boundary" value="administrative" />
+     </osm-tag>
+   </ways>
+
+   <ways>
+     <osm-tag key="barrier" value="city_wall" zoom-appear="14" />
+   </ways>
+
+</tag-mapping>

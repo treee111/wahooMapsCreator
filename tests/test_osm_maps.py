@@ -8,7 +8,7 @@ import unittest
 # import custom python packages
 # sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from common_resources.osm_maps_functions import OsmMaps
+from common_python.osm_maps_functions import OsmMaps
 
 
 class TestOsmMaps(unittest.TestCase):
@@ -61,7 +61,7 @@ class TestOsmMaps(unittest.TestCase):
         self.process_and_check_border_countries('germany', True, expected_result)
 
         # one tile - france and germany
-        input_file = os.path.join(self.file_path_test_json, 'germany-only1.json')
+        input_file = os.path.join(self.file_path_test_json, 'germany-france-only1.json')
         expected_result = {'france': {}, 'germany': {}}
         self.process_and_check_border_countries(input_file, True, expected_result)
 
@@ -85,7 +85,7 @@ class TestOsmMaps(unittest.TestCase):
         self.process_and_check_border_countries('china', False, {'china': {}})
 
         # one tile - france and germany
-        input_file = os.path.join(self.file_path_test_json, 'germany-only1.json')
+        input_file = os.path.join(self.file_path_test_json, 'germany-france-only1.json')
         expected_result = {'france': {}, 'germany': {}}
         self.process_and_check_border_countries(input_file, False, expected_result)
 
