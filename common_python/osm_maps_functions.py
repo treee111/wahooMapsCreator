@@ -10,6 +10,7 @@ import os
 import subprocess
 import sys
 import platform
+import shutil
 
 # import custom python packages
 from common_python import file_directory_functions as fd_fct
@@ -516,15 +517,56 @@ class OsmMaps:
         print('\n# Zip .map.lzma files')
         print(f'+ Country: {self.country_name}')
 
+# Check for us/utah etc names
+        try:
+            res = self.country_name.index('/')
+            self.country_name = self.country_name[res+1:]
+        except:
+            pass
+
+        # copy the needed tiles to the country folder
+        print(f'Copying Wahoo tiles to output folders')
+        for tile in self.tiles:
+            src = os.path.join(f'{fd_fct.OUTPUT_DIR}',
+                               f'{tile["x"]}', f'{tile["y"]}.map.lzma')
+            dst = os.path.join(
+                f'{fd_fct.OUTPUT_DIR}', f'{self.country_name}', f'{tile["x"]}', f'{tile["y"]}.map.lzma')
+            outdir = os.path.join(
+                f'{fd_fct.OUTPUT_DIR}', f'{self.country_name}', f'{tile["x"]}')
+            if not os.path.isdir(outdir):
+                os.makedirs(outdir)
+            try:
+                shutil.copy2(src, dst)
+            except:
+                print(f'Error copying tiles of country {self.country_name}')
+                sys.exit()
+
+            src = os.path.join(f'{fd_fct.OUTPUT_DIR}',
+                               f'{tile["x"]}', f'{tile["y"]}.map.lzma.12')
+            dst = os.path.join(f'{fd_fct.OUTPUT_DIR}', f'{self.country_name}',
+                               f'{tile["x"]}', f'{tile["y"]}.map.lzma.12')
+            outdir = os.path.join(
+                f'{fd_fct.OUTPUT_DIR}', f'{self.country_name}', f'{tile["x"]}')
+            if not os.path.isdir(outdir):
+                os.makedirs(outdir)
+            try:
+                shutil.copy2(src, dst)
+            except:
+                print(
+                    f'Error copying precense files of country {self.country_name}')
+                sys.exit()
+
         # Make Wahoo zip file
         # Windows
         if platform.system() == "Windows":
             path_7za = os.path.join(fd_fct.TOOLING_WIN_DIR, '7za')
-            cmd = [path_7za, 'a', '-tzip', '-m0=lzma', '-mx9',
-                   '-mfb=273', '-md=1536m', self.country_name + '.zip']
+            cmd = [path_7za, 'a', '-tzip', self.country_name,
+                   os.path.join(f'{fd_fct.OUTPUT_DIR}', f'{self.country_name}', '*')]
+
         # Non-Windows
         else:
-            cmd = ['zip', '-r', self.country_name + '.zip']
+            cmd = ['zip', '-r', self.country_name + '.zip',
+                   os.path.join(f'{fd_fct.OUTPUT_DIR}', f'{self.country_name}', '*')]
 
         for tile in self.tiles:
             cmd.append(os.path.join(f'{tile["x"]}', f'{tile["y"]}.map.lzma'))
@@ -539,14 +581,40 @@ class OsmMaps:
         Make Cruiser map files zip file
         """
 
+        # Check for us/utah etc names
+        try:
+            res = self.country_name.index('/')
+            self.country_name = self.country_name[res+1:]
+        except:
+            pass
+
+        # copy the needed tiles to the country folder
+        print(f'Copying map tiles to output folders')
+        for tile in self.tiles:
+            src = os.path.join(f'{fd_fct.OUTPUT_DIR}',
+                               f'{tile["x"]}', f'{tile["y"]}.map')
+            dst = os.path.join(
+                f'{fd_fct.OUTPUT_DIR}', f'{self.country_name}-maps', f'{tile["x"]}', f'{tile["y"]}.map')
+            outdir = os.path.join(
+                f'{fd_fct.OUTPUT_DIR}', f'{self.country_name}-maps', f'{tile["x"]}')
+            if not os.path.isdir(outdir):
+                os.makedirs(outdir)
+            try:
+                shutil.copy2(src, dst)
+            except:
+                print(f'Error copying maps of country {self.country_name}')
+                sys.exit()
+
         # Make Cruiser map files zip file
         # Windows
         if platform.system() == "Windows":
-            cmd = [os.path.join(fd_fct.TOOLING_WIN_DIR, '7za'), 'a',
-                   '-tzip', '-m0=lzma', self.country_name + '-maps.zip']
+            cmd = [os.path.join(fd_fct.TOOLING_WIN_DIR, '7za'), 'a', '-tzip', self.country_name +
+                   '-maps.zip', os.path.join(f'{fd_fct.OUTPUT_DIR}', f'{self.country_name}-maps', '*')]
+
         # Non-Windows
         else:
-            cmd = ['zip', '-r', self.country_name + '-maps.zip']
+            cmd = ['zip', '-r', self.country_name + '-maps.zip',
+                   os.path.join(f'{fd_fct.OUTPUT_DIR}', f'{self.country_name}-maps', '*')]
 
         for tile in self.tiles:
             cmd.append(os.path.join(f'{tile["x"]}', f'{tile["y"]}.map'))
