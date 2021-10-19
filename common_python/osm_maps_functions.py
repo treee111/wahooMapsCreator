@@ -104,14 +104,14 @@ class OsmMaps:
         if platform.system() == "Windows":
             for key, val in self.border_countries.items():
                 # print(key, val)
-                out_file = os.path.join(fd_fct.OUTPUT_DIR,
-                                        f'filtered-{key}.osm.pbf')
                 out_file_o5m = os.path.join(fd_fct.OUTPUT_DIR,
                                             f'outFile-{key}.o5m')
                 out_file_o5m_filtered = os.path.join(fd_fct.OUTPUT_DIR,
                                                      f'outFileFiltered-{key}.o5m')
+                out_file_o5m_filtered_names = os.path.join(fd_fct.OUTPUT_DIR,
+                                                           f'outFileFiltered-{key}-Names.o5m')
 
-                if not os.path.isfile(out_file) or self.force_processing is True:
+                if not os.path.isfile(out_file_o5m_filtered) or self.force_processing is True:
                     print(f'\n+ Converting map of {key} to o5m format')
                     cmd = [os.path.join(fd_fct.TOOLING_WIN_DIR, 'osmconvert')]
                     cmd.extend(['-v', '--hash-memory=2500', '--complete-ways',
@@ -130,6 +130,8 @@ class OsmMaps:
                     cmd = [os.path.join(fd_fct.TOOLING_WIN_DIR, 'osmfilter')]
                     cmd.append(out_file_o5m)
                     cmd.append('--keep="' + constants.FILTERED_TAGS_WIN + '"')
+                    cmd.append('--keep-tags=all type= layer= "' +
+                               constants.FILTERED_TAGS_WIN + '"')
                     cmd.append('-o=' + out_file_o5m_filtered)
                     # print(cmd)
                     result = subprocess.run(cmd, check=True)
@@ -137,39 +139,59 @@ class OsmMaps:
                         print(f'Error in OSMFilter with country: {key}')
                         sys.exit()
 
-                    print(
-                        f'\n# Converting map of {key} back to osm.pbf format')
-                    cmd = [os.path.join(fd_fct.TOOLING_WIN_DIR, 'osmconvert'), '-v',
-                           '--hash-memory=2500', out_file_o5m_filtered]
-                    cmd.append('-o='+out_file)
+                    cmd = [os.path.join(fd_fct.TOOLING_WIN_DIR, 'osmfilter')]
+                    cmd.append(out_file_o5m)
+                    cmd.append(
+                        '--keep="' + constants.FILTERED_TAGS_WIN_NAMES + '"')
+                    cmd.append('--keep-tags=all type= name= layer= "' +
+                               constants.FILTERED_TAGS_WIN_NAMES + '"')
+                    cmd.append('-o=' + out_file_o5m_filtered_names)
                     # print(cmd)
                     result = subprocess.run(cmd, check=True)
                     if result.returncode != 0:
-                        print(f'Error in OSMConvert with country: {key}')
+                        print(f'Error in OSMFilter with country: {key}')
                         sys.exit()
 
                     os.remove(out_file_o5m)
-                    os.remove(out_file_o5m_filtered)
 
-                self.border_countries[key]['filtered_file'] = out_file
+                self.border_countries[key]['filtered_file'] = out_file_o5m_filtered
+                self.border_countries[key]['filtered_file_names'] = out_file_o5m_filtered_names
 
         # Non-Windows
         else:
             for key, val in self.border_countries.items():
                 ## print(key, val)
-                out_file = os.path.join(fd_fct.OUTPUT_DIR,
-                                        f'filtered-{key}.osm.pbf')
-                # print(outFile)
-                if not os.path.isfile(out_file):
+                out_file_o5m_filtered = os.path.join(fd_fct.OUTPUT_DIR,
+                                                     f'filtered-{key}.o5m')
+                out_file_o5m_filtered_names = os.path.join(fd_fct.OUTPUT_DIR,
+                                                           f'outFileFiltered-{key}-Names.o5m')
+                # print(out_file_o5m_filtered)
+                if not os.path.isfile(out_file_o5m_filtered):
                     print(f'+ Create filtered country file for {key}')
 
-                    cmd = ['osmium', 'tags-filter']
+                    cmd = ['osmium', 'tags-filter', '--remove-tags']
                     cmd.append(val['map_file'])
-                    cmd.extend(constants.filtered_tags)
-                    cmd.extend(['-o', out_file])
+                    cmd.extend('type layer ' + constants.filtered_tags)
+                    cmd.extend(['-o', out_file_o5m_filtered])
                     # print(cmd)
-                    subprocess.run(cmd, check=True)
-                self.border_countries[key]['filtered_file'] = out_file
+                    result = subprocess.run(cmd, check=True)
+                    if result.returncode != 0:
+                        print(f'Error in Osmium with country: {key}')
+                        sys.exit()
+
+                    cmd = ['osmium', 'tags-filter', '--remove-tags']
+                    cmd.append(val['map_file'])
+                    cmd.extend('type name layer' +
+                               constants.filtered_tags_names)
+                    cmd.extend(['-o', out_file_o5m_filtered_names])
+                    # print(cmd)
+                    result = subprocess.run(cmd, check=True)
+                    if result.returncode != 0:
+                        print(f'Error in Osmium with country: {key}')
+                        sys.exit()
+
+                self.border_countries[key]['filtered_file'] = out_file_o5m_filtered
+                self.border_countries[key]['filtered_file_names'] = out_file_o5m_filtered_names
 
         # logging
         print('# Filter tags from country osm.pbf files: OK')
@@ -265,11 +287,15 @@ class OsmMaps:
                     f'+ Splitting tile {tile_count} of {len(self.tiles)} for Coordinates: {tile["x"]},{tile["y"]} from map of {country}')
                 out_file = os.path.join(fd_fct.OUTPUT_DIR,
                                         f'{tile["x"]}', f'{tile["y"]}', f'split-{country}.osm.pbf')
-                if not os.path.isfile(out_file) or self.force_processing is True:
+                out_file_names = os.path.join(fd_fct.OUTPUT_DIR,
+                                              f'{tile["x"]}', f'{tile["y"]}', f'split-{country}-names.osm.pbf')
+                outMerged = os.path.join(fd_fct.OUTPUT_DIR,
+                                         f'{tile["x"]}', f'{tile["y"]}', f'merged.osm.pbf')
+                if not os.path.isfile(outMerged) or self.force_processing is True:
                     # Windows
                     if platform.system() == "Windows":
-                        #cmd = ['.\\osmosis\\bin\\osmosis.bat', '--rbf',border_countries[c]['filtered_file'],'workers='+workers, '--buffer', 'bufferCapacity=12000', '--bounding-box', 'completeWays=yes', 'completeRelations=yes']
-                        #cmd.extend(['left='+f'{tile["left"]}', 'bottom='+f'{tile["bottom"]}', 'right='+f'{tile["right"]}', 'top='+f'{tile["top"]}', '--buffer', 'bufferCapacity=12000', '--wb'])
+                        # cmd = ['.\\osmosis\\bin\\osmosis.bat', '--rbf',border_countries[c]['filtered_file'],'workers='+workers, '--buffer', 'bufferCapacity=12000', '--bounding-box', 'completeWays=yes', 'completeRelations=yes']
+                        # cmd.extend(['left='+f'{tile["left"]}', 'bottom='+f'{tile["bottom"]}', 'right='+f'{tile["right"]}', 'top='+f'{tile["top"]}', '--buffer', 'bufferCapacity=12000', '--wb'])
                         # cmd.append('file='+outFile)
                         # cmd.append('omitmetadata=true')
                         cmd = [os.path.join(
@@ -280,6 +306,21 @@ class OsmMaps:
                             ['--complete-ways', '--complete-multipolygons', '--complete-boundaries'])
                         cmd.append(val['filtered_file'])
                         cmd.append('-o='+out_file)
+
+                        # print(cmd)
+                        result = subprocess.run(cmd, check=True)
+                        if result.returncode != 0:
+                            print(f'Error in Osmosis with country: {country}')
+                            sys.exit()
+
+                        cmd = [os.path.join(
+                            fd_fct.TOOLING_WIN_DIR, 'osmconvert'), '-v', '--hash-memory=2500']
+                        cmd.append('-b='+f'{tile["left"]}' + ',' + f'{tile["bottom"]}' +
+                                   ',' + f'{tile["right"]}' + ',' + f'{tile["top"]}')
+                        cmd.extend(
+                            ['--complete-ways', '--complete-multipolygons', '--complete-boundaries'])
+                        cmd.append(val['filtered_file_names'])
+                        cmd.append('-o='+out_file_names)
 
                         # print(cmd)
                         result = subprocess.run(cmd, check=True)
@@ -299,7 +340,25 @@ class OsmMaps:
                         cmd.extend(['--overwrite'])
 
                         # print(cmd)
-                        subprocess.run(cmd, check=True)
+                        result = subprocess.run(cmd, check=True)
+                        if result.returncode != 0:
+                            print(f'Error in Osmium with country: {country}')
+                            sys.exit()
+
+                        cmd = ['osmium', 'extract']
+                        cmd.extend(
+                            ['-b', f'{tile["left"]},{tile["bottom"]},{tile["right"]},{tile["top"]}'])
+                        cmd.append(val['filtered_file_names'])
+                        cmd.extend(['-s', 'smart'])
+                        cmd.extend(['-o', out_file_names])
+                        cmd.extend(['--overwrite'])
+
+                        # print(cmd)
+                        result = subprocess.run(cmd, check=True)
+                        if result.returncode != 0:
+                            print(f'Error in Osmium with country: {country}')
+                            sys.exit()
+
                         print(val['filtered_file'])
 
             tile_count += 1
@@ -355,9 +414,14 @@ class OsmMaps:
                         if calc_border_countries or country in self.border_countries:
                             cmd.append(os.path.join(fd_fct.OUTPUT_DIR,
                                                     f'{tile["x"]}', f'{tile["y"]}', f'split-{country}.osm.pbf'))
+                            cmd.append(os.path.join(fd_fct.OUTPUT_DIR,
+                                                    f'{tile["x"]}', f'{tile["y"]}', f'split-{country}-names.osm.pbf'))
 
-                    cmd.append(os.path.join(fd_fct.OUTPUT_DIR,
-                                            f'{tile["x"]}', f'{tile["y"]}', 'land1.osm'))
+                    land_files = glob.glob(os.path.join(fd_fct.OUTPUT_DIR,
+                                                        f'{tile["x"]}', f'{tile["y"]}', 'land*.osm'))
+                    for land in land_files:
+                        cmd.append(os.path.join(fd_fct.OUTPUT_DIR,
+                                                f'{tile["x"]}', f'{tile["y"]}', f'{land}'))
                     cmd.append(os.path.join(fd_fct.OUTPUT_DIR,
                                             f'{tile["x"]}', f'{tile["y"]}', 'sea.osm'))
                     cmd.extend(['-o', out_file])
@@ -454,7 +518,7 @@ class OsmMaps:
             path_7za = os.path.join(fd_fct.TOOLING_WIN_DIR, '7za')
             cmd = [path_7za, 'a', '-tzip', '-m0=lzma', '-mx9',
                    '-mfb=273', '-md=1536m', self.country_name + '.zip']
-            #cmd = ['7za', 'a', '-tzip', '-m0=lzma', countryName[1] + '.zip']
+            # cmd = ['7za', 'a', '-tzip', '-m0=lzma', countryName[1] + '.zip']
         # Non-Windows
         else:
             cmd = ['zip', '-r', self.country_name + '.zip']
