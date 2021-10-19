@@ -70,7 +70,7 @@ class Downloader:
 
         # Check for expired land polygons file and delete it
         try:
-            chg_time = os.path.getctime(fd_fct.LAND_POLYGONS_PATH)
+            chg_time = os.path.getmtime(fd_fct.LAND_POLYGONS_PATH)
             if older_than_x_days(chg_time, self.max_days_old):
                 print('# Deleting old land polygons file')
                 os.remove(fd_fct.LAND_POLYGONS_PATH)
@@ -132,14 +132,14 @@ class Downloader:
             transl_c = const_fct.translate_country_input_to_geofabrik(country)
 
             # check for already existing .osm.pbf file
-            map_file_path = glob.glob(f'{fd_fct.MAPS_DIR}/{transl_c}*.osm.pbf')
+            map_file_path = glob.glob(f'{fd_fct.MAPS_DIR}/{transl_c}-latest.osm.pbf')
             if len(map_file_path) != 1:
                 map_file_path = glob.glob(
-                    f'{fd_fct.MAPS_DIR}/**/{transl_c}*.osm.pbf')
+                    f'{fd_fct.MAPS_DIR}/**/{transl_c}-latest.osm.pbf')
 
             # delete .osm.pbf file if out of date
             if len(map_file_path) == 1 and os.path.isfile(map_file_path[0]):
-                chg_time = os.path.getctime(map_file_path[0])
+                chg_time = os.path.getmtime(map_file_path[0])
                 if older_than_x_days(chg_time, self.max_days_old) or self.force_download is True:
                     print(
                         f'+ mapfile for {transl_c}: deleted. Input: {country}.')
