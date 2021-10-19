@@ -3,6 +3,9 @@ executable file to create up-to-date map-files for the Wahoo ELEMNT and Wahoo EL
 """
 #!/usr/bin/python
 
+# import official python packages
+import sys
+
 # import custom python packages
 from common_python.osm_maps_functions import OsmMaps
 from common_python.input import Input
@@ -19,13 +22,19 @@ if oInput.gui_mode:
 else:
     oInputData = oInput.cli_arguments()
 
-oOSMmaps = OsmMaps(oInputData)
+# Is there something to do?
+if oInputData.country == "none" or oInputData.country == "":
+    sys.exit("Nothing to do. Start with -h or --help to see command line options."
+             "Or in the GUI select a country to create maps for.")
+
+oOSMmaps = OsmMaps(oInputData.force_processing)
 
 # Read json file
 # Check for expired land polygons file and download, if too old
 # Check for expired .osm.pbf files and download, if too old
 oOSMmaps.process_input(oInputData.country, oInputData.border_countries)
-oOSMmaps.check_and_download_files()
+oOSMmaps.check_and_download_files(
+    oInputData.max_days_old, oInputData.force_download)
 
 
 if oInputData.only_merge is False:
