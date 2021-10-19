@@ -162,9 +162,9 @@ class OsmMaps:
             for key, val in self.border_countries.items():
                 ## print(key, val)
                 out_file_o5m_filtered = os.path.join(fd_fct.OUTPUT_DIR,
-                                                     f'filtered-{key}.o5m')
+                                                     f'filtered-{key}.o5m.pbf')
                 out_file_o5m_filtered_names = os.path.join(fd_fct.OUTPUT_DIR,
-                                                           f'outFileFiltered-{key}-Names.o5m')
+                                                           f'outFileFiltered-{key}-Names.o5m.pbf')
                 # print(out_file_o5m_filtered)
                 if not os.path.isfile(out_file_o5m_filtered):
                     print(f'+ Create filtered country file for {key}')
