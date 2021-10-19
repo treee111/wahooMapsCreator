@@ -1,15 +1,9 @@
-{{ if .Versions -}}
-<a name="unreleased"></a>
-## [Unreleased]
+# Changelog
+All notable changes to this project will be documented in this file.  
+This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-{{ if .Unreleased.CommitGroups -}}
-{{ range .Unreleased.CommitGroups -}}
-### {{ .Title }}
-{{ range .Commits -}}
-- {{ if .Scope }}**{{ .Scope }}:** {{ end }}{{ .Subject }}
-{{ end }}
-{{ end -}}
-{{ end -}}
+{{ if .Versions -}}
+A list of unreleased changes can be found [here]({{ .Info.RepositoryURL }}/compare/{{ $latest := index .Versions 0 }}{{ $latest.Tag.Name }}...HEAD).
 {{ end -}}
 
 {{ range .Versions }}
@@ -18,7 +12,7 @@
 {{ range .CommitGroups -}}
 ### {{ .Title }}
 {{ range .Commits -}}
-- {{ if .Scope }}**{{ .Scope }}:** {{ end }}{{ .Subject }}
+- {{ if .Scope }}**{{ .Scope }}:** {{ end }}{{ .Subject }} [`{{ .Hash.Short }}`]({{ $.Info.RepositoryURL }}/commit/{{ .Hash.Long }})
 {{ end }}
 {{ end -}}
 
@@ -26,13 +20,6 @@
 ### Reverts
 {{ range .RevertCommits -}}
 - {{ .Revert.Header }}
-{{ end }}
-{{ end -}}
-
-{{- if .MergeCommits -}}
-### Pull Requests
-{{ range .MergeCommits -}}
-- {{ .Header }}
 {{ end }}
 {{ end -}}
 
@@ -47,7 +34,6 @@
 {{ end -}}
 
 {{- if .Versions }}
-[Unreleased]: {{ .Info.RepositoryURL }}/compare/{{ $latest := index .Versions 0 }}{{ $latest.Tag.Name }}...HEAD
 {{ range .Versions -}}
 {{ if .Tag.Previous -}}
 [{{ .Tag.Name }}]: {{ $.Info.RepositoryURL }}/compare/{{ .Tag.Previous.Name }}...{{ .Tag.Name }}

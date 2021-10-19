@@ -5,23 +5,27 @@ info:
   repository_url: https://github.com/treee111/wahooMapsCreator
 options:
   commits:
-    # filters:
-    #   Type:
-    #     - feat
-    #     - fix
-    #     - perf
-    #     - refactor
+    filters:
+      Type:
+        - FEATURE
+        - FIX
+        - PERF
+        - BREAKING
   commit_groups:
-    # title_maps:
-    #   feat: Features
-    #   fix: Bug Fixes
-    #   perf: Performance Improvements
-    #   refactor: Code Refactoring
+    title_maps:
+      FEATURE: Features
+      FIX: Bug Fixes
+      PERF: Performance Improvements
+      BREAKING: Breaking Changes
   header:
-    pattern: "^(\\w*)\\:\\s(.*)$"
+    pattern: "^\\[(\\w*)\\]\\s(?:([^\\:]*)\\:\\s)?(.*)$"
     pattern_maps:
       - Type
+      - Scope
       - Subject
+  issues:
+    prefix:
+      - "#"
   notes:
     keywords:
       - BREAKING CHANGE
