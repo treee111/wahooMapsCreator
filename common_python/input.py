@@ -152,7 +152,8 @@ class Input(tk.Tk):
         o_input_data.force_download = args.forcedownload
         o_input_data.force_processing = args.forceprocessing
         o_input_data.border_countries = args.bordercountries
-        o_input_data.save_cruiser = args.tag_wahoo_xml
+        o_input_data.save_cruiser = args.cruiser
+        o_input_data.tag_wahoo_xml = args.tag_wahoo_xml
         o_input_data.only_merge = args.only_merge
 
         return o_input_data
