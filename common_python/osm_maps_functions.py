@@ -104,7 +104,9 @@ class OsmMaps:
         # Windows
         if platform.system() == "Windows":
             for key, val in self.border_countries.items():
-                # print(key, val)
+
+                out_file = os.path.join(fd_fct.OUTPUT_DIR,
+                                        f'filtered-{key}.osm.pbf')
                 out_file_o5m = os.path.join(fd_fct.OUTPUT_DIR,
                                             f'outFile-{key}.o5m')
                 out_file_o5m_filtered = os.path.join(fd_fct.OUTPUT_DIR,
@@ -161,6 +163,7 @@ class OsmMaps:
         # Non-Windows
         else:
             for key, val in self.border_countries.items():
+
                 out_file_o5m_filtered = os.path.join(fd_fct.OUTPUT_DIR,
                                                      f'filtered-{key}.o5m.pbf')
                 out_file_o5m_filtered_names = os.path.join(fd_fct.OUTPUT_DIR,
@@ -219,7 +222,7 @@ class OsmMaps:
                             f'{tile["top"]+0.1:.6f}'])
                 cmd.append(land_file)
                 cmd.append(fd_fct.LAND_POLYGONS_PATH)
-                # print(cmd)
+
                 subprocess.run(cmd, check=True)
 
             if not os.path.isfile(out_file+'1.osm') or self.force_processing is True:
@@ -231,7 +234,7 @@ class OsmMaps:
                 else:
                     cmd = ['python3', os.path.join(fd_fct.TOOLING_DIR,
                                                    'shape2osm.py'), '-l', out_file, land_file]
-                # print(cmd)
+
                 subprocess.run(cmd, check=True)
             tile_count += 1
 
@@ -302,7 +305,6 @@ class OsmMaps:
                         cmd.append(val['filtered_file'])
                         cmd.append('-o='+out_file)
 
-                        # print(cmd)
                         result = subprocess.run(cmd, check=True)
                         if result.returncode != 0:
                             print(f'Error in Osmosis with country: {country}')
@@ -317,7 +319,6 @@ class OsmMaps:
                         cmd.append(val['filtered_file_names'])
                         cmd.append('-o='+out_file_names)
 
-                        # print(cmd)
                         result = subprocess.run(cmd, check=True)
                         if result.returncode != 0:
                             print(f'Error in Osmosis with country: {country}')
@@ -333,7 +334,6 @@ class OsmMaps:
                         cmd.extend(['-o', out_file])
                         cmd.extend(['--overwrite'])
 
-                        # print(cmd)
                         result = subprocess.run(cmd, check=True)
                         if result.returncode != 0:
                             print(f'Error in Osmium with country: {country}')
@@ -517,15 +517,15 @@ class OsmMaps:
         print('\n# Zip .map.lzma files')
         print(f'+ Country: {self.country_name}')
 
-# Check for us/utah etc names
+        # Check for us/utah etc names
         try:
             res = self.country_name.index('/')
             self.country_name = self.country_name[res+1:]
-        except:
+        except ValueError:
             pass
 
         # copy the needed tiles to the country folder
-        print(f'Copying Wahoo tiles to output folders')
+        print('Copying Wahoo tiles to output folders')
         for tile in self.tiles:
             src = os.path.join(f'{fd_fct.OUTPUT_DIR}',
                                f'{tile["x"]}', f'{tile["y"]}.map.lzma')
@@ -541,12 +541,8 @@ class OsmMaps:
                 print(f'Error copying tiles of country {self.country_name}')
                 sys.exit()
 
-            src = os.path.join(f'{fd_fct.OUTPUT_DIR}',
-                               f'{tile["x"]}', f'{tile["y"]}.map.lzma.12')
-            dst = os.path.join(f'{fd_fct.OUTPUT_DIR}', f'{self.country_name}',
-                               f'{tile["x"]}', f'{tile["y"]}.map.lzma.12')
-            outdir = os.path.join(
-                f'{fd_fct.OUTPUT_DIR}', f'{self.country_name}', f'{tile["x"]}')
+            src = src + '.12'
+            dst = dst + '.12'
             if not os.path.isdir(outdir):
                 os.makedirs(outdir)
             try:
@@ -595,11 +591,11 @@ class OsmMaps:
         try:
             res = self.country_name.index('/')
             self.country_name = self.country_name[res+1:]
-        except:
+        except ValueError:
             pass
 
         # copy the needed tiles to the country folder
-        print(f'Copying map tiles to output folders')
+        print('Copying map tiles to output folders')
         for tile in self.tiles:
             src = os.path.join(f'{fd_fct.OUTPUT_DIR}',
                                f'{tile["x"]}', f'{tile["y"]}.map')
