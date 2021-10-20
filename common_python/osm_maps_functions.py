@@ -509,7 +509,7 @@ class OsmMaps:
         # logging
         print('# Creating .map files: OK')
 
-    def zip_map_files(self):
+    def zip_map_files(self, keep_map_folders):
         """
         Zip .map.lzma files
         """
@@ -573,10 +573,20 @@ class OsmMaps:
 
         subprocess.run(cmd, cwd=fd_fct.OUTPUT_DIR, check=True)
 
+        # Keep (True) or delete (False) the country/region map folders after compression
+        if keep_map_folders is False:
+            try:
+                shutil.rmtree(os.path.join(
+                    f'{fd_fct.OUTPUT_DIR}', f'{self.country_name}'))
+            except OSError:
+                print(
+                    f'Error, could not delete folder \
+                        {os.path.join(fd_fct.OUTPUT_DIR, self.country_name)}')
+
         # logging
         print('# Zip .map.lzma files: OK \n')
 
-    def make_cruiser_files(self):
+    def make_cruiser_files(self, keep_map_folders):
         """
         Make Cruiser map files zip file
         """
@@ -620,3 +630,13 @@ class OsmMaps:
             cmd.append(os.path.join(f'{tile["x"]}', f'{tile["y"]}.map'))
 
         subprocess.run(cmd, cwd=fd_fct.OUTPUT_DIR, check=True)
+
+        # Keep (True) or delete (False) the country/region map folders after compression
+        if keep_map_folders is False:
+            try:
+                shutil.rmtree(os.path.join(
+                    f'{fd_fct.OUTPUT_DIR}', f'{self.country_name}-maps'))
+            except OSError:
+                print(
+                    f'Error, could not delete folder \
+                        {os.path.join(fd_fct.OUTPUT_DIR, self.country_name)}-maps')

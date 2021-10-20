@@ -60,8 +60,8 @@ oOSMmaps.merge_splitted_tiles_with_land_and_sea(oInputData.border_countries)
 oOSMmaps.create_map_files(oInputData.save_cruiser, oInputData.tag_wahoo_xml)
 
 # Zip .map.lzma files
-oOSMmaps.zip_map_files()
+oOSMmaps.zip_map_files(oInputData.keep_map_folders)
 
 # Make Cruiser map files zip file
 if oInputData.save_cruiser is True:
-    oOSMmaps.make_cruiser_files()
+    oOSMmaps.make_cruiser_files(oInputData.keep_map_folders)
