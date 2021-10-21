@@ -1,0 +1,33 @@
+style: github
+template: CHANGELOG.tpl.md
+info:
+  title: CHANGELOG
+  repository_url: https://github.com/treee111/wahooMapsCreator
+options:
+  tag_filter_pattern: "^v"
+  sort: "semver"
+  commits:
+    filters:
+      Type:
+        - FEATURE
+        - FIX
+        - DEV
+        - BREAKING
+  commit_groups:
+    title_maps:
+      FEATURE: Features
+      FIX: Bug Fixes
+      DEV: Development/Infrastructure/Test/CI
+      BREAKING: Breaking Changes
+  header:
+    pattern: "^\\[(\\w*)\\]\\s(?:([^\\:]*)\\:\\s)?(.*)$"
+    pattern_maps:
+      - Type
+      - Scope
+      - Subject
+  issues:
+    prefix:
+      - "#"
+  notes:
+    keywords:
+      - BREAKING CHANGE
