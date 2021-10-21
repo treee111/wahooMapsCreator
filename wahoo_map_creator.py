@@ -7,8 +7,9 @@ executable file to create up-to-date map-files for the Wahoo ELEMNT and Wahoo EL
 import sys
 
 # import custom python packages
-from common_python.osm_maps_functions import OsmMaps
 from common_python.input import Input
+from common_python.file_directory_functions import initialize_work_directories
+from common_python.osm_maps_functions import OsmMaps
 
 # logging used in the terminal output:
 # # means top-level command
@@ -26,6 +27,8 @@ else:
 if oInputData.country == "none" or oInputData.country == "":
     sys.exit("Nothing to do. Start with -h or --help to see command line options."
              "Or in the GUI select a country to create maps for.")
+
+initialize_work_directories()
 
 oOSMmaps = OsmMaps(oInputData.force_processing)
 
