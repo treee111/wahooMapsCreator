@@ -498,6 +498,11 @@ class OsmMaps:
                         cmd.append('--keep')
 
                 subprocess.run(cmd, check=True)
+
+            # Create "tile present" file
+            with open(out_file + '.lzma.12', 'wb') as tile_present_file:
+                tile_present_file.close()
+
             tile_count += 1
 
         # logging
