@@ -4,6 +4,8 @@ info:
   title: CHANGELOG
   repository_url: https://github.com/treee111/wahooMapsCreator
 options:
+  tag_filter_pattern: '^v'
+  sort: "semver"
   commits:
     filters:
       Type:
