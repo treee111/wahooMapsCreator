@@ -464,7 +464,11 @@ class OsmMaps:
             cmd = ['zip', '-r', self.country_name + '.zip']
 
         for tile in self.tiles:
-            cmd.append(os.path.join(f'{tile["x"]}', f'{tile["y"]}.map.lzma'))
+            cmd.append(os.path.join(
+                f'{tile["x"]}', f'{tile["y"]}.map.lzma'))
+            cmd.append(os.path.join(
+                f'{tile["x"]}', f'{tile["y"]}.map.lzma.12'))
+
         # print(cmd)
         subprocess.run(cmd, cwd=fd_fct.OUTPUT_DIR, check=True)
 
