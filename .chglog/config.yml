@@ -4,20 +4,20 @@ info:
   title: CHANGELOG
   repository_url: https://github.com/treee111/wahooMapsCreator
 options:
-  tag_filter_pattern: '^v'
+  tag_filter_pattern: "^v"
   sort: "semver"
   commits:
     filters:
       Type:
         - FEATURE
         - FIX
-        - PERF
+        - DEV
         - BREAKING
   commit_groups:
     title_maps:
       FEATURE: Features
       FIX: Bug Fixes
-      PERF: Performance Improvements
+      DEV: Development/Infrastructure/Test/CI
       BREAKING: Breaking Changes
   header:
     pattern: "^\\[(\\w*)\\]\\s(?:([^\\:]*)\\:\\s)?(.*)$"
