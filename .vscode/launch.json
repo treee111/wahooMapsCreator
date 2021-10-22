@@ -85,6 +85,21 @@
             ]
         },
         {
+            "name": "germany_wo_bc",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceRoot}/wahoo_map_creator.py",
+            "console": "integratedTerminal",
+            "args": [
+                "germany",
+                "-tag",
+                "tag-wahoo.xml",
+                "-c",
+                "-md",
+                "100"
+            ]
+        },
+        {
             "name": "malta",
             "type": "python",
             "request": "launch",
