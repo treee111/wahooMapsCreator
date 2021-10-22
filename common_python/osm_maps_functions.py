@@ -104,7 +104,6 @@ class OsmMaps:
         # Windows
         if platform.system() == "Windows":
             for key, val in self.border_countries.items():
-
                 out_file = os.path.join(fd_fct.OUTPUT_DIR,
                                         f'filtered-{key}.osm.pbf')
                 out_file_o5m = os.path.join(fd_fct.OUTPUT_DIR,
@@ -163,7 +162,6 @@ class OsmMaps:
         # Non-Windows
         else:
             for key, val in self.border_countries.items():
-
                 out_file_o5m_filtered = os.path.join(fd_fct.OUTPUT_DIR,
                                                      f'filtered-{key}.o5m.pbf')
                 out_file_o5m_filtered_names = os.path.join(fd_fct.OUTPUT_DIR,
