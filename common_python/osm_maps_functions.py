@@ -391,7 +391,6 @@ class OsmMaps:
                             cmd.append('workers=' + self.workers)
                             cmd.append('--merge')
 
-                            cmd.append('workers=' + self.workers)
                             loop += 1
                     land_files = glob.glob(os.path.join(fd_fct.OUTPUT_DIR,
                                                         f'{tile["x"]}', f'{tile["y"]}', 'land*.osm'))
