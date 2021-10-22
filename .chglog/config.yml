@@ -7,6 +7,7 @@ options:
   tag_filter_pattern: "^v"
   sort: "semver"
   commits:
+    sort_by: "Author.Date"
     filters:
       Type:
         - FEATURE
@@ -14,6 +15,12 @@ options:
         - DEV
         - BREAKING
   commit_groups:
+    sort_by: Custom
+    title_order:
+      - BREAKING
+      - FEATURE
+      - FIX
+      - DEV
     title_maps:
       FEATURE: Features
       FIX: Bug Fixes
