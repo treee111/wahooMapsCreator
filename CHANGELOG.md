@@ -123,15 +123,15 @@ A list of unreleased changes can be found [here](https://github.com/treee111/wah
     - Windows:    `tooling_windows/Windows-Wahoo-Map-Creator-Osmosis/wahoo-map-creator-osmosis.py`
 
 
-[v0.9.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.8.1...v0.9.0
-[v0.8.1]: https://github.com/treee111/wahooMapsCreator/compare/v0.8.0...v0.8.1
-[v0.8.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.7.1...v0.8.0
-[v0.7.1]: https://github.com/treee111/wahooMapsCreator/compare/v0.7.0...v0.7.1
-[v0.7.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.6.0...v0.7.0
-[v0.6.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.5.0...v0.6.0
-[v0.5.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.4.0...v0.5.0
-[v0.4.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.3.1...v0.4.0
-[v0.3.1]: https://github.com/treee111/wahooMapsCreator/compare/v0.3.0...v0.3.1
-[v0.3.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.2.0...v0.3.0
-[v0.2.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.1.0...v0.2.0
+[0.9.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.8.1...v0.9.0
+[0.8.1]: https://github.com/treee111/wahooMapsCreator/compare/v0.8.0...v0.8.1
+[0.8.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.7.1...v0.8.0
+[0.7.1]: https://github.com/treee111/wahooMapsCreator/compare/v0.7.0...v0.7.1
+[0.7.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.6.0...v0.7.0
+[0.6.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.5.0...v0.6.0
+[0.5.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.4.0...v0.5.0
+[0.4.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.3.1...v0.4.0
+[0.3.1]: https://github.com/treee111/wahooMapsCreator/compare/v0.3.0...v0.3.1
+[0.3.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.2.0...v0.3.0
+[0.2.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/treee111/wahooMapsCreator/releases/tag/v0.1.0
