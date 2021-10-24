@@ -23,9 +23,7 @@ REM if [ -z "$JAVACMD" ] ; then
 REM   # No JAVACMD provided in osmosis config files, therefore default to java
 REM   JAVACMD=java
 REM fi
-REM IF "%JAVACMD%"=="" set JAVACMD=""c:\Program Files\Java\jre1.8.0_291\bin\java""
 IF "%JAVACMD%"=="" set JAVACMD=java
-set JAVACMD_OPTIONS=""-server -Xmx3G""
 
 REM Set "SAVEDIR" to the current directory
 set SAVEDIR=%CD%

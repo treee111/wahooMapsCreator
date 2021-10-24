@@ -33,6 +33,9 @@ class InputData():
         self.only_merge = False
 
         self.tag_wahoo_xml = "tag-wahoo.xml"
+        # Keep (True) or delete (False) the /output/country/
+        # and /output/country-maps map folders after compression
+        self.keep_map_folders = False
 
 
 class Input(tk.Tk):
@@ -140,6 +143,9 @@ class Input(tk.Tk):
         # specify the file with tags to keep in the output // file needs to be in common_resources
         parser.add_argument('-om', '--only_merge', action='store_true',
                             help="only merge, do no other processing")
+        # option to keep the /output/country/ and /output/country-maps folders in the output
+        parser.add_argument('-km', '--keep_map_folders', action='store_true',
+                            help="keep the country and country-maps folders in the output")
 
         # set instance-attributes of class
         # try:
@@ -152,8 +158,10 @@ class Input(tk.Tk):
         o_input_data.force_download = args.forcedownload
         o_input_data.force_processing = args.forceprocessing
         o_input_data.border_countries = args.bordercountries
-        o_input_data.save_cruiser = args.tag_wahoo_xml
+        o_input_data.save_cruiser = args.cruiser
+        o_input_data.tag_wahoo_xml = args.tag_wahoo_xml
         o_input_data.only_merge = args.only_merge
+        self.o_input_data.keep_map_folders = args.keep_map_folders
 
         return o_input_data
 
