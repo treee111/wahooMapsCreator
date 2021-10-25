@@ -24,22 +24,33 @@ class TestGeneratedFiles(unittest.TestCase):
     """
 
     def setUp(self):
+        # run tool for countries
+        self.run_wahoomapscreator_cli(
+            'malta', 'malta-latest_2021-10-22.osm.pbf')
+        self.run_wahoomapscreator_cli(
+            'iceland', 'malta-latest_2021-10-22.osm.pbf')
+
+    def run_wahoomapscreator_cli(self, country, given_osm_pbf):
+        """
+        runs wahooMapsCreator for given country and static osm.pbf file via CLI
+        """
         # copy given file to download-directory
         given_osm_pbf_file = os.path.join(
-            fd_fct.ROOT_DIR, 'tests/resources', 'malta-latest_2021-10-22.osm.pbf')
+            fd_fct.ROOT_DIR, 'tests/resources', given_osm_pbf)
         map_file_path = os.path.join(
-            fd_fct.MAPS_DIR, 'malta' + '-latest.osm.pbf')
+            fd_fct.MAPS_DIR, country + '-latest.osm.pbf')
 
         # copy file (new file takes creationdate as of now)
         shutil.copy2(given_osm_pbf_file, map_file_path)
 
-        # run processing for malta via CLI
+        # run processing of input-country via CLI
         if platform.system() == "Windows":
-            result = os.system(
-                "python wahoo_map_creator.py -tag tag-wahoo.xml -fp -c -md 100")
+            cli_command = "python"
         else:
-            result = os.system(
-                "python3 wahoo_map_creator.py malta -tag tag-wahoo.xml -fp -c -md 100")
+            cli_command = "python3"
+
+        result = os.system(
+            f'{cli_command} wahoo_map_creator.py {country} -tag tag-wahoo.xml -fp -c -md 100')
 
         # check if run was successful
         self.assertEqual(result, 0)
