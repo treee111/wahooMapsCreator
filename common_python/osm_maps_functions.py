@@ -551,16 +551,14 @@ class OsmMaps:
         # Windows
         if platform.system() == "Windows":
             path_7za = os.path.join(fd_fct.TOOLING_WIN_DIR, '7za')
-            cmd = [path_7za, 'a', '-tzip', self.country_name,
-                   os.path.join(f'{fd_fct.OUTPUT_DIR}', f'{self.country_name}', '*')]
+            cmd = [path_7za, 'a', '-tzip', self.country_name + '.zip']
 
         # Non-Windows
         else:
-            cmd = ['zip', '-r', self.country_name + '.zip',
-                   os.path.join(f'{fd_fct.OUTPUT_DIR}', f'{self.country_name}', '*')]
+            cmd = ['zip', '-r', self.country_name + '.zip']
 
-        for tile in self.tiles:
-            cmd.append(os.path.join(f'{tile["x"]}', f'{tile["y"]}.map.lzma'))
+        cmd.append(os.path.join(
+            f'{fd_fct.OUTPUT_DIR}', f'{self.country_name}', '*'))
 
         subprocess.run(cmd, cwd=fd_fct.OUTPUT_DIR, check=True)
 
@@ -610,15 +608,14 @@ class OsmMaps:
         # Windows
         if platform.system() == "Windows":
             cmd = [os.path.join(fd_fct.TOOLING_WIN_DIR, '7za'), 'a', '-tzip', self.country_name +
-                   '-maps.zip', os.path.join(f'{fd_fct.OUTPUT_DIR}', f'{self.country_name}-maps', '*')]
+                   '-maps.zip']
 
         # Non-Windows
         else:
-            cmd = ['zip', '-r', self.country_name + '-maps.zip',
-                   os.path.join(f'{fd_fct.OUTPUT_DIR}', f'{self.country_name}-maps', '*')]
+            cmd = ['zip', '-r', self.country_name + '-maps.zip']
 
-        for tile in self.tiles:
-            cmd.append(os.path.join(f'{tile["x"]}', f'{tile["y"]}.map'))
+        cmd.append(os.path.join(f'{fd_fct.OUTPUT_DIR}',
+                   f'{self.country_name}-maps', '*'))
 
         subprocess.run(cmd, cwd=fd_fct.OUTPUT_DIR, check=True)
 
