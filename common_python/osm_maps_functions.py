@@ -485,9 +485,8 @@ class OsmMaps:
                            out_file+'.lzma', f'-mt{threads}', '-d27', '-fb273', '-eos']
                 # Non-Windows
                 else:
-                    cmd = ['lzma', out_file]
                     # force overwrite of output file and (de)compress links
-                    cmd.extend(['-f'])
+                    cmd = ['lzma', out_file, '-f']
 
                     # --keep: do not delete source file
                     if save_cruiser:
