@@ -104,8 +104,6 @@ class OsmMaps:
         # Windows
         if platform.system() == "Windows":
             for key, val in self.border_countries.items():
-                out_file = os.path.join(fd_fct.OUTPUT_DIR,
-                                        f'filtered-{key}.osm.pbf')
                 out_file_o5m = os.path.join(fd_fct.OUTPUT_DIR,
                                             f'outFile-{key}.o5m')
                 out_file_o5m_filtered = os.path.join(fd_fct.OUTPUT_DIR,
@@ -289,7 +287,7 @@ class OsmMaps:
                 out_file_names = os.path.join(fd_fct.OUTPUT_DIR,
                                               f'{tile["x"]}', f'{tile["y"]}', f'split-{country}-names.osm.pbf')
                 out_merged = os.path.join(fd_fct.OUTPUT_DIR,
-                                          f'{tile["x"]}', f'{tile["y"]}', f'merged.osm.pbf')
+                                          f'{tile["x"]}', f'{tile["y"]}', 'merged.osm.pbf')
                 if not os.path.isfile(out_merged) or self.force_processing is True:
                     # Windows
                     if platform.system() == "Windows":

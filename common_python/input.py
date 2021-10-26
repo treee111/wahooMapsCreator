@@ -5,7 +5,6 @@ functions and object for processing input via CLI and GUI
 
 # import official python packages
 import argparse
-import ast
 import sys
 
 # for gui
