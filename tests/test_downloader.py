@@ -62,14 +62,14 @@ class TestDownloader(unittest.TestCase):
         result = older_than_x_days(future, self.max_days_old)
         self.assertFalse(result)
 
-    def test_download_polygons_file(self):
-        """
-        Test the download of land poligons file via URL
-        """
-        path = os.path.join(fd_fct.COMMON_DL_DIR, 'land-polygons-split-4326',
-                            'land_polygons.shp')
-        self.o_downloader.download_file(path,
-                                        'https://osmdata.openstreetmap.de/download/land-polygons-split-4326.zip', True)
+    # def test_download_polygons_file(self):
+    #     """
+    #     Test the download of land poligons file via URL
+    #     """
+    #     path = os.path.join(fd_fct.COMMON_DL_DIR, 'land-polygons-split-4326',
+    #                         'land_polygons.shp')
+    #     self.o_downloader.download_file(path,
+    #                                     'https://osmdata.openstreetmap.de/download/land-polygons-split-4326.zip', True)
 
     def test_download_geofabrik_file(self):
         """
