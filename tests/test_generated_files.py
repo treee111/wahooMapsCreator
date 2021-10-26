@@ -13,8 +13,6 @@ import unittest
 
 
 # import custom python packages
-# sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
 from common_python import file_directory_functions as fd_fct
 
 
@@ -23,12 +21,12 @@ class TestGeneratedFiles(unittest.TestCase):
     tests for the OSM maps file
     """
 
-    def setUp(self):
-        # run tool for countries
-        self.run_wahoomapscreator_cli(
-            'malta', 'malta-latest_2021-10-22.osm.pbf')
-        self.run_wahoomapscreator_cli(
-            'iceland', 'malta-latest_2021-10-22.osm.pbf')
+    # def setUp(self):
+    # # run tool for countries
+    # self.run_wahoomapscreator_cli(
+    #     'malta', 'malta-latest_2021-10-22.osm.pbf')
+    # self.run_wahoomapscreator_cli(
+    #     'iceland', 'malta-latest_2021-10-22.osm.pbf')
 
     def run_wahoomapscreator_cli(self, country, given_osm_pbf):
         """
@@ -69,16 +67,19 @@ class TestGeneratedFiles(unittest.TestCase):
         - 100.map.lzma
         """
 
-        # malta
+        # run tool for countries
+        self.run_wahoomapscreator_cli(
+            'malta', 'malta-latest_2021-10-22.osm.pbf')
+
         # compare generated given merged.osm.pbf-file with reference-file
         # equals_merged = self.compare_test_resource_and_output(
         #     '138/100/merged.osm.pbf')
         self.compare_dir_sub_test_resource_and_output('138/100')
 
-    def test_calc_output_iceland(self):
+    def test_calc_output_liechtenstein(self):
         """
         Test output of countries without border countries
-        - of malta
+        - of liechtenstein
 
         Using given input .osm.pbf file in this repo
         Compare calculated merged.osm.pbf with merged.osm.pbf in this repo
@@ -89,16 +90,40 @@ class TestGeneratedFiles(unittest.TestCase):
         - 100.map.lzma
         """
 
-        # iceland
-        self.compare_dir_sub_test_resource_and_output('110')
-        self.compare_dir_sub_test_resource_and_output('111')
-        self.compare_dir_sub_test_resource_and_output('112')
-        self.compare_dir_sub_test_resource_and_output('113')
-        self.compare_dir_sub_test_resource_and_output('114')
-        self.compare_dir_sub_test_resource_and_output('115')
-        self.compare_dir_sub_test_resource_and_output('116')
-        self.compare_dir_sub_test_resource_and_output('117')
-        self.compare_dir_sub_test_resource_and_output('118')
+        # run tool for country
+        self.run_wahoomapscreator_cli(
+            'liechtenstein', 'liechtenstein-latest_2021-10-22.osm.pbf')
+
+        # compare generated given merged.osm.pbf-file with reference-file
+        self.compare_dir_sub_test_resource_and_output('134/89')
+
+    # def test_calc_output_iceland(self):
+    #     """
+    #     Test output of countries without border countries
+    #     - of malta
+
+    #     Using given input .osm.pbf file in this repo
+    #     Compare calculated merged.osm.pbf with merged.osm.pbf in this repo
+
+    #     Files that can be possibly checked (in order of creation):
+    #     - merged.osm.pbf
+    #     - 100.map
+    #     - 100.map.lzma
+    #     """
+
+    #     # run tool for country
+    #     self.run_wahoomapscreator_cli(
+    #         'iceland', 'malta-latest_2021-10-22.osm.pbf')
+
+    #     self.compare_dir_sub_test_resource_and_output('110')
+    #     self.compare_dir_sub_test_resource_and_output('111')
+    #     self.compare_dir_sub_test_resource_and_output('112')
+    #     self.compare_dir_sub_test_resource_and_output('113')
+    #     self.compare_dir_sub_test_resource_and_output('114')
+    #     self.compare_dir_sub_test_resource_and_output('115')
+    #     self.compare_dir_sub_test_resource_and_output('116')
+    #     self.compare_dir_sub_test_resource_and_output('117')
+    #     self.compare_dir_sub_test_resource_and_output('118')
 
     def compare_test_resource_and_output(self, filename_to_compare):
         """
