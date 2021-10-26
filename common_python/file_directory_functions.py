@@ -25,6 +25,7 @@ def get_git_root():
 # alternatives for ROOT_DIR: #os.getcwd() #getGitRoot()
 
 
+# wahooMapsCreator directory
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
 COMMON_DIR = os.path.join(ROOT_DIR, 'common_resources')
 COMMON_DL_DIR = os.path.join(ROOT_DIR, 'common_download')
