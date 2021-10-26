@@ -212,7 +212,7 @@ class OsmMaps:
 
             if not os.path.isfile(land_file) or self.force_processing is True:
                 print(
-                    f'+ Generate land {tile_count} of {len(self.tiles)} for Coordinates: {tile["x"]} {tile["y"]}')
+                    f'+ Generate land {tile_count} of {len(self.tiles)} for Coordinates: {tile["x"]},{tile["y"]}')
                 cmd = ['ogr2ogr', '-overwrite', '-skipfailures']
                 cmd.extend(['-spat', f'{tile["left"]-0.1:.6f}',
                             f'{tile["bottom"]-0.1:.6f}',
@@ -252,7 +252,7 @@ class OsmMaps:
                                     f'{tile["x"]}', f'{tile["y"]}', 'sea.osm')
             if not os.path.isfile(out_file) or self.force_processing is True:
                 print(
-                    f'+ Generate sea {tile_count} of {len(self.tiles)} for Coordinates: {tile["x"]} {tile["y"]}')
+                    f'+ Generate sea {tile_count} of {len(self.tiles)} for Coordinates: {tile["x"]},{tile["y"]}')
                 with open(os.path.join(fd_fct.TOOLING_DIR, 'sea.osm')) as sea_file:
                     sea_data = sea_file.read()
 
@@ -282,7 +282,6 @@ class OsmMaps:
         for tile in self.tiles:
 
             for country, val in self.border_countries.items():
-                print(f'+ Split filtered country {country}')
                 print(
                     f'+ Splitting tile {tile_count} of {len(self.tiles)} for Coordinates: {tile["x"]},{tile["y"]} from map of {country}')
                 out_file = os.path.join(fd_fct.OUTPUT_DIR,
@@ -355,8 +354,7 @@ class OsmMaps:
 
             tile_count += 1
 
-            # logging
-            print('# Split filtered country files to tiles: OK')
+        print('# Split filtered country files to tiles: OK')
 
     def merge_splitted_tiles_with_land_and_sea(self, calc_border_countries):
         """
@@ -452,7 +450,7 @@ class OsmMaps:
         tile_count = 1
         for tile in self.tiles:
             print(
-                f'+ Creating map file for tile {tile_count} of {len(self.tiles)} for Coordinates: {tile["x"]}, {tile["y"]}')
+                f'+ Creating map file for tile {tile_count} of {len(self.tiles)} for Coordinates: {tile["x"]},{tile["y"]}')
             out_file = os.path.join(fd_fct.OUTPUT_DIR,
                                     f'{tile["x"]}', f'{tile["y"]}.map')
             if not os.path.isfile(out_file+'.lzma') or self.force_processing is True:

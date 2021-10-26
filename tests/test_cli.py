@@ -19,11 +19,12 @@ class TestCli(unittest.TestCase):
         """
 
         if platform.system() == "Windows":
-            result =  os.system("python wahoo_map_creator.py -h")
+            result = os.system("python wahoo_map_creator.py -h")
         else:
-            result =  os.system("python3 wahoo_map_creator.py -h")
+            result = os.system("python3 wahoo_map_creator.py -h")
 
         self.assertEqual(result, 0)
+
 
 if __name__ == '__main__':
     unittest.main()

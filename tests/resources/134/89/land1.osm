@@ -1,0 +1,104 @@
+<osm version='0.6'>
+<node timestamp='1969-12-31T23:59:59Z' changeset='-1' id='22951459320' version='1' lon='10.00074009361646' lat='48.0005' />
+<node timestamp='1969-12-31T23:59:59Z' changeset='-1' id='22951459321' version='1' lon='10.00074009361646' lat='46.9995' />
+<node timestamp='1969-12-31T23:59:59Z' changeset='-1' id='22951459322' version='1' lon='8.99925990638354' lat='46.9995' />
+<node timestamp='1969-12-31T23:59:59Z' changeset='-1' id='22951459323' version='1' lon='8.99925990638354' lat='48.0005' />
+<way timestamp='1969-12-31T23:59:59Z' changeset='-1' id='22951459324' version='1'>
+<nd ref='22951459320' />
+<nd ref='22951459321' />
+<nd ref='22951459322' />
+<nd ref='22951459323' />
+<nd ref='22951459320' />
+<tag k='NHD:x' v='9' />
+<tag k='NHD:y' v='47' />
+<tag k='natural' v='nosea' />
+<tag k='layer' v='-5' />
+</way>
+<node timestamp='1969-12-31T23:59:59Z' changeset='-1' id='22951459325' version='1' lon='7.999259906383539' lat='48.0005' />
+<node timestamp='1969-12-31T23:59:59Z' changeset='-1' id='22951459326' version='1' lon='8.2651837' lat='48.0005' />
+<node timestamp='1969-12-31T23:59:59Z' changeset='-1' id='22951459327' version='1' lon='9.00074009361646' lat='48.0005' />
+<node timestamp='1969-12-31T23:59:59Z' changeset='-1' id='22951459328' version='1' lon='9.00074009361646' lat='46.9995' />
+<node timestamp='1969-12-31T23:59:59Z' changeset='-1' id='22951459329' version='1' lon='8.2651837' lat='46.9995' />
+<node timestamp='1969-12-31T23:59:59Z' changeset='-1' id='22951459330' version='1' lon='7.999259906383539' lat='46.9995' />
+<way timestamp='1969-12-31T23:59:59Z' changeset='-1' id='22951459331' version='1'>
+<nd ref='22951459325' />
+<nd ref='22951459326' />
+<nd ref='22951459327' />
+<nd ref='22951459328' />
+<nd ref='22951459329' />
+<nd ref='22951459330' />
+<nd ref='22951459325' />
+<tag k='NHD:x' v='8' />
+<tag k='NHD:y' v='47' />
+<tag k='natural' v='nosea' />
+<tag k='layer' v='-5' />
+</way>
+<node timestamp='1969-12-31T23:59:59Z' changeset='-1' id='22951459332' version='1' lon='7.999273630164373' lat='47.0005' />
+<node timestamp='1969-12-31T23:59:59Z' changeset='-1' id='22951459333' version='1' lon='8.2651837' lat='47.0005' />
+<node timestamp='1969-12-31T23:59:59Z' changeset='-1' id='22951459334' version='1' lon='9.000726369835627' lat='47.0005' />
+<node timestamp='1969-12-31T23:59:59Z' changeset='-1' id='22951459335' version='1' lon='9.000726369835627' lat='45.9995' />
+<node timestamp='1969-12-31T23:59:59Z' changeset='-1' id='22951459336' version='1' lon='8.2651837' lat='45.9995' />
+<node timestamp='1969-12-31T23:59:59Z' changeset='-1' id='22951459337' version='1' lon='7.999273630164373' lat='45.9995' />
+<way timestamp='1969-12-31T23:59:59Z' changeset='-1' id='22951459338' version='1'>
+<nd ref='22951459332' />
+<nd ref='22951459333' />
+<nd ref='22951459334' />
+<nd ref='22951459335' />
+<nd ref='22951459336' />
+<nd ref='22951459337' />
+<nd ref='22951459332' />
+<tag k='NHD:x' v='8' />
+<tag k='NHD:y' v='46' />
+<tag k='natural' v='nosea' />
+<tag k='layer' v='-5' />
+</way>
+<node timestamp='1969-12-31T23:59:59Z' changeset='-1' id='22951459339' version='1' lon='10.000726369835627' lat='47.0005' />
+<node timestamp='1969-12-31T23:59:59Z' changeset='-1' id='22951459340' version='1' lon='10.000726369835627' lat='45.9995' />
+<node timestamp='1969-12-31T23:59:59Z' changeset='-1' id='22951459341' version='1' lon='8.999273630164373' lat='45.9995' />
+<node timestamp='1969-12-31T23:59:59Z' changeset='-1' id='22951459342' version='1' lon='8.999273630164373' lat='47.0005' />
+<way timestamp='1969-12-31T23:59:59Z' changeset='-1' id='22951459343' version='1'>
+<nd ref='22951459339' />
+<nd ref='22951459340' />
+<nd ref='22951459341' />
+<nd ref='22951459342' />
+<nd ref='22951459339' />
+<tag k='NHD:x' v='9' />
+<tag k='NHD:y' v='46' />
+<tag k='natural' v='nosea' />
+<tag k='layer' v='-5' />
+</way>
+<node timestamp='1969-12-31T23:59:59Z' changeset='-1' id='22951459344' version='1' lon='10.000754580247529' lat='49.0005' />
+<node timestamp='1969-12-31T23:59:59Z' changeset='-1' id='22951459345' version='1' lon='10.000754580247529' lat='47.9995' />
+<node timestamp='1969-12-31T23:59:59Z' changeset='-1' id='22951459346' version='1' lon='8.999245419752471' lat='47.9995' />
+<node timestamp='1969-12-31T23:59:59Z' changeset='-1' id='22951459347' version='1' lon='8.999245419752471' lat='49.0005' />
+<way timestamp='1969-12-31T23:59:59Z' changeset='-1' id='22951459348' version='1'>
+<nd ref='22951459344' />
+<nd ref='22951459345' />
+<nd ref='22951459346' />
+<nd ref='22951459347' />
+<nd ref='22951459344' />
+<tag k='NHD:x' v='9' />
+<tag k='NHD:y' v='48' />
+<tag k='natural' v='nosea' />
+<tag k='layer' v='-5' />
+</way>
+<node timestamp='1969-12-31T23:59:59Z' changeset='-1' id='22951459349' version='1' lon='7.999245419752471' lat='49.0005' />
+<node timestamp='1969-12-31T23:59:59Z' changeset='-1' id='22951459350' version='1' lon='8.2651837' lat='49.0005' />
+<node timestamp='1969-12-31T23:59:59Z' changeset='-1' id='22951459351' version='1' lon='9.000754580247529' lat='49.0005' />
+<node timestamp='1969-12-31T23:59:59Z' changeset='-1' id='22951459352' version='1' lon='9.000754580247529' lat='47.9995' />
+<node timestamp='1969-12-31T23:59:59Z' changeset='-1' id='22951459353' version='1' lon='8.2651837' lat='47.9995' />
+<node timestamp='1969-12-31T23:59:59Z' changeset='-1' id='22951459354' version='1' lon='7.999245419752471' lat='47.9995' />
+<way timestamp='1969-12-31T23:59:59Z' changeset='-1' id='22951459355' version='1'>
+<nd ref='22951459349' />
+<nd ref='22951459350' />
+<nd ref='22951459351' />
+<nd ref='22951459352' />
+<nd ref='22951459353' />
+<nd ref='22951459354' />
+<nd ref='22951459349' />
+<tag k='NHD:x' v='8' />
+<tag k='NHD:y' v='48' />
+<tag k='natural' v='nosea' />
+<tag k='layer' v='-5' />
+</way>
+</osm>
