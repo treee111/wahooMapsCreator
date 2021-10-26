@@ -40,7 +40,8 @@ class TestOsmMaps(unittest.TestCase):
         Test a json file as input to the wahooMapsCreator
         """
 
-        json_file_path = os.path.join(self.file_path_test_json, 'germany-only1.json')
+        json_file_path = os.path.join(
+            self.file_path_test_json, 'germany-only1.json')
         self.o_osm_maps.process_input(json_file_path, True)
 
         result = self.o_osm_maps.country_name
@@ -60,19 +61,24 @@ class TestOsmMaps(unittest.TestCase):
 
         # germany
         expected_result = {'czech_republic': {}, 'germany': {}, 'austria': {}, 'liechtenstein': {},
-                            'switzerland': {}, 'italy': {}, 'netherlands': {}, 'belgium': {},
-                            'luxembourg': {}, 'france': {}, 'poland': {}, 'denmark': {}}
-        self.process_and_check_border_countries('germany', True, expected_result)
+                           'switzerland': {}, 'italy': {}, 'netherlands': {}, 'belgium': {},
+                           'luxembourg': {}, 'france': {}, 'poland': {}, 'denmark': {}}
+        self.process_and_check_border_countries(
+            'germany', True, expected_result)
 
         # one tile - france and germany
-        input_file = os.path.join(self.file_path_test_json, 'germany-france-only1.json')
+        input_file = os.path.join(
+            self.file_path_test_json, 'germany-france-only1.json')
         expected_result = {'france': {}, 'germany': {}}
-        self.process_and_check_border_countries(input_file, True, expected_result)
+        self.process_and_check_border_countries(
+            input_file, True, expected_result)
 
         # two tiles - germany
-        input_file = os.path.join(self.file_path_test_json, 'germany-only2.json')
+        input_file = os.path.join(
+            self.file_path_test_json, 'germany-only2.json')
         expected_result = {'germany': {}}
-        self.process_and_check_border_countries(input_file, True, expected_result)
+        self.process_and_check_border_countries(
+            input_file, True, expected_result)
 
     def test_calc_without_border_countries(self):
         """
@@ -83,20 +89,25 @@ class TestOsmMaps(unittest.TestCase):
         """
 
         # germany
-        self.process_and_check_border_countries('germany', False, {'germany': {}})
+        self.process_and_check_border_countries(
+            'germany', False, {'germany': {}})
 
         # china
         self.process_and_check_border_countries('china', False, {'china': {}})
 
         # one tile - france and germany
-        input_file = os.path.join(self.file_path_test_json, 'germany-france-only1.json')
+        input_file = os.path.join(
+            self.file_path_test_json, 'germany-france-only1.json')
         expected_result = {'france': {}, 'germany': {}}
-        self.process_and_check_border_countries(input_file, False, expected_result)
+        self.process_and_check_border_countries(
+            input_file, False, expected_result)
 
         # two tiles - germany
-        input_file = os.path.join(self.file_path_test_json, 'germany-only2.json')
+        input_file = os.path.join(
+            self.file_path_test_json, 'germany-only2.json')
         expected_result = {'germany': {}}
-        self.process_and_check_border_countries(input_file, False, expected_result)
+        self.process_and_check_border_countries(
+            input_file, False, expected_result)
 
     def test_tiles_via_static_json(self):
         """

@@ -7,8 +7,9 @@ executable file to create up-to-date map-files for the Wahoo ELEMNT and Wahoo EL
 import sys
 
 # import custom python packages
-from common_python.osm_maps_functions import OsmMaps
 from common_python.input import Input
+from common_python.file_directory_functions import initialize_work_directories
+from common_python.osm_maps_functions import OsmMaps
 
 # logging used in the terminal output:
 # # means top-level command
@@ -26,6 +27,8 @@ else:
 if oInputData.country == "none" or oInputData.country == "":
     sys.exit("Nothing to do. Start with -h or --help to see command line options."
              "Or in the GUI select a country to create maps for.")
+
+initialize_work_directories()
 
 oOSMmaps = OsmMaps(oInputData)
 
@@ -56,8 +59,8 @@ oOSMmaps.merge_splitted_tiles_with_land_and_sea(oInputData.border_countries)
 oOSMmaps.create_map_files(oInputData.save_cruiser, oInputData.tag_wahoo_xml)
 
 # Zip .map.lzma files
-oOSMmaps.zip_map_files()
+oOSMmaps.zip_map_files(oInputData.keep_map_folders)
 
 # Make Cruiser map files zip file
 if oInputData.save_cruiser is True:
-    oOSMmaps.make_cruiser_files()
+    oOSMmaps.make_cruiser_files(oInputData.keep_map_folders)
