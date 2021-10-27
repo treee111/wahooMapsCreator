@@ -555,7 +555,7 @@ class OsmMaps:
             cmd = ['zip', '-r', self.country_name + '.zip']
 
         cmd.append(os.path.join(
-            f'{fd_fct.OUTPUT_DIR}', f'{self.country_name}', '*'))
+            f'{fd_fct.OUTPUT_DIR}', f'{self.country_name}'))
 
         subprocess.run(cmd, cwd=fd_fct.OUTPUT_DIR, check=True)
 
@@ -612,7 +612,7 @@ class OsmMaps:
             cmd = ['zip', '-r', self.country_name + '-maps.zip']
 
         cmd.append(os.path.join(f'{fd_fct.OUTPUT_DIR}',
-                   f'{self.country_name}-maps', '*'))
+                   f'{self.country_name}-maps'))
 
         subprocess.run(cmd, cwd=fd_fct.OUTPUT_DIR, check=True)
 
