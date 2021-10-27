@@ -160,7 +160,7 @@ class Input(tk.Tk):
         o_input_data.save_cruiser = args.cruiser
         o_input_data.tag_wahoo_xml = args.tag_wahoo_xml
         o_input_data.only_merge = args.only_merge
-        self.o_input_data.keep_map_folders = args.keep_map_folders
+        o_input_data.keep_map_folders = args.keep_map_folders
 
         return o_input_data
 
