@@ -4,7 +4,33 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-A list of unreleased changes can be found [here](https://github.com/treee111/wahooMapsCreator/compare/v0.9.0...HEAD).
+A list of unreleased changes can be found [here](https://github.com/treee111/wahooMapsCreator/compare/v0.10.0...HEAD).
+
+<a name="0.10.0"></a>
+## [0.10.0] - 2021-10-30
+### Features
+- Add check for required input parameter for CLI and GUI ([#41](https://github.com/treee111/wahooMapsCreator/issues/41)) [`4994f13`](https://github.com/treee111/wahooMapsCreator/commit/4994f13b6ae150faaeaf4586ec7b8232fa7b095e)
+- Enhance check for existing (already downloaded) polygons and .osm.pbf files ([#43](https://github.com/treee111/wahooMapsCreator/issues/43)) [`bbdedd1`](https://github.com/treee111/wahooMapsCreator/commit/bbdedd176bc119b143a55f639641367e1275533f)
+- Create Wahoo tile present/version indicator files like 84.map.lzma.v12 ([#49](https://github.com/treee111/wahooMapsCreator/issues/49)) [`2b4adb0`](https://github.com/treee111/wahooMapsCreator/commit/2b4adb019295abad1c6b4096ad43ce0b1ed2310e)
+- Performance improvement for .osm.pbf creation and splitting. Use 'v12' tag (keep) filters ([#46](https://github.com/treee111/wahooMapsCreator/issues/46)) [`cef537b`](https://github.com/treee111/wahooMapsCreator/commit/cef537b46bd7a6c1c4a2a824f385d17415a454a8)
+- Change creation of tiles.zip and maps.zip to support very large countries ([#47](https://github.com/treee111/wahooMapsCreator/issues/47)) [`2e20d51`](https://github.com/treee111/wahooMapsCreator/commit/2e20d51e0449a26b9f7aad121607d4b06a122cf0)
+
+### Bug Fixes
+- Storing and interpretation of CLI arguments ([#48](https://github.com/treee111/wahooMapsCreator/issues/48)) [`81fe795`](https://github.com/treee111/wahooMapsCreator/commit/81fe795eb693178381b30d41624fe191fc83a6c0)
+- Update osmosis distribution with official 0.48.3 version to fix osmosis permissions ([#42](https://github.com/treee111/wahooMapsCreator/issues/42)) [`9379fb1`](https://github.com/treee111/wahooMapsCreator/commit/9379fb1e32619768814dc254a5ef94d47ce6cc07)
+- Clean-up and unify output logging ([#52](https://github.com/treee111/wahooMapsCreator/issues/52)) [`6a0b9eb`](https://github.com/treee111/wahooMapsCreator/commit/6a0b9eb186ba2b88f566c1ea7cc5ff6b8c955af4)
+- Fix keep_map_folders CLI argument handling ([#57](https://github.com/treee111/wahooMapsCreator/issues/57)) [`b8f187c`](https://github.com/treee111/wahooMapsCreator/commit/b8f187c50ac2bb2904aca3bd4f33a5674e2d1a7b)
+- uniform Windows and macOS processing in filter_tags_from_country_osm_pbf_files ([#63](https://github.com/treee111/wahooMapsCreator/issues/63)) [`1a87ce1`](https://github.com/treee111/wahooMapsCreator/commit/1a87ce189c92ec21a270400decb0758d9520cbe5)
+
+### Development/Infrastructure/Test/CI
+- Automate CHANGELOG.md creation using git-chglog ([#45](https://github.com/treee111/wahooMapsCreator/issues/45)) [`23b8927`](https://github.com/treee111/wahooMapsCreator/commit/23b8927d3cf246538640ab4346e88f41b60fe90b)
+- gitignore any work directories and create them during processing if necessary ([#44](https://github.com/treee111/wahooMapsCreator/issues/44)) [`33d5821`](https://github.com/treee111/wahooMapsCreator/commit/33d5821b18cf94bf0ef2793129bbc35878f5fe39)
+- Update Github templates for issues and pull requests ([#50](https://github.com/treee111/wahooMapsCreator/issues/50)) [`b68fbd2`](https://github.com/treee111/wahooMapsCreator/commit/b68fbd225d2d8542550826f2ac0452c9be7d196a)
+- Define sort-sequence of CHANGELOG entries ([#54](https://github.com/treee111/wahooMapsCreator/issues/54)) [`e47947e`](https://github.com/treee111/wahooMapsCreator/commit/e47947ebb6cd52636dfb9177db32dc30fa703612)
+- Unittests for malta and liechtenstein. Check output per tile for files in tests/resources ([#56](https://github.com/treee111/wahooMapsCreator/issues/56)) [`55c47db`](https://github.com/treee111/wahooMapsCreator/commit/55c47dbac9b8b77dbc097e63afa30672ab9f08e7)
+- Unify zipping & integrate last bits of PR-40 ([#55](https://github.com/treee111/wahooMapsCreator/issues/55)) [`7f2108c`](https://github.com/treee111/wahooMapsCreator/commit/7f2108c0bfc5e7db68831bbfd88a936ed6de16bb)
+- Have separate files for Windows and macOS for unittests output per tile / malta and liechtenstein ([#62](https://github.com/treee111/wahooMapsCreator/issues/62)) [`28787b3`](https://github.com/treee111/wahooMapsCreator/commit/28787b3009221dea7ee550895840f509272411c0)
+
 ## [0.9.0] - 2021-10-19
 ### Added
 - have more different tag-wahoo-xml files and move them to folders. Modify tag-wahoo.xml to differently display some "place"-tags [PR34](https://github.com/treee111/wahooMapsCreator/issues/34)
@@ -123,6 +149,7 @@ A list of unreleased changes can be found [here](https://github.com/treee111/wah
     - Windows:    `tooling_windows/Windows-Wahoo-Map-Creator-Osmosis/wahoo-map-creator-osmosis.py`
 
 
+[0.10.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.9.0...v0.10.0
 [0.9.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.8.1...v0.9.0
 [0.8.1]: https://github.com/treee111/wahooMapsCreator/compare/v0.8.0...v0.8.1
 [0.8.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.7.1...v0.8.0
