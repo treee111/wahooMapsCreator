@@ -164,12 +164,13 @@ class OsmMaps:
                                                      f'filtered-{key}.o5m.pbf')
                 out_file_o5m_filtered_names = os.path.join(fd_fct.OUTPUT_DIR,
                                                            f'outFileFiltered-{key}-Names.o5m.pbf')
-                if not os.path.isfile(out_file_o5m_filtered):
+                if not os.path.isfile(out_file_o5m_filtered) or self.force_processing is True:
                     print(f'+ Create filtered country file for {key}')
 
+                    # https://docs.osmcode.org/osmium/latest/osmium-tags-filter.html
                     cmd = ['osmium', 'tags-filter', '--remove-tags']
                     cmd.append(val['map_file'])
-                    cmd.extend('type layer ' + constants.FILTERED_TAGS)
+                    cmd.extend(constants.FILTERED_TAGS)
                     cmd.extend(['-o', out_file_o5m_filtered])
 
                     result = subprocess.run(cmd, check=True)
@@ -179,8 +180,7 @@ class OsmMaps:
 
                     cmd = ['osmium', 'tags-filter', '--remove-tags']
                     cmd.append(val['map_file'])
-                    cmd.extend('type name layer' +
-                               constants.FILTERED_TAGS_NAMES)
+                    cmd.extend(constants.FILTERED_TAGS_NAMES)
                     cmd.extend(['-o', out_file_o5m_filtered_names])
 
                     result = subprocess.run(cmd, check=True)
