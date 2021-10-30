@@ -15,6 +15,8 @@ import unittest
 # import custom python packages
 from common_python import file_directory_functions as fd_fct
 
+dirname_of_file = os.path.dirname(__file__)
+
 
 class TestGeneratedFiles(unittest.TestCase):
     """
@@ -34,7 +36,7 @@ class TestGeneratedFiles(unittest.TestCase):
         """
         # copy given file to download-directory
         given_osm_pbf_file = os.path.join(
-            fd_fct.ROOT_DIR, 'tests/resources', given_osm_pbf)
+            dirname_of_file, 'resources', given_osm_pbf)
         map_file_path = os.path.join(
             fd_fct.MAPS_DIR, country + '-latest.osm.pbf')
 
@@ -74,7 +76,8 @@ class TestGeneratedFiles(unittest.TestCase):
         # compare generated given merged.osm.pbf-file with reference-file
         # equals_merged = self.compare_test_resource_and_output(
         #     '138/100/merged.osm.pbf')
-        self.compare_dir_sub_test_resource_and_output('138/100')
+        self.compare_dir_sub_test_resource_and_output(
+            os.path.join('138', '100'))
 
     def test_calc_output_liechtenstein(self):
         """
@@ -95,7 +98,9 @@ class TestGeneratedFiles(unittest.TestCase):
             'liechtenstein', 'liechtenstein-latest_2021-10-22.osm.pbf')
 
         # compare generated given merged.osm.pbf-file with reference-file
-        self.compare_dir_sub_test_resource_and_output('134/89')
+
+        self.compare_dir_sub_test_resource_and_output(
+            os.path.join('134', '89'))
 
     # def test_calc_output_iceland(self):
     #     """
@@ -185,8 +190,12 @@ class TestGeneratedFiles(unittest.TestCase):
         check the files which are in test/resources folder
         """
 
-        path_to_dir = os.path.join(
-            fd_fct.ROOT_DIR, 'tests/resources', dir_to_compare)
+        if platform.system() == "Windows":
+            path_to_dir = os.path.join(
+                dirname_of_file, 'resources', 'windows', dir_to_compare)
+        else:
+            path_to_dir = os.path.join(
+                dirname_of_file, 'resources', 'macos', dir_to_compare)
 
         # check files in subdir of given dir
         for (dirpath, dirnames, filenames) in walk(path_to_dir):
