@@ -13,7 +13,8 @@
 A tool to create up-to-date maps for your Wahoo ELEMNT BOLT and Wahoo ELEMNT! It runs on macOS, Unix as well as on Windows!
 
 # Basic Overview
-WahooMapsCreator is a tool to create updated maps for Wahoo ELEMNT BOLT and Wahoo ELEMNT devices for your country.
+WahooMapsCreator is a tool to create updated maps for Wahoo ELEMNT BOLT and Wahoo ELEMNT devices for your country. You can also control which OSM-tags are included in the generated maps.
+
 The maps of your device may be old because Wahoo did not release a newer version in the last years. OSM maps are constantly updated and with this program, the updated maps can be used on our Wahoo bike-computers.
 
 ## Get it running
@@ -92,6 +93,6 @@ Discussion goes on:
 More details can be found here: [CONTRIBUTING](.github/CONTRIBUTING.md#Contributing-to-wahooMapsCreator)
 
 ## Thanks to
-@Intyre/Hank for the initial version of the script
+[@Intyre](https://github.com/Intyre)/Hank for the initial version of the script
 
-@Higli and @ebo for the Windows- port
+@Higli and [@Ebe66](https://github.com/Ebe66)/ebo for the Windows- port
