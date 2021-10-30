@@ -12,15 +12,15 @@
 
 
 # Zoom levels and scale
-| Zoom level    | Scale         |
-| ------------- |:-------------:|
-| 9             | 10km          |
-| 10            | 5km           |
-| 11            | 2km           |
-| 12            | 1km           |
-| 13            | 500m          |
-| 14            | 200m          |
-| 15            | 100m          |
+| Zoom level | Scale |
+| ---------- | :---: |
+| 9          | 10km  |
+| 10         |  5km  |
+| 11         |  2km  |
+| 12         |  1km  |
+| 13         | 500m  |
+| 14         | 200m  |
+| 15         | 100m  |
 
 That information were derived from cruiser on macOS. It needs to be checked if the zoom level and scale on cruiser and Wahoo device is exaclty the same or if there is a difference.
 
@@ -42,13 +42,7 @@ The theme is named `mapsforge-bolt.xml` or `mapsforge-roam.xml` and is content-w
 Each entry in the theme has a "zoom-min" attribute, which defines from which zoom level onwards the element will be shown. If zoom-min is set to 13, the OSM-tag will be displayed in zoom level 500m, 200m and 100m.
 
 ## Copy the theme to the device
-A theme can be copied to your device like that:
-- ELEMNT/BOLT 
-  - copy "mapsforge-bolt.xml” of folder `common_resources/theme_adjusted` to `maps/mapsforge-bolt/mapsforge-bolt.xml` (just posted this in the google groups)
-- BOLTv2
-  - copy `assets/maps/vtm-elemnt/vtm-elemnt.xml` from the apk. Modify and copy the theme to `maps/vtm-elemnt/vtm-elemnt.xml`
-- ROAM
-  - copy `mapsforge-bolt.xml` of folder `common_resources/theme_adjusted` to `maps/mapsforge-roam/mapsforge-roam.xml`
+See [here](COPY_TO_WAHOO.md#Copy-device-theme)
 
 ## Use the theme in cruiser
 You should always use the corresponding theme in cruiser if you preview generated maps on your computer.

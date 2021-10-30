@@ -200,26 +200,35 @@ block_download = ['dach', 'alps', 'britain-and-ireland', 'south-africa-and-lesot
 # filtered_tags = ['access', 'admin_level', 'aerialway', 'aeroway', 'barrier',
 #               'boundary', 'bridge', 'highway', 'natural', 'oneway', 'place',
 #               'railway', 'tracktype', 'tunnel', 'waterway']
-FILTERED_TAGS = 'access \
-    area=yes \
-    bicycle \
-    bridge \
-    foot=ft_yes, foot_designated \
-    highway=abandoned, bus_guideway, disused, bridleway, byway, construction, cycleway, footway, living_street, motorway, motorway_link, path, pedestrian, primary, primary_link, residential, road, secondary, secondary_link, service, steps, tertiary, tertiary_link, track, trunk, trunk_link, unclassified \
-    natural=coastline, nosea, sea, beach, land, scrub, water, wetland =wood \
-    leisure=park, nature_reserve \
-    railway=abandoned, bus_guideway, disused, funicular, light_rail, miniature, narrow_gauge, preserved, rail, subway, tram \
-    surface \
-    tracktype \
-    tunnel \
-    waterway=canal, drain, river, riverbank \
-    wood=deciduous'
 
-FILTERED_TAGS_NAMES = 'admin_level=2 \
-    area=yes \
-    mountain_pass \
-    natural \
-    place=city, hamlet, island, isolated_dwelling, islet, locality, suburb, town, village, country'
+FILTERED_TAGS = ['access', 'area=yes', 'bicycle', 'bridge', 'foot=ft_yes, foot_designated',
+                 'highway=abandoned, bus_guideway, disused, bridleway, byway, construction, cycleway, footway, living_street, motorway, motorway_link, path, pedestrian, primary, primary_link, residential, road, secondary, secondary_link, service, steps, tertiary, tertiary_link, track, trunk, trunk_link, unclassified',
+                 'natural=coastline, nosea, sea, beach, land, scrub, water, wetland =wood', 'natural=coastline, nosea, sea, beach, land, scrub, water, wetland =wood',
+                 'leisure=park, nature_reserve', 'railway=abandoned, bus_guideway, disused, funicular, light_rail, miniature, narrow_gauge, preserved, rail, subway, tram',
+                 'surface', 'tracktype', 'tunnel', 'waterway=canal, drain, river, riverbank', 'wood=deciduous']
+# FILTERED_TAGS = 'access \
+#     area=yes \
+#     bicycle \
+#     bridge \
+#     foot=ft_yes, foot_designated \
+#     highway=abandoned, bus_guideway, disused, bridleway, byway, construction, cycleway, footway, living_street, motorway, motorway_link, path, pedestrian, primary, primary_link, residential, road, secondary, secondary_link, service, steps, tertiary, tertiary_link, track, trunk, trunk_link, unclassified \
+#     natural=coastline, nosea, sea, beach, land, scrub, water, wetland =wood \
+#     leisure=park, nature_reserve \
+#     railway=abandoned, bus_guideway, disused, funicular, light_rail, miniature, narrow_gauge, preserved, rail, subway, tram \
+#     surface \
+#     tracktype \
+#     tunnel \
+#     waterway=canal, drain, river, riverbank \
+#     wood=deciduous'
+
+FILTERED_TAGS_NAMES = ['admin_level=2', 'area=yes', 'mountain_pass', 'natural',
+                       'place=city, hamlet, island, isolated_dwelling, islet, locality, suburb, town, village, country']
+
+# FILTERED_TAGS_NAMES = 'admin_level=2 \
+#     area=yes \
+#     mountain_pass \
+#     natural \
+#     place=city, hamlet, island, isolated_dwelling, islet, locality, suburb, town, village, country'
 
 FILTERED_TAGS_WIN = 'access= \
     area=yes \

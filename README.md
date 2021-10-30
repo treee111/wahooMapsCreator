@@ -10,10 +10,11 @@
     </p>
     <h1>Wahoo Maps Creator</h1>
 </div>
-A tool to create up-to-date maps for your Wahoo ELEMNT BOLT and Wahoo ELEMNT! It runs on macOS, Unix as well as on Windows!
+A tool to create up-to-date maps for your Wahoo ELEMNT BOLT and BOLTv2, ELEMNT ROAM and Wahoo ELEMNT! It runs on Windows, macOS as well as on Unix!
 
 # Basic Overview
-WahooMapsCreator is a tool to create updated maps for Wahoo ELEMNT BOLT and Wahoo ELEMNT devices for your country.
+WahooMapsCreator is a tool to create maps based on the latest OSM data for your Wahoo devices. You can generate maps for the countries you like and you can control which OSM-tags are included.
+
 The maps of your device may be old because Wahoo did not release a newer version in the last years. OSM maps are constantly updated and with this program, the updated maps can be used on our Wahoo bike-computers.
 
 ## Get it running
@@ -26,6 +27,9 @@ The steps for all OS are similar:
 - Download a release of wahooMapsCreator or clone Repository
 - Run wahooMapsCreator for your country
 - Copy the map-files to your device
+
+Optional:
+- use a custom theme on your Wahoo
 
 ### Download and Install required programs
 The initial setup takes some minutes but is only a one-timer!
@@ -83,6 +87,10 @@ Examples:
 When file-creation is finished copy the map-files to your device:
 -  [Copy maps files to Wahoo](docs/COPY_TO_WAHOO.md)
 
+## use a custom theme on your Wahoo
+You can use a custom theme to control which OSM-tags are displayed in which zoom-level
+-  [OSM-tags during map creation and on your device](docs/TAGS_ON_MAP_AND_DEVICE.md)
+
 ## Contribution
 You are welcome to provide input via Pull Requests, Issues or in any other way!
 Discussion goes on:
@@ -92,6 +100,6 @@ Discussion goes on:
 More details can be found here: [CONTRIBUTING](.github/CONTRIBUTING.md#Contributing-to-wahooMapsCreator)
 
 ## Thanks to
-@Intyre/Hank for the initial version of the script
+[@Intyre](https://github.com/Intyre)/Hank for the initial version of the script
 
-@Higli and @ebo for the Windows- port
+@Higli and [@Ebe66](https://github.com/Ebe66)/ebo for the Windows- port

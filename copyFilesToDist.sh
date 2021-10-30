@@ -6,11 +6,8 @@ echo "Github-Ref: ${GITHUB_REF_VARIABLE}"
 mkdir -p dist
 mkdir -p dist/${FOLDER_NAME}
 cd dist/${FOLDER_NAME}
-mkdir -p ./common_resources
-mkdir -p ./common_download
-mkdir -p ./common_download/maps
-mkdir -p ./output
 mkdir -p ./common_python
+mkdir -p ./common_resources
 
 # copy files into dist-folder
 cp -a ../../common_python/*.py ./common_python/
@@ -21,7 +18,6 @@ cp -a ../../common_resources/tag_wahoo_adjusted/ ./common_resources/tag_wahoo_ad
 cp -a ../../common_resources/tag_wahoo_initial/ ./common_resources/tag_wahoo_initial
 cp -a ../../docs ./docs
 cp -a ../../tooling ./tooling
-# cp -a ../../tooling/Osmosis/ ./tooling/Osmosis
 cp -a ../../tooling_windows ./tooling_windows
 cp -a ../../wahoo_map_creator.py ../../CHANGELOG.md ../../README.md ./
 

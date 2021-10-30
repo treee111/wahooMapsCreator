@@ -11,7 +11,7 @@ A list of unreleased changes can be found [here]({{ .Info.RepositoryURL }}/compa
 {{ range .Versions }}
 {{- if not (eq .Tag.Name "v0.1.0" "v0.2.0" "v0.3.0" "v0.3.1" "v0.4.0" "v0.5.0" "v0.6.0" "v0.7.0" "v0.7.1" "v0.8.0" "v0.8.1" "v0.9.0") }}
 <a name="{{ trimPrefix "v" .Tag.Name }}"></a>
-## {{ if .Tag.Previous }}[{{ trimPrefix "v" .Tag.Name }}]{{ else }}{{ .Tag.Name }}{{ end }} - {{ datetime "2006-01-02" .Tag.Date }}
+## {{ if .Tag.Previous }}[{{ trimPrefix "v" .Tag.Name }}]{{ else }}{{ trimPrefix "v" .Tag.Name }}{{ end }} - {{ datetime "2006-01-02" .Tag.Date }}
 {{ range .CommitGroups -}}
 ### {{ .Title }}
 {{ range .Commits -}}
@@ -158,7 +158,7 @@ A list of unreleased changes can be found [here]({{ .Info.RepositoryURL }}/compa
 {{ if .Versions }}
 {{ range .Versions -}}
 {{ if .Tag.Previous -}}
-[{{ .Tag.Name }}]: {{ $.Info.RepositoryURL }}/compare/{{ .Tag.Previous.Name }}...{{ .Tag.Name }}
+[{{ trimPrefix "v" .Tag.Name }}]: {{ $.Info.RepositoryURL }}/compare/{{ .Tag.Previous.Name }}...{{ .Tag.Name }}
 {{ end -}}
 {{ end -}}
 {{ end -}}
