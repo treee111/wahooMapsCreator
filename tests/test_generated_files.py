@@ -21,27 +21,57 @@ dirname_of_file = os.path.dirname(__file__)
 class TestGeneratedFiles(unittest.TestCase):
     """
     tests for the OSM maps file
+
+    Test output of countries without border countries
+    - Using given input .osm.pbf file in this repo
+    - Compare content of directory tests/resources/mac /windows against directory output/
+
+    Files that can be possibly checked (in order of creation):
+    - merged.osm.pbf
+    - 100.map
+    - 100.map.lzma
     """
 
-    # def setUp(self):
-    # # run tool for countries
-    # self.run_wahoomapscreator_cli(
-    #     'malta', 'malta-latest_2021-10-22.osm.pbf')
-    # self.run_wahoomapscreator_cli(
-    #     'iceland', 'malta-latest_2021-10-22.osm.pbf')
+    def setUp(self):
+        self.copy_static_land_polygon_input_folder(
+            'land-polygons-split-4326_2021-10-31')
+
+    def test_calc_output_malta(self):
+        """
+        Test output of countries without border countries
+        - of malta
+        """
+
+        # run tool for countries
+        self.run_wahoomapscreator_cli(
+            'malta', 'malta-latest_2021-10-31.osm.pbf')
+
+        # compare generated given merged.osm.pbf-file with reference-file
+        # equals_merged = self.compare_test_resource_and_output(
+        #     '138/100/merged.osm.pbf')
+        self.compare_dir_sub_test_resource_and_output(
+            os.path.join('138', '100'))
+
+    def test_calc_output_liechtenstein(self):
+        """
+        Test output of countries without border countries
+        - of liechtenstein
+        """
+
+        # run tool for country
+        self.run_wahoomapscreator_cli(
+            'liechtenstein', 'liechtenstein-latest_2021-10-31.osm.pbf')
+
+        # compare generated given merged.osm.pbf-file with reference-file
+
+        self.compare_dir_sub_test_resource_and_output(
+            os.path.join('134', '89'))
 
     def run_wahoomapscreator_cli(self, country, given_osm_pbf):
         """
         runs wahooMapsCreator for given country and static osm.pbf file via CLI
         """
-        # copy given file to download-directory
-        given_osm_pbf_file = os.path.join(
-            dirname_of_file, 'resources', given_osm_pbf)
-        map_file_path = os.path.join(
-            fd_fct.MAPS_DIR, country + '-latest.osm.pbf')
-
-        # copy file (new file takes creationdate as of now)
-        shutil.copy2(given_osm_pbf_file, map_file_path)
+        self.copy_static_maps_input_file(country, given_osm_pbf)
 
         # run processing of input-country via CLI
         if platform.system() == "Windows":
@@ -55,80 +85,35 @@ class TestGeneratedFiles(unittest.TestCase):
         # check if run was successful
         self.assertEqual(result, 0)
 
-    def test_calc_output_malta(self):
+    def copy_static_maps_input_file(self, country, given_osm_pbf):
         """
-        Test output of countries without border countries
-        - of malta
-
-        Using given input .osm.pbf file in this repo
-        Compare calculated merged.osm.pbf with merged.osm.pbf in this repo
-
-        Files that can be possibly checked (in order of creation):
-        - merged.osm.pbf
-        - 100.map
-        - 100.map.lzma
+        copy given file to download-directory
         """
 
-        # run tool for countries
-        self.run_wahoomapscreator_cli(
-            'malta', 'malta-latest_2021-10-22.osm.pbf')
+        given_osm_pbf_file = os.path.join(
+            dirname_of_file, 'resources', given_osm_pbf)
+        copy_to_path = os.path.join(
+            fd_fct.MAPS_DIR, country + '-latest.osm.pbf')
 
-        # compare generated given merged.osm.pbf-file with reference-file
-        # equals_merged = self.compare_test_resource_and_output(
-        #     '138/100/merged.osm.pbf')
-        self.compare_dir_sub_test_resource_and_output(
-            os.path.join('138', '100'))
+        # copy file (new file takes creationdate as of now)
+        shutil.copy2(given_osm_pbf_file, copy_to_path)
 
-    def test_calc_output_liechtenstein(self):
+    def copy_static_land_polygon_input_folder(self, given_osm_pbf):
         """
-        Test output of countries without border countries
-        - of liechtenstein
-
-        Using given input .osm.pbf file in this repo
-        Compare calculated merged.osm.pbf with merged.osm.pbf in this repo
-
-        Files that can be possibly checked (in order of creation):
-        - merged.osm.pbf
-        - 100.map
-        - 100.map.lzma
+        copy given folder to download-directory
         """
 
-        # run tool for country
-        self.run_wahoomapscreator_cli(
-            'liechtenstein', 'liechtenstein-latest_2021-10-22.osm.pbf')
+        # get parent folder of repo
+        root_dir_parent = os.path.abspath(
+            os.path.join(fd_fct.ROOT_DIR, os.pardir))
 
-        # compare generated given merged.osm.pbf-file with reference-file
+        static_file_path = os.path.join(
+            root_dir_parent, 'unittest-files', given_osm_pbf)
+        copy_to_path = os.path.dirname(fd_fct.LAND_POLYGONS_PATH)
 
-        self.compare_dir_sub_test_resource_and_output(
-            os.path.join('134', '89'))
-
-    # def test_calc_output_iceland(self):
-    #     """
-    #     Test output of countries without border countries
-    #     - of malta
-
-    #     Using given input .osm.pbf file in this repo
-    #     Compare calculated merged.osm.pbf with merged.osm.pbf in this repo
-
-    #     Files that can be possibly checked (in order of creation):
-    #     - merged.osm.pbf
-    #     - 100.map
-    #     - 100.map.lzma
-    #     """
-
-    #     # run tool for country
-    #     self.run_wahoomapscreator_cli(
-    #         'iceland', 'malta-latest_2021-10-22.osm.pbf')
-
-    #     self.compare_dir_sub_test_resource_and_output('110')
-    #     self.compare_dir_sub_test_resource_and_output('111')
-    #     self.compare_dir_sub_test_resource_and_output('112')
-    #     self.compare_dir_sub_test_resource_and_output('113')
-    #     self.compare_dir_sub_test_resource_and_output('114')
-    #     self.compare_dir_sub_test_resource_and_output('115')
-    #     self.compare_dir_sub_test_resource_and_output('116')
-    #     self.compare_dir_sub_test_resource_and_output('117')
-    #     self.compare_dir_sub_test_resource_and_output('118')
+        shutil.rmtree(copy_to_path)
+        # copy folder (new file takes creationdate as of now)
+        shutil.copytree(static_file_path, copy_to_path)
 
     def compare_test_resource_and_output(self, filename_to_compare):
         """
