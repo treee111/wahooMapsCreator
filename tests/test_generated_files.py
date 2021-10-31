@@ -111,7 +111,9 @@ class TestGeneratedFiles(unittest.TestCase):
             root_dir_parent, 'unittest-files', given_osm_pbf)
         copy_to_path = os.path.dirname(fd_fct.LAND_POLYGONS_PATH)
 
-        shutil.rmtree(copy_to_path)
+        # delete directory if exists. copytree fails if dir exists already
+        if os.path.exists(copy_to_path):
+            shutil.rmtree(copy_to_path)
         # copy folder (new file takes creationdate as of now)
         shutil.copytree(static_file_path, copy_to_path)
 
