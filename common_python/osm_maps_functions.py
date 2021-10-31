@@ -56,18 +56,15 @@ class OsmMaps:
 
         # option 2: input a country as parameter, e.g. germany
         else:
-            # ToDo: Get from CLI Input
-            use_geofabrik_for_tiles = False
-
-            if use_geofabrik_for_tiles:
-                # use geofabrik-URL to calculate the relevant tiles
+            # option 2a: use Geofabrik-URL to calculate the relevant tiles
+            if self.o_input_data.geofabrik_tiles:
                 self.force_processing = self.o_downloader.check_and_download_geofabrik_if_needed()
 
                 o_geofabrik = Geofabrik(input_argument)
                 self.tiles = o_geofabrik.get_tiles_of_country()
 
+            # option 2b: use static json files in the repo to calculate relevant tiles
             else:
-                # use static json files in the repo to calculate relevant tiles
                 json_file_path = os.path.join(fd_fct.COMMON_DIR, 'json',
                                               const_fct.get_region_of_country(input_argument), input_argument + '.json')
                 self.tiles = fd_fct.read_json_file(json_file_path)
