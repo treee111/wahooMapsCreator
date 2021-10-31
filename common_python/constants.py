@@ -189,6 +189,12 @@ italy_subregions_geofabrik = [
 
 noregion_geofabrik = ['russia', 'asia']
 
+geofabrik_regions = ['africa', 'antarctica', 'asia', 'australia-oceania',
+                     'central-america', 'europe', 'north-america', 'south-america']
+
+block_download = ['dach', 'alps', 'britain-and-ireland', 'south-africa-and-lesotho',
+                  'us-midwest', 'us-northeast', 'us-pacific', 'us-south', 'us-west']
+
 # Tags to keep
 # filtered_tags = ['access', 'admin_level', 'aerialway', 'aeroway', 'barrier',
 #               'boundary', 'bridge', 'highway', 'natural', 'oneway', 'place',
