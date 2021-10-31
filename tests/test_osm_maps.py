@@ -9,6 +9,7 @@ import unittest
 # sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from common_python.osm_maps_functions import OsmMaps
+from common_python.input import InputData
 
 
 class TestOsmMaps(unittest.TestCase):
@@ -17,7 +18,9 @@ class TestOsmMaps(unittest.TestCase):
     """
 
     def setUp(self):
-        self.o_osm_maps = OsmMaps(False)
+        o_input_data = InputData()
+
+        self.o_osm_maps = OsmMaps(o_input_data)
 
         self.file_path_test_json = os.path.join(os.getcwd(), 'tests', 'json')
 
@@ -116,6 +119,7 @@ class TestOsmMaps(unittest.TestCase):
         result = self.o_osm_maps.border_countries
 
         self.assertEqual(result, expected_result)
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -25,15 +25,19 @@ class OsmMaps:
     This is a OSM data class
     """
 
-    def __init__(self, Force_Processing):
+    def __init__(self, oInputData):
         # input parameters
-        self.force_processing = Force_Processing
+        self.force_processing = oInputData.force_processing
         # Number of workers for the Osmosis read binary fast function
         self.workers = '1'
 
         self.tiles = []
         self.border_countries = {}
         self.country_name = ''
+
+        self.o_input_data = oInputData
+        self.o_downloader = Downloader(
+            oInputData.max_days_old, oInputData.force_download)
 
     def process_input(self, input_argument, calc_border_countries):
         """
@@ -66,15 +70,15 @@ class OsmMaps:
         else:
             self.border_countries[self.country_name] = {}
 
-    def check_and_download_files(self, max_days_old, force_download):
+    def check_and_download_files(self):
         """
         trigger check of land_polygons and OSM map files if not existing or are not up-to-date
         """
 
-        o_downloader = Downloader(
-            max_days_old, force_download, self.tiles, self.border_countries)
+        self.o_downloader.tiles_from_json = self.tiles
+        self.o_downloader.border_countries = self.border_countries
 
-        force_processing = o_downloader.check_and_download_files_if_needed()
+        force_processing = self.o_downloader.check_and_download_files_if_needed()
         if force_processing is True:
             self.force_processing = force_processing
 
