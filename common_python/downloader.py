@@ -24,6 +24,53 @@ def older_than_x_days(file_creation_timestamp, max_days_old):
     return bool(file_creation_timestamp < to_old_timestamp)
 
 
+def download_file(target_filepath, url, is_zip):
+    """
+    download given file and eventually unzip it
+    """
+    logging_filename = target_filepath.split(os.sep)[-1]
+    print(f'# Downloading {logging_filename} file')
+    if is_zip:
+        # build target-filepath based on last element of URL
+        last_part = url.rsplit('/', 1)[-1]
+        dl_file_path = os.path.join(fd_fct.COMMON_DL_DIR, last_part)
+        # download URL to file
+        fd_fct.download_url_to_file(url, dl_file_path)
+        # unpack it - should work on macOS and Windows
+        fd_fct.unzip(dl_file_path, fd_fct.COMMON_DL_DIR)
+        # delete .zip file
+        os.remove(dl_file_path)
+    else:
+        # no zipping --> directly download to given target filepath
+        fd_fct.download_url_to_file(url, target_filepath)
+    # Check if file exists (if target file exists)
+    if not os.path.isfile(target_filepath):
+        print(f'! failed to find {target_filepath}')
+        sys.exit()
+    else:
+        print(f'+ Downloaded: {target_filepath}')
+
+
+def download_osm_pbf_file(country):
+    """
+    download a countries' OSM file
+    """
+    print(f'+ Trying to download missing map of {country}.')
+    # get .osm.pbf region of country
+    transl_c = const_fct.translate_country_input_to_geofabrik(country)
+    region = const_fct.get_geofabrik_region_of_country(country)
+    if region != 'no':
+        url = 'https://download.geofabrik.de/' + region + \
+            '/' + transl_c + '-latest.osm.pbf'
+    else:
+        url = 'https://download.geofabrik.de/' + transl_c + '-latest.osm.pbf'
+    # download URL to file
+    map_file_path = os.path.join(
+        fd_fct.MAPS_DIR, f'{transl_c}' + '-latest.osm.pbf')
+    download_file(map_file_path, url, False)
+    return map_file_path
+
+
 class Downloader:
     """
     This is the class to check and download maps / artifacts"
@@ -44,8 +91,8 @@ class Downloader:
 
         if self.check_file(fd_fct.LAND_POLYGONS_PATH) is True or \
                 self.force_download is True:
-            self.download_file(fd_fct.LAND_POLYGONS_PATH,
-                               'https://osmdata.openstreetmap.de/download/land-polygons-split-4326.zip', True)
+            download_file(fd_fct.LAND_POLYGONS_PATH,
+                          'https://osmdata.openstreetmap.de/download/land-polygons-split-4326.zip', True)
             force_processing = True
 
         # logging
@@ -56,7 +103,7 @@ class Downloader:
             for country, item in self.border_countries.items():
                 try:
                     if item['download'] is True:
-                        map_file_path = self.download_osm_pbf_file(country)
+                        map_file_path = download_osm_pbf_file(country)
                         self.border_countries[country] = {
                             'map_file': map_file_path}
                 except KeyError:
@@ -100,38 +147,6 @@ class Downloader:
             print(f'# {logging_filename} file needs to be downloaded')
 
         return need_to_download
-
-    def download_file(self, target_filepath, url, is_zip):
-        """
-        download given file and eventually unzip it
-        """
-
-        logging_filename = target_filepath.rsplit('/', 1)[-1]
-        print(f'# Downloading {logging_filename} file')
-
-        if is_zip:
-            # build target-filepath based on last element of URL
-            last_part = url.rsplit('/', 1)[-1]
-            dl_file_path = os.path.join(fd_fct.COMMON_DL_DIR, last_part)
-
-            # download URL to file
-            fd_fct.download_url_to_file(url, dl_file_path)
-
-            # unpack it - should work on macOS and Windows
-            fd_fct.unzip(dl_file_path, fd_fct.COMMON_DL_DIR)
-
-            # delete .zip file
-            os.remove(dl_file_path)
-        else:
-            # no zipping --> directly download to given target filepath
-            fd_fct.download_url_to_file(url, target_filepath)
-
-        # Check if file exists (if target file exists)
-        if not os.path.isfile(target_filepath):
-            print(f'! failed to find {target_filepath}')
-            sys.exit()
-        else:
-            print(f'+ Downloaded: {target_filepath}')
 
     def check_osm_pbf_file(self):
         """
@@ -178,37 +193,6 @@ class Downloader:
         # self.border_countries = border_countries
 
         return need_to_download
-
-    def download_osm_pbf_file(self, country):
-        """
-        download a countries' OSM file
-        """
-
-        print(f'+ Trying to download missing map of {country}.')
-
-        # get .osm.pbf region of country
-        transl_c = const_fct.translate_country_input_to_geofabrik(country)
-        region = const_fct.get_geofabrik_region_of_country(country)
-
-        if region != 'no':
-            url = 'https://download.geofabrik.de/' + region + \
-                '/' + transl_c + '-latest.osm.pbf'
-        else:
-            url = 'https://download.geofabrik.de/' + transl_c + '-latest.osm.pbf'
-
-        # download URL to file
-        map_file_path = os.path.join(
-            fd_fct.MAPS_DIR, f'{transl_c}' + '-latest.osm.pbf')
-        fd_fct.download_url_to_file(url, map_file_path)
-
-        if not os.path.isfile(map_file_path):
-            print(
-                f'! failed to find or download country: {transl_c}. Input: {country}.')
-            sys.exit()
-        else:
-            print(f'+ Map of {transl_c} downloaded. Input: {country}.')
-
-        return map_file_path
 
     def should_file_be_downloaded(self, file_path):
         """
