@@ -22,7 +22,7 @@ class TestDownloader(unittest.TestCase):
 
     def test_outdated_timestamp(self):
         """
-        Test a outdated timestamp against against 14 days ago
+        Test a outdated timestamp against 14 days ago
         """
 
         past = time.time() - (60 * 60 * 24 * 20)
@@ -32,7 +32,7 @@ class TestDownloader(unittest.TestCase):
 
     def test_outdated_timestamp_2(self):
         """
-        Test a outdated timestamp against against 14 days ago
+        Test a outdated timestamp against 14 days ago
         """
 
         result = older_than_x_days(1601097377.792748, self.max_days_old)
@@ -40,7 +40,7 @@ class TestDownloader(unittest.TestCase):
 
     def test_today_timestamp(self):
         """
-        Test today timestamp against against 14 days ago
+        Test today timestamp against 14 days ago
         """
 
         today = time.time()
