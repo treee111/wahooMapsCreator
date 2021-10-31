@@ -26,8 +26,7 @@ class OsmMaps:
     """
 
     def __init__(self, oInputData):
-        # input parameters
-        self.force_processing = oInputData.force_processing
+        self.force_processing = ''
         # Number of workers for the Osmosis read binary fast function
         self.workers = '1'
 
@@ -79,8 +78,12 @@ class OsmMaps:
         self.o_downloader.border_countries = self.border_countries
 
         force_processing = self.o_downloader.check_and_download_files_if_needed()
-        if force_processing is True:
-            self.force_processing = force_processing
+
+        # if download is needed or force_processing given via input --> force_processing = True
+        if force_processing is True or self.o_input_data.force_processing:
+            self.force_processing = True
+        else:
+            self.force_processing = False
 
     def calc_border_countries(self):
         """
