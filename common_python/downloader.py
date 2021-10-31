@@ -52,7 +52,16 @@ class Downloader:
         print('# check land_polygons.shp file: OK')
 
         if self.check_osm_pbf_file() is True or self.force_download is True:
-            self.download_osm_pbf_file()
+            # trigger download of relevant countries' OSM files
+            for country, item in self.border_countries.items():
+                try:
+                    if item['download'] is True:
+                        map_file_path = self.download_osm_pbf_file(country)
+                        self.border_countries[country] = {
+                            'map_file': map_file_path}
+                except KeyError:
+                    pass
+
             force_processing = True
 
         # logging
@@ -75,8 +84,7 @@ class Downloader:
 
         # Check for expired file and delete it
         try:
-            chg_time = os.path.getmtime(target_filepath)
-            if older_than_x_days(chg_time, self.max_days_old):
+            if self.should_file_be_downloaded(target_filepath):
                 print(f'# Deleting old {logging_filename} file')
                 os.remove(target_filepath)
                 need_to_download = True
@@ -84,7 +92,7 @@ class Downloader:
         except:
             need_to_download = True
 
-        # if land polygons file does not exists --> download
+        # if file does not exists --> download
         if not os.path.exists(target_filepath) or \
                 not os.path.isfile(target_filepath):
             need_to_download = True
@@ -150,8 +158,7 @@ class Downloader:
 
             # delete .osm.pbf file if out of date
             if len(map_file_path) == 1 and os.path.isfile(map_file_path[0]):
-                chg_time = os.path.getmtime(map_file_path[0])
-                if older_than_x_days(chg_time, self.max_days_old) or self.force_download is True:
+                if self.should_file_be_downloaded(map_file_path[0]):
                     print(
                         f'+ mapfile for {transl_c}: deleted. Input: {country}.')
                     os.remove(map_file_path[0])
@@ -172,28 +179,14 @@ class Downloader:
 
         return need_to_download
 
-    def download_osm_pbf_file(self):
-        """
-        trigger download of relevant countries' OSM files
-        """
-
-        for country, item in self.border_countries.items():
-            try:
-                if item['download'] is True:
-                    map_file_path = self.download_map(country)
-                    self.border_countries[country] = {
-                        'map_file': map_file_path}
-            except KeyError:
-                pass
-
-    def download_map(self, country):
+    def download_osm_pbf_file(self, country):
         """
         download a countries' OSM file
         """
 
         print(f'+ Trying to download missing map of {country}.')
 
-        # get Geofabrik region of country
+        # get .osm.pbf region of country
         transl_c = const_fct.translate_country_input_to_geofabrik(country)
         region = const_fct.get_geofabrik_region_of_country(country)
 
@@ -216,3 +209,14 @@ class Downloader:
             print(f'+ Map of {transl_c} downloaded. Input: {country}.')
 
         return map_file_path
+
+    def should_file_be_downloaded(self, file_path):
+        """
+        check if given file should be downloaded
+        - older that max_days old OR
+        - force_download is set
+        """
+
+        chg_time = os.path.getmtime(file_path)
+
+        return bool(older_than_x_days(chg_time, self.max_days_old) or self.force_download is True)
