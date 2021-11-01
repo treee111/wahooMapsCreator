@@ -7,7 +7,8 @@
   - [Authorize Bolt to connect to Windows / macOS](#authorize-bolt-to-connect-to-windows--macos)
     - [BOLT v1](#bolt-v1)
     - [BOLT v2](#bolt-v2)
-  - [Copy files](#copy-files)
+  - [Copy map files](#copy-map-files)
+  - [Copy device theme](#copy-device-theme)
 - [Delete temp-files and Clear Cache](#delete-temp-files-and-clear-cache)
 - [Troubleshooting](#troubleshooting)
 
@@ -16,8 +17,8 @@
 unzip the desired country files
 
 ## install adb
-Windows: you find adb.7z in the Windows-Wahoo-Map-Creator-Osmosis folder
-macOS:
+You can download the lates ADB-tools (included in the SDK Platform Tools) for your OS here:
+https://developer.android.com/studio/releases/platform-tools
 
 ## Authorize Bolt to connect to Windows / macOS
 ### BOLT v1
@@ -35,8 +36,22 @@ adb authorization for Bolt v2:
 3. press the power, up and down buttons at the same time
 4. connect the Bolt to your computer
 
-## Copy files
+## Copy map files
 copy the unzipped map folders to \ELEMNT-BOLT\USB storage\maps\tiles\8\
+
+These tools can be helpful if you want to copy the files with a GUI and not via CLI:
+- Windows: https://github.com/hexadezi/adbGUI
+- macOS: https://www.android.com/filetransfer/
+
+## Copy device theme
+Device themes are described [here](TAGS_ON_MAP_AND_DEVICE.md#Device-Theme)
+A theme can be copied to your device like that:
+- ELEMNT/BOLT 
+  - copy "mapsforge-bolt.xml” of folder `common_resources/theme_adjusted` to `maps/mapsforge-bolt/mapsforge-bolt.xml` (just posted this in the google groups)
+- BOLTv2
+  - copy `assets/maps/vtm-elemnt/vtm-elemnt.xml` from the apk. Modify and copy the theme to `maps/vtm-elemnt/vtm-elemnt.xml`
+- ROAM
+  - copy `mapsforge-bolt.xml` of folder `common_resources/theme_adjusted` to `maps/mapsforge-roam/mapsforge-roam.xml`
 
 # Delete temp-files and Clear Cache
 - delete all files from \ELEMNT-BOLT\USB storage\maps\temp\

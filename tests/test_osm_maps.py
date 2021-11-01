@@ -24,6 +24,7 @@ class TestOsmMaps(unittest.TestCase):
     def test_input_country_malta(self):
         """
         Test "malta" as input to the wahooMapsCreator
+        check, if the given input-parameter is saved to the OsmMaps instance
         """
 
         self.o_osm_maps.process_input('malta', True)
@@ -34,6 +35,7 @@ class TestOsmMaps(unittest.TestCase):
     def test_input_json_file(self):
         """
         Test a json file as input to the wahooMapsCreator
+        check, if the given input-parameter is saved to the OsmMaps instance
         """
 
         json_file_path = os.path.join(
