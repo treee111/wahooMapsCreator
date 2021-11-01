@@ -231,10 +231,17 @@ class OsmMaps:
                 print(
                     f'+ Generate land {tile_count} of {len(self.tiles)} for Coordinates: {tile["x"]},{tile["y"]}')
                 cmd = ['ogr2ogr', '-overwrite', '-skipfailures']
-                cmd.extend(['-spat', f'{tile["left"]-0.1:.6f}',
-                            f'{tile["bottom"]-0.1:.6f}',
-                            f'{tile["right"]+0.1:.6f}',
-                            f'{tile["top"]+0.1:.6f}'])
+                # Try to prevent getting outside of the +/-180 and +/- 90 degrees borders. Normally the +/- 0.1 are there to prevent white lines at border borders.
+                if tile["x"] == 255 or tile["y"] == 255 or tile["x"] == 0 or tile["y"] == 0:
+                    cmd.extend(['-spat', f'{tile["left"]:.6f}',
+                                f'{tile["bottom"]:.6f}',
+                                f'{tile["right"]:.6f}',
+                                f'{tile["top"]:.6f}'])
+                else:
+                    cmd.extend(['-spat', f'{tile["left"]-0.1:.6f}',
+                                f'{tile["bottom"]-0.1:.6f}',
+                                f'{tile["right"]+0.1:.6f}',
+                                f'{tile["top"]+0.1:.6f}'])
                 cmd.append(land_file)
                 cmd.append(fd_fct.LAND_POLYGONS_PATH)
 
@@ -276,14 +283,25 @@ class OsmMaps:
                 with open(os.path.join(fd_fct.TOOLING_DIR, 'sea.osm')) as sea_file:
                     sea_data = sea_file.read()
 
-                    sea_data = sea_data.replace(
-                        '$LEFT', f'{tile["left"]-0.1:.6f}')
-                    sea_data = sea_data.replace(
-                        '$BOTTOM', f'{tile["bottom"]-0.1:.6f}')
-                    sea_data = sea_data.replace(
-                        '$RIGHT', f'{tile["right"]+0.1:.6f}')
-                    sea_data = sea_data.replace(
-                        '$TOP', f'{tile["top"]+0.1:.6f}')
+                    # Try to prevent getting outside of the +/-180 and +/- 90 degrees borders. Normally the +/- 0.1 are there to prevent white lines at tile borders
+                    if tile["x"] == 255 or tile["y"] == 255 or tile["x"] == 0 or tile["y"] == 0:
+                        sea_data = sea_data.replace(
+                            '$LEFT', f'{tile["left"]:.6f}')
+                        sea_data = sea_data.replace(
+                            '$BOTTOM', f'{tile["bottom"]:.6f}')
+                        sea_data = sea_data.replace(
+                            '$RIGHT', f'{tile["right"]:.6f}')
+                        sea_data = sea_data.replace(
+                            '$TOP', f'{tile["top"]:.6f}')
+                    else:
+                        sea_data = sea_data.replace(
+                            '$LEFT', f'{tile["left"]-0.1:.6f}')
+                        sea_data = sea_data.replace(
+                            '$BOTTOM', f'{tile["bottom"]-0.1:.6f}')
+                        sea_data = sea_data.replace(
+                            '$RIGHT', f'{tile["right"]+0.1:.6f}')
+                        sea_data = sea_data.replace(
+                            '$TOP', f'{tile["top"]+0.1:.6f}')
 
                     with open(out_file, 'w') as output_file:
                         output_file.write(sea_data)
