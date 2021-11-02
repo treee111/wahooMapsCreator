@@ -3,6 +3,7 @@ channels:
   - conda-forge
   - defaults
 dependencies:
+  - astroid=2.6.6=py37haa95532_0
   - boost-cpp=1.74.0=h5b4e17d_5
   - brotlipy=0.7.0=py37h2bbff1b_1003
   - bzip2=1.0.8=h8ffe710_4
@@ -12,6 +13,7 @@ dependencies:
   - cffi=1.14.6=py37h2bbff1b_0
   - cfitsio=4.0.0=hd67004f_0
   - charset-normalizer=2.0.4=pyhd3eb1b0_0
+  - colorama=0.4.4=pyhd3eb1b0_0
   - cryptography=35.0.0=py37h71e12ea_0
   - curl=7.79.1=h789b8ee_1
   - expat=2.4.1=h39d44d4_0
@@ -33,10 +35,12 @@ dependencies:
   - icu=69.1=h0e60522_0
   - idna=3.2=pyhd3eb1b0_0
   - intel-openmp=2021.4.0=h57928b3_3556
+  - isort=5.9.3=pyhd3eb1b0_0
   - jbig=2.1=h8d14728_2003
   - jpeg=9d=h8ffe710_0
   - kealib=1.4.14=h8995ca9_3
   - krb5=1.19.2=hbae68bd_2
+  - lazy-object-proxy=1.6.0=py37h2bbff1b_0
   - lcms2=2.12=h2a16943_0
   - lerc=3.0=h0e60522_0
   - libblas=3.9.0=12_win64_mkl
@@ -61,6 +65,7 @@ dependencies:
   - libzip=1.8.0=hfed4ece_1
   - libzlib=1.2.11=h8ffe710_1013
   - lz4-c=1.9.3=h8ffe710_1
+  - mccabe=0.6.1=py37_1
   - mkl=2021.4.0=h0e2418a_729
   - numpy=1.21.3=py37h940b05c_0
   - openjpeg=2.4.0=hb211442_1
@@ -73,6 +78,7 @@ dependencies:
   - postgresql=13.3=h1c22c4f_2
   - proj=8.1.1=h1cfcee9_2
   - pycparser=2.20=py_2
+  - pylint=2.9.6=py37haa95532_1
   - pyopenssl=21.0.0=pyhd3eb1b0_1
   - pysocks=1.7.1=py37_1
   - python=3.7.11=h6244533_0
@@ -84,12 +90,17 @@ dependencies:
   - tbb=2021.4.0=h2d74725_1
   - tiledb=2.3.4=h78dabda_0
   - tk=8.6.11=h8ffe710_1
+  - toml=0.10.2=pyhd3eb1b0_0
+  - typed-ast=1.4.3=py37h2bbff1b_1
+  - typing-extensions=3.10.0.2=hd3eb1b0_0
+  - typing_extensions=3.10.0.2=pyh06a4308_0
   - urllib3=1.26.7=pyhd3eb1b0_0
   - vc=14.2=h21ff451_1
   - vs2015_runtime=14.27.29016=h5e58377_2
   - wheel=0.37.0=pyhd3eb1b0_1
   - win_inet_pton=1.1.0=py37haa95532_0
   - wincertstore=0.2=py37haa95532_2
+  - wrapt=1.12.1=py37he774522_1
   - xerces-c=3.2.3=h0e60522_4
   - xz=5.2.5=h62dcd97_1
   - zlib=1.2.11=h8ffe710_1013
