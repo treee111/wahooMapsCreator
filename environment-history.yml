@@ -6,4 +6,6 @@ dependencies:
   - gdal
   - requests
   - pylint
+  - geojson
+  - shapely
 prefix: c:\Users\bkreusc\Anaconda3\envs\conda-gdal02

@@ -7,9 +7,9 @@ dependencies:
   - boost-cpp=1.74.0=h5b4e17d_5
   - brotlipy=0.7.0=py37h2bbff1b_1003
   - bzip2=1.0.8=h8ffe710_4
-  - ca-certificates=2021.10.26=haa95532_2
+  - ca-certificates=2021.10.8=h5b45459_0
   - cairo=1.16.0=h15b3021_1009
-  - certifi=2021.10.8=py37haa95532_0
+  - certifi=2021.10.8=py37h03978a9_1
   - cffi=1.14.6=py37h2bbff1b_0
   - cfitsio=4.0.0=hd67004f_0
   - charset-normalizer=2.0.4=pyhd3eb1b0_0
@@ -27,6 +27,7 @@ dependencies:
   - freetype=2.10.4=h546665d_1
   - freexl=1.0.6=ha8e266a_0
   - gdal=3.3.3=py37h9ecaa47_3
+  - geojson=2.5.0=py_0
   - geos=3.10.0=h39d44d4_0
   - geotiff=1.7.0=h350af67_3
   - gettext=0.19.8.1=ha2e2712_1008
@@ -69,7 +70,7 @@ dependencies:
   - mkl=2021.4.0=h0e2418a_729
   - numpy=1.21.3=py37h940b05c_0
   - openjpeg=2.4.0=hb211442_1
-  - openssl=1.1.1l=h2bbff1b_0
+  - openssl=1.1.1l=h8ffe710_0
   - pcre=8.45=h0e60522_0
   - pip=21.2.4=py37haa95532_0
   - pixman=0.40.0=h8ffe710_0
@@ -85,6 +86,7 @@ dependencies:
   - python_abi=3.7=2_cp37m
   - requests=2.26.0=pyhd3eb1b0_0
   - setuptools=58.0.4=py37haa95532_0
+  - shapely=1.8.0=py37h5b9d40e_1
   - six=1.16.0=pyhd3eb1b0_0
   - sqlite=3.36.0=h2bbff1b_0
   - tbb=2021.4.0=h2d74725_1
