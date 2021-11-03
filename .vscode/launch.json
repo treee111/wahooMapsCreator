@@ -162,6 +162,38 @@
                 "-md",
                 "100"
             ]
+        },
+        {
+            "name": "test_2_malta",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceRoot}/wahoo_map_creator.py",
+            "console": "integratedTerminal",
+            "args": [
+                "malta",
+                "-tag",
+                "tag-wahoo.xml",
+                "-fp",
+                "-c",
+                "-md",
+                "100"
+            ]
+        },
+        {
+            "name": "test_2_liech",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceRoot}/wahoo_map_creator.py",
+            "console": "integratedTerminal",
+            "args": [
+                "liechtenstein",
+                "-tag",
+                "tag-wahoo.xml",
+                "-fp",
+                "-c",
+                "-md",
+                "100"
+            ]
         }
     ]
 }
