@@ -245,6 +245,9 @@ class OsmMaps:
                 if platform.system() == "Windows":
                     cmd = ['python', os.path.join(fd_fct.TOOLING_DIR,
                                                   'shape2osm.py'), '-l', out_file, land_file]
+                    # new shapefile for python 3 ?!
+                    #   'shape2osm', 'shape2osm.py'), land_file, out_file+'1.osm']
+
                 # Non-Windows
                 else:
                     cmd = ['python3', os.path.join(fd_fct.TOOLING_DIR,
@@ -417,7 +420,7 @@ class OsmMaps:
                     cmd.extend(['--rx', 'file='+os.path.join(fd_fct.OUTPUT_DIR,
                                                              f'{tile["x"]}', f'{tile["y"]}', 'sea.osm'), '--s', '--m'])
                     cmd.extend(['--tag-transform', 'file=' + os.path.join(fd_fct.COMMON_DIR,
-                               'tunnel-transform.xml'), '--wb', out_file, 'omitmetadata=true'])
+                                                                          'tunnel-transform.xml'), '--wb', out_file, 'omitmetadata=true'])
 
                 # Non-Windows
                 else:
@@ -631,7 +634,7 @@ class OsmMaps:
             cmd = ['zip', '-r', self.country_name + '-maps.zip']
 
         cmd.append(os.path.join(f'{fd_fct.OUTPUT_DIR}',
-                   f'{self.country_name}-maps'))
+                                f'{self.country_name}-maps'))
 
         subprocess.run(cmd, cwd=fd_fct.OUTPUT_DIR, check=True)
 

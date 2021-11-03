@@ -194,6 +194,28 @@
                 "-md",
                 "100"
             ]
+        },
+        {
+            "name": "old shape2osm",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceRoot}/tooling/shape2osm.py",
+            "console": "integratedTerminal",
+            "args": [
+                "C:\\VSCode\\python\\wahooMapsCreator\\output\\138\\100\\land.shp",
+                "C:\\VSCode\\python\\wahooMapsCreator\\output\\138\\100\\land1.osm"
+            ]
+        },
+        {
+            "name": "new shape2osm",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceRoot}/tooling/shape2osm/shape2osm.py",
+            "console": "integratedTerminal",
+            "args": [
+                "C:\\VSCode\\python\\wahooMapsCreator\\output\\138\\100\\land.shp",
+                "C:\\VSCode\\python\\wahooMapsCreator\\output\\138\\100\\land1.osm"
+            ]
         }
     ]
 }
