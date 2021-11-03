@@ -38,6 +38,9 @@ Follow the Quick Start guide depending on your OS:
 - [Quick Start Guide for Windows](docs/QUICKSTART_WINDOWS.md)
 - [Quick Start Guide for macOS](docs/QUICKSTART_MACOS.md)
 
+Or use Anaconda to create a Python environment
+- [Quick Start Guide for Anaconda](docs/QUICKSTART_ANACONDA.md)
+
 ### Get wahooMapsCreator
 Download the latest Release from the ["Releases" Section](https://github.com/treee111/wahooMapsCreator/releases) and Save the folder on your drive. You can also clone the repository and have the latest coding.
 
