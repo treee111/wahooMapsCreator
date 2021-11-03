@@ -8,4 +8,5 @@ dependencies:
   - pylint
   - geojson
   - shapely
+  - autopep8
 prefix: c:\Users\bkreusc\Anaconda3\envs\conda-gdal02

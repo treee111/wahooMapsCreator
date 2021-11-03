@@ -1,15 +1,17 @@
 name: conda-gdal02
 channels:
   - conda-forge
+  - anaconda
   - defaults
 dependencies:
   - astroid=2.6.6=py37haa95532_0
+  - autopep8=1.5.4=py_0
   - boost-cpp=1.74.0=h5b4e17d_5
   - brotlipy=0.7.0=py37h2bbff1b_1003
   - bzip2=1.0.8=h8ffe710_4
-  - ca-certificates=2021.10.8=h5b45459_0
+  - ca-certificates=2020.10.14=0
   - cairo=1.16.0=h15b3021_1009
-  - certifi=2021.10.8=py37h03978a9_1
+  - certifi=2020.6.20=py37_0
   - cffi=1.14.6=py37h2bbff1b_0
   - cfitsio=4.0.0=hd67004f_0
   - charset-normalizer=2.0.4=pyhd3eb1b0_0
@@ -78,6 +80,7 @@ dependencies:
   - poppler-data=0.4.11=hd8ed1ab_0
   - postgresql=13.3=h1c22c4f_2
   - proj=8.1.1=h1cfcee9_2
+  - pycodestyle=2.6.0=py_0
   - pycparser=2.20=py_2
   - pylint=2.9.6=py37haa95532_1
   - pyopenssl=21.0.0=pyhd3eb1b0_1
