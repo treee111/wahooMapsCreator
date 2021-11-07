@@ -10,6 +10,7 @@ import time
 # sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from common_python.downloader import older_than_x_days
+from common_python.downloader import download_file
 from common_python.downloader import Downloader
 from common_python import file_directory_functions as fd_fct
 
@@ -76,7 +77,7 @@ class TestDownloader(unittest.TestCase):
         Test the download of land poligons file via URL
         """
         path = os.path.join(fd_fct.COMMON_DL_DIR, 'geofabrik.json')
-        self.o_downloader.download_file(
+        download_file(
             path, 'https://download.geofabrik.de/index-v1.json', False)
 
 
