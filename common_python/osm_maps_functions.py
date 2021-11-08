@@ -179,6 +179,7 @@ class OsmMaps:
                     cmd.append(val['map_file'])
                     cmd.extend(constants.FILTERED_TAGS)
                     cmd.extend(['-o', out_file_o5m_filtered])
+                    cmd.append('--overwrite')
 
                     result = subprocess.run(cmd, check=True)
                     if result.returncode != 0:
@@ -189,6 +190,7 @@ class OsmMaps:
                     cmd.append(val['map_file'])
                     cmd.extend(constants.FILTERED_TAGS_NAMES)
                     cmd.extend(['-o', out_file_o5m_filtered_names])
+                    cmd.append('--overwrite')
 
                     result = subprocess.run(cmd, check=True)
                     if result.returncode != 0:
