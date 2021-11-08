@@ -32,9 +32,15 @@ class InputData():
         self.only_merge = False
 
         self.tag_wahoo_xml = "tag-wahoo.xml"
-        # Keep (True) or delete (False) the /output/country/
-        # and /output/country-maps map folders after compression
+        # Folder /output/country and /output/country-maps map folders
+        # True - Keep them after compression
+        # False - Delete them after compression
         self.keep_map_folders = False
+
+        # Way of calculating the relevant tiles for given input (country)
+        # True - Use geofabrik index-v1.json file
+        # False - Use .json files from folder /common_resources/json
+        self.geofabrik_tiles = False
 
 
 class Input(tk.Tk):
@@ -145,6 +151,9 @@ class Input(tk.Tk):
         # option to keep the /output/country/ and /output/country-maps folders in the output
         parser.add_argument('-km', '--keep_map_folders', action='store_true',
                             help="keep the country and country-maps folders in the output")
+        # option to calculate tiles to process based on Geofabrik index-v1.json file
+        parser.add_argument('-gt', '--geofabrik_tiles', action='store_true',
+                            help="calculate tiles based on geofabrik index-v1.json file")
 
         # set instance-attributes of class
         # try:
@@ -161,6 +170,7 @@ class Input(tk.Tk):
         o_input_data.tag_wahoo_xml = args.tag_wahoo_xml
         o_input_data.only_merge = args.only_merge
         o_input_data.keep_map_folders = args.keep_map_folders
+        o_input_data.geofabrik_tiles = args.geofabrik_tiles
 
         return o_input_data
 

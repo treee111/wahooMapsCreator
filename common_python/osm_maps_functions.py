@@ -18,6 +18,7 @@ from common_python import constants
 from common_python import constants_functions as const_fct
 
 from common_python.downloader import Downloader
+from common_python.geofabrik import Geofabrik
 
 
 class OsmMaps:
@@ -55,9 +56,18 @@ class OsmMaps:
 
         # option 2: input a country as parameter, e.g. germany
         else:
-            json_file_path = os.path.join(fd_fct.COMMON_DIR, 'json',
-                                          const_fct.get_region_of_country(input_argument), input_argument + '.json')
-            self.tiles = fd_fct.read_json_file(json_file_path)
+            # option 2a: use Geofabrik-URL to calculate the relevant tiles
+            if self.o_input_data.geofabrik_tiles:
+                self.force_processing = self.o_downloader.check_and_download_geofabrik_if_needed()
+
+                o_geofabrik = Geofabrik(input_argument)
+                self.tiles = o_geofabrik.get_tiles_of_country()
+
+            # option 2b: use static json files in the repo to calculate relevant tiles
+            else:
+                json_file_path = os.path.join(fd_fct.COMMON_DIR, 'json',
+                                              const_fct.get_region_of_country(input_argument), input_argument + '.json')
+                self.tiles = fd_fct.read_json_file(json_file_path)
 
             # country name is the input argument
             self.country_name = input_argument
@@ -80,7 +90,7 @@ class OsmMaps:
         force_processing = self.o_downloader.check_and_download_files_if_needed()
 
         # if download is needed or force_processing given via input --> force_processing = True
-        if force_processing is True or self.o_input_data.force_processing:
+        if force_processing or self.o_input_data.force_processing or self.force_processing:
             self.force_processing = True
         else:
             self.force_processing = False
@@ -235,6 +245,9 @@ class OsmMaps:
                 if platform.system() == "Windows":
                     cmd = ['python', os.path.join(fd_fct.TOOLING_DIR,
                                                   'shape2osm.py'), '-l', out_file, land_file]
+                    # new shapefile for python 3 ?!
+                    #   'shape2osm', 'shape2osm.py'), land_file, out_file+'1.osm']
+
                 # Non-Windows
                 else:
                     cmd = ['python3', os.path.join(fd_fct.TOOLING_DIR,
@@ -407,7 +420,7 @@ class OsmMaps:
                     cmd.extend(['--rx', 'file='+os.path.join(fd_fct.OUTPUT_DIR,
                                                              f'{tile["x"]}', f'{tile["y"]}', 'sea.osm'), '--s', '--m'])
                     cmd.extend(['--tag-transform', 'file=' + os.path.join(fd_fct.COMMON_DIR,
-                               'tunnel-transform.xml'), '--wb', out_file, 'omitmetadata=true'])
+                                                                          'tunnel-transform.xml'), '--wb', out_file, 'omitmetadata=true'])
 
                 # Non-Windows
                 else:
@@ -621,7 +634,7 @@ class OsmMaps:
             cmd = ['zip', '-r', self.country_name + '-maps.zip']
 
         cmd.append(os.path.join(f'{fd_fct.OUTPUT_DIR}',
-                   f'{self.country_name}-maps'))
+                                f'{self.country_name}-maps'))
 
         subprocess.run(cmd, cwd=fd_fct.OUTPUT_DIR, check=True)
 

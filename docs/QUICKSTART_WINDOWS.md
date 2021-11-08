@@ -19,7 +19,9 @@
 	
 1c. Reboot Windows to activate the path
 
-1d. Run "python -m pip install requests" from cmd (Windows+R, cmd)
+1d. Install additional Python modules
+    Using cmd (Windows+R, cmd), move to the root-folder of wahooMapsCreator and install required Python modules:
+    `python -m pip install -r requirements.txt`
 
 
 ## GDAL - The Geospatial Data Abstraction Library
