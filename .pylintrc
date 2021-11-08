@@ -12,3 +12,4 @@
 # disable=line-too-long
 
 #import-error, wrong-import-position
+disable=import-error
