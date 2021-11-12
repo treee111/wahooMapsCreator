@@ -18,6 +18,7 @@ from common_python import constants
 from common_python import constants_functions as const_fct
 
 from common_python.downloader import Downloader
+from common_python.geofabrik import Geofabrik
 
 
 class OsmMaps:
@@ -25,15 +26,18 @@ class OsmMaps:
     This is a OSM data class
     """
 
-    def __init__(self, Force_Processing):
-        # input parameters
-        self.force_processing = Force_Processing
+    def __init__(self, oInputData):
+        self.force_processing = ''
         # Number of workers for the Osmosis read binary fast function
         self.workers = '1'
 
         self.tiles = []
         self.border_countries = {}
         self.country_name = ''
+
+        self.o_input_data = oInputData
+        self.o_downloader = Downloader(
+            oInputData.max_days_old, oInputData.force_download)
 
     def process_input(self, input_argument, calc_border_countries):
         """
@@ -52,9 +56,18 @@ class OsmMaps:
 
         # option 2: input a country as parameter, e.g. germany
         else:
-            json_file_path = os.path.join(fd_fct.COMMON_DIR, 'json',
-                                          const_fct.get_region_of_country(input_argument), input_argument + '.json')
-            self.tiles = fd_fct.read_json_file(json_file_path)
+            # option 2a: use Geofabrik-URL to calculate the relevant tiles
+            if self.o_input_data.geofabrik_tiles:
+                self.force_processing = self.o_downloader.check_and_download_geofabrik_if_needed()
+
+                o_geofabrik = Geofabrik(input_argument)
+                self.tiles = o_geofabrik.get_tiles_of_country()
+
+            # option 2b: use static json files in the repo to calculate relevant tiles
+            else:
+                json_file_path = os.path.join(fd_fct.COMMON_DIR, 'json',
+                                              const_fct.get_region_of_country(input_argument), input_argument + '.json')
+                self.tiles = fd_fct.read_json_file(json_file_path)
 
             # country name is the input argument
             self.country_name = input_argument
@@ -66,17 +79,21 @@ class OsmMaps:
         else:
             self.border_countries[self.country_name] = {}
 
-    def check_and_download_files(self, max_days_old, force_download):
+    def check_and_download_files(self):
         """
         trigger check of land_polygons and OSM map files if not existing or are not up-to-date
         """
 
-        o_downloader = Downloader(
-            max_days_old, force_download, self.tiles, self.border_countries)
+        self.o_downloader.tiles_from_json = self.tiles
+        self.o_downloader.border_countries = self.border_countries
 
-        force_processing = o_downloader.check_and_download_files_if_needed()
-        if force_processing is True:
-            self.force_processing = force_processing
+        force_processing = self.o_downloader.check_and_download_files_if_needed()
+
+        # if download is needed or force_processing given via input --> force_processing = True
+        if force_processing or self.o_input_data.force_processing or self.force_processing:
+            self.force_processing = True
+        else:
+            self.force_processing = False
 
     def calc_border_countries(self):
         """
@@ -172,6 +189,7 @@ class OsmMaps:
                     cmd.append(val['map_file'])
                     cmd.extend(constants.FILTERED_TAGS)
                     cmd.extend(['-o', out_file_o5m_filtered])
+                    cmd.append('--overwrite')
 
                     result = subprocess.run(cmd, check=True)
                     if result.returncode != 0:
@@ -182,6 +200,7 @@ class OsmMaps:
                     cmd.append(val['map_file'])
                     cmd.extend(constants.FILTERED_TAGS_NAMES)
                     cmd.extend(['-o', out_file_o5m_filtered_names])
+                    cmd.append('--overwrite')
 
                     result = subprocess.run(cmd, check=True)
                     if result.returncode != 0:
@@ -212,10 +231,17 @@ class OsmMaps:
                 print(
                     f'+ Generate land {tile_count} of {len(self.tiles)} for Coordinates: {tile["x"]},{tile["y"]}')
                 cmd = ['ogr2ogr', '-overwrite', '-skipfailures']
-                cmd.extend(['-spat', f'{tile["left"]-0.1:.6f}',
-                            f'{tile["bottom"]-0.1:.6f}',
-                            f'{tile["right"]+0.1:.6f}',
-                            f'{tile["top"]+0.1:.6f}'])
+                # Try to prevent getting outside of the +/-180 and +/- 90 degrees borders. Normally the +/- 0.1 are there to prevent white lines at border borders.
+                if tile["x"] == 255 or tile["y"] == 255 or tile["x"] == 0 or tile["y"] == 0:
+                    cmd.extend(['-spat', f'{tile["left"]:.6f}',
+                                f'{tile["bottom"]:.6f}',
+                                f'{tile["right"]:.6f}',
+                                f'{tile["top"]:.6f}'])
+                else:
+                    cmd.extend(['-spat', f'{tile["left"]-0.1:.6f}',
+                                f'{tile["bottom"]-0.1:.6f}',
+                                f'{tile["right"]+0.1:.6f}',
+                                f'{tile["top"]+0.1:.6f}'])
                 cmd.append(land_file)
                 cmd.append(fd_fct.LAND_POLYGONS_PATH)
 
@@ -226,6 +252,9 @@ class OsmMaps:
                 if platform.system() == "Windows":
                     cmd = ['python', os.path.join(fd_fct.TOOLING_DIR,
                                                   'shape2osm.py'), '-l', out_file, land_file]
+                    # new shapefile for python 3 ?!
+                    #   'shape2osm', 'shape2osm.py'), land_file, out_file+'1.osm']
+
                 # Non-Windows
                 else:
                     cmd = ['python3', os.path.join(fd_fct.TOOLING_DIR,
@@ -254,14 +283,25 @@ class OsmMaps:
                 with open(os.path.join(fd_fct.TOOLING_DIR, 'sea.osm')) as sea_file:
                     sea_data = sea_file.read()
 
-                    sea_data = sea_data.replace(
-                        '$LEFT', f'{tile["left"]-0.1:.6f}')
-                    sea_data = sea_data.replace(
-                        '$BOTTOM', f'{tile["bottom"]-0.1:.6f}')
-                    sea_data = sea_data.replace(
-                        '$RIGHT', f'{tile["right"]+0.1:.6f}')
-                    sea_data = sea_data.replace(
-                        '$TOP', f'{tile["top"]+0.1:.6f}')
+                    # Try to prevent getting outside of the +/-180 and +/- 90 degrees borders. Normally the +/- 0.1 are there to prevent white lines at tile borders
+                    if tile["x"] == 255 or tile["y"] == 255 or tile["x"] == 0 or tile["y"] == 0:
+                        sea_data = sea_data.replace(
+                            '$LEFT', f'{tile["left"]:.6f}')
+                        sea_data = sea_data.replace(
+                            '$BOTTOM', f'{tile["bottom"]:.6f}')
+                        sea_data = sea_data.replace(
+                            '$RIGHT', f'{tile["right"]:.6f}')
+                        sea_data = sea_data.replace(
+                            '$TOP', f'{tile["top"]:.6f}')
+                    else:
+                        sea_data = sea_data.replace(
+                            '$LEFT', f'{tile["left"]-0.1:.6f}')
+                        sea_data = sea_data.replace(
+                            '$BOTTOM', f'{tile["bottom"]-0.1:.6f}')
+                        sea_data = sea_data.replace(
+                            '$RIGHT', f'{tile["right"]+0.1:.6f}')
+                        sea_data = sea_data.replace(
+                            '$TOP', f'{tile["top"]+0.1:.6f}')
 
                     with open(out_file, 'w') as output_file:
                         output_file.write(sea_data)
@@ -398,7 +438,7 @@ class OsmMaps:
                     cmd.extend(['--rx', 'file='+os.path.join(fd_fct.OUTPUT_DIR,
                                                              f'{tile["x"]}', f'{tile["y"]}', 'sea.osm'), '--s', '--m'])
                     cmd.extend(['--tag-transform', 'file=' + os.path.join(fd_fct.COMMON_DIR,
-                               'tunnel-transform.xml'), '--wb', out_file, 'omitmetadata=true'])
+                                                                          'tunnel-transform.xml'), '--wb', out_file, 'omitmetadata=true'])
 
                 # Non-Windows
                 else:
@@ -612,7 +652,7 @@ class OsmMaps:
             cmd = ['zip', '-r', self.country_name + '-maps.zip']
 
         cmd.append(os.path.join(f'{fd_fct.OUTPUT_DIR}',
-                   f'{self.country_name}-maps'))
+                                f'{self.country_name}-maps'))
 
         subprocess.run(cmd, cwd=fd_fct.OUTPUT_DIR, check=True)
 

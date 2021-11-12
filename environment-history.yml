@@ -1,0 +1,13 @@
+name: conda-gdal02
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.7
+  - gdal
+  - requests
+  - pylint
+  - geojson
+  - shapely
+  - autopep8
+prefix: c:\Users\bkreusc\Anaconda3\envs\conda-gdal02
