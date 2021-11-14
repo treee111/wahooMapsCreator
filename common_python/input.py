@@ -60,25 +60,6 @@ class Input(tk.Tk):
             self.gui_mode = True
 
             tk.Tk.__init__(self, *args, **kwargs)
-
-            # self.geometry("420x360")
-            self.title("Wahoo map creator")
-            self.configure(bg="white")
-            self.option_add("*Font", "Calibri 16")
-
-            container = tk.Frame(self)
-            container.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
-
-            self.first = ComboboxesEntryField(
-                container, self.o_input_data.max_days_old)
-            self.first.pack(side=tk.TOP, fill=tk.X)
-
-            self.third = Checkbuttons(
-                container, self.o_input_data, controller=self)
-            self.third.pack(side=tk.TOP, fill=tk.X)
-
-            self.four = Buttons(container, controller=self)
-            self.four.pack(side=tk.TOP, fill=tk.X)
         else:
             self.gui_mode = False
 
@@ -86,10 +67,36 @@ class Input(tk.Tk):
         """
         start GUI
         """
+        self.build_gui()
+
         # start GUI
         self.mainloop()
 
         return self.o_input_data
+
+    def build_gui(self):
+        """
+        builds GUI consisting of several parts
+        """
+        # build GUI
+        # self.geometry("420x360")
+        self.title("Wahoo map creator")
+        self.configure(bg="white")
+        self.option_add("*Font", "Calibri 16")
+
+        container = tk.Frame(self)
+        container.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
+
+        self.first = ComboboxesEntryField(
+            container, self.o_input_data.max_days_old)
+        self.first.pack(side=tk.TOP, fill=tk.X)
+
+        self.third = Checkbuttons(
+            container, self.o_input_data, controller=self)
+        self.third.pack(side=tk.TOP, fill=tk.X)
+
+        self.four = Buttons(container, controller=self)
+        self.four.pack(side=tk.TOP, fill=tk.X)
 
     def handle_create_map(self, event):
         """
