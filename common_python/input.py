@@ -50,37 +50,37 @@ class Input(tk.Tk):
     """
 
     def __init__(self, *args, **kwargs):
-        if len(sys.argv) == 1:
-            self.gui_mode = True
-        else:
-            self.gui_mode = False
-
         self.o_input_data = InputData()
 
         if 'microsoft' in uname().release:
             self.gui_mode = False
             return
 
-        tk.Tk.__init__(self, *args, **kwargs)
+        if len(sys.argv) == 1:
+            self.gui_mode = True
 
-        # self.geometry("420x360")
-        self.title("Wahoo map creator")
-        self.configure(bg="white")
-        self.option_add("*Font", "Calibri 16")
+            tk.Tk.__init__(self, *args, **kwargs)
 
-        container = tk.Frame(self)
-        container.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
+            # self.geometry("420x360")
+            self.title("Wahoo map creator")
+            self.configure(bg="white")
+            self.option_add("*Font", "Calibri 16")
 
-        self.first = ComboboxesEntryField(
-            container, self.o_input_data.max_days_old)
-        self.first.pack(side=tk.TOP, fill=tk.X)
+            container = tk.Frame(self)
+            container.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
 
-        self.third = Checkbuttons(
-            container, self.o_input_data, controller=self)
-        self.third.pack(side=tk.TOP, fill=tk.X)
+            self.first = ComboboxesEntryField(
+                container, self.o_input_data.max_days_old)
+            self.first.pack(side=tk.TOP, fill=tk.X)
 
-        self.four = Buttons(container, controller=self)
-        self.four.pack(side=tk.TOP, fill=tk.X)
+            self.third = Checkbuttons(
+                container, self.o_input_data, controller=self)
+            self.third.pack(side=tk.TOP, fill=tk.X)
+
+            self.four = Buttons(container, controller=self)
+            self.four.pack(side=tk.TOP, fill=tk.X)
+        else:
+            self.gui_mode = False
 
     def start_gui(self):
         """
