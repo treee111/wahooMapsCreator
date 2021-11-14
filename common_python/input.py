@@ -6,6 +6,7 @@ functions and object for processing input via CLI and GUI
 # import official python packages
 import argparse
 import sys
+from platform import uname
 
 # for gui
 import tkinter as tk
@@ -55,6 +56,10 @@ class Input(tk.Tk):
             self.gui_mode = False
 
         self.o_input_data = InputData()
+
+        if 'microsoft' in uname().release:
+            self.gui_mode = False
+            return
 
         tk.Tk.__init__(self, *args, **kwargs)
 
