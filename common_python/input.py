@@ -50,6 +50,8 @@ class Input(tk.Tk):
     """
 
     def __init__(self, *args, **kwargs):
+        self.o_input_data = InputData()
+
         if 'microsoft' in uname().release:
             self.gui_mode = False
             return
@@ -60,8 +62,6 @@ class Input(tk.Tk):
             tk.Tk.__init__(self, *args, **kwargs)
         else:
             self.gui_mode = False
-
-        self.o_input_data = InputData()
 
     def start_gui(self):
         """
