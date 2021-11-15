@@ -50,19 +50,35 @@ class Input(tk.Tk):
     """
 
     def __init__(self, *args, **kwargs):
+        if 'microsoft' in uname().release:
+            self.gui_mode = False
+            return
+
         if len(sys.argv) == 1:
             self.gui_mode = True
+
+            tk.Tk.__init__(self, *args, **kwargs)
         else:
             self.gui_mode = False
 
         self.o_input_data = InputData()
 
-        if 'microsoft' in uname().release:
-            self.gui_mode = False
-            return
+    def start_gui(self):
+        """
+        start GUI
+        """
+        self.build_gui()
 
-        tk.Tk.__init__(self, *args, **kwargs)
+        # start GUI
+        self.mainloop()
 
+        return self.o_input_data
+
+    def build_gui(self):
+        """
+        builds GUI consisting of several parts
+        """
+        # build GUI
         # self.geometry("420x360")
         self.title("Wahoo map creator")
         self.configure(bg="white")
@@ -81,15 +97,6 @@ class Input(tk.Tk):
 
         self.four = Buttons(container, controller=self)
         self.four.pack(side=tk.TOP, fill=tk.X)
-
-    def start_gui(self):
-        """
-        start GUI
-        """
-        # start GUI
-        self.mainloop()
-
-        return self.o_input_data
 
     def handle_create_map(self, event):
         """
