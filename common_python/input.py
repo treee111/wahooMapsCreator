@@ -113,14 +113,21 @@ class Input(tk.Tk):
         """
         run when Button "Create" is pressed
         """
-        self.o_input_data.region = self.first.cb_continent.get().replace("-", "")
-        self.o_input_data.country = self.first.cb_country.get()
-        self.o_input_data.max_days_old = int(self.first.input_maxdays.get())
+        # get tab1 using "name" of the tkinker objects
+        tab1 = self.children["notebook"].children["tab1"]
 
-        self.o_input_data.force_download = self.third.checkb_download.get()
-        self.o_input_data.force_processing = self.third.checkb_processing.get()
-        self.o_input_data.border_countries = self.third.checkb_border_countries.get()
-        self.o_input_data.save_cruiser = self.third.checkb_save_cruiser.get()
+        # you can get children of tkinker objects using ".winfo_children()"
+        # other possibility for the above tab1 assignment:
+        # tab1 = self.winfo_children()[0].winfo_children()[0]
+
+        self.o_input_data.region = tab1.first.cb_continent.get().replace("-", "")
+        self.o_input_data.country = tab1.first.cb_country.get()
+        self.o_input_data.max_days_old = int(tab1.first.input_maxdays.get())
+
+        self.o_input_data.force_download = tab1.third.checkb_download.get()
+        self.o_input_data.force_processing = tab1.third.checkb_processing.get()
+        self.o_input_data.border_countries = tab1.third.checkb_border_countries.get()
+        self.o_input_data.save_cruiser = tab1.third.checkb_save_cruiser.get()
 
         self.destroy()
 
@@ -128,10 +135,12 @@ class Input(tk.Tk):
         """
         switch edit-mode of max-days field
         """
-        if self.first.en_max_days_old['state'] == tk.NORMAL:
-            self.first.en_max_days_old.configure(state=tk.DISABLED)
+        tab1 = self.children["notebook"].children["tab1"]
+
+        if tab1.first.en_max_days_old['state'] == tk.NORMAL:
+            tab1.first.en_max_days_old.configure(state=tk.DISABLED)
         else:
-            self.first.en_max_days_old.configure(state=tk.NORMAL)
+            tab1.first.en_max_days_old.configure(state=tk.NORMAL)
 
     def cli_arguments(self):
         """
