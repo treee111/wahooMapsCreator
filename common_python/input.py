@@ -82,21 +82,32 @@ class Input(tk.Tk):
         # self.geometry("420x360")
         self.title("Wahoo map creator")
         self.configure(bg="white")
-        self.option_add("*Font", "Calibri 16")
 
-        container = tk.Frame(self)
-        container.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
+        # create notebook + tabs
+        tab_control = ttk.Notebook(self, name="notebook")
+        tab1 = tk.Frame(tab_control, name="tab1")
+        tab2 = tk.Frame(tab_control)
 
-        self.first = ComboboxesEntryField(
-            container, self.o_input_data.max_days_old)
-        self.first.pack(side=tk.TOP, fill=tk.X)
+        # add tabs to notebook & position
+        tab_control.add(tab1, text="General settings")
+        tab_control.add(tab2, text="Advanced settings")
+        tab_control.pack(expand=1, fill="both")
 
-        self.third = Checkbuttons(
-            container, self.o_input_data, controller=self)
-        self.third.pack(side=tk.TOP, fill=tk.X)
+        # content of 1. tab
+        tab1.first = ComboboxesEntryField(
+            tab1, self.o_input_data.max_days_old)
+        tab1.first.pack(side=tk.TOP, fill=tk.X)
 
-        self.four = Buttons(container, controller=self)
-        self.four.pack(side=tk.TOP, fill=tk.X)
+        tab1.third = Checkbuttons(
+            tab1, self.o_input_data, controller=self)
+        tab1.third.pack(side=tk.TOP, fill=tk.X)
+
+        tab1.four = Buttons(tab1, controller=self)
+        tab1.four.pack(side=tk.TOP, fill=tk.X)
+
+        # content of 2. tab
+        tk.Label(tab2, text="This is the second tag!").grid(
+            column=0, row=0, padx=30, pady=30)
 
     def handle_create_map(self, event):
         """
