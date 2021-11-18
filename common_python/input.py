@@ -22,7 +22,6 @@ class InputData():
     """
 
     def __init__(self):
-        self.region = ""
         self.country = ""
         self.max_days_old = 14
 
@@ -120,7 +119,6 @@ class Input(tk.Tk):
         # other possibility for the above tab1 assignment:
         # tab1 = self.winfo_children()[0].winfo_children()[0]
 
-        self.o_input_data.region = tab1.first.cb_continent.get().replace("-", "")
         self.o_input_data.country = tab1.first.cb_country.get()
         self.o_input_data.max_days_old = int(tab1.first.input_maxdays.get())
 
