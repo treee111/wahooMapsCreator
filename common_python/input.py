@@ -16,6 +16,18 @@ from tkinter import ttk
 from common_python import constants
 
 
+def create_checkbox(self, default_value, description, row):
+    bool_var = tk.BooleanVar()
+    bool_var.set(default_value)
+
+    # set checkbutton "anonymous". bool_var is later accessed to get the checkbox-value
+    self.check_button = tk.Checkbutton(self, text=description,
+                                       var=bool_var)
+    self.check_button.grid(column=0, row=row, sticky=tk.W, padx=15, pady=5)
+
+    return bool_var
+
+
 class InputData():
     """
     object with all parameters to process maps and default values
@@ -128,13 +140,13 @@ class Input(tk.Tk):
         self.o_input_data.max_days_old = int(tab1.first.input_maxdays.get())
 
         self.o_input_data.force_download = tab1.third.checkb_download.get()
-        self.o_input_data.force_processing = tab1.third.checkb_processing.get()
-        self.o_input_data.border_countries = tab1.third.checkb_border_countries.get()
-        self.o_input_data.geofabrik_tiles = tab1.third.checkb_geofabrik_tiles.get()
+        self.o_input_data.force_processing = tab1.third.checkb_processing_val.get()
+        self.o_input_data.border_countries = tab1.third.checkb_border_countries_val.get()
+        self.o_input_data.geofabrik_tiles = tab1.third.checkb_geofabrik_tiles_val.get()
 
-        self.o_input_data.only_merge = tab2.first.checkb_only_merge.get()
-        self.o_input_data.keep_map_folders = tab2.first.checkb_keep_map_folders.get()
-        self.o_input_data.save_cruiser = tab2.first.checkb_save_cruiser.get()
+        self.o_input_data.only_merge = tab2.first.checkb_only_merge_val.get()
+        self.o_input_data.keep_map_folders = tab2.first.checkb_keep_map_folders_val.get()
+        self.o_input_data.save_cruiser = tab2.first.checkb_save_cruiser_val.get()
 
         # get text without \n in the end
         self.o_input_data.tag_wahoo_xml = tab2.second.text_tag_wahoo_xml.get(
@@ -287,9 +299,6 @@ class Checkbuttons_tab1(tk.Frame):
         tk.Frame.__init__(self, parent)  # , bg="red"
         self.controller = controller
 
-        self.checkb_border_countries = tk.BooleanVar()
-        self.checkb_border_countries.set(oInputData.border_countries)
-
         self.checkb_download = tk.BooleanVar()
         self.checkb_download.set(oInputData.force_download)
 
@@ -298,29 +307,14 @@ class Checkbuttons_tab1(tk.Frame):
         self.chk_force_download.bind(
             "<Button-1>", self.controller.switch_reload)
 
-        self.checkb_processing = tk.BooleanVar()
-        self.checkb_processing.set(oInputData.force_processing)
-
-        self.checkb_geofabrik_tiles = tk.BooleanVar()
-        self.checkb_geofabrik_tiles.set(oInputData.geofabrik_tiles)
-
-        self.chk_border_countries = tk.Checkbutton(self, text="Process border countries",
-                                                   var=self.checkb_border_countries)
-
-        self.chk_force_processing = tk.Checkbutton(self, text="Force processing",
-                                                   var=self.checkb_processing)
-
-        self.chk_geofabrik_tiles = tk.Checkbutton(self, text="Use Geofabrik file for tiles",
-                                                  var=self.checkb_geofabrik_tiles)
-
-        self.chk_border_countries.grid(
-            column=0, row=0, sticky=tk.W, padx=15, pady=5)
+        self.checkb_border_countries_val = create_checkbox(self, oInputData.border_countries,
+                                                           "Process border countries", 0)
         self.chk_force_download.grid(
             column=0, row=1, sticky=tk.W, padx=15, pady=5)
-        self.chk_force_processing.grid(
-            column=0, row=2, sticky=tk.W, padx=15, pady=5)
-        self.chk_geofabrik_tiles.grid(column=0, row=3, columnspan=2, sticky=tk.W,
-                                      padx=15, pady=5)
+        self.checkb_processing_val = create_checkbox(self, oInputData.force_processing,
+                                                     "Force processing", 2)
+        self.checkb_geofabrik_tiles_val = create_checkbox(self, oInputData.geofabrik_tiles,
+                                                          "Use Geofabrik file for tiles", 3)
 
 
 class Buttons(tk.Frame):
@@ -363,29 +357,9 @@ class Checkbuttons_tab2(tk.Frame):
     def __init__(self, parent, oInputData, controller):
         tk.Frame.__init__(self, parent)
 
-        self.checkb_only_merge = tk.BooleanVar()
-        self.checkb_only_merge.set(oInputData.force_processing)
-
-        self.checkb_keep_map_folders = tk.BooleanVar()
-        self.checkb_keep_map_folders.set(oInputData.border_countries)
-
-        self.checkb_save_cruiser = tk.BooleanVar()
-        self.checkb_save_cruiser.set(oInputData.save_cruiser)
-
-        self.chk_only_merge = tk.Checkbutton(self, text="Only merge, do no other processing",
-                                             var=self.checkb_only_merge)
-
-        self.chk_keep_map_folders = tk.Checkbutton(self, text="Keep the country and country-maps folders in the output",
-                                                   var=self.checkb_keep_map_folders)
-
-        self.chk_save_cruiser = tk.Checkbutton(self, text="Save uncompressed maps for Cruiser",
-                                               var=self.checkb_save_cruiser)
-
-        self.chk_only_merge.grid(
-            column=0, row=0, sticky=tk.W, padx=15, pady=5)
-
-        self.chk_keep_map_folders.grid(
-            column=0, row=1, sticky=tk.W, padx=15, pady=5)
-
-        self.chk_save_cruiser.grid(
-            column=0, row=2, sticky=tk.W, padx=15, pady=5)
+        self.checkb_only_merge_val = create_checkbox(self, oInputData.only_merge,
+                                                     "Only merge, do no other processing", 0)
+        self.checkb_keep_map_folders_val = create_checkbox(self, oInputData.keep_map_folders,
+                                                           "Keep the country and country-maps folders in the output", 1)
+        self.checkb_save_cruiser_val = create_checkbox(self, oInputData.save_cruiser,
+                                                       "Save uncompressed maps for Cruiser", 2)
