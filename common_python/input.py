@@ -85,7 +85,7 @@ class Input(tk.Tk):
         # create notebook + tabs
         tab_control = ttk.Notebook(self, name="notebook")
         tab1 = tk.Frame(tab_control, name="tab1")
-        tab2 = tk.Frame(tab_control)
+        tab2 = tk.Frame(tab_control, name="tab2")
 
         # add tabs to notebook & position
         tab_control.add(tab1, text="General settings")
@@ -97,7 +97,7 @@ class Input(tk.Tk):
             tab1, self.o_input_data.max_days_old)
         tab1.first.pack(side=tk.TOP, fill=tk.X)
 
-        tab1.third = Checkbuttons(
+        tab1.third = Checkbuttons_tab1(
             tab1, self.o_input_data, controller=self)
         tab1.third.pack(side=tk.TOP, fill=tk.X)
 
@@ -105,15 +105,20 @@ class Input(tk.Tk):
         tab1.four.pack(side=tk.TOP, fill=tk.X)
 
         # content of 2. tab
-        tk.Label(tab2, text="This is the second tag!").grid(
-            column=0, row=0, padx=30, pady=30)
+        tab2.second = Text(tab2, self.o_input_data)
+        tab2.second.pack(side=tk.TOP, fill=tk.X)
+
+        tab2.first = Checkbuttons_tab2(
+            tab2, self.o_input_data, controller=self)
+        tab2.first.pack(side=tk.TOP, fill=tk.X)
 
     def handle_create_map(self, event):
         """
         run when Button "Create" is pressed
         """
-        # get tab1 using "name" of the tkinker objects
+        # get tab1 and tab2 using "name" of the tkinker objects
         tab1 = self.children["notebook"].children["tab1"]
+        tab2 = self.children["notebook"].children["tab2"]
 
         # you can get children of tkinker objects using ".winfo_children()"
         # other possibility for the above tab1 assignment:
@@ -125,7 +130,15 @@ class Input(tk.Tk):
         self.o_input_data.force_download = tab1.third.checkb_download.get()
         self.o_input_data.force_processing = tab1.third.checkb_processing.get()
         self.o_input_data.border_countries = tab1.third.checkb_border_countries.get()
-        self.o_input_data.save_cruiser = tab1.third.checkb_save_cruiser.get()
+        self.o_input_data.geofabrik_tiles = tab1.third.checkb_geofabrik_tiles.get()
+
+        self.o_input_data.only_merge = tab2.first.checkb_only_merge.get()
+        self.o_input_data.keep_map_folders = tab2.first.checkb_keep_map_folders.get()
+        self.o_input_data.save_cruiser = tab2.first.checkb_save_cruiser.get()
+
+        # get text without \n in the end
+        self.o_input_data.tag_wahoo_xml = tab2.second.text_tag_wahoo_xml.get(
+            "1.0", 'end-1c')
 
         self.destroy()
 
@@ -193,14 +206,15 @@ class Input(tk.Tk):
         o_input_data.country = args.country
         o_input_data.max_days_old = args.maxdays
 
+        o_input_data.border_countries = args.bordercountries
         o_input_data.force_download = args.forcedownload
         o_input_data.force_processing = args.forceprocessing
-        o_input_data.border_countries = args.bordercountries
-        o_input_data.save_cruiser = args.cruiser
+        o_input_data.geofabrik_tiles = args.geofabrik_tiles
+
         o_input_data.tag_wahoo_xml = args.tag_wahoo_xml
         o_input_data.only_merge = args.only_merge
         o_input_data.keep_map_folders = args.keep_map_folders
-        o_input_data.geofabrik_tiles = args.geofabrik_tiles
+        o_input_data.save_cruiser = args.cruiser
 
         return o_input_data
 
@@ -264,14 +278,17 @@ class ComboboxesEntryField(tk.Frame):
         self.cb_country.current(0)
 
 
-class Checkbuttons(tk.Frame):
+class Checkbuttons_tab1(tk.Frame):
     """
-    Checkbuttons for GUI
+    Checkbuttons for GUI - tab 2
     """
 
     def __init__(self, parent, oInputData, controller):
         tk.Frame.__init__(self, parent)  # , bg="red"
         self.controller = controller
+
+        self.checkb_border_countries = tk.BooleanVar()
+        self.checkb_border_countries.set(oInputData.border_countries)
 
         self.checkb_download = tk.BooleanVar()
         self.checkb_download.set(oInputData.force_download)
@@ -284,20 +301,17 @@ class Checkbuttons(tk.Frame):
         self.checkb_processing = tk.BooleanVar()
         self.checkb_processing.set(oInputData.force_processing)
 
-        self.checkb_border_countries = tk.BooleanVar()
-        self.checkb_border_countries.set(oInputData.border_countries)
-
-        self.checkb_save_cruiser = tk.BooleanVar()
-        self.checkb_save_cruiser.set(oInputData.save_cruiser)
-
-        self.chk_force_processing = tk.Checkbutton(self, text="Force processing",
-                                                   var=self.checkb_processing)
+        self.checkb_geofabrik_tiles = tk.BooleanVar()
+        self.checkb_geofabrik_tiles.set(oInputData.geofabrik_tiles)
 
         self.chk_border_countries = tk.Checkbutton(self, text="Process border countries",
                                                    var=self.checkb_border_countries)
 
-        self.chk_save_cruiser = tk.Checkbutton(self, text="Save uncompressed maps for Cruiser",
-                                               var=self.checkb_save_cruiser)
+        self.chk_force_processing = tk.Checkbutton(self, text="Force processing",
+                                                   var=self.checkb_processing)
+
+        self.chk_geofabrik_tiles = tk.Checkbutton(self, text="Use Geofabrik file for tiles",
+                                                  var=self.checkb_geofabrik_tiles)
 
         self.chk_border_countries.grid(
             column=0, row=0, sticky=tk.W, padx=15, pady=5)
@@ -305,8 +319,8 @@ class Checkbuttons(tk.Frame):
             column=0, row=1, sticky=tk.W, padx=15, pady=5)
         self.chk_force_processing.grid(
             column=0, row=2, sticky=tk.W, padx=15, pady=5)
-        self.chk_save_cruiser.grid(column=0, row=3, columnspan=2, sticky=tk.W,
-                                   padx=15, pady=5)
+        self.chk_geofabrik_tiles.grid(column=0, row=3, columnspan=2, sticky=tk.W,
+                                      padx=15, pady=5)
 
 
 class Buttons(tk.Frame):
@@ -324,3 +338,54 @@ class Buttons(tk.Frame):
 
         self.btn_ok.pack(side=tk.LEFT, fill=tk.X, expand=True)
         self.btn_cancel.pack(side=tk.RIGHT, fill=tk.X, expand=True)
+
+
+class Text(tk.Frame):
+    """
+    Text for GUI - tab2
+    """
+
+    def __init__(self, parent, oInputData):
+        tk.Frame.__init__(self, parent, bg="light grey")
+
+        self.text_tag_wahoo_xml = tk.Text(self, height=1, width=40)
+        self.text_tag_wahoo_xml.insert(tk.END, oInputData.tag_wahoo_xml)
+
+        self.text_tag_wahoo_xml.grid(
+            column=0, row=0, sticky=tk.W, padx=15, pady=5)
+
+
+class Checkbuttons_tab2(tk.Frame):
+    """
+    Checkbuttons for GUI - tab 2
+    """
+
+    def __init__(self, parent, oInputData, controller):
+        tk.Frame.__init__(self, parent)
+
+        self.checkb_only_merge = tk.BooleanVar()
+        self.checkb_only_merge.set(oInputData.force_processing)
+
+        self.checkb_keep_map_folders = tk.BooleanVar()
+        self.checkb_keep_map_folders.set(oInputData.border_countries)
+
+        self.checkb_save_cruiser = tk.BooleanVar()
+        self.checkb_save_cruiser.set(oInputData.save_cruiser)
+
+        self.chk_only_merge = tk.Checkbutton(self, text="Only merge, do no other processing",
+                                             var=self.checkb_only_merge)
+
+        self.chk_keep_map_folders = tk.Checkbutton(self, text="Keep the country and country-maps folders in the output",
+                                                   var=self.checkb_keep_map_folders)
+
+        self.chk_save_cruiser = tk.Checkbutton(self, text="Save uncompressed maps for Cruiser",
+                                               var=self.checkb_save_cruiser)
+
+        self.chk_only_merge.grid(
+            column=0, row=0, sticky=tk.W, padx=15, pady=5)
+
+        self.chk_keep_map_folders.grid(
+            column=0, row=1, sticky=tk.W, padx=15, pady=5)
+
+        self.chk_save_cruiser.grid(
+            column=0, row=2, sticky=tk.W, padx=15, pady=5)
