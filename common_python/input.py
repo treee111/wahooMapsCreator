@@ -17,6 +17,12 @@ from common_python import constants
 
 
 def create_checkbox(self, default_value, description, row):
+    """
+    this is a reuse function for creating checkboxes.
+    it
+    - creates the checkbox in the given context "self"
+    - returns the variable which can be accessed to get the value of the checkbox after clicking a button 
+    """
     bool_var = tk.BooleanVar()
     bool_var.set(default_value)
 
@@ -105,7 +111,6 @@ class Input(tk.Tk):
         builds GUI consisting of several parts
         """
         # build GUI
-        # self.geometry("420x360")
         self.title("Wahoo map creator")
         self.configure(bg="white")
 
@@ -226,7 +231,6 @@ class Input(tk.Tk):
                             help="calculate tiles based on geofabrik index-v1.json file")
 
         # set instance-attributes of class
-        # try:
         args = parser.parse_args()
 
         o_input_data = InputData()
@@ -244,9 +248,6 @@ class Input(tk.Tk):
         o_input_data.save_cruiser = args.cruiser
 
         return o_input_data
-
-        # except SystemExit:
-        #     return False
 
 
 class ComboboxesEntryField(tk.Frame):
@@ -271,7 +272,6 @@ class ComboboxesEntryField(tk.Frame):
 
         self.cb_country = ttk.Combobox(
             self, values=constants.europe, state="readonly")
-        # cboCountry.current(0)
 
         # Positioning
         self.lab_top.grid(column=0, row=0, columnspan=2, padx=5, pady=10)
@@ -352,7 +352,7 @@ class Buttons(tk.Frame):
 
 class Text(tk.Frame):
     """
-    Text for GUI - tab2
+    Text for GUI - 2. tab 
     """
 
     def __init__(self, parent, oInputData):
@@ -367,7 +367,7 @@ class Text(tk.Frame):
 
 class Checkbuttons_tab2(tk.Frame):
     """
-    Checkbuttons for GUI - tab 2
+    Checkbuttons for GUI - 2. tab
     """
 
     def __init__(self, parent, oInputData, controller):
