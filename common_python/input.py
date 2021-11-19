@@ -54,6 +54,20 @@ class InputData():
         # False - Use .json files from folder /common_resources/json
         self.geofabrik_tiles = False
 
+    def is_required_input_given_or_exit(self, issue_message):
+        """
+        check, if the minimal required arguments (acutally country) is given.
+        If not, depending on the import parameter, the 
+        """
+        if self.country == "none" or self.country == "":
+            if issue_message:
+                sys.exit("Nothing to do. Start with -h or --help to see command line options."
+                         "Or in the GUI select a country to create maps for.")
+            else:
+                sys.exit()
+        else:
+            return True
+
 
 class Input(tk.Tk):
     """
@@ -83,7 +97,8 @@ class Input(tk.Tk):
         # start GUI
         self.mainloop()
 
-        return self.o_input_data
+        if self.o_input_data.is_required_input_given_or_exit(False):
+            return self.o_input_data
 
     def build_gui(self):
         """
@@ -328,7 +343,8 @@ class Buttons(tk.Frame):
         self.btn_ok = tk.Button(self, text="Create map")
         self.btn_ok.bind("<Button-1>", self.controller.handle_create_map)
 
-        self.btn_cancel = tk.Button(self, text="Exit", command=parent.destroy)
+        self.btn_cancel = tk.Button(
+            self, text="Exit", command=parent.master.master.destroy)
 
         self.btn_ok.pack(side=tk.LEFT, fill=tk.X, expand=True)
         self.btn_cancel.pack(side=tk.RIGHT, fill=tk.X, expand=True)
