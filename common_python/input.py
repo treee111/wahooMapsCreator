@@ -169,8 +169,7 @@ class Input(tk.Tk):
         self.o_input_data.save_cruiser = tab2.first.checkb_save_cruiser_val.get()
 
         # get text without \n in the end
-        self.o_input_data.tag_wahoo_xml = tab2.second.text_tag_wahoo_xml.get(
-            "1.0", 'end-1c')
+        self.o_input_data.tag_wahoo_xml = tab2.second.input_tag_wahoo_xml.get()
 
         self.destroy()
 
@@ -356,13 +355,19 @@ class Text(tk.Frame):
     """
 
     def __init__(self, parent, oInputData):
-        tk.Frame.__init__(self, parent, bg="light grey")
+        tk.Frame.__init__(self, parent)
 
-        self.text_tag_wahoo_xml = tk.Text(self, height=1, width=40)
-        self.text_tag_wahoo_xml.insert(tk.END, oInputData.tag_wahoo_xml)
+        self.lab_tag_wahoo_xml = tk.Label(self, text='Tag wahoo XML file:')
 
-        self.text_tag_wahoo_xml.grid(
-            column=0, row=0, sticky=tk.W, padx=15, pady=5)
+        self.input_tag_wahoo_xml = tk.StringVar()
+        self.input_tag_wahoo_xml.set(oInputData.tag_wahoo_xml)
+
+        self.en_max_days_old = tk.Entry(
+            self, textvar=self.input_tag_wahoo_xml, width=20)
+
+        self.lab_tag_wahoo_xml.grid(
+            column=0, row=1, sticky=tk.E, padx=5, pady=2)
+        self.en_max_days_old.grid(column=1, row=1, sticky=tk.W, padx=10)
 
 
 class Checkbuttons_tab2(tk.Frame):
