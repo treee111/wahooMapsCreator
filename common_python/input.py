@@ -21,7 +21,8 @@ def create_checkbox(self, default_value, description, row):
     this is a reuse function for creating checkboxes.
     it
     - creates the checkbox in the given context "self"
-    - returns the variable which can be accessed to get the value of the checkbox after clicking a button 
+    - returns the variable which can be accessed to get the value
+      of the checkbox after clicking a button
     """
     bool_var = tk.BooleanVar()
     bool_var.set(default_value)
@@ -63,7 +64,7 @@ class InputData():
     def is_required_input_given_or_exit(self, issue_message):
         """
         check, if the minimal required arguments (acutally country) is given.
-        If not, depending on the import parameter, the 
+        If not, depending on the import parameter, the
         """
         if self.country == "none" or self.country == "":
             if issue_message:
@@ -129,7 +130,7 @@ class Input(tk.Tk):
             tab1, self.o_input_data.max_days_old)
         tab1.first.pack(side=tk.TOP, fill=tk.X)
 
-        tab1.third = Checkbuttons_tab1(
+        tab1.third = CheckbuttonsTab1(
             tab1, self.o_input_data, controller=self)
         tab1.third.pack(side=tk.TOP, fill=tk.X)
 
@@ -140,8 +141,8 @@ class Input(tk.Tk):
         tab2.second = Text(tab2, self.o_input_data)
         tab2.second.pack(side=tk.TOP, fill=tk.X)
 
-        tab2.first = Checkbuttons_tab2(
-            tab2, self.o_input_data, controller=self)
+        tab2.first = CheckbuttonsTab2(
+            tab2, self.o_input_data)
         tab2.first.pack(side=tk.TOP, fill=tk.X)
 
     def handle_create_map(self, event):
@@ -304,7 +305,7 @@ class ComboboxesEntryField(tk.Frame):
         self.cb_country.current(0)
 
 
-class Checkbuttons_tab1(tk.Frame):
+class CheckbuttonsTab1(tk.Frame):
     """
     Checkbuttons for GUI - tab 2
     """
@@ -351,7 +352,7 @@ class Buttons(tk.Frame):
 
 class Text(tk.Frame):
     """
-    Text for GUI - 2. tab 
+    Text for GUI - 2. tab
     """
 
     def __init__(self, parent, oInputData):
@@ -370,12 +371,12 @@ class Text(tk.Frame):
         self.en_max_days_old.grid(column=1, row=1, sticky=tk.W, padx=10)
 
 
-class Checkbuttons_tab2(tk.Frame):
+class CheckbuttonsTab2(tk.Frame):
     """
     Checkbuttons for GUI - 2. tab
     """
 
-    def __init__(self, parent, oInputData, controller):
+    def __init__(self, parent, oInputData):
         tk.Frame.__init__(self, parent)
 
         self.checkb_only_merge_val = create_checkbox(self, oInputData.only_merge,
