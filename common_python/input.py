@@ -127,7 +127,7 @@ class Input(tk.Tk):
 
         # content of 1. tab
         tab1.first = ComboboxesEntryField(
-            tab1, self.o_input_data.max_days_old)
+            tab1, self.o_input_data)
         tab1.first.pack(side=tk.TOP, fill=tk.X)
 
         tab1.third = CheckbuttonsTab1(
@@ -255,7 +255,7 @@ class ComboboxesEntryField(tk.Frame):
     Comboboxes and Entry-Field for max days
     """
 
-    def __init__(self, parent, default_max_days_old):
+    def __init__(self, parent, oInputData):
         tk.Frame.__init__(self, parent)
 
         # Labels
@@ -285,7 +285,7 @@ class ComboboxesEntryField(tk.Frame):
         self.lab_max_days_old = tk.Label(self, text='Max Old Days:')
 
         self.input_maxdays = tk.StringVar()
-        self.input_maxdays.set(str(default_max_days_old))
+        self.input_maxdays.set(str(oInputData.max_days_old))
 
         self.en_max_days_old = tk.Entry(
             self, textvar=self.input_maxdays, width=5)
@@ -311,7 +311,7 @@ class CheckbuttonsTab1(tk.Frame):
     """
 
     def __init__(self, parent, oInputData, controller):
-        tk.Frame.__init__(self, parent)  # , bg="red"
+        tk.Frame.__init__(self, parent)
         self.controller = controller
 
         self.checkb_download = tk.BooleanVar()
@@ -338,7 +338,7 @@ class Buttons(tk.Frame):
     """
 
     def __init__(self, parent, controller):
-        tk.Frame.__init__(self, parent, bg="light grey")
+        tk.Frame.__init__(self, parent)
         self.controller = controller
         self.btn_ok = tk.Button(self, text="Create map")
         self.btn_ok.bind("<Button-1>", self.controller.handle_create_map)
