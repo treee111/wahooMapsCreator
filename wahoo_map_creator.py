@@ -4,7 +4,6 @@ executable file to create up-to-date map-files for the Wahoo ELEMNT and Wahoo EL
 #!/usr/bin/python
 
 # import official python packages
-import sys
 
 # import custom python packages
 from common_python.input import Input
@@ -24,9 +23,7 @@ else:
     oInputData = oInput.cli_arguments()
 
 # Is there something to do?
-if oInputData.country == "none" or oInputData.country == "":
-    sys.exit("Nothing to do. Start with -h or --help to see command line options."
-             "Or in the GUI select a country to create maps for.")
+oInputData.is_required_input_given_or_exit(True)
 
 initialize_work_directories()
 

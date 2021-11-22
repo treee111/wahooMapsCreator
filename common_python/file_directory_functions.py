@@ -122,15 +122,3 @@ def write_to_file(file_path, request):
     with open(file_path, 'wb') as file_handle:
         for chunk in request.iter_content(chunk_size=1024*100):
             file_handle.write(chunk)
-
-
-class FileDir:
-    """
-    this is the class to check and download maps / artifacts
-    """
-
-    def __init__(self, inputFile, input_region):
-        self.input_argument1 = inputFile
-        self.region = input_region
-
-        self.tiles_from_json = []
