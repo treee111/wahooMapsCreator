@@ -541,12 +541,19 @@ class OsmMaps:
         # logging
         print('# Creating .map files: OK')
 
-    def zip_map_files(self, keep_map_folders):
+    def make_and_zip_files(self, keep_map_folders, extension):
         """
-        Zip .map.lzma files
+        Zip .map or .map.lzma files
+        postfix: '.map.lzma' for Wahoo tiles
+        postfix: '.map' for Cruiser map files
         """
 
-        print('\n# Zip .map.lzma files')
+        if extension == '.map.lzma':
+            folder_name = self.country_name
+        else:
+            folder_name = self.country_name + '-maps'
+
+        print(f'\n# Zip: {extension} files')
         print(f'+ Country: {self.country_name}')
 
         # Check for us/utah etc names
@@ -557,22 +564,24 @@ class OsmMaps:
             pass
 
         # copy the needed tiles to the country folder
-        print('Copying Wahoo tiles to output folders')
+        print(f'Copying {extension} tiles to output folders')
         for tile in self.tiles:
             src = os.path.join(f'{fd_fct.OUTPUT_DIR}',
-                               f'{tile["x"]}', f'{tile["y"]}.map.lzma')
+                               f'{tile["x"]}', f'{tile["y"]}') + extension
             dst = os.path.join(
-                f'{fd_fct.OUTPUT_DIR}', f'{self.country_name}', f'{tile["x"]}', f'{tile["y"]}.map.lzma')
+                f'{fd_fct.OUTPUT_DIR}', folder_name, f'{tile["x"]}', f'{tile["y"]}') + extension
             outdir = os.path.join(
-                f'{fd_fct.OUTPUT_DIR}', f'{self.country_name}', f'{tile["x"]}')
+                f'{fd_fct.OUTPUT_DIR}', folder_name, f'{tile["x"]}')
             if not os.path.isdir(outdir):
                 os.makedirs(outdir)
             try:
                 shutil.copy2(src, dst)
             except:
-                print(f'Error copying tiles of country {self.country_name}')
+                print(
+                    f'Error copying {extension} files of country {self.country_name}')
                 sys.exit()
 
+        if extension == '.map.lzma':
             src = src + '.12'
             dst = dst + '.12'
             if not os.path.isdir(outdir):
@@ -584,18 +593,19 @@ class OsmMaps:
                     f'Error copying precense files of country {self.country_name}')
                 sys.exit()
 
-        # Make Wahoo zip file
         # Windows
         if platform.system() == "Windows":
             path_7za = os.path.join(fd_fct.TOOLING_WIN_DIR, '7za')
-            cmd = [path_7za, 'a', '-tzip', self.country_name + '.zip']
+            cmd = [path_7za, 'a', '-tzip']
 
         # Non-Windows
         else:
-            cmd = ['zip', '-r', self.country_name + '.zip']
+            cmd = ['zip', '-r']
 
-        cmd.append(os.path.join(
-            f'{fd_fct.OUTPUT_DIR}', f'{self.country_name}'))
+        cmd.extend(
+            [folder_name + '.zip', os.path.join(fd_fct.OUTPUT_DIR, folder_name)])
+        # cmd.append(folder_name + '.zip')
+        # cmd.append(os.path.join(fd_fct.OUTPUT_DIR, folder_name))
 
         subprocess.run(cmd, cwd=fd_fct.OUTPUT_DIR, check=True)
 
@@ -603,65 +613,11 @@ class OsmMaps:
         if keep_map_folders is False:
             try:
                 shutil.rmtree(os.path.join(
-                    f'{fd_fct.OUTPUT_DIR}', f'{self.country_name}'))
+                    f'{fd_fct.OUTPUT_DIR}', folder_name))
             except OSError:
                 print(
                     f'Error, could not delete folder \
-                        {os.path.join(fd_fct.OUTPUT_DIR, self.country_name)}')
+                        {os.path.join(fd_fct.OUTPUT_DIR, folder_name)}')
 
         # logging
         print('# Zip .map.lzma files: OK \n')
-
-    def make_cruiser_files(self, keep_map_folders):
-        """
-        Make Cruiser map files zip file
-        """
-
-        # Check for us/utah etc names
-        try:
-            res = self.country_name.index('/')
-            self.country_name = self.country_name[res+1:]
-        except ValueError:
-            pass
-
-        # copy the needed tiles to the country folder
-        print('Copying map tiles to output folders')
-        for tile in self.tiles:
-            src = os.path.join(f'{fd_fct.OUTPUT_DIR}',
-                               f'{tile["x"]}', f'{tile["y"]}.map')
-            dst = os.path.join(
-                f'{fd_fct.OUTPUT_DIR}', f'{self.country_name}-maps', f'{tile["x"]}', f'{tile["y"]}.map')
-            outdir = os.path.join(
-                f'{fd_fct.OUTPUT_DIR}', f'{self.country_name}-maps', f'{tile["x"]}')
-            if not os.path.isdir(outdir):
-                os.makedirs(outdir)
-            try:
-                shutil.copy2(src, dst)
-            except:
-                print(f'Error copying maps of country {self.country_name}')
-                sys.exit()
-
-        # Make Cruiser map files zip file
-        # Windows
-        if platform.system() == "Windows":
-            cmd = [os.path.join(fd_fct.TOOLING_WIN_DIR, '7za'), 'a', '-tzip', self.country_name +
-                   '-maps.zip']
-
-        # Non-Windows
-        else:
-            cmd = ['zip', '-r', self.country_name + '-maps.zip']
-
-        cmd.append(os.path.join(f'{fd_fct.OUTPUT_DIR}',
-                                f'{self.country_name}-maps'))
-
-        subprocess.run(cmd, cwd=fd_fct.OUTPUT_DIR, check=True)
-
-        # Keep (True) or delete (False) the country/region map folders after compression
-        if keep_map_folders is False:
-            try:
-                shutil.rmtree(os.path.join(
-                    f'{fd_fct.OUTPUT_DIR}', f'{self.country_name}-maps'))
-            except OSError:
-                print(
-                    f'Error, could not delete folder \
-                        {os.path.join(fd_fct.OUTPUT_DIR, self.country_name)}-maps')
