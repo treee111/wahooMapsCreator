@@ -4,7 +4,27 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-A list of unreleased changes can be found [here](https://github.com/treee111/wahooMapsCreator/compare/v0.10.0...HEAD).
+A list of unreleased changes can be found [here](https://github.com/treee111/wahooMapsCreator/compare/v0.11.0...HEAD).
+
+<a name="0.11.0"></a>
+## [0.11.0] - 2021-12-10
+### Features
+- Refactor downloader.py ([#66](https://github.com/treee111/wahooMapsCreator/issues/66)) [`4bb80a1`](https://github.com/treee111/wahooMapsCreator/commit/4bb80a106815e8a662ea3b5e8cc460d9cb1bd61d)
+- Calculation of tiles using Geofabrik-URL instead of static json ([#68](https://github.com/treee111/wahooMapsCreator/issues/68)) [`cee0089`](https://github.com/treee111/wahooMapsCreator/commit/cee00891f1c9244cb18d6c828927472738ad68e1)
+- Add Dataline checks and checks for (sub-) regions ([#69](https://github.com/treee111/wahooMapsCreator/issues/69)) [`e0773c5`](https://github.com/treee111/wahooMapsCreator/commit/e0773c5e9b2c659e81f302cfaae09f8e261ea8fa)
+- Enhance GUI with tabs for all possible arguments ([#74](https://github.com/treee111/wahooMapsCreator/issues/74)) [`243aa53`](https://github.com/treee111/wahooMapsCreator/commit/243aa532ade57401430777faf65c35b31678a6d1)
+- Create one function make_and_zip_files from two existing ones ([#76](https://github.com/treee111/wahooMapsCreator/issues/76)) [`4223dc1`](https://github.com/treee111/wahooMapsCreator/commit/4223dc13851cf25179456ffe654be95a7e9b570f)
+
+### Bug Fixes
+- Reflect [#44](https://github.com/treee111/wahooMapsCreator/issues/44) also in Github Release .zip file [`c03abea`](https://github.com/treee111/wahooMapsCreator/commit/c03abea286f792ef4cd75ed64367e95a22b8fd20)
+- make "filter_tags" overwrite existing files on macOS [`bc7f2c3`](https://github.com/treee111/wahooMapsCreator/commit/bc7f2c39606b68e86dae1cb4724218d38be91ce0)
+- Prevent initialisation of the graphical GUI on WSL ([#72](https://github.com/treee111/wahooMapsCreator/issues/72)) [`2a64a17`](https://github.com/treee111/wahooMapsCreator/commit/2a64a179c92b21384242b8d4e99ffae75fe4600c)
+- Process GUI / tk coding only if running in GUI mode ([#73](https://github.com/treee111/wahooMapsCreator/issues/73)) [`3c5cbe3`](https://github.com/treee111/wahooMapsCreator/commit/3c5cbe34c020401742e23a6d3c54892c98654616)
+
+### Development/Infrastructure/Test/CI
+- Update unittest files for Windows and macOS / use defined static land_polygons / refactor unittest ([#65](https://github.com/treee111/wahooMapsCreator/issues/65)) [`8845173`](https://github.com/treee111/wahooMapsCreator/commit/8845173901ceaf3ab9b2287137089b03b0231aad)
+- Setup Dev/Run environment using Anaconda ([#67](https://github.com/treee111/wahooMapsCreator/issues/67)) [`858d890`](https://github.com/treee111/wahooMapsCreator/commit/858d890b07d64da42917028679707a2f6435c370)
+
 
 <a name="0.10.0"></a>
 ## [0.10.0] - 2021-10-30
@@ -149,6 +169,7 @@ A list of unreleased changes can be found [here](https://github.com/treee111/wah
     - Windows:    `tooling_windows/Windows-Wahoo-Map-Creator-Osmosis/wahoo-map-creator-osmosis.py`
 
 
+[0.11.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.10.0...v0.11.0
 [0.10.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.9.0...v0.10.0
 [0.9.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.8.1...v0.9.0
 [0.8.1]: https://github.com/treee111/wahooMapsCreator/compare/v0.8.0...v0.8.1
