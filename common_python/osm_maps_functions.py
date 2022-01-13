@@ -227,6 +227,7 @@ class OsmMaps:
             out_file = os.path.join(fd_fct.OUTPUT_DIR,
                                     f'{tile["x"]}', f'{tile["y"]}', 'land')
 
+            # create land.dbf, land.prj, land.shp, land.shx
             if not os.path.isfile(land_file) or self.force_processing is True:
                 print(
                     f'+ Generate land {tile_count} of {len(self.tiles)} for Coordinates: {tile["x"]},{tile["y"]}')
@@ -247,6 +248,7 @@ class OsmMaps:
 
                 subprocess.run(cmd, check=True)
 
+            # create land1.osm
             if not os.path.isfile(out_file+'1.osm') or self.force_processing is True:
                 # Windows
                 if platform.system() == "Windows":
@@ -407,6 +409,9 @@ class OsmMaps:
             out_file = os.path.join(fd_fct.OUTPUT_DIR,
                                     f'{tile["x"]}', f'{tile["y"]}', 'merged.osm.pbf')
             if not os.path.isfile(out_file) or self.force_processing is True:
+                # sort land* osm files
+                self.sort_osm_files(tile)
+
                 # Windows
                 if platform.system() == "Windows":
                     cmd = [os.path.join(fd_fct.TOOLING_DIR,
@@ -471,6 +476,28 @@ class OsmMaps:
 
         # logging
         print('# Merge splitted tiles with land an sea: OK')
+
+    def sort_osm_files(self, tile):
+        """
+        sort land*.osm files to be in this order: nodes, then ways, then relations.
+        for osmium-merge, this is mandatory since https://github.com/osmcode/osmium-tool/releases/tag/v1.13.2
+        """
+
+        # get all land* osm files
+        land_files = glob.glob(os.path.join(fd_fct.OUTPUT_DIR,
+                                            f'{tile["x"]}', f'{tile["y"]}', 'land*.osm'))
+
+        for land in land_files:
+            cmd = ['osmium', 'sort', '--overwrite']
+            cmd.append(land)
+            cmd.extend(['-o', land])
+
+            result = subprocess.run(cmd, check=True)
+
+            if result.returncode != 0:
+                print(
+                    f'Error in Osmosis with sorting land* osm files of tile: {tile["x"]},{tile["y"]}')
+                sys.exit()
 
     def create_map_files(self, save_cruiser, tag_wahoo_xml):
         """
