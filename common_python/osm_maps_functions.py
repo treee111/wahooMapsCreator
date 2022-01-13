@@ -406,8 +406,13 @@ class OsmMaps:
         for tile in self.tiles:
             print(
                 f'+ Merging tiles for tile {tile_count} of {len(self.tiles)} for Coordinates: {tile["x"]},{tile["y"]}')
-            out_file = os.path.join(fd_fct.OUTPUT_DIR,
-                                    f'{tile["x"]}', f'{tile["y"]}', 'merged.osm.pbf')
+
+            out_tile_dir = os.path.join(fd_fct.OUTPUT_DIR,
+                                        f'{tile["x"]}', f'{tile["y"]}')
+            out_file = os.path.join(out_tile_dir, 'merged.osm.pbf')
+
+            land_files = glob.glob(os.path.join(out_tile_dir, 'land*.osm'))
+
             if not os.path.isfile(out_file) or self.force_processing is True:
                 # sort land* osm files
                 self.sort_osm_files(tile)
@@ -422,26 +427,25 @@ class OsmMaps:
                     for country in tile['countries']:
                         if calc_border_countries or country in self.border_countries:
                             cmd.append('--rbf')
-                            cmd.append(os.path.join(fd_fct.OUTPUT_DIR,
-                                                    f'{tile["x"]}', f'{tile["y"]}', f'split-{country}.osm.pbf'))
+                            cmd.append(os.path.join(
+                                out_tile_dir, f'split-{country}.osm.pbf'))
                             cmd.append('workers=' + self.workers)
                             if loop > 0:
                                 cmd.append('--merge')
 
                             cmd.append('--rbf')
-                            cmd.append(os.path.join(fd_fct.OUTPUT_DIR,
-                                                    f'{tile["x"]}', f'{tile["y"]}', f'split-{country}-names.osm.pbf'))
+                            cmd.append(os.path.join(
+                                out_tile_dir, f'split-{country}-names.osm.pbf'))
                             cmd.append('workers=' + self.workers)
                             cmd.append('--merge')
 
                             loop += 1
-                    land_files = glob.glob(os.path.join(fd_fct.OUTPUT_DIR,
-                                                        f'{tile["x"]}', f'{tile["y"]}', 'land*.osm'))
+
                     for land in land_files:
-                        cmd.extend(['--rx', 'file='+os.path.join(fd_fct.OUTPUT_DIR,
-                                                                 f'{tile["x"]}', f'{tile["y"]}', f'{land}'), '--s', '--m'])
-                    cmd.extend(['--rx', 'file='+os.path.join(fd_fct.OUTPUT_DIR,
-                                                             f'{tile["x"]}', f'{tile["y"]}', 'sea.osm'), '--s', '--m'])
+                        cmd.extend(
+                            ['--rx', 'file='+os.path.join(out_tile_dir, f'{land}'), '--s', '--m'])
+                    cmd.extend(
+                        ['--rx', 'file='+os.path.join(out_tile_dir, 'sea.osm'), '--s', '--m'])
                     cmd.extend(['--tag-transform', 'file=' + os.path.join(fd_fct.COMMON_DIR,
                                                                           'tunnel-transform.xml'), '--wb', out_file, 'omitmetadata=true'])
 
@@ -452,18 +456,14 @@ class OsmMaps:
                     # if border-countries should not be processed, only process the "entered" country
                     for country in tile['countries']:
                         if calc_border_countries or country in self.border_countries:
-                            cmd.append(os.path.join(fd_fct.OUTPUT_DIR,
-                                                    f'{tile["x"]}', f'{tile["y"]}', f'split-{country}.osm.pbf'))
-                            cmd.append(os.path.join(fd_fct.OUTPUT_DIR,
-                                                    f'{tile["x"]}', f'{tile["y"]}', f'split-{country}-names.osm.pbf'))
+                            cmd.append(os.path.join(
+                                out_tile_dir, f'split-{country}.osm.pbf'))
+                            cmd.append(os.path.join(
+                                out_tile_dir, f'split-{country}-names.osm.pbf'))
 
-                    land_files = glob.glob(os.path.join(fd_fct.OUTPUT_DIR,
-                                                        f'{tile["x"]}', f'{tile["y"]}', 'land*.osm'))
                     for land in land_files:
-                        cmd.append(os.path.join(fd_fct.OUTPUT_DIR,
-                                                f'{tile["x"]}', f'{tile["y"]}', f'{land}'))
-                    cmd.append(os.path.join(fd_fct.OUTPUT_DIR,
-                                            f'{tile["x"]}', f'{tile["y"]}', 'sea.osm'))
+                        cmd.append(land)
+                    cmd.append(os.path.join(out_tile_dir, 'sea.osm'))
                     cmd.extend(['-o', out_file])
 
                 result = subprocess.run(cmd, check=True)
