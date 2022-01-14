@@ -26,6 +26,9 @@ class OsmMaps:
     This is a OSM data class
     """
 
+    osmosis_win_file_path = os.path.join(
+        fd_fct.TOOLING_WIN_DIR, 'Osmosis', 'bin', 'osmosis.bat')
+
     def __init__(self, oInputData):
         self.force_processing = ''
         # Number of workers for the Osmosis read binary fast function
@@ -419,8 +422,7 @@ class OsmMaps:
 
                 # Windows
                 if platform.system() == "Windows":
-                    cmd = [os.path.join(fd_fct.TOOLING_DIR,
-                                        'Osmosis', 'bin', 'osmosis.bat')]
+                    cmd = [self.osmosis_win_file_path]
                     loop = 0
                     # loop through all countries of tile, if border-countries should be processed.
                     # if border-countries should not be processed, only process the "entered" country
@@ -493,8 +495,7 @@ class OsmMaps:
         # Windows
         if platform.system() == "Windows":
             for land in land_files:
-                cmd = [os.path.join(fd_fct.TOOLING_DIR,
-                                    'Osmosis', 'bin', 'osmosis.bat')]
+                cmd = [self.osmosis_win_file_path]
 
                 cmd.extend(['--read-xml', 'file='+os.path.join(land)])
                 cmd.append('--sort')
@@ -541,8 +542,8 @@ class OsmMaps:
 
                 # Windows
                 if platform.system() == "Windows":
-                    cmd = [os.path.join(fd_fct.TOOLING_DIR, 'Osmosis', 'bin', 'osmosis.bat'),
-                           '--rbf', merged_file, 'workers=' + self.workers, '--mw', 'file='+out_file]
+                    cmd = [self.osmosis_win_file_path, '--rbf', merged_file,
+                           'workers=' + self.workers, '--mw', 'file='+out_file]
                 # Non-Windows
                 else:
                     cmd = ['osmosis', '--rb', merged_file,
