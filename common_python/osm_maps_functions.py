@@ -480,24 +480,42 @@ class OsmMaps:
     def sort_osm_files(self, tile):
         """
         sort land*.osm files to be in this order: nodes, then ways, then relations.
-        for osmium-merge, this is mandatory since https://github.com/osmcode/osmium-tool/releases/tag/v1.13.2
+        this is mandatory for osmium-merge since:
+        https://github.com/osmcode/osmium-tool/releases/tag/v1.13.2
         """
+
+        print('\n# Sorting land* osm files')
 
         # get all land* osm files
         land_files = glob.glob(os.path.join(fd_fct.OUTPUT_DIR,
                                             f'{tile["x"]}', f'{tile["y"]}', 'land*.osm'))
 
-        for land in land_files:
-            cmd = ['osmium', 'sort', '--overwrite']
-            cmd.append(land)
-            cmd.extend(['-o', land])
+        # Windows
+        if platform.system() == "Windows":
+            for land in land_files:
+                cmd = [os.path.join(fd_fct.TOOLING_DIR,
+                                    'Osmosis', 'bin', 'osmosis.bat')]
 
-            result = subprocess.run(cmd, check=True)
+                cmd.extend(['--read-xml', 'file='+os.path.join(land)])
+                cmd.append('--sort')
+                cmd.extend(['--write-xml', 'file='+os.path.join(land)])
 
-            if result.returncode != 0:
-                print(
-                    f'Error in Osmosis with sorting land* osm files of tile: {tile["x"]},{tile["y"]}')
-                sys.exit()
+        # Non-Windows
+        else:
+            for land in land_files:
+                cmd = ['osmium', 'sort', '--overwrite']
+                cmd.append(land)
+                cmd.extend(['-o', land])
+
+        result = subprocess.run(cmd, check=True)
+
+        if result.returncode != 0:
+            print(
+                f'Error in Osmosis with sorting land* osm files of tile: {tile["x"]},{tile["y"]}')
+            sys.exit()
+
+        # logging
+        print('# Sorting land* osm files: OK')
 
     def create_map_files(self, save_cruiser, tag_wahoo_xml):
         """
