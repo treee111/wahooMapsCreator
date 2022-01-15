@@ -607,8 +607,6 @@ class OsmMaps:
 
             cmd.extend(
                 [folder_name + '.zip', folder_name])
-        # cmd.append(folder_name + '.zip')
-        # cmd.append(os.path.join(fd_fct.OUTPUT_DIR, folder_name))
 
         subprocess.run(cmd, cwd=fd_fct.OUTPUT_DIR, check=True)
 
