@@ -2,8 +2,8 @@ name: Git Pre-Release
 
 on:
   push:
-    tags:
-    - v[0-9]+.[0-9]+.[0-9]+-pre**
+    branches:
+      - "release-*"
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -24,8 +24,8 @@ jobs:
         uses: docker://antonyurchenko/git-release:latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          RELEASE_NAME_PREFIX: "Pre-Release "
-          PRE_RELEASE: true
+          UNRELEASED: "update"
+          ALLOW_EMPTY_CHANGELOG: true
         with:
           args: |
             dist/wahooMapsCreator-*.zip
