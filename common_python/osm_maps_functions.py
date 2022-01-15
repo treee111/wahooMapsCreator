@@ -26,6 +26,9 @@ class OsmMaps:
     This is a OSM data class
     """
 
+    osmosis_win_file_path = os.path.join(
+        fd_fct.TOOLING_WIN_DIR, 'Osmosis', 'bin', 'osmosis.bat')
+
     def __init__(self, oInputData):
         self.force_processing = ''
         # Number of workers for the Osmosis read binary fast function
@@ -227,6 +230,7 @@ class OsmMaps:
             out_file = os.path.join(fd_fct.OUTPUT_DIR,
                                     f'{tile["x"]}', f'{tile["y"]}', 'land')
 
+            # create land.dbf, land.prj, land.shp, land.shx
             if not os.path.isfile(land_file) or self.force_processing is True:
                 print(
                     f'+ Generate land {tile_count} of {len(self.tiles)} for Coordinates: {tile["x"]},{tile["y"]}')
@@ -247,6 +251,7 @@ class OsmMaps:
 
                 subprocess.run(cmd, check=True)
 
+            # create land1.osm
             if not os.path.isfile(out_file+'1.osm') or self.force_processing is True:
                 # Windows
                 if platform.system() == "Windows":
@@ -404,39 +409,45 @@ class OsmMaps:
         for tile in self.tiles:
             print(
                 f'+ Merging tiles for tile {tile_count} of {len(self.tiles)} for Coordinates: {tile["x"]},{tile["y"]}')
-            out_file = os.path.join(fd_fct.OUTPUT_DIR,
-                                    f'{tile["x"]}', f'{tile["y"]}', 'merged.osm.pbf')
+
+            out_tile_dir = os.path.join(fd_fct.OUTPUT_DIR,
+                                        f'{tile["x"]}', f'{tile["y"]}')
+            out_file = os.path.join(out_tile_dir, 'merged.osm.pbf')
+
+            land_files = glob.glob(os.path.join(out_tile_dir, 'land*.osm'))
+
             if not os.path.isfile(out_file) or self.force_processing is True:
+                # sort land* osm files
+                self.sort_osm_files(tile)
+
                 # Windows
                 if platform.system() == "Windows":
-                    cmd = [os.path.join(fd_fct.TOOLING_DIR,
-                                        'Osmosis', 'bin', 'osmosis.bat')]
+                    cmd = [self.osmosis_win_file_path]
                     loop = 0
                     # loop through all countries of tile, if border-countries should be processed.
                     # if border-countries should not be processed, only process the "entered" country
                     for country in tile['countries']:
                         if calc_border_countries or country in self.border_countries:
                             cmd.append('--rbf')
-                            cmd.append(os.path.join(fd_fct.OUTPUT_DIR,
-                                                    f'{tile["x"]}', f'{tile["y"]}', f'split-{country}.osm.pbf'))
+                            cmd.append(os.path.join(
+                                out_tile_dir, f'split-{country}.osm.pbf'))
                             cmd.append('workers=' + self.workers)
                             if loop > 0:
                                 cmd.append('--merge')
 
                             cmd.append('--rbf')
-                            cmd.append(os.path.join(fd_fct.OUTPUT_DIR,
-                                                    f'{tile["x"]}', f'{tile["y"]}', f'split-{country}-names.osm.pbf'))
+                            cmd.append(os.path.join(
+                                out_tile_dir, f'split-{country}-names.osm.pbf'))
                             cmd.append('workers=' + self.workers)
                             cmd.append('--merge')
 
                             loop += 1
-                    land_files = glob.glob(os.path.join(fd_fct.OUTPUT_DIR,
-                                                        f'{tile["x"]}', f'{tile["y"]}', 'land*.osm'))
+
                     for land in land_files:
-                        cmd.extend(['--rx', 'file='+os.path.join(fd_fct.OUTPUT_DIR,
-                                                                 f'{tile["x"]}', f'{tile["y"]}', f'{land}'), '--s', '--m'])
-                    cmd.extend(['--rx', 'file='+os.path.join(fd_fct.OUTPUT_DIR,
-                                                             f'{tile["x"]}', f'{tile["y"]}', 'sea.osm'), '--s', '--m'])
+                        cmd.extend(
+                            ['--rx', 'file='+os.path.join(out_tile_dir, f'{land}'), '--s', '--m'])
+                    cmd.extend(
+                        ['--rx', 'file='+os.path.join(out_tile_dir, 'sea.osm'), '--s', '--m'])
                     cmd.extend(['--tag-transform', 'file=' + os.path.join(fd_fct.COMMON_DIR,
                                                                           'tunnel-transform.xml'), '--wb', out_file, 'omitmetadata=true'])
 
@@ -447,18 +458,14 @@ class OsmMaps:
                     # if border-countries should not be processed, only process the "entered" country
                     for country in tile['countries']:
                         if calc_border_countries or country in self.border_countries:
-                            cmd.append(os.path.join(fd_fct.OUTPUT_DIR,
-                                                    f'{tile["x"]}', f'{tile["y"]}', f'split-{country}.osm.pbf'))
-                            cmd.append(os.path.join(fd_fct.OUTPUT_DIR,
-                                                    f'{tile["x"]}', f'{tile["y"]}', f'split-{country}-names.osm.pbf'))
+                            cmd.append(os.path.join(
+                                out_tile_dir, f'split-{country}.osm.pbf'))
+                            cmd.append(os.path.join(
+                                out_tile_dir, f'split-{country}-names.osm.pbf'))
 
-                    land_files = glob.glob(os.path.join(fd_fct.OUTPUT_DIR,
-                                                        f'{tile["x"]}', f'{tile["y"]}', 'land*.osm'))
                     for land in land_files:
-                        cmd.append(os.path.join(fd_fct.OUTPUT_DIR,
-                                                f'{tile["x"]}', f'{tile["y"]}', f'{land}'))
-                    cmd.append(os.path.join(fd_fct.OUTPUT_DIR,
-                                            f'{tile["x"]}', f'{tile["y"]}', 'sea.osm'))
+                        cmd.append(land)
+                    cmd.append(os.path.join(out_tile_dir, 'sea.osm'))
                     cmd.extend(['-o', out_file])
 
                 result = subprocess.run(cmd, check=True)
@@ -471,6 +478,45 @@ class OsmMaps:
 
         # logging
         print('# Merge splitted tiles with land an sea: OK')
+
+    def sort_osm_files(self, tile):
+        """
+        sort land*.osm files to be in this order: nodes, then ways, then relations.
+        this is mandatory for osmium-merge since:
+        https://github.com/osmcode/osmium-tool/releases/tag/v1.13.2
+        """
+
+        print('\n# Sorting land* osm files')
+
+        # get all land* osm files
+        land_files = glob.glob(os.path.join(fd_fct.OUTPUT_DIR,
+                                            f'{tile["x"]}', f'{tile["y"]}', 'land*.osm'))
+
+        # Windows
+        if platform.system() == "Windows":
+            for land in land_files:
+                cmd = [self.osmosis_win_file_path]
+
+                cmd.extend(['--read-xml', 'file='+os.path.join(land)])
+                cmd.append('--sort')
+                cmd.extend(['--write-xml', 'file='+os.path.join(land)])
+
+        # Non-Windows
+        else:
+            for land in land_files:
+                cmd = ['osmium', 'sort', '--overwrite']
+                cmd.append(land)
+                cmd.extend(['-o', land])
+
+        result = subprocess.run(cmd, check=True)
+
+        if result.returncode != 0:
+            print(
+                f'Error in Osmosis with sorting land* osm files of tile: {tile["x"]},{tile["y"]}')
+            sys.exit()
+
+        # logging
+        print('# Sorting land* osm files: OK')
 
     def create_map_files(self, save_cruiser, tag_wahoo_xml):
         """
@@ -496,8 +542,8 @@ class OsmMaps:
 
                 # Windows
                 if platform.system() == "Windows":
-                    cmd = [os.path.join(fd_fct.TOOLING_DIR, 'Osmosis', 'bin', 'osmosis.bat'),
-                           '--rbf', merged_file, 'workers=' + self.workers, '--mw', 'file='+out_file]
+                    cmd = [self.osmosis_win_file_path, '--rbf', merged_file,
+                           'workers=' + self.workers, '--mw', 'file='+out_file]
                 # Non-Windows
                 else:
                     cmd = ['osmosis', '--rb', merged_file,
