@@ -45,34 +45,35 @@ Or use Anaconda to create a Python environment
 Download the latest Release from the ["Releases" Section](https://github.com/treee111/wahooMapsCreator/releases) and Save the folder on your drive. You can also clone the repository and have the latest coding.
 
 ## Run wahooMapsCreator
-wahooMapsCreator can be used in two different ways.
+wahooMapsCreator can be used in two different ways:
+- as [graphical window](#gui-graphical-user-interface) programm
+- as [command line](#cli-command-line-interface) programm
 
-Both ways support the same arguments to be used for the map-creation process. You can choose them via GUI or as [CLI-arguments](#advanced-cli-usage).
+Both ways support the same arguments to be used for the map-creation process. You can choose the arguments via GUI or as [CLI-arguments](#advanced-cli-usage).
+
 ### GUI (Graphical User Interface)
 
 From the `root` folder of wahooMapsCreator, run:
   - `python3 wahoo_map_creator.py` or
   - `python wahoo_map_creator.py`
-  - <img src="https://github.com/treee111/wahooMapsCreator/blob/develop/docs/gui.png" alt="wahooMapsCreator GUI" width=50%>
 
-### CLI (Command Line Interfaces)
+Set your arguments as required via the window:
+
+<img src="https://github.com/treee111/wahooMapsCreator/blob/develop/docs/gui.png" alt="wahooMapsCreator GUI" width=35%>
+
+### CLI (Command Line Interface)
 
 From the `root` folder of wahooMapsCreator, run:
-  - `python3 wahoo_map_creator.py <country_name>` or
-  - `python wahoo_map_creator.py <country_name>`
-
-### Run wahooMapsCreator for your country
-It might be a good idea to run wahooMapsCreator first for a small country e.g. Malta to check if everything is running fine.
-In a next step you can run it for your own country.
-
-### Basic CLI-Usage
-from the `root` folder of wahooMapsCreator, run:
 - `python3 wahoo_map_creator.py <country_name>` or
 - `python wahoo_map_creator.py <country_name>`
 
 Examples:
 - for Malta: `python3 wahoo_map_creator.py malta`
 - for Ireland: `python3 wahoo_map_creator.py ireland`
+
+### Run wahooMapsCreator for your country
+It might be a good idea to run wahooMapsCreator first for a small country e.g. Malta to check if everything is running fine.
+In a next step you can run it for your own country.
 
 ### Advanced CLI-Usage
 The script supports many arguments.

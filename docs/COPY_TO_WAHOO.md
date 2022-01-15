@@ -3,10 +3,8 @@
 #### Table of contents <!-- omit in toc -->
 - [Steps to carry out](#steps-to-carry-out)
   - [Unzip Files](#unzip-files)
-  - [install adb](#install-adb)
-  - [Authorize Bolt to connect to Windows / macOS](#authorize-bolt-to-connect-to-windows--macos)
-    - [BOLT v1](#bolt-v1)
-    - [BOLT v2](#bolt-v2)
+  - [Install adb](#install-adb)
+  - [Authorize Wahoo device](#authorize-wahoo-device)
   - [Copy map files](#copy-map-files)
   - [Copy device theme](#copy-device-theme)
 - [Delete temp-files and Clear Cache](#delete-temp-files-and-clear-cache)
@@ -16,25 +14,27 @@
 ## Unzip Files
 unzip the desired country files
 
-## install adb
-You can download the lates ADB-tools (included in the SDK Platform Tools) for your OS here:
+## Install adb
+You can download the lates adb-tools (included in the SDK Platform Tools) for your OS here:
 https://developer.android.com/studio/releases/platform-tools
 
-## Authorize Bolt to connect to Windows / macOS
-### BOLT v1
-the Bolt must be authorized for adb (test with: adb devices):
-1. disconnect Bolt from your computer
-2. turn the Bolt on
-3. press the power button (you enter the settings menu)
-4. press the power button again (you return to the normal screen)
-5. connect the Bolt to your pc
+## Authorize Wahoo device
+The Wahoo device must be authorized for adb to be reachable from Windows and macOS. Adb authorization works different per Wahoo device and is decribed now.
 
-### BOLT v2
-adb authorization for Bolt v2:
-1. disconnect Bolt from your computer
-2. turn the Bolt on
-3. press the power, up and down buttons at the same time
-4. connect the Bolt to your computer
+1. disconnect device from your computer
+2. turn the device on
+3. press keys on device
+   * **BOLT v1 and ROAM**
+     * press the power button (you enter the settings menu)
+     * press the power button again (you return to the normal screen)
+   * **BOLT v2**
+     * press the power, up and down buttons at the same time
+4. connect the device to your pc
+
+Successful authorization can be tested via terminal / cmd:
+```
+adb devices
+```
 
 ## Copy map files
 copy the unzipped map folders to \ELEMNT-BOLT\USB storage\maps\tiles\8\
