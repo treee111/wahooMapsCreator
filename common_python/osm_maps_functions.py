@@ -603,7 +603,7 @@ class OsmMaps:
             cmd = ['zip', '-r']
 
         cmd.extend(
-            [folder_name + '.zip', os.path.join(fd_fct.OUTPUT_DIR, folder_name)])
+            [folder_name + '.zip', folder_name])
         # cmd.append(folder_name + '.zip')
         # cmd.append(os.path.join(fd_fct.OUTPUT_DIR, folder_name))
 
