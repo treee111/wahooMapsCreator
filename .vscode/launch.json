@@ -116,6 +116,23 @@
             ]
         },
         {
+            "name": "malta-only-merge",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceRoot}/wahoo_map_creator.py",
+            "console": "integratedTerminal",
+            "args": [
+                "malta",
+                "-tag",
+                "tag-wahoo.xml",
+                "-fp",
+                "-c",
+                "-md",
+                "100",
+                "-om"
+            ]
+        },
+        {
             "name": "malta-geofabrik",
             "type": "python",
             "request": "launch",
