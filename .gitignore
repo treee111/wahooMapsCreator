@@ -13,6 +13,7 @@ osmconvert_tempfile.*
 # in all folders
 **/__pycache__/*
 **/*.pyc
+**/*.DS_Store
 
 # mac/unix
 

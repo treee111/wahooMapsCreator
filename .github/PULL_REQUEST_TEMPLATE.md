@@ -6,7 +6,7 @@ To get it merged faster, please use this template and replace as many "{...}" as
 
 a simple, one sentence summary of the ticket ensures the PR has a clear overall focus.
 
-{...}
+- {...}
 
 ## Considerations and implementations
 
@@ -14,8 +14,12 @@ This is the main body of the PR, and varies massively by PR. A simple PR may hav
 
 {...}
 
+## How to test
+
+1. ...
+2. ...
+
 ## Pull Request Checklist
 - [ ] Reviewed the [Contributing Guidelines](https://github.com/treee111/wahooMapsCreator/blob/develop/.github/CONTRIBUTING.md)
     + Especially the [Pull-Requests](https://github.com/treee111/wahooMapsCreator/blob/develop/.github/CONTRIBUTING.md#Pull-Requests) section
-- [ ] commits (and commit-messages) are understandable
-- [ ] {...}
+- [ ] Commits (and commit-messages) are understandable
