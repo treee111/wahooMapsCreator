@@ -598,12 +598,15 @@ class OsmMaps:
             path_7za = os.path.join(fd_fct.TOOLING_WIN_DIR, '7za')
             cmd = [path_7za, 'a', '-tzip']
 
+            cmd.extend(
+                [folder_name + '.zip', os.path.join(".", folder_name, "*")])
+
         # Non-Windows
         else:
             cmd = ['zip', '-r']
 
-        cmd.extend(
-            [folder_name + '.zip', folder_name])
+            cmd.extend(
+                [folder_name + '.zip', folder_name])
         # cmd.append(folder_name + '.zip')
         # cmd.append(os.path.join(fd_fct.OUTPUT_DIR, folder_name))
 
