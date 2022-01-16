@@ -23,8 +23,7 @@ If anything is unclear or just wrong, write an issue!
 
 ### Overview of the steps
 The steps for all OS are similar:
-- Download and Install required programs
-- Download a release of wahooMapsCreator or clone Repository
+- Download wahooMapsCreator and install required programs
 - Run wahooMapsCreator for your country
 - Copy the map-files to your device
 
@@ -34,15 +33,8 @@ Optional:
 ### Download and Install required programs
 The initial setup takes some minutes but is only a one-timer!
 
-Follow the Quick Start guide depending on your OS:
-- [Quick Start Guide for Windows](docs/QUICKSTART_WINDOWS.md)
-- [Quick Start Guide for macOS and Linus](docs/QUICKSTART_MACOS.md)
-
-Or use Anaconda to create a Python environment
+Using Anaconda to setup a virtual Python environment is the fastest way to get wahooMapsCreator running!
 - [Quick Start Guide for Anaconda](docs/QUICKSTART_ANACONDA.md)
-
-### Get wahooMapsCreator
-Download the latest Release from the ["Releases" Section](https://github.com/treee111/wahooMapsCreator/releases) and Save the folder on your drive. You can also clone the repository and have the latest coding.
 
 ## Run wahooMapsCreator
 wahooMapsCreator can be used in two different ways:
