@@ -36,7 +36,7 @@ The initial setup takes some minutes but is only a one-timer!
 
 Follow the Quick Start guide depending on your OS:
 - [Quick Start Guide for Windows](docs/QUICKSTART_WINDOWS.md)
-- [Quick Start Guide for macOS](docs/QUICKSTART_MACOS.md)
+- [Quick Start Guide for macOS and Linus](docs/QUICKSTART_MACOS.md)
 
 Or use Anaconda to create a Python environment
 - [Quick Start Guide for Anaconda](docs/QUICKSTART_ANACONDA.md)
