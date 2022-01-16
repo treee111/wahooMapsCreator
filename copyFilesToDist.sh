@@ -19,7 +19,7 @@ cp -a ../../common_resources/tag_wahoo_initial/ ./common_resources/tag_wahoo_ini
 cp -a ../../docs ./docs
 cp -a ../../tooling ./tooling
 cp -a ../../tooling_windows ./tooling_windows
-cp -a ../../wahoo_map_creator.py ../../CHANGELOG.md ../../README.md ./
+cp -a ../../wahoo_map_creator.py ../../CHANGELOG.md ../../README.md ../../requirements.txt ./
 
 # zip content into .zip file
 zip -r ../${FOLDER_NAME}.zip *
