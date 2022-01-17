@@ -23,3 +23,5 @@ This is the main body of the PR, and varies massively by PR. A simple PR may hav
 - [ ] Reviewed the [Contributing Guidelines](https://github.com/treee111/wahooMapsCreator/blob/develop/.github/CONTRIBUTING.md)
     + Especially the [Pull-Requests](https://github.com/treee111/wahooMapsCreator/blob/develop/.github/CONTRIBUTING.md#Pull-Requests) section
 - [ ] Commits (and commit-messages) are understandable
+- [ ] Tested with macOS / Linux
+- [ ] Tested with Windows
