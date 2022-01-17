@@ -23,9 +23,9 @@ If anything is unclear or just wrong, write an issue!
 
 ### Overview of the steps
 The steps for all OS are similar:
-- Download wahooMapsCreator and install required programs
-- Run wahooMapsCreator for your country
-- Copy the map-files to your device
+1. [Download wahooMapsCreator and install required programs](#download-and-install-required-programs)
+2. [Run wahooMapsCreator for your country](#run-wahoomapscreator)
+3. [Copy the map-files to your device](#copy-the-map-files-to-your-device)
 
 Optional:
 - use a custom theme on your Wahoo
@@ -34,7 +34,7 @@ Optional:
 The initial setup takes some minutes but is only a one-timer!
 
 Using Anaconda to setup a virtual Python environment is the fastest way to get wahooMapsCreator running!
-- [Quick Start Guide for Anaconda](docs/QUICKSTART_ANACONDA.md)
+- [Quick Start Guide for Anaconda](docs/QUICKSTART_ANACONDA.md#download-and-install-required-programs)
 
 ## Run wahooMapsCreator
 wahooMapsCreator can be used in two different ways:
