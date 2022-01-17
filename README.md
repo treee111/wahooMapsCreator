@@ -22,7 +22,7 @@ The instructens are intended to be suitable for beginners.
 If anything is unclear or just wrong, write an issue!
 
 ### Overview of the steps
-The steps for all OS are similar:
+The steps for all OS are similar: <!-- no toc -->
 1. [Download wahooMapsCreator and install required programs](#download-and-install-required-programs)
 2. [Run wahooMapsCreator for your country](#run-wahoomapscreator)
 3. [Copy the map-files to your device](#copy-the-map-files-to-your-device)
@@ -31,59 +31,28 @@ Optional:
 - use a custom theme on your Wahoo
 
 ### Download and Install required programs
-The initial setup takes some minutes but is only a one-timer!
-
 Using Anaconda to setup a virtual Python environment is the fastest way to get wahooMapsCreator running!
 - [Quick Start Guide for Anaconda](docs/QUICKSTART_ANACONDA.md#download-and-install-required-programs)
 
 ## Run wahooMapsCreator
-wahooMapsCreator can be used in two different ways:
-- as [graphical window](#gui-graphical-user-interface) programm
-- as [command line](#cli-command-line-interface) programm
+via GUI
+```
+python wahoo_map_creator.py
+python3 wahoo_map_creator.py
+```
+via CLI
+```
+python wahoo_map_creator.py malta
+python3 wahoo_map_creator.py malta
+```
 
-Both ways support the same arguments to be used for the map-creation process. You can choose the arguments via GUI or as [CLI-arguments](#advanced-cli-usage).
-
-### GUI (Graphical User Interface)
-
-From the `root` folder of wahooMapsCreator, run:
-  - `python3 wahoo_map_creator.py` or
-  - `python wahoo_map_creator.py`
-
-Set your arguments as required via the window:
-
-<img src="https://github.com/treee111/wahooMapsCreator/blob/develop/docs/gui.png" alt="wahooMapsCreator GUI" width=35%>
-
-### CLI (Command Line Interface)
-
-From the `root` folder of wahooMapsCreator, run:
-- `python3 wahoo_map_creator.py <country_name>` or
-- `python wahoo_map_creator.py <country_name>`
-
-Examples:
-- for Malta: `python3 wahoo_map_creator.py malta`
-- for Ireland: `python3 wahoo_map_creator.py ireland`
-
-### Run wahooMapsCreator for your country
-It might be a good idea to run wahooMapsCreator first for a small country e.g. Malta to check if everything is running fine.
-In a next step you can run it for your own country.
-
-### Advanced CLI-Usage
-The script supports many arguments.
-For a list of all supported arguments, run:
-- `python3 wahoo_map_creator.py -h` or
-- `python wahoo_map_creator.py -h`
-
-Examples:
-- for Malta, download new maps if existing maps are older than 100 days and process files even if files exist
-  - `python3 wahoo_map_creator.py malta -md 100 -fp`
-- for Germany, download and process whole tiles which involves other countries than the given
-  - `python3 wahoo_map_creator.py germany -bc`
+A detailled description of the usage is documented [here](docs/USAGE.md)
 
 ## Copy the map-files to your device
 When file-creation is finished copy the map-files to your device:
 -  [Copy maps files to Wahoo](docs/COPY_TO_WAHOO.md)
 
-## use a custom theme on your Wahoo
+## Use a custom theme on your Wahoo
 You can use a custom theme to control which OSM-tags are displayed in which zoom-level
 -  [OSM-tags during map creation and on your device](docs/TAGS_ON_MAP_AND_DEVICE.md)
 
