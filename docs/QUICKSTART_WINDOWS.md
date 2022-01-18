@@ -21,7 +21,7 @@
 
 1d. Install additional Python modules
     Using cmd (Windows+R, cmd), move to the root-folder of wahooMapsCreator and install required Python modules:
-    `python -m pip install -r requirements.txt`
+    `python -m pip install -r .\\conda_env\\requirements.txt`
 
 
 ## GDAL - The Geospatial Data Abstraction Library

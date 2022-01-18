@@ -52,4 +52,4 @@ https://medium.com/@vascofernandes_13322/how-to-install-gdal-on-macos-6a76fb5e24
 
 ## Install additional Python modules
 Move to the root-folder of wahooMapsCreator and install required Python modules:
-`pip install -r requirements.txt`
+`pip install -r ./conda_env/requirements.txt`

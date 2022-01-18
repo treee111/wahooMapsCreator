@@ -7,7 +7,7 @@
 /common_download
 /dist
 /output
-/venv
+/envs
 osmconvert_tempfile.*
 
 # in all folders

@@ -8,6 +8,7 @@
 - [Release](#release)
   - [Automatic CHANGELOG creation](#automatic-changelog-creation)
 - [Structure of the repository](#structure-of-the-repository)
+- [Anaconda environment](#anaconda-environment)
 
 ## How to Contribute
 1. Create a branch by forking the repository and apply your change.
@@ -75,3 +76,19 @@ The folders in the repo have the following purposes:
 - common_resources - config, json files
 - tooling - programs, scripts used by Windows and macOS
 - tooling_windows - programs, scripts for Windows
+
+## Anaconda environment
+- /conda_env/enduser.yml is for creating Anaconda environment for users
+- /conda_env/developer.yml is for creationg Anaconda environment for developers
+- /conda_env/ ..mac.yml and ..win.yml files contain the installed packages including dependencies
+
+.yml files with only the installed packages were installed via
+```
+conda env export > environment.yml --from-history
+```
+and the .yml files with the dependencies via
+```
+conda env export > environment.yml
+```
+
+more information on [documentation for sharing anaconda environments](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#exporting-an-environment-file-across-platforms)
