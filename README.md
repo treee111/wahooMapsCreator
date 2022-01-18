@@ -14,18 +14,18 @@ A tool to create up-to-date maps for your Wahoo ELEMNT BOLT and BOLTv2, ELEMNT R
 
 It runs on Windows, macOS as well as on Linux!
 
-# Basic Overview
+## Basic Overview
 WahooMapsCreator is a tool to create maps based on the latest OSM data for your Wahoo devices. You can generate maps for the countries you like and you can control which OSM-tags are included.
 
 The maps of your device may be old because Wahoo did not release a newer version in the last years.
 
 OSM maps are constantly updated. With this program, the updated maps can be used on our Wahoo.
 
-## Get it running
-The instructens are intended to be suitable for beginners.
-If anything is unclear or seams wrong, write an issue!
+# Get it running
+The instructions are intended to be suitable for beginners.
+If anything is unclear or seams wrong, write an [issue](https://github.com/treee111/wahooMapsCreator/issues)!
 
-### Download and Install required programs
+## Download and Install required programs
 Using Anaconda to setup a virtual Python environment is the fastest way to get wahooMapsCreator running!
 - [Quick Start Guide for Anaconda](docs/QUICKSTART_ANACONDA.md#download-and-install-required-programs)
 
