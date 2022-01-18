@@ -23,11 +23,13 @@ OSM maps are constantly updated. With this program, the updated maps can be used
 
 # Get it running
 The instructions are intended to be suitable for beginners.
-If anything is unclear or seams wrong, write an [issue](https://github.com/treee111/wahooMapsCreator/issues)!
+
+If anything is unclear or seams wrong, write an [:pencil2: issue](https://github.com/treee111/wahooMapsCreator/issues)!
 
 ## Download and Install required programs
 Using Anaconda to setup a virtual Python environment is the fastest way to get wahooMapsCreator running!
-- [Quick Start Guide for Anaconda](docs/QUICKSTART_ANACONDA.md#download-and-install-required-programs)
+
+[:rocket: Quick Start Guide for Anaconda](docs/QUICKSTART_ANACONDA.md#download-and-install-required-programs)
 
 ## Run wahooMapsCreator
 via GUI
@@ -45,15 +47,17 @@ python wahoo_map_creator.py malta
 python3 wahoo_map_creator.py malta
 ```
 
-A detailled description of the usage is documented [here](docs/USAGE.md#usage-of-wahoomapscreator)
+A detailled description of the usage is documented [:computer: here](docs/USAGE.md#usage-of-wahoomapscreator)
 
 ## Copy the map-files to your device
-When file-creation is finished copy the map-files to your device:
--  [Copy maps files to Wahoo](docs/COPY_TO_WAHOO.md)
+When file-creation is finished, copy the maps files to your Wahoo device.
+
+[:floppy_disk: docu](docs/COPY_TO_WAHOO.md#copy-maps-files-to-wahoo-device-)
 
 ## (Optional) Use a custom theme on your Wahoo
-You can use a custom theme to control which OSM-tags are displayed in which zoom-level
--  [OSM-tags during map creation and on your device](docs/TAGS_ON_MAP_AND_DEVICE.md)
+You can use a custom theme to control which OSM-tags are displayed on your device. Also in which zoom-level certain streets appear!
+
+[:mag: docu](docs/TAGS_ON_MAP_AND_DEVICE.md#osm-tags-during-map-creation-and-on-your-device-)
 
 ## Contribution
 You are welcome to provide input via Pull Requests, Issues or in any other way!
