@@ -1,4 +1,4 @@
-name: conda-wahoo
+name: enduser
 channels:
   - defaults
   - conda-forge
