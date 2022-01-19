@@ -3,40 +3,37 @@
 #### Table of contents <!-- omit in toc -->
 - [Download and Install required programs](#download-and-install-required-programs)
   - [Anaconda](#anaconda)
+  - [wahooMapsCreator](#wahoomapscreator)
 - [Create Anaconda Environment](#create-anaconda-environment)
 - [Run wahooMapsCreator](#run-wahoomapscreator)
 
 # Download and Install required programs
 
 ## Anaconda
-1a. Download `Anaconda Individual Edition` for your OS from
+1. Download `Anaconda Individual Edition` for your OS from
 
 https://www.anaconda.com/products/individual
 
 
-1b. Install `Anaconda Individual Edition` with default settings
+2. Install `Anaconda Individual Edition` with default settings
+
+## wahooMapsCreator
+Download the latest .zip file from the [Releases](https://github.com/treee111/wahooMapsCreator/releases) page and save the folder on your drive. Extract the folder.
+
+You can also clone the repository to have the latest coding.
 
 # Create Anaconda Environment
-You can have a look at this: which guides you throught 2a and 2b!
+1. Open (or change to) the root of the extracted wahooMapsCreator folder in terminal or cmd prompt
+2. Create a new Anaconda environment via
+```
+conda env create --prefix ./envs -f ./conda_env/enduser.yml
+```
+3. activate Anaconda environment with the command printed out
+```
+conda activate <PATH_TO_FOLDER>/wahooMapsCreator/envs
+```
 
-https://opensourceoptions.com/blog/how-to-install-gdal-with-anaconda/
+Additional informations: https://opensourceoptions.com/blog/how-to-install-gdal-with-anaconda/
 
-2a. Create a new Anaconda Environment using Python 3.7 and activate the environment
-```
-conda create -n conda-gdal python=3.7
-```
-
-2b. install the required Anaconda Python package GDAL
-```
-conda install -c conda-forge gdal
-```
-2b. In addition to GDAL, you have to install these packages:
-```
-conda install -c conda-forge geojson
-conda install -c conda-forge requests
-conda install -c conda-forge shapely 
-```
 # Run wahooMapsCreator
 Run wahooMapsCreater as described in the [README](../README.md/#Run-wahooMapsCreator)
-
-You have to move to the downloaded/cloned folder via the Anaconda Prompt before or during your Anaconda environment is activated.

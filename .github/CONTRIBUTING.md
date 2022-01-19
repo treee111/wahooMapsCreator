@@ -62,10 +62,14 @@ After testing carefully, changes are merged into main and a Release will be crea
 
 ### Automatic CHANGELOG creation 
 After installing [git-chglog](https://github.com/git-chglog/git-chglog) locally, the CHANGELOG.md can be generated with this command:  
-`git-chglog -o CHANGELOG.md`
+```
+git-chglog -o CHANGELOG.md
+```
 
 To generate the CHANGELOG.md for a upcoming release (no tag exists yet), the following command can be used:  
-`git-chglog -o CHANGELOG.md --next-tag v0.10.0`
+```
+git-chglog -o CHANGELOG.md --next-tag v0.10.0
+```
 
 ## Structure of the repository
 There is one python coding base for both Windows and for macOS.
@@ -90,5 +94,7 @@ and the .yml files with the dependencies via
 ```
 conda env export > environment.yml
 ```
+
+The installation of Anaconda envirionments is described [here](docs/QUICKSTART_ANACONDA.md)
 
 more information on [documentation for sharing anaconda environments](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#exporting-an-environment-file-across-platforms)
