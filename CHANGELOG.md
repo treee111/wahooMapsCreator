@@ -4,7 +4,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-A list of unreleased changes can be found [here](https://github.com/treee111/wahooMapsCreator/compare/v0.12.0...HEAD).
+A list of unreleased changes can be found [here](https://github.com/treee111/wahooMapsCreator/compare/v1.0.0...HEAD).
+
+<a name="1.0.0"></a>
+## [1.0.0] - 2022-01-19
+### Features
+- **install:** Make Anaconda environment very easy to setup ([#82](https://github.com/treee111/wahooMapsCreator/issues/82)) [`14b9161`](https://github.com/treee111/wahooMapsCreator/commit/14b9161c8fb2db0a8a730157e01e72f89df9c5d0)
+- **docu:** Update & refactor README and install-docu for setting up Anaconda environment ([#84](https://github.com/treee111/wahooMapsCreator/issues/84)) [`07dbeea`](https://github.com/treee111/wahooMapsCreator/commit/07dbeea241c2078e8fb17b6ec5333d990b9844d6)
+
+### Development/Infrastructure/Test/CI
+- **unittest:** Update unittest files for Windows and macOS after sharpening Anaconda environment ([#83](https://github.com/treee111/wahooMapsCreator/issues/83)) [`5ed0375`](https://github.com/treee111/wahooMapsCreator/commit/5ed0375f847358ac112474acb6541708564dff27)
+
+### BREAKING CHANGE
+
+The recommendation for the initial setup is now to create a virtual Python environment via Anaconda on Windows, macOS or Linux. Installing multiple programs manually with all setup details and problems now belongs to the past.
+
+wahooMapsCreator can now be used much quicker and easier!
+
 
 <a name="0.12.0"></a>
 ## [0.12.0] - 2022-01-16
@@ -181,6 +197,7 @@ A list of unreleased changes can be found [here](https://github.com/treee111/wah
     - Windows:    `tooling_windows/Windows-Wahoo-Map-Creator-Osmosis/wahoo-map-creator-osmosis.py`
 
 
+[1.0.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.12.0...v1.0.0
 [0.12.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.11.0...v0.12.0
 [0.11.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.10.0...v0.11.0
 [0.10.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.9.0...v0.10.0
