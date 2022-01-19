@@ -97,4 +97,4 @@ conda env export > environment.yml
 
 The installation of Anaconda envirionments is described [here](docs/QUICKSTART_ANACONDA.md)
 
-more information on [documentation for sharing anaconda environments](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#exporting-an-environment-file-across-platforms)
+more information on [documentation for sharing Anaconda environments](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#exporting-an-environment-file-across-platforms)
