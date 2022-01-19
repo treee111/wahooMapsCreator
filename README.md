@@ -65,7 +65,7 @@ Discussion goes on:
 - in this telegram channel: https://t.me/joinchat/TaMhjouxlsAzNWZk
 - in this google group: https://groups.google.com/g/wahoo-elemnt-users/c/PSrdapfWLUE
 
-More details can be found here: [CONTRIBUTING](.github/CONTRIBUTING.md#Contributing-to-wahooMapsCreator)
+More details can be found here: [CONTRIBUTING](.github/CONTRIBUTING.md#contributing-to-wahoomapscreator-)
 
 ## Thanks to
 [@Intyre](https://github.com/Intyre)/Hank for the initial version of the script
