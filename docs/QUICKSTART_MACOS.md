@@ -19,31 +19,22 @@ Install using terminal
 https://brew.sh/
 
 ## OSM-tools
-1. Install **Osmfilter** using homebrew in terminal:
-```
-brew install osmfilter
-```
-2. Install **osmium-tool** using homebrew in terminal:
+1. Install **osmium-tool** using homebrew in terminal:
 ```
 brew install osmium-tool
 ```
-4. Download **Osmosis** latest version from Github
+2. Download **Osmosis** latest version from Github
 * https://github.com/openstreetmap/osmosis/releases
 
-1. Install mapsforge-map-writer plugin (Osmosis Plugin)
+3. Install mapsforge-map-writer plugin (Osmosis Plugin)
 * Download the [mapsforge-map-writer](https://search.maven.org/search?q=a:mapsforge-map-writer) plugin, click on "file_download" and select "jar-with-dependecies.jar".
-* Put the .jar in this directory. Create it when it doesn't exist:
-`~/.openstreetmap/osmosis/plugins`
+* Create this directory when it doesn't exist: `~/.openstreetmap/osmosis/plugins`. For example via terminal:
+```
+% cd ~
+% mkdir -p .openstreetmap/osmosis/plugins
+```
+* Put the .jar into the `plugins` directory. You may have to enable showing hidden folders in finder via `Command + Shift + . (period)`
 * more information: https://github.com/mapsforge/mapsforge/blob/master/docs/Getting-Started-Map-Writer.md#plugin-installation
-6. Install osmctools
-
-*I'm not really sure, if this is relevant. If a error concerning osmconvert occurs while using wahooMapsCreator, install osmctools*
-
-Install using terminal:
-* with homebrew: `brew install interline-io/planetutils/osmctools` or
-* `apt install osmctools` (this may only work on linux and not macOS)
-
-* more information: https://gitlab.com/osm-c-tools/osmctools
 
 ## GDAL - The Geospatial Data Abstraction Library
 Install using homebrew
