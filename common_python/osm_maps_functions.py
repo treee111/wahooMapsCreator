@@ -7,6 +7,7 @@ functions and object for managing OSM maps
 import glob
 import multiprocessing
 import os
+import struct
 import subprocess
 import sys
 import platform
@@ -41,6 +42,13 @@ class OsmMaps:
         self.o_input_data = oInputData
         self.o_downloader = Downloader(
             oInputData.max_days_old, oInputData.force_download)
+
+        if 8 * struct.calcsize("P") == 32:
+            self.osmconvert_path = os.path.join(
+                fd_fct.TOOLING_WIN_DIR, 'osmconvert')
+        else:
+            self.osmconvert_path = os.path.join(
+                fd_fct.TOOLING_WIN_DIR, 'osmconvert64-0.8.8p')
 
     def process_input(self, input_argument, calc_border_countries):
         """
@@ -133,7 +141,7 @@ class OsmMaps:
 
                 if not os.path.isfile(out_file_o5m_filtered) or self.force_processing is True:
                     print(f'\n+ Converting map of {key} to o5m format')
-                    cmd = [os.path.join(fd_fct.TOOLING_WIN_DIR, 'osmconvert')]
+                    cmd = [self.osmconvert_path]
                     cmd.extend(['-v', '--hash-memory=2500', '--complete-ways',
                                 '--complete-multipolygons', '--complete-boundaries',
                                 '--drop-author', '--drop-version'])
@@ -336,8 +344,8 @@ class OsmMaps:
                 if not os.path.isfile(out_merged) or self.force_processing is True:
                     # Windows
                     if platform.system() == "Windows":
-                        cmd = [os.path.join(
-                            fd_fct.TOOLING_WIN_DIR, 'osmconvert'), '-v', '--hash-memory=2500']
+                        cmd = [self.osmconvert_path,
+                               '-v', '--hash-memory=2500']
                         cmd.append('-b='+f'{tile["left"]}' + ',' + f'{tile["bottom"]}' +
                                    ',' + f'{tile["right"]}' + ',' + f'{tile["top"]}')
                         cmd.extend(
@@ -350,8 +358,8 @@ class OsmMaps:
                             print(f'Error in Osmosis with country: {country}')
                             sys.exit()
 
-                        cmd = [os.path.join(
-                            fd_fct.TOOLING_WIN_DIR, 'osmconvert'), '-v', '--hash-memory=2500']
+                        cmd = [self.osmconvert_path,
+                               '-v', '--hash-memory=2500']
                         cmd.append('-b='+f'{tile["left"]}' + ',' + f'{tile["bottom"]}' +
                                    ',' + f'{tile["right"]}' + ',' + f'{tile["top"]}')
                         cmd.extend(
