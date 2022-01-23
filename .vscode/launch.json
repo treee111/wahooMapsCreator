@@ -49,54 +49,13 @@
             ]
         },
         {
-            "name": "only9",
-            "type": "python",
-            "request": "launch",
-            "program": "${workspaceRoot}/wahoo_map_creator.py",
-            "console": "integratedTerminal",
-            "args": [
-                "${workspaceRoot}/tests/json/germany-only9.json",
-                "-tag",
-                "tag-wahoo.xml",
-                "-md",
-                "100",
-                "-fp",
-                "-c"
-            ]
-        },
-        {
-            "name": "koblenz",
-            "type": "python",
-            "request": "launch",
-            "program": "${workspaceRoot}/wahoo_map_creator.py",
-            "console": "integratedTerminal",
-            "args": [
-                "${workspaceRoot}/tests/json/germany-koblenz.json"
-            ]
-        },
-        {
             "name": "germany",
             "type": "python",
             "request": "launch",
             "program": "${workspaceRoot}/wahoo_map_creator.py",
             "console": "integratedTerminal",
             "args": [
-                "${workspaceRoot}/tests/json/germany.json"
-            ]
-        },
-        {
-            "name": "germany_wo_bc",
-            "type": "python",
-            "request": "launch",
-            "program": "${workspaceRoot}/wahoo_map_creator.py",
-            "console": "integratedTerminal",
-            "args": [
-                "germany",
-                "-tag",
-                "tag-wahoo.xml",
-                "-c",
-                "-md",
-                "100"
+                "germany"
             ]
         },
         {
@@ -113,23 +72,6 @@
                 "-c",
                 "-md",
                 "100"
-            ]
-        },
-        {
-            "name": "malta-only-merge",
-            "type": "python",
-            "request": "launch",
-            "program": "${workspaceRoot}/wahoo_map_creator.py",
-            "console": "integratedTerminal",
-            "args": [
-                "malta",
-                "-tag",
-                "tag-wahoo.xml",
-                "-fp",
-                "-c",
-                "-md",
-                "100",
-                "-om"
             ]
         },
         {
@@ -165,36 +107,6 @@
             "console": "integratedTerminal",
             "args": [
                 "-h"
-            ]
-        },
-        {
-            "name": "hong_kong",
-            "type": "python",
-            "request": "launch",
-            "program": "${workspaceRoot}/wahoo_map_creator.py",
-            "console": "integratedTerminal",
-            "args": [
-                "hong_kong",
-                "-fp",
-                "-c",
-                "-bc",
-                "-md",
-                "100"
-            ]
-        },
-        {
-            "name": "macao",
-            "type": "python",
-            "request": "launch",
-            "program": "${workspaceRoot}/wahoo_map_creator.py",
-            "console": "integratedTerminal",
-            "args": [
-                "macao",
-                "-fp",
-                "-c",
-                "-bc",
-                "-md",
-                "100"
             ]
         },
         {
