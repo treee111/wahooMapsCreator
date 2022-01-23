@@ -255,14 +255,12 @@ class OsmMaps:
             if not os.path.isfile(out_file+'1.osm') or self.force_processing is True:
                 # Windows
                 if platform.system() == "Windows":
-                    cmd = ['python', os.path.join(fd_fct.TOOLING_DIR,
+                    cmd = ['python', os.path.join(fd_fct.COMMON_DIR,
                                                   'shape2osm.py'), '-l', out_file, land_file]
-                    # new shapefile for python 3 ?!
-                    #   'shape2osm', 'shape2osm.py'), land_file, out_file+'1.osm']
 
                 # Non-Windows
                 else:
-                    cmd = ['python3', os.path.join(fd_fct.TOOLING_DIR,
+                    cmd = ['python3', os.path.join(fd_fct.COMMON_DIR,
                                                    'shape2osm.py'), '-l', out_file, land_file]
 
                 subprocess.run(cmd, check=True)
@@ -285,7 +283,7 @@ class OsmMaps:
             if not os.path.isfile(out_file) or self.force_processing is True:
                 print(
                     f'+ Generate sea {tile_count} of {len(self.tiles)} for Coordinates: {tile["x"]},{tile["y"]}')
-                with open(os.path.join(fd_fct.TOOLING_DIR, 'sea.osm')) as sea_file:
+                with open(os.path.join(fd_fct.COMMON_DIR, 'sea.osm')) as sea_file:
                     sea_data = sea_file.read()
 
                     # Try to prevent getting outside of the +/-180 and +/- 90 degrees borders. Normally the +/- 0.1 are there to prevent white lines at tile borders
