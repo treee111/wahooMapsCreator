@@ -622,22 +622,22 @@ class OsmMaps:
                 os.makedirs(outdir)
             try:
                 shutil.copy2(src, dst)
-            except:
+            except Exception as exception:
                 print(
-                    f'Error copying {extension} files of country {self.country_name}')
+                    f'Error copying {extension} files for country {self.country_name}: {exception}')
                 sys.exit()
 
-        if extension == '.map.lzma':
-            src = src + '.12'
-            dst = dst + '.12'
-            if not os.path.isdir(outdir):
-                os.makedirs(outdir)
-            try:
-                shutil.copy2(src, dst)
-            except:
-                print(
-                    f'Error copying precense files of country {self.country_name}')
-                sys.exit()
+            if extension == '.map.lzma':
+                src = src + '.12'
+                dst = dst + '.12'
+                if not os.path.isdir(outdir):
+                    os.makedirs(outdir)
+                try:
+                    shutil.copy2(src, dst)
+                except Exception as exception:
+                    print(
+                        f'Error copying version files for country {self.country_name}: {exception}')
+                    sys.exit()
 
         # Windows
         if platform.system() == "Windows":
@@ -667,4 +667,4 @@ class OsmMaps:
                         {os.path.join(fd_fct.OUTPUT_DIR, folder_name)}')
 
         # logging
-        print('# Zip .map.lzma files: OK \n')
+        print(f'# Zip {extension} files: OK \n')
