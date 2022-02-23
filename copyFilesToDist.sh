@@ -44,6 +44,10 @@ cp -R ${FOLDER_NAME_MAC}/* ${FOLDER_NAME_WIN}
 # add Win specific stuff
 cp -a ../tooling_windows ./${FOLDER_NAME_WIN}/tooling_windows
 
-# zip content into .zip file
-zip -r ${FOLDER_NAME_MAC}.zip ${FOLDER_NAME_MAC}/*
-zip -r ${FOLDER_NAME_WIN}.zip ${FOLDER_NAME_WIN}/*
+# zip content into .zip file - by cd'ing without including root folder
+cd ${FOLDER_NAME_MAC}
+zip -r ../${FOLDER_NAME_MAC}.zip *
+
+cd ..
+cd ${FOLDER_NAME_WIN}
+zip -r ../${FOLDER_NAME_WIN}.zip *
