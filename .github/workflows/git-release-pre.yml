@@ -28,7 +28,7 @@ jobs:
           ALLOW_EMPTY_CHANGELOG: true
         with:
           args: |
-            dist/wahooMapsCreator-*.zip
+            dist/*.zip
             darwin-amd64.zip
             linux-amd64.zip
             windows-amd64.zip
