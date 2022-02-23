@@ -27,7 +27,7 @@ jobs:
           RELEASE_NAME_PREFIX: "Release "
         with:
           args: |
-            dist/wahooMapsCreator-*.zip
+            dist/*.zip
             darwin-amd64.zip
             linux-amd64.zip
             windows-amd64.zip
