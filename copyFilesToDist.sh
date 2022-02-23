@@ -1,5 +1,6 @@
 FOLDER_NAME_MAC="wahooMapsCreator-"${GITHUB_REF_VARIABLE}"-macOS-Linux"
 FOLDER_NAME_WIN="wahooMapsCreator-"${GITHUB_REF_VARIABLE}"-Windows"
+FOLDER_NAME_CRUISER="cruiser-mapviewer-"${GITHUB_REF_VARIABLE}"-macOS-Linux-Windows"
 
 echo "Github-Ref: ${GITHUB_REF_VARIABLE}"
 
@@ -9,7 +10,13 @@ mkdir -p dist
 # create OS-specific folders
 mkdir -p dist/${FOLDER_NAME_MAC}
 mkdir -p dist/${FOLDER_NAME_WIN}
+
+# zip cruiser stuff
+cd tooling/cruiser
+zip -r ../../dist/${FOLDER_NAME_CRUISER}.zip *
+
 # navigate into mac folder
+cd ../..
 cd dist/${FOLDER_NAME_MAC}
 
 # create empty sub-folders
@@ -27,11 +34,7 @@ cp -a ../../common_resources/tag_wahoo_adjusted/ ./common_resources/tag_wahoo_ad
 cp -a ../../common_resources/tag_wahoo_initial/ ./common_resources/tag_wahoo_initial
 
 cp -a ../../docs ./docs
-cp -a ../../tooling/*.osm ../../tooling/*.py ./tooling/
 cp -a ../../wahoo_map_creator.py ../../CHANGELOG.md ../../README.md ./
-
-# zip cruiser stuff
-zip -r ./tooling/cruiser.zip ../../tooling/cruiser/*
 
 # file for virtual environments / legacy pip install
 cp -a ../../conda_env/enduser.yml ./conda_env/
