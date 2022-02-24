@@ -24,6 +24,7 @@ mkdir -p ./common_python
 mkdir -p ./common_resources
 mkdir -p ./conda_env
 mkdir -p ./tooling
+mkdir -p ./docs
 
 # copy files into dist-folder
 cp -a ../../common_python/*.py ./common_python/
@@ -33,7 +34,7 @@ cp -a ../../common_resources/json/ ./common_resources/json
 cp -a ../../common_resources/tag_wahoo_adjusted/ ./common_resources/tag_wahoo_adjusted
 cp -a ../../common_resources/tag_wahoo_initial/ ./common_resources/tag_wahoo_initial
 
-cp -a ../../docs ./docs
+cp -a ../../docs/*.md ./docs/
 cp -a ../../wahoo_map_creator.py ../../CHANGELOG.md ../../README.md ./
 
 # file for virtual environments / legacy pip install
