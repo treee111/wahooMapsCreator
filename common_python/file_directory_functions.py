@@ -27,9 +27,11 @@ def get_git_root():
 
 # wahooMapsCreator directory
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
+PAR_DIR = os.path.abspath(os.path.join(os.path.join(
+    os.path.dirname(__file__), os.pardir), os.pardir))
 COMMON_DIR = os.path.join(ROOT_DIR, 'common_resources')
-COMMON_DL_DIR = os.path.join(ROOT_DIR, 'common_download')
-OUTPUT_DIR = os.path.join(ROOT_DIR, 'output')
+COMMON_DL_DIR = os.path.join(PAR_DIR, 'wahooMapsCreator_download')
+OUTPUT_DIR = os.path.join(PAR_DIR, 'wahooMapsCreator_output')
 MAPS_DIR = os.path.join(COMMON_DL_DIR, 'maps')
 TOOLING_DIR = os.path.join(ROOT_DIR, 'tooling')
 TOOLING_WIN_DIR = os.path.join(ROOT_DIR, 'tooling_windows')
