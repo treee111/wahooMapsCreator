@@ -3,12 +3,11 @@
 #### Table of contents <!-- omit in toc -->
 - [Download and Install required programs](#download-and-install-required-programs)
   - [Anaconda](#anaconda)
-  - [Windows, macOS, Linux](#windows-macos-linux)
-    - [Install Java](#install-java)
+  - [Java](#java)
   - [macOS, Linux only](#macos-linux-only)
     - [homebrew](#homebrew)
     - [OSM-tools](#osm-tools)
-  - [wahooMapsCreator](#wahoomapscreator)
+- [wahooMapsCreator](#wahoomapscreator)
 - [Create Anaconda Environment](#create-anaconda-environment)
 - [Run wahooMapsCreator](#run-wahoomapscreator)
 
@@ -22,17 +21,13 @@ https://www.anaconda.com/products/individual
 
 2. Install `Anaconda Individual Edition` with default settings
 
-## Windows, macOS, Linux
-<details>
-  <summary>The following programs are needed on every OS</summary>
+## Java
+Java needs to be installed for every OS (Windows, macOS, Linux)
 
-### Install Java
 https://www.oracle.com/technetwork/java/javase/downloads
-</details>
 
 ## macOS, Linux only
-<details>
-  <summary>The following programs are needed for macOS and Linux</summary>
+The following programs are needed for macOS and Linux
 
 ### homebrew
 Install using terminal
@@ -57,10 +52,9 @@ brew install osmosis
 ```
 * Put the .jar into the `plugins` directory. You may have to enable showing hidden folders in finder via `Command + Shift + . (period)`
 * more information: https://github.com/mapsforge/mapsforge/blob/master/docs/Getting-Started-Map-Writer.md#plugin-installation
-</details>
 
-## wahooMapsCreator
-Download the latest .zip file from the [Releases](https://github.com/treee111/wahooMapsCreator/releases) page and save the folder on your drive. Extract the folder.
+# wahooMapsCreator
+Download the latest .zip file from the [Releases](https://github.com/treee111/wahooMapsCreator/releases) page for your OS and save the folder on your drive. Extract the folder.
 
 You can also clone the repository to have the latest coding.
 
@@ -68,11 +62,11 @@ You can also clone the repository to have the latest coding.
 1. Open (or change to) the root of the extracted wahooMapsCreator folder in terminal (macOS/Linux) or **Anaconda Prompt** (Windows, via Startmenu)
 2. Create a new Anaconda environment via
 ```
-conda env create --prefix ./envs -f ./conda_env/enduser.yml
+conda env create -f ./conda_env/enduser.yml
 ```
 3. activate Anaconda environment with the command printed out
 ```
-conda activate <PATH_TO_FOLDER>/wahooMapsCreator/envs
+conda activate enduser
 ```
 
 Additional informations: https://opensourceoptions.com/blog/how-to-install-gdal-with-anaconda/
