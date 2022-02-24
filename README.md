@@ -36,15 +36,9 @@ via GUI
 ```
 python wahoo_map_creator.py
 ```
-```
-python3 wahoo_map_creator.py
-```
 via CLI
 ```
 python wahoo_map_creator.py malta
-```
-```
-python3 wahoo_map_creator.py malta
 ```
 
 A detailled description of the usage is documented [:computer: here](docs/USAGE.md#usage-of-wahoomapscreator)
