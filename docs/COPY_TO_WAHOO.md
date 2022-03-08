@@ -6,6 +6,7 @@
   - [Install adb](#install-adb)
   - [Authorize Wahoo device](#authorize-wahoo-device)
   - [Copy map files](#copy-map-files)
+    - [Simplified usage with MTP-tranfer (under Windows)](#simplified-usage-with-mtp-tranfer-under-windows)
   - [Copy device theme](#copy-device-theme)
 - [Delete temp-files and Clear Cache](#delete-temp-files-and-clear-cache)
 - [Troubleshooting](#troubleshooting)
@@ -42,6 +43,9 @@ copy the unzipped map folders to \ELEMNT-BOLT\USB storage\maps\tiles\8\
 These tools can be helpful if you want to copy the files with a GUI and not via CLI:
 - Windows: https://github.com/hexadezi/adbGUI
 - macOS: https://www.android.com/filetransfer/
+
+### Simplified usage with MTP-tranfer (under Windows)
+According to [the Wahoo documentation](https://support.wahoofitness.com/hc/en-us/articles/115000127910-Connecting-ELEMNT-BOLT-ROAM-to-Desktop-or-Laptop-Computers) the device is able to connect via MTP. On windows you can navigate to the maps folder and drag new map files onto the folder called `maps\8`. The system will ask if you want to overwrite existing files. Don't forget to [delete temp-files and Clear Cache](#delete-temp-files-and-clear-cache). You can simply reboot to clear the cache.
 
 ## Copy device theme
 Device themes are described [here](TAGS_ON_MAP_AND_DEVICE.md#Device-Theme)
