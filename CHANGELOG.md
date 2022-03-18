@@ -4,7 +4,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-A list of unreleased changes can be found [here](https://github.com/treee111/wahooMapsCreator/compare/v1.0.0...HEAD).
+A list of unreleased changes can be found [here](https://github.com/treee111/wahooMapsCreator/compare/v1.1.0...HEAD).
+
+<a name="1.1.0"></a>
+## [1.1.0] - 2022-02-24
+### Features
+- **CI/CD:** create OS-specific .zip files during build for release .zip files, separate cruiser.zip Asset and delete unused files ([#90](https://github.com/treee111/wahooMapsCreator/issues/90)) [`c3cd530`](https://github.com/treee111/wahooMapsCreator/commit/c3cd530767931d7246cc616573cf646923846e82)
+- **install:** move work-directories `common_download` and `output` to level of wahooMapsCreator to be release independent ([#93](https://github.com/treee111/wahooMapsCreator/issues/93)) [`c33fefe`](https://github.com/treee111/wahooMapsCreator/commit/c33fefedb93a4b17d76485e37110ec3fa3106ea6)
+
+### Bug Fixes
+- copy version files to map archive ([#92](https://github.com/treee111/wahooMapsCreator/issues/92)) [`e50c1b7`](https://github.com/treee111/wahooMapsCreator/commit/e50c1b791e97642908fef6ebc0f0b57a7ce6ca49)
+- Release all dist/*.zip files as Assets (also cruiser!) and include moved files (corrects [#90](https://github.com/treee111/wahooMapsCreator/issues/90)) ([#97](https://github.com/treee111/wahooMapsCreator/issues/97)) [`4fb49f6`](https://github.com/treee111/wahooMapsCreator/commit/4fb49f62c3ddf8640c5a20eae509292d7849f720)
+- **Windows:** use (official) 32bit or 64bit osmconvert.exe ([#91](https://github.com/treee111/wahooMapsCreator/issues/91)) [`187e4ac`](https://github.com/treee111/wahooMapsCreator/commit/187e4ac47a8f11ce4c9d35768e43acdb44ab34e4)
+
+### Development/Infrastructure/Test/CI
+- **docu:** remove not needed install steps and clarify installation (macOS/ Windows) [`9e1a00b`](https://github.com/treee111/wahooMapsCreator/commit/9e1a00b74bbfa0e1704742f5f6463f7ed29acf87)
+- **docu:** Anaconde outside of repo, do not collapse in QUICKSTART_ANACONDA.md ([#98](https://github.com/treee111/wahooMapsCreator/issues/98)) [`ea732f7`](https://github.com/treee111/wahooMapsCreator/commit/ea732f7af4368e4f0b0f98dc36f1e9bd3be4e3d9)
+
 
 <a name="1.0.0"></a>
 ## [1.0.0] - 2022-01-19
@@ -197,6 +213,7 @@ wahooMapsCreator can now be used much quicker and easier!
     - Windows:    `tooling_windows/Windows-Wahoo-Map-Creator-Osmosis/wahoo-map-creator-osmosis.py`
 
 
+[1.1.0]: https://github.com/treee111/wahooMapsCreator/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.12.0...v1.0.0
 [0.12.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.11.0...v0.12.0
 [0.11.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.10.0...v0.11.0
