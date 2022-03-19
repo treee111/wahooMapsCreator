@@ -162,6 +162,28 @@
                 "C:\\VSCode\\python\\wahooMapsCreator\\output\\138\\100\\land.shp",
                 "C:\\VSCode\\python\\wahooMapsCreator\\output\\138\\100\\land1.osm"
             ]
+        },
+        {
+            "name": "new cli/gui: CLI malta",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceRoot}/wahoo_map_creator.py",
+            "console": "integratedTerminal",
+            "args": [
+                "cli",
+                "-country",
+                "malta"
+            ]
+        },
+        {
+            "name": "new cli/gui: GUI",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceRoot}/wahoo_map_creator.py",
+            "console": "integratedTerminal",
+            "args": [
+                "gui"
+            ]
         }
     ]
 }
