@@ -49,7 +49,7 @@ def process_call_of_the_tool():
         "-co", "--country", help="country to generate maps for")
     # X/Y coordinates to create maps for
     primary_args_excl.add_argument(
-        "-xy", "--xy_coordinates", help="x/y coordinates to generate maps for")
+        "-xy", "--xy_coordinates", help="x/y coordinates to generate maps for. Example: 133/88")
     # file to create maps for
     primary_args_excl.add_argument(
         "-fi", "--tile_file", help="file with tiles to generate maps for")

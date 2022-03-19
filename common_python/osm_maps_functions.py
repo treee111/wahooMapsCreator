@@ -134,10 +134,6 @@ class OsmMaps:
             # # option 3a: use Geofabrik-URL to get the relevant tiles
             if self.o_input_data.geofabrik_tiles:
                 sys.exit("X/Y coordinated via Geofabrik not implemented now")
-                # self.force_processing = self.o_downloader.check_and_download_geofabrik_if_needed()
-
-                # o_geofabrik = Geofabrik(self.o_input_data.country)
-                # self.tiles = o_geofabrik.get_tiles_of_country()
 
             # option 3b: use static json files in the repo to get relevant tiles
             else:
@@ -146,8 +142,8 @@ class OsmMaps:
                 self.tiles.append(get_tile_by_xy_coordinate(
                     x_coord, y_coord))
 
-                # country name are the X/Y coordinates if that works?!
-                self.country_name = self.o_input_data.xy_coordinates
+                # country name are the X/Y coordinates separated by minus
+                self.country_name = f'{x_coord}-{y_coord}'
 
             # calc border country when input X/Y coordinates
             calc_border_countries = True

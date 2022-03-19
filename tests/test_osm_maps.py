@@ -45,7 +45,6 @@ class TestOsmMaps(unittest.TestCase):
         Test a json file as input to the wahooMapsCreator
         check, if the given input-parameter is saved to the OsmMaps instance
         """
-
         json_file_path = os.path.join(
             self.file_path_test_json, 'germany-only1.json')
 
@@ -132,20 +131,19 @@ class TestOsmMaps(unittest.TestCase):
                            'right': 15.46875, 'bottom': 35.46067, 'countries': ['malta']}]
         self.calculate_tiles_via_static_json('malta', expected_tiles)
 
-    def process_and_check_border_countries(self, country, calc_border_countries, expected_result, input_mode):
+    def process_and_check_border_countries(self, inp_val, calc_border_countries, exp_result, inp_mode):
         """
-        helper method to check a country without border countries
+        helper method to process a country or json file and check the calculated border countries
         """
-
-        if input_mode == 'country':
-            self.o_osm_maps.o_input_data.country = country
-        elif input_mode == 'json_file':
-            self.o_osm_maps.o_input_data.tile_file = country
+        if inp_mode == 'country':
+            self.o_osm_maps.o_input_data.country = inp_val
+        elif inp_mode == 'json_file':
+            self.o_osm_maps.o_input_data.tile_file = inp_val
 
         self.o_osm_maps.process_input(calc_border_countries)
         result = self.o_osm_maps.border_countries
 
-        self.assertEqual(result, expected_result)
+        self.assertEqual(result, exp_result)
 
     def calculate_tiles_via_static_json(self, country, expected_result):
         """
@@ -177,8 +175,6 @@ class TestOsmMaps(unittest.TestCase):
         """
         tile = get_tile_by_xy_coordinate(133, 88)
 
-        # json_file_path = os.path.join(fd_fct.COMMON_DIR, 'json',
-        #                               const_fct.get_region_of_country(country), country + '.json')
         expected_result = fd_fct.read_json_file(
             '/Users/benjamin/VSCode/wahooMapsCreator/tests/json/germany-only9.json')
 
