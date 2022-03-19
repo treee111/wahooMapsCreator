@@ -34,11 +34,11 @@ Using Anaconda to setup a virtual Python environment is the fastest way to get w
 ## Run wahooMapsCreator
 via GUI
 ```
-python wahoo_map_creator.py
+python wahoo_map_creator.py gui
 ```
 via CLI
 ```
-python wahoo_map_creator.py malta
+python wahoo_map_creator.py cli -co malta
 ```
 
 A detailled description of the usage is documented [:computer: here](docs/USAGE.md#usage-of-wahoomapscreator)
