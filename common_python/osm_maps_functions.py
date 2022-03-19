@@ -50,42 +50,53 @@ class OsmMaps:
             self.osmconvert_path = os.path.join(
                 fd_fct.TOOLING_WIN_DIR, 'osmconvert64-0.8.8p')
 
-    def process_input(self, input_argument, calc_border_countries):
+    def process_input(self, calc_border_countries):
         """
         get relevant tiles for given input and calc border countries of these tiles
         """
 
         # logging
-        print(f'+ Input country or json file: {input_argument}.')
+        # print(f'+ Input country or json file: {input_argument}.')
 
         # option 1: have a .json file as input parameter
-        if os.path.isfile(input_argument):
-            self.tiles = fd_fct.read_json_file(input_argument)
+        if self.o_input_data.tile_file:
+            # logging
+            print(f'+ Input json file: {self.o_input_data.tile_file}.')
 
-            # country name is the last part of the input filename
-            self.country_name = os.path.split(input_argument)[1][:-5]
+            if (os.path.isfile(self.o_input_data.tile_file)):
+                self.tiles = fd_fct.read_json_file(self.o_input_data.tile_file)
+
+                # country name is the last part of the input filename
+                self.country_name = os.path.split(
+                    self.o_input_data.tile_file)[1][:-5]
+
+                # calc border country when input tiles via json file
+                calc_border_countries = True
 
         # option 2: input a country as parameter, e.g. germany
-        else:
+        elif self.o_input_data.country:
+            # logging
+            print(f'+ Input country : {self.o_input_data.country}.')
+
             # option 2a: use Geofabrik-URL to calculate the relevant tiles
             if self.o_input_data.geofabrik_tiles:
                 self.force_processing = self.o_downloader.check_and_download_geofabrik_if_needed()
 
-                o_geofabrik = Geofabrik(input_argument)
+                o_geofabrik = Geofabrik(self.o_input_data.country)
                 self.tiles = o_geofabrik.get_tiles_of_country()
 
             # option 2b: use static json files in the repo to calculate relevant tiles
             else:
                 json_file_path = os.path.join(fd_fct.COMMON_DIR, 'json',
-                                              const_fct.get_region_of_country(input_argument), input_argument + '.json')
+                                              const_fct.get_region_of_country(self.o_input_data.country), self.o_input_data.country + '.json')
                 self.tiles = fd_fct.read_json_file(json_file_path)
 
             # country name is the input argument
-            self.country_name = input_argument
+            self.country_name = self.o_input_data.country
 
         # Build list of countries needed
         self.border_countries = {}
-        if calc_border_countries or os.path.isfile(input_argument):
+        if calc_border_countries:
             self.calc_border_countries()
         else:
             self.border_countries[self.country_name] = {}

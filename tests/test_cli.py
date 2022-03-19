@@ -13,15 +13,30 @@ class TestCli(unittest.TestCase):
     tests for the CLI of the python file
     """
 
-    def test_cli_help(self):
+    def test_top_parser_help(self):
         """
-        tests, if help can be called
+        tests, if help of top parser can be called
         """
 
-        if platform.system() == "Windows":
-            result = os.system("python wahoo_map_creator.py -h")
-        else:
-            result = os.system("python3 wahoo_map_creator.py -h")
+        result = os.system("python wahoo_map_creator.py -h")
+
+        self.assertEqual(result, 0)
+
+    def test_cli_help(self):
+        """
+        tests, if CLI help can be called
+        """
+
+        result = os.system("python wahoo_map_creator.py cli -h")
+
+        self.assertEqual(result, 0)
+
+    def test_gui_help(self):
+        """
+        tests, if GUI help can be called
+        """
+
+        result = os.system("python wahoo_map_creator.py gui -h")
 
         self.assertEqual(result, 0)
 

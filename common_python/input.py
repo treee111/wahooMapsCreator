@@ -178,7 +178,7 @@ class InputData():
         - file with tile coordinates
         If not, depending on the import parameter, the
         """
-        if not (self.country != "none" and self.country != "") or not (self.xy_coordinates != "none" and self.xy_coordinates != "") or not (self.tile_file != "none" and self.tile_file != ""):
+        if (self.country in ('None', '') and self.xy_coordinates in ('None', '') and self.tile_file in ('None', '')):
             if issue_message:
                 sys.exit("Nothing to do. Start with -h or --help to see command line options."
                          "Or in the GUI select a country to create maps for.")
