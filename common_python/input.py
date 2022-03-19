@@ -20,9 +20,6 @@ def process_call_of_the_tool():
     """
     process CLI arguments
     """
-
-    o_input_data = InputData()
-
     # input argument creation and processing
     desc = "Create up-to-date maps for your Wahoo ELEMNT and Wahoo ELEMNT BOLT"
     parser_top = argparse.ArgumentParser(description=desc)
@@ -58,7 +55,7 @@ def process_call_of_the_tool():
     options_args = parser_cli.add_argument_group(
         title='Options', description='Options for map generation')
     # Maximum age of source maps or land shape files before they are redownloaded
-    options_args.add_argument('-md', '--maxdays', type=int, default=o_input_data.max_days_old,
+    options_args.add_argument('-md', '--maxdays', type=int, default=InputData().max_days_old,
                               help="maximum age of source maps and other files")
     # Calculate also border countries of input country or not
     options_args.add_argument('-bc', '--bordercountries', action='store_true',
@@ -77,7 +74,7 @@ def process_call_of_the_tool():
     options_args.add_argument('-c', '--cruiser', action='store_true',
                               help="save uncompressed maps for Cruiser")
     # specify the file with tags to keep in the output // file needs to be in common_resources
-    options_args.add_argument('-tag', '--tag_wahoo_xml', default=o_input_data.tag_wahoo_xml,
+    options_args.add_argument('-tag', '--tag_wahoo_xml', default=InputData().tag_wahoo_xml,
                               help="file with tags to keep in the output")
     # specify the file with tags to keep in the output // file needs to be in common_resources
     options_args.add_argument('-om', '--only_merge', action='store_true',
@@ -99,8 +96,7 @@ def process_call_of_the_tool():
             sys.exit("GUI can not be startet because no graphical interface is available. Start with 'wahoo_maps_creator.py cli -h' or 'wahoo_maps_creator.py -h' to see command line options.")
             return
 
-        o_input = GuiInput(InputData())
-        o_input_data = o_input.start_gui()
+        o_input_data = GuiInput().start_gui()
 
     # cli processing
     else:
@@ -193,8 +189,8 @@ class GuiInput(tk.Tk):
     This is the class to proces user-input via GUI
     """
 
-    def __init__(self, oInputData, *args, **kwargs):
-        self.o_input_data = oInputData
+    def __init__(self, *args, **kwargs):
+        self.o_input_data = InputData()
 
         tk.Tk.__init__(self, *args, **kwargs)
 

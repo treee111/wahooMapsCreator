@@ -3,7 +3,6 @@ tests for the python file
 """
 import os
 import unittest
-import platform
 
 # import custom python packages
 

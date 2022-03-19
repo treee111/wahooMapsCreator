@@ -131,7 +131,7 @@ class TestOsmMaps(unittest.TestCase):
                            'right': 15.46875, 'bottom': 35.46067, 'countries': ['malta']}]
         self.calculate_tiles_via_static_json('malta', expected_tiles)
 
-    def process_and_check_border_countries(self, inp_val, calc_border_countries, exp_result, inp_mode):
+    def process_and_check_border_countries(self, inp_val, calc_border_c, exp_result, inp_mode):
         """
         helper method to process a country or json file and check the calculated border countries
         """
@@ -140,7 +140,7 @@ class TestOsmMaps(unittest.TestCase):
         elif inp_mode == 'json_file':
             self.o_osm_maps.o_input_data.tile_file = inp_val
 
-        self.o_osm_maps.process_input(calc_border_countries)
+        self.o_osm_maps.process_input(calc_border_c)
         result = self.o_osm_maps.border_countries
 
         self.assertEqual(result, exp_result)

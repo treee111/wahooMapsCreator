@@ -26,7 +26,6 @@ def get_xy_coordinate_from_input(input_xy_coordinates):
     """
     get tile from json files by given X/Y coordinate
     """
-
     splitted = input_xy_coordinates.split("/")
 
     if len(splitted) == 2:
@@ -37,7 +36,6 @@ def get_tile_by_xy_coordinate(x_coord, y_coord):
     """
     get tile from json files by given X/Y coordinate
     """
-
     # go throught all files in all folders of the "json" directory
     file_path_jsons = os.path.join(fd_fct.COMMON_DIR, 'json')
     for folder in fd_fct.get_folders_in_folder(file_path_jsons):
@@ -85,10 +83,6 @@ class OsmMaps:
         """
         get relevant tiles for given input and calc border countries of these tiles
         """
-
-        # logging
-        # print(f'+ Input country or json file: {input_argument}.')
-
         # option 1: have a .json file as input parameter
         if self.o_input_data.tile_file:
             # logging
