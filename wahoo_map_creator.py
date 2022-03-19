@@ -15,11 +15,11 @@ from common_python.osm_maps_functions import OsmMaps
 # ! means error
 # + means additional comment in a working-unit
 
-# handle GUI and CLI processing via a function and different cli-calls
+# handle GUI and CLI processing via one function and different cli-calls
 oInputData = process_call_of_the_tool()
 
 # Is there something to do?
-oInputData.is_required_input_given_or_exit(True)
+oInputData.is_required_input_given_or_exit(issue_message=True)
 
 initialize_work_directories()
 
