@@ -184,6 +184,18 @@
             "args": [
                 "gui"
             ]
+        },
+        {
+            "name": "new cli/gui: 133/88",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceRoot}/wahoo_map_creator.py",
+            "console": "integratedTerminal",
+            "args": [
+                "cli",
+                "-xy",
+                "133/88"
+            ]
         }
     ]
 }

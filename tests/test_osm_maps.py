@@ -10,6 +10,7 @@ import unittest
 
 from common_python.osm_maps_functions import OsmMaps
 from common_python.osm_maps_functions import get_tile_by_xy_coordinate
+from common_python.osm_maps_functions import get_xy_coordinate_from_input
 from common_python.input import InputData
 from common_python import file_directory_functions as fd_fct
 from common_python import constants_functions as const_fct
@@ -155,6 +156,33 @@ class TestOsmMaps(unittest.TestCase):
         tiles = fd_fct.read_json_file(json_file_path)
 
         self.assertEqual(tiles, expected_result)
+
+    def test_splitting_of_xy_coordinate(self):
+        """
+        use static json files in the repo to calculate relevant tiles
+        """
+        x_coord, y_coord = get_xy_coordinate_from_input("133/88")
+
+        self.assertEqual(x_coord, 133)
+        self.assertEqual(y_coord, 88)
+
+        x_coord, y_coord = get_xy_coordinate_from_input("11/92")
+
+        self.assertEqual(x_coord, 11)
+        self.assertEqual(y_coord, 92)
+
+    def test_get_tile_via_xy_coordinate(self):
+        """
+        use static json files in the repo to calculate relevant tiles
+        """
+        tile = get_tile_by_xy_coordinate(133, 88)
+
+        # json_file_path = os.path.join(fd_fct.COMMON_DIR, 'json',
+        #                               const_fct.get_region_of_country(country), country + '.json')
+        expected_result = fd_fct.read_json_file(
+            '/Users/benjamin/VSCode/wahooMapsCreator/tests/json/germany-only9.json')
+
+        self.assertEqual(tile, expected_result[3])
 
 
 if __name__ == '__main__':

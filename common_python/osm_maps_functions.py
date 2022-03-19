@@ -22,6 +22,37 @@ from common_python.downloader import Downloader
 from common_python.geofabrik import Geofabrik
 
 
+def get_xy_coordinate_from_input(input_xy_coordinates):
+    """
+    get tile from json files by given X/Y coordinate
+    """
+
+    splitted = input_xy_coordinates.split("/")
+
+    if len(splitted) == 2:
+        return int(splitted[0]), int(splitted[1])
+
+
+def get_tile_by_xy_coordinate(x_coord, y_coord):
+    """
+    get tile from json files by given X/Y coordinate
+    """
+
+    # go throught all files in all folders of the "json" directory
+    file_path_jsons = os.path.join(fd_fct.COMMON_DIR, 'json')
+    for folder in fd_fct.get_folders_in_folder(file_path_jsons):
+        for file in fd_fct.get_filenames_of_jsons_in_folder(os.path.join(file_path_jsons, folder)):
+
+            # get content of json in folder
+            content = fd_fct.read_json_file(
+                os.path.join(file_path_jsons, folder, file + '.json'))
+
+            # check tiles against input
+            for tile in content:
+                if tile['x'] == x_coord and tile['y'] == y_coord:
+                    return tile
+
+
 class OsmMaps:
     """
     This is a OSM data class
@@ -30,7 +61,7 @@ class OsmMaps:
     osmosis_win_file_path = os.path.join(
         fd_fct.TOOLING_WIN_DIR, 'Osmosis', 'bin', 'osmosis.bat')
 
-    def __init__(self, oInputData):
+    def __init__(self, o_input_data):
         self.force_processing = ''
         # Number of workers for the Osmosis read binary fast function
         self.workers = '1'
@@ -39,9 +70,9 @@ class OsmMaps:
         self.border_countries = {}
         self.country_name = ''
 
-        self.o_input_data = oInputData
+        self.o_input_data = o_input_data
         self.o_downloader = Downloader(
-            oInputData.max_days_old, oInputData.force_download)
+            o_input_data.max_days_old, o_input_data.force_download)
 
         if 8 * struct.calcsize("P") == 32:
             self.osmconvert_path = os.path.join(
@@ -63,7 +94,7 @@ class OsmMaps:
             # logging
             print(f'+ Input json file: {self.o_input_data.tile_file}.')
 
-            if (os.path.isfile(self.o_input_data.tile_file)):
+            if os.path.isfile(self.o_input_data.tile_file):
                 self.tiles = fd_fct.read_json_file(self.o_input_data.tile_file)
 
                 # country name is the last part of the input filename
@@ -93,6 +124,33 @@ class OsmMaps:
 
             # country name is the input argument
             self.country_name = self.o_input_data.country
+
+        # option 3: input a x/y coordinates as parameter, e.g. 134/88
+        elif self.o_input_data.xy_coordinates:
+            # logging
+            print(
+                f'+ Input X/Y coordinates : {self.o_input_data.xy_coordinates}.')
+
+            # # option 3a: use Geofabrik-URL to get the relevant tiles
+            if self.o_input_data.geofabrik_tiles:
+                sys.exit("X/Y coordinated via Geofabrik not implemented now")
+                # self.force_processing = self.o_downloader.check_and_download_geofabrik_if_needed()
+
+                # o_geofabrik = Geofabrik(self.o_input_data.country)
+                # self.tiles = o_geofabrik.get_tiles_of_country()
+
+            # option 3b: use static json files in the repo to get relevant tiles
+            else:
+                x_coord, y_coord = get_xy_coordinate_from_input(
+                    self.o_input_data.xy_coordinates)
+                self.tiles.append(get_tile_by_xy_coordinate(
+                    x_coord, y_coord))
+
+                # country name are the X/Y coordinates if that works?!
+                self.country_name = self.o_input_data.xy_coordinates
+
+            # calc border country when input X/Y coordinates
+            calc_border_countries = True
 
         # Build list of countries needed
         self.border_countries = {}
