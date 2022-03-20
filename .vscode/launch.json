@@ -192,6 +192,30 @@
                 "-xy",
                 "133/88"
             ]
+        },
+        {
+            "name": "x/y: 138/100 (malta)",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceRoot}/wahoo_map_creator.py",
+            "console": "integratedTerminal",
+            "args": [
+                "cli",
+                "-xy",
+                "138/100"
+            ]
+        },
+        {
+            "name": "x/y: 138/100,133/88 (two tiles)",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceRoot}/wahoo_map_creator.py",
+            "console": "integratedTerminal",
+            "args": [
+                "cli",
+                "-xy",
+                "138/100,133/88"
+            ]
         }
     ]
 }

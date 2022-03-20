@@ -9,8 +9,8 @@ import unittest
 # sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from common_python.osm_maps_functions import OsmMaps
-from common_python.osm_maps_functions import get_tile_by_xy_coordinate
-from common_python.osm_maps_functions import get_xy_coordinate_from_input
+from common_python.osm_maps_functions import get_tile_by_one_xy_combination_from_jsons
+from common_python.osm_maps_functions import get_xy_coordinates_from_input
 from common_python.input import InputData
 from common_python import file_directory_functions as fd_fct
 from common_python import constants_functions as const_fct
@@ -155,25 +155,37 @@ class TestOsmMaps(unittest.TestCase):
 
         self.assertEqual(tiles, expected_result)
 
-    def test_splitting_of_xy_coordinate(self):
+    def test_splitting_of_single_xy_coordinate(self):
         """
         use static json files in the repo to calculate relevant tiles
         """
-        x_coord, y_coord = get_xy_coordinate_from_input("133/88")
+        xy_tuple = get_xy_coordinates_from_input("133/88")
 
-        self.assertEqual(x_coord, 133)
-        self.assertEqual(y_coord, 88)
+        self.assertEqual(xy_tuple, [{"x": 133, "y": 88}])
 
-        x_coord, y_coord = get_xy_coordinate_from_input("11/92")
+        xy_tuple = get_xy_coordinates_from_input("11/92")
 
-        self.assertEqual(x_coord, 11)
-        self.assertEqual(y_coord, 92)
+        self.assertEqual(xy_tuple, [{"x": 11, "y": 92}])
+
+        xy_tuple = get_xy_coordinates_from_input("138/100")
+        expected_result = [{"x": 138, "y": 100}]
+
+        self.assertEqual(xy_tuple, expected_result)
+
+    def test_splitting_of_multiple_xy_coordinate(self):
+        """
+        use static json files in the repo to calculate relevant tiles
+        """
+        xy_tuple = get_xy_coordinates_from_input("133/88,138/100")
+        expected_result = [{"x": 133, "y": 88}, {"x": 138, "y": 100}]
+
+        self.assertEqual(xy_tuple, expected_result)
 
     def test_get_tile_via_xy_coordinate(self):
         """
         use static json files in the repo to calculate relevant tiles
         """
-        tile = get_tile_by_xy_coordinate(133, 88)
+        tile = get_tile_by_one_xy_combination_from_jsons({"x": 133, "y": 88})
 
         expected_result = fd_fct.read_json_file(
             '/Users/benjamin/VSCode/wahooMapsCreator/tests/json/germany-only9.json')

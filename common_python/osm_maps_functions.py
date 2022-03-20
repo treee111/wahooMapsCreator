@@ -22,22 +22,33 @@ from common_python.downloader import Downloader
 from common_python.geofabrik import Geofabrik
 
 
-def get_xy_coordinate_from_input(input_xy_coordinates):
+def get_xy_coordinates_from_input(input_xy_coordinates):
     """
-    get tile from json files by given X/Y coordinate
+    extract/split x/y combinations by given X/Y coordinates.
+    input should be "188/88" or for multiple values "188/88,100/10,109/99".
+    returns a list of x/y combinations as integers
     """
-    splitted = input_xy_coordinates.split("/")
 
-    if len(splitted) == 2:
-        return int(splitted[0]), int(splitted[1])
+    xy_combinations = []
+
+    # split by "," first for multiple x/y combinations, then by "/" for x and y value
+    for xy_coordinate in input_xy_coordinates.split(","):
+        splitted = xy_coordinate.split("/")
+
+        if len(splitted) == 2:
+            xy_combinations.append(
+                {"x": int(splitted[0]), "y": int(splitted[1])})
+
+    return xy_combinations
 
 
-def get_tile_by_xy_coordinate(x_coord, y_coord):
+def get_tile_by_one_xy_combination_from_jsons(xy_combination):
     """
-    get tile from json files by given X/Y coordinate
+    get tile from json files by given X/Y coordinate combination
     """
-    # go throught all files in all folders of the "json" directory
+    # go through all files in all folders of the "json" directory
     file_path_jsons = os.path.join(fd_fct.COMMON_DIR, 'json')
+
     for folder in fd_fct.get_folders_in_folder(file_path_jsons):
         for file in fd_fct.get_filenames_of_jsons_in_folder(os.path.join(file_path_jsons, folder)):
 
@@ -45,9 +56,9 @@ def get_tile_by_xy_coordinate(x_coord, y_coord):
             content = fd_fct.read_json_file(
                 os.path.join(file_path_jsons, folder, file + '.json'))
 
-            # check tiles against input
+            # check tiles values against input x/y combination
             for tile in content:
-                if tile['x'] == x_coord and tile['y'] == y_coord:
+                if tile['x'] == xy_combination['x'] and tile['y'] == xy_combination['y']:
                     return tile
 
 
@@ -81,7 +92,11 @@ class OsmMaps:
 
     def process_input(self, calc_border_countries):
         """
-        get relevant tiles for given input and calc border countries of these tiles
+        Process input: get relevant tiles and if border countries should be calculated
+        The three primary inputs are giving by a separate value each and have separate processing:
+        1. .json file with tiles
+        2. country name
+        3. x/y combinations
         """
         # option 1: have a .json file as input parameter
         if self.o_input_data.tile_file:
@@ -119,7 +134,7 @@ class OsmMaps:
             # country name is the input argument
             self.country_name = self.o_input_data.country
 
-        # option 3: input a x/y coordinates as parameter, e.g. 134/88
+        # option 3: input a x/y combinations as parameter, e.g. 134/88  or 133/88,130/100
         elif self.o_input_data.xy_coordinates:
             # logging
             print(
@@ -131,13 +146,20 @@ class OsmMaps:
 
             # option 3b: use static json files in the repo to get relevant tiles
             else:
-                x_coord, y_coord = get_xy_coordinate_from_input(
+                xy_coordinates = get_xy_coordinates_from_input(
                     self.o_input_data.xy_coordinates)
-                self.tiles.append(get_tile_by_xy_coordinate(
-                    x_coord, y_coord))
 
-                # country name are the X/Y coordinates separated by minus
-                self.country_name = f'{x_coord}-{y_coord}'
+                # loop through x/y combinations and find each tile in the json files
+                for xy_comb in xy_coordinates:
+                    self.tiles.append(get_tile_by_one_xy_combination_from_jsons(
+                        xy_comb))
+
+                    # country name is the X/Y combinations separated by minus
+                    # >1 x/y combinations are separated by underscore
+                    if not self.country_name:
+                        self.country_name = f'{xy_comb["x"]}-{xy_comb["y"]}'
+                    else:
+                        self.country_name = f'{self.country_name}_{xy_comb["x"]}-{xy_comb["y"]}'
 
             # calc border country when input X/Y coordinates
             calc_border_countries = True
