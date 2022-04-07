@@ -84,11 +84,12 @@ def create_empty_directories(tiles_from_json):
             os.makedirs(outdir)
 
 
-def read_json_file(json_file_path):
+def read_json_file(json_file_path, logging = True):
     """
     read the tiles from the given json file
     """
-    print('\n# Read json file')
+    if logging:
+        print('\n# Read json file')
 
     with open(json_file_path) as json_file:
         tiles_from_json = json.load(json_file)
@@ -97,10 +98,11 @@ def read_json_file(json_file_path):
         print('! Json file could not be opened.')
         sys.exit()
 
-    # logging
-    print(
-        f'+ Use json file {json_file.name} with {len(tiles_from_json)} tiles')
-    print('# Read json file: OK')
+    if logging:
+        # logging
+        print(
+            f'+ Use json file {json_file.name} with {len(tiles_from_json)} tiles')
+        print('# Read json file: OK')
 
     return tiles_from_json
 

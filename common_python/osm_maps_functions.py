@@ -54,7 +54,7 @@ def get_tile_by_one_xy_combination_from_jsons(xy_combination):
 
             # get content of json in folder
             content = fd_fct.read_json_file(
-                os.path.join(file_path_jsons, folder, file + '.json'))
+                os.path.join(file_path_jsons, folder, file + '.json'), logging = False)
 
             # check tiles values against input x/y combination
             for tile in content:
