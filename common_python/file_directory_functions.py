@@ -6,6 +6,7 @@ constants, functions and object for file-system operations
 # import official python packages
 import json
 import os
+from os.path import isfile, join
 import subprocess
 import sys
 import zipfile
@@ -83,11 +84,12 @@ def create_empty_directories(tiles_from_json):
             os.makedirs(outdir)
 
 
-def read_json_file(json_file_path):
+def read_json_file(json_file_path, logging = True):
     """
     read the tiles from the given json file
     """
-    print('\n# Read json file')
+    if logging:
+        print('\n# Read json file')
 
     with open(json_file_path) as json_file:
         tiles_from_json = json.load(json_file)
@@ -96,10 +98,11 @@ def read_json_file(json_file_path):
         print('! Json file could not be opened.')
         sys.exit()
 
-    # logging
-    print(
-        f'+ Use json file {json_file.name} with {len(tiles_from_json)} tiles')
-    print('# Read json file: OK')
+    if logging:
+        # logging
+        print(
+            f'+ Use json file {json_file.name} with {len(tiles_from_json)} tiles')
+        print('# Read json file: OK')
 
     return tiles_from_json
 
@@ -124,3 +127,42 @@ def write_to_file(file_path, request):
     with open(file_path, 'wb') as file_handle:
         for chunk in request.iter_content(chunk_size=1024*100):
             file_handle.write(chunk)
+
+
+def get_folders_in_folder(folder):
+    """
+    return foldernames of given folder without path as list
+    """
+    onlyfolders = [f for f in os.listdir(
+        folder) if not isfile(join(folder, f))]
+
+    return onlyfolders
+
+
+def get_files_in_folder(folder):
+    """
+    return filenames of given folder without path as list
+    """
+    onlyfiles = [f for f in os.listdir(folder) if isfile(join(folder, f))]
+
+    return onlyfiles
+
+
+def get_filenames_of_jsons_in_folder(folder):
+    """
+    return json-file filenames of given folder without path as list
+    """
+    # log.debug('function: get_filenames_of_jsons_in_folder')
+    # log.debug('# Read available json files from directory: "%s"', folder)
+
+    json_files = []
+
+    for file in get_files_in_folder(folder):
+        if file.endswith('.json'):
+            # filename = file.split('.')[0]
+            filename = os.path.splitext(file)[0]
+            json_files.extend([filename])
+
+    # log.debug('# Read available json files from directory: "%s" : OK', folder)
+
+    return json_files

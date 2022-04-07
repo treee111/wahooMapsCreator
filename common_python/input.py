@@ -16,6 +16,109 @@ from tkinter import ttk
 from common_python import constants
 
 
+def process_call_of_the_tool():
+    """
+    process CLI arguments
+    """
+    # input argument creation and processing
+    desc = "Create up-to-date maps for your Wahoo ELEMNT and Wahoo ELEMNT BOLT"
+    parser_top = argparse.ArgumentParser(description=desc)
+
+    subparsers = parser_top.add_subparsers(title='Choose mode',
+                                           description='choose the mode of using wahooMapsCreator. Either GUI or CLI.',
+                                           help='sub-command help', dest='subparser_name')
+
+    # create the parser for the "gui" command
+    parser_gui = subparsers.add_parser(
+        'gui', help='Start graphical user interface to select options')
+
+    # create the parser for the "cli" command
+    parser_cli = subparsers.add_parser(
+        'cli', help='Run the tool via command line interface')
+
+    # group: primary input parameters to create map for. One needs to be given
+    primary_args = parser_cli.add_argument_group(
+        title='Primary input', description='Generate maps for...')
+    primary_args_excl = primary_args.add_mutually_exclusive_group(
+        required=True)
+    # country to create maps for
+    primary_args_excl.add_argument(
+        "-co", "--country", help="country to generate maps for")
+    # X/Y coordinates to create maps for
+    primary_args_excl.add_argument(
+        "-xy", "--xy_coordinates", help="x/y coordinates to generate maps for. Example: 133/88")
+    # file to create maps for
+    primary_args_excl.add_argument(
+        "-fi", "--tile_file", help="file with tiles to generate maps for")
+
+    # group: options for map generation
+    options_args = parser_cli.add_argument_group(
+        title='Options', description='Options for map generation')
+    # Maximum age of source maps or land shape files before they are redownloaded
+    options_args.add_argument('-md', '--maxdays', type=int, default=InputData().max_days_old,
+                              help="maximum age of source maps and other files")
+    # Calculate also border countries of input country or not
+    options_args.add_argument('-bc', '--bordercountries', action='store_true',
+                              help="process whole tiles which involve border countries")
+    # Force download of source maps and the land shape file
+    # If False use Max_Days_Old to check for expired maps
+    # If True force redownloading of maps and landshape
+    options_args.add_argument('-fd', '--forcedownload', action='store_true',
+                              help="force download of files")
+    # Force (re)processing of source maps and the land shape file
+    # If False only process files if not existing
+    # If True force processing of files
+    options_args.add_argument('-fp', '--forceprocessing', action='store_true',
+                              help="force processing of files")
+    # Save uncompressed maps for Cruiser if True
+    options_args.add_argument('-c', '--cruiser', action='store_true',
+                              help="save uncompressed maps for Cruiser")
+    # specify the file with tags to keep in the output // file needs to be in common_resources
+    options_args.add_argument('-tag', '--tag_wahoo_xml', default=InputData().tag_wahoo_xml,
+                              help="file with tags to keep in the output")
+    # specify the file with tags to keep in the output // file needs to be in common_resources
+    options_args.add_argument('-om', '--only_merge', action='store_true',
+                              help="only merge, do no other processing")
+    # option to keep the /output/country/ and /output/country-maps folders in the output
+    options_args.add_argument('-km', '--keep_map_folders', action='store_true',
+                              help="keep the country and country-maps folders in the output")
+    # option to calculate tiles to process based on Geofabrik index-v1.json file
+    options_args.add_argument('-gt', '--geofabrik_tiles', action='store_true',
+                              help="calculate tiles based on geofabrik index-v1.json file")
+
+    args = parser_top.parse_args()
+
+    # process depending on GUI or CLI processing.
+    # returns the input parameters in both cases
+    if args.subparser_name == 'gui':
+        # Prevents the initialisation of the graphical GUI on WSL.
+        if 'microsoft' in uname().release:
+            sys.exit("GUI can not be startet because no graphical interface is available. Start with 'wahoo_maps_creator.py cli -h' or 'wahoo_maps_creator.py -h' to see command line options.")
+            return
+
+        o_input_data = GuiInput().start_gui()
+
+    # cli processing
+    else:
+        o_input_data = InputData()
+        o_input_data.country = args.country
+        o_input_data.xy_coordinates = args.xy_coordinates
+        o_input_data.tile_file = args.tile_file
+        o_input_data.max_days_old = args.maxdays
+
+        o_input_data.border_countries = args.bordercountries
+        o_input_data.force_download = args.forcedownload
+        o_input_data.force_processing = args.forceprocessing
+        o_input_data.geofabrik_tiles = args.geofabrik_tiles
+
+        o_input_data.tag_wahoo_xml = args.tag_wahoo_xml
+        o_input_data.only_merge = args.only_merge
+        o_input_data.keep_map_folders = args.keep_map_folders
+        o_input_data.save_cruiser = args.cruiser
+
+    return o_input_data
+
+
 def create_checkbox(self, default_value, description, row):
     """
     this is a reuse function for creating checkboxes.
@@ -42,6 +145,8 @@ class InputData():
 
     def __init__(self):
         self.country = ""
+        self.xy_coordinates = ""
+        self.tile_file = ""
         self.max_days_old = 14
 
         self.force_download = False
@@ -63,10 +168,13 @@ class InputData():
 
     def is_required_input_given_or_exit(self, issue_message):
         """
-        check, if the minimal required arguments (acutally country) is given.
+        check, if the minimal required arguments is given:
+        - country
+        - x/y coordinates
+        - file with tile coordinates
         If not, depending on the import parameter, the
         """
-        if self.country == "none" or self.country == "":
+        if (self.country in ('None', '') and self.xy_coordinates in ('None', '') and self.tile_file in ('None', '')):
             if issue_message:
                 sys.exit("Nothing to do. Start with -h or --help to see command line options."
                          "Or in the GUI select a country to create maps for.")
@@ -76,24 +184,15 @@ class InputData():
             return True
 
 
-class Input(tk.Tk):
+class GuiInput(tk.Tk):
     """
-    This is the class to proces user-input via CLI and GUI
+    This is the class to proces user-input via GUI
     """
 
     def __init__(self, *args, **kwargs):
         self.o_input_data = InputData()
 
-        if 'microsoft' in uname().release:
-            self.gui_mode = False
-            return
-
-        if len(sys.argv) == 1:
-            self.gui_mode = True
-
-            tk.Tk.__init__(self, *args, **kwargs)
-        else:
-            self.gui_mode = False
+        tk.Tk.__init__(self, *args, **kwargs)
 
     def start_gui(self):
         """
@@ -104,7 +203,7 @@ class Input(tk.Tk):
         # start GUI
         self.mainloop()
 
-        if self.o_input_data.is_required_input_given_or_exit(False):
+        if self.o_input_data.is_required_input_given_or_exit(issue_message=False):
             return self.o_input_data
 
     def build_gui(self):
@@ -184,70 +283,6 @@ class Input(tk.Tk):
             tab1.first.en_max_days_old.configure(state=tk.DISABLED)
         else:
             tab1.first.en_max_days_old.configure(state=tk.NORMAL)
-
-    def cli_arguments(self):
-        """
-        process CLI arguments
-        """
-
-        o_input_data = InputData()
-
-        # input argument creation and processing
-        desc = "Create up-to-date maps for your Wahoo ELEMNT and Wahoo ELEMNT BOLT"
-        parser = argparse.ArgumentParser(description=desc)
-
-        # country or file to create maps for
-        parser.add_argument("country", help="country to generate maps for")
-        # Maximum age of source maps or land shape files before they are redownloaded
-        parser.add_argument('-md', '--maxdays', type=int, default=o_input_data.max_days_old,
-                            help="maximum age of source maps and other files")
-        # Calculate also border countries of input country or not
-        parser.add_argument('-bc', '--bordercountries', action='store_true',
-                            help="process whole tiles which involve border countries")
-        # Force download of source maps and the land shape file
-        # If False use Max_Days_Old to check for expired maps
-        # If True force redownloading of maps and landshape
-        parser.add_argument('-fd', '--forcedownload', action='store_true',
-                            help="force download of files")
-        # Force (re)processing of source maps and the land shape file
-        # If False only process files if not existing
-        # If True force processing of files
-        parser.add_argument('-fp', '--forceprocessing', action='store_true',
-                            help="force processing of files")
-        # Save uncompressed maps for Cruiser if True
-        parser.add_argument('-c', '--cruiser', action='store_true',
-                            help="save uncompressed maps for Cruiser")
-        # specify the file with tags to keep in the output // file needs to be in common_resources
-        parser.add_argument('-tag', '--tag_wahoo_xml', default=self.o_input_data.tag_wahoo_xml,
-                            help="file with tags to keep in the output")
-        # specify the file with tags to keep in the output // file needs to be in common_resources
-        parser.add_argument('-om', '--only_merge', action='store_true',
-                            help="only merge, do no other processing")
-        # option to keep the /output/country/ and /output/country-maps folders in the output
-        parser.add_argument('-km', '--keep_map_folders', action='store_true',
-                            help="keep the country and country-maps folders in the output")
-        # option to calculate tiles to process based on Geofabrik index-v1.json file
-        parser.add_argument('-gt', '--geofabrik_tiles', action='store_true',
-                            help="calculate tiles based on geofabrik index-v1.json file")
-
-        # set instance-attributes of class
-        args = parser.parse_args()
-
-        o_input_data = InputData()
-        o_input_data.country = args.country
-        o_input_data.max_days_old = args.maxdays
-
-        o_input_data.border_countries = args.bordercountries
-        o_input_data.force_download = args.forcedownload
-        o_input_data.force_processing = args.forceprocessing
-        o_input_data.geofabrik_tiles = args.geofabrik_tiles
-
-        o_input_data.tag_wahoo_xml = args.tag_wahoo_xml
-        o_input_data.only_merge = args.only_merge
-        o_input_data.keep_map_folders = args.keep_map_folders
-        o_input_data.save_cruiser = args.cruiser
-
-        return o_input_data
 
 
 class ComboboxesEntryField(tk.Frame):

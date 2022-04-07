@@ -22,6 +22,46 @@ from common_python.downloader import Downloader
 from common_python.geofabrik import Geofabrik
 
 
+def get_xy_coordinates_from_input(input_xy_coordinates):
+    """
+    extract/split x/y combinations by given X/Y coordinates.
+    input should be "188/88" or for multiple values "188/88,100/10,109/99".
+    returns a list of x/y combinations as integers
+    """
+
+    xy_combinations = []
+
+    # split by "," first for multiple x/y combinations, then by "/" for x and y value
+    for xy_coordinate in input_xy_coordinates.split(","):
+        splitted = xy_coordinate.split("/")
+
+        if len(splitted) == 2:
+            xy_combinations.append(
+                {"x": int(splitted[0]), "y": int(splitted[1])})
+
+    return xy_combinations
+
+
+def get_tile_by_one_xy_combination_from_jsons(xy_combination):
+    """
+    get tile from json files by given X/Y coordinate combination
+    """
+    # go through all files in all folders of the "json" directory
+    file_path_jsons = os.path.join(fd_fct.COMMON_DIR, 'json')
+
+    for folder in fd_fct.get_folders_in_folder(file_path_jsons):
+        for file in fd_fct.get_filenames_of_jsons_in_folder(os.path.join(file_path_jsons, folder)):
+
+            # get content of json in folder
+            content = fd_fct.read_json_file(
+                os.path.join(file_path_jsons, folder, file + '.json'), logging = False)
+
+            # check tiles values against input x/y combination
+            for tile in content:
+                if tile['x'] == xy_combination['x'] and tile['y'] == xy_combination['y']:
+                    return tile
+
+
 class OsmMaps:
     """
     This is a OSM data class
@@ -30,7 +70,7 @@ class OsmMaps:
     osmosis_win_file_path = os.path.join(
         fd_fct.TOOLING_WIN_DIR, 'Osmosis', 'bin', 'osmosis.bat')
 
-    def __init__(self, oInputData):
+    def __init__(self, o_input_data):
         self.force_processing = ''
         # Number of workers for the Osmosis read binary fast function
         self.workers = '1'
@@ -39,9 +79,9 @@ class OsmMaps:
         self.border_countries = {}
         self.country_name = ''
 
-        self.o_input_data = oInputData
+        self.o_input_data = o_input_data
         self.o_downloader = Downloader(
-            oInputData.max_days_old, oInputData.force_download)
+            o_input_data.max_days_old, o_input_data.force_download)
 
         if 8 * struct.calcsize("P") == 32:
             self.osmconvert_path = os.path.join(
@@ -50,42 +90,83 @@ class OsmMaps:
             self.osmconvert_path = os.path.join(
                 fd_fct.TOOLING_WIN_DIR, 'osmconvert64-0.8.8p')
 
-    def process_input(self, input_argument, calc_border_countries):
+    def process_input(self, calc_border_countries):
         """
-        get relevant tiles for given input and calc border countries of these tiles
+        Process input: get relevant tiles and if border countries should be calculated
+        The three primary inputs are giving by a separate value each and have separate processing:
+        1. .json file with tiles
+        2. country name
+        3. x/y combinations
         """
-
-        # logging
-        print(f'+ Input country or json file: {input_argument}.')
-
         # option 1: have a .json file as input parameter
-        if os.path.isfile(input_argument):
-            self.tiles = fd_fct.read_json_file(input_argument)
+        if self.o_input_data.tile_file:
+            # logging
+            print(f'+ Input json file: {self.o_input_data.tile_file}.')
 
-            # country name is the last part of the input filename
-            self.country_name = os.path.split(input_argument)[1][:-5]
+            if os.path.isfile(self.o_input_data.tile_file):
+                self.tiles = fd_fct.read_json_file(self.o_input_data.tile_file)
+
+                # country name is the last part of the input filename
+                self.country_name = os.path.split(
+                    self.o_input_data.tile_file)[1][:-5]
+
+                # calc border country when input tiles via json file
+                calc_border_countries = True
 
         # option 2: input a country as parameter, e.g. germany
-        else:
+        elif self.o_input_data.country:
+            # logging
+            print(f'+ Input country : {self.o_input_data.country}.')
+
             # option 2a: use Geofabrik-URL to calculate the relevant tiles
             if self.o_input_data.geofabrik_tiles:
                 self.force_processing = self.o_downloader.check_and_download_geofabrik_if_needed()
 
-                o_geofabrik = Geofabrik(input_argument)
+                o_geofabrik = Geofabrik(self.o_input_data.country)
                 self.tiles = o_geofabrik.get_tiles_of_country()
 
             # option 2b: use static json files in the repo to calculate relevant tiles
             else:
                 json_file_path = os.path.join(fd_fct.COMMON_DIR, 'json',
-                                              const_fct.get_region_of_country(input_argument), input_argument + '.json')
+                                              const_fct.get_region_of_country(self.o_input_data.country), self.o_input_data.country + '.json')
                 self.tiles = fd_fct.read_json_file(json_file_path)
 
             # country name is the input argument
-            self.country_name = input_argument
+            self.country_name = self.o_input_data.country
+
+        # option 3: input a x/y combinations as parameter, e.g. 134/88  or 133/88,130/100
+        elif self.o_input_data.xy_coordinates:
+            # logging
+            print(
+                f'+ Input X/Y coordinates : {self.o_input_data.xy_coordinates}.')
+
+            # # option 3a: use Geofabrik-URL to get the relevant tiles
+            if self.o_input_data.geofabrik_tiles:
+                sys.exit("X/Y coordinated via Geofabrik not implemented now")
+
+            # option 3b: use static json files in the repo to get relevant tiles
+            else:
+                xy_coordinates = get_xy_coordinates_from_input(
+                    self.o_input_data.xy_coordinates)
+
+                # loop through x/y combinations and find each tile in the json files
+                for xy_comb in xy_coordinates:
+                    self.tiles.append(get_tile_by_one_xy_combination_from_jsons(
+                        xy_comb))
+
+                    # country name is the X/Y combinations separated by minus
+                    # >1 x/y combinations are separated by underscore
+                    if not self.country_name:
+                        self.country_name = f'{xy_comb["x"]}-{xy_comb["y"]}'
+                    else:
+                        self.country_name = f'{self.country_name}_{xy_comb["x"]}-{xy_comb["y"]}'
+
+            # calc border country when input X/Y coordinates
+            calc_border_countries = True
 
         # Build list of countries needed
         self.border_countries = {}
-        if calc_border_countries or os.path.isfile(input_argument):
+        if calc_border_countries:
             self.calc_border_countries()
         else:
             self.border_countries[self.country_name] = {}
