@@ -8,6 +8,8 @@
             "program": "${workspaceRoot}/wahoo_map_creator.py",
             "console": "integratedTerminal",
             "args": [
+                "cli",
+                "-fi",
                 "${workspaceRoot}/tests/json/germany-only1.json",
                 "-md",
                 "100",
@@ -23,6 +25,8 @@
             "program": "${workspaceRoot}/wahoo_map_creator.py",
             "console": "integratedTerminal",
             "args": [
+                "cli",
+                "-fi",
                 "${workspaceRoot}/tests/json/germany-only1.json",
                 "-tag",
                 "tag-wahoo-hidrive2.xml",
@@ -40,6 +44,8 @@
             "program": "${workspaceRoot}/wahoo_map_creator.py",
             "console": "integratedTerminal",
             "args": [
+                "cli",
+                "-fi",
                 "${workspaceRoot}/tests/json/germany-only2.json",
                 "-md",
                 "100",
@@ -55,6 +61,8 @@
             "program": "${workspaceRoot}/wahoo_map_creator.py",
             "console": "integratedTerminal",
             "args": [
+                "cli",
+                "-co",
                 "germany"
             ]
         },
@@ -65,6 +73,8 @@
             "program": "${workspaceRoot}/wahoo_map_creator.py",
             "console": "integratedTerminal",
             "args": [
+                "cli",
+                "-co",
                 "malta",
                 "-tag",
                 "tag-wahoo.xml",
@@ -81,6 +91,8 @@
             "program": "${workspaceRoot}/wahoo_map_creator.py",
             "console": "integratedTerminal",
             "args": [
+                "cli",
+                "-co",
                 "malta",
                 "-tag",
                 "tag-wahoo.xml",
@@ -97,7 +109,9 @@
             "request": "launch",
             "program": "${workspaceRoot}/wahoo_map_creator.py",
             "console": "integratedTerminal",
-            "args": []
+            "args": [
+                "gui"
+            ]
         },
         {
             "name": "cli help",
@@ -116,6 +130,8 @@
             "program": "${workspaceRoot}/wahoo_map_creator.py",
             "console": "integratedTerminal",
             "args": [
+                "cli",
+                "-co",
                 "malta",
                 "-tag",
                 "tag-wahoo.xml",
@@ -132,6 +148,8 @@
             "program": "${workspaceRoot}/wahoo_map_creator.py",
             "console": "integratedTerminal",
             "args": [
+                "cli",
+                "-co",
                 "liechtenstein",
                 "-tag",
                 "tag-wahoo.xml",
@@ -161,6 +179,42 @@
             "args": [
                 "C:\\VSCode\\python\\wahooMapsCreator\\output\\138\\100\\land.shp",
                 "C:\\VSCode\\python\\wahooMapsCreator\\output\\138\\100\\land1.osm"
+            ]
+        },
+        {
+            "name": "x/y: 133/88",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceRoot}/wahoo_map_creator.py",
+            "console": "integratedTerminal",
+            "args": [
+                "cli",
+                "-xy",
+                "133/88"
+            ]
+        },
+        {
+            "name": "x/y: 138/100 (malta)",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceRoot}/wahoo_map_creator.py",
+            "console": "integratedTerminal",
+            "args": [
+                "cli",
+                "-xy",
+                "138/100"
+            ]
+        },
+        {
+            "name": "x/y: 138/100,133/88 (two tiles)",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceRoot}/wahoo_map_creator.py",
+            "console": "integratedTerminal",
+            "args": [
+                "cli",
+                "-xy",
+                "138/100,133/88"
             ]
         }
     ]
