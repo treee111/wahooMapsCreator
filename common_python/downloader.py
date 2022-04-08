@@ -117,7 +117,7 @@ class Downloader:
             force_processing = True
 
         # logging
-        log.info('# check land_polygons.shp file: OK')
+        log.info('+ check land_polygons.shp file: OK')
 
         if self.check_osm_pbf_file() is True or self.force_download is True:
             # trigger download of relevant countries' OSM files
@@ -133,7 +133,7 @@ class Downloader:
             force_processing = True
 
         # logging
-        log.info('# Check countries .osm.pbf files: OK')
+        log.info('+ Check countries .osm.pbf files: OK')
 
         # if force_processing is True:
         fd_fct.create_empty_directories(self.tiles_from_json)

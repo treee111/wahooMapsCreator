@@ -326,7 +326,7 @@ class OsmMaps:
                 val['filtered_file_names'] = out_file_o5m_filtered_names
 
         # logging
-        log.info('# Filter tags from country osm.pbf files: OK')
+        log.info('+ Filter tags from country osm.pbf files: OK')
 
     def generate_land(self):
         """
@@ -379,7 +379,7 @@ class OsmMaps:
             tile_count += 1
 
         # logging
-        log.info('# Generate land: OK')
+        log.info('+ Generate land: OK')
 
     def generate_sea(self):
         """
@@ -423,7 +423,7 @@ class OsmMaps:
             tile_count += 1
 
         # logging
-        log.info('# Generate sea: OK')
+        log.info('+ Generate sea: OK')
 
     def split_filtered_country_files_to_tiles(self):
         """
@@ -458,7 +458,7 @@ class OsmMaps:
                         result = run_subprocess_and_log_output(cmd)
                         if result != 0:
                             log.error(
-                                'Error in Osmosis with country: %s', country)
+                                '+ Error in Osmosis with country: %s', country)
                             sys.exit()
 
                         cmd = [self.osmconvert_path,
@@ -510,7 +510,7 @@ class OsmMaps:
 
             tile_count += 1
 
-        log.info('# Split filtered country files to tiles: OK')
+        log.info('+ Split filtered country files to tiles: OK')
 
     def merge_splitted_tiles_with_land_and_sea(self, calc_border_countries):
         """
@@ -590,7 +590,7 @@ class OsmMaps:
             tile_count += 1
 
         # logging
-        log.info('# Merge splitted tiles with land an sea: OK')
+        log.info('+ Merge splitted tiles with land an sea: OK')
 
     def sort_osm_files(self, tile):
         """
@@ -628,7 +628,7 @@ class OsmMaps:
             sys.exit()
 
         # logging
-        log.info('# Sorting land* osm files: OK')
+        log.info('+ Sorting land* osm files: OK')
 
     def create_map_files(self, save_cruiser, tag_wahoo_xml):
         """
@@ -697,7 +697,7 @@ class OsmMaps:
             tile_count += 1
 
         # logging
-        log.info('# Creating .map files: OK')
+        log.info('+ Creating .map files: OK')
 
     def make_and_zip_files(self, keep_map_folders, extension):
         """
@@ -722,7 +722,7 @@ class OsmMaps:
             pass
 
         # copy the needed tiles to the country folder
-        log.info('Copying %s tiles to output folders', extension)
+        log.info('+ Copying %s tiles to output folders', extension)
         for tile in self.tiles:
             src = os.path.join(f'{fd_fct.OUTPUT_DIR}',
                                f'{tile["x"]}', f'{tile["y"]}') + extension
@@ -778,4 +778,4 @@ class OsmMaps:
                     'Error, could not delete folder %s', os.path.join(fd_fct.OUTPUT_DIR, folder_name))
 
         # logging
-        log.info('# Zip %s files: OK', extension)
+        log.info('+ Zip %s files: OK', extension)

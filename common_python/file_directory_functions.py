@@ -104,7 +104,7 @@ def read_json_file(json_file_path):
     # logging
     log.debug(
         '+ Use json file %s with %s tiles', json_file.name, len(tiles_from_json))
-    log.debug('# Read json file: OK')
+    log.debug('+ Read json file: OK')
 
     return tiles_from_json
 
