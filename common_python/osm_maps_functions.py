@@ -121,10 +121,12 @@ class OsmMaps:
         2. country name
         3. x/y combinations
         """
+
+        log.info('-' * 80)
+
         # option 1: have a .json file as input parameter
         if self.o_input_data.tile_file:
-            # logging
-            log.info(f'+ Input json file: {self.o_input_data.tile_file}.')
+            log.info('# Input json file: %s.', self.o_input_data.tile_file)
 
             if os.path.isfile(self.o_input_data.tile_file):
                 self.tiles = fd_fct.read_json_file(self.o_input_data.tile_file)
@@ -138,8 +140,7 @@ class OsmMaps:
 
         # option 2: input a country as parameter, e.g. germany
         elif self.o_input_data.country:
-            # logging
-            log.info(f'+ Input country : {self.o_input_data.country}.')
+            log.info('# Input country: %s.', self.o_input_data.country)
 
             # option 2a: use Geofabrik-URL to calculate the relevant tiles
             if self.o_input_data.geofabrik_tiles:
@@ -159,9 +160,8 @@ class OsmMaps:
 
         # option 3: input a x/y combinations as parameter, e.g. 134/88  or 133/88,130/100
         elif self.o_input_data.xy_coordinates:
-            # logging
             log.info(
-                f'+ Input X/Y coordinates : {self.o_input_data.xy_coordinates}.')
+                '# Input X/Y coordinates: %s.', self.o_input_data.xy_coordinates)
 
             # # option 3a: use Geofabrik-URL to get the relevant tiles
             if self.o_input_data.geofabrik_tiles:
@@ -221,16 +221,16 @@ class OsmMaps:
                 if country not in self.border_countries:
                     self.border_countries[country] = {}
 
-        # logging
-        log.info(f'+ Count of Border countries: {len(self.border_countries)}')
+        log.info('+ Count of Border countries: %s', len(self.border_countries))
         for country in self.border_countries:
-            log.info(f'+ Border country: {country}')
+            log.info('+ Border country: %s', country)
 
     def filter_tags_from_country_osm_pbf_files(self):
         """
         Filter tags from country osm.pbf files
         """
 
+        log.info('-' * 80)
         log.info('# Filter tags from country osm.pbf files')
 
         # Windows
@@ -254,11 +254,12 @@ class OsmMaps:
 
                     result = run_subprocess_and_log_output(cmd)
                     if result != 0:
-                        log.error('Error in OSMConvert with country: %s', key)
+                        log.error(
+                            '! Error in OSMConvert with country: %s', key)
                         sys.exit()
 
                     log.info(
-                        '# Filtering unwanted map objects out of map of %s', key)
+                        '+ Filtering unwanted map objects out of map of %s', key)
                     cmd = [os.path.join(fd_fct.TOOLING_WIN_DIR, 'osmfilter')]
                     cmd.append(out_file_o5m)
                     cmd.append('--keep="' + constants.FILTERED_TAGS_WIN + '"')
@@ -268,7 +269,7 @@ class OsmMaps:
 
                     result = run_subprocess_and_log_output(cmd)
                     if result != 0:
-                        log.error('Error in OSMFilter with country: %s', key)
+                        log.error('! Error in OSMFilter with country: %s', key)
                         sys.exit()
 
                     cmd = [os.path.join(fd_fct.TOOLING_WIN_DIR, 'osmfilter')]
@@ -281,7 +282,7 @@ class OsmMaps:
 
                     result = run_subprocess_and_log_output(cmd)
                     if result != 0:
-                        log.error('Error in OSMFilter with country: %s', key)
+                        log.error('! Error in OSMFilter with country: %s', key)
                         sys.exit()
 
                     os.remove(out_file_o5m)
@@ -308,7 +309,7 @@ class OsmMaps:
 
                     result = run_subprocess_and_log_output(cmd)
                     if result != 0:
-                        log.error('Error in Osmium with country: %s', key)
+                        log.error('! Error in Osmium with country: %s', key)
                         sys.exit()
 
                     cmd = ['osmium', 'tags-filter', '--remove-tags']
@@ -319,13 +320,12 @@ class OsmMaps:
 
                     result = run_subprocess_and_log_output(cmd)
                     if result != 0:
-                        log.error('Error in Osmium with country: %s', key)
+                        log.error('! Error in Osmium with country: %s', key)
                         sys.exit()
 
                 val['filtered_file'] = out_file_o5m_filtered
                 val['filtered_file_names'] = out_file_o5m_filtered_names
 
-        # logging
         log.info('+ Filter tags from country osm.pbf files: OK')
 
     def generate_land(self):
@@ -333,6 +333,7 @@ class OsmMaps:
         Generate land for all tiles
         """
 
+        log.info('-' * 80)
         log.info('# Generate land')
 
         tile_count = 1
@@ -378,7 +379,6 @@ class OsmMaps:
                 result = run_subprocess_and_log_output(cmd)
             tile_count += 1
 
-        # logging
         log.info('+ Generate land: OK')
 
     def generate_sea(self):
@@ -386,6 +386,7 @@ class OsmMaps:
         Generate sea for all tiles
         """
 
+        log.info('-' * 80)
         log.info('# Generate sea')
 
         tile_count = 1
@@ -422,7 +423,6 @@ class OsmMaps:
                         output_file.write(sea_data)
             tile_count += 1
 
-        # logging
         log.info('+ Generate sea: OK')
 
     def split_filtered_country_files_to_tiles(self):
@@ -430,6 +430,7 @@ class OsmMaps:
         Split filtered country files to tiles
         """
 
+        log.info('-' * 80)
         log.info('# Split filtered country files to tiles')
         tile_count = 1
         for tile in self.tiles:
@@ -458,7 +459,7 @@ class OsmMaps:
                         result = run_subprocess_and_log_output(cmd)
                         if result != 0:
                             log.error(
-                                '+ Error in Osmosis with country: %s', country)
+                                '!  Error in Osmosis with country: %s', country)
                             sys.exit()
 
                         cmd = [self.osmconvert_path,
@@ -473,7 +474,7 @@ class OsmMaps:
                         result = run_subprocess_and_log_output(cmd)
                         if result != 0:
                             log.error(
-                                'Error in Osmosis with country: %s', country)
+                                '! Error in Osmosis with country: %s', country)
                             sys.exit()
 
                     # Non-Windows
@@ -489,7 +490,7 @@ class OsmMaps:
                         result = run_subprocess_and_log_output(cmd)
                         if result != 0:
                             log.error(
-                                'Error in Osmosis with country: %s', country)
+                                '! Error in Osmosis with country: %s', country)
                             sys.exit()
 
                         cmd = ['osmium', 'extract']
@@ -503,7 +504,7 @@ class OsmMaps:
                         result = run_subprocess_and_log_output(cmd)
                         if result != 0:
                             log.error(
-                                'Error in Osmosis with country: %s', country)
+                                '! Error in Osmosis with country: %s', country)
                             sys.exit()
 
                         log.info(val['filtered_file'])
@@ -517,6 +518,7 @@ class OsmMaps:
         Merge splitted tiles with land an sea
         """
 
+        log.info('-' * 80)
         log.info('# Merge splitted tiles with land an sea')
         tile_count = 1
         for tile in self.tiles:
@@ -584,12 +586,11 @@ class OsmMaps:
                 result = run_subprocess_and_log_output(cmd)
                 if result != 0:
                     log.error(
-                        'Error in Osmosis with tile: %s,%s', tile["x"], tile["y"])
+                        '! Error in Osmosis with tile: %s,%s', tile["x"], tile["y"])
                     sys.exit()
 
             tile_count += 1
 
-        # logging
         log.info('+ Merge splitted tiles with land an sea: OK')
 
     def sort_osm_files(self, tile):
@@ -599,6 +600,7 @@ class OsmMaps:
         https://github.com/osmcode/osmium-tool/releases/tag/v1.13.2
         """
 
+        log.info('-' * 80)
         log.info('# Sorting land* osm files')
 
         # get all land* osm files
@@ -624,10 +626,9 @@ class OsmMaps:
         result = run_subprocess_and_log_output(cmd)
         if result != 0:
             log.error(
-                'Error in Osmosis with sorting land* osm files of tile: %s,%s', tile["x"], tile["y"])
+                '! Error in Osmosis with sorting land* osm files of tile: %s,%s', tile["x"], tile["y"])
             sys.exit()
 
-        # logging
         log.info('+ Sorting land* osm files: OK')
 
     def create_map_files(self, save_cruiser, tag_wahoo_xml):
@@ -635,6 +636,7 @@ class OsmMaps:
         Creating .map files
         """
 
+        log.info('-' * 80)
         log.info('# Creating .map files')
 
         # Number of threads to use in the mapwriter plug-in
@@ -672,7 +674,7 @@ class OsmMaps:
                 result = run_subprocess_and_log_output(cmd)
                 if result != 0:
                     log.error(
-                        'Error in Osmosis with country: c // tile: %s,%s', tile["x"], tile["y"])
+                        '! Error in Osmosis with country: c // tile: %s,%s', tile["x"], tile["y"])
                     sys.exit()
 
                 # Windows
@@ -696,7 +698,6 @@ class OsmMaps:
 
             tile_count += 1
 
-        # logging
         log.info('+ Creating .map files: OK')
 
     def make_and_zip_files(self, keep_map_folders, extension):
@@ -711,6 +712,7 @@ class OsmMaps:
         else:
             folder_name = self.country_name + '-maps'
 
+        log.info('-' * 80)
         log.info('# Zip: %s files', extension)
         log.info('+ Country: %s', self.country_name)
 
@@ -736,7 +738,7 @@ class OsmMaps:
                 shutil.copy2(src, dst)
             except Exception as exception:
                 log.error(
-                    'Error copying %s files for country %s: %s', extension, self.country_name, exception)
+                    '! Error copying %s files for country %s: %s', extension, self.country_name, exception)
                 sys.exit()
 
             if extension == '.map.lzma':
@@ -748,7 +750,7 @@ class OsmMaps:
                     shutil.copy2(src, dst)
                 except Exception as exception:
                     log.error(
-                        'Error copying version files for country %s: %s', self.country_name, exception)
+                        '! Error copying version files for country %s: %s', self.country_name, exception)
                     sys.exit()
 
         # Windows
@@ -775,7 +777,6 @@ class OsmMaps:
                     f'{fd_fct.OUTPUT_DIR}', folder_name))
             except OSError:
                 log.error(
-                    'Error, could not delete folder %s', os.path.join(fd_fct.OUTPUT_DIR, folder_name))
+                    '! Error, could not delete folder %s', os.path.join(fd_fct.OUTPUT_DIR, folder_name))
 
-        # logging
         log.info('+ Zip %s files: OK', extension)

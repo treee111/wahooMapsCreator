@@ -32,6 +32,7 @@ def download_file(target_filepath, url, is_zip):
     download given file and eventually unzip it
     """
     logging_filename = target_filepath.split(os.sep)[-1]
+    log.info('-' * 80)
     log.info('# Downloading %s file', logging_filename)
     if is_zip:
         # build target-filepath based on last element of URL
@@ -98,8 +99,7 @@ class Downloader:
                           'https://download.geofabrik.de/index-v1.json', False)
             force_processing = True
 
-         # logging
-        log.info('# check geofabrik.json file: OK')
+        log.info('+ check geofabrik.json file: OK')
 
         return force_processing
 
@@ -116,7 +116,6 @@ class Downloader:
                           'https://osmdata.openstreetmap.de/download/land-polygons-split-4326.zip', True)
             force_processing = True
 
-        # logging
         log.info('+ check land_polygons.shp file: OK')
 
         if self.check_osm_pbf_file() is True or self.force_download is True:
@@ -132,7 +131,6 @@ class Downloader:
 
             force_processing = True
 
-        # logging
         log.info('+ Check countries .osm.pbf files: OK')
 
         # if force_processing is True:
@@ -148,12 +146,13 @@ class Downloader:
         need_to_download = False
         logging_filename = target_filepath.rsplit('/', 1)[-1]
 
+        log.info('-' * 80)
         log.info('# check %s file', logging_filename)
 
         # Check for expired file and delete it
         try:
             if self.should_file_be_downloaded(target_filepath):
-                log.info('# Deleting old %s file', logging_filename)
+                log.info('+ Deleting old %s file', logging_filename)
                 os.remove(target_filepath)
                 need_to_download = True
 
@@ -164,8 +163,8 @@ class Downloader:
         if not os.path.exists(target_filepath) or \
                 not os.path.isfile(target_filepath):
             need_to_download = True
-            # logging
-            log.info('# %s file needs to be downloaded', logging_filename)
+
+            log.info('+ %s file needs to be downloaded', logging_filename)
 
         return need_to_download
 
@@ -174,6 +173,7 @@ class Downloader:
         check if the relevant countries' OSM files are up-to-date
         """
         need_to_download = False
+        log.info('-' * 80)
         log.info('# check countries .osm.pbf files')
 
         # Check for expired maps and delete them

@@ -91,7 +91,8 @@ def read_json_file(json_file_path):
     """
     read the tiles from the given json file
     """
-    # if logging:
+
+    log.debug('-' * 80)
     log.debug('# Read json file')
 
     with open(json_file_path) as json_file:
@@ -101,7 +102,6 @@ def read_json_file(json_file_path):
         log.error('! Json file could not be opened.')
         sys.exit()
 
-    # logging
     log.debug(
         '+ Use json file %s with %s tiles', json_file.name, len(tiles_from_json))
     log.debug('+ Read json file: OK')
@@ -154,9 +154,6 @@ def get_filenames_of_jsons_in_folder(folder):
     """
     return json-file filenames of given folder without path as list
     """
-    # log.debug('function: get_filenames_of_jsons_in_folder')
-    # log.debug('# Read available json files from directory: "%s"', folder)
-
     json_files = []
 
     for file in get_files_in_folder(folder):
@@ -164,7 +161,5 @@ def get_filenames_of_jsons_in_folder(folder):
             # filename = file.split('.')[0]
             filename = os.path.splitext(file)[0]
             json_files.extend([filename])
-
-    # log.debug('# Read available json files from directory: "%s" : OK', folder)
 
     return json_files
