@@ -82,9 +82,9 @@ The folders in the repo have the following purposes:
 - tooling_windows - programs, scripts for Windows
 
 ## Anaconda environment
-- /conda_env/enduser.yml is for creating Anaconda environment for users
-- /conda_env/developer.yml is for creationg Anaconda environment for developers
-- /conda_env/ ..mac.yml and ..win.yml files contain the installed packages including dependencies
+- /conda_env/gdal-user.yml is for creating Anaconda environment for users
+- /conda_env/gdal-dev.yml is for creating Anaconda environment for developers
+- /conda_env/ ..mac.yml and ..win.yml files contain the installed packages including dependencies of the gdal-dev.yml env
 
 .yml files with only the installed packages were installed via
 ```
