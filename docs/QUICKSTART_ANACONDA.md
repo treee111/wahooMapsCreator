@@ -61,12 +61,18 @@ You can also clone the repository to have the latest coding.
 # Create Anaconda Environment
 1. Open (or change to) the root of the extracted wahooMapsCreator folder in terminal (macOS/Linux) or **Anaconda Prompt** (Windows, via Startmenu)
 2. Create a new Anaconda environment via
+
+  - macOS/ Linux
 ```
-conda env create -f ./conda_env/enduser.yml
+conda env create -f ./conda_env/gdal-user.yml
+```
+  - Windows
+```
+conda env create -f .\conda_env\gdal-user.yml 
 ```
 3. activate Anaconda environment with the command printed out
 ```
-conda activate enduser
+conda activate gdal-user
 ```
 
 Additional informations: https://opensourceoptions.com/blog/how-to-install-gdal-with-anaconda/

@@ -1,10 +1,11 @@
-name: enduser
+name: gdal-dev
 channels:
-  - defaults
   - conda-forge
 dependencies:
   - python=3.7
-  - geojson=2.5.*
   - gdal=3.4.*
   - requests=2.27.*
+  - pylint=2.12.*
+  - geojson=2.5.*
   - shapely=1.8.*
+  - autopep8=1.6.*

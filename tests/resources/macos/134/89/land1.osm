@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<osm version="0.6" generator="osmium/1.13.2">
+<osm version="0.6" generator="osmium/1.14.0">
   <node id="22951459320" version="1" timestamp="2106-02-07T06:28:15Z" lat="48.0005" lon="10.0007401"/>
   <node id="22951459321" version="1" timestamp="2106-02-07T06:28:15Z" lat="46.9995" lon="10.0007401"/>
   <node id="22951459322" version="1" timestamp="2106-02-07T06:28:15Z" lat="46.9995" lon="8.9992599"/>
