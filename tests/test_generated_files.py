@@ -227,11 +227,11 @@ class TestGeneratedFiles(unittest.TestCase):
                         given_output_file = os.path.join(
                             dirpath_2, file)
                         calculated_output_file = os.path.join(
-                            fd_fct.ROOT_DIR, 'output', dir_to_compare, directory, file)
+                            fd_fct.OUTPUT_DIR, dir_to_compare, directory, file)
 
                         # is file equal?
                         self.assertTrue(filecmp.cmp(given_output_file, calculated_output_file,
-                                                    shallow=False), 'You error message')
+                                                    shallow=False), f'not equal: {calculated_output_file}')
 
         # check files in given dir
         for (dirpath, dirnames, filenames) in walk(path_to_dir):
@@ -239,11 +239,11 @@ class TestGeneratedFiles(unittest.TestCase):
                 given_output_file = os.path.join(
                     dirpath, file)
                 calculated_output_file = os.path.join(
-                    fd_fct.ROOT_DIR, 'output', dir_to_compare, file)
+                    fd_fct.OUTPUT_DIR, dir_to_compare, file)
 
                 # is file equal?
                 self.assertTrue(filecmp.cmp(given_output_file, calculated_output_file,
-                                            shallow=False), 'You error message')
+                                            shallow=False), f'not equal: {calculated_output_file}')
 
 
 if __name__ == '__main__':

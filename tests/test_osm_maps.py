@@ -188,7 +188,7 @@ class TestOsmMaps(unittest.TestCase):
         tile = get_tile_by_one_xy_combination_from_jsons({"x": 133, "y": 88})
 
         expected_result = fd_fct.read_json_file(
-            '/Users/benjamin/VSCode/wahooMapsCreator/tests/json/germany-only9.json')
+            os.path.join(self.file_path_test_json, 'germany-only9.json'))
 
         self.assertEqual(tile, expected_result[3])
 
