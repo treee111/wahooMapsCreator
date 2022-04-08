@@ -5,9 +5,12 @@ functions and object for constants
 
 # import official python packages
 import sys
+import logging
 
 # import custom python packages
 from common_python import constants
+
+log = logging.getLogger('main-logger')
 
 
 def get_region_of_country(county):
@@ -65,7 +68,7 @@ def get_geofabrik_region_of_country(input_county):
     if c_translated in constants.noregion_geofabrik:
         region = 'no'
     if region == '':
-        print(f'\n! No Geofabrik region match for country: {c_translated}')
+        log.error('! No Geofabrik region match for country: %s', c_translated)
         sys.exit()
 
     return region

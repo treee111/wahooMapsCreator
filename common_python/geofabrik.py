@@ -5,14 +5,16 @@ functions and object for managing OSM maps
 
 # import official python packages
 import sys
-
 import math
+import logging
 import geojson
 from shapely.geometry import Polygon, shape
 
 # import custom python packages
 from common_python import file_directory_functions as fd_fct
 from common_python import constants
+
+log = logging.getLogger('main-logger')
 
 
 class Geofabrik:
@@ -44,11 +46,9 @@ class Geofabrik:
             if wanted_map_geom:
                 self.wanted_map = 'us/'+self.wanted_map
             else:
-                print(
-                    f'failed to find country or region {self.wanted_map} in Geofabrik json file')
+                log.error(
+                    'failed to find country or region %s in Geofabrik json file', self.wanted_map)
                 sys.exit()
-            #print(f'geom={wanted_map_geom}, url={wanted_url}')
-            # sys.exit()
 
         # convert to shape (multipolygon)
         wanted_region = shape(wanted_map_geom)
@@ -105,7 +105,7 @@ class Geofabrik:
                                    'tile_top': tile_top, 'tile_right': tile_right,
                                    'tile_bottom': tile_bottom})
 
-        print('\nSearching for needed maps, this can take a while.\n')
+        log.info('Searching for needed maps, this can take a while.')
         tiles_of_input = find_needed_countries(
             bbox_tiles, self.wanted_map, wanted_region)
         #print (f'Country= {country}')
@@ -205,8 +205,8 @@ def find_needed_countries(bbox_tiles, wanted_map, wanted_region_polygon):
     for tile in bbox_tiles:
         # Do progress indicator every 50 tiles
         if counter % 50 == 0:
-            print(
-                f'Processing tile {counter} of {len(bbox_tiles)+1}', end='\r')
+            log.info(
+                'Processing tile %s of %s',counter, len(bbox_tiles)+1)
         counter += 1
 
         parent_added = 0
@@ -260,8 +260,8 @@ def find_needed_countries(bbox_tiles, wanted_map, wanted_region_polygon):
                                     parent = child
                                     break
                                 if x_value > 10:  # prevent endless loop
-                                    print(
-                                        f'Can not find parent map of region: {regionname}')
+                                    log.error(
+                                        'Can not find parent map of region: %s', regionname)
                                     sys.exit()
                                 x_value += 1
                             if parent not in must_download_maps:
@@ -317,6 +317,4 @@ def find_needed_countries(bbox_tiles, wanted_map, wanted_region_polygon):
                 '/', '_') for sub in must_download_maps]
             output.append({'x': tile['x'], 'y': tile['y'], 'left': tile['tile_left'], 'top': tile['tile_top'],
                           'right': tile['tile_right'], 'bottom': tile['tile_bottom'], 'countries': must_download_maps, 'urls': must_download_urls})
-        #print (f'\nmust_download: {must_download_maps}')
-        #print (f'must_download: {must_download_urls}')
     return output

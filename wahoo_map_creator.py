@@ -4,6 +4,7 @@ executable file to create up-to-date map-files for the Wahoo ELEMNT and Wahoo EL
 #!/usr/bin/python
 
 # import official python packages
+import logging
 
 # import custom python packages
 from common_python.input import process_call_of_the_tool
@@ -14,6 +15,10 @@ from common_python.osm_maps_functions import OsmMaps
 # # means top-level command
 # ! means error
 # + means additional comment in a working-unit
+
+# create logger
+logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.INFO)
+logger = logging.getLogger('main-logger')
 
 # handle GUI and CLI processing via one function and different cli-calls
 oInputData = process_call_of_the_tool()

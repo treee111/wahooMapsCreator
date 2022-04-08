@@ -10,9 +10,12 @@ from os.path import isfile, join
 import subprocess
 import sys
 import zipfile
+import logging
 
 # import custom python packages
 import requests
+
+log = logging.getLogger('main-logger')
 
 
 def get_git_root():
@@ -84,25 +87,24 @@ def create_empty_directories(tiles_from_json):
             os.makedirs(outdir)
 
 
-def read_json_file(json_file_path, logging = True):
+def read_json_file(json_file_path):
     """
     read the tiles from the given json file
     """
-    if logging:
-        print('\n# Read json file')
+    # if logging:
+    log.debug('# Read json file')
 
     with open(json_file_path) as json_file:
         tiles_from_json = json.load(json_file)
         json_file.close()
     if tiles_from_json == '':
-        print('! Json file could not be opened.')
+        log.error('! Json file could not be opened.')
         sys.exit()
 
-    if logging:
-        # logging
-        print(
-            f'+ Use json file {json_file.name} with {len(tiles_from_json)} tiles')
-        print('# Read json file: OK')
+    # logging
+    log.debug(
+        '+ Use json file %s with %s tiles', json_file.name, len(tiles_from_json))
+    log.debug('# Read json file: OK')
 
     return tiles_from_json
 
@@ -113,7 +115,7 @@ def download_url_to_file(url, map_file_path):
     """
     request_geofabrik = requests.get(url, allow_redirects=True, stream=True)
     if request_geofabrik.status_code != 200:
-        print(f'! failed download URL: {url}')
+        log.error('! failed download URL: %s', url)
         sys.exit()
 
     # write content to file
