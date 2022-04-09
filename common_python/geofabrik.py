@@ -2,6 +2,7 @@
 functions and object for managing OSM maps
 """
 #!/usr/bin/python
+#pylint: skip-file
 
 # import official python packages
 import sys
@@ -206,7 +207,7 @@ def find_needed_countries(bbox_tiles, wanted_map, wanted_region_polygon):
         # Do progress indicator every 50 tiles
         if counter % 50 == 0:
             log.info(
-                'Processing tile %s of %s',counter, len(bbox_tiles)+1)
+                'Processing tile %s of %s', counter, len(bbox_tiles)+1)
         counter += 1
 
         parent_added = 0

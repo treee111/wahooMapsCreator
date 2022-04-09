@@ -29,7 +29,7 @@ def process_call_of_the_tool():
                                            help='sub-command help', dest='subparser_name')
 
     # create the parser for the "gui" command
-    parser_gui = subparsers.add_parser(
+    parser_gui = subparsers.add_parser(  # pylint: disable=unused-variable
         'gui', help='Start graphical user interface to select options')
 
     # create the parser for the "cli" command
@@ -203,8 +203,8 @@ class GuiInput(tk.Tk):
         # start GUI
         self.mainloop()
 
-        if self.o_input_data.is_required_input_given_or_exit(issue_message=False):
-            return self.o_input_data
+        self.o_input_data.is_required_input_given_or_exit(issue_message=True)
+        return self.o_input_data
 
     def build_gui(self):
         """
@@ -244,7 +244,7 @@ class GuiInput(tk.Tk):
             tab2, self.o_input_data)
         tab2.first.pack(side=tk.TOP, fill=tk.X)
 
-    def handle_create_map(self, event):
+    def handle_create_map(self, event):  # pylint: disable=unused-argument
         """
         run when Button "Create" is pressed
         """
@@ -273,7 +273,7 @@ class GuiInput(tk.Tk):
 
         self.destroy()
 
-    def switch_reload(self, event):
+    def switch_reload(self, event):  # pylint: disable=unused-argument
         """
         switch edit-mode of max-days field
         """
@@ -329,7 +329,7 @@ class ComboboxesEntryField(tk.Frame):
             column=0, row=3, sticky=tk.E, padx=5, pady=2)
         self.en_max_days_old.grid(column=1, row=3, sticky=tk.W, padx=10)
 
-    def callback_continent(self, event):
+    def callback_continent(self, event):  # pylint: disable=unused-argument
         """
         set value-list of countries after changing continent
         """

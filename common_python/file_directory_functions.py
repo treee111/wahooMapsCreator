@@ -57,7 +57,8 @@ def unzip(source_filename, dest_dir):
             for word in words[:-1]:
                 while True:
                     drive, word = os.path.splitdrive(word)
-                    head, word = os.path.split(word)
+                    head, word = os.path.split(
+                        word)  # pylint: disable=unused-variable
                     if not drive:
                         break
                 if word in (os.curdir, os.pardir, ''):
