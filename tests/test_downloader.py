@@ -74,11 +74,13 @@ class TestDownloader(unittest.TestCase):
 
     def test_download_geofabrik_file(self):
         """
-        Test the download of land poligons file via URL
+        Test the download of geofabrik file via URL
         """
         path = os.path.join(fd_fct.COMMON_DL_DIR, 'geofabrik.json')
         download_file(
             path, 'https://download.geofabrik.de/index-v1.json', False)
+
+        self.assertTrue(os.path.exists(path))
 
 
 if __name__ == '__main__':
