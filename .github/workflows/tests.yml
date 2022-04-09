@@ -1,7 +1,6 @@
 name: Run python tests
 
-on:
-  [push]
+on: [push]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -9,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.9]
+        python-version: [3.7]
 
     steps:
       - uses: actions/checkout@v2
@@ -23,17 +22,16 @@ jobs:
           pip install pylint pytest
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       - name: Python Code Quality and Lint
-        uses: ricardochaves/python-lint@v1.3.0
+        uses: ricardochaves/python-lint@v1.4.0
         with:
-          python-root-list: ". common_resources tests"
+          python-root-list: ". common_python tests"
           use-pylint: true
-
 
   unittest:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.9]
+        python-version: [3.7]
 
     steps:
       - uses: actions/checkout@v2
