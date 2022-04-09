@@ -21,7 +21,7 @@ jobs:
           pip install pylint
       - name: Analysing the code with pylint
         run: |
-          OUTPUT=$(pylint . common_python tests)
+          OUTPUT=$(pylint . common_python tests --exit-zero)
           echo "MESSAGE=$OUTPUT" >> $GITHUB_ENV
         continue-on-error: true
       - name: Post result to PR
