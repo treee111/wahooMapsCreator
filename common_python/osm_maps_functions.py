@@ -122,32 +122,23 @@ class OsmMaps:
 
         log.info('-' * 80)
 
-        # option 1: have a .json file as input parameter
-        if self.o_input_data.tile_file:
-            log.info('# Input json file: %s.', self.o_input_data.tile_file)
+        if self.o_input_data.country and self.o_input_data.xy_coordinates:
+            log.error(
+                "! country and X/Y coordinates are given. Only one of both is allowed!")
+            sys.exit()
 
-            if os.path.isfile(self.o_input_data.tile_file):
-                self.tiles = fd_fct.read_json_file(self.o_input_data.tile_file)
-
-                # country name is the last part of the input filename
-                self.country_name = os.path.split(
-                    self.o_input_data.tile_file)[1][:-5]
-
-                # calc border country when input tiles via json file
-                calc_border_countries = True
-
-        # option 2: input a country as parameter, e.g. germany
-        elif self.o_input_data.country:
+        # option 1: input a country as parameter, e.g. germany
+        if self.o_input_data.country:
             log.info('# Input country: %s.', self.o_input_data.country)
 
-            # option 2a: use Geofabrik-URL to calculate the relevant tiles
+            # option 1a: use Geofabrik-URL to calculate the relevant tiles
             if self.o_input_data.geofabrik_tiles:
                 self.force_processing = self.o_downloader.check_and_download_geofabrik_if_needed()
 
                 o_geofabrik = Geofabrik(self.o_input_data.country)
                 self.tiles = o_geofabrik.get_tiles_of_country()
 
-            # option 2b: use static json files in the repo to calculate relevant tiles
+            # option 1b: use static json files in the repo to calculate relevant tiles
             else:
                 json_file_path = os.path.join(fd_fct.COMMON_DIR, 'json',
                                               const_fct.get_region_of_country(self.o_input_data.country), self.o_input_data.country + '.json')
@@ -156,16 +147,16 @@ class OsmMaps:
             # country name is the input argument
             self.country_name = self.o_input_data.country
 
-        # option 3: input a x/y combinations as parameter, e.g. 134/88  or 133/88,130/100
+        # option 2: input a x/y combinations as parameter, e.g. 134/88  or 133/88,130/100
         elif self.o_input_data.xy_coordinates:
             log.info(
                 '# Input X/Y coordinates: %s.', self.o_input_data.xy_coordinates)
 
-            # # option 3a: use Geofabrik-URL to get the relevant tiles
+            # option 2a: use Geofabrik-URL to get the relevant tiles
             if self.o_input_data.geofabrik_tiles:
                 sys.exit("X/Y coordinated via Geofabrik not implemented now")
 
-            # option 3b: use static json files in the repo to get relevant tiles
+            # option 2b: use static json files in the repo to get relevant tiles
             else:
                 xy_coordinates = get_xy_coordinates_from_input(
                     self.o_input_data.xy_coordinates)
