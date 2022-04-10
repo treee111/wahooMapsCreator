@@ -188,7 +188,7 @@ class OsmMaps:
         # Build list of countries needed
         self.border_countries = {}
         if calc_border_countries:
-            self.calc_border_countries()
+            self.calc_border_countries(calc_border_countries)
         else:
             self.border_countries[self.country_name] = {}
 
@@ -208,10 +208,14 @@ class OsmMaps:
         else:
             self.force_processing = False
 
-    def calc_border_countries(self):
+    def calc_border_countries(self, calc_border_countries):
         """
         calculate relevant border countries for the given tiles
         """
+
+        log.info('-' * 80)
+        if calc_border_countries:
+            log.info('# Determine involved/border countries')
 
         # Build list of countries needed
         for tile in self.tiles:
@@ -219,9 +223,13 @@ class OsmMaps:
                 if country not in self.border_countries:
                     self.border_countries[country] = {}
 
-        log.info('+ Count of Border countries: %s', len(self.border_countries))
+        # log.info('+ Count of involved countries: %s',
+        #          len(self.border_countries))
         for country in self.border_countries:
-            log.info('+ Border country: %s', country)
+            log.info('+ Involved country: %s', country)
+
+        if calc_border_countries and len(self.border_countries) > 1:
+            log.info('+ Border countries will be processed')
 
     def filter_tags_from_country_osm_pbf_files(self):
         """
@@ -490,7 +498,7 @@ class OsmMaps:
 
         log.info('+ Split filtered country files to tiles: OK')
 
-    def merge_splitted_tiles_with_land_and_sea(self, calc_border_countries):
+    def merge_splitted_tiles_with_land_and_sea(self, process_border_countries):
         """
         Merge splitted tiles with land an sea
         """
@@ -519,7 +527,7 @@ class OsmMaps:
                     # loop through all countries of tile, if border-countries should be processed.
                     # if border-countries should not be processed, only process the "entered" country
                     for country in tile['countries']:
-                        if calc_border_countries or country in self.border_countries:
+                        if process_border_countries or country in self.border_countries:
                             cmd.append('--rbf')
                             cmd.append(os.path.join(
                                 out_tile_dir, f'split-{country}.osm.pbf'))
@@ -549,7 +557,7 @@ class OsmMaps:
                     # loop through all countries of tile, if border-countries should be processed.
                     # if border-countries should not be processed, only process the "entered" country
                     for country in tile['countries']:
-                        if calc_border_countries or country in self.border_countries:
+                        if process_border_countries or country in self.border_countries:
                             cmd.append(os.path.join(
                                 out_tile_dir, f'split-{country}.osm.pbf'))
                             cmd.append(os.path.join(

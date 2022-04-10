@@ -106,7 +106,7 @@ def process_call_of_the_tool():
         o_input_data.tile_file = args.tile_file
         o_input_data.max_days_old = args.maxdays
 
-        o_input_data.border_countries = args.bordercountries
+        o_input_data.process_border_countries = args.bordercountries
         o_input_data.force_download = args.forcedownload
         o_input_data.force_processing = args.forceprocessing
         o_input_data.geofabrik_tiles = args.geofabrik_tiles
@@ -151,7 +151,7 @@ class InputData():
 
         self.force_download = False
         self.force_processing = False
-        self.border_countries = True
+        self.process_border_countries = True
         self.save_cruiser = False
         self.only_merge = False
 
@@ -261,7 +261,7 @@ class GuiInput(tk.Tk):
 
         self.o_input_data.force_download = tab1.third.checkb_download.get()
         self.o_input_data.force_processing = tab1.third.checkb_processing_val.get()
-        self.o_input_data.border_countries = tab1.third.checkb_border_countries_val.get()
+        self.o_input_data.process_border_countries = tab1.third.checkb_border_countries_val.get()
         self.o_input_data.geofabrik_tiles = tab1.third.checkb_geofabrik_tiles_val.get()
 
         self.o_input_data.only_merge = tab2.first.checkb_only_merge_val.get()
@@ -357,7 +357,7 @@ class CheckbuttonsTab1(tk.Frame):
         self.chk_force_download.bind(
             "<Button-1>", self.controller.switch_reload)
 
-        self.checkb_border_countries_val = create_checkbox(self, oInputData.border_countries,
+        self.checkb_border_countries_val = create_checkbox(self, oInputData.process_border_countries,
                                                            "Process border countries", 0)
         self.chk_force_download.grid(
             column=0, row=1, sticky=tk.W, padx=15, pady=5)
