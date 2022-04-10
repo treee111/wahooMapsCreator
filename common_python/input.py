@@ -57,9 +57,9 @@ def process_call_of_the_tool():
     # Maximum age of source maps or land shape files before they are redownloaded
     options_args.add_argument('-md', '--maxdays', type=int, default=InputData().max_days_old,
                               help="maximum age of source maps and other files")
-    # Calculate also border countries of input country or not
-    options_args.add_argument('-bc', '--bordercountries', action='store_true',
-                              help="process whole tiles which involve border countries")
+    # Do not calculate border countries of input country
+    options_args.add_argument('-nbc', '--bordercountries', action='store_false',
+                              help="do not process border countries of tiles involving more than one country")
     # Force download of source maps and the land shape file
     # If False use Max_Days_Old to check for expired maps
     # If True force redownloading of maps and landshape
@@ -151,7 +151,7 @@ class InputData():
 
         self.force_download = False
         self.force_processing = False
-        self.border_countries = False
+        self.border_countries = True
         self.save_cruiser = False
         self.only_merge = False
 
