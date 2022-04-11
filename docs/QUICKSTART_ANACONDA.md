@@ -70,7 +70,7 @@ conda env create -f ./conda_env/gdal-user.yml
 ```
 conda env create -f .\conda_env\gdal-user.yml 
 ```
-3. activate Anaconda environment with the command printed out
+3. activate Anaconda environment with the command printed out (this needs to be done each time you want to create maps)
 ```
 conda activate gdal-user
 ```

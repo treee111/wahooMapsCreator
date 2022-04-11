@@ -32,11 +32,15 @@ Using Anaconda to setup a virtual Python environment is the fastest way to get w
 [:rocket: Quick Start Guide for Anaconda](docs/QUICKSTART_ANACONDA.md#download-and-install-required-programs)
 
 ## Run wahooMapsCreator
-via GUI
+Activate Anaconda environment
+```
+conda activate gdal-user
+```
+Run wahooMapsCreator via GUI
 ```
 python wahoo_map_creator.py gui
 ```
-via CLI
+Or run wahooMapsCreator via CLI
 ```
 python wahoo_map_creator.py cli -co malta
 ```
