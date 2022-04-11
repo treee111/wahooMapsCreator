@@ -22,7 +22,7 @@
 | 14         | 200m  |
 | 15         | 100m  |
 
-That information were derived from cruiser on macOS. It needs to be checked if the zoom level and scale on cruiser and Wahoo device is exaclty the same or if there is a difference.
+That information were derived from cruiser on macOS. It needs to be checked if the zoom level and scale on cruiser and Wahoo device is exactly the same or if there is a difference.
 
 # File tag-wahoo.xml
 The `tag-wahoo.xml` files defines how to proceed wit OSM-elements during map generation.
@@ -51,4 +51,4 @@ Because the theme kind of determines what you're gonna see, you want to preview 
 # Combination of tag-wahoo.xml and device-theme
 This zoom-appear in combination with the settings in the theme on the device (which can also be applied in cruiser) controls when certain elements are shown on our BOLT/ROAM etc (zoom-min).
 
-If a element is included in the map beginning from zoom level 10 (zoom-apear in tag-wahoo.xml) but on the device only displayed beginning with zoom level 12 (zoom-min in mapsforge-bolt.xml), the element is only displayed beginning zoom level 12.
+If a element is included in the map beginning from zoom level 10 (zoom-appear in tag-wahoo.xml) but on the device only displayed beginning with zoom level 12 (zoom-min in mapsforge-bolt.xml), the element is only displayed beginning zoom level 12.
