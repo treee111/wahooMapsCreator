@@ -1,3 +1,14 @@
+# Usage of wahooMapsCreator <!-- omit in toc -->
+#### Table of contents <!-- omit in toc -->
+- [Usage of wahooMapsCreator](#usage-of-wahoomapscreator)
+  - [Run wahooMapsCreator for your country](#run-wahoomapscreator-for-your-country)
+  - [GUI (Graphical User Interface)](#gui-graphical-user-interface)
+  - [CLI (Command Line Interface)](#cli-command-line-interface)
+  - [Advanced CLI-Usage](#advanced-cli-usage)
+    - [Main arguments](#main-arguments)
+    - [Examples](#examples)
+  - [POIs - Points of Interest](#pois---points-of-interest)
+
 # Usage of wahooMapsCreator
 wahooMapsCreator can be used in two different ways:
 - as [graphical window](#gui-graphical-user-interface) programm
@@ -52,3 +63,16 @@ To create maps for only one tile and not a whole country, one can use the X/Y co
   - `python wahoo_map_creator.py cli -xy 134/88`
 - for multiple tiles
   - `python wahoo_map_creator.py cli -xy 134/88,133/88`
+
+## POIs - Points of Interest
+For creating maps which include POIs and have them displayed on your Wahoo device, these steps need to be done:
+1. Create custom maps including POIs
+  - `python wahoo_map_creator.py cli -co malta -tag tag-wahoo-poi.xml`
+  - the tag-wahoo-poi.xml produces fuel stations, backeries, cafes and railway stations
+
+2. Copy POIs relevant files to your device
+- [:floppy_disk: docu](docs/COPY_TO_WAHOO.md#copy-pois-relevant-files)
+
+3. Activate VTM rendering if needed
+- [see here](docs/COPY_TO_WAHOO.md#activate-vtm-rendering)
+- see also: https://github.com/treee111/wahooMapsCreator/wiki/Enable-hidden-features

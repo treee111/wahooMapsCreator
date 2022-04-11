@@ -26,6 +26,9 @@ The instructions are intended to be suitable for beginners.
 
 If anything is unclear or seams wrong, write an [:pencil2: issue](https://github.com/treee111/wahooMapsCreator/issues)!
 
+## Brand-New: Get POIs displayed on your Wahoo!
+[:cookie: here](docs/USAGE.md#pois---points-of-interest)
+
 ## Download and Install required programs
 Using Anaconda to setup a virtual Python environment is the fastest way to get wahooMapsCreator running!
 
