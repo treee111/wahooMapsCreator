@@ -33,7 +33,7 @@ def download_file(target_filepath, url, is_zip):
     """
     logging_filename = target_filepath.split(os.sep)[-1]
     log.info('-' * 80)
-    log.info('# Downloading %s file', logging_filename)
+    log.info('+ Downloading %s file', logging_filename)
     if is_zip:
         # build target-filepath based on last element of URL
         last_part = url.rsplit('/', 1)[-1]
@@ -59,7 +59,8 @@ def download_osm_pbf_file(country):
     """
     download a countries' OSM file
     """
-    log.info('+ Trying to download missing map of %s.', country)
+
+    log.info('# Need to download missing map of %s.', country)
     # get .osm.pbf region of country
     transl_c = const_fct.translate_country_input_to_geofabrik(country)
     region = const_fct.get_geofabrik_region_of_country(country)
@@ -91,10 +92,12 @@ class Downloader:
         check geofabrik file if not existing or is not up-to-date
         and download if needed
         """
+
         force_processing = False
 
         if self.check_file(fd_fct.GEOFABRIK_PATH) is True or \
                 self.force_download is True:
+            log.info('# Need to download geofabrik file')
             download_file(fd_fct.GEOFABRIK_PATH,
                           'https://download.geofabrik.de/index-v1.json', False)
             force_processing = True
@@ -108,10 +111,12 @@ class Downloader:
         check land_polygons and OSM map files if not existing or are not up-to-date
         and download if needed
         """
+
         force_processing = False
 
         if self.check_file(fd_fct.LAND_POLYGONS_PATH) is True or \
                 self.force_download is True:
+            log.info('# Need to download land polygons file')
             download_file(fd_fct.LAND_POLYGONS_PATH,
                           'https://osmdata.openstreetmap.de/download/land-polygons-split-4326.zip', True)
             force_processing = True
@@ -172,6 +177,7 @@ class Downloader:
         """
         check if the relevant countries' OSM files are up-to-date
         """
+
         need_to_download = False
         log.info('-' * 80)
         log.info('# check countries .osm.pbf files')
