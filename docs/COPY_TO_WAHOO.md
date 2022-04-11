@@ -69,9 +69,7 @@ Device themes are described [here](TAGS_ON_MAP_AND_DEVICE.md#Device-Theme)
 For having POIs displayed on your device, you need to copy the icons and a corresponding device theme on your device.
 These are the steps to follow:
 - create folder `maps/vtm-elemnt`
-- from the folder in the download/ the repo: `common_resources/vtm_theme_poi`, copy into the created folder:
-  - folder `icons` with content
-  - file `vtm-elemnt.xml`
+- copy the content of  `device_themes/vtm_theme_poi` into  `maps/vtm-elemnt`.
 
 ## Activate VTM rendering
 If you have a ROAM or BOLTv2, VTM is already the default rendering theme.

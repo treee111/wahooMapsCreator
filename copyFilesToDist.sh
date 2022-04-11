@@ -25,6 +25,7 @@ mkdir -p ./common_resources
 mkdir -p ./conda_env
 mkdir -p ./tooling
 mkdir -p ./docs
+mkdir -p ./device_themes
 
 # copy files into dist-folder
 cp -a ../../common_python/*.py ./common_python/
@@ -33,7 +34,7 @@ cp -a ../../common_resources/*.osm ../../common_resources/*.py ./common_resource
 cp -a ../../common_resources/json/ ./common_resources/json
 cp -a ../../common_resources/tag_wahoo_adjusted/ ./common_resources/tag_wahoo_adjusted
 cp -a ../../common_resources/tag_wahoo_initial/ ./common_resources/tag_wahoo_initial
-cp -a ../../common_resources/vtm_theme_poi/ ./common_resources/vtm_theme_poi
+cp -a ../../device_themes/ ./device_themes/
 
 cp -a ../../docs/*.md ./docs/
 cp -a ../../wahoo_map_creator.py ../../CHANGELOG.md ../../README.md ./
