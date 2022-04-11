@@ -26,8 +26,6 @@ class TestOsmMaps(unittest.TestCase):
 
         self.o_osm_maps = OsmMaps(o_input_data)
 
-        self.file_path_test_json = os.path.join(os.getcwd(), 'tests', 'json')
-
     def test_input_country_malta(self):
         """
         Test "malta" as input to the wahooMapsCreator
@@ -39,20 +37,6 @@ class TestOsmMaps(unittest.TestCase):
 
         result = self.o_osm_maps.country_name
         self.assertEqual(result, 'malta')
-
-    def test_input_json_file(self):
-        """
-        Test a json file as input to the wahooMapsCreator
-        check, if the given input-parameter is saved to the OsmMaps instance
-        """
-        json_file_path = os.path.join(
-            self.file_path_test_json, 'germany-only1.json')
-
-        self.o_osm_maps.o_input_data.tile_file = json_file_path
-        self.o_osm_maps.process_input(True)
-
-        result = self.o_osm_maps.country_name
-        self.assertEqual(result, 'germany-only1')
 
     def test_calc_border_countries_input_country(self):
         """
@@ -72,28 +56,29 @@ class TestOsmMaps(unittest.TestCase):
         self.process_and_check_border_countries(
             'germany', True, expected_result, 'country')
 
-    def test_calc_border_countries_input_json_file(self):
+    def test_calc_border_countries_input_xy_coordinates_1tile(self):
         """
         Test initialized border countries
-        - of a file with 1 tile
-        - of a file with 2 tiles
+        - of a file with 1 tile and two countries
         """
 
         # one tile - france and germany
-        input_file = os.path.join(
-            self.file_path_test_json, 'germany-france-only1.json')
         expected_result = {'france': {}, 'germany': {}}
         self.process_and_check_border_countries(
-            input_file, True, expected_result, 'json_file')
+            "133/88", True, expected_result, 'xy_coordinate')
+
+    def test_calc_border_countries_input_xy_coordinates_2tiles(self):
+        """
+        Test initialized border countries
+        - of a file with 2 tiles and one country
+        """
 
         # two tiles - germany
-        input_file = os.path.join(
-            self.file_path_test_json, 'germany-only2.json')
         expected_result = {'germany': {}}
         self.process_and_check_border_countries(
-            input_file, True, expected_result, 'json_file')
+            "134/87,134/88", True, expected_result, 'xy_coordinate')
 
-    def test_calc_without_border_countries(self):
+    def test_calc_without_border_countries_input_country(self):
         """
         Test initialized countries without border countries
         - of germany
@@ -109,19 +94,27 @@ class TestOsmMaps(unittest.TestCase):
         self.process_and_check_border_countries(
             'china', False, {'china': {}}, 'country')
 
+    def test_calc_without_border_countries__xy_coordinates_1tile(self):
+        """
+        Test initialized countries without border countries
+        - of one tile
+        """
+
         # one tile - france and germany
-        input_file = os.path.join(
-            self.file_path_test_json, 'germany-france-only1.json')
         expected_result = {'france': {}, 'germany': {}}
         self.process_and_check_border_countries(
-            input_file, False, expected_result, 'json_file')
+            "133/88", False, expected_result, 'xy_coordinate')
+
+    def test_calc_without_border_countries__xy_coordinates_2tiles(self):
+        """
+        Test initialized countries without border countries
+        - of two tiles
+        """
 
         # two tiles - germany
-        input_file = os.path.join(
-            self.file_path_test_json, 'germany-only2.json')
         expected_result = {'germany': {}}
         self.process_and_check_border_countries(
-            input_file, False, expected_result, 'json_file')
+            "134/87,134/88", False, expected_result, 'xy_coordinate')
 
     def test_tiles_via_static_json(self):
         """
@@ -137,8 +130,8 @@ class TestOsmMaps(unittest.TestCase):
         """
         if inp_mode == 'country':
             self.o_osm_maps.o_input_data.country = inp_val
-        elif inp_mode == 'json_file':
-            self.o_osm_maps.o_input_data.tile_file = inp_val
+        elif inp_mode == 'xy_coordinate':
+            self.o_osm_maps.o_input_data.xy_coordinates = inp_val
 
         self.o_osm_maps.process_input(calc_border_c)
         result = self.o_osm_maps.border_countries
@@ -183,14 +176,24 @@ class TestOsmMaps(unittest.TestCase):
 
     def test_get_tile_via_xy_coordinate(self):
         """
-        use static json files in the repo to calculate relevant tiles
+        use static json files in the repo to calculate relevant tile
         """
         tile = get_tile_by_one_xy_combination_from_jsons({"x": 133, "y": 88})
 
-        expected_result = fd_fct.read_json_file(
-            os.path.join(self.file_path_test_json, 'germany-only9.json'))
+        expected_result = {
+            "x": 133,
+            "y": 88,
+            "left": 7.03125,
+            "top": 48.922499,
+            "right": 8.4375,
+            "bottom": 47.989922,
+            "countries": [
+                "france",
+                "germany"
+            ]
+        }
 
-        self.assertEqual(tile, expected_result[3])
+        self.assertEqual(tile, expected_result)
 
 
 if __name__ == '__main__':

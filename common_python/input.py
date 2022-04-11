@@ -47,9 +47,6 @@ def process_call_of_the_tool():
     # X/Y coordinates to create maps for
     primary_args_excl.add_argument(
         "-xy", "--xy_coordinates", help="x/y coordinates to generate maps for. Example: 133/88")
-    # file to create maps for
-    primary_args_excl.add_argument(
-        "-fi", "--tile_file", help="file with tiles to generate maps for")
 
     # group: options for map generation
     options_args = parser_cli.add_argument_group(
@@ -103,7 +100,6 @@ def process_call_of_the_tool():
         o_input_data = InputData()
         o_input_data.country = args.country
         o_input_data.xy_coordinates = args.xy_coordinates
-        o_input_data.tile_file = args.tile_file
         o_input_data.max_days_old = args.maxdays
 
         o_input_data.border_countries = args.bordercountries
@@ -146,7 +142,6 @@ class InputData():
     def __init__(self):
         self.country = ""
         self.xy_coordinates = ""
-        self.tile_file = ""
         self.max_days_old = 14
 
         self.force_download = False
@@ -174,7 +169,7 @@ class InputData():
         - file with tile coordinates
         If not, depending on the import parameter, the
         """
-        if (self.country in ('None', '') and self.xy_coordinates in ('None', '') and self.tile_file in ('None', '')):
+        if (self.country in ('None', '') and self.xy_coordinates in ('None', '')):
             if issue_message:
                 sys.exit("Nothing to do. Start with -h or --help to see command line options."
                          "Or in the GUI select a country to create maps for.")
