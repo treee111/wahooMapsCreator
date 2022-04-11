@@ -654,15 +654,15 @@
    <m zoom-min="14">
 	   <m k="amenity" >
 		  <m v="fuel">
-			<symbol src="icons/fuel.svg"/>
+			<symbol src="icons/fuel.svg" symbol-percent="150"/>
 		  </m>         
 		  <m v="cafe" zoom-min="15">
-			<symbol src="icons/cafe.svg"/>
+			<symbol src="icons/cafe.svg" symbol-percent="150"/>
 		  </m>	
 		</m>  
 		<m k="shop" >
 		  <m v="bakery">
-			<symbol src="icons/bakery.svg"/>
+			<symbol src="icons/bakery.svg" symbol-percent="150"/>
 		  </m>
 		</m> 
 
