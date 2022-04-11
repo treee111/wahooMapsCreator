@@ -68,4 +68,10 @@ More details can be found here: [CONTRIBUTING](.github/CONTRIBUTING.md#contribut
 ## Thanks to
 [@Intyre](https://github.com/Intyre)/Hank for the initial version of the script
 
-@Higli and [@Ebe66](https://github.com/Ebe66)/ebo for the Windows- port
+[@Ebe66](https://github.com/Ebe66)/ebo for the Windows- port
+
+[@mweirauch](https://github.com/mweirauch) for bringing in new ideas, testing and using the tool
+
+[@zenziwerken](https://github.com/zenziwerken) for the work done for [POIs](https://github.com/zenziwerken/Bolt2-Mapsforge-Rendertheme)!
+
+[@macdet](https://github.com/macdet) for bringing in new thoughts, testing and making this a little more public
