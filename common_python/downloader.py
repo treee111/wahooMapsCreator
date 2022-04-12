@@ -55,12 +55,11 @@ def download_file(target_filepath, url, is_zip):
         log.info('+ Downloaded: %s', target_filepath)
 
 
-def download_osm_pbf_file(country):
+def get_osm_pbf_filepath_url(country):
     """
-    download a countries' OSM file
+    evaluate a countries' OSM file URL and download filepath
     """
 
-    log.info('# Need to download missing map of %s.', country)
     # get .osm.pbf region of country
     transl_c = const_fct.translate_country_input_to_geofabrik(country)
     region = const_fct.get_geofabrik_region_of_country(country)
@@ -69,11 +68,10 @@ def download_osm_pbf_file(country):
             '/' + transl_c + '-latest.osm.pbf'
     else:
         url = 'https://download.geofabrik.de/' + transl_c + '-latest.osm.pbf'
-    # download URL to file
     map_file_path = os.path.join(
         fd_fct.MAPS_DIR, f'{transl_c}' + '-latest.osm.pbf')
-    download_file(map_file_path, url, False)
-    return map_file_path
+    # return URL and download filepath
+    return map_file_path, url
 
 
 class Downloader:
@@ -128,7 +126,8 @@ class Downloader:
             for country, item in self.border_countries.items():
                 try:
                     if item['download'] is True:
-                        map_file_path = download_osm_pbf_file(country)
+                        map_file_path, url = get_osm_pbf_filepath_url(country)
+                        download_file(map_file_path, url, False)
                         self.border_countries[country] = {
                             'map_file': map_file_path}
                 except KeyError:
