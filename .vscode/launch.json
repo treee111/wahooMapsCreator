@@ -176,6 +176,19 @@
                 "-xy",
                 "138/100,133/88"
             ]
+        },
+        {
+            "name": "x/y: stg->gardasee (ten tiles)",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceRoot}/wahoo_map_creator.py",
+            "console": "integratedTerminal",
+            "args": [
+                "cli",
+                "-xy",
+                "134/88,134/89,134/90,134/91,135/88,135/89,135/90,135/91,136/90,136/91",
+                "-om"
+            ]
         }
     ]
 }
