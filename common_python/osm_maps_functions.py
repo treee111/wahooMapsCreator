@@ -424,6 +424,8 @@ class OsmMaps:
         for tile in self.tiles:
 
             for country, val in self.border_countries.items():
+                if country not in tile['countries']:
+                    continue
                 log.info(
                     '+ Splitting tile %s of %s for Coordinates: %s,%s from map of %s', tile_count, len(self.tiles), tile["x"], tile["y"], country)
                 out_file = os.path.join(fd_fct.OUTPUT_DIR,
