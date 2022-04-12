@@ -83,7 +83,7 @@ def translate_country_input_to_geofabrik(county):
 
     try:
         c_translated = constants.Translate_Country[f'{county}']
-    except:
+    except KeyError:
         c_translated = county
 
     return c_translated

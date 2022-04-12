@@ -160,7 +160,7 @@ class Downloader:
                 os.remove(target_filepath)
                 need_to_download = True
 
-        except:
+        except FileNotFoundError:
             need_to_download = True
 
         # if file does not exists --> download

@@ -28,6 +28,16 @@ class TestConstants(unittest.TestCase):
         transl_c = translate_country_input_to_geofabrik('paracel_islands')
         self.assertEqual(expected, transl_c)
 
+    def test_translated_countries_no_mapping(self):
+        """
+        Test countries which have no own geofabrik country but are included in china
+        """
+
+        expected = 'germany'
+
+        transl_c = translate_country_input_to_geofabrik('germany')
+        self.assertEqual(expected, transl_c)
+
 
 if __name__ == '__main__':
     unittest.main()

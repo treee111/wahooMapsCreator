@@ -101,6 +101,20 @@ class TestDownloader(unittest.TestCase):
 
         self.assertTrue(os.path.exists(path))
 
+    def test_delete_not_existing_file(self):
+        """
+        Test if the removal of a not existing file raises a exception
+        """
+
+        path = os.path.join(fd_fct.COMMON_DL_DIR, 'maps',
+                            'malta' + '-latest.osm.pbf')
+
+        if os.path.exists(path):
+            os.remove(path)
+
+        with self.assertRaises(FileNotFoundError):
+            os.remove(path)
+
 
 if __name__ == '__main__':
     unittest.main()
