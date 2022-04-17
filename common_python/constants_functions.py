@@ -87,3 +87,33 @@ def translate_country_input_to_geofabrik(county):
         c_translated = county
 
     return c_translated
+
+
+def translate_tags_to_keep(input_tags, operating_system=''):
+    """
+    translates the given tags to format of the operating system.
+    """
+
+    if operating_system == "Windows":
+        tags_modif = ''
+        for tag in input_tags:
+            value = input_tags[tag]
+            if value:
+                to_append = f'{tag}={value}'
+            else:
+                to_append = f'{tag}='
+
+            if tags_modif:
+                tags_modif = f'{tags_modif} {to_append}'
+            else:
+                tags_modif = to_append
+    else:
+        tags_modif = []
+        for tag in input_tags:
+            value = input_tags[tag]
+            if value:
+                tags_modif.append(f'{tag}={value}')
+            else:
+                tags_modif.append(tag)
+
+    return tags_modif
