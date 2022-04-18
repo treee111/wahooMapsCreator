@@ -95,25 +95,31 @@ def translate_tags_to_keep(input_tags, operating_system=''):
     """
 
     if operating_system == "Windows":
-        tags_modif = ''
-        for tag in input_tags:
-            value = input_tags[tag]
-            if value:
-                to_append = f'{tag}={value}'
-            else:
-                to_append = f'{tag}='
-
-            if tags_modif:
-                tags_modif = f'{tags_modif} {to_append}'
-            else:
-                tags_modif = to_append
+        separator = ' ='
     else:
-        tags_modif = []
-        for tag in input_tags:
-            value = input_tags[tag]
-            if value:
-                tags_modif.append(f'{tag}={value}')
+        separator = ', '
+
+    tags_modif = []
+
+    for tag in input_tags:
+        value = input_tags[tag]
+        if isinstance(value, list):
+            for iteration, sing_val in enumerate(value):
+                if iteration == 0:
+                    to_append = f'{tag}={sing_val}'
+                else:
+                    to_append = f'{to_append}{separator}{sing_val}'
+        elif value:
+            to_append = f'{tag}={value}'
+        else:
+            if operating_system == "Windows":
+                to_append = f'{tag}='
             else:
-                tags_modif.append(tag)
+                to_append = tag
+
+        tags_modif.append(to_append)
+
+    if operating_system == "Windows":
+        tags_modif = ' '.join(tags_modif)
 
     return tags_modif
