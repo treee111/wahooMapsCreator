@@ -11,6 +11,7 @@ import time
 
 from common_python.downloader import older_than_x_days
 from common_python.downloader import download_file
+from common_python.downloader import get_osm_pbf_filepath_url
 from common_python.downloader import Downloader
 from common_python import file_directory_functions as fd_fct
 
@@ -81,6 +82,38 @@ class TestDownloader(unittest.TestCase):
             path, 'https://download.geofabrik.de/index-v1.json', False)
 
         self.assertTrue(os.path.exists(path))
+
+    def test_download_malta_osm_pbf_file(self):
+        """
+        Test the download of geofabrik file via URL
+        """
+
+        country = 'malta'
+
+        path = os.path.join(fd_fct.COMMON_DL_DIR, 'maps',
+                            f'{country}' + '-latest.osm.pbf')
+
+        if os.path.exists(path):
+            os.remove(path)
+
+        map_file_path, url = get_osm_pbf_filepath_url(country)
+        download_file(map_file_path, url, False)
+
+        self.assertTrue(os.path.exists(path))
+
+    def test_delete_not_existing_file(self):
+        """
+        Test if the removal of a not existing file raises a exception
+        """
+
+        path = os.path.join(fd_fct.COMMON_DL_DIR, 'maps',
+                            'malta' + '-latest.osm.pbf')
+
+        if os.path.exists(path):
+            os.remove(path)
+
+        with self.assertRaises(FileNotFoundError):
+            os.remove(path)
 
 
 if __name__ == '__main__':

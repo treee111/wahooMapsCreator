@@ -57,8 +57,8 @@ def unzip(source_filename, dest_dir):
             for word in words[:-1]:
                 while True:
                     drive, word = os.path.splitdrive(word)
-                    head, word = os.path.split(
-                        word)  # pylint: disable=unused-variable
+                    head, word = os.path.split(  # pylint: disable=unused-variable
+                        word)
                     if not drive:
                         break
                 if word in (os.curdir, os.pardir, ''):
@@ -96,7 +96,7 @@ def read_json_file(json_file_path):
     log.debug('-' * 80)
     log.debug('# Read json file')
 
-    with open(json_file_path) as json_file:
+    with open(json_file_path, encoding="utf-8") as json_file:
         tiles_from_json = json.load(json_file)
         json_file.close()
     if tiles_from_json == '':
@@ -127,7 +127,7 @@ def write_to_file(file_path, request):
     """
     write content of request into given file path
     """
-    with open(file_path, 'wb') as file_handle:
+    with open(file_path, mode='wb') as file_handle:
         for chunk in request.iter_content(chunk_size=1024*100):
             file_handle.write(chunk)
 

@@ -25,6 +25,10 @@ from common_python.geofabrik import Geofabrik
 log = logging.getLogger('main-logger')
 
 
+class TileNotFoundError(Exception):
+    """Raised when no tile is found for x/y combination"""
+
+
 def get_xy_coordinates_from_input(input_xy_coordinates):
     """
     extract/split x/y combinations by given X/Y coordinates.
@@ -63,6 +67,9 @@ def get_tile_by_one_xy_combination_from_jsons(xy_combination):
             for tile in content:
                 if tile['x'] == xy_combination['x'] and tile['y'] == xy_combination['y']:
                     return tile
+
+    # if function is processed until here, there is no tile found for the x/y combination --> Exception
+    raise TileNotFoundError
 
 
 def run_subprocess_and_log_output(cmd, error_message, cwd=""):
@@ -163,15 +170,19 @@ class OsmMaps:
 
                 # loop through x/y combinations and find each tile in the json files
                 for xy_comb in xy_coordinates:
-                    self.tiles.append(get_tile_by_one_xy_combination_from_jsons(
-                        xy_comb))
+                    try:
+                        self.tiles.append(get_tile_by_one_xy_combination_from_jsons(
+                            xy_comb))
 
-                    # country name is the X/Y combinations separated by minus
-                    # >1 x/y combinations are separated by underscore
-                    if not self.country_name:
-                        self.country_name = f'{xy_comb["x"]}-{xy_comb["y"]}'
-                    else:
-                        self.country_name = f'{self.country_name}_{xy_comb["x"]}-{xy_comb["y"]}'
+                        # country name is the X/Y combinations separated by minus
+                        # >1 x/y combinations are separated by underscore
+                        if not self.country_name:
+                            self.country_name = f'{xy_comb["x"]}-{xy_comb["y"]}'
+                        else:
+                            self.country_name = f'{self.country_name}_{xy_comb["x"]}-{xy_comb["y"]}'
+
+                    except TileNotFoundError:
+                        pass
 
             # calc border country when input X/Y coordinates
             calc_border_countries = True
@@ -384,7 +395,7 @@ class OsmMaps:
             if not os.path.isfile(out_file) or self.force_processing is True:
                 log.info(
                     '+ Generate sea %s of %s for Coordinates: %s,%s', tile_count, len(self.tiles), tile["x"], tile["y"])
-                with open(os.path.join(fd_fct.COMMON_DIR, 'sea.osm')) as sea_file:
+                with open(os.path.join(fd_fct.COMMON_DIR, 'sea.osm'), encoding="utf-8") as sea_file:
                     sea_data = sea_file.read()
 
                     # Try to prevent getting outside of the +/-180 and +/- 90 degrees borders. Normally the +/- 0.1 are there to prevent white lines at tile borders
@@ -407,7 +418,7 @@ class OsmMaps:
                         sea_data = sea_data.replace(
                             '$TOP', f'{tile["top"]+0.1:.6f}')
 
-                    with open(out_file, 'w') as output_file:
+                    with open(out_file, mode='w', encoding="utf-8") as output_file:
                         output_file.write(sea_data)
             tile_count += 1
 
@@ -424,6 +435,8 @@ class OsmMaps:
         for tile in self.tiles:
 
             for country, val in self.border_countries.items():
+                if country not in tile['countries']:
+                    continue
                 log.info(
                     '+ Splitting tile %s of %s for Coordinates: %s,%s from map of %s', tile_count, len(self.tiles), tile["x"], tile["y"], country)
                 out_file = os.path.join(fd_fct.OUTPUT_DIR,
@@ -661,7 +674,7 @@ class OsmMaps:
                     cmd, f'! Error creating map files for tile: {tile["x"]},{tile["y"]}')
 
             # Create "tile present" file
-            with open(out_file + '.lzma.12', 'wb') as tile_present_file:
+            with open(out_file + '.lzma.12', mode='wb') as tile_present_file:
                 tile_present_file.close()
 
             tile_count += 1
@@ -704,7 +717,7 @@ class OsmMaps:
                 os.makedirs(outdir)
             try:
                 shutil.copy2(src, dst)
-            except Exception as exception:
+            except Exception as exception:  # pylint: disable=broad-except
                 log.error(
                     '! Error copying %s files for country %s: %s', extension, self.country_name, exception)
                 sys.exit()
@@ -716,7 +729,7 @@ class OsmMaps:
                     os.makedirs(outdir)
                 try:
                     shutil.copy2(src, dst)
-                except Exception as exception:
+                except Exception as exception:  # pylint: disable=broad-except
                     log.error(
                         '! Error copying version files for country %s: %s', self.country_name, exception)
                     sys.exit()

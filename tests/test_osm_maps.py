@@ -11,6 +11,7 @@ import unittest
 from common_python.osm_maps_functions import OsmMaps
 from common_python.osm_maps_functions import get_tile_by_one_xy_combination_from_jsons
 from common_python.osm_maps_functions import get_xy_coordinates_from_input
+from common_python.osm_maps_functions import TileNotFoundError
 from common_python.input import InputData
 from common_python import file_directory_functions as fd_fct
 from common_python import constants_functions as const_fct
@@ -128,6 +129,7 @@ class TestOsmMaps(unittest.TestCase):
         """
         helper method to process a country or json file and check the calculated border countries
         """
+
         if inp_mode == 'country':
             self.o_osm_maps.o_input_data.country = inp_val
         elif inp_mode == 'xy_coordinate':
@@ -142,6 +144,7 @@ class TestOsmMaps(unittest.TestCase):
         """
         use static json files in the repo to calculate relevant tiles
         """
+
         json_file_path = os.path.join(fd_fct.COMMON_DIR, 'json',
                                       const_fct.get_region_of_country(country), country + '.json')
         tiles = fd_fct.read_json_file(json_file_path)
@@ -152,6 +155,7 @@ class TestOsmMaps(unittest.TestCase):
         """
         use static json files in the repo to calculate relevant tiles
         """
+
         xy_tuple = get_xy_coordinates_from_input("133/88")
 
         self.assertEqual(xy_tuple, [{"x": 133, "y": 88}])
@@ -169,6 +173,7 @@ class TestOsmMaps(unittest.TestCase):
         """
         use static json files in the repo to calculate relevant tiles
         """
+
         xy_tuple = get_xy_coordinates_from_input("133/88,138/100")
         expected_result = [{"x": 133, "y": 88}, {"x": 138, "y": 100}]
 
@@ -178,6 +183,7 @@ class TestOsmMaps(unittest.TestCase):
         """
         use static json files in the repo to calculate relevant tile
         """
+
         tile = get_tile_by_one_xy_combination_from_jsons({"x": 133, "y": 88})
 
         expected_result = {
@@ -194,6 +200,26 @@ class TestOsmMaps(unittest.TestCase):
         }
 
         self.assertEqual(tile, expected_result)
+
+    def test_get_tile_via_xy_coordinate_error(self):
+        """
+        use static json files in the repo to calculate a not-existing tile. 
+        """
+
+        with self.assertRaises(TileNotFoundError):
+            get_tile_by_one_xy_combination_from_jsons({"x": 200, "y": 1})
+
+    def test_encoding_open_sea_osm(self):
+        """
+        use static json files in the repo to calculate relevant tile
+        """
+
+        with open(os.path.join(fd_fct.COMMON_DIR, 'sea.osm')) as sea_file:  # pylint: disable=unspecified-encoding
+            sea_data_no_encoding = sea_file.read()
+        with open(os.path.join(fd_fct.COMMON_DIR, 'sea.osm'), encoding="utf-8") as sea_file:
+            sea_data_utf8 = sea_file.read()
+
+        self.assertEqual(sea_data_no_encoding, sea_data_utf8)
 
 
 if __name__ == '__main__':
