@@ -89,20 +89,24 @@ def translate_country_input_to_geofabrik(county):
     return c_translated
 
 
-def translate_tags_to_keep(input_tags, operating_system=''):
+def translate_tags_to_keep(name_tags=False, sys_platform=''):
     """
     translates the given tags to format of the operating system.
     """
 
-    if operating_system == "Windows":
+    if sys_platform == "Windows":
         separator = ' ='
     else:
         separator = ', '
 
     tags_modif = []
 
-    for tag in input_tags:
-        value = input_tags[tag]
+    if not name_tags:
+        universal_tags = constants.TAGS_TO_KEEP_UNIVERSAL
+    else:
+        universal_tags = constants.NAME_TAGS_TO_KEEP_UNIVERSAL
+
+    for tag, value in universal_tags.items():
         if isinstance(value, list):
             for iteration, sing_val in enumerate(value):
                 if iteration == 0:
@@ -112,14 +116,14 @@ def translate_tags_to_keep(input_tags, operating_system=''):
         elif value:
             to_append = f'{tag}={value}'
         else:
-            if operating_system == "Windows":
+            if sys_platform == "Windows":
                 to_append = f'{tag}='
             else:
                 to_append = tag
 
         tags_modif.append(to_append)
 
-    if operating_system == "Windows":
+    if sys_platform == "Windows":
         tags_modif = ' '.join(tags_modif)
 
     return tags_modif
