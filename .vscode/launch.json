@@ -85,6 +85,42 @@
             ]
         },
         {
+            "name": "malta-poi",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceRoot}/wahoo_map_creator.py",
+            "console": "integratedTerminal",
+            "args": [
+                "cli",
+                "-co",
+                "malta",
+                "-tag",
+                "tag-wahoo-poi.xml",
+                "-fp",
+                "-c",
+                "-md",
+                "400"
+            ]
+        },
+        {
+            "name": "x/y: 134/88 (STG) -poi",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceRoot}/wahoo_map_creator.py",
+            "console": "integratedTerminal",
+            "args": [
+                "cli",
+                "-xy",
+                "134/88",
+                "-tag",
+                "tag-wahoo-poi.xml",
+                "-fp",
+                "-c",
+                "-md",
+                "400"
+            ]
+        },
+        {
             "name": "gui",
             "type": "python",
             "request": "launch",
