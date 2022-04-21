@@ -267,9 +267,10 @@ class OsmMaps:
                         '+ Filtering unwanted map objects out of map of %s', key)
                     cmd = [os.path.join(fd_fct.TOOLING_WIN_DIR, 'osmfilter')]
                     cmd.append(out_file_o5m)
-                    cmd.append('--keep="' + constants.FILTERED_TAGS_WIN + '"')
+                    cmd.append(
+                        '--keep="' + const_fct.translate_tags_to_keep(sys_platform=platform.system()) + '"')
                     cmd.append('--keep-tags=all type= layer= "' +
-                               constants.FILTERED_TAGS_WIN + '"')
+                               const_fct.translate_tags_to_keep(sys_platform=platform.system()) + '"')
                     cmd.append('-o=' + out_file_o5m_filtered)
 
                     run_subprocess_and_log_output(
@@ -278,9 +279,11 @@ class OsmMaps:
                     cmd = [os.path.join(fd_fct.TOOLING_WIN_DIR, 'osmfilter')]
                     cmd.append(out_file_o5m)
                     cmd.append(
-                        '--keep="' + constants.FILTERED_TAGS_WIN_NAMES + '"')
+                        '--keep="' + const_fct.translate_tags_to_keep(
+                            name_tags=True, sys_platform=platform.system()) + '"')
                     cmd.append('--keep-tags=all type= name= layer= "' +
-                               constants.FILTERED_TAGS_WIN_NAMES + '"')
+                               const_fct.translate_tags_to_keep(
+                                   name_tags=True, sys_platform=platform.system()) + '"')
                     cmd.append('-o=' + out_file_o5m_filtered_names)
 
                     run_subprocess_and_log_output(
@@ -304,7 +307,8 @@ class OsmMaps:
                     # https://docs.osmcode.org/osmium/latest/osmium-tags-filter.html
                     cmd = ['osmium', 'tags-filter', '--remove-tags']
                     cmd.append(val['map_file'])
-                    cmd.extend(constants.FILTERED_TAGS)
+                    cmd.extend(const_fct.translate_tags_to_keep(
+                        sys_platform=platform.system()))
                     cmd.extend(['-o', out_file_o5m_filtered])
                     cmd.append('--overwrite')
 
@@ -313,7 +317,8 @@ class OsmMaps:
 
                     cmd = ['osmium', 'tags-filter', '--remove-tags']
                     cmd.append(val['map_file'])
-                    cmd.extend(constants.FILTERED_TAGS_NAMES)
+                    cmd.extend(const_fct.translate_tags_to_keep(
+                        name_tags=True, sys_platform=platform.system()))
                     cmd.extend(['-o', out_file_o5m_filtered_names])
                     cmd.append('--overwrite')
 
