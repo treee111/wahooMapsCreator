@@ -7,6 +7,7 @@
   <pois>
         <osm-tag key="amenity" value="fuel" zoom-appear="14" /> 
         <osm-tag key="amenity" value="cafe" zoom-appear="14" /> 
+        <osm-tag key="amenity" value="drinking_water" zoom-appear="14" /> 
         <osm-tag key="shop" value="bakery" zoom-appear="14" /> 
 		<osm-tag key="shop" value="bicycle" zoom-appear="14" />
 		
