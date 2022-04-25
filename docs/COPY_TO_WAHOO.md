@@ -48,7 +48,6 @@ These tools can be helpful if you want to copy the files with a GUI and not via 
 According to [the Wahoo documentation](https://support.wahoofitness.com/hc/en-us/articles/115000127910-Connecting-ELEMNT-BOLT-ROAM-to-Desktop-or-Laptop-Computers) the device is able to connect via MTP. On windows you can navigate to the maps folder and drag new map files onto the folder called `maps\8`. The system will ask if you want to overwrite existing files. Don't forget to [delete temp-files and Clear Cache](#delete-temp-files-and-clear-cache). You can simply reboot to clear the cache.
 
 ## Copy device theme
-Device themes are described [here](TAGS_ON_MAP_AND_DEVICE.md#Device-Theme)
 In this repo, device themes are stored in folder `device_themes`. There are initial versions and adjusted versions. Both can be further changed to your requirements!
 
 The following table shows the file per device and the location where the device theme needs to be copied to.
@@ -59,6 +58,8 @@ The following table shows the file per device and the location where the device 
 | ROAM   | `mapsforge-roam.xml` | `maps/mapsforge-roam/mapsforge-roam.xml` |
 | BOLTv1 | `mapsforge-bolt.xml` | `maps/mapsforge-bolt/mapsforge-bolt.xml` |
 | ELEMNT | `mapsforge-bolt.xml` | `maps/mapsforge-bolt/mapsforge-bolt.xml` |
+
+Device themes are described [here](TAGS_ON_MAP_AND_DEVICE.md#Device-Theme)
 
 # Delete temp-files and Clear Cache
 - delete all files from \ELEMNT-BOLT\USB storage\maps\temp\

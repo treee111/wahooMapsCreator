@@ -48,7 +48,7 @@ There are two types of rendering methods: VTM and non-VTM rendering. This table 
 
 You can enable the VTM rendering method on Wahoo devices other than BOLTv2 by creating a empty file on the device with the name "cfg_BHomeActivity_VtmMaps" in the root folder.
 
-The theme is named `mapsforge-bolt.xml` or `mapsforge-roam.xml` for non-VTM rendering and `vtm-elemnt.xml` for VTM-rendering. It's content is more or less equal to the `tag-wahoo.xml` files.
+The device theme is named `mapsforge-bolt.xml` or `mapsforge-roam.xml` for non-VTM rendering and `vtm-elemnt.xml` for VTM-rendering. It's content is more or less equal to the `tag-wahoo.xml` files.
 
 ## Attribute "zoom-min"
 Each entry in the theme has a "zoom-min" attribute, which defines from which zoom level onwards the element will be shown. If zoom-min is set to 13, the OSM-tag will be displayed in zoom level 500m, 200m and 100m.
