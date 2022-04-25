@@ -9,6 +9,8 @@
   - [Copy the theme to the device](#copy-the-theme-to-the-device)
   - [Use the theme in cruiser](#use-the-theme-in-cruiser)
 - [Combination of tag-wahoo.xml and device-theme](#combination-of-tag-wahooxml-and-device-theme)
+- [Adjustments of the device themes](#adjustments-of-the-device-themes)
+  - [mapsforge-bolt.xml](#mapsforge-boltxml)
 
 
 # Zoom levels and scale
@@ -62,3 +64,15 @@ Because the theme kind of determines what you're gonna see, you want to preview 
 This zoom-appear in combination with the settings in the theme on the device (which can also be applied in cruiser) controls when certain elements are shown on our BOLT/ROAM etc (zoom-min).
 
 If a element is included in the map beginning from zoom level 10 (zoom-appear in tag-wahoo.xml) but on the device only displayed beginning with zoom level 12 (zoom-min in mapsforge-bolt.xml), the element is only displayed beginning zoom level 12.
+
+# Adjustments of the device themes
+This chapter documents, which changes are done to the files in `device_themes/adjusted` in comparision to the initial device themes.
+
+## mapsforge-bolt.xml
+- render highway-secondary when zoomed out
+  - from zoom 10 / 5km on (was zoom 13 / 500m before)
+  - to have a overview when zoomed "out"
+
+- render highway-road only when zoomed in
+  - from zoom 14 / 200m on (was zoom 13 / 500m before)
+  - to make it clearly arranged when zoomed "out" by zoom 500m
