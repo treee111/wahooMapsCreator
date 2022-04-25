@@ -10,7 +10,7 @@
     </p>
     <h1>Wahoo Maps Creator</h1>
 </div>
-A tool to create up-to-date maps for your Wahoo ELEMNT BOLT and BOLTv2, ELEMNT ROAM and Wahoo ELEMNT!
+A tool to create up-to-date maps for your Wahoo BOLTv1 and BOLTv2, ROAM and ELEMNT!
 
 It runs on Windows, macOS as well as on Linux!
 
