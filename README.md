@@ -10,7 +10,7 @@
     </p>
     <h1>Wahoo Maps Creator</h1>
 </div>
-A tool to create up-to-date maps for your Wahoo ELEMNT BOLT and BOLTv2, ELEMNT ROAM and Wahoo ELEMNT!
+A tool to create up-to-date maps for your Wahoo BOLTv1 and BOLTv2, ROAM and ELEMNT!
 
 It runs on Windows, macOS as well as on Linux!
 
@@ -32,11 +32,15 @@ Using Anaconda to setup a virtual Python environment is the fastest way to get w
 [:rocket: Quick Start Guide for Anaconda](docs/QUICKSTART_ANACONDA.md#download-and-install-required-programs)
 
 ## Run wahooMapsCreator
-via GUI
+Activate Anaconda environment
+```
+conda activate gdal-user
+```
+Run wahooMapsCreator via GUI
 ```
 python wahoo_map_creator.py gui
 ```
-via CLI
+Or run wahooMapsCreator via CLI
 ```
 python wahoo_map_creator.py cli -co malta
 ```
@@ -64,4 +68,10 @@ More details can be found here: [CONTRIBUTING](.github/CONTRIBUTING.md#contribut
 ## Thanks to
 [@Intyre](https://github.com/Intyre)/Hank for the initial version of the script
 
-@Higli and [@Ebe66](https://github.com/Ebe66)/ebo for the Windows- port
+[@Ebe66](https://github.com/Ebe66)/ebo for the Windows- port
+
+[@mweirauch](https://github.com/mweirauch) for bringing in new ideas, testing and using the tool
+
+[@zenziwerken](https://github.com/zenziwerken) for the work done for [POIs](https://github.com/zenziwerken/Bolt2-Mapsforge-Rendertheme)!
+
+[@macdet](https://github.com/macdet) for bringing in new thoughts, testing and making this a little more public
