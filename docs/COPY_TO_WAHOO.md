@@ -49,13 +49,16 @@ According to [the Wahoo documentation](https://support.wahoofitness.com/hc/en-us
 
 ## Copy device theme
 Device themes are described [here](TAGS_ON_MAP_AND_DEVICE.md#Device-Theme)
-A theme can be copied to your device like that:
-- ELEMNT/BOLT 
-  - copy "mapsforge-bolt.xml” of folder `common_resources/theme_adjusted` to `maps/mapsforge-bolt/mapsforge-bolt.xml` (just posted this in the google groups)
-- BOLTv2
-  - copy `assets/maps/vtm-elemnt/vtm-elemnt.xml` from the apk. Modify and copy the theme to `maps/vtm-elemnt/vtm-elemnt.xml`
-- ROAM
-  - copy `mapsforge-bolt.xml` of folder `common_resources/theme_adjusted` to `maps/mapsforge-roam/mapsforge-roam.xml`
+In this repo, device themes are stored in folder `device_themes`. There are initial versions and adjusted versions. Both can be further changed to your requirements!
+
+The following table shows the file per device and the location where the device theme needs to be copied to.
+
+| device | file                 | location                                 |
+| ------ | -------------------- | ---------------------------------------- |
+| BOLTv2 | `vtm-elemnt.xml`     | `maps/vtm-elemnt/vtm-elemnt.xml`         |
+| ROAM   | `mapsforge-roam.xml` | `maps/mapsforge-roam/mapsforge-roam.xml` |
+| BOLTv1 | `mapsforge-bolt.xml` | `maps/mapsforge-bolt/mapsforge-bolt.xml` |
+| ELEMNT | `mapsforge-bolt.xml` | `maps/mapsforge-bolt/mapsforge-bolt.xml` |
 
 # Delete temp-files and Clear Cache
 - delete all files from \ELEMNT-BOLT\USB storage\maps\temp\
