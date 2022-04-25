@@ -390,15 +390,15 @@ class OsmMaps:
                     run_subprocess_and_log_output(
                         cmd, '! Error in Osmium with country: {key}')
 
-                    cmd = ['osmium', 'tags-filter', '--remove-tags']
-                    cmd.append(val['map_file'])
-                    cmd.extend(translate_tags_to_keep(
-                        name_tags=True, sys_platform=platform.system()))
-                    cmd.extend(['-o', out_file_o5m_filtered_names])
-                    cmd.append('--overwrite')
+                    # cmd = ['osmium', 'tags-filter', '--remove-tags']
+                    # cmd.append(val['map_file'])
+                    # cmd.extend(translate_tags_to_keep(
+                    #     name_tags=True, sys_platform=platform.system()))
+                    # cmd.extend(['-o', out_file_o5m_filtered_names])
+                    # cmd.append('--overwrite')
 
-                    run_subprocess_and_log_output(
-                        cmd, '! Error in Osmium with country: {key}')
+                    # run_subprocess_and_log_output(
+                    #     cmd, '! Error in Osmium with country: {key}')
 
                 val['filtered_file'] = out_file_o5m_filtered
                 val['filtered_file_names'] = out_file_o5m_filtered_names
@@ -540,17 +540,17 @@ class OsmMaps:
                         run_subprocess_and_log_output(
                             cmd, f'! Error in Osmosis with country: {country}. Win/out_file')
 
-                        cmd = [self.osmconvert_path,
-                               '-v', '--hash-memory=2500']
-                        cmd.append('-b='+f'{tile["left"]}' + ',' + f'{tile["bottom"]}' +
-                                   ',' + f'{tile["right"]}' + ',' + f'{tile["top"]}')
-                        cmd.extend(
-                            ['--complete-ways', '--complete-multipolygons', '--complete-boundaries'])
-                        cmd.append(val['filtered_file_names'])
-                        cmd.append('-o='+out_file_names)
+                        # cmd = [self.osmconvert_path,
+                        #        '-v', '--hash-memory=2500']
+                        # cmd.append('-b='+f'{tile["left"]}' + ',' + f'{tile["bottom"]}' +
+                        #            ',' + f'{tile["right"]}' + ',' + f'{tile["top"]}')
+                        # cmd.extend(
+                        #     ['--complete-ways', '--complete-multipolygons', '--complete-boundaries'])
+                        # cmd.append(val['filtered_file_names'])
+                        # cmd.append('-o='+out_file_names)
 
-                        run_subprocess_and_log_output(
-                            cmd, '! Error in Osmosis with country: {country}. Win/out_file_names')
+                        # run_subprocess_and_log_output(
+                        #     cmd, '! Error in Osmosis with country: {country}. Win/out_file_names')
 
                     # Non-Windows
                     else:
@@ -565,16 +565,16 @@ class OsmMaps:
                         run_subprocess_and_log_output(
                             cmd, '! Error in Osmosis with country: {country}. macOS/out_file')
 
-                        cmd = ['osmium', 'extract']
-                        cmd.extend(
-                            ['-b', f'{tile["left"]},{tile["bottom"]},{tile["right"]},{tile["top"]}'])
-                        cmd.append(val['filtered_file_names'])
-                        cmd.extend(['-s', 'smart'])
-                        cmd.extend(['-o', out_file_names])
-                        cmd.extend(['--overwrite'])
+                        # cmd = ['osmium', 'extract']
+                        # cmd.extend(
+                        #     ['-b', f'{tile["left"]},{tile["bottom"]},{tile["right"]},{tile["top"]}'])
+                        # cmd.append(val['filtered_file_names'])
+                        # cmd.extend(['-s', 'smart'])
+                        # cmd.extend(['-o', out_file_names])
+                        # cmd.extend(['--overwrite'])
 
-                        run_subprocess_and_log_output(
-                            cmd, '! Error in Osmosis with country: {country}. macOS/out_file_names')
+                        # run_subprocess_and_log_output(
+                        #     cmd, '! Error in Osmosis with country: {country}. macOS/out_file_names')
 
                         log.info(val['filtered_file'])
 
@@ -644,8 +644,8 @@ class OsmMaps:
                         if process_border_countries or country in self.o_osm_data.border_countries:
                             cmd.append(os.path.join(
                                 out_tile_dir, f'split-{country}.osm.pbf'))
-                            cmd.append(os.path.join(
-                                out_tile_dir, f'split-{country}-names.osm.pbf'))
+                            # cmd.append(os.path.join(
+                            #     out_tile_dir, f'split-{country}-names.osm.pbf'))
 
                     for land in land_files:
                         cmd.append(land)
