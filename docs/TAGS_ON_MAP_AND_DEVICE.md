@@ -9,6 +9,8 @@
   - [Copy the theme to the device](#copy-the-theme-to-the-device)
   - [Use the theme in cruiser](#use-the-theme-in-cruiser)
 - [Combination of tag-wahoo.xml and device-theme](#combination-of-tag-wahooxml-and-device-theme)
+- [Adjustments of the device themes](#adjustments-of-the-device-themes)
+  - [mapsforge-bolt.xml](#mapsforge-boltxml)
 
 
 # Zoom levels and scale
@@ -34,9 +36,19 @@ E.g. roads, locations, ...
 Each entry has a "zoom-appear" attribute, which defines from which zoom level onwards the element will be stored in the map. If zoom-appear is set to 13, the OSM-tag will be stored in the 500m, 200m and 100m zoom levels and therefore could be rendered.
 
 # Device-Theme
-The theme defines, which OSM-tags are shown on the device or in cruiser where the theme should be used if you preview generated maps on your computer.
+The device theme defines, which OSM-tags are rendered on the device. In cruiser, you can also apply the device theme to preview generated maps on your computer.
 
-The theme is named `mapsforge-bolt.xml` or `mapsforge-roam.xml` and is content-wise equal to the `tag-wahoo.xml`
+There are two types of rendering methods: VTM and non-VTM rendering. This table shows the default rendering per device:
+| device | default rendering |
+| ------ | :---------------: |
+| BOLTv2 |        VTM        |
+| ROAM   |      non-VTM      |
+| BOLTv1 |      non-VTM      |
+| ELEMNT |      non-VTM      |
+
+You can enable the VTM rendering method on Wahoo devices other than BOLTv2 by creating a empty file on the device with the name "cfg_BHomeActivity_VtmMaps" in the root folder.
+
+The device theme is named `mapsforge-bolt.xml` or `mapsforge-roam.xml` for non-VTM rendering and `vtm-elemnt.xml` for VTM-rendering. It's content is more or less equal to the `tag-wahoo.xml` files.
 
 ## Attribute "zoom-min"
 Each entry in the theme has a "zoom-min" attribute, which defines from which zoom level onwards the element will be shown. If zoom-min is set to 13, the OSM-tag will be displayed in zoom level 500m, 200m and 100m.
@@ -52,3 +64,15 @@ Because the theme kind of determines what you're gonna see, you want to preview 
 This zoom-appear in combination with the settings in the theme on the device (which can also be applied in cruiser) controls when certain elements are shown on our BOLT/ROAM etc (zoom-min).
 
 If a element is included in the map beginning from zoom level 10 (zoom-appear in tag-wahoo.xml) but on the device only displayed beginning with zoom level 12 (zoom-min in mapsforge-bolt.xml), the element is only displayed beginning zoom level 12.
+
+# Adjustments of the device themes
+This chapter documents, which changes are done to the files in `device_themes/adjusted` in comparision to the initial device themes.
+
+## mapsforge-bolt.xml
+- render highway-secondary when zoomed out
+  - from zoom 10 / 5km on (was zoom 13 / 500m before)
+  - to have a overview when zoomed "out"
+
+- render highway-road only when zoomed in
+  - from zoom 14 / 200m on (was zoom 13 / 500m before)
+  - to make it clearly arranged when zoomed "out" by zoom 500m
