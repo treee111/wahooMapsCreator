@@ -12,8 +12,8 @@ import geojson
 from shapely.geometry import Polygon, shape
 
 # import custom python packages
-from common_python import file_directory_functions as fd_fct
-from common_python import constants
+from wahoo_mc import file_directory_functions as fd_fct
+from wahoo_mc import constants
 
 log = logging.getLogger('main-logger')
 

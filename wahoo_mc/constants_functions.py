@@ -9,8 +9,8 @@ import logging
 import os
 
 # import custom python packages
-from common_python import constants
-from common_python import file_directory_functions as fd_fct
+from wahoo_mc import constants
+from wahoo_mc import file_directory_functions as fd_fct
 
 log = logging.getLogger('main-logger')
 

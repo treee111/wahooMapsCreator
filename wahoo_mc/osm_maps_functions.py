@@ -15,12 +15,12 @@ import shutil
 import logging
 
 # import custom python packages
-from common_python import file_directory_functions as fd_fct
-from common_python import constants
-from common_python import constants_functions as const_fct
+from wahoo_mc import file_directory_functions as fd_fct
+from wahoo_mc import constants
+from wahoo_mc import constants_functions as const_fct
 
-from common_python.downloader import Downloader
-from common_python.geofabrik import Geofabrik
+from wahoo_mc.downloader import Downloader
+from wahoo_mc.geofabrik import Geofabrik
 
 log = logging.getLogger('main-logger')
 

@@ -13,7 +13,7 @@ import unittest
 
 
 # import custom python packages
-from common_python import file_directory_functions as fd_fct
+from wahoo_mc import file_directory_functions as fd_fct
 
 dirname_of_file = os.path.dirname(__file__)
 

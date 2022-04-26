@@ -13,7 +13,7 @@ import tkinter as tk
 from tkinter import ttk
 
 # import custom python packages
-from common_python import constants
+from wahoo_mc import constants
 
 
 def process_call_of_the_tool():
