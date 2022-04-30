@@ -1,5 +1,5 @@
 """
-can be directly called via `python -m common_python -h`
+can be directly called via `python -m wahoo_mc -h`
 """
 from wahoo_mc import wahoo_map_creator
 

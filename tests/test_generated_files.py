@@ -209,7 +209,7 @@ class TestGeneratedFiles(unittest.TestCase):
             cli_command = "python3"
 
         result = os.system(
-            f'{cli_command} wahoo_map_creator.py {country} -tag tag-wahoo.xml -fp -c -md 100')
+            f'{cli_command} -m wahoo_mc cli -co {country} -tag tag-wahoo.xml -fp -c -md 100')
 
         # check if run was successful
         self.assertEqual(result, 0)
