@@ -3,7 +3,7 @@
 	version="1" xmlns="http://opensciencemap.org/rendertheme"
 	xsi:schemaLocation="http://opensciencemap.org/rendertheme https://raw.githubusercontent.com/mapsforge/vtm/master/resources/rendertheme.xsd">
 
-	<stylemenu id="stylemenu" defaultvalue="BOLT_2" defaultlang="en">
+	<stylemenu id="stylemenu" defaultvalue="BOLT" defaultlang="en">
    
       <layer id="ROAM">
          <name lang="en" value="Roam" />
@@ -248,7 +248,7 @@
             <m e="way" k="highway" v="tertiary|tertiary_link|secondary_link|secondary" zoom-min="9">
                <pathText display="always" cat="bolt2-disabled" fill="#000000" k="name" font-family="sans_serif" font-style="bold" priority="2" size="16" stroke="#ffffff" stroke-width="2.0" zoom-min="14" />
                <pathText display="always" cat="bolt2-dark-disabled" fill="#000000" k="name" font-family="sans_serif" font-style="bold" priority="2" size="16" stroke="#ffffff" stroke-width="2.0" zoom-min="14" />
-               <line cat="bolt" outline="highway-bolt" stroke="#FFFFFF" width="3.5" />
+               <line cat="bolt" outline="highway-bolt" stroke="#000000" width="3.5" />
                <line cat="roam" outline="highway-roam" stroke="#FFFF00" width="3.5" />
                <line cat="bolt2" outline="bolt2-major-roads" stroke="#FFFF00" width="2.5" />
                <line cat="bolt2-dark" outline="bolt2-major-roads-dark" stroke="#FFFF00" width="2.5" />
@@ -256,7 +256,7 @@
             <m e="way" k="highway" v="primary_link|trunk_link|motorway_link|primary|trunk" zoom-min="9">
                <pathText display="always" cat="bolt2" fill="#000000" k="ref" font-family="sans_serif" font-style="bold" priority="2" size="16" stroke="#ffffff" stroke-width="4.0" />
                <pathText display="always" cat="bolt2-dark-disabled" fill="#000000" k="name" font-family="sans_serif" font-style="bold" priority="2" size="16" stroke="#ffffff" stroke-width="2.0" />
-               <line cat="bolt" outline="highway-bolt" stroke="#FFFFFF" width="3.5" />
+               <line cat="bolt" outline="highway-bolt" stroke="#000000" width="3.5" />
                <line cat="roam" outline="highway-roam" stroke="#FFFF00" width="3.5" />
                <line cat="bolt2" outline="bolt2-major-roads" stroke="#FFAA00" width="2.5" />
                <line cat="bolt2-dark" outline="bolt2-major-roads-dark" stroke="#FFAA00" width="2.5" />
