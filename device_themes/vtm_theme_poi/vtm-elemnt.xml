@@ -623,9 +623,6 @@
    
    <!-- region place captions -->
    <m k="place">
-      <m v="locality" zoom-min="13">
-         <caption style="bold" fill="#000000" k="name" priority="5" size="14" stroke="#ffffff" stroke-width="2.0" />
-      </m>
       <m v="suburb" zoom-max="14">
          <caption style="bold_italic" fill="#000000" k="name" priority="4" size="17" stroke="#ffffff" stroke-width="2.0" />
       </m>
