@@ -5,9 +5,11 @@ functions and object for constants
 
 # import official python packages
 import sys
+import os
 
 # import custom python packages
 from common_python import constants
+from common_python import file_directory_functions as fd_fct
 
 
 def get_region_of_country(county):
@@ -24,13 +26,13 @@ def get_region_of_country(county):
     if county in constants.europe:
         region = 'europe'
     if county in constants.northamerica:
-        region = 'north-america'
+        region = 'north_america'
     if county in constants.oceania:
         region = 'oceania'
     if county in constants.southamerica:
-        region = 'south-america'
+        region = 'south_america'
     if county in constants.unitedstates:
-        region = 'united-states'
+        region = 'united_states'
 
     return region
 
@@ -73,7 +75,7 @@ def get_geofabrik_region_of_country(input_county):
 
 def translate_country_input_to_geofabrik(county):
     """
-    translates the given country to the  geofabrik country
+    translates the given country to the geofabrik country
     the geofabrik country is sometimes written different
     """
     # search for user entered country name in translated (to geofabrik). if match continue with matched else continue with user entered country
@@ -84,3 +86,11 @@ def translate_country_input_to_geofabrik(county):
         c_translated = county
 
     return c_translated
+
+
+def get_path_to_static_tile_json(country):
+    """
+    return the path to the static .json file with the files for the given country
+    """
+    return os.path.join(fd_fct.COMMON_DIR, 'json',
+                        get_region_of_country(country), country + '.json')

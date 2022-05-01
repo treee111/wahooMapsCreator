@@ -100,7 +100,7 @@ northamerica = ['anguilla', 'antigua_and_barbuda', 'bahamas', 'barbados', 'beliz
                 'bermuda', 'british_virgin_islands', 'canada', 'cayman_islands', 'costa_rica',
                 'cuba', 'dominica', 'dominican_republic', 'el_salvador', 'greenland', 'grenada',
                 'guadeloupe', 'guatemala', 'haiti', 'honduras', 'jamaica', 'martinique',
-                'mexico', 'montserrat', 'nicaragua', 'panama', 'saint-barth‚lemy', 'saint-martin',
+                'mexico', 'montserrat', 'nicaragua', 'panama', 'saint-barthélemy', 'saint-martin',
                 'saint_kitts_and_nevis', 'saint_lucia', 'saint_vincent_and_the_grenadines',
                 'sint_maarten', 'turks_and_caicos_islands', 'virgin_islands_u.s.']
 
@@ -110,11 +110,11 @@ oceania = ['australia', 'cook_islands', 'fiji', 'french_polynesia', 'kiribati',
            'pitcairn_islands', 'samoa', 'solomon_islands', 'tokelau', 'tonga', 'tuvalu',
            'united_states_minor_outlying_islands', 'vanuatu', 'wallis_and_futuna']
 
-southamerica = ['australia', 'cook_islands', 'fiji', 'french_polynesia', 'kiribati',
-                'marshall_islands', 'micronesia', 'nauru', 'new_caledonia', 'new_zealand', 'niue',
-                'norfolk_island', 'northern_mariana_islands', 'palau', 'papua_new_guinea',
-                'pitcairn_islands', 'samoa', 'solomon_islands', 'tokelau', 'tonga', 'tuvalu',
-                'united_states_minor_outlying_islands', 'vanuatu', 'wallis_and_futuna']
+southamerica = ['argentina', 'aruba', 'bolivia', 'bonaire_saint_eustatius_and_saba', 'brazil',
+                'chile', 'clipperton_island', 'colombia', 'curacao', 'ecuador',
+                'falkland_islands', 'french_guiana', 'guyana', 'paraguay', 'peru',
+                'saint_pierre_and_miquelon', 'suriname', 'trinidad_and_tobago',
+                'uruguay', 'venezuela']
 
 unitedstates = ['alabama', 'alaska', 'american_samoa', 'arizona', 'arkansas',
                 'california', 'colorado', 'commonwealth_of_the_northern_mariana_islands', 'connecticut',
