@@ -60,6 +60,8 @@ def get_geofabrik_region_of_country(input_county):
         region = 'europe'
     if c_translated in constants.northamerica_geofabrik:
         region = 'north-america'
+    if c_translated in constants.northamerica_us_geofabrik:
+        region = 'north-america/us'
     if c_translated in constants.southamerica_geofabrik:
         region = 'south-america'
     if c_translated in constants.germany_subregions_geofabrik:

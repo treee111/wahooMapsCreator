@@ -168,6 +168,18 @@ europe_geofabrik = ['albania', 'andorra', 'austria', 'azores', 'belarus', 'belgi
 northamerica_geofabrik = ['canada', 'greenland', 'mexico', 'us midwest', 'us northeast',
                           'us pacific', 'us south', 'us west']
 
+northamerica_us_geofabrik = ['alabama', 'alaska', 'arizona', 'arkansas', 'california', 'colorado',
+                             'connecticut', 'delaware', 'district-of-columbia', 'florida',
+                             'georgia', 'hawaii', 'idaho', 'illinois', 'indiana', 'iowa', 'kansas',
+                             'kentucky', 'louisiana', 'maine', 'maryland', 'massachusetts',
+                             'michigan', 'minnesota', 'mississippi', 'missouri', 'montana',
+                             'nebraska', 'nevada', 'new-hampshire', 'new-jersey', 'new-mexico',
+                             'new-york', 'north-carolina', 'north-dakota', 'ohio', 'oklahoma'
+                             'oregon', 'pennsylvania', 'puerto-rico', 'rhode-island',
+                             'south-carolina', 'south-dakota', 'tennessee', 'texas',
+                             'us-virgin-islands', 'utah', 'vermont', 'virginia', 'washington',
+                             'west-virginia', 'wisconsin', 'wyoming']
+
 southamerica_geofabrik = ['argentina', 'bolivia', 'brazil', 'chile', 'colombia', 'ecuador',
                           'paraguay', 'peru', 'suriname', 'uruguay', 'venezuela']
 
