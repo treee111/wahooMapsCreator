@@ -57,6 +57,18 @@ def download_osm_pbf_file(country):
     """
     print(f'+ Trying to download missing map of {country}.')
     # get .osm.pbf region of country
+    url = build_url_for_country_osm_pbf_download(country)
+    # download URL to file
+    map_file_path = os.path.join(
+        fd_fct.MAPS_DIR, f'{country}' + '-latest.osm.pbf')
+    download_file(map_file_path, url, False)
+    return map_file_path
+
+
+def build_url_for_country_osm_pbf_download(country):
+    """
+    build the geofabrik download url to a countries' OSM file
+    """
     transl_c = const_fct.translate_country_input_to_geofabrik(country)
     region = const_fct.get_geofabrik_region_of_country(country)
     if region != 'no':
@@ -64,11 +76,7 @@ def download_osm_pbf_file(country):
             '/' + transl_c + '-latest.osm.pbf'
     else:
         url = 'https://download.geofabrik.de/' + transl_c + '-latest.osm.pbf'
-    # download URL to file
-    map_file_path = os.path.join(
-        fd_fct.MAPS_DIR, f'{transl_c}' + '-latest.osm.pbf')
-    download_file(map_file_path, url, False)
-    return map_file_path
+    return url
 
 
 class Downloader:

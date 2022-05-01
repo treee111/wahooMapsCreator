@@ -56,7 +56,8 @@ Translate_Country = {
     'virgin_islands_u.s.':              'central-america',
     'western_sahara':                   'morocco',
     'qatar':                            'gcc-states',
-    'åland':                            'finland'
+    'åland':                            'finland',
+    'new_mexico':                       'new-mexico'
 }
 
 continents = ['europe', 'unitedstates', 'north-america', 'south-america', 'asia', 'oceania',
