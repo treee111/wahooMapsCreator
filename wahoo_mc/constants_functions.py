@@ -111,19 +111,7 @@ def translate_tags_to_keep(name_tags=False, sys_platform=''):
         universal_tags = constants.NAME_TAGS_TO_KEEP_UNIVERSAL
 
     for tag, value in universal_tags.items():
-        if isinstance(value, list):
-            for iteration, sing_val in enumerate(value):
-                if iteration == 0:
-                    to_append = f'{tag}={sing_val}'
-                else:
-                    to_append = f'{to_append}{separator}{sing_val}'
-        elif value:
-            to_append = f'{tag}={value}'
-        else:
-            if sys_platform == "Windows":
-                to_append = f'{tag}='
-            else:
-                to_append = tag
+        to_append = transl_tag_value(sys_platform, separator, tag, value)
 
         tags_modif.append(to_append)
 
@@ -139,3 +127,24 @@ def get_path_to_static_tile_json(country):
     """
     return os.path.join(fd_fct.COMMON_DIR, 'json',
                         get_region_of_country(country), country + '.json')
+
+
+def transl_tag_value(sys_platform, separator, tag, value):
+    """
+    translates one tag with value(s) to a "common" format
+    """
+    if isinstance(value, list):
+        for iteration, sing_val in enumerate(value):
+            if iteration == 0:
+                to_append = f'{tag}={sing_val}'
+            else:
+                to_append = f'{to_append}{separator}{sing_val}'
+    elif value:
+        to_append = f'{tag}={value}'
+    else:
+        if sys_platform == "Windows":
+            to_append = f'{tag}='
+        else:
+            to_append = tag
+
+    return to_append
