@@ -91,7 +91,6 @@ def process_call_of_the_tool():
         # Prevents the initialisation of the graphical GUI on WSL.
         if 'microsoft' in uname().release:
             sys.exit("GUI can not be startet because no graphical interface is available. Start with 'wahoo_maps_creator.py cli -h' or 'wahoo_maps_creator.py -h' to see command line options.")
-            return
 
         o_input_data = GuiInput().start_gui()
         return o_input_data
@@ -134,7 +133,7 @@ def create_checkbox(self, default_value, description, row):
     return bool_var
 
 
-class InputData():
+class InputData():  # pylint: disable=too-many-instance-attributes,too-few-public-methods
     """
     object with all parameters to process maps and default values
     """
@@ -280,7 +279,7 @@ class GuiInput(tk.Tk):
             tab1.first.en_max_days_old.configure(state=tk.NORMAL)
 
 
-class ComboboxesEntryField(tk.Frame):
+class ComboboxesEntryField(tk.Frame):  # pylint: disable=too-many-instance-attributes
     """
     Comboboxes and Entry-Field for max days
     """

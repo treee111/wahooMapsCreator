@@ -180,7 +180,6 @@ class OsmMaps:
         else:
             self.border_countries[self.country_name] = {}
 
-
     def find_tiles_for_xy_combinations(self, xy_coordinates):
         """
         loop through x/y combinations and find each tile in the json files
@@ -521,7 +520,7 @@ class OsmMaps:
         log.info('-' * 80)
         log.info('# Merge splitted tiles with land an sea')
         tile_count = 1
-        for tile in self.tiles:
+        for tile in self.tiles:  # pylint: disable=too-many-nested-blocks
             log.info(
                 '+ Merging tiles for tile %s of %s for Coordinates: %s,%s', tile_count, len(self.tiles), tile["x"], tile["y"])
 
