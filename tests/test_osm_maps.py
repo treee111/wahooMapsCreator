@@ -209,7 +209,7 @@ class TestStaticJsons(unittest.TestCase):
 
     def test_get_tile_via_xy_coordinate_error(self):
         """
-        use static json files in the repo to calculate a not-existing tile. 
+        use static json files in the repo to calculate a not-existing tile.
         """
 
         with self.assertRaises(TileNotFoundError):

@@ -19,7 +19,9 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install pylint
+        pip install mock
+        pip install requests
     - name: Analysing the code with pylint
       run: |
-        pylint -j 0 ./wahoo_mc ./tests --fail-under=9.87
+        pylint -j 0 ./wahoo_mc ./tests
       continue-on-error: false

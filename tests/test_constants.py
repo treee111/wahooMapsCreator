@@ -7,7 +7,6 @@ from mock import patch
 
 from wahoo_mc.constants_functions import translate_country_input_to_geofabrik
 from wahoo_mc.constants_functions import translate_tags_to_keep
-import wahoo_mc.constants as const
 
 
 class TestTranslateCountries(unittest.TestCase):

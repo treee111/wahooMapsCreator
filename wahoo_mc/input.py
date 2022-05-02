@@ -91,26 +91,25 @@ def process_call_of_the_tool():
         # Prevents the initialisation of the graphical GUI on WSL.
         if 'microsoft' in uname().release:
             sys.exit("GUI can not be startet because no graphical interface is available. Start with 'wahoo_maps_creator.py cli -h' or 'wahoo_maps_creator.py -h' to see command line options.")
-            return
 
         o_input_data = GuiInput().start_gui()
+        return o_input_data
 
     # cli processing
-    else:
-        o_input_data = InputData()
-        o_input_data.country = args.country
-        o_input_data.xy_coordinates = args.xy_coordinates
-        o_input_data.max_days_old = args.maxdays
+    o_input_data = InputData()
+    o_input_data.country = args.country
+    o_input_data.xy_coordinates = args.xy_coordinates
+    o_input_data.max_days_old = args.maxdays
 
-        o_input_data.process_border_countries = args.bordercountries
-        o_input_data.force_download = args.forcedownload
-        o_input_data.force_processing = args.forceprocessing
-        o_input_data.geofabrik_tiles = args.geofabrik_tiles
+    o_input_data.process_border_countries = args.bordercountries
+    o_input_data.force_download = args.forcedownload
+    o_input_data.force_processing = args.forceprocessing
+    o_input_data.geofabrik_tiles = args.geofabrik_tiles
 
-        o_input_data.tag_wahoo_xml = args.tag_wahoo_xml
-        o_input_data.only_merge = args.only_merge
-        o_input_data.keep_map_folders = args.keep_map_folders
-        o_input_data.save_cruiser = args.cruiser
+    o_input_data.tag_wahoo_xml = args.tag_wahoo_xml
+    o_input_data.only_merge = args.only_merge
+    o_input_data.keep_map_folders = args.keep_map_folders
+    o_input_data.save_cruiser = args.cruiser
 
     return o_input_data
 
@@ -134,7 +133,7 @@ def create_checkbox(self, default_value, description, row):
     return bool_var
 
 
-class InputData():
+class InputData():  # pylint: disable=too-many-instance-attributes,too-few-public-methods
     """
     object with all parameters to process maps and default values
     """
@@ -280,7 +279,7 @@ class GuiInput(tk.Tk):
             tab1.first.en_max_days_old.configure(state=tk.NORMAL)
 
 
-class ComboboxesEntryField(tk.Frame):
+class ComboboxesEntryField(tk.Frame):  # pylint: disable=too-many-instance-attributes
     """
     Comboboxes and Entry-Field for max days
     """

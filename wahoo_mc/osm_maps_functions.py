@@ -16,7 +16,6 @@ import logging
 
 # import custom python packages
 from wahoo_mc import file_directory_functions as fd_fct
-from wahoo_mc import constants
 from wahoo_mc import constants_functions as const_fct
 
 from wahoo_mc.downloader import Downloader
@@ -98,10 +97,11 @@ class OsmMaps:
     osmosis_win_file_path = os.path.join(
         fd_fct.TOOLING_WIN_DIR, 'Osmosis', 'bin', 'osmosis.bat')
 
+    # Number of workers for the Osmosis read binary fast function
+    workers = '1'
+
     def __init__(self, o_input_data):
         self.force_processing = ''
-        # Number of workers for the Osmosis read binary fast function
-        self.workers = '1'
 
         self.tiles = []
         self.border_countries = {}
@@ -122,9 +122,8 @@ class OsmMaps:
         """
         Process input: get relevant tiles and if border countries should be calculated
         The three primary inputs are giving by a separate value each and have separate processing:
-        1. .json file with tiles
-        2. country name
-        3. x/y combinations
+        1. country name
+        2. x/y combinations
         """
 
         log.info('-' * 80)
@@ -169,20 +168,7 @@ class OsmMaps:
                     self.o_input_data.xy_coordinates)
 
                 # loop through x/y combinations and find each tile in the json files
-                for xy_comb in xy_coordinates:
-                    try:
-                        self.tiles.append(get_tile_by_one_xy_combination_from_jsons(
-                            xy_comb))
-
-                        # country name is the X/Y combinations separated by minus
-                        # >1 x/y combinations are separated by underscore
-                        if not self.country_name:
-                            self.country_name = f'{xy_comb["x"]}-{xy_comb["y"]}'
-                        else:
-                            self.country_name = f'{self.country_name}_{xy_comb["x"]}-{xy_comb["y"]}'
-
-                    except TileNotFoundError:
-                        pass
+                self.find_tiles_for_xy_combinations(xy_coordinates)
 
             # calc border country when input X/Y coordinates
             calc_border_countries = True
@@ -193,6 +179,25 @@ class OsmMaps:
             self.calc_border_countries(calc_border_countries)
         else:
             self.border_countries[self.country_name] = {}
+
+    def find_tiles_for_xy_combinations(self, xy_coordinates):
+        """
+        loop through x/y combinations and find each tile in the json files
+        """
+        for xy_comb in xy_coordinates:
+            try:
+                self.tiles.append(get_tile_by_one_xy_combination_from_jsons(
+                    xy_comb))
+
+                # country name is the X/Y combinations separated by minus
+                # >1 x/y combinations are separated by underscore
+                if not self.country_name:
+                    self.country_name = f'{xy_comb["x"]}-{xy_comb["y"]}'
+                else:
+                    self.country_name = f'{self.country_name}_{xy_comb["x"]}-{xy_comb["y"]}'
+
+            except TileNotFoundError:
+                pass
 
     def check_and_download_files(self):
         """
@@ -515,7 +520,7 @@ class OsmMaps:
         log.info('-' * 80)
         log.info('# Merge splitted tiles with land an sea')
         tile_count = 1
-        for tile in self.tiles:
+        for tile in self.tiles:  # pylint: disable=too-many-nested-blocks
             log.info(
                 '+ Merging tiles for tile %s of %s for Coordinates: %s,%s', tile_count, len(self.tiles), tile["x"], tile["y"])
 
@@ -718,26 +723,12 @@ class OsmMaps:
                 f'{fd_fct.OUTPUT_DIR}', folder_name, f'{tile["x"]}', f'{tile["y"]}') + extension
             outdir = os.path.join(
                 f'{fd_fct.OUTPUT_DIR}', folder_name, f'{tile["x"]}')
-            if not os.path.isdir(outdir):
-                os.makedirs(outdir)
-            try:
-                shutil.copy2(src, dst)
-            except Exception as exception:  # pylint: disable=broad-except
-                log.error(
-                    '! Error copying %s files for country %s: %s', extension, self.country_name, exception)
-                sys.exit()
+            self.copy_to_dst(extension, src, dst, outdir)
 
             if extension == '.map.lzma':
                 src = src + '.12'
                 dst = dst + '.12'
-                if not os.path.isdir(outdir):
-                    os.makedirs(outdir)
-                try:
-                    shutil.copy2(src, dst)
-                except Exception as exception:  # pylint: disable=broad-except
-                    log.error(
-                        '! Error copying version files for country %s: %s', self.country_name, exception)
-                    sys.exit()
+                self.copy_to_dst(extension, src, dst, outdir)
 
         # Windows
         if platform.system() == "Windows":
@@ -767,3 +758,19 @@ class OsmMaps:
                     '! Error, could not delete folder %s', os.path.join(fd_fct.OUTPUT_DIR, folder_name))
 
         log.info('+ Zip %s files: OK', extension)
+
+    def copy_to_dst(self, extension, src, dst, outdir):
+        """
+        Zip .map or .map.lzma files
+        postfix: '.map.lzma' for Wahoo tiles
+        postfix: '.map' for Cruiser map files
+        """
+        # first create the to-directory if not already there
+        os.makedirs(outdir, exist_ok=True)
+
+        try:
+            shutil.copy2(src, dst)
+        except Exception as exception:  # pylint: disable=broad-except
+            log.error(
+                '! Error copying %s files for country %s: %s', extension, self.country_name, exception)
+            sys.exit()

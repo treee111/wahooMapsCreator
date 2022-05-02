@@ -18,50 +18,52 @@ from wahoo_mc.osm_maps_functions import OsmMaps
 
 
 def run():
+    """
+    main program run
+    """
     # create logger
     logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.INFO)
-    logger = logging.getLogger('main-logger')
 
     # handle GUI and CLI processing via one function and different cli-calls
-    oInputData = process_call_of_the_tool()
+    o_input_data = process_call_of_the_tool()
 
     # Is there something to do?
-    oInputData.is_required_input_given_or_exit(issue_message=True)
+    o_input_data.is_required_input_given_or_exit(issue_message=True)
 
     initialize_work_directories()
 
-    oOSMmaps = OsmMaps(oInputData)
+    o_osm_maps = OsmMaps(o_input_data)
 
     # Read json file
     # Check for expired land polygons file and download, if too old
     # Check for expired .osm.pbf files and download, if too old
-    oOSMmaps.process_input(oInputData.process_border_countries)
-    oOSMmaps.check_and_download_files()
+    o_osm_maps.process_input(o_input_data.process_border_countries)
+    o_osm_maps.check_and_download_files()
 
-    if oInputData.only_merge is False:
+    if o_input_data.only_merge is False:
         # Filter tags from country osm.pbf files'
-        oOSMmaps.filter_tags_from_country_osm_pbf_files()
+        o_osm_maps.filter_tags_from_country_osm_pbf_files()
 
         # Generate land
-        oOSMmaps.generate_land()
+        o_osm_maps.generate_land()
 
         # Generate sea
-        oOSMmaps.generate_sea()
+        o_osm_maps.generate_sea()
 
         # Split filtered country files to tiles
-        oOSMmaps.split_filtered_country_files_to_tiles()
+        o_osm_maps.split_filtered_country_files_to_tiles()
 
     # Merge splitted tiles with land an sea
-    oOSMmaps.merge_splitted_tiles_with_land_and_sea(
-        oInputData.process_border_countries)
+    o_osm_maps.merge_splitted_tiles_with_land_and_sea(
+        o_input_data.process_border_countries)
 
     # Creating .map files
-    oOSMmaps.create_map_files(oInputData.save_cruiser,
-                              oInputData.tag_wahoo_xml)
+    o_osm_maps.create_map_files(o_input_data.save_cruiser,
+                                o_input_data.tag_wahoo_xml)
 
     # Zip .map.lzma files
-    oOSMmaps.make_and_zip_files(oInputData.keep_map_folders, '.map.lzma')
+    o_osm_maps.make_and_zip_files(o_input_data.keep_map_folders, '.map.lzma')
 
     # Make Cruiser map files zip file
-    if oInputData.save_cruiser is True:
-        oOSMmaps.make_and_zip_files(oInputData.keep_map_folders, '.map')
+    if o_input_data.save_cruiser is True:
+        o_osm_maps.make_and_zip_files(o_input_data.keep_map_folders, '.map')
