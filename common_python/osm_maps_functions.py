@@ -147,8 +147,8 @@ class OsmMaps:
 
             # option 1b: use static json files in the repo to calculate relevant tiles
             else:
-                json_file_path = os.path.join(fd_fct.COMMON_DIR, 'json',
-                                              const_fct.get_region_of_country(self.o_input_data.country), self.o_input_data.country + '.json')
+                json_file_path = const_fct.get_path_to_static_tile_json(
+                    self.o_input_data.country)
                 self.tiles = fd_fct.read_json_file(json_file_path)
 
             # country name is the input argument

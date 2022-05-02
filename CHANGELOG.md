@@ -4,10 +4,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-A list of unreleased changes can be found [here](https://github.com/treee111/wahooMapsCreator/compare/v1.1.0...HEAD).
+A list of unreleased changes can be found [here](https://github.com/treee111/wahooMapsCreator/compare/v1.1.1...HEAD).
+
+<a name="1.1.1"></a>
+## [1.1.1] - 2022-05-02
+### Bug Fixes
+- country & regions constants and mapping ([#113](https://github.com/treee111/wahooMapsCreator/issues/113)) [`e45d89c`](https://github.com/treee111/wahooMapsCreator/commit/e45d89c204e915412fb6c7104b12e3ae275acf69)
+
 
 <a name="1.1.0"></a>
-## [1.1.0] - 2022-02-24
+## [1.1.0] - 2022-03-18
 ### Features
 - **CI/CD:** create OS-specific .zip files during build for release .zip files, separate cruiser.zip Asset and delete unused files ([#90](https://github.com/treee111/wahooMapsCreator/issues/90)) [`c3cd530`](https://github.com/treee111/wahooMapsCreator/commit/c3cd530767931d7246cc616573cf646923846e82)
 - **install:** move work-directories `common_download` and `output` to level of wahooMapsCreator to be release independent ([#93](https://github.com/treee111/wahooMapsCreator/issues/93)) [`c33fefe`](https://github.com/treee111/wahooMapsCreator/commit/c33fefedb93a4b17d76485e37110ec3fa3106ea6)
@@ -213,6 +219,7 @@ wahooMapsCreator can now be used much quicker and easier!
     - Windows:    `tooling_windows/Windows-Wahoo-Map-Creator-Osmosis/wahoo-map-creator-osmosis.py`
 
 
+[1.1.1]: https://github.com/treee111/wahooMapsCreator/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/treee111/wahooMapsCreator/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.12.0...v1.0.0
 [0.12.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.11.0...v0.12.0

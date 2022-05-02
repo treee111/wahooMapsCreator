@@ -189,6 +189,19 @@
                 "134/88,134/89,134/90,134/91,135/88,135/89,135/90,135/91,136/90,136/91",
                 "-om"
             ]
-        }
+        },
+        {
+            "name": "mexico with bc",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceRoot}/wahoo_map_creator.py",
+            "console": "integratedTerminal",
+            "args": [
+                "mexico",
+                "-md",
+                "100",
+                "-bc"
+            ]
+        },
     ]
 }
