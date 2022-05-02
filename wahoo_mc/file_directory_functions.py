@@ -39,7 +39,7 @@ COMMON_DL_DIR = os.path.join(PAR_DIR, 'wahooMapsCreator_download')
 OUTPUT_DIR = os.path.join(PAR_DIR, 'wahooMapsCreator_output')
 MAPS_DIR = os.path.join(COMMON_DL_DIR, 'maps')
 TOOLING_DIR = os.path.join(ROOT_DIR, 'tooling')
-TOOLING_WIN_DIR = os.path.join(ROOT_DIR, 'tooling_windows')
+TOOLING_WIN_DIR = os.path.join(WAHOO_MC_DIR, 'tooling_win')
 LAND_POLYGONS_PATH = os.path.join(
     COMMON_DL_DIR, 'land-polygons-split-4326', 'land_polygons.shp')
 GEOFABRIK_PATH = os.path.join(COMMON_DL_DIR, 'geofabrik.json')
