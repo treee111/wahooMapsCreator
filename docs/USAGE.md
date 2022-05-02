@@ -12,7 +12,7 @@ In a next step you can run it for your own country.
 ## GUI (Graphical User Interface)
 
 From the `root` folder of wahooMapsCreator, run:
-  - `python wahoo_map_creator.py gui`
+  - `python -m wahoo_mc gui`
 
 Set your arguments as required via the window:
 
@@ -21,34 +21,34 @@ Set your arguments as required via the window:
 ## CLI (Command Line Interface)
 
 From the `root` folder of wahooMapsCreator, run:
-- `python wahoo_map_creator.py cli -co <country_name>`
+- `python -m wahoo_mc cli -co <country_name>`
 
 Examples:
-- for Malta: `python wahoo_map_creator.py cli -co malta`
-- for Ireland: `python wahoo_map_creator.py cli -co ireland`
+- for Malta: `python -m wahoo_mc cli -co malta`
+- for Ireland: `python -m wahoo_mc cli -co ireland`
 
 ## Advanced CLI-Usage
 The script supports many arguments via command line.
 For a list of all supported arguments, run:
-- `python wahoo_map_creator.py cli -h`
+- `python -m wahoo_mc cli -h`
 
 ### Main arguments
 **Create maps for a country**
-- `python wahoo_map_creator.py cli -co <country>`
+- `python -m wahoo_mc cli -co <country>`
 
 **Create maps for X/Y coordinates**
 
 In particular for testing adjustments in configuration-files or coding it is helpful to create maps for only one tile or a handful of tiles!
 
 To create maps for only one tile and not a whole country, one can use the X/Y coordinates of that tile. X/Y coordinates can be retrieved from this in zoom-level 8: [link](http://tools.geofabrik.de/map/#8/50.3079/8.8026&type=Geofabrik_Standard&grid=1). 
-- `python wahoo_map_creator.py cli -xy <xy_coordinate,xy_coordinate>`
+- `python -m wahoo_mc cli -xy <xy_coordinate,xy_coordinate>`
 
 ### Examples
 - for Malta, download new maps if existing maps are older than 100 days and process files even if files exist
-  - `python wahoo_map_creator.py cli -co malta -md 100 -fp`
+  - `python -m wahoo_mc cli -co malta -md 100 -fp`
 - for Germany, download and process whole tiles which involves other countries than the given
-  - `python wahoo_map_creator.py cli -co germany -bc`
+  - `python -m wahoo_mc cli -co germany -bc`
 - to create maps for only one tile
-  - `python wahoo_map_creator.py cli -xy 134/88`
+  - `python -m wahoo_mc cli -xy 134/88`
 - for multiple tiles
-  - `python wahoo_map_creator.py cli -xy 134/88,133/88`
+  - `python -m wahoo_mc cli -xy 134/88,133/88`

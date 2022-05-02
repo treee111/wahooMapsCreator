@@ -20,22 +20,22 @@ cd ../..
 cd dist/${FOLDER_NAME_MAC}
 
 # create empty sub-folders
-mkdir -p ./common_python
-mkdir -p ./common_resources
+mkdir -p ./wahoo_mc
+mkdir -p ./wahoo_mc/resources
 mkdir -p ./conda_env
 mkdir -p ./tooling
 mkdir -p ./docs
 
 # copy files into dist-folder
-cp -a ../../common_python/*.py ./common_python/
-cp -a ../../common_resources/*.xml ./common_resources/
-cp -a ../../common_resources/*.osm ../../common_resources/*.py ./common_resources/
-cp -a ../../common_resources/json/ ./common_resources/json
-cp -a ../../common_resources/tag_wahoo_adjusted/ ./common_resources/tag_wahoo_adjusted
-cp -a ../../common_resources/tag_wahoo_initial/ ./common_resources/tag_wahoo_initial
+cp -a ../../wahoo_mc/*.py ./wahoo_mc/
+cp -a ../../wahoo_mc/resources/*.xml ./wahoo_mc/resources/
+cp -a ../../wahoo_mc/resources/*.osm ../../wahoo_mc/resources/*.py ./wahoo_mc/resources/
+cp -a ../../wahoo_mc/resources/json/ ./wahoo_mc/resources/json
+cp -a ../../wahoo_mc/resources/tag_wahoo_adjusted/ ./wahoo_mc/resources/tag_wahoo_adjusted
+cp -a ../../wahoo_mc/resources/tag_wahoo_initial/ ./wahoo_mc/resources/tag_wahoo_initial
 
 cp -a ../../docs/*.md ./docs/
-cp -a ../../wahoo_map_creator.py ../../CHANGELOG.md ../../README.md ./
+cp -a ../../CHANGELOG.md ../../README.md ./
 
 # file for virtual environments / legacy pip install
 cp -a ../../conda_env/gdal-user.yml ./conda_env/
@@ -46,7 +46,7 @@ cd ..
 cp -R ${FOLDER_NAME_MAC}/* ${FOLDER_NAME_WIN}
 
 # add Win specific stuff
-cp -a ../tooling_windows ./${FOLDER_NAME_WIN}/tooling_windows
+cp -a ../tooling_win ./${FOLDER_NAME_WIN}/tooling_win
 
 # zip content into .zip file - by cd'ing without including root folder
 cd ${FOLDER_NAME_MAC}

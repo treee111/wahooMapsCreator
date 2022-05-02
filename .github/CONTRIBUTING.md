@@ -5,6 +5,8 @@
 - [Git Guidelines](#git-guidelines)
   - [No Merge Commits](#no-merge-commits)
   - [Pull Requests](#pull-requests)
+    - [Pull Request Title](#pull-request-title)
+    - [Squash Commit Summary](#squash-commit-summary)
 - [Release](#release)
   - [Automatic CHANGELOG creation](#automatic-changelog-creation)
 - [Structure of the repository](#structure-of-the-repository)
@@ -79,7 +81,7 @@ The folders in the repo have the following purposes:
 - common_python - custom python files
 - common_resources - config, json files
 - tooling - programs, scripts used by Windows and macOS
-- tooling_windows - programs, scripts for Windows
+- tooling_win - programs, scripts for Windows
 
 ## Anaconda environment
 - /conda_env/gdal-user.yml is for creating Anaconda environment for users

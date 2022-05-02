@@ -17,4 +17,4 @@ osmconvert_tempfile.*
 # mac/unix
 
 #windows
-/tooling_windows/osmconvert_tempfile.*
+/wahoo_mc/tooling_win/osmconvert_tempfile.*
