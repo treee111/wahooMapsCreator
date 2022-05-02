@@ -4,8 +4,6 @@
 /!.vscode/settings.json
 
 # top level
-/dist
-/envs
 osmconvert_tempfile.*
 
 # in all folders
@@ -18,3 +16,10 @@ osmconvert_tempfile.*
 
 #windows
 /wahoo_mc/tooling_win/osmconvert_tempfile.*
+
+# build artefacts
+*.pyc
+.eggs/
+/wahoo_mc.egg-info/
+/dist/
+/build/
