@@ -162,6 +162,19 @@
                 "C:\\VSCode\\python\\wahooMapsCreator\\output\\138\\100\\land.shp",
                 "C:\\VSCode\\python\\wahooMapsCreator\\output\\138\\100\\land1.osm"
             ]
-        }
+        },
+        {
+            "name": "mexico with bc",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceRoot}/wahoo_map_creator.py",
+            "console": "integratedTerminal",
+            "args": [
+                "mexico",
+                "-md",
+                "100",
+                "-bc"
+            ]
+        },
     ]
 }
