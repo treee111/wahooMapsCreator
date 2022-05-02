@@ -5,5 +5,6 @@ dependencies:
   - python=3.7
   - geojson=2.5.*
   - gdal=3.4.*
-  - requests=2.27.*
-  - shapely=1.8.*
+  - pip
+  - pip:
+      - wahoo-mc==2.0.0a1
