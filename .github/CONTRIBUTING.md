@@ -78,7 +78,7 @@ There is one python coding base for both Windows and for macOS.
 Differences between the different OS are the used programs.
 The folders in the repo have the following purposes:
 - common_download - all downloaded files are saved and extracted here
-- wahoo_mc - custom python files
+- common_python - custom python files
 - common_resources - config, json files
 - tooling - programs, scripts used by Windows and macOS
 - tooling_windows - programs, scripts for Windows
