@@ -37,11 +37,11 @@ def download_file(target_filepath, url, is_zip):
     if is_zip:
         # build target-filepath based on last element of URL
         last_part = url.rsplit('/', 1)[-1]
-        dl_file_path = os.path.join(fd_fct.COMMON_DL_DIR, last_part)
+        dl_file_path = os.path.join(fd_fct.USER_DL_DIR, last_part)
         # download URL to file
         fd_fct.download_url_to_file(url, dl_file_path)
         # unpack it - should work on macOS and Windows
-        fd_fct.unzip(dl_file_path, fd_fct.COMMON_DL_DIR)
+        fd_fct.unzip(dl_file_path, fd_fct.USER_DL_DIR)
         # delete .zip file
         os.remove(dl_file_path)
     else:

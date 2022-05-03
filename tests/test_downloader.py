@@ -77,7 +77,7 @@ class TestDownloader(unittest.TestCase):
         """
         Test the download of geofabrik file via URL
         """
-        path = os.path.join(fd_fct.COMMON_DL_DIR, 'geofabrik.json')
+        path = os.path.join(fd_fct.USER_DL_DIR, 'geofabrik.json')
         download_file(
             path, 'https://download.geofabrik.de/index-v1.json', False)
 
@@ -90,7 +90,7 @@ class TestDownloader(unittest.TestCase):
 
         country = 'malta'
 
-        path = os.path.join(fd_fct.COMMON_DL_DIR, 'maps',
+        path = os.path.join(fd_fct.USER_DL_DIR, 'maps',
                             f'{country}' + '-latest.osm.pbf')
 
         if os.path.exists(path):
@@ -106,7 +106,7 @@ class TestDownloader(unittest.TestCase):
         Test if the removal of a not existing file raises a exception
         """
 
-        path = os.path.join(fd_fct.COMMON_DL_DIR, 'maps',
+        path = os.path.join(fd_fct.USER_DL_DIR, 'maps',
                             'malta' + '-latest.osm.pbf')
 
         if os.path.exists(path):

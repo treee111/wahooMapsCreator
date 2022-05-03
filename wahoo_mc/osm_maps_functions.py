@@ -249,11 +249,11 @@ class OsmMaps:
         # Windows
         if platform.system() == "Windows":
             for key, val in self.border_countries.items():
-                out_file_o5m = os.path.join(fd_fct.OUTPUT_DIR,
+                out_file_o5m = os.path.join(fd_fct.USER_OUTPUT_DIR,
                                             f'outFile-{key}.o5m')
-                out_file_o5m_filtered = os.path.join(fd_fct.OUTPUT_DIR,
+                out_file_o5m_filtered = os.path.join(fd_fct.USER_OUTPUT_DIR,
                                                      f'outFileFiltered-{key}.o5m')
-                out_file_o5m_filtered_names = os.path.join(fd_fct.OUTPUT_DIR,
+                out_file_o5m_filtered_names = os.path.join(fd_fct.USER_OUTPUT_DIR,
                                                            f'outFileFiltered-{key}-Names.o5m')
 
                 if not os.path.isfile(out_file_o5m_filtered) or self.force_processing is True:
@@ -302,9 +302,9 @@ class OsmMaps:
         # Non-Windows
         else:
             for key, val in self.border_countries.items():
-                out_file_o5m_filtered = os.path.join(fd_fct.OUTPUT_DIR,
+                out_file_o5m_filtered = os.path.join(fd_fct.USER_OUTPUT_DIR,
                                                      f'filtered-{key}.o5m.pbf')
-                out_file_o5m_filtered_names = os.path.join(fd_fct.OUTPUT_DIR,
+                out_file_o5m_filtered_names = os.path.join(fd_fct.USER_OUTPUT_DIR,
                                                            f'outFileFiltered-{key}-Names.o5m.pbf')
                 if not os.path.isfile(out_file_o5m_filtered) or self.force_processing is True:
                     log.info('+ Create filtered country file for %s', key)
@@ -345,9 +345,9 @@ class OsmMaps:
 
         tile_count = 1
         for tile in self.tiles:
-            land_file = os.path.join(fd_fct.OUTPUT_DIR,
+            land_file = os.path.join(fd_fct.USER_OUTPUT_DIR,
                                      f'{tile["x"]}', f'{tile["y"]}', 'land.shp')
-            out_file = os.path.join(fd_fct.OUTPUT_DIR,
+            out_file = os.path.join(fd_fct.USER_OUTPUT_DIR,
                                     f'{tile["x"]}', f'{tile["y"]}', 'land')
 
             # create land.dbf, land.prj, land.shp, land.shx
@@ -400,7 +400,7 @@ class OsmMaps:
 
         tile_count = 1
         for tile in self.tiles:
-            out_file = os.path.join(fd_fct.OUTPUT_DIR,
+            out_file = os.path.join(fd_fct.USER_OUTPUT_DIR,
                                     f'{tile["x"]}', f'{tile["y"]}', 'sea.osm')
             if not os.path.isfile(out_file) or self.force_processing is True:
                 log.info(
@@ -449,11 +449,11 @@ class OsmMaps:
                     continue
                 log.info(
                     '+ Splitting tile %s of %s for Coordinates: %s,%s from map of %s', tile_count, len(self.tiles), tile["x"], tile["y"], country)
-                out_file = os.path.join(fd_fct.OUTPUT_DIR,
+                out_file = os.path.join(fd_fct.USER_OUTPUT_DIR,
                                         f'{tile["x"]}', f'{tile["y"]}', f'split-{country}.osm.pbf')
-                out_file_names = os.path.join(fd_fct.OUTPUT_DIR,
+                out_file_names = os.path.join(fd_fct.USER_OUTPUT_DIR,
                                               f'{tile["x"]}', f'{tile["y"]}', f'split-{country}-names.osm.pbf')
-                out_merged = os.path.join(fd_fct.OUTPUT_DIR,
+                out_merged = os.path.join(fd_fct.USER_OUTPUT_DIR,
                                           f'{tile["x"]}', f'{tile["y"]}', 'merged.osm.pbf')
                 if not os.path.isfile(out_merged) or self.force_processing is True:
                     # Windows
@@ -524,7 +524,7 @@ class OsmMaps:
             log.info(
                 '+ Merging tiles for tile %s of %s for Coordinates: %s,%s', tile_count, len(self.tiles), tile["x"], tile["y"])
 
-            out_tile_dir = os.path.join(fd_fct.OUTPUT_DIR,
+            out_tile_dir = os.path.join(fd_fct.USER_OUTPUT_DIR,
                                         f'{tile["x"]}', f'{tile["y"]}')
             out_file = os.path.join(out_tile_dir, 'merged.osm.pbf')
 
@@ -600,7 +600,7 @@ class OsmMaps:
         log.info('# Sorting land* osm files')
 
         # get all land* osm files
-        land_files = glob.glob(os.path.join(fd_fct.OUTPUT_DIR,
+        land_files = glob.glob(os.path.join(fd_fct.USER_OUTPUT_DIR,
                                             f'{tile["x"]}', f'{tile["y"]}', 'land*.osm'))
 
         # Windows
@@ -641,10 +641,10 @@ class OsmMaps:
         for tile in self.tiles:
             log.info(
                 '+ Creating map file for tile %s of %s for Coordinates: %s,%s', tile_count, len(self.tiles), tile["x"], tile["y"])
-            out_file = os.path.join(fd_fct.OUTPUT_DIR,
+            out_file = os.path.join(fd_fct.USER_OUTPUT_DIR,
                                     f'{tile["x"]}', f'{tile["y"]}.map')
             if not os.path.isfile(out_file+'.lzma') or self.force_processing is True:
-                merged_file = os.path.join(fd_fct.OUTPUT_DIR,
+                merged_file = os.path.join(fd_fct.USER_OUTPUT_DIR,
                                            f'{tile["x"]}', f'{tile["y"]}', 'merged.osm.pbf')
 
                 # Windows
@@ -717,12 +717,12 @@ class OsmMaps:
         # copy the needed tiles to the country folder
         log.info('+ Copying %s tiles to output folders', extension)
         for tile in self.tiles:
-            src = os.path.join(f'{fd_fct.OUTPUT_DIR}',
+            src = os.path.join(f'{fd_fct.USER_OUTPUT_DIR}',
                                f'{tile["x"]}', f'{tile["y"]}') + extension
             dst = os.path.join(
-                f'{fd_fct.OUTPUT_DIR}', folder_name, f'{tile["x"]}', f'{tile["y"]}') + extension
+                f'{fd_fct.WAHOO_MC_USER}', folder_name, f'{tile["x"]}', f'{tile["y"]}') + extension
             outdir = os.path.join(
-                f'{fd_fct.OUTPUT_DIR}', folder_name, f'{tile["x"]}')
+                f'{fd_fct.WAHOO_MC_USER}', folder_name, f'{tile["x"]}')
             self.copy_to_dst(extension, src, dst, outdir)
 
             if extension == '.map.lzma':
@@ -747,16 +747,16 @@ class OsmMaps:
                     [folder_name + '.zip', folder_name])
 
             run_subprocess_and_log_output(
-                cmd, f'! Error zipping map files for folder: {folder_name}', cwd=fd_fct.OUTPUT_DIR)
+                cmd, f'! Error zipping map files for folder: {folder_name}', cwd=fd_fct.WAHOO_MC_USER)
 
             # Keep (True) or delete (False) the country/region map folders after compression
             if keep_map_folders is False:
                 try:
                     shutil.rmtree(os.path.join(
-                        f'{fd_fct.OUTPUT_DIR}', folder_name))
+                        f'{fd_fct.WAHOO_MC_USER}', folder_name))
                 except OSError:
                     log.error(
-                        '! Error, could not delete folder %s', os.path.join(fd_fct.OUTPUT_DIR, folder_name))
+                        '! Error, could not delete folder %s', os.path.join(fd_fct.WAHOO_MC_USER, folder_name))
 
             log.info('+ Zip %s files: OK', extension)
 

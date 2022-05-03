@@ -236,7 +236,7 @@ class TestGeneratedFiles(unittest.TestCase):
                         given_output_file = os.path.join(
                             dirpath_2, file)
                         calculated_output_file = os.path.join(
-                            fd_fct.OUTPUT_DIR, dir_to_compare, directory, file)
+                            fd_fct.USER_OUTPUT_DIR, dir_to_compare, directory, file)
 
                         # is file equal?
                         self.assertTrue(filecmp.cmp(given_output_file, calculated_output_file,
@@ -248,7 +248,7 @@ class TestGeneratedFiles(unittest.TestCase):
                 given_output_file = os.path.join(
                     dirpath, file)
                 calculated_output_file = os.path.join(
-                    fd_fct.OUTPUT_DIR, dir_to_compare, file)
+                    fd_fct.USER_OUTPUT_DIR, dir_to_compare, file)
 
                 # is file equal?
                 self.assertTrue(filecmp.cmp(given_output_file, calculated_output_file,

@@ -11,6 +11,7 @@ import subprocess
 import sys
 import zipfile
 import logging
+from pathlib import Path
 
 # import custom python packages
 import requests
@@ -32,17 +33,20 @@ def get_git_root():
 # wahooMapsCreator directory
 WAHOO_MC_DIR = os.path.dirname(__file__)
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
-PAR_DIR = os.path.abspath(os.path.join(os.path.join(
-    os.path.dirname(__file__), os.pardir), os.pardir))
+
+WAHOO_MC_USER = os.path.join(str(Path.home()), 'wahooMapsCreator')
+
+# PAR_DIR = os.path.abspath(os.path.join(os.path.join(
+#     os.path.dirname(__file__), os.pardir), os.pardir))
 COMMON_DIR = os.path.join(WAHOO_MC_DIR, 'resources')
-COMMON_DL_DIR = os.path.join(PAR_DIR, 'wahooMapsCreator_download')
-OUTPUT_DIR = os.path.join(PAR_DIR, 'wahooMapsCreator_output')
-MAPS_DIR = os.path.join(COMMON_DL_DIR, 'maps')
+USER_DL_DIR = os.path.join(WAHOO_MC_USER, '_download')
+USER_OUTPUT_DIR = os.path.join(WAHOO_MC_USER, '_tiles')
+MAPS_DIR = os.path.join(USER_DL_DIR, 'maps')
 TOOLING_DIR = os.path.join(ROOT_DIR, 'tooling')
 TOOLING_WIN_DIR = os.path.join(WAHOO_MC_DIR, 'tooling_win')
 LAND_POLYGONS_PATH = os.path.join(
-    COMMON_DL_DIR, 'land-polygons-split-4326', 'land_polygons.shp')
-GEOFABRIK_PATH = os.path.join(COMMON_DL_DIR, 'geofabrik.json')
+    USER_DL_DIR, 'land-polygons-split-4326', 'land_polygons.shp')
+GEOFABRIK_PATH = os.path.join(USER_DL_DIR, 'geofabrik.json')
 
 
 def unzip(source_filename, dest_dir):
@@ -74,9 +78,14 @@ def initialize_work_directories():
     """
     Initialize work directories
     """
-    os.makedirs(COMMON_DL_DIR, exist_ok=True)
+
+    # USER_DIR = os.path.join(str(Path.home()), 'gitcommon')
+
+    os.makedirs(WAHOO_MC_USER, exist_ok=True)
+
+    os.makedirs(USER_DL_DIR, exist_ok=True)
     os.makedirs(MAPS_DIR, exist_ok=True)
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
+    os.makedirs(USER_OUTPUT_DIR, exist_ok=True)
 
 
 def create_empty_directories(tiles_from_json):
@@ -84,7 +93,7 @@ def create_empty_directories(tiles_from_json):
     create empty directory for the files
     """
     for tile in tiles_from_json:
-        outdir = os.path.join(OUTPUT_DIR, f'{tile["x"]}', f'{tile["y"]}')
+        outdir = os.path.join(USER_OUTPUT_DIR, f'{tile["x"]}', f'{tile["y"]}')
         if not os.path.isdir(outdir):
             os.makedirs(outdir)
 
