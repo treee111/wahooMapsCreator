@@ -82,6 +82,9 @@ def process_call_of_the_tool():
     # option to calculate tiles to process based on Geofabrik index-v1.json file
     options_args.add_argument('-gt', '--geofabrik_tiles', action='store_true',
                               help="calculate tiles based on geofabrik index-v1.json file")
+    # zip the country (and country-maps) folder
+    options_args.add_argument('-z', '--zip', action='store_true',
+                              help="zip the country (and country-maps) folder")
 
     args = parser_top.parse_args()
 
@@ -110,6 +113,7 @@ def process_call_of_the_tool():
     o_input_data.only_merge = args.only_merge
     o_input_data.keep_map_folders = args.keep_map_folders
     o_input_data.save_cruiser = args.cruiser
+    o_input_data.zip_folder = args.zip
 
     return o_input_data
 
@@ -159,6 +163,8 @@ class InputData():  # pylint: disable=too-many-instance-attributes,too-few-publi
         # True - Use geofabrik index-v1.json file
         # False - Use .json files from folder /common_resources/json
         self.geofabrik_tiles = False
+
+        self.zip_folder = False
 
     def is_required_input_given_or_exit(self, issue_message):
         """
