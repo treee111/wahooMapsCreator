@@ -5,6 +5,8 @@ wahooMapsCreator can be used in two different ways:
 
 Both ways support the same arguments to be used for the map-creation process. You can choose the arguments via GUI or as [CLI-arguments](#advanced-cli-usage).
 
+### Always activate environment first
+
 ## Run wahooMapsCreator for your country
 It might be a good idea to run wahooMapsCreator first for a small country e.g. Malta to check if everything is running fine.
 In a next step you can run it for your own country.
