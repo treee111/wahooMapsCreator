@@ -721,14 +721,12 @@ class OsmMaps:
                                f'{tile["x"]}', f'{tile["y"]}') + extension
             dst = os.path.join(
                 f'{fd_fct.WAHOO_MC_USER}', folder_name, f'{tile["x"]}', f'{tile["y"]}') + extension
-            outdir = os.path.join(
-                f'{fd_fct.WAHOO_MC_USER}', folder_name, f'{tile["x"]}')
-            self.copy_to_dst(extension, src, dst, outdir)
+            self.copy_to_dst(extension, src, dst)
 
             if extension == '.map.lzma':
                 src = src + '.12'
                 dst = dst + '.12'
-                self.copy_to_dst(extension, src, dst, outdir)
+                self.copy_to_dst(extension, src, dst)
 
         if zip_folder:
             # Windows
@@ -762,12 +760,14 @@ class OsmMaps:
 
         log.info('+ Create %s files: OK', extension)
 
-    def copy_to_dst(self, extension, src, dst, outdir):
+    def copy_to_dst(self, extension, src, dst):
         """
         Zip .map or .map.lzma files
         postfix: '.map.lzma' for Wahoo tiles
         postfix: '.map' for Cruiser map files
         """
+        outdir = os.path.dirname(dst)
+
         # first create the to-directory if not already there
         os.makedirs(outdir, exist_ok=True)
 
