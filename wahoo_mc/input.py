@@ -267,6 +267,7 @@ class GuiInput(tk.Tk):
         self.o_input_data.only_merge = tab2.first.checkb_only_merge_val.get()
         self.o_input_data.keep_map_folders = tab2.first.checkb_keep_map_folders_val.get()
         self.o_input_data.save_cruiser = tab2.first.checkb_save_cruiser_val.get()
+        self.o_input_data.zip_folder = tab2.first.checkb_zip_folder_val.get()
 
         # get text without \n in the end
         self.o_input_data.tag_wahoo_xml = tab2.second.input_tag_wahoo_xml.get()
@@ -420,3 +421,5 @@ class CheckbuttonsTab2(tk.Frame):
                                                            "Keep the country and country-maps folders in the output", 1)
         self.checkb_save_cruiser_val = create_checkbox(self, oInputData.save_cruiser,
                                                        "Save uncompressed maps for Cruiser", 2)
+        self.checkb_zip_folder_val = create_checkbox(self, oInputData.zip_folder,
+                                                     "Zip folder with generated files", 3)
