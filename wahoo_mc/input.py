@@ -82,6 +82,9 @@ def process_call_of_the_tool():
     # option to calculate tiles to process based on Geofabrik index-v1.json file
     options_args.add_argument('-gt', '--geofabrik_tiles', action='store_true',
                               help="calculate tiles based on geofabrik index-v1.json file")
+    # zip the country (and country-maps) folder
+    options_args.add_argument('-z', '--zip', action='store_true',
+                              help="zip the country (and country-maps) folder")
 
     args = parser_top.parse_args()
 
@@ -110,6 +113,7 @@ def process_call_of_the_tool():
     o_input_data.only_merge = args.only_merge
     o_input_data.keep_map_folders = args.keep_map_folders
     o_input_data.save_cruiser = args.cruiser
+    o_input_data.zip_folder = args.zip
 
     return o_input_data
 
@@ -159,6 +163,8 @@ class InputData():  # pylint: disable=too-many-instance-attributes,too-few-publi
         # True - Use geofabrik index-v1.json file
         # False - Use .json files from folder /common_resources/json
         self.geofabrik_tiles = False
+
+        self.zip_folder = False
 
     def is_required_input_given_or_exit(self, issue_message):
         """
@@ -261,6 +267,7 @@ class GuiInput(tk.Tk):
         self.o_input_data.only_merge = tab2.first.checkb_only_merge_val.get()
         self.o_input_data.keep_map_folders = tab2.first.checkb_keep_map_folders_val.get()
         self.o_input_data.save_cruiser = tab2.first.checkb_save_cruiser_val.get()
+        self.o_input_data.zip_folder = tab2.first.checkb_zip_folder_val.get()
 
         # get text without \n in the end
         self.o_input_data.tag_wahoo_xml = tab2.second.input_tag_wahoo_xml.get()
@@ -414,3 +421,5 @@ class CheckbuttonsTab2(tk.Frame):
                                                            "Keep the country and country-maps folders in the output", 1)
         self.checkb_save_cruiser_val = create_checkbox(self, oInputData.save_cruiser,
                                                        "Save uncompressed maps for Cruiser", 2)
+        self.checkb_zip_folder_val = create_checkbox(self, oInputData.zip_folder,
+                                                     "Zip folder with generated files", 3)

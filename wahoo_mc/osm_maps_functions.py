@@ -691,11 +691,11 @@ class OsmMaps:
 
         log.info('+ Creating .map files: OK')
 
-    def make_and_zip_files(self, keep_map_folders, extension):
+    def make_and_zip_files(self, keep_map_folders, extension, zip_folder):
         """
-        Zip .map or .map.lzma files
-        postfix: '.map.lzma' for Wahoo tiles
-        postfix: '.map' for Cruiser map files
+        make or make and zip .map or .map.lzma files
+        extension: '.map.lzma' for Wahoo tiles
+        extension: '.map' for Cruiser map files
         """
 
         if extension == '.map.lzma':
@@ -704,7 +704,7 @@ class OsmMaps:
             folder_name = self.country_name + '-maps'
 
         log.info('-' * 80)
-        log.info('# Zip: %s files', extension)
+        log.info('# Create: %s files', extension)
         log.info('+ Country: %s', self.country_name)
 
         # Check for us/utah etc names
@@ -730,34 +730,37 @@ class OsmMaps:
                 dst = dst + '.12'
                 self.copy_to_dst(extension, src, dst, outdir)
 
-        # Windows
-        if platform.system() == "Windows":
-            path_7za = os.path.join(fd_fct.TOOLING_WIN_DIR, '7za')
-            cmd = [path_7za, 'a', '-tzip']
+        if zip_folder:
+            # Windows
+            if platform.system() == "Windows":
+                path_7za = os.path.join(fd_fct.TOOLING_WIN_DIR, '7za')
+                cmd = [path_7za, 'a', '-tzip']
 
-            cmd.extend(
-                [folder_name + '.zip', os.path.join(".", folder_name, "*")])
+                cmd.extend(
+                    [folder_name + '.zip', os.path.join(".", folder_name, "*")])
 
-        # Non-Windows
-        else:
-            cmd = ['zip', '-r']
+            # Non-Windows
+            else:
+                cmd = ['zip', '-r']
 
-            cmd.extend(
-                [folder_name + '.zip', folder_name])
+                cmd.extend(
+                    [folder_name + '.zip', folder_name])
 
-        run_subprocess_and_log_output(
-            cmd, f'! Error zipping map files for folder: {folder_name}', cwd=fd_fct.OUTPUT_DIR)
+            run_subprocess_and_log_output(
+                cmd, f'! Error zipping map files for folder: {folder_name}', cwd=fd_fct.OUTPUT_DIR)
 
-        # Keep (True) or delete (False) the country/region map folders after compression
-        if keep_map_folders is False:
-            try:
-                shutil.rmtree(os.path.join(
-                    f'{fd_fct.OUTPUT_DIR}', folder_name))
-            except OSError:
-                log.error(
-                    '! Error, could not delete folder %s', os.path.join(fd_fct.OUTPUT_DIR, folder_name))
+            # Keep (True) or delete (False) the country/region map folders after compression
+            if keep_map_folders is False:
+                try:
+                    shutil.rmtree(os.path.join(
+                        f'{fd_fct.OUTPUT_DIR}', folder_name))
+                except OSError:
+                    log.error(
+                        '! Error, could not delete folder %s', os.path.join(fd_fct.OUTPUT_DIR, folder_name))
 
-        log.info('+ Zip %s files: OK', extension)
+            log.info('+ Zip %s files: OK', extension)
+
+        log.info('+ Create %s files: OK', extension)
 
     def copy_to_dst(self, extension, src, dst, outdir):
         """
