@@ -12,7 +12,6 @@ import sys
 import zipfile
 import logging
 from pathlib import Path
-from distutils.dir_util import copy_tree
 import shutil
 
 # import custom python packages
@@ -103,7 +102,7 @@ def move_old_content_into_new_dirs():
     move_content('wahooMapsCreator_output', USER_OUTPUT_DIR)
 
 
-def move_content(src_folder_name, dst):
+def move_content(src_folder_name, dst_path):
     """
     copy files from source directory of to destination directory
     delete source directory afterwards
@@ -115,7 +114,14 @@ def move_content(src_folder_name, dst):
 
     if os.path.exists(source_dir):
         # copy & delete directory
-        copy_tree(source_dir, dst)
+        for item in os.listdir(source_dir):
+            src = os.path.join(source_dir, item)
+            dst = os.path.join(dst_path, item)
+            if os.path.isdir(src):
+                shutil.copytree(src, dst)
+            else:
+                shutil.copy2(src, dst)
+
         shutil.rmtree(source_dir)
 
 
