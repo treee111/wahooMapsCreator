@@ -203,5 +203,21 @@
                 "-bc"
             ]
         },
+        {
+            "name": "malta only merge - user directory test",
+            "type": "python",
+            "request": "launch",
+            "module": "wahoo_mc",
+            "console": "integratedTerminal",
+            "args": [
+                "cli",
+                "-co",
+                "malta",
+                "-c",
+                "-md",
+                "100",
+                "-om"
+            ]
+        }
     ]
 }
