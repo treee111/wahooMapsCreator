@@ -29,7 +29,7 @@ def get_git_root():
 
 
 # User
-USER_WAHOO_MC = os.path.join(str(Path.home()), 'wahooMapsCreator')
+USER_WAHOO_MC = os.path.join(str(Path.home()), 'wahooMapsCreatorData')
 USER_DL_DIR = os.path.join(USER_WAHOO_MC, '_download')
 USER_MAPS_DIR = os.path.join(USER_DL_DIR, 'maps')
 LAND_POLYGONS_PATH = os.path.join(
