@@ -12,6 +12,8 @@ import sys
 import zipfile
 import logging
 from pathlib import Path
+from distutils.dir_util import copy_tree
+import shutil
 
 # import custom python packages
 import requests
@@ -86,6 +88,35 @@ def initialize_work_directories():
     os.makedirs(USER_DL_DIR, exist_ok=True)
     os.makedirs(MAPS_DIR, exist_ok=True)
     os.makedirs(USER_OUTPUT_DIR, exist_ok=True)
+
+
+def move_old_content_into_new_dirs():
+    """
+    copy files from download- and output- directory of earlier version to the new folders
+    delete directory from earlier versions afterwards
+
+    having folder on the same level as the wahooMapsCreator was introduces in release v1.1.0 with PR #93.
+    This coding is only valid/needed when using the cloned version or .zip version.
+    If working with a installed version via PyPI, nothing will be done because folders to copy do not exist
+    """
+    move_content('wahooMapsCreator_download', USER_DL_DIR)
+    move_content('wahooMapsCreator_output', USER_OUTPUT_DIR)
+
+
+def move_content(src_folder_name, dst):
+    """
+    copy files from source directory of to destination directory
+    delete source directory afterwards
+    """
+    # build path to old folder on the same level as wahooMapsCreator
+    par_dir = os.path.abspath(os.path.join(os.path.join(
+        os.path.dirname(__file__), os.pardir), os.pardir))
+    source_dir = os.path.join(par_dir, src_folder_name)
+
+    if os.path.exists(source_dir):
+        # copy & delete directory
+        copy_tree(source_dir, dst)
+        shutil.rmtree(source_dir)
 
 
 def create_empty_directories(tiles_from_json):
