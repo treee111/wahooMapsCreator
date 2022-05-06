@@ -63,7 +63,7 @@ def get_osm_pbf_filepath_url(country):
     # get .osm.pbf region of country
     url = build_url_for_country_osm_pbf_download(country)
     map_file_path = os.path.join(
-        fd_fct.MAPS_DIR, f'{country}' + '-latest.osm.pbf')
+        fd_fct.USER_MAPS_DIR, f'{country}' + '-latest.osm.pbf')
     # return URL and download filepath
     return map_file_path, url
 
@@ -200,10 +200,10 @@ class Downloader:
 
             # check for already existing .osm.pbf file
             map_file_path = glob.glob(
-                f'{fd_fct.MAPS_DIR}/{transl_c}-latest.osm.pbf')
+                f'{fd_fct.USER_MAPS_DIR}/{transl_c}-latest.osm.pbf')
             if len(map_file_path) != 1:
                 map_file_path = glob.glob(
-                    f'{fd_fct.MAPS_DIR}/**/{transl_c}-latest.osm.pbf')
+                    f'{fd_fct.USER_MAPS_DIR}/**/{transl_c}-latest.osm.pbf')
 
             # delete .osm.pbf file if out of date
             if len(map_file_path) == 1 and os.path.isfile(map_file_path[0]):

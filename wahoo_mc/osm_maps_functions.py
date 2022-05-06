@@ -53,7 +53,7 @@ def get_tile_by_one_xy_combination_from_jsons(xy_combination):
     get tile from json files by given X/Y coordinate combination
     """
     # go through all files in all folders of the "json" directory
-    file_path_jsons = os.path.join(fd_fct.COMMON_DIR, 'json')
+    file_path_jsons = os.path.join(fd_fct.RESOURCES_DIR, 'json')
 
     for folder in fd_fct.get_folders_in_folder(file_path_jsons):
         for file in fd_fct.get_filenames_of_jsons_in_folder(os.path.join(file_path_jsons, folder)):
@@ -376,12 +376,12 @@ class OsmMaps:
             if not os.path.isfile(out_file+'1.osm') or self.force_processing is True:
                 # Windows
                 if platform.system() == "Windows":
-                    cmd = ['python', os.path.join(fd_fct.COMMON_DIR,
+                    cmd = ['python', os.path.join(fd_fct.RESOURCES_DIR,
                                                   'shape2osm.py'), '-l', out_file, land_file]
 
                 # Non-Windows
                 else:
-                    cmd = ['python3', os.path.join(fd_fct.COMMON_DIR,
+                    cmd = ['python3', os.path.join(fd_fct.RESOURCES_DIR,
                                                    'shape2osm.py'), '-l', out_file, land_file]
 
                 run_subprocess_and_log_output(
@@ -405,7 +405,7 @@ class OsmMaps:
             if not os.path.isfile(out_file) or self.force_processing is True:
                 log.info(
                     '+ Generate sea %s of %s for Coordinates: %s,%s', tile_count, len(self.tiles), tile["x"], tile["y"])
-                with open(os.path.join(fd_fct.COMMON_DIR, 'sea.osm'), encoding="utf-8") as sea_file:
+                with open(os.path.join(fd_fct.RESOURCES_DIR, 'sea.osm'), encoding="utf-8") as sea_file:
                     sea_data = sea_file.read()
 
                     # Try to prevent getting outside of the +/-180 and +/- 90 degrees borders. Normally the +/- 0.1 are there to prevent white lines at tile borders
@@ -562,7 +562,7 @@ class OsmMaps:
                             ['--rx', 'file='+os.path.join(out_tile_dir, f'{land}'), '--s', '--m'])
                     cmd.extend(
                         ['--rx', 'file='+os.path.join(out_tile_dir, 'sea.osm'), '--s', '--m'])
-                    cmd.extend(['--tag-transform', 'file=' + os.path.join(fd_fct.COMMON_DIR,
+                    cmd.extend(['--tag-transform', 'file=' + os.path.join(fd_fct.RESOURCES_DIR,
                                                                           'tunnel-transform.xml'), '--wb', out_file, 'omitmetadata=true'])
 
                 # Non-Windows
@@ -662,7 +662,7 @@ class OsmMaps:
                 cmd.append('threads=' + threads)
                 # should work on macOS and Windows
                 cmd.append(
-                    f'tag-conf-file={os.path.join(fd_fct.COMMON_DIR, "tag_wahoo_adjusted", tag_wahoo_xml)}')
+                    f'tag-conf-file={os.path.join(fd_fct.RESOURCES_DIR, "tag_wahoo_adjusted", tag_wahoo_xml)}')
 
                 run_subprocess_and_log_output(
                     cmd, f'Error in Osmosis with country: c // tile: {tile["x"]},{tile["y"]}')
@@ -720,7 +720,7 @@ class OsmMaps:
             src = os.path.join(f'{fd_fct.USER_OUTPUT_DIR}',
                                f'{tile["x"]}', f'{tile["y"]}') + extension
             dst = os.path.join(
-                f'{fd_fct.WAHOO_MC_USER}', folder_name, f'{tile["x"]}', f'{tile["y"]}') + extension
+                f'{fd_fct.USER_WAHOO_MC}', folder_name, f'{tile["x"]}', f'{tile["y"]}') + extension
             self.copy_to_dst(extension, src, dst)
 
             if extension == '.map.lzma':
@@ -745,16 +745,16 @@ class OsmMaps:
                     [folder_name + '.zip', folder_name])
 
             run_subprocess_and_log_output(
-                cmd, f'! Error zipping map files for folder: {folder_name}', cwd=fd_fct.WAHOO_MC_USER)
+                cmd, f'! Error zipping map files for folder: {folder_name}', cwd=fd_fct.USER_WAHOO_MC)
 
             # Keep (True) or delete (False) the country/region map folders after compression
             if keep_map_folders is False:
                 try:
                     shutil.rmtree(os.path.join(
-                        f'{fd_fct.WAHOO_MC_USER}', folder_name))
+                        f'{fd_fct.USER_WAHOO_MC}', folder_name))
                 except OSError:
                     log.error(
-                        '! Error, could not delete folder %s', os.path.join(fd_fct.WAHOO_MC_USER, folder_name))
+                        '! Error, could not delete folder %s', os.path.join(fd_fct.USER_WAHOO_MC, folder_name))
 
             log.info('+ Zip %s files: OK', extension)
 

@@ -28,7 +28,7 @@ def calc_tiles_via_static_jsons(input_argument):
     calculate tiles using the json files in the repo
     the "old" way of doing
     """
-    json_file_path = os.path.join(fd_fct.COMMON_DIR, 'json',
+    json_file_path = os.path.join(fd_fct.RESOURCES_DIR, 'json',
                                   const_fct.get_region_of_country(input_argument), input_argument + '.json')
     tiles_via_static_json = fd_fct.read_json_file(json_file_path)
 

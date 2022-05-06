@@ -26,7 +26,7 @@ def copy_static_maps_input_file(country, given_osm_pbf):
     given_osm_pbf_file = os.path.join(
         dirname_of_file, 'resources', given_osm_pbf)
     copy_to_path = os.path.join(
-        fd_fct.MAPS_DIR, country + '-latest.osm.pbf')
+        fd_fct.USER_MAPS_DIR, country + '-latest.osm.pbf')
 
     # copy file (new file takes creationdate as of now)
     shutil.copy2(given_osm_pbf_file, copy_to_path)
