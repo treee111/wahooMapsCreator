@@ -111,6 +111,10 @@ def move_content(src_folder_name, dst_path):
         for item in os.listdir(source_dir):
             src = os.path.join(source_dir, item)
             dst = os.path.join(dst_path, item)
+            # next, if destination directory exists
+            if os.path.isdir(dst):
+                continue
+
             if os.path.isdir(src):
                 shutil.copytree(src, dst)
             else:
