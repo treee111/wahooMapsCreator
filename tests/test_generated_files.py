@@ -26,7 +26,7 @@ def copy_static_maps_input_file(country, given_osm_pbf):
     given_osm_pbf_file = os.path.join(
         dirname_of_file, 'resources', given_osm_pbf)
     copy_to_path = os.path.join(
-        fd_fct.MAPS_DIR, country + '-latest.osm.pbf')
+        fd_fct.USER_MAPS_DIR, country + '-latest.osm.pbf')
 
     # copy file (new file takes creationdate as of now)
     shutil.copy2(given_osm_pbf_file, copy_to_path)
@@ -236,7 +236,7 @@ class TestGeneratedFiles(unittest.TestCase):
                         given_output_file = os.path.join(
                             dirpath_2, file)
                         calculated_output_file = os.path.join(
-                            fd_fct.OUTPUT_DIR, dir_to_compare, directory, file)
+                            fd_fct.USER_OUTPUT_DIR, dir_to_compare, directory, file)
 
                         # is file equal?
                         self.assertTrue(filecmp.cmp(given_output_file, calculated_output_file,
@@ -248,7 +248,7 @@ class TestGeneratedFiles(unittest.TestCase):
                 given_output_file = os.path.join(
                     dirpath, file)
                 calculated_output_file = os.path.join(
-                    fd_fct.OUTPUT_DIR, dir_to_compare, file)
+                    fd_fct.USER_OUTPUT_DIR, dir_to_compare, file)
 
                 # is file equal?
                 self.assertTrue(filecmp.cmp(given_output_file, calculated_output_file,

@@ -9,6 +9,7 @@ import logging
 # import custom python packages
 from wahoo_mc.input import process_call_of_the_tool
 from wahoo_mc.file_directory_functions import initialize_work_directories
+from wahoo_mc.file_directory_functions import move_old_content_into_new_dirs
 from wahoo_mc.osm_maps_functions import OsmMaps
 
 # logging used in the terminal output:
@@ -31,6 +32,7 @@ def run():
     o_input_data.is_required_input_given_or_exit(issue_message=True)
 
     initialize_work_directories()
+    move_old_content_into_new_dirs()
 
     o_osm_maps = OsmMaps(o_input_data)
 
