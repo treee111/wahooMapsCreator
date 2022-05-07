@@ -9,11 +9,11 @@ import time
 # import custom python packages
 # sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from wahoo_mc.downloader import older_than_x_days
-from wahoo_mc.downloader import download_file
-from wahoo_mc.downloader import get_osm_pbf_filepath_url
-from wahoo_mc.downloader import Downloader
-from wahoo_mc import file_directory_functions as fd_fct
+from wahoomc.downloader import older_than_x_days
+from wahoomc.downloader import download_file
+from wahoomc.downloader import get_osm_pbf_filepath_url
+from wahoomc.downloader import Downloader
+from wahoomc import file_directory_functions as fd_fct
 
 
 class TestDownloader(unittest.TestCase):
@@ -77,7 +77,7 @@ class TestDownloader(unittest.TestCase):
         """
         Test the download of geofabrik file via URL
         """
-        path = os.path.join(fd_fct.COMMON_DL_DIR, 'geofabrik.json')
+        path = os.path.join(fd_fct.USER_DL_DIR, 'geofabrik.json')
         download_file(
             path, 'https://download.geofabrik.de/index-v1.json', False)
 
@@ -90,7 +90,7 @@ class TestDownloader(unittest.TestCase):
 
         country = 'malta'
 
-        path = os.path.join(fd_fct.COMMON_DL_DIR, 'maps',
+        path = os.path.join(fd_fct.USER_DL_DIR, 'maps',
                             f'{country}' + '-latest.osm.pbf')
 
         if os.path.exists(path):
@@ -106,7 +106,7 @@ class TestDownloader(unittest.TestCase):
         Test if the removal of a not existing file raises a exception
         """
 
-        path = os.path.join(fd_fct.COMMON_DL_DIR, 'maps',
+        path = os.path.join(fd_fct.USER_DL_DIR, 'maps',
                             'malta' + '-latest.osm.pbf')
 
         if os.path.exists(path):

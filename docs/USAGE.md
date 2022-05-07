@@ -1,6 +1,7 @@
 # Usage of wahooMapsCreator <!-- omit in toc -->
 #### Table of contents <!-- omit in toc -->
 - [Usage of wahooMapsCreator](#usage-of-wahoomapscreator)
+    - [Always activate environment first](#always-activate-environment-first)
   - [Run wahooMapsCreator for your country](#run-wahoomapscreator-for-your-country)
   - [GUI (Graphical User Interface)](#gui-graphical-user-interface)
   - [CLI (Command Line Interface)](#cli-command-line-interface)
@@ -16,6 +17,8 @@ wahooMapsCreator can be used in two different ways:
 
 Both ways support the same arguments to be used for the map-creation process. You can choose the arguments via GUI or as [CLI-arguments](#advanced-cli-usage).
 
+### Always activate environment first
+
 ## Run wahooMapsCreator for your country
 It might be a good idea to run wahooMapsCreator first for a small country e.g. Malta to check if everything is running fine.
 In a next step you can run it for your own country.
@@ -23,7 +26,7 @@ In a next step you can run it for your own country.
 ## GUI (Graphical User Interface)
 
 From the `root` folder of wahooMapsCreator, run:
-  - `python -m wahoo_mc gui`
+  - `python -m wahoomc gui`
 
 Set your arguments as required via the window:
 
@@ -32,43 +35,48 @@ Set your arguments as required via the window:
 ## CLI (Command Line Interface)
 
 From the `root` folder of wahooMapsCreator, run:
-- `python -m wahoo_mc cli -co <country_name>`
+- `python -m wahoomc cli -co <country_name>`
 
 Examples:
-- for Malta: `python -m wahoo_mc cli -co malta`
-- for Ireland: `python -m wahoo_mc cli -co ireland`
+- for Malta: `python -m wahoomc cli -co malta`
+- for Ireland: `python -m wahoomc cli -co ireland`
 
 ## Advanced CLI-Usage
 The script supports many arguments via command line.
 For a list of all supported arguments, run:
-- `python -m wahoo_mc cli -h`
+- `python -m wahoomc cli -h`
 
 ### Main arguments
 **Create maps for a country**
-- `python -m wahoo_mc cli -co <country>`
+- `python -m wahoomc cli -co <country>`
 
 **Create maps for X/Y coordinates**
 
 In particular for testing adjustments in configuration-files or coding it is helpful to create maps for only one tile or a handful of tiles!
 
 To create maps for only one tile and not a whole country, one can use the X/Y coordinates of that tile. X/Y coordinates can be retrieved from this in zoom-level 8: [link](http://tools.geofabrik.de/map/#8/50.3079/8.8026&type=Geofabrik_Standard&grid=1). 
-- `python -m wahoo_mc cli -xy <xy_coordinate,xy_coordinate>`
+- `python -m wahoomc cli -xy <xy_coordinate,xy_coordinate>`
 
 ### Examples
 - for Malta, download new maps if existing maps are older than 100 days and process files even if files exist
-  - `python -m wahoo_mc cli -co malta -md 100 -fp`
+  - `python -m wahoomc cli -co malta -md 100 -fp`
 - for Germany, download and process whole tiles which involves other countries than the given
-  - `python -m wahoo_mc cli -co germany -bc`
+  - `python -m wahoomc cli -co germany -bc`
 - to create maps for only one tile
-  - `python -m wahoo_mc cli -xy 134/88`
+  - `python -m wahoomc cli -xy 134/88`
 - for multiple tiles
-  - `python -m wahoo_mc cli -xy 134/88,133/88`
+  - `python -m wahoomc cli -xy 134/88,133/88`
 
 ## POIs - Points of Interest
 For creating maps which include POIs and have them displayed on your Wahoo device, these steps need to be done:
 1. Create custom maps including POIs
-  - `python wahoo_map_creator.py cli -co malta -tag tag-wahoo-poi.xml`
-  - the tag-wahoo-poi.xml produces fuel stations, backeries, cafes and railway stations
+  1a. via CLI
+  - `python -m wahoomc cli -co malta -tag tag-wahoo-poi.xml`
+  1b. via GUI
+  - `python -m wahoomc gui`
+  - write into the tag-field: `tag-wahoo-poi.xml`
+
+The tag-wahoo-poi.xml produces fuel stations, backeries, cafes and railway stations
 
 2. Copy POIs relevant files to your device
 - [:floppy_disk: docu](docs/COPY_TO_WAHOO.md#copy-pois-relevant-files)

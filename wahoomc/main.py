@@ -7,9 +7,10 @@ executable file to create up-to-date map-files for the Wahoo ELEMNT and Wahoo EL
 import logging
 
 # import custom python packages
-from wahoo_mc.input import process_call_of_the_tool
-from wahoo_mc.file_directory_functions import initialize_work_directories
-from wahoo_mc.osm_maps_functions import OsmMaps
+from wahoomc.input import process_call_of_the_tool
+from wahoomc.file_directory_functions import initialize_work_directories
+from wahoomc.file_directory_functions import move_old_content_into_new_dirs
+from wahoomc.osm_maps_functions import OsmMaps
 
 # logging used in the terminal output:
 # # means top-level command
@@ -31,6 +32,7 @@ def run():
     o_input_data.is_required_input_given_or_exit(issue_message=True)
 
     initialize_work_directories()
+    move_old_content_into_new_dirs()
 
     o_osm_maps = OsmMaps(o_input_data)
 
@@ -62,8 +64,10 @@ def run():
                                 o_input_data.tag_wahoo_xml)
 
     # Zip .map.lzma files
-    o_osm_maps.make_and_zip_files(o_input_data.keep_map_folders, '.map.lzma')
+    o_osm_maps.make_and_zip_files(
+        o_input_data.keep_map_folders, '.map.lzma', o_input_data.zip_folder)
 
     # Make Cruiser map files zip file
     if o_input_data.save_cruiser is True:
-        o_osm_maps.make_and_zip_files(o_input_data.keep_map_folders, '.map')
+        o_osm_maps.make_and_zip_files(
+            o_input_data.keep_map_folders, '.map', o_input_data.zip_folder)

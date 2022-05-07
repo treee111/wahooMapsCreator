@@ -11,6 +11,8 @@ import subprocess
 import sys
 import zipfile
 import logging
+from pathlib import Path
+import shutil
 
 # import custom python packages
 import requests
@@ -25,24 +27,21 @@ def get_git_root():
     return subprocess.Popen(['git', 'rev-parse', '--show-toplevel'],
                             stdout=subprocess.PIPE).communicate()[0].rstrip().decode('utf-8')
 
-# script_path = os.path.abspath(__file__) # i.e. /path/to/dir/foobar.py
-# alternatives for ROOT_DIR: #os.getcwd() #getGitRoot()
 
-
-# wahooMapsCreator directory
-WAHOO_MC_DIR = os.path.dirname(__file__)
-ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
-PAR_DIR = os.path.abspath(os.path.join(os.path.join(
-    os.path.dirname(__file__), os.pardir), os.pardir))
-COMMON_DIR = os.path.join(WAHOO_MC_DIR, 'resources')
-COMMON_DL_DIR = os.path.join(PAR_DIR, 'wahooMapsCreator_download')
-OUTPUT_DIR = os.path.join(PAR_DIR, 'wahooMapsCreator_output')
-MAPS_DIR = os.path.join(COMMON_DL_DIR, 'maps')
-TOOLING_DIR = os.path.join(ROOT_DIR, 'tooling')
-TOOLING_WIN_DIR = os.path.join(WAHOO_MC_DIR, 'tooling_win')
+# User
+USER_WAHOO_MC = os.path.join(str(Path.home()), 'wahooMapsCreatorData')
+USER_DL_DIR = os.path.join(USER_WAHOO_MC, '_download')
+USER_MAPS_DIR = os.path.join(USER_DL_DIR, 'maps')
 LAND_POLYGONS_PATH = os.path.join(
-    COMMON_DL_DIR, 'land-polygons-split-4326', 'land_polygons.shp')
-GEOFABRIK_PATH = os.path.join(COMMON_DL_DIR, 'geofabrik.json')
+    USER_DL_DIR, 'land-polygons-split-4326', 'land_polygons.shp')
+GEOFABRIK_PATH = os.path.join(USER_DL_DIR, 'geofabrik.json')
+USER_OUTPUT_DIR = os.path.join(USER_WAHOO_MC, '_tiles')
+
+# Python Package - wahooMapsCreator directory
+WAHOO_MC_DIR = os.path.dirname(__file__)
+RESOURCES_DIR = os.path.join(WAHOO_MC_DIR, 'resources')
+TOOLING_WIN_DIR = os.path.join(WAHOO_MC_DIR, 'tooling_win')
+ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
 
 
 def unzip(source_filename, dest_dir):
@@ -74,9 +73,54 @@ def initialize_work_directories():
     """
     Initialize work directories
     """
-    os.makedirs(COMMON_DL_DIR, exist_ok=True)
-    os.makedirs(MAPS_DIR, exist_ok=True)
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+    # USER_DIR = os.path.join(str(Path.home()), 'gitcommon')
+
+    os.makedirs(USER_WAHOO_MC, exist_ok=True)
+
+    os.makedirs(USER_DL_DIR, exist_ok=True)
+    os.makedirs(USER_MAPS_DIR, exist_ok=True)
+    os.makedirs(USER_OUTPUT_DIR, exist_ok=True)
+
+
+def move_old_content_into_new_dirs():
+    """
+    copy files from download- and output- directory of earlier version to the new folders
+    delete directory from earlier versions afterwards
+
+    having folder on the same level as the wahooMapsCreator was introduces in release v1.1.0 with PR #93.
+    This coding is only valid/needed when using the cloned version or .zip version.
+    If working with a installed version via PyPI, nothing will be done because folders to copy do not exist
+    """
+    move_content('wahooMapsCreator_download', USER_DL_DIR)
+    move_content('wahooMapsCreator_output', USER_OUTPUT_DIR)
+
+
+def move_content(src_folder_name, dst_path):
+    """
+    copy files from source directory of to destination directory
+    delete source directory afterwards
+    """
+    # build path to old folder on the same level as wahooMapsCreator
+    par_dir = os.path.abspath(os.path.join(os.path.join(
+        os.path.dirname(__file__), os.pardir), os.pardir))
+    source_dir = os.path.join(par_dir, src_folder_name)
+
+    if os.path.exists(source_dir):
+        # copy & delete directory
+        for item in os.listdir(source_dir):
+            src = os.path.join(source_dir, item)
+            dst = os.path.join(dst_path, item)
+            # next, if destination directory exists
+            if os.path.isdir(dst):
+                continue
+
+            if os.path.isdir(src):
+                shutil.copytree(src, dst)
+            else:
+                shutil.copy2(src, dst)
+
+        shutil.rmtree(source_dir)
 
 
 def create_empty_directories(tiles_from_json):
@@ -84,7 +128,7 @@ def create_empty_directories(tiles_from_json):
     create empty directory for the files
     """
     for tile in tiles_from_json:
-        outdir = os.path.join(OUTPUT_DIR, f'{tile["x"]}', f'{tile["y"]}')
+        outdir = os.path.join(USER_OUTPUT_DIR, f'{tile["x"]}', f'{tile["y"]}')
         if not os.path.isdir(outdir):
             os.makedirs(outdir)
 

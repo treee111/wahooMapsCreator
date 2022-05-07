@@ -13,7 +13,7 @@ import tkinter as tk
 from tkinter import ttk
 
 # import custom python packages
-from wahoo_mc import constants
+from wahoomc import constants
 
 
 def process_call_of_the_tool():
@@ -70,10 +70,10 @@ def process_call_of_the_tool():
     # Save uncompressed maps for Cruiser if True
     options_args.add_argument('-c', '--cruiser', action='store_true',
                               help="save uncompressed maps for Cruiser")
-    # specify the file with tags to keep in the output // file needs to be in common_resources
+    # specify the file with tags to keep in the output // file needs to be in wahoo_mc/resources/tag_wahoo_adjusted
     options_args.add_argument('-tag', '--tag_wahoo_xml', default=InputData().tag_wahoo_xml,
                               help="file with tags to keep in the output")
-    # specify the file with tags to keep in the output // file needs to be in common_resources
+    # only merge - used for special usecases
     options_args.add_argument('-om', '--only_merge', action='store_true',
                               help="only merge, do no other processing")
     # option to keep the /output/country/ and /output/country-maps folders in the output
@@ -82,6 +82,9 @@ def process_call_of_the_tool():
     # option to calculate tiles to process based on Geofabrik index-v1.json file
     options_args.add_argument('-gt', '--geofabrik_tiles', action='store_true',
                               help="calculate tiles based on geofabrik index-v1.json file")
+    # zip the country (and country-maps) folder
+    options_args.add_argument('-z', '--zip', action='store_true',
+                              help="zip the country (and country-maps) folder")
 
     args = parser_top.parse_args()
 
@@ -90,7 +93,7 @@ def process_call_of_the_tool():
     if args.subparser_name == 'gui':
         # Prevents the initialisation of the graphical GUI on WSL.
         if 'microsoft' in uname().release:
-            sys.exit("GUI can not be startet because no graphical interface is available. Start with 'wahoo_maps_creator.py cli -h' or 'wahoo_maps_creator.py -h' to see command line options.")
+            sys.exit("GUI can not be startet because no graphical interface is available. Start with 'python -m wahoo_mc cli -h' or 'python -m wahoo_mc -h' to see command line options.")
 
         o_input_data = GuiInput().start_gui()
         return o_input_data
@@ -110,6 +113,7 @@ def process_call_of_the_tool():
     o_input_data.only_merge = args.only_merge
     o_input_data.keep_map_folders = args.keep_map_folders
     o_input_data.save_cruiser = args.cruiser
+    o_input_data.zip_folder = args.zip
 
     return o_input_data
 
@@ -157,8 +161,10 @@ class InputData():  # pylint: disable=too-many-instance-attributes,too-few-publi
 
         # Way of calculating the relevant tiles for given input (country)
         # True - Use geofabrik index-v1.json file
-        # False - Use .json files from folder /common_resources/json
+        # False - Use .json files from folder wahoo_mc/resources/json
         self.geofabrik_tiles = False
+
+        self.zip_folder = False
 
     def is_required_input_given_or_exit(self, issue_message):
         """
@@ -261,6 +267,7 @@ class GuiInput(tk.Tk):
         self.o_input_data.only_merge = tab2.first.checkb_only_merge_val.get()
         self.o_input_data.keep_map_folders = tab2.first.checkb_keep_map_folders_val.get()
         self.o_input_data.save_cruiser = tab2.first.checkb_save_cruiser_val.get()
+        self.o_input_data.zip_folder = tab2.first.checkb_zip_folder_val.get()
 
         # get text without \n in the end
         self.o_input_data.tag_wahoo_xml = tab2.second.input_tag_wahoo_xml.get()
@@ -414,3 +421,5 @@ class CheckbuttonsTab2(tk.Frame):
                                                            "Keep the country and country-maps folders in the output", 1)
         self.checkb_save_cruiser_val = create_checkbox(self, oInputData.save_cruiser,
                                                        "Save uncompressed maps for Cruiser", 2)
+        self.checkb_zip_folder_val = create_checkbox(self, oInputData.zip_folder,
+                                                     "Zip folder with generated files", 3)

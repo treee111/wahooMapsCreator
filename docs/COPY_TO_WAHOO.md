@@ -2,7 +2,7 @@
 
 #### Table of contents <!-- omit in toc -->
 - [Steps to carry out](#steps-to-carry-out)
-  - [Unzip Files](#unzip-files)
+  - [Location of the generated maps](#location-of-the-generated-maps)
   - [Install adb](#install-adb)
   - [Authorize Wahoo device](#authorize-wahoo-device)
   - [Copy map files](#copy-map-files)
@@ -15,8 +15,10 @@
 - [Troubleshooting](#troubleshooting)
 
 # Steps to carry out
-## Unzip Files
-unzip the desired country files
+## Location of the generated maps
+The generated maps are saved in the user directory in folder: `$user_directory/wahooMapsCreatorData`.
+
+There is a folder per country or for the X/Y combination with the relevant tiles.
 
 ## Install adb
 You can download the lates adb-tools (included in the SDK Platform Tools) for your OS here:
@@ -41,7 +43,7 @@ adb devices
 ```
 
 ## Copy map files
-copy the unzipped map folders to \ELEMNT-BOLT\USB storage\maps\tiles\8\
+copy map folders per tile to \ELEMNT-BOLT\USB storage\maps\tiles\8\
 
 These tools can be helpful if you want to copy the files with a GUI and not via CLI:
 - Windows: https://github.com/hexadezi/adbGUI
