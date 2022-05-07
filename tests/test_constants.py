@@ -5,8 +5,8 @@ import unittest
 from mock import patch
 
 
-from wahoo_mc.constants_functions import translate_country_input_to_geofabrik
-from wahoo_mc.constants_functions import translate_tags_to_keep
+from wahoomc.constants_functions import translate_country_input_to_geofabrik
+from wahoomc.constants_functions import translate_tags_to_keep
 
 
 class TestTranslateCountries(unittest.TestCase):
@@ -85,7 +85,7 @@ class TestTranslateTags(unittest.TestCase):
     tests for translating tags-constants between the universal format and OS-specific formats
     """
 
-    @patch('wahoo_mc.constants.TAGS_TO_KEEP_UNIVERSAL', tags_universal_simple)
+    @patch('wahoomc.constants.TAGS_TO_KEEP_UNIVERSAL', tags_universal_simple)
     def test_translate_tags_to_keep_simple_macos(self):
         """
         Test translating tags to keep from universal format to macOS
@@ -96,7 +96,7 @@ class TestTranslateTags(unittest.TestCase):
         transl_tags = translate_tags_to_keep()
         self.assertEqual(tags, transl_tags)
 
-    @patch('wahoo_mc.constants.TAGS_TO_KEEP_UNIVERSAL', tags_universal_simple)
+    @patch('wahoomc.constants.TAGS_TO_KEEP_UNIVERSAL', tags_universal_simple)
     def test_translate_tags_to_keep_simple_win(self):
         """
         Test translating tags to keep from universal format to Windows
@@ -107,7 +107,7 @@ class TestTranslateTags(unittest.TestCase):
         transl_tags = translate_tags_to_keep(sys_platform='Windows')
         self.assertEqual(tags_win, transl_tags)
 
-    @patch('wahoo_mc.constants.TAGS_TO_KEEP_UNIVERSAL', tags_universal_adv)
+    @patch('wahoomc.constants.TAGS_TO_KEEP_UNIVERSAL', tags_universal_adv)
     def test_translate_tags_to_keep_adv_macos(self):
         """
         Test translating tags to keep from universal format to macOS
@@ -119,7 +119,7 @@ class TestTranslateTags(unittest.TestCase):
         transl_tags = translate_tags_to_keep()
         self.assertEqual(tags, transl_tags)
 
-    @patch('wahoo_mc.constants.TAGS_TO_KEEP_UNIVERSAL', tags_universal_adv)
+    @patch('wahoomc.constants.TAGS_TO_KEEP_UNIVERSAL', tags_universal_adv)
     def test_translate_tags_to_keep_adv_win(self):
         """
         Test translating tags to keep from universal format to Windows
@@ -130,7 +130,7 @@ class TestTranslateTags(unittest.TestCase):
         transl_tags = translate_tags_to_keep(sys_platform='Windows')
         self.assertEqual(tags_win, transl_tags)
 
-    # @patch('wahoo_mc.constants.TAGS_TO_KEEP_UNIVERSAL', tags_universal_full)
+    # @patch('wahoomc.constants.TAGS_TO_KEEP_UNIVERSAL', tags_universal_full)
     def test_translate_tags_to_keep_full_macos(self):
         """
         Test translating tags to keep from universal format to macOS // all "tags to keep"
@@ -145,7 +145,7 @@ class TestTranslateTags(unittest.TestCase):
         transl_tags = translate_tags_to_keep()
         self.assertEqual(tags, transl_tags)
 
-    # @patch('wahoo_mc.constants.TAGS_TO_KEEP_UNIVERSAL', tags_universal_full)
+    # @patch('wahoomc.constants.TAGS_TO_KEEP_UNIVERSAL', tags_universal_full)
     def test_translate_tags_to_keep_full_win(self):
         """
         Test translating tags to keep from universal format to Windows // all "tags to keep"
@@ -156,7 +156,7 @@ class TestTranslateTags(unittest.TestCase):
         transl_tags = translate_tags_to_keep(sys_platform='Windows')
         self.assertEqual(tags_win, transl_tags)
 
-    # @patch('wahoo_mc.constants.NAME_TAGS_TO_KEEP_UNIVERSAL', name_tags_universal_full)
+    # @patch('wahoomc.constants.NAME_TAGS_TO_KEEP_UNIVERSAL', name_tags_universal_full)
     def test_translate_name_tags_to_keep_full_macos(self):
         """
         Test translating name tags to keep from universal format to Windows // all "name tags to keep"
@@ -168,7 +168,7 @@ class TestTranslateTags(unittest.TestCase):
         transl_tags = translate_tags_to_keep(name_tags=True)
         self.assertEqual(names_tags, transl_tags)
 
-    # @patch('wahoo_mc.constants.NAME_TAGS_TO_KEEP_UNIVERSAL', name_tags_universal_full)
+    # @patch('wahoomc.constants.NAME_TAGS_TO_KEEP_UNIVERSAL', name_tags_universal_full)
     def test_translate_name_tags_to_keep_full_win(self):
         """
         Test translating name tags to keep from universal format to macOS // all "name tags to keep"

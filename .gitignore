@@ -15,11 +15,11 @@ osmconvert_tempfile.*
 # mac/unix
 
 #windows
-/wahoo_mc/tooling_win/osmconvert_tempfile.*
+/wahoomc/tooling_win/osmconvert_tempfile.*
 
 # build artefacts
 *.pyc
 .eggs/
-/wahoo_mc.egg-info/
+/wahoomc.egg-info/
 /dist/
 /build/

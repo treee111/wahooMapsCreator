@@ -9,11 +9,11 @@ import time
 # import custom python packages
 # sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from wahoo_mc.downloader import older_than_x_days
-from wahoo_mc.downloader import download_file
-from wahoo_mc.downloader import get_osm_pbf_filepath_url
-from wahoo_mc.downloader import Downloader
-from wahoo_mc import file_directory_functions as fd_fct
+from wahoomc.downloader import older_than_x_days
+from wahoomc.downloader import download_file
+from wahoomc.downloader import get_osm_pbf_filepath_url
+from wahoomc.downloader import Downloader
+from wahoomc import file_directory_functions as fd_fct
 
 
 class TestDownloader(unittest.TestCase):

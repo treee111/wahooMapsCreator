@@ -8,14 +8,14 @@ import unittest
 # import custom python packages
 # sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from wahoo_mc.osm_maps_functions import OsmMaps
-from wahoo_mc.osm_maps_functions import get_tile_by_one_xy_combination_from_jsons
-from wahoo_mc.osm_maps_functions import get_xy_coordinates_from_input
-from wahoo_mc.osm_maps_functions import TileNotFoundError
-from wahoo_mc.input import InputData
-from wahoo_mc import file_directory_functions as fd_fct
-from wahoo_mc import constants_functions as const_fct
-from wahoo_mc import constants
+from wahoomc.osm_maps_functions import OsmMaps
+from wahoomc.osm_maps_functions import get_tile_by_one_xy_combination_from_jsons
+from wahoomc.osm_maps_functions import get_xy_coordinates_from_input
+from wahoomc.osm_maps_functions import TileNotFoundError
+from wahoomc.input import InputData
+from wahoomc import file_directory_functions as fd_fct
+from wahoomc import constants_functions as const_fct
+from wahoomc import constants
 
 
 class TestOsmMaps(unittest.TestCase):

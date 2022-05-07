@@ -20,19 +20,19 @@ cd ../..
 cd dist/${FOLDER_NAME_MAC}
 
 # create empty sub-folders
-mkdir -p ./wahoo_mc
-mkdir -p ./wahoo_mc/resources
+mkdir -p ./wahoomc
+mkdir -p ./wahoomc/resources
 mkdir -p ./conda_env
 mkdir -p ./tooling
 mkdir -p ./docs
 
 # copy files into dist-folder
-cp -a ../../wahoo_mc/*.py ./wahoo_mc/
-cp -a ../../wahoo_mc/resources/*.xml ./wahoo_mc/resources/
-cp -a ../../wahoo_mc/resources/*.osm ../../wahoo_mc/resources/*.py ./wahoo_mc/resources/
-cp -a ../../wahoo_mc/resources/json/ ./wahoo_mc/resources/json
-cp -a ../../wahoo_mc/resources/tag_wahoo_adjusted/ ./wahoo_mc/resources/tag_wahoo_adjusted
-cp -a ../../wahoo_mc/resources/tag_wahoo_initial/ ./wahoo_mc/resources/tag_wahoo_initial
+cp -a ../../wahoomc/*.py ./wahoomc/
+cp -a ../../wahoomc/resources/*.xml ./wahoomc/resources/
+cp -a ../../wahoomc/resources/*.osm ../../wahoomc/resources/*.py ./wahoomc/resources/
+cp -a ../../wahoomc/resources/json/ ./wahoomc/resources/json
+cp -a ../../wahoomc/resources/tag_wahoo_adjusted/ ./wahoomc/resources/tag_wahoo_adjusted
+cp -a ../../wahoomc/resources/tag_wahoo_initial/ ./wahoomc/resources/tag_wahoo_initial
 
 cp -a ../../docs/*.md ./docs/
 cp -a ../../CHANGELOG.md ../../README.md ./
