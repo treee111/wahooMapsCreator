@@ -1,6 +1,7 @@
 FOLDER_NAME_MAC="wahooMapsCreator-"${GITHUB_REF_VARIABLE}"-macOS-Linux"
 FOLDER_NAME_WIN="wahooMapsCreator-"${GITHUB_REF_VARIABLE}"-Windows"
-FOLDER_NAME_CRUISER="cruiser-mapviewer-"${GITHUB_REF_VARIABLE}"-macOS-Linux-Windows"
+FOLDER_NAME_CRUISER="wahooMapsCreator-cruiser-"${GITHUB_REF_VARIABLE}
+FOLDER_NAME_DEVICE_THEMES="wahooMapsCreator-device_themes-"${GITHUB_REF_VARIABLE}
 
 echo "Github-Ref: ${GITHUB_REF_VARIABLE}"
 
@@ -14,18 +15,21 @@ mkdir -p dist/${FOLDER_NAME_WIN}
 # zip cruiser stuff
 cd tooling/cruiser
 zip -r ../../dist/${FOLDER_NAME_CRUISER}.zip *
+cd ../..
+
+# zip device themes
+cd device_themes
+zip -r ../dist/${FOLDER_NAME_DEVICE_THEMES}.zip *
+cd ..
 
 # navigate into mac folder
-cd ../..
 cd dist/${FOLDER_NAME_MAC}
 
 # create empty sub-folders
 mkdir -p ./wahoomc
 mkdir -p ./wahoomc/resources
 mkdir -p ./conda_env
-mkdir -p ./tooling
 mkdir -p ./docs
-mkdir -p ./device_themes
 
 # copy files into dist-folder
 cp -a ../../wahoomc/*.py ./wahoomc/
@@ -34,7 +38,6 @@ cp -a ../../wahoomc/resources/*.osm ../../wahoomc/resources/*.py ./wahoomc/resou
 cp -a ../../wahoomc/resources/json/ ./wahoomc/resources/json
 cp -a ../../wahoomc/resources/tag_wahoo_adjusted/ ./wahoomc/resources/tag_wahoo_adjusted
 cp -a ../../wahoomc/resources/tag_wahoo_initial/ ./wahoomc/resources/tag_wahoo_initial
-cp -a ../../device_themes/ ./device_themes/
 
 cp -a ../../docs/*.md ./docs/
 cp -a ../../CHANGELOG.md ../../README.md ./
