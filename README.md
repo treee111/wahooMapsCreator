@@ -38,11 +38,11 @@ conda activate gdal-user
 ```
 Run wahooMapsCreator via GUI
 ```
-python -m wahoo_mc gui
+python -m wahoomc gui
 ```
 Or run wahooMapsCreator via CLI
 ```
-python -m wahoo_mc cli -co malta
+python -m wahoomc cli -co malta
 ```
 
 A detailled description of the usage is documented [:computer: here](docs/USAGE.md#usage-of-wahoomapscreator)
