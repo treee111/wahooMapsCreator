@@ -10,6 +10,7 @@
 - [Release](#release)
   - [Automatic CHANGELOG creation](#automatic-changelog-creation)
 - [Structure of the repository](#structure-of-the-repository)
+- [User directory](#user-directory)
 - [Anaconda environment](#anaconda-environment)
 
 ## How to Contribute
@@ -77,11 +78,16 @@ git-chglog -o CHANGELOG.md --next-tag v0.10.0
 There is one python coding base for both Windows and for macOS.
 Differences between the different OS are the used programs.
 The folders in the repo have the following purposes:
-- common_download - all downloaded files are saved and extracted here
-- common_python - custom python files
-- common_resources - config, json files
-- tooling - programs, scripts used by Windows and macOS
-- tooling_win - programs, scripts for Windows
+- `wahoo_mc` - custom python files
+- `wahoo_mc/resources` - config, json files
+- `wahoo_mc/tooling_win` - programs, scripts for Windows
+- `tooling` - programs, scripts used by Windows and macOS to test and check the generated maps
+
+## User directory
+Files which are processed through the tool are stored in the user directory to be release-independent. The name of the directory is: `$user_directory/wahooMapsCreatorData` and has the follwing folders:
+- root - generated files are saved here
+- `_download` - all downloaded files are saved and extracted here
+- `_tiles` - intermediate files per tile are stored here
 
 ## Anaconda environment
 - /conda_env/gdal-user.yml is for creating Anaconda environment for users

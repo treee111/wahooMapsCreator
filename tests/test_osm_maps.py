@@ -293,7 +293,7 @@ class TestStaticJsons(unittest.TestCase):
 
     def test_go_through_folders(self):
         """
-        go through all files in the common_resources/json directory
+        go through all files in the wahoo_mc/resources/json directory
         - check if correct .json will be evaluated through get_path_to_static_tile_json function
         """
         for folder in fd_fct.get_folders_in_folder(os.path.join(fd_fct.RESOURCES_DIR, 'json')):

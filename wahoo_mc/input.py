@@ -70,10 +70,10 @@ def process_call_of_the_tool():
     # Save uncompressed maps for Cruiser if True
     options_args.add_argument('-c', '--cruiser', action='store_true',
                               help="save uncompressed maps for Cruiser")
-    # specify the file with tags to keep in the output // file needs to be in common_resources
+    # specify the file with tags to keep in the output // file needs to be in wahoo_mc/resources/tag_wahoo_adjusted
     options_args.add_argument('-tag', '--tag_wahoo_xml', default=InputData().tag_wahoo_xml,
                               help="file with tags to keep in the output")
-    # specify the file with tags to keep in the output // file needs to be in common_resources
+    # only merge - used for special usecases
     options_args.add_argument('-om', '--only_merge', action='store_true',
                               help="only merge, do no other processing")
     # option to keep the /output/country/ and /output/country-maps folders in the output
@@ -93,7 +93,7 @@ def process_call_of_the_tool():
     if args.subparser_name == 'gui':
         # Prevents the initialisation of the graphical GUI on WSL.
         if 'microsoft' in uname().release:
-            sys.exit("GUI can not be startet because no graphical interface is available. Start with 'wahoo_maps_creator.py cli -h' or 'wahoo_maps_creator.py -h' to see command line options.")
+            sys.exit("GUI can not be startet because no graphical interface is available. Start with 'python -m wahoo_mc cli -h' or 'python -m wahoo_mc -h' to see command line options.")
 
         o_input_data = GuiInput().start_gui()
         return o_input_data
@@ -161,7 +161,7 @@ class InputData():  # pylint: disable=too-many-instance-attributes,too-few-publi
 
         # Way of calculating the relevant tiles for given input (country)
         # True - Use geofabrik index-v1.json file
-        # False - Use .json files from folder /common_resources/json
+        # False - Use .json files from folder wahoo_mc/resources/json
         self.geofabrik_tiles = False
 
         self.zip_folder = False
