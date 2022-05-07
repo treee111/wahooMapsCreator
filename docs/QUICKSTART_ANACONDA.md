@@ -10,6 +10,7 @@
 - [wahooMapsCreator](#wahoomapscreator)
   - [Create Anaconda Environment](#create-anaconda-environment)
   - [Install wahooMapsCreator into Anaconda environment](#install-wahoomapscreator-into-anaconda-environment)
+    - [Update wahooMapsCreator](#update-wahoomapscreator)
 - [Run wahooMapsCreator](#run-wahoomapscreator)
 - [Archive](#archive)
   - [old but still valid way to get wahooMapsCreator](#old-but-still-valid-way-to-get-wahoomapscreator)
@@ -71,7 +72,18 @@ conda activate gdal-user
 
 ## Install wahooMapsCreator into Anaconda environment
 ```
-pip install wahoomc 
+pip install wahoomc
+```
+
+### Update wahooMapsCreator
+If you have wahooMapsCreator already installed via pip and you want to install a newer version this can be done via:
+```
+pip install wahoomc --upgrade
+```
+
+If you want to upgrade to a version other than the release actual one, use this command:
+```
+pip install wahoomc==2.0.0a5 --upgrade 
 ```
 
 # Run wahooMapsCreator
