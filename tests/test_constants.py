@@ -90,7 +90,6 @@ class TestTranslateTags(unittest.TestCase):
         """
         Test translating tags to keep from universal format to macOS
         """
-
         tags = ['access', 'area=yes']
 
         transl_tags = translate_tags_to_keep()
@@ -101,7 +100,6 @@ class TestTranslateTags(unittest.TestCase):
         """
         Test translating tags to keep from universal format to Windows
         """
-
         tags_win = 'access= area=yes'
 
         transl_tags = translate_tags_to_keep(sys_platform='Windows')
@@ -112,7 +110,6 @@ class TestTranslateTags(unittest.TestCase):
         """
         Test translating tags to keep from universal format to macOS
         """
-
         tags = ['access', 'area=yes', 'bicycle',
                 'bridge', 'foot=ft_yes, foot_designated']
 
@@ -124,7 +121,6 @@ class TestTranslateTags(unittest.TestCase):
         """
         Test translating tags to keep from universal format to Windows
         """
-
         tags_win = 'access= area=yes bicycle= bridge= foot=ft_yes =foot_designated'
 
         transl_tags = translate_tags_to_keep(sys_platform='Windows')
@@ -135,10 +131,11 @@ class TestTranslateTags(unittest.TestCase):
         """
         Test translating tags to keep from universal format to macOS // all "tags to keep"
         """
-
         tags = ['access', 'area=yes', 'bicycle', 'bridge', 'foot=ft_yes, foot_designated',
+                'amenity=fuel, cafe, drinking_water', 'shop=bakery',
                 'highway=abandoned, bus_guideway, disused, bridleway, byway, construction, cycleway, footway, living_street, motorway, motorway_link, path, pedestrian, primary, primary_link, residential, road, secondary, secondary_link, service, steps, tertiary, tertiary_link, track, trunk, trunk_link, unclassified',
                 'natural=coastline, nosea, sea, beach, land, scrub, water, wetland, wood',
+                'landuse=forest',
                 'leisure=park, nature_reserve', 'railway=abandoned, bus_guideway, disused, funicular, light_rail, miniature, narrow_gauge, preserved, rail, subway, tram',
                 'surface', 'tracktype', 'tunnel', 'waterway=canal, drain, river, riverbank', 'wood=deciduous']
 
@@ -150,8 +147,7 @@ class TestTranslateTags(unittest.TestCase):
         """
         Test translating tags to keep from universal format to Windows // all "tags to keep"
         """
-
-        tags_win = 'access= area=yes bicycle= bridge= foot=ft_yes =foot_designated highway=abandoned =bus_guideway =disused =bridleway =byway =construction =cycleway =footway =living_street =motorway =motorway_link =path =pedestrian =primary =primary_link =residential =road =secondary =secondary_link =service =steps =tertiary =tertiary_link =track =trunk =trunk_link =unclassified natural=coastline =nosea =sea =beach =land =scrub =water =wetland =wood leisure=park =nature_reserve railway=abandoned =bus_guideway =disused =funicular =light_rail =miniature =narrow_gauge =preserved =rail =subway =tram surface= tracktype= tunnel= waterway=canal =drain =river =riverbank wood=deciduous'
+        tags_win = 'access= area=yes bicycle= bridge= foot=ft_yes =foot_designated amenity=fuel =cafe =drinking_water shop=bakery highway=abandoned =bus_guideway =disused =bridleway =byway =construction =cycleway =footway =living_street =motorway =motorway_link =path =pedestrian =primary =primary_link =residential =road =secondary =secondary_link =service =steps =tertiary =tertiary_link =track =trunk =trunk_link =unclassified natural=coastline =nosea =sea =beach =land =scrub =water =wetland =wood landuse=forest leisure=park =nature_reserve railway=abandoned =bus_guideway =disused =funicular =light_rail =miniature =narrow_gauge =preserved =rail =subway =tram surface= tracktype= tunnel= waterway=canal =drain =river =riverbank wood=deciduous'
 
         transl_tags = translate_tags_to_keep(sys_platform='Windows')
         self.assertEqual(tags_win, transl_tags)
@@ -161,7 +157,6 @@ class TestTranslateTags(unittest.TestCase):
         """
         Test translating name tags to keep from universal format to Windows // all "name tags to keep"
         """
-
         names_tags = ['admin_level=2', 'area=yes', 'mountain_pass', 'natural',
                       'place=city, hamlet, island, isolated_dwelling, islet, locality, suburb, town, village, country']
 
