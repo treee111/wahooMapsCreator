@@ -12,8 +12,8 @@ import time
 import logging
 
 # import custom python packages
-from wahoo_mc import file_directory_functions as fd_fct
-from wahoo_mc import constants_functions as const_fct
+from wahoomc import file_directory_functions as fd_fct
+from wahoomc import constants_functions as const_fct
 
 log = logging.getLogger('main-logger')
 

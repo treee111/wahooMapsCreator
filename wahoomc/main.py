@@ -7,10 +7,10 @@ executable file to create up-to-date map-files for the Wahoo ELEMNT and Wahoo EL
 import logging
 
 # import custom python packages
-from wahoo_mc.input import process_call_of_the_tool
-from wahoo_mc.file_directory_functions import initialize_work_directories
-from wahoo_mc.file_directory_functions import move_old_content_into_new_dirs
-from wahoo_mc.osm_maps_functions import OsmMaps
+from wahoomc.input import process_call_of_the_tool
+from wahoomc.file_directory_functions import initialize_work_directories
+from wahoomc.file_directory_functions import move_old_content_into_new_dirs
+from wahoomc.osm_maps_functions import OsmMaps
 
 # logging used in the terminal output:
 # # means top-level command

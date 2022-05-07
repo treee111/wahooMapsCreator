@@ -6,10 +6,10 @@ import os
 import unittest
 
 # import custom python packages
-from wahoo_mc.geofabrik import Geofabrik
-from wahoo_mc import file_directory_functions as fd_fct
-from wahoo_mc import constants_functions as const_fct
-from wahoo_mc.downloader import Downloader
+from wahoomc.geofabrik import Geofabrik
+from wahoomc import file_directory_functions as fd_fct
+from wahoomc import constants_functions as const_fct
+from wahoomc.downloader import Downloader
 
 
 def calc_tiles_via_geofabrik_json(input_argument):

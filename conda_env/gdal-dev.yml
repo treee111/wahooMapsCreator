@@ -9,3 +9,8 @@ dependencies:
   - geojson=2.5.*
   - shapely=1.8.*
   - autopep8=1.6.*
+  - mock
+  - twine
+  - pip
+  - pip:
+      - build

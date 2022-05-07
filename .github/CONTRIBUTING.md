@@ -9,9 +9,11 @@
     - [Squash Commit Summary](#squash-commit-summary)
 - [Release](#release)
   - [Automatic CHANGELOG creation](#automatic-changelog-creation)
+  - [PyPI commands](#pypi-commands)
 - [Structure of the repository](#structure-of-the-repository)
 - [User directory](#user-directory)
 - [Anaconda environment](#anaconda-environment)
+- [Other command](#other-command)
 
 ## How to Contribute
 1. Create a branch by forking the repository and apply your change.
@@ -74,6 +76,17 @@ To generate the CHANGELOG.md for a upcoming release (no tag exists yet), the fol
 git-chglog -o CHANGELOG.md --next-tag v0.10.0
 ```
 
+### PyPI commands
+1. Change the version in setup.cfg and gdal-user.yml
+2. Build a new release to publish to PyPI:  
+```
+py -m build
+```
+3. Publish these files to PyPI:  
+```
+twine upload dist\*
+```
+
 ## Structure of the repository
 There is one python coding base for both Windows and for macOS.
 Differences between the different OS are the used programs.
@@ -106,3 +119,9 @@ conda env export > environment.yml
 The installation of Anaconda envirionments is described [here](docs/QUICKSTART_ANACONDA.md)
 
 more information on [documentation for sharing Anaconda environments](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#exporting-an-environment-file-across-platforms)
+
+## Other command
+Run pylint for all relevant directories/files
+```
+pylint -j 0 ./wahoomc ./tests  
+```
