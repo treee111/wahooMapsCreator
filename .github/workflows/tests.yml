@@ -1,4 +1,4 @@
-name: Run python tests
+name: Run pylint tests - wahoomc & tests
 
 on: [push]
 

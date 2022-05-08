@@ -1,4 +1,4 @@
-name: Git Release Test
+name: Test create release with .zip files
 
 on:
   push:
@@ -31,6 +31,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           UNRELEASED: "update"
+          ALLOW_EMPTY_CHANGELOG: true
+          DRAFT_RELEASE: true
         with:
           args: |
             dist/*.zip

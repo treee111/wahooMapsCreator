@@ -1,4 +1,4 @@
-name: Git Release
+name: Create release with .zip files on new tag
 
 on:
   push:
