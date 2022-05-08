@@ -1,5 +1,9 @@
 <div align="center">
+    <p>
+    <img src="https://github.com/treee111/wahooMapsCreator/blob/develop/docs/wahoo_elemnt_bolt_poi1.png" alt="wahooMapsCreator Logo" width=20%>
     <img src="https://github.com/treee111/wahooMapsCreator/blob/develop/docs/wahoo_elemnt_bolt.png" alt="wahooMapsCreator Logo" width=20%>
+    <img src="https://github.com/treee111/wahooMapsCreator/blob/develop/docs/wahoo_elemnt_bolt_poi2.png" alt="wahooMapsCreator Logo" width=20%>
+    </p>
     <p>
         <a href="https://img.shields.io/badge/python-v3.6+-blue.svg" alt="Python">
             <img src="https://img.shields.io/badge/python-v3.6+-blue.svg" /></a>
@@ -25,6 +29,9 @@ OSM maps are constantly updated. With this program, the updated maps can be used
 The instructions are intended to be suitable for beginners.
 
 If anything is unclear or seams wrong, write an [:pencil2: issue](https://github.com/treee111/wahooMapsCreator/issues)!
+
+## Brand-New: Get POIs displayed on your Wahoo!
+[:cookie: here](docs/USAGE.md#pois---points-of-interest)
 
 ## Download and Install required programs
 Using Anaconda to setup a virtual Python environment is the fastest way to get wahooMapsCreator running!

@@ -1,6 +1,7 @@
 FOLDER_NAME_MAC="wahooMapsCreator-"${GITHUB_REF_VARIABLE}"-macOS-Linux"
 FOLDER_NAME_WIN="wahooMapsCreator-"${GITHUB_REF_VARIABLE}"-Windows"
-FOLDER_NAME_CRUISER="cruiser-mapviewer-"${GITHUB_REF_VARIABLE}"-macOS-Linux-Windows"
+FOLDER_NAME_CRUISER="wahooMapsCreator-cruiser-"${GITHUB_REF_VARIABLE}
+FOLDER_NAME_DEVICE_THEMES="wahooMapsCreator-device_themes-"${GITHUB_REF_VARIABLE}
 
 echo "Github-Ref: ${GITHUB_REF_VARIABLE}"
 
@@ -14,16 +15,20 @@ mkdir -p dist/${FOLDER_NAME_WIN}
 # zip cruiser stuff
 cd tooling/cruiser
 zip -r ../../dist/${FOLDER_NAME_CRUISER}.zip *
+cd ../..
+
+# zip device themes
+cd device_themes
+zip -r ../dist/${FOLDER_NAME_DEVICE_THEMES}.zip *
+cd ..
 
 # navigate into mac folder
-cd ../..
 cd dist/${FOLDER_NAME_MAC}
 
 # create empty sub-folders
 mkdir -p ./wahoomc
 mkdir -p ./wahoomc/resources
 mkdir -p ./conda_env
-mkdir -p ./tooling
 mkdir -p ./docs
 
 # copy files into dist-folder
@@ -46,7 +51,7 @@ cd ..
 cp -R ${FOLDER_NAME_MAC}/* ${FOLDER_NAME_WIN}
 
 # add Win specific stuff
-cp -a ../tooling_win ./${FOLDER_NAME_WIN}/tooling_win
+cp -a ../wahoomc/tooling_win ./${FOLDER_NAME_WIN}/tooling_win
 
 # zip content into .zip file - by cd'ing without including root folder
 cd ${FOLDER_NAME_MAC}

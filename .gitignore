@@ -5,6 +5,7 @@
 
 # top level
 osmconvert_tempfile.*
+osmfilter_tempfile.*
 
 # in all folders
 **/__pycache__/*
