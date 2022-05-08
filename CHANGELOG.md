@@ -4,7 +4,53 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-A list of unreleased changes can be found [here](https://github.com/treee111/wahooMapsCreator/compare/v1.1.1...HEAD).
+A list of unreleased changes can be found [here](https://github.com/treee111/wahooMapsCreator/compare/v2.0.0...HEAD).
+
+<a name="2.0.0"></a>
+## [2.0.0] - 2022-05-08
+### Breaking Changes
+- X/Y coordinates can be given as input parameters (e.g. for testing!) & refactoring of GUI & CLI processing ([#99](https://github.com/treee111/wahooMapsCreator/issues/99)) [`dabe117`](https://github.com/treee111/wahooMapsCreator/commit/dabe1171ddd543cada6fbf372a8a342cad720716)
+- Remove primary CLI input option `-fi`, that is giving a json-file with tile(s). It is replaced by [#99](https://github.com/treee111/wahooMapsCreator/issues/99) ([#105](https://github.com/treee111/wahooMapsCreator/issues/105)) [`1ca469c`](https://github.com/treee111/wahooMapsCreator/commit/1ca469ca75455f6cf26c36cea24a4ed4ff406d72)
+- default "process border countries" to yes in GUI and CLI ([#104](https://github.com/treee111/wahooMapsCreator/issues/104)) [`631b47d`](https://github.com/treee111/wahooMapsCreator/commit/631b47de395e7e540c0e9637b0cced5697e19175)
+
+### Features
+- restructure logging using logging-object, correct unittests & unittest-files ([#101](https://github.com/treee111/wahooMapsCreator/issues/101)) [`6026893`](https://github.com/treee111/wahooMapsCreator/commit/6026893467a8142072e9db8b53361dcbfe758387)
+- update documentation ([#110](https://github.com/treee111/wahooMapsCreator/issues/110)) [`b09ba71`](https://github.com/treee111/wahooMapsCreator/commit/b09ba714c10d86cfcac5ba0238bcd232dc193d18)
+- adjust BOLT device theme ([#111](https://github.com/treee111/wahooMapsCreator/issues/111)) [`f2337b5`](https://github.com/treee111/wahooMapsCreator/commit/f2337b5903e93b663af7db7f7cf070596516be41)
+- Introduce PyPI setup to distribute python package ([#117](https://github.com/treee111/wahooMapsCreator/issues/117)) [`a947b9f`](https://github.com/treee111/wahooMapsCreator/commit/a947b9f0a52143d7d4ab9fa07cbdf9173380a97a)
+- Include POIs into generated maps and diplay them with VTM rendering ([#106](https://github.com/treee111/wahooMapsCreator/issues/106)) [`b32fd86`](https://github.com/treee111/wahooMapsCreator/commit/b32fd86aee6bb8a3edf9465674521f5d80afa5be)
+
+### Bug Fixes
+- Adjust documentation from [#115](https://github.com/treee111/wahooMapsCreator/issues/115) and [#119](https://github.com/treee111/wahooMapsCreator/issues/119) ([#120](https://github.com/treee111/wahooMapsCreator/issues/120)) [`32f7235`](https://github.com/treee111/wahooMapsCreator/commit/32f7235c825fd1be9a652385b42a1c14cc4349e6)
+
+### Development/Infrastructure/Test/CI
+- correct pylint findings ([#103](https://github.com/treee111/wahooMapsCreator/issues/103)) [`cd8be6d`](https://github.com/treee111/wahooMapsCreator/commit/cd8be6de007e397b787274b0c2653bc0099baf94)
+- multiple small corrections & unifications. pylint findings, logging,  comments, unittests ([#107](https://github.com/treee111/wahooMapsCreator/issues/107)) [`c8ecf44`](https://github.com/treee111/wahooMapsCreator/commit/c8ecf44e4f817c52604aef371de837d86a628220)
+- Refactor tags constants, have universal tags and unittest it ([#108](https://github.com/treee111/wahooMapsCreator/issues/108)) [`df80946`](https://github.com/treee111/wahooMapsCreator/commit/df809469844b973a3acbe23d7176b8209b099932)
+- **CI/CD:** Introduce pylint via GitHub Actions on each push ([#112](https://github.com/treee111/wahooMapsCreator/issues/112)) [`d50479c`](https://github.com/treee111/wahooMapsCreator/commit/d50479cee6177d90510adfc72d5b78d54c3c85c6)
+- Change structure of repository to python module ([#115](https://github.com/treee111/wahooMapsCreator/issues/115)) [`e87ce45`](https://github.com/treee111/wahooMapsCreator/commit/e87ce45a9588d6c798ccb14cec5bb6735706dfe3)
+- correct pylint findings ([#116](https://github.com/treee111/wahooMapsCreator/issues/116)) [`d85bd01`](https://github.com/treee111/wahooMapsCreator/commit/d85bd01326b8828425697377b1b5fc0453c4ce62)
+
+### BREAKING CHANGE
+
+The GUI and CLI of wahooMapsCreator will now be called differently than
+before:
+- `python wahoomc gui` and
+- `python wahoomc cli -co malta`
+
+Für CLI and GUI, the default is now to calculate border countries.
+The CLI option `-bc` was therefore replaced by `-nbc`, "do not calculate border countries".
+
+Anaconda .yml files have now a different name for creating new environments. Existing Anaconda environments can still be used without adjustments!
+
+The GUI and CLI of wahooMapsCreator will now be called differently than
+before:
+- `python wahoo_map_creator.py gui` and
+- `python wahoo_map_creator.py cli -co malta`
+
+This will ensure better control over the CLI input parameters, help
+messages and is more consistent now!
+
 
 <a name="1.1.1"></a>
 ## [1.1.1] - 2022-05-02
@@ -219,6 +265,7 @@ wahooMapsCreator can now be used much quicker and easier!
     - Windows:    `tooling_windows/Windows-Wahoo-Map-Creator-Osmosis/wahoo-map-creator-osmosis.py`
 
 
+[2.0.0]: https://github.com/treee111/wahooMapsCreator/compare/v1.1.1...v2.0.0
 [1.1.1]: https://github.com/treee111/wahooMapsCreator/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/treee111/wahooMapsCreator/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/treee111/wahooMapsCreator/compare/v0.12.0...v1.0.0
