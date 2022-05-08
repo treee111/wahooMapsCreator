@@ -248,7 +248,7 @@
             <m e="way" k="highway" v="tertiary|tertiary_link|secondary_link|secondary" zoom-min="9">
                <pathText display="always" cat="bolt2-disabled" fill="#000000" k="name" font-family="sans_serif" font-style="bold" priority="2" size="16" stroke="#ffffff" stroke-width="2.0" zoom-min="14" />
                <pathText display="always" cat="bolt2-dark-disabled" fill="#000000" k="name" font-family="sans_serif" font-style="bold" priority="2" size="16" stroke="#ffffff" stroke-width="2.0" zoom-min="14" />
-               <line cat="bolt" outline="highway-bolt" stroke="#000000" width="3.5" />
+               <line cat="bolt" outline="highway-bolt" stroke="#000000" width="1.5" />
                <line cat="roam" outline="highway-roam" stroke="#FFFF00" width="3.5" />
                <line cat="bolt2" outline="bolt2-major-roads" stroke="#FFFF00" width="2.5" />
                <line cat="bolt2-dark" outline="bolt2-major-roads-dark" stroke="#FFFF00" width="2.5" />
@@ -256,7 +256,7 @@
             <m e="way" k="highway" v="primary_link|trunk_link|motorway_link|primary|trunk" zoom-min="9">
                <pathText display="always" cat="bolt2" fill="#000000" k="ref" font-family="sans_serif" font-style="bold" priority="2" size="16" stroke="#ffffff" stroke-width="4.0" />
                <pathText display="always" cat="bolt2-dark-disabled" fill="#000000" k="name" font-family="sans_serif" font-style="bold" priority="2" size="16" stroke="#ffffff" stroke-width="2.0" />
-               <line cat="bolt" outline="highway-bolt" stroke="#000000" width="3.5" />
+               <line cat="bolt" outline="highway-bolt" stroke="#000000" width="1.5" />
                <line cat="roam" outline="highway-roam" stroke="#FFFF00" width="3.5" />
                <line cat="bolt2" outline="bolt2-major-roads" stroke="#FFAA00" width="2.5" />
                <line cat="bolt2-dark" outline="bolt2-major-roads-dark" stroke="#FFAA00" width="2.5" />
@@ -652,23 +652,22 @@
 	   <m k="amenity" >
 		  <m v="fuel">
 			<symbol src="icons/fuel.svg" symbol-percent="150"/>
-		  </m>         
+		  </m>
 		  <m v="cafe" zoom-min="15">
 			<symbol src="icons/cafe.svg" symbol-percent="150"/>
 		  </m>
-        <m v="drinking_water" zoom-min="15">
+        <m v="drinking_water">
 			<symbol src="icons/drinking_water.svg" symbol-percent="150"/>
 		  </m>
-		</m>  
+		</m>
 		<m k="shop" >
 		  <m v="bakery">
 			<symbol src="icons/bakery.svg" symbol-percent="150"/>
 		  </m>
-		</m> 
+		</m>
 
     </m>
 	<m k="railway" v="station|halt|stop" zoom-min="13">
 			<symbol src="icons/train_station.svg" symbol-percent="130"/>
-
 	</m>
 </rendertheme>
