@@ -14,12 +14,12 @@ mkdir -p dist/${FOLDER_NAME_WIN}
 
 # zip cruiser stuff
 cd tooling/cruiser
-zip -r ../../dist/${FOLDER_NAME_CRUISER}.zip *
+zip -r -q ../../dist/${FOLDER_NAME_CRUISER}.zip *
 cd ../..
 
 # zip device themes
 cd device_themes
-zip -r ../dist/${FOLDER_NAME_DEVICE_THEMES}.zip *
+zip -r -q ../dist/${FOLDER_NAME_DEVICE_THEMES}.zip *
 cd ..
 
 # navigate into mac folder
@@ -51,12 +51,12 @@ cd ..
 cp -R ${FOLDER_NAME_MAC}/* ${FOLDER_NAME_WIN}
 
 # add Win specific stuff
-cp -a ../wahoomc/tooling_win ./${FOLDER_NAME_WIN}/tooling_win
+cp -a ../wahoomc/tooling_win ./${FOLDER_NAME_WIN}/wahoomc/tooling_win
 
 # zip content into .zip file - by cd'ing without including root folder
 cd ${FOLDER_NAME_MAC}
-zip -r ../${FOLDER_NAME_MAC}.zip *
+zip -r -q ../${FOLDER_NAME_MAC}.zip *
 
 cd ..
 cd ${FOLDER_NAME_WIN}
-zip -r ../${FOLDER_NAME_WIN}.zip *
+zip -r -q ../${FOLDER_NAME_WIN}.zip *
