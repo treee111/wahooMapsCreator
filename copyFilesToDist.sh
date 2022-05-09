@@ -51,7 +51,7 @@ cd ..
 cp -R ${FOLDER_NAME_MAC}/* ${FOLDER_NAME_WIN}
 
 # add Win specific stuff
-cp -a ../wahoomc/tooling_win ./${FOLDER_NAME_WIN}/tooling_win
+cp -a ../wahoomc/tooling_win ./${FOLDER_NAME_WIN}/wahoomc/tooling_win
 
 # zip content into .zip file - by cd'ing without including root folder
 cd ${FOLDER_NAME_MAC}
