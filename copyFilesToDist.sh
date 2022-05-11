@@ -1,6 +1,5 @@
 FOLDER_NAME_MAC="wahooMapsCreator-"${GITHUB_REF_VARIABLE}"-macOS-Linux"
 FOLDER_NAME_WIN="wahooMapsCreator-"${GITHUB_REF_VARIABLE}"-Windows"
-FOLDER_NAME_CRUISER="wahooMapsCreator-cruiser-"${GITHUB_REF_VARIABLE}
 FOLDER_NAME_DEVICE_THEMES="wahooMapsCreator-device_themes-"${GITHUB_REF_VARIABLE}
 
 echo "Github-Ref: ${GITHUB_REF_VARIABLE}"
@@ -11,11 +10,6 @@ mkdir -p dist
 # create OS-specific folders
 mkdir -p dist/${FOLDER_NAME_MAC}
 mkdir -p dist/${FOLDER_NAME_WIN}
-
-# zip cruiser stuff
-cd tooling/cruiser
-zip -r -q ../../dist/${FOLDER_NAME_CRUISER}.zip *
-cd ../..
 
 # zip device themes
 cd device_themes
