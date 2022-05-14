@@ -12,7 +12,6 @@ import geojson
 from shapely.geometry import Polygon, shape
 
 # import custom python packages
-from wahoomc import file_directory_functions as fd_fct
 from wahoomc import constants
 
 log = logging.getLogger('main-logger')
@@ -143,7 +142,7 @@ def geom(wanted):
     input parameter is the name of the desired country/region as use by Geofabric
     in their json file.
     """
-    with open(fd_fct.GEOFABRIK_PATH, encoding='utf8') as file_handle:
+    with open(constants.GEOFABRIK_PATH, encoding='utf8') as file_handle:
         data = geojson.load(file_handle)
     file_handle.close()
 
@@ -197,7 +196,7 @@ def find_needed_countries(bbox_tiles, wanted_map, wanted_region_polygon):
     """
     output = []
 
-    with open(fd_fct.GEOFABRIK_PATH, encoding='utf8') as file_handle:
+    with open(constants.GEOFABRIK_PATH, encoding='utf8') as file_handle:
         geofabrik_json_data = geojson.load(file_handle)
     file_handle.close()
 

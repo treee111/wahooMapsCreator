@@ -15,6 +15,13 @@ import logging
 from wahoomc import file_directory_functions as fd_fct
 from wahoomc import constants_functions as const_fct
 
+# User
+from wahoomc.constants import USER_DL_DIR
+from wahoomc.constants import USER_MAPS_DIR
+from wahoomc.constants import LAND_POLYGONS_PATH
+from wahoomc.constants import GEOFABRIK_PATH
+from wahoomc.constants import USER_OUTPUT_DIR
+
 log = logging.getLogger('main-logger')
 
 
@@ -37,11 +44,11 @@ def download_file(target_filepath, url, is_zip):
     if is_zip:
         # build target-filepath based on last element of URL
         last_part = url.rsplit('/', 1)[-1]
-        dl_file_path = os.path.join(fd_fct.USER_DL_DIR, last_part)
+        dl_file_path = os.path.join(USER_DL_DIR, last_part)
         # download URL to file
         fd_fct.download_url_to_file(url, dl_file_path)
         # unpack it - should work on macOS and Windows
-        fd_fct.unzip(dl_file_path, fd_fct.USER_DL_DIR)
+        fd_fct.unzip(dl_file_path, USER_DL_DIR)
         # delete .zip file
         os.remove(dl_file_path)
     else:
@@ -63,7 +70,7 @@ def get_osm_pbf_filepath_url(country):
     # get .osm.pbf region of country
     url = build_url_for_country_osm_pbf_download(country)
     map_file_path = os.path.join(
-        fd_fct.USER_MAPS_DIR, f'{country}' + '-latest.osm.pbf')
+        USER_MAPS_DIR, f'{country}' + '-latest.osm.pbf')
     # return URL and download filepath
     return map_file_path, url
 
@@ -101,10 +108,10 @@ class Downloader:
 
         force_processing = False
 
-        if self.check_file(fd_fct.GEOFABRIK_PATH) is True or \
+        if self.check_file(GEOFABRIK_PATH) is True or \
                 self.force_download is True:
             log.info('# Need to download geofabrik file')
-            download_file(fd_fct.GEOFABRIK_PATH,
+            download_file(GEOFABRIK_PATH,
                           'https://download.geofabrik.de/index-v1.json', False)
             force_processing = True
 
@@ -120,10 +127,10 @@ class Downloader:
 
         force_processing = False
 
-        if self.check_file(fd_fct.LAND_POLYGONS_PATH) is True or \
+        if self.check_file(LAND_POLYGONS_PATH) is True or \
                 self.force_download is True:
             log.info('# Need to download land polygons file')
-            download_file(fd_fct.LAND_POLYGONS_PATH,
+            download_file(LAND_POLYGONS_PATH,
                           'https://osmdata.openstreetmap.de/download/land-polygons-split-4326.zip', True)
             force_processing = True
 
@@ -146,7 +153,8 @@ class Downloader:
         log.info('+ Check countries .osm.pbf files: OK')
 
         # if force_processing is True:
-        fd_fct.create_empty_directories(self.tiles_from_json)
+        fd_fct.create_empty_directories(
+            USER_OUTPUT_DIR, self.tiles_from_json)
 
         return force_processing
 
@@ -200,10 +208,10 @@ class Downloader:
 
             # check for already existing .osm.pbf file
             map_file_path = glob.glob(
-                f'{fd_fct.USER_MAPS_DIR}/{transl_c}-latest.osm.pbf')
+                f'{USER_MAPS_DIR}/{transl_c}-latest.osm.pbf')
             if len(map_file_path) != 1:
                 map_file_path = glob.glob(
-                    f'{fd_fct.USER_MAPS_DIR}/**/{transl_c}-latest.osm.pbf')
+                    f'{USER_MAPS_DIR}/**/{transl_c}-latest.osm.pbf')
 
             # delete .osm.pbf file if out of date
             if len(map_file_path) == 1 and os.path.isfile(map_file_path[0]):

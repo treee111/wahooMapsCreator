@@ -10,7 +10,7 @@ import os
 
 # import custom python packages
 from wahoomc import constants
-from wahoomc import file_directory_functions as fd_fct
+from wahoomc.constants import RESOURCES_DIR
 
 log = logging.getLogger('main-logger')
 
@@ -125,7 +125,7 @@ def get_path_to_static_tile_json(country):
     """
     return the path to the static .json file with the files for the given country
     """
-    return os.path.join(fd_fct.RESOURCES_DIR, 'json',
+    return os.path.join(RESOURCES_DIR, 'json',
                         get_region_of_country(country), country + '.json')
 
 

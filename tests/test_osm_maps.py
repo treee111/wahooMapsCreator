@@ -220,9 +220,9 @@ class TestStaticJsons(unittest.TestCase):
         use static json files in the repo to calculate relevant tile
         """
 
-        with open(os.path.join(fd_fct.RESOURCES_DIR, 'sea.osm')) as sea_file:  # pylint: disable=unspecified-encoding
+        with open(os.path.join(constants.RESOURCES_DIR, 'sea.osm')) as sea_file:  # pylint: disable=unspecified-encoding
             sea_data_no_encoding = sea_file.read()
-        with open(os.path.join(fd_fct.RESOURCES_DIR, 'sea.osm'), encoding="utf-8") as sea_file:
+        with open(os.path.join(constants.RESOURCES_DIR, 'sea.osm'), encoding="utf-8") as sea_file:
             sea_data_utf8 = sea_file.read()
 
         self.assertEqual(sea_data_no_encoding, sea_data_utf8)
@@ -285,7 +285,7 @@ class TestStaticJsons(unittest.TestCase):
         """
         json_file_path = const_fct.get_path_to_static_tile_json(country)
 
-        expected_path = os.path.join(fd_fct.RESOURCES_DIR, 'json',
+        expected_path = os.path.join(constants.RESOURCES_DIR, 'json',
                                      exp_path + '.json')
 
         self.assertEqual(json_file_path, expected_path)
@@ -296,8 +296,8 @@ class TestStaticJsons(unittest.TestCase):
         go through all files in the wahoo_mc/resources/json directory
         - check if correct .json will be evaluated through get_path_to_static_tile_json function
         """
-        for folder in fd_fct.get_folders_in_folder(os.path.join(fd_fct.RESOURCES_DIR, 'json')):
-            for file in fd_fct.get_files_in_folder(os.path.join(fd_fct.RESOURCES_DIR, 'json', folder)):
+        for folder in fd_fct.get_folders_in_folder(os.path.join(constants.RESOURCES_DIR, 'json')):
+            for file in fd_fct.get_files_in_folder(os.path.join(constants.RESOURCES_DIR, 'json', folder)):
                 country = os.path.splitext(file)[0]
 
                 self.calculate_path_to_static_tile_json(

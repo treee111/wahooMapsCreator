@@ -11,7 +11,7 @@ import unittest
 
 
 # import custom python packages
-from wahoomc import file_directory_functions as fd_fct
+from wahoomc import constants
 
 dirname_of_file = os.path.dirname(__file__)
 
@@ -23,7 +23,7 @@ def copy_static_maps_input_file(country, given_osm_pbf):
     given_osm_pbf_file = os.path.join(
         dirname_of_file, 'resources', given_osm_pbf)
     copy_to_path = os.path.join(
-        fd_fct.USER_MAPS_DIR, country + '-latest.osm.pbf')
+        constants.USER_MAPS_DIR, country + '-latest.osm.pbf')
 
     # copy file (new file takes creationdate as of now)
     shutil.copy2(given_osm_pbf_file, copy_to_path)
@@ -35,11 +35,11 @@ def copy_static_land_polygon_input_folder(given_osm_pbf):
     """
     # get parent folder of repo
     root_dir_parent = os.path.abspath(
-        os.path.join(fd_fct.ROOT_DIR, os.pardir))
+        os.path.join(constants.ROOT_DIR, os.pardir))
 
     static_file_path = os.path.join(
         root_dir_parent, 'unittest-files', given_osm_pbf)
-    copy_to_path = os.path.dirname(fd_fct.LAND_POLYGONS_PATH)
+    copy_to_path = os.path.dirname(constants.LAND_POLYGONS_PATH)
 
     # delete directory if exists. copytree fails if dir exists already
     if os.path.exists(copy_to_path):
@@ -129,7 +129,7 @@ class TestGeneratedFiles(unittest.TestCase):
                         given_output_file = os.path.join(
                             dirpath_2, file)
                         calculated_output_file = os.path.join(
-                            fd_fct.USER_OUTPUT_DIR, dir_to_compare, directory, file)
+                            constants.USER_OUTPUT_DIR, dir_to_compare, directory, file)
 
                         # is file equal?
                         self.assertTrue(filecmp.cmp(given_output_file, calculated_output_file,
@@ -141,7 +141,7 @@ class TestGeneratedFiles(unittest.TestCase):
                 given_output_file = os.path.join(
                     dirpath, file)
                 calculated_output_file = os.path.join(
-                    fd_fct.USER_OUTPUT_DIR, dir_to_compare, file)
+                    constants.USER_OUTPUT_DIR, dir_to_compare, file)
 
                 # is file equal?
                 self.assertTrue(filecmp.cmp(given_output_file, calculated_output_file,
