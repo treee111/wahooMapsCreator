@@ -13,6 +13,7 @@ import sys
 
 # import custom python packages
 from wahoomc.file_directory_functions import move_content
+from wahoomc.constants_functions import get_tooling_win_path
 from wahoomc.constants import USER_WAHOO_MC
 from wahoomc.constants import USER_DL_DIR
 from wahoomc.constants import USER_MAPS_DIR
@@ -48,12 +49,32 @@ def check_installation_of_required_programs():
     """
     check if required programs are installed
     """
-    text_to_docu = "Please refer to the Quickstart Guide of wahooMapsCreator for instructions:\n https://github.com/treee111/wahooMapsCreator/blob/develop/docs/QUICKSTART_ANACONDA.md"
+    text_to_docu = "Please refer to the Quickstart Guide of wahooMapsCreator for instructions:\n https://github.com/treee111/wahooMapsCreator/blob/develop/docs/QUICKSTART_ANACONDA.md \
+                    or create an issue:\n https://github.com/treee111/wahooMapsCreator/issues"
+
     if not is_program_installed("java"):
         sys.exit(
             f"Java is not installed. {text_to_docu}")
 
-    if platform.system() != "Windows":
+    if platform.system() == "Windows":
+        if not os.path.exists(get_tooling_win_path(
+                ['Osmosis', 'bin', 'osmosis.bat'])):
+            sys.exit(
+                f"Osmosis is not available. {text_to_docu}")
+
+        if not os.path.exists(get_tooling_win_path(['osmconvert'])):
+            sys.exit(
+                f"osmconvert is not available. {text_to_docu}")
+
+        if not os.path.exists(get_tooling_win_path(['osmfilter'])):
+            sys.exit(
+                f"osmfilter is not available. {text_to_docu}")
+
+        if not os.path.exists(get_tooling_win_path(['7za'])):
+            sys.exit(
+                f"7za is not available. {text_to_docu}")
+
+    else:
         if not is_program_installed("osmium"):
             sys.exit(
                 f"osmium-tool is not installed. {text_to_docu}")
