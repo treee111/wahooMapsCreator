@@ -4,9 +4,7 @@ tests the generated files of a full-run of the tool against fixed files
 
 import filecmp
 import os
-from os import listdir
 from os import walk
-from os.path import isfile, join
 import platform
 import shutil
 import unittest
