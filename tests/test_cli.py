@@ -17,7 +17,7 @@ class TestCli(unittest.TestCase):
         tests, if help of top parser can be called
         """
 
-        result = os.system("python -h wahoomc -h")
+        result = os.system("python -m wahoomc -h")
 
         self.assertEqual(result, 0)
 
@@ -26,7 +26,7 @@ class TestCli(unittest.TestCase):
         tests, if CLI help can be called
         """
 
-        result = os.system("python -h wahoomc cli -h")
+        result = os.system("python -m wahoomc cli -h")
 
         self.assertEqual(result, 0)
 
@@ -35,7 +35,7 @@ class TestCli(unittest.TestCase):
         tests, if GUI help can be called
         """
 
-        result = os.system("python -h wahoomc gui -h")
+        result = os.system("python -m wahoomc gui -h")
 
         self.assertEqual(result, 0)
 
