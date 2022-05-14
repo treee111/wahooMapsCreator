@@ -209,3 +209,10 @@ def get_filenames_of_jsons_in_folder(folder):
             json_files.extend([filename])
 
     return json_files
+
+
+def get_tooling_win_path(path_in_tooling_win):
+    """
+    return path to a tooling in the tooling_win directory and the given path
+    """
+    return os.path.join(TOOLING_WIN_DIR, *path_in_tooling_win)

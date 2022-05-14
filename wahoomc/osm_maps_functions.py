@@ -94,8 +94,8 @@ class OsmMaps:
     This is a OSM data class
     """
 
-    osmosis_win_file_path = os.path.join(
-        fd_fct.TOOLING_WIN_DIR, 'Osmosis', 'bin', 'osmosis.bat')
+    osmosis_win_file_path = fd_fct.get_tooling_win_path(
+        ['Osmosis', 'bin', 'osmosis.bat'])
 
     # Number of workers for the Osmosis read binary fast function
     workers = '1'
@@ -112,11 +112,10 @@ class OsmMaps:
             o_input_data.max_days_old, o_input_data.force_download)
 
         if 8 * struct.calcsize("P") == 32:
-            self.osmconvert_path = os.path.join(
-                fd_fct.TOOLING_WIN_DIR, 'osmconvert')
+            self.osmconvert_path = fd_fct.get_tooling_win_path(['osmconvert'])
         else:
-            self.osmconvert_path = os.path.join(
-                fd_fct.TOOLING_WIN_DIR, 'osmconvert64-0.8.8p')
+            self.osmconvert_path = fd_fct.get_tooling_win_path(
+                ['osmconvert64-0.8.8p'])
 
     def process_input(self, calc_border_countries):
         """
@@ -270,7 +269,7 @@ class OsmMaps:
 
                     log.info(
                         '+ Filtering unwanted map objects out of map of %s', key)
-                    cmd = [os.path.join(fd_fct.TOOLING_WIN_DIR, 'osmfilter')]
+                    cmd = [fd_fct.get_tooling_win_path(['osmfilter'])]
                     cmd.append(out_file_o5m)
                     cmd.append(
                         '--keep="' + const_fct.translate_tags_to_keep(sys_platform=platform.system()) + '"')
@@ -281,7 +280,7 @@ class OsmMaps:
                     run_subprocess_and_log_output(
                         cmd, '! Error in OSMFilter with country: {key}')
 
-                    cmd = [os.path.join(fd_fct.TOOLING_WIN_DIR, 'osmfilter')]
+                    cmd = [fd_fct.get_tooling_win_path(['osmfilter'])]
                     cmd.append(out_file_o5m)
                     cmd.append(
                         '--keep="' + const_fct.translate_tags_to_keep(
@@ -669,7 +668,7 @@ class OsmMaps:
 
                 # Windows
                 if platform.system() == "Windows":
-                    cmd = [os.path.join(fd_fct.TOOLING_WIN_DIR, 'lzma'), 'e', out_file,
+                    cmd = [fd_fct.get_tooling_win_path(['lzma']), 'e', out_file,
                            out_file+'.lzma', f'-mt{threads}', '-d27', '-fb273', '-eos']
                 # Non-Windows
                 else:
@@ -731,8 +730,7 @@ class OsmMaps:
         if zip_folder:
             # Windows
             if platform.system() == "Windows":
-                path_7za = os.path.join(fd_fct.TOOLING_WIN_DIR, '7za')
-                cmd = [path_7za, 'a', '-tzip']
+                cmd = [fd_fct.get_tooling_win_path(['7za']), 'a', '-tzip']
 
                 cmd.extend(
                     [folder_name + '.zip', os.path.join(".", folder_name, "*")])
