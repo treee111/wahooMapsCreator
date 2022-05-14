@@ -38,10 +38,10 @@ class TestSetup(unittest.TestCase):
             self.assertTrue(os.path.exists(get_tooling_win_path(
                 ['Osmosis', 'bin', 'osmosis.bat'])))
             self.assertTrue(os.path.exists(
-                get_tooling_win_path(['osmconvert'])))
+                get_tooling_win_path(['osmconvert.exe'])))
             self.assertTrue(os.path.exists(
-                get_tooling_win_path(['osmfilter'])))
-            self.assertTrue(os.path.exists(get_tooling_win_path(['7za'])))
+                get_tooling_win_path(['osmfilter.exe'])))
+            self.assertTrue(os.path.exists(get_tooling_win_path(['7za.exe'])))
 
     def check_installation_of_program(self, program):
         """
