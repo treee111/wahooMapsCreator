@@ -8,8 +8,8 @@ import logging
 
 # import custom python packages
 from wahoomc.input import process_call_of_the_tool
-from wahoomc.file_directory_functions import initialize_work_directories
-from wahoomc.file_directory_functions import move_old_content_into_new_dirs
+from wahoomc.setup_functions import initialize_work_directories
+from wahoomc.setup_functions import move_old_content_into_new_dirs
 from wahoomc.osm_maps_functions import OsmMaps
 
 # logging used in the terminal output:

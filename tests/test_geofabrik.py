@@ -10,6 +10,7 @@ from wahoomc.geofabrik import Geofabrik
 from wahoomc import file_directory_functions as fd_fct
 from wahoomc import constants_functions as const_fct
 from wahoomc.downloader import Downloader
+from wahoomc import constants
 
 
 def calc_tiles_via_geofabrik_json(input_argument):
@@ -28,7 +29,7 @@ def calc_tiles_via_static_jsons(input_argument):
     calculate tiles using the json files in the repo
     the "old" way of doing
     """
-    json_file_path = os.path.join(fd_fct.RESOURCES_DIR, 'json',
+    json_file_path = os.path.join(constants.RESOURCES_DIR, 'json',
                                   const_fct.get_region_of_country(input_argument), input_argument + '.json')
     tiles_via_static_json = fd_fct.read_json_file(json_file_path)
 
@@ -43,7 +44,7 @@ class TestGeofabrik(unittest.TestCase):
     def setUp(self):
         self.max_days_old = 14
 
-        if not os.path.isfile(fd_fct.GEOFABRIK_PATH):
+        if not os.path.isfile(constants.GEOFABRIK_PATH):
             o_downloader = Downloader(24, False)
             o_downloader.check_and_download_geofabrik_if_needed()
 

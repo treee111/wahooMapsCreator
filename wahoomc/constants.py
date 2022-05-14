@@ -3,6 +3,24 @@ constants
 """
 #!/usr/bin/python
 
+import os
+from pathlib import Path
+
+# User
+USER_WAHOO_MC = os.path.join(str(Path.home()), 'wahooMapsCreatorData')
+USER_DL_DIR = os.path.join(USER_WAHOO_MC, '_download')
+USER_MAPS_DIR = os.path.join(USER_DL_DIR, 'maps')
+LAND_POLYGONS_PATH = os.path.join(
+    USER_DL_DIR, 'land-polygons-split-4326', 'land_polygons.shp')
+GEOFABRIK_PATH = os.path.join(USER_DL_DIR, 'geofabrik.json')
+USER_OUTPUT_DIR = os.path.join(USER_WAHOO_MC, '_tiles')
+
+# Python Package - wahooMapsCreator directory
+WAHOO_MC_DIR = os.path.dirname(__file__)
+RESOURCES_DIR = os.path.join(WAHOO_MC_DIR, 'resources')
+TOOLING_WIN_DIR = os.path.join(WAHOO_MC_DIR, 'tooling_win')
+ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
+
 Translate_Country = {
     'alaska':                           'united_states_of_america',
     'anguilla':                         'central-america',
