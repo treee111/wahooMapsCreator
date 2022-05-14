@@ -122,94 +122,53 @@ class TestGeneratedFiles(unittest.TestCase):
     - 100.map.lzma
     """
 
-    # def setUp(self):
-    #     self.copy_static_land_polygon_input_folder(
-    #         'land-polygons-split-4326_2021-10-31')
-
-    #     self.copy_static_maps_input_file(
-    #         'malta', 'malta-latest_2021-10-31.osm.pbf')
-    #     self.copy_static_maps_input_file(
-    #         'liechtenstein', 'liechtenstein-latest_2021-10-31.osm.pbf')
-
-    def test_1_setup(self):  # pylint: disable=no-self-use
-        """
-        Copy defined static land-polygons and .osm.pbf files.
-        The files are used in the launch.json configs "test_2_malta" and "test_2_liech"
-        """
-
+    def setUp(self):
         copy_static_land_polygon_input_folder(
             'land-polygons-split-4326_2021-10-31')
 
-        copy_static_maps_input_file(
-            'malta', 'malta-latest_2021-10-31.osm.pbf')
-        copy_static_maps_input_file(
-            'liechtenstein', 'liechtenstein-latest_2021-10-31.osm.pbf')
+        # self.copy_static_maps_input_file(
+        #     'malta', 'malta-latest_2021-10-31.osm.pbf')
+        # self.copy_static_maps_input_file(
+        #     'liechtenstein', 'liechtenstein-latest_2021-10-31.osm.pbf')
 
-    def test_3_malta_compare_output(self):
+    def test_calc_output_malta_and_compare(self):
         """
-        Compare output of countries without border countries
+        Test output of countries without border countries
         - of malta
         """
+
+        # run tool for countries
+        self.run_wahoomapscreator_cli(
+            'malta', 'malta-latest_2021-10-31.osm.pbf')
 
         # compare generated given merged.osm.pbf-file with reference-file
         self.compare_dir_sub_test_resource_and_output(
             os.path.join('138', '100'))
 
-    def test_3_liech_compare_output(self):
+    def test_calc_output_liechtenstein_and_compare(self):
         """
-        Compare output of countries without border countries
+        Test output of countries without border countries
         - of liechtenstein
         """
+
+        # run tool for country
+        self.run_wahoomapscreator_cli(
+            'liechtenstein', 'liechtenstein-latest_2021-10-31.osm.pbf')
 
         # compare generated given merged.osm.pbf-file with reference-file
         self.compare_dir_sub_test_resource_and_output(
             os.path.join('134', '89'))
 
-    # def test_calc_output_malta(self):
-    #     """
-    #     Test output of countries without border countries
-    #     - of malta
-    #     """
-
-    #     # run tool for countries
-    #     self.run_wahoomapscreator_cli(
-    #         'malta', 'malta-latest_2021-10-31.osm.pbf')
-
-    #     # compare generated given merged.osm.pbf-file with reference-file
-    #     # equals_merged = self.compare_test_resource_and_output(
-    #     #     '138/100/merged.osm.pbf')
-    #     self.compare_dir_sub_test_resource_and_output(
-    #         os.path.join('138', '100'))
-
-    # def test_calc_output_liechtenstein(self):
-    #     """
-    #     Test output of countries without border countries
-    #     - of liechtenstein
-    #     """
-
-    #     # run tool for country
-    #     self.run_wahoomapscreator_cli(
-    #         'liechtenstein', 'liechtenstein-latest_2021-10-31.osm.pbf')
-
-    #     # compare generated given merged.osm.pbf-file with reference-file
-
-    #     self.compare_dir_sub_test_resource_and_output(
-    #         os.path.join('134', '89'))
-
     def run_wahoomapscreator_cli(self, country, given_osm_pbf):
         """
         runs wahooMapsCreator for given country and static osm.pbf file via CLI
+        - without border countries
         """
         copy_static_maps_input_file(country, given_osm_pbf)
 
         # run processing of input-country via CLI
-        if platform.system() == "Windows":
-            cli_command = "python"
-        else:
-            cli_command = "python3"
-
         result = os.system(
-            f'{cli_command} -m wahoomc cli -co {country} -tag tag-wahoo.xml -fp -c -md 100')
+            f'python -m wahoomc cli -co {country} -tag tag-wahoo.xml -fp -c -md 9999 -nbc')
 
         # check if run was successful
         self.assertEqual(result, 0)

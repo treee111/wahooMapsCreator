@@ -141,43 +141,6 @@
             ]
         },
         {
-            "name": "test_2_malta",
-            "type": "python",
-            "request": "launch",
-            "module": "wahoomc",
-            "console": "integratedTerminal",
-            "args": [
-                "cli",
-                "-co",
-                "malta",
-                "-tag",
-                "tag-wahoo.xml",
-                "-fp",
-                "-c",
-                "-md",
-                "9999"
-            ]
-        },
-        {
-            "name": "test_2_liech",
-            "type": "python",
-            "request": "launch",
-            "module": "wahoomc",
-            "console": "integratedTerminal",
-            "args": [
-                "cli",
-                "-co",
-                "liechtenstein",
-                "-tag",
-                "tag-wahoo.xml",
-                "-fp",
-                "-c",
-                "-md",
-                "9999",
-                "-nbc"
-            ]
-        },
-        {
             "name": "x/y: 133/88 (germany&france)",
             "type": "python",
             "request": "launch",
