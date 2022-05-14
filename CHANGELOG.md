@@ -26,6 +26,10 @@ A list of unreleased changes can be found [here](https://github.com/treee111/wah
 - Introduce PyPI setup to distribute python package ([#117](https://github.com/treee111/wahooMapsCreator/issues/117)) [`a947b9f`](https://github.com/treee111/wahooMapsCreator/commit/a947b9f0a52143d7d4ab9fa07cbdf9173380a97a)
 - Include POIs into generated maps and diplay them with VTM rendering ([#106](https://github.com/treee111/wahooMapsCreator/issues/106)) [`b32fd86`](https://github.com/treee111/wahooMapsCreator/commit/b32fd86aee6bb8a3edf9465674521f5d80afa5be)
 
+### Features no.2
+- Do not zip folders with generated files by default ([#118](https://github.com/treee111/wahooMapsCreator/issues/118)) [`a4feb92`](https://github.com/treee111/wahooMapsCreator/commit/a4feb92962f9904b914fb5aa48649a534212702b)
+- **install:** move work-directories to the user directory (prerequisite for PyPI setup) ([#119](https://github.com/treee111/wahooMapsCreator/issues/119)) [`0dd582b`](https://github.com/treee111/wahooMapsCreator/commit/0dd582b5c6649385925ec6ffe75fb375a8beec27)
+
 ### Bug Fixes
 - Adjust documentation from [#115](https://github.com/treee111/wahooMapsCreator/issues/115) and [#119](https://github.com/treee111/wahooMapsCreator/issues/119) ([#120](https://github.com/treee111/wahooMapsCreator/issues/120)) [`32f7235`](https://github.com/treee111/wahooMapsCreator/commit/32f7235c825fd1be9a652385b42a1c14cc4349e6)
 
