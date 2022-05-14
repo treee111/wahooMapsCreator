@@ -14,7 +14,6 @@ import shutil
 import requests
 
 # import custom python packages
-from wahoomc.constants import TOOLING_WIN_DIR
 from wahoomc.constants import RESOURCES_DIR
 
 log = logging.getLogger('main-logger')
@@ -165,13 +164,6 @@ def get_filenames_of_jsons_in_folder(folder):
             json_files.extend([filename])
 
     return json_files
-
-
-def get_tooling_win_path(path_in_tooling_win):
-    """
-    return path to a tooling in the tooling_win directory and the given path
-    """
-    return os.path.join(TOOLING_WIN_DIR, *path_in_tooling_win)
 
 
 def get_tag_wahoo_xml_path(tag_wahoo_xml):
