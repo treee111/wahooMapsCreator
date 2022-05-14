@@ -18,9 +18,6 @@ def initialize_work_directories():
     """
     Initialize work directories
     """
-
-    # USER_DIR = os.path.join(str(Path.home()), 'gitcommon')
-
     os.makedirs(constants.USER_WAHOO_MC, exist_ok=True)
     os.makedirs(constants.USER_DL_DIR, exist_ok=True)
     os.makedirs(constants.USER_MAPS_DIR, exist_ok=True)

@@ -21,7 +21,7 @@ from wahoomc.constants_functions import get_path_to_static_tile_json, translate_
 from wahoomc.constants import USER_WAHOO_MC
 from wahoomc.constants import USER_OUTPUT_DIR
 from wahoomc.constants import RESOURCES_DIR
-from wahoomc.downloader import LAND_POLYGONS_PATH
+from wahoomc.constants import LAND_POLYGONS_PATH
 
 from wahoomc.downloader import Downloader
 from wahoomc.geofabrik import Geofabrik
