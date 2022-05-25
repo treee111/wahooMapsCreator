@@ -412,7 +412,7 @@ class OsmMaps:
         """
 
         log.info('-' * 80)
-        log.info('# Generate land')
+        log.info('# Generate land for each coordinate')
 
         tile_count = 1
         for tile in self.o_osm_data.tiles:
@@ -424,7 +424,7 @@ class OsmMaps:
             # create land.dbf, land.prj, land.shp, land.shx
             if not os.path.isfile(land_file) or self.o_osm_data.force_processing is True:
                 log.info(
-                    '+ Generate land %s of %s for Coordinates: %s,%s', tile_count, len(self.o_osm_data.tiles), tile["x"], tile["y"])
+                    '+ Coordinates: %s,%s. (%s of %s)', tile["x"], tile["y"], tile_count, len(self.o_osm_data.tiles))
                 cmd = ['ogr2ogr', '-overwrite', '-skipfailures']
                 # Try to prevent getting outside of the +/-180 and +/- 90 degrees borders. Normally the +/- 0.1 are there to prevent white lines at border borders.
                 if tile["x"] == 255 or tile["y"] == 255 or tile["x"] == 0 or tile["y"] == 0:
@@ -459,7 +459,7 @@ class OsmMaps:
                     cmd, f'! Error creating land.osm for tile: {tile["x"]},{tile["y"]}')
             tile_count += 1
 
-        log.info('+ Generate land: OK')
+        log.info('+ Generate land for each coordinate: OK')
 
     def generate_sea(self):
         """
@@ -467,7 +467,7 @@ class OsmMaps:
         """
 
         log.info('-' * 80)
-        log.info('# Generate sea')
+        log.info('# Generate sea for each coordinate')
 
         tile_count = 1
         for tile in self.o_osm_data.tiles:
@@ -475,7 +475,7 @@ class OsmMaps:
                                         f'{tile["x"]}', f'{tile["y"]}', 'sea.osm')
             if not os.path.isfile(out_file_sea) or self.o_osm_data.force_processing is True:
                 log.info(
-                    '+ Generate sea %s of %s for Coordinates: %s,%s', tile_count, len(self.o_osm_data.tiles), tile["x"], tile["y"])
+                    '+ Coordinates: %s,%s. (%s of %s)', tile["x"], tile["y"], tile_count, len(self.o_osm_data.tiles))
                 with open(os.path.join(RESOURCES_DIR, 'sea.osm'), encoding="utf-8") as sea_file:
                     sea_data = sea_file.read()
 
@@ -503,7 +503,7 @@ class OsmMaps:
                         output_file.write(sea_data)
             tile_count += 1
 
-        log.info('+ Generate sea: OK')
+        log.info('+ Generate sea for each coordinate: OK')
 
     def split_filtered_country_files_to_tiles(self):
         """
@@ -519,7 +519,7 @@ class OsmMaps:
                 if country not in tile['countries']:
                     continue
                 log.info(
-                    '+ Splitting tile %s of %s for Coordinates: %s,%s from map of %s', tile_count, len(self.o_osm_data.tiles), tile["x"], tile["y"], country)
+                    '+ Coordinates: %s,%s / %s (%s of %s)', tile["x"], tile["y"], country, tile_count, len(self.o_osm_data.tiles))
                 out_file = os.path.join(USER_OUTPUT_DIR,
                                         f'{tile["x"]}', f'{tile["y"]}', f'split-{country}.osm.pbf')
                 out_file_names = os.path.join(USER_OUTPUT_DIR,
@@ -700,7 +700,7 @@ class OsmMaps:
         """
 
         log.info('-' * 80)
-        log.info('# Creating .map files')
+        log.info('# Creating .map files for tiles')
 
         # Number of threads to use in the mapwriter plug-in
         threads = multiprocessing.cpu_count() - 1
@@ -710,7 +710,8 @@ class OsmMaps:
         tile_count = 1
         for tile in self.o_osm_data.tiles:
             log.info(
-                '+ Creating map file for tile %s of %s for Coordinates: %s,%s', tile_count, len(self.o_osm_data.tiles), tile["x"], tile["y"])
+                '+ Coordinates: %s,%s (%s of %s)', tile["x"], tile["y"], tile_count, len(self.o_osm_data.tiles))
+
             out_file_map = os.path.join(USER_OUTPUT_DIR,
                                         f'{tile["x"]}', f'{tile["y"]}.map')
 
@@ -765,7 +766,7 @@ class OsmMaps:
 
             tile_count += 1
 
-        log.info('+ Creating .map files: OK')
+        log.info('+ Creating .map files for tiles: OK')
 
     def make_and_zip_files(self, extension, zip_folder):
         """
