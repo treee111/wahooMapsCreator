@@ -78,7 +78,7 @@ def run_subprocess_and_log_output(cmd, error_message, cwd=""):
     if not cwd:
         with subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT) as process:
             for line in iter(process.stdout.readline, b''):  # b'\n'-separated lines
-                log.debug('subprocess:%r', line.decode("utf-8").strip())
+                log.debug('subprocess:%r', line.decode("latin-1").strip())
     else:
         with subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, cwd=cwd) as process:
             for line in iter(process.stdout.readline, b''):  # b'\n'-separated lines
