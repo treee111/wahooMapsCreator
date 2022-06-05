@@ -1,22 +1,8 @@
-# IDE
-/.vscode/*
-/!.vscode/launch.json
-/!.vscode/settings.json
-
-# top level
-osmconvert_tempfile.*
-osmfilter_tempfile.*
-
 # in all folders
 **/__pycache__/*
 **/*.pyc
 **/*.DS_Store
 **/*.py*.tmp
-
-# mac/unix
-
-#windows
-/wahoomc/tooling_win/osmconvert_tempfile.*
 
 # build artefacts
 *.pyc
@@ -24,3 +10,18 @@ osmfilter_tempfile.*
 /wahoomc.egg-info/
 /dist/
 /build/
+
+# IDE
+/.vscode/*
+/!.vscode/launch.json
+/!.vscode/settings.json
+package.json
+
+# top level
+osmconvert_tempfile.*
+osmfilter_tempfile.*
+
+# mac/unix
+
+#windows
+/wahoomc/tooling_win/osmconvert_tempfile.*
