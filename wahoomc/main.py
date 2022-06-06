@@ -23,7 +23,8 @@ def run():
     main program run
     """
     # create logger
-    logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.INFO)
+    logging.basicConfig(format='%(levelname)s:%(message)s',
+                        level=logging.DEBUG)
 
     # handle GUI and CLI processing via one function and different cli-calls
     o_input_data = process_call_of_the_tool()
