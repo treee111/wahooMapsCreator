@@ -8,8 +8,8 @@
         "bottom": 40.979898,
         "countries": [
             "connecticut",
-            "new_jersey",
-            "new_york"
+            "new-jersey",
+            "new-york"
         ]
     },
     {
@@ -22,7 +22,7 @@
         "countries": [
             "maryland",
             "pennsylvania",
-            "new_jersey",
+            "new-jersey",
             "delaware"
         ]
     },
@@ -35,8 +35,8 @@
         "bottom": 40.979898,
         "countries": [
             "pennsylvania",
-            "new_jersey",
-            "new_york"
+            "new-jersey",
+            "new-york"
         ]
     },
     {
@@ -48,7 +48,7 @@
         "bottom": 39.909736,
         "countries": [
             "pennsylvania",
-            "new_jersey"
+            "new-jersey"
         ]
     },
     {
@@ -59,8 +59,8 @@
         "right": -73.125,
         "bottom": 39.909736,
         "countries": [
-            "new_jersey",
-            "new_york"
+            "new-jersey",
+            "new-york"
         ]
     },
     {
@@ -71,7 +71,7 @@
         "right": -73.125,
         "bottom": 38.822591,
         "countries": [
-            "new_jersey"
+            "new-jersey"
         ]
     }
 ]

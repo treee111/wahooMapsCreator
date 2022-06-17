@@ -8,9 +8,9 @@
         "bottom": 17.978733,
         "countries": [
             "anguilla",
-            "virgin_islands_u.s.",
-            "united_states_virgin_islands",
-            "british_virgin_islands"
+            "virgin-islands-u.s.",
+            "united-states-virgin-islands",
+            "british-virgin-islands"
         ]
     },
     {
@@ -21,10 +21,10 @@
         "right": -64.6875,
         "bottom": 17.978733,
         "countries": [
-            "british_virgin_islands",
-            "puerto_rico",
-            "united_states_virgin_islands",
-            "virgin_islands_u.s."
+            "british-virgin-islands",
+            "puerto-rico",
+            "united-states-virgin-islands",
+            "virgin-islands-u.s."
         ]
     },
     {
@@ -35,9 +35,9 @@
         "right": -64.6875,
         "bottom": 16.636192,
         "countries": [
-            "puerto_rico",
-            "virgin_islands_u.s.",
-            "united_states_virgin_islands"
+            "puerto-rico",
+            "virgin-islands-u.s.",
+            "united-states-virgin-islands"
         ]
     },
     {
@@ -48,8 +48,8 @@
         "right": -63.28125,
         "bottom": 16.636192,
         "countries": [
-            "virgin_islands_u.s.",
-            "united_states_virgin_islands"
+            "virgin-islands-u.s.",
+            "united-states-virgin-islands"
         ]
     }
 ]

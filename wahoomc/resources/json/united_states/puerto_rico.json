@@ -7,10 +7,10 @@
         "right": -64.6875,
         "bottom": 17.978733,
         "countries": [
-            "british_virgin_islands",
-            "puerto_rico",
-            "united_states_virgin_islands",
-            "virgin_islands_u.s."
+            "british-virgin-islands",
+            "puerto-rico",
+            "united-states-virgin-islands",
+            "virgin-islands-u.s."
         ]
     },
     {
@@ -21,8 +21,8 @@
         "right": -67.5,
         "bottom": 17.978733,
         "countries": [
-            "dominican_republic",
-            "puerto_rico"
+            "dominican-republic",
+            "puerto-rico"
         ]
     },
     {
@@ -33,7 +33,7 @@
         "right": -66.09375,
         "bottom": 17.978733,
         "countries": [
-            "puerto_rico"
+            "puerto-rico"
         ]
     },
     {
@@ -44,7 +44,7 @@
         "right": -66.09375,
         "bottom": 16.636192,
         "countries": [
-            "puerto_rico"
+            "puerto-rico"
         ]
     },
     {
@@ -55,9 +55,9 @@
         "right": -64.6875,
         "bottom": 16.636192,
         "countries": [
-            "puerto_rico",
-            "virgin_islands_u.s.",
-            "united_states_virgin_islands"
+            "puerto-rico",
+            "virgin-islands-u.s.",
+            "united-states-virgin-islands"
         ]
     }
 ]

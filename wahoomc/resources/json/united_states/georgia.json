@@ -267,9 +267,9 @@
         "bottom": 34.307144,
         "countries": [
             "georgia",
-            "north_carolina",
+            "north-carolina",
             "tennessee",
-            "south_carolina"
+            "south-carolina"
         ]
     },
     {
@@ -281,8 +281,8 @@
         "bottom": 34.307144,
         "countries": [
             "georgia",
-            "north_carolina",
-            "south_carolina"
+            "north-carolina",
+            "south-carolina"
         ]
     },
     {
@@ -305,7 +305,7 @@
         "bottom": 33.137551,
         "countries": [
             "georgia",
-            "south_carolina"
+            "south-carolina"
         ]
     },
     {
@@ -328,7 +328,7 @@
         "bottom": 31.952162,
         "countries": [
             "georgia",
-            "south_carolina"
+            "south-carolina"
         ]
     },
     {
@@ -340,7 +340,7 @@
         "bottom": 31.952162,
         "countries": [
             "georgia",
-            "south_carolina"
+            "south-carolina"
         ]
     },
     {

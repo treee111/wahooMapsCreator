@@ -86,9 +86,9 @@
         "bottom": 34.307144,
         "countries": [
             "georgia",
-            "north_carolina",
+            "north-carolina",
             "tennessee",
-            "south_carolina"
+            "south-carolina"
         ]
     },
     {
@@ -150,7 +150,7 @@
         "bottom": 36.597889,
         "countries": [
             "tennessee",
-            "west_virginia",
+            "west-virginia",
             "virginia",
             "kentucky"
         ]
@@ -187,7 +187,7 @@
         "right": -82.96875,
         "bottom": 35.46067,
         "countries": [
-            "north_carolina",
+            "north-carolina",
             "tennessee",
             "virginia",
             "kentucky"
@@ -213,7 +213,7 @@
         "right": -81.5625,
         "bottom": 35.46067,
         "countries": [
-            "north_carolina",
+            "north-carolina",
             "tennessee",
             "virginia"
         ]

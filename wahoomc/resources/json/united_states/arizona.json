@@ -68,7 +68,7 @@
         "right": -108.28125,
         "bottom": 30.751278,
         "countries": [
-            "new_mexico",
+            "new-mexico",
             "mexico",
             "arizona"
         ]
@@ -130,7 +130,7 @@
         "right": -108.28125,
         "bottom": 36.597889,
         "countries": [
-            "new_mexico",
+            "new-mexico",
             "utah",
             "colorado",
             "arizona"
@@ -190,7 +190,7 @@
         "right": -108.28125,
         "bottom": 35.46067,
         "countries": [
-            "new_mexico",
+            "new-mexico",
             "arizona"
         ]
     },
@@ -248,7 +248,7 @@
         "right": -108.28125,
         "bottom": 34.307144,
         "countries": [
-            "new_mexico",
+            "new-mexico",
             "arizona"
         ]
     },
@@ -305,7 +305,7 @@
         "right": -108.28125,
         "bottom": 33.137551,
         "countries": [
-            "new_mexico",
+            "new-mexico",
             "arizona"
         ]
     },
@@ -339,7 +339,7 @@
         "right": -108.28125,
         "bottom": 31.952162,
         "countries": [
-            "new_mexico",
+            "new-mexico",
             "arizona"
         ]
     }

@@ -9,7 +9,7 @@
         "countries": [
             "maryland",
             "pennsylvania",
-            "new_jersey",
+            "new-jersey",
             "delaware"
         ]
     },
@@ -35,7 +35,7 @@
         "bottom": 38.822591,
         "countries": [
             "maryland",
-            "district_of_columbia",
+            "district-of-columbia",
             "pennsylvania",
             "virginia"
         ]
@@ -49,7 +49,7 @@
         "bottom": 37.71859,
         "countries": [
             "maryland",
-            "district_of_columbia",
+            "district-of-columbia",
             "virginia"
         ]
     },
@@ -63,7 +63,7 @@
         "countries": [
             "maryland",
             "pennsylvania",
-            "west_virginia",
+            "west-virginia",
             "virginia"
         ]
     },
@@ -77,7 +77,7 @@
         "countries": [
             "maryland",
             "pennsylvania",
-            "west_virginia",
+            "west-virginia",
             "virginia"
         ]
     }

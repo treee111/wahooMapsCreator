@@ -7,7 +7,7 @@
         "right": -170.15625,
         "bottom": -11.178402,
         "countries": [
-            "american_samoa"
+            "american-samoa"
         ]
     },
     {
@@ -18,7 +18,7 @@
         "right": -170.15625,
         "bottom": -15.284185,
         "countries": [
-            "american_samoa",
+            "american-samoa",
             "samoa"
         ]
     },
@@ -30,7 +30,7 @@
         "right": -168.75,
         "bottom": -15.284185,
         "countries": [
-            "american_samoa"
+            "american-samoa"
         ]
     },
     {
@@ -41,7 +41,7 @@
         "right": -167.34375,
         "bottom": -15.284185,
         "countries": [
-            "american_samoa"
+            "american-samoa"
         ]
     }
 ]

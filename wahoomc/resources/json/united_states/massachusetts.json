@@ -8,7 +8,7 @@
         "bottom": 42.032974,
         "countries": [
             "connecticut",
-            "new_york",
+            "new-york",
             "vermont",
             "massachusetts"
         ]
@@ -24,7 +24,7 @@
             "connecticut",
             "vermont",
             "massachusetts",
-            "new_hampshire"
+            "new-hampshire"
         ]
     },
     {
@@ -36,8 +36,8 @@
         "bottom": 40.979898,
         "countries": [
             "connecticut",
-            "new_york",
-            "rhode_island",
+            "new-york",
+            "rhode-island",
             "massachusetts"
         ]
     },
@@ -51,7 +51,7 @@
         "countries": [
             "maine",
             "massachusetts",
-            "new_hampshire"
+            "new-hampshire"
         ]
     },
     {
@@ -73,7 +73,7 @@
         "right": -70.3125,
         "bottom": 40.979898,
         "countries": [
-            "rhode_island",
+            "rhode-island",
             "massachusetts"
         ]
     },
