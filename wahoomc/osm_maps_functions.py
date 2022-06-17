@@ -83,11 +83,17 @@ def run_subprocess_and_log_output(cmd, error_message, cwd=""):
     if not cwd:
         with subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT) as process:
             for line in iter(process.stdout.readline, b''):  # b'\n'-separated lines
-                log.debug('subprocess:%r', line.decode("utf-8").strip())
+                try:
+                    log.debug('subprocess:%r', line.decode("utf-8").strip())
+                except UnicodeDecodeError:
+                    log.debug('subprocess:%r', line.decode("latin-1").strip())
     else:
         with subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, cwd=cwd) as process:
             for line in iter(process.stdout.readline, b''):  # b'\n'-separated lines
-                log.debug('subprocess:%r', line.decode("utf-8").strip())
+                try:
+                    log.debug('subprocess:%r', line.decode("utf-8").strip())
+                except UnicodeDecodeError:
+                    log.debug('subprocess:%r', line.decode("latin-1").strip())
 
     if error_message and process.wait() != 0:  # 0 means success
         log.error(error_message)
@@ -385,8 +391,8 @@ class OsmMaps:
 
                 # Non-Windows
                 else:
-                    cmd = ['python3', os.path.join(RESOURCES_DIR,
-                                                   'shape2osm.py'), '-l', out_file, land_file]
+                    cmd = ['python', os.path.join(RESOURCES_DIR,
+                                                  'shape2osm.py'), '-l', out_file, land_file]
 
                 run_subprocess_and_log_output(
                     cmd, f'! Error creating land.osm for tile: {tile["x"]},{tile["y"]}')

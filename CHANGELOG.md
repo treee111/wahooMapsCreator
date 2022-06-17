@@ -4,7 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-A list of unreleased changes can be found [here](https://github.com/treee111/wahooMapsCreator/compare/v2.0.1...HEAD).
+A list of unreleased changes can be found [here](https://github.com/treee111/wahooMapsCreator/compare/v2.0.2...HEAD).
+
+<a name="2.0.2"></a>
+## [2.0.2] - 2022-06-06
+### Bug Fixes
+- Use `latin-1` encoding as fallback if UnicodeDecodeError with `utf-8` ([#133](https://github.com/treee111/wahooMapsCreator/issues/133)) [`3d23b01`](https://github.com/treee111/wahooMapsCreator/commit/3d23b01f0a227616edb6a1a1ec855a5e324e4fc2)
+
 
 <a name="2.0.1"></a>
 ## [2.0.1] - 2022-05-09
@@ -275,6 +281,7 @@ wahooMapsCreator can now be used much quicker and easier!
     - Windows:    `tooling_windows/Windows-Wahoo-Map-Creator-Osmosis/wahoo-map-creator-osmosis.py`
 
 
+[2.0.2]: https://github.com/treee111/wahooMapsCreator/compare/v2.0.1...v2.0.2
 [2.0.1]: https://github.com/treee111/wahooMapsCreator/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/treee111/wahooMapsCreator/compare/v1.1.1...v2.0.0
 [1.1.1]: https://github.com/treee111/wahooMapsCreator/compare/v1.1.0...v1.1.1
