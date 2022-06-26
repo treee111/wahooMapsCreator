@@ -7,7 +7,7 @@
         "right": -108.28125,
         "bottom": 30.751278,
         "countries": [
-            "new-mexico",
+            "new_mexico",
             "mexico",
             "arizona"
         ]
@@ -20,7 +20,7 @@
         "right": -106.875,
         "bottom": 30.751278,
         "countries": [
-            "new-mexico",
+            "new_mexico",
             "mexico"
         ]
     },
@@ -32,7 +32,7 @@
         "right": -105.46875,
         "bottom": 30.751278,
         "countries": [
-            "new-mexico",
+            "new_mexico",
             "texas",
             "mexico"
         ]
@@ -45,7 +45,7 @@
         "right": -108.28125,
         "bottom": 36.597889,
         "countries": [
-            "new-mexico",
+            "new_mexico",
             "utah",
             "colorado",
             "arizona"
@@ -59,7 +59,7 @@
         "right": -108.28125,
         "bottom": 35.46067,
         "countries": [
-            "new-mexico",
+            "new_mexico",
             "arizona"
         ]
     },
@@ -71,7 +71,7 @@
         "right": -108.28125,
         "bottom": 34.307144,
         "countries": [
-            "new-mexico",
+            "new_mexico",
             "arizona"
         ]
     },
@@ -83,7 +83,7 @@
         "right": -108.28125,
         "bottom": 33.137551,
         "countries": [
-            "new-mexico",
+            "new_mexico",
             "arizona"
         ]
     },
@@ -95,7 +95,7 @@
         "right": -108.28125,
         "bottom": 31.952162,
         "countries": [
-            "new-mexico",
+            "new_mexico",
             "arizona"
         ]
     },
@@ -107,7 +107,7 @@
         "right": -106.875,
         "bottom": 36.597889,
         "countries": [
-            "new-mexico",
+            "new_mexico",
             "colorado"
         ]
     },
@@ -119,7 +119,7 @@
         "right": -105.46875,
         "bottom": 36.597889,
         "countries": [
-            "new-mexico",
+            "new_mexico",
             "colorado"
         ]
     },
@@ -131,7 +131,7 @@
         "right": -104.0625,
         "bottom": 36.597889,
         "countries": [
-            "new-mexico",
+            "new_mexico",
             "colorado"
         ]
     },
@@ -143,7 +143,7 @@
         "right": -102.65625,
         "bottom": 36.597889,
         "countries": [
-            "new-mexico",
+            "new_mexico",
             "oklahoma",
             "colorado"
         ]
@@ -156,7 +156,7 @@
         "right": -106.875,
         "bottom": 35.46067,
         "countries": [
-            "new-mexico"
+            "new_mexico"
         ]
     },
     {
@@ -167,7 +167,7 @@
         "right": -105.46875,
         "bottom": 35.46067,
         "countries": [
-            "new-mexico"
+            "new_mexico"
         ]
     },
     {
@@ -178,7 +178,7 @@
         "right": -104.0625,
         "bottom": 35.46067,
         "countries": [
-            "new-mexico"
+            "new_mexico"
         ]
     },
     {
@@ -189,7 +189,7 @@
         "right": -102.65625,
         "bottom": 35.46067,
         "countries": [
-            "new-mexico",
+            "new_mexico",
             "oklahoma",
             "texas"
         ]
@@ -202,7 +202,7 @@
         "right": -106.875,
         "bottom": 34.307144,
         "countries": [
-            "new-mexico"
+            "new_mexico"
         ]
     },
     {
@@ -213,7 +213,7 @@
         "right": -105.46875,
         "bottom": 34.307144,
         "countries": [
-            "new-mexico"
+            "new_mexico"
         ]
     },
     {
@@ -224,7 +224,7 @@
         "right": -104.0625,
         "bottom": 34.307144,
         "countries": [
-            "new-mexico"
+            "new_mexico"
         ]
     },
     {
@@ -235,7 +235,7 @@
         "right": -102.65625,
         "bottom": 34.307144,
         "countries": [
-            "new-mexico",
+            "new_mexico",
             "texas"
         ]
     },
@@ -247,7 +247,7 @@
         "right": -106.875,
         "bottom": 33.137551,
         "countries": [
-            "new-mexico"
+            "new_mexico"
         ]
     },
     {
@@ -258,7 +258,7 @@
         "right": -105.46875,
         "bottom": 33.137551,
         "countries": [
-            "new-mexico"
+            "new_mexico"
         ]
     },
     {
@@ -269,7 +269,7 @@
         "right": -104.0625,
         "bottom": 33.137551,
         "countries": [
-            "new-mexico"
+            "new_mexico"
         ]
     },
     {
@@ -280,7 +280,7 @@
         "right": -102.65625,
         "bottom": 33.137551,
         "countries": [
-            "new-mexico",
+            "new_mexico",
             "texas"
         ]
     },
@@ -292,7 +292,7 @@
         "right": -106.875,
         "bottom": 31.952162,
         "countries": [
-            "new-mexico"
+            "new_mexico"
         ]
     },
     {
@@ -303,7 +303,7 @@
         "right": -105.46875,
         "bottom": 31.952162,
         "countries": [
-            "new-mexico",
+            "new_mexico",
             "texas"
         ]
     },
@@ -315,7 +315,7 @@
         "right": -104.0625,
         "bottom": 31.952162,
         "countries": [
-            "new-mexico",
+            "new_mexico",
             "texas"
         ]
     },
@@ -327,7 +327,7 @@
         "right": -102.65625,
         "bottom": 31.952162,
         "countries": [
-            "new-mexico",
+            "new_mexico",
             "texas"
         ]
     }

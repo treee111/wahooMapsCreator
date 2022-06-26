@@ -94,7 +94,7 @@
         "right": -81.5625,
         "bottom": 37.71859,
         "countries": [
-            "west-virginia",
+            "west_virginia",
             "ohio",
             "kentucky"
         ]
@@ -142,7 +142,7 @@
         "bottom": 39.909736,
         "countries": [
             "pennsylvania",
-            "west-virginia",
+            "west_virginia",
             "ohio"
         ]
     },
@@ -154,7 +154,7 @@
         "right": -81.5625,
         "bottom": 38.822591,
         "countries": [
-            "west-virginia",
+            "west_virginia",
             "ohio"
         ]
     },
@@ -167,7 +167,7 @@
         "bottom": 38.822591,
         "countries": [
             "pennsylvania",
-            "west-virginia",
+            "west_virginia",
             "ohio"
         ]
     }

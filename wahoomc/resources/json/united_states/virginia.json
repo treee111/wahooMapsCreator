@@ -21,7 +21,7 @@
         "bottom": 38.822591,
         "countries": [
             "maryland",
-            "district-of-columbia",
+            "district_of_columbia",
             "pennsylvania",
             "virginia"
         ]
@@ -35,7 +35,7 @@
         "bottom": 37.71859,
         "countries": [
             "maryland",
-            "district-of-columbia",
+            "district_of_columbia",
             "virginia"
         ]
     },
@@ -61,7 +61,7 @@
         "bottom": 36.597889,
         "countries": [
             "tennessee",
-            "west-virginia",
+            "west_virginia",
             "virginia",
             "kentucky"
         ]
@@ -74,7 +74,7 @@
         "right": -82.96875,
         "bottom": 35.46067,
         "countries": [
-            "north-carolina",
+            "north_carolina",
             "tennessee",
             "virginia",
             "kentucky"
@@ -90,7 +90,7 @@
         "countries": [
             "maryland",
             "pennsylvania",
-            "west-virginia",
+            "west_virginia",
             "virginia"
         ]
     },
@@ -104,7 +104,7 @@
         "countries": [
             "maryland",
             "pennsylvania",
-            "west-virginia",
+            "west_virginia",
             "virginia"
         ]
     },
@@ -116,7 +116,7 @@
         "right": -81.5625,
         "bottom": 35.46067,
         "countries": [
-            "north-carolina",
+            "north_carolina",
             "tennessee",
             "virginia"
         ]
@@ -129,7 +129,7 @@
         "right": -80.15625,
         "bottom": 35.46067,
         "countries": [
-            "north-carolina",
+            "north_carolina",
             "virginia"
         ]
     },
@@ -141,7 +141,7 @@
         "right": -78.75,
         "bottom": 35.46067,
         "countries": [
-            "north-carolina",
+            "north_carolina",
             "virginia"
         ]
     },
@@ -153,7 +153,7 @@
         "right": -77.34375,
         "bottom": 35.46067,
         "countries": [
-            "north-carolina",
+            "north_carolina",
             "virginia"
         ]
     },
@@ -165,7 +165,7 @@
         "right": -75.9375,
         "bottom": 35.46067,
         "countries": [
-            "north-carolina",
+            "north_carolina",
             "virginia"
         ]
     },
@@ -177,7 +177,7 @@
         "right": -74.53125,
         "bottom": 35.46067,
         "countries": [
-            "north-carolina",
+            "north_carolina",
             "virginia"
         ]
     },
@@ -189,7 +189,7 @@
         "right": -80.15625,
         "bottom": 37.71859,
         "countries": [
-            "west-virginia",
+            "west_virginia",
             "virginia"
         ]
     },
@@ -201,7 +201,7 @@
         "right": -78.75,
         "bottom": 37.71859,
         "countries": [
-            "west-virginia",
+            "west_virginia",
             "virginia"
         ]
     },
@@ -224,7 +224,7 @@
         "right": -80.15625,
         "bottom": 36.597889,
         "countries": [
-            "west-virginia",
+            "west_virginia",
             "virginia"
         ]
     },

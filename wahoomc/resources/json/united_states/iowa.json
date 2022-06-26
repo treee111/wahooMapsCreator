@@ -58,7 +58,7 @@
         "bottom": 43.068888,
         "countries": [
             "iowa",
-            "south-dakota",
+            "south_dakota",
             "minnesota"
         ]
     },
@@ -121,7 +121,7 @@
         "bottom": 42.032974,
         "countries": [
             "iowa",
-            "south-dakota",
+            "south_dakota",
             "nebraska"
         ]
     },

@@ -8,7 +8,7 @@
         "bottom": 38.822591,
         "countries": [
             "maryland",
-            "district-of-columbia",
+            "district_of_columbia",
             "pennsylvania",
             "virginia"
         ]
@@ -22,7 +22,7 @@
         "bottom": 37.71859,
         "countries": [
             "maryland",
-            "district-of-columbia",
+            "district_of_columbia",
             "virginia"
         ]
     }

@@ -7,7 +7,7 @@
         "right": -75.9375,
         "bottom": 44.087585,
         "countries": [
-            "new-york",
+            "new_york",
             "canada"
         ]
     },
@@ -19,7 +19,7 @@
         "right": -74.53125,
         "bottom": 44.087585,
         "countries": [
-            "new-york",
+            "new_york",
             "canada"
         ]
     },
@@ -32,7 +32,7 @@
         "bottom": 44.087585,
         "countries": [
             "vermont",
-            "new-york",
+            "new_york",
             "canada"
         ]
     },
@@ -44,7 +44,7 @@
         "right": -78.75,
         "bottom": 43.068888,
         "countries": [
-            "new-york",
+            "new_york",
             "canada"
         ]
     },
@@ -56,7 +56,7 @@
         "right": -77.34375,
         "bottom": 43.068888,
         "countries": [
-            "new-york",
+            "new_york",
             "canada"
         ]
     },
@@ -68,7 +68,7 @@
         "right": -75.9375,
         "bottom": 43.068888,
         "countries": [
-            "new-york",
+            "new_york",
             "canada"
         ]
     },
@@ -81,7 +81,7 @@
         "bottom": 42.032974,
         "countries": [
             "pennsylvania",
-            "new-york",
+            "new_york",
             "canada"
         ]
     },
@@ -94,7 +94,7 @@
         "bottom": 42.032974,
         "countries": [
             "connecticut",
-            "new-york",
+            "new_york",
             "vermont",
             "massachusetts"
         ]
@@ -108,8 +108,8 @@
         "bottom": 40.979898,
         "countries": [
             "connecticut",
-            "new-jersey",
-            "new-york"
+            "new_jersey",
+            "new_york"
         ]
     },
     {
@@ -121,8 +121,8 @@
         "bottom": 40.979898,
         "countries": [
             "connecticut",
-            "new-york",
-            "rhode-island",
+            "new_york",
+            "rhode_island",
             "massachusetts"
         ]
     },
@@ -135,8 +135,8 @@
         "bottom": 40.979898,
         "countries": [
             "pennsylvania",
-            "new-jersey",
-            "new-york"
+            "new_jersey",
+            "new_york"
         ]
     },
     {
@@ -147,8 +147,8 @@
         "right": -73.125,
         "bottom": 39.909736,
         "countries": [
-            "new-jersey",
-            "new-york"
+            "new_jersey",
+            "new_york"
         ]
     },
     {
@@ -159,7 +159,7 @@
         "right": -74.53125,
         "bottom": 43.068888,
         "countries": [
-            "new-york"
+            "new_york"
         ]
     },
     {
@@ -171,7 +171,7 @@
         "bottom": 43.068888,
         "countries": [
             "vermont",
-            "new-york"
+            "new_york"
         ]
     },
     {
@@ -182,7 +182,7 @@
         "right": -77.34375,
         "bottom": 42.032974,
         "countries": [
-            "new-york"
+            "new_york"
         ]
     },
     {
@@ -193,7 +193,7 @@
         "right": -75.9375,
         "bottom": 42.032974,
         "countries": [
-            "new-york"
+            "new_york"
         ]
     },
     {
@@ -204,7 +204,7 @@
         "right": -74.53125,
         "bottom": 42.032974,
         "countries": [
-            "new-york"
+            "new_york"
         ]
     },
     {
@@ -216,7 +216,7 @@
         "bottom": 40.979898,
         "countries": [
             "pennsylvania",
-            "new-york"
+            "new_york"
         ]
     },
     {
@@ -228,7 +228,7 @@
         "bottom": 40.979898,
         "countries": [
             "pennsylvania",
-            "new-york"
+            "new_york"
         ]
     },
     {
@@ -240,7 +240,7 @@
         "bottom": 40.979898,
         "countries": [
             "pennsylvania",
-            "new-york"
+            "new_york"
         ]
     },
     {
@@ -251,7 +251,7 @@
         "right": -71.71875,
         "bottom": 39.909736,
         "countries": [
-            "new-york"
+            "new_york"
         ]
     }
 ]

@@ -117,7 +117,7 @@
         "bottom": 48.922499,
         "countries": [
             "montana",
-            "north-dakota",
+            "north_dakota",
             "canada"
         ]
     },
@@ -327,7 +327,7 @@
         "bottom": 47.989922,
         "countries": [
             "montana",
-            "north-dakota"
+            "north_dakota"
         ]
     },
     {
@@ -416,7 +416,7 @@
         "bottom": 47.040182,
         "countries": [
             "montana",
-            "north-dakota"
+            "north_dakota"
         ]
     },
     {
@@ -505,7 +505,7 @@
         "bottom": 46.073231,
         "countries": [
             "montana",
-            "north-dakota"
+            "north_dakota"
         ]
     },
     {
@@ -583,8 +583,8 @@
         "bottom": 45.089036,
         "countries": [
             "montana",
-            "north-dakota",
-            "south-dakota"
+            "north_dakota",
+            "south_dakota"
         ]
     },
     {
@@ -644,7 +644,7 @@
         "bottom": 44.087585,
         "countries": [
             "montana",
-            "south-dakota",
+            "south_dakota",
             "wyoming"
         ]
     }

@@ -168,7 +168,7 @@
         "bottom": 44.087585,
         "countries": [
             "montana",
-            "south-dakota",
+            "south_dakota",
             "wyoming"
         ]
     },
@@ -180,7 +180,7 @@
         "right": -102.65625,
         "bottom": 42.032974,
         "countries": [
-            "south-dakota",
+            "south_dakota",
             "nebraska",
             "wyoming"
         ]
@@ -193,7 +193,7 @@
         "right": -102.65625,
         "bottom": 43.068888,
         "countries": [
-            "south-dakota",
+            "south_dakota",
             "wyoming"
         ]
     },

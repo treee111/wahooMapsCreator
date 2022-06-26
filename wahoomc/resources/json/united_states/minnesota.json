@@ -7,7 +7,7 @@
         "right": -97.03125,
         "bottom": 48.922499,
         "countries": [
-            "north-dakota",
+            "north_dakota",
             "minnesota",
             "canada"
         ]
@@ -119,7 +119,7 @@
         "bottom": 43.068888,
         "countries": [
             "iowa",
-            "south-dakota",
+            "south_dakota",
             "minnesota"
         ]
     },
@@ -181,7 +181,7 @@
         "right": -97.03125,
         "bottom": 47.989922,
         "countries": [
-            "north-dakota",
+            "north_dakota",
             "minnesota"
         ]
     },
@@ -204,7 +204,7 @@
         "right": -97.03125,
         "bottom": 47.040182,
         "countries": [
-            "north-dakota",
+            "north_dakota",
             "minnesota"
         ]
     },
@@ -216,7 +216,7 @@
         "right": -95.625,
         "bottom": 47.040182,
         "countries": [
-            "north-dakota",
+            "north_dakota",
             "minnesota"
         ]
     },
@@ -273,7 +273,7 @@
         "right": -95.625,
         "bottom": 46.073231,
         "countries": [
-            "north-dakota",
+            "north_dakota",
             "minnesota"
         ]
     },
@@ -319,9 +319,9 @@
         "right": -95.625,
         "bottom": 45.089036,
         "countries": [
-            "north-dakota",
+            "north_dakota",
             "minnesota",
-            "south-dakota"
+            "south_dakota"
         ]
     },
     {
@@ -367,7 +367,7 @@
         "right": -95.625,
         "bottom": 44.087585,
         "countries": [
-            "south-dakota",
+            "south_dakota",
             "minnesota"
         ]
     },

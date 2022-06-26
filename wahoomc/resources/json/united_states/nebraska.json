@@ -46,7 +46,7 @@
         "bottom": 42.032974,
         "countries": [
             "iowa",
-            "south-dakota",
+            "south_dakota",
             "nebraska"
         ]
     },
@@ -134,7 +134,7 @@
         "right": -102.65625,
         "bottom": 42.032974,
         "countries": [
-            "south-dakota",
+            "south_dakota",
             "nebraska",
             "wyoming"
         ]
@@ -147,7 +147,7 @@
         "right": -101.25,
         "bottom": 42.032974,
         "countries": [
-            "south-dakota",
+            "south_dakota",
             "nebraska"
         ]
     },
@@ -159,7 +159,7 @@
         "right": -99.84375,
         "bottom": 42.032974,
         "countries": [
-            "south-dakota",
+            "south_dakota",
             "nebraska"
         ]
     },
@@ -171,7 +171,7 @@
         "right": -98.4375,
         "bottom": 42.032974,
         "countries": [
-            "south-dakota",
+            "south_dakota",
             "nebraska"
         ]
     },
@@ -183,7 +183,7 @@
         "right": -97.03125,
         "bottom": 42.032974,
         "countries": [
-            "south-dakota",
+            "south_dakota",
             "nebraska"
         ]
     },

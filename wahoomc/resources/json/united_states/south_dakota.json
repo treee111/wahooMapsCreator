@@ -8,7 +8,7 @@
         "bottom": 43.068888,
         "countries": [
             "iowa",
-            "south-dakota",
+            "south_dakota",
             "minnesota"
         ]
     },
@@ -21,7 +21,7 @@
         "bottom": 42.032974,
         "countries": [
             "iowa",
-            "south-dakota",
+            "south_dakota",
             "nebraska"
         ]
     },
@@ -33,9 +33,9 @@
         "right": -95.625,
         "bottom": 45.089036,
         "countries": [
-            "north-dakota",
+            "north_dakota",
             "minnesota",
-            "south-dakota"
+            "south_dakota"
         ]
     },
     {
@@ -46,7 +46,7 @@
         "right": -95.625,
         "bottom": 44.087585,
         "countries": [
-            "south-dakota",
+            "south_dakota",
             "minnesota"
         ]
     },
@@ -59,8 +59,8 @@
         "bottom": 45.089036,
         "countries": [
             "montana",
-            "north-dakota",
-            "south-dakota"
+            "north_dakota",
+            "south_dakota"
         ]
     },
     {
@@ -72,7 +72,7 @@
         "bottom": 44.087585,
         "countries": [
             "montana",
-            "south-dakota",
+            "south_dakota",
             "wyoming"
         ]
     },
@@ -84,7 +84,7 @@
         "right": -102.65625,
         "bottom": 42.032974,
         "countries": [
-            "south-dakota",
+            "south_dakota",
             "nebraska",
             "wyoming"
         ]
@@ -97,7 +97,7 @@
         "right": -101.25,
         "bottom": 42.032974,
         "countries": [
-            "south-dakota",
+            "south_dakota",
             "nebraska"
         ]
     },
@@ -109,7 +109,7 @@
         "right": -99.84375,
         "bottom": 42.032974,
         "countries": [
-            "south-dakota",
+            "south_dakota",
             "nebraska"
         ]
     },
@@ -121,7 +121,7 @@
         "right": -98.4375,
         "bottom": 42.032974,
         "countries": [
-            "south-dakota",
+            "south_dakota",
             "nebraska"
         ]
     },
@@ -133,7 +133,7 @@
         "right": -97.03125,
         "bottom": 42.032974,
         "countries": [
-            "south-dakota",
+            "south_dakota",
             "nebraska"
         ]
     },
@@ -145,8 +145,8 @@
         "right": -101.25,
         "bottom": 45.089036,
         "countries": [
-            "north-dakota",
-            "south-dakota"
+            "north_dakota",
+            "south_dakota"
         ]
     },
     {
@@ -157,8 +157,8 @@
         "right": -99.84375,
         "bottom": 45.089036,
         "countries": [
-            "north-dakota",
-            "south-dakota"
+            "north_dakota",
+            "south_dakota"
         ]
     },
     {
@@ -169,8 +169,8 @@
         "right": -98.4375,
         "bottom": 45.089036,
         "countries": [
-            "north-dakota",
-            "south-dakota"
+            "north_dakota",
+            "south_dakota"
         ]
     },
     {
@@ -181,8 +181,8 @@
         "right": -97.03125,
         "bottom": 45.089036,
         "countries": [
-            "north-dakota",
-            "south-dakota"
+            "north_dakota",
+            "south_dakota"
         ]
     },
     {
@@ -193,7 +193,7 @@
         "right": -101.25,
         "bottom": 44.087585,
         "countries": [
-            "south-dakota"
+            "south_dakota"
         ]
     },
     {
@@ -204,7 +204,7 @@
         "right": -99.84375,
         "bottom": 44.087585,
         "countries": [
-            "south-dakota"
+            "south_dakota"
         ]
     },
     {
@@ -215,7 +215,7 @@
         "right": -98.4375,
         "bottom": 44.087585,
         "countries": [
-            "south-dakota"
+            "south_dakota"
         ]
     },
     {
@@ -226,7 +226,7 @@
         "right": -97.03125,
         "bottom": 44.087585,
         "countries": [
-            "south-dakota"
+            "south_dakota"
         ]
     },
     {
@@ -237,7 +237,7 @@
         "right": -102.65625,
         "bottom": 43.068888,
         "countries": [
-            "south-dakota",
+            "south_dakota",
             "wyoming"
         ]
     },
@@ -249,7 +249,7 @@
         "right": -101.25,
         "bottom": 43.068888,
         "countries": [
-            "south-dakota"
+            "south_dakota"
         ]
     },
     {
@@ -260,7 +260,7 @@
         "right": -99.84375,
         "bottom": 43.068888,
         "countries": [
-            "south-dakota"
+            "south_dakota"
         ]
     },
     {
@@ -271,7 +271,7 @@
         "right": -98.4375,
         "bottom": 43.068888,
         "countries": [
-            "south-dakota"
+            "south_dakota"
         ]
     },
     {
@@ -282,7 +282,7 @@
         "right": -97.03125,
         "bottom": 43.068888,
         "countries": [
-            "south-dakota"
+            "south_dakota"
         ]
     }
 ]

@@ -8,7 +8,7 @@
         "bottom": 42.032974,
         "countries": [
             "connecticut",
-            "new-york",
+            "new_york",
             "vermont",
             "massachusetts"
         ]
@@ -24,7 +24,7 @@
             "connecticut",
             "vermont",
             "massachusetts",
-            "new-hampshire"
+            "new_hampshire"
         ]
     },
     {
@@ -36,8 +36,8 @@
         "bottom": 40.979898,
         "countries": [
             "connecticut",
-            "new-jersey",
-            "new-york"
+            "new_jersey",
+            "new_york"
         ]
     },
     {
@@ -49,8 +49,8 @@
         "bottom": 40.979898,
         "countries": [
             "connecticut",
-            "new-york",
-            "rhode-island",
+            "new_york",
+            "rhode_island",
             "massachusetts"
         ]
     }

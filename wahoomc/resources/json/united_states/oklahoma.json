@@ -45,7 +45,7 @@
         "right": -102.65625,
         "bottom": 36.597889,
         "countries": [
-            "new-mexico",
+            "new_mexico",
             "oklahoma",
             "colorado"
         ]
@@ -132,7 +132,7 @@
         "right": -102.65625,
         "bottom": 35.46067,
         "countries": [
-            "new-mexico",
+            "new_mexico",
             "oklahoma",
             "texas"
         ]

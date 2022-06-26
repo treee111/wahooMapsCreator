@@ -9,7 +9,7 @@
         "countries": [
             "maryland",
             "pennsylvania",
-            "new-jersey",
+            "new_jersey",
             "delaware"
         ]
     },

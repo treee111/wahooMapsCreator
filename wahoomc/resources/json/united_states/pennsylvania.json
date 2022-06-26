@@ -20,7 +20,7 @@
         "bottom": 42.032974,
         "countries": [
             "pennsylvania",
-            "new-york",
+            "new_york",
             "canada"
         ]
     },
@@ -34,7 +34,7 @@
         "countries": [
             "maryland",
             "pennsylvania",
-            "new-jersey",
+            "new_jersey",
             "delaware"
         ]
     },
@@ -47,7 +47,7 @@
         "bottom": 38.822591,
         "countries": [
             "maryland",
-            "district-of-columbia",
+            "district_of_columbia",
             "pennsylvania",
             "virginia"
         ]
@@ -62,7 +62,7 @@
         "countries": [
             "maryland",
             "pennsylvania",
-            "west-virginia",
+            "west_virginia",
             "virginia"
         ]
     },
@@ -76,7 +76,7 @@
         "countries": [
             "maryland",
             "pennsylvania",
-            "west-virginia",
+            "west_virginia",
             "virginia"
         ]
     },
@@ -89,8 +89,8 @@
         "bottom": 40.979898,
         "countries": [
             "pennsylvania",
-            "new-jersey",
-            "new-york"
+            "new_jersey",
+            "new_york"
         ]
     },
     {
@@ -102,7 +102,7 @@
         "bottom": 39.909736,
         "countries": [
             "pennsylvania",
-            "new-jersey"
+            "new_jersey"
         ]
     },
     {
@@ -114,7 +114,7 @@
         "bottom": 40.979898,
         "countries": [
             "pennsylvania",
-            "new-york"
+            "new_york"
         ]
     },
     {
@@ -126,7 +126,7 @@
         "bottom": 40.979898,
         "countries": [
             "pennsylvania",
-            "new-york"
+            "new_york"
         ]
     },
     {
@@ -138,7 +138,7 @@
         "bottom": 40.979898,
         "countries": [
             "pennsylvania",
-            "new-york"
+            "new_york"
         ]
     },
     {
@@ -162,7 +162,7 @@
         "bottom": 39.909736,
         "countries": [
             "pennsylvania",
-            "west-virginia",
+            "west_virginia",
             "ohio"
         ]
     },
@@ -175,7 +175,7 @@
         "bottom": 38.822591,
         "countries": [
             "pennsylvania",
-            "west-virginia",
+            "west_virginia",
             "ohio"
         ]
     },

@@ -8,9 +8,9 @@
         "bottom": 34.307144,
         "countries": [
             "georgia",
-            "north-carolina",
+            "north_carolina",
             "tennessee",
-            "south-carolina"
+            "south_carolina"
         ]
     },
     {
@@ -22,8 +22,8 @@
         "bottom": 34.307144,
         "countries": [
             "georgia",
-            "north-carolina",
-            "south-carolina"
+            "north_carolina",
+            "south_carolina"
         ]
     },
     {
@@ -34,7 +34,7 @@
         "right": -82.96875,
         "bottom": 35.46067,
         "countries": [
-            "north-carolina",
+            "north_carolina",
             "tennessee",
             "virginia",
             "kentucky"
@@ -48,7 +48,7 @@
         "right": -81.5625,
         "bottom": 35.46067,
         "countries": [
-            "north-carolina",
+            "north_carolina",
             "tennessee",
             "virginia"
         ]
@@ -61,7 +61,7 @@
         "right": -80.15625,
         "bottom": 35.46067,
         "countries": [
-            "north-carolina",
+            "north_carolina",
             "virginia"
         ]
     },
@@ -73,7 +73,7 @@
         "right": -78.75,
         "bottom": 35.46067,
         "countries": [
-            "north-carolina",
+            "north_carolina",
             "virginia"
         ]
     },
@@ -85,7 +85,7 @@
         "right": -77.34375,
         "bottom": 35.46067,
         "countries": [
-            "north-carolina",
+            "north_carolina",
             "virginia"
         ]
     },
@@ -97,7 +97,7 @@
         "right": -75.9375,
         "bottom": 35.46067,
         "countries": [
-            "north-carolina",
+            "north_carolina",
             "virginia"
         ]
     },
@@ -109,7 +109,7 @@
         "right": -74.53125,
         "bottom": 35.46067,
         "countries": [
-            "north-carolina",
+            "north_carolina",
             "virginia"
         ]
     },
@@ -121,8 +121,8 @@
         "right": -80.15625,
         "bottom": 34.307144,
         "countries": [
-            "north-carolina",
-            "south-carolina"
+            "north_carolina",
+            "south_carolina"
         ]
     },
     {
@@ -133,8 +133,8 @@
         "right": -78.75,
         "bottom": 34.307144,
         "countries": [
-            "north-carolina",
-            "south-carolina"
+            "north_carolina",
+            "south_carolina"
         ]
     },
     {
@@ -145,7 +145,7 @@
         "right": -77.34375,
         "bottom": 34.307144,
         "countries": [
-            "north-carolina"
+            "north_carolina"
         ]
     },
     {
@@ -156,7 +156,7 @@
         "right": -75.9375,
         "bottom": 34.307144,
         "countries": [
-            "north-carolina"
+            "north_carolina"
         ]
     },
     {
@@ -167,7 +167,7 @@
         "right": -74.53125,
         "bottom": 34.307144,
         "countries": [
-            "north-carolina"
+            "north_carolina"
         ]
     },
     {
@@ -178,8 +178,8 @@
         "right": -78.75,
         "bottom": 33.137551,
         "countries": [
-            "north-carolina",
-            "south-carolina"
+            "north_carolina",
+            "south_carolina"
         ]
     },
     {
@@ -190,8 +190,8 @@
         "right": -77.34375,
         "bottom": 33.137551,
         "countries": [
-            "north-carolina",
-            "south-carolina"
+            "north_carolina",
+            "south_carolina"
         ]
     }
 ]
