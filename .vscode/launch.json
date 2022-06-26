@@ -217,6 +217,21 @@
                 "100",
                 "-om"
             ]
+        },
+        {
+            "name": "american_samoa #135",
+            "type": "python",
+            "request": "launch",
+            "module": "wahoomc",
+            "console": "integratedTerminal",
+            "args": [
+                "cli",
+                "-co",
+                "american_samoa",
+                "-c",
+                "-md",
+                "100",
+            ]
         }
     ]
 }

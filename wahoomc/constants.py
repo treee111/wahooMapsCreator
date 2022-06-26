@@ -75,7 +75,21 @@ Translate_Country = {
     'western_sahara':                   'morocco',
     'qatar':                            'gcc-states',
     'åland':                            'finland',
-    'new_mexico':                       'new-mexico'
+    'new_mexico':                       'new-mexico',
+    'american_samoa':                   'samoa',
+    'commonwealth_of_the_northern_mariana_islands':                   'american-oceania',
+    'northern_mariana_islands':         'american-oceania',
+    'new_york':                         'new-york',
+    'new_hampshire':                    'new-hampshire',
+    'new_jersey':                       'new-jersey',
+    'rhode_island':                     'rhode-island',
+    'district_of_columbia':             'district-of-columbia',
+    'north_carolina':                   'north-carolina',
+    'south_carolina':                   'south-carolina',
+    'north_dakota':                     'north-dakota',
+    'south_dakota':                     'south-dakota',
+    'west_virginia':                    'west-virginia',
+    'new_hampshire':                    'new-hampshire'
 }
 
 continents = ['europe', 'unitedstates', 'north-america', 'south-america', 'asia', 'oceania',
@@ -166,7 +180,7 @@ asia_geofabrik = ['afghanistan', 'armenia', 'azerbaijan', 'bangladesh', 'bhutan'
                   'pakistan', 'philippines', 'russian federation', 'south-korea', 'sri-lanka', 'syria',
                   'taiwan', 'tajikistan', 'thailand', 'turkmenistan', 'uzbekistan', 'vietnam', 'yemen']
 
-australiaoceania_geofabrik = ['american oceania', 'australia', 'cook islands', 'fiji',
+australiaoceania_geofabrik = ['american-oceania', 'australia', 'cook islands', 'fiji',
                               'île de clipperton', 'kiribati', 'marshall islands', 'micronesia', 'nauru',
                               'new caledonia', 'new zealand', 'niue', 'palau', 'papua new guinea',
                               'pitcairn islands', 'polynesie-francaise', 'samoa', 'solomon islands', 'tokelau',
