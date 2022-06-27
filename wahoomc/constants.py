@@ -88,8 +88,7 @@ Translate_Country = {
     'south_carolina':                   'south-carolina',
     'north_dakota':                     'north-dakota',
     'south_dakota':                     'south-dakota',
-    'west_virginia':                    'west-virginia',
-    'new_hampshire':                    'new-hampshire'
+    'west_virginia':                    'west-virginia'
 }
 
 continents = ['europe', 'unitedstates', 'north-america', 'south-america', 'asia', 'oceania',
