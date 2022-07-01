@@ -694,7 +694,7 @@ class OsmMaps:
                     cmd, f'! Error creating map files for tile: {tile["x"]},{tile["y"]}')
 
             # Create "tile present" file
-            with open(out_file + '.lzma.12', mode='wb') as tile_present_file:
+            with open(out_file + '.lzma.17', mode='wb') as tile_present_file:
                 tile_present_file.close()
 
             tile_count += 1
@@ -734,8 +734,8 @@ class OsmMaps:
             self.copy_to_dst(extension, src, dst)
 
             if extension == '.map.lzma':
-                src = src + '.12'
-                dst = dst + '.12'
+                src = src + '.17'
+                dst = dst + '.17'
                 self.copy_to_dst(extension, src, dst)
 
         if zip_folder:
