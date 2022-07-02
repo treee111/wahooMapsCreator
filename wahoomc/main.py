@@ -10,6 +10,7 @@ import logging
 from wahoomc.input import process_call_of_the_tool
 from wahoomc.setup_functions import initialize_work_directories
 from wahoomc.setup_functions import move_old_content_into_new_dirs
+from wahoomc.setup_functions import check_installation_of_required_programs
 from wahoomc.osm_maps_functions import OsmMaps
 
 # logging used in the terminal output:
@@ -25,6 +26,8 @@ def run():
     # create logger
     logging.basicConfig(format='%(levelname)s:%(message)s',
                         level=logging.DEBUG)
+
+    check_installation_of_required_programs()
 
     # handle GUI and CLI processing via one function and different cli-calls
     o_input_data = process_call_of_the_tool()
