@@ -1,5 +1,5 @@
 """
-tests for the downloader file
+tests for the osm maps file
 """
 import os
 # import sys

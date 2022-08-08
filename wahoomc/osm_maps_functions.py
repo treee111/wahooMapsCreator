@@ -670,9 +670,9 @@ class OsmMaps:
                     f'bbox={tile["bottom"]:.6f},{tile["left"]:.6f},{tile["top"]:.6f},{tile["right"]:.6f}')
                 cmd.append('zoom-interval-conf=10,0,17')
                 cmd.append('threads=' + threads)
-                # should work on macOS and Windows
+                # add path to tag-wahoo xml file
                 cmd.append(
-                    f'tag-conf-file={os.path.join(RESOURCES_DIR, "tag_wahoo_adjusted", tag_wahoo_xml)}')
+                    f'tag-conf-file={fd_fct.get_tag_wahoo_xml_path(tag_wahoo_xml)}')
 
                 run_subprocess_and_log_output(
                     cmd, f'Error in creating map file via Osmosis with tile: {tile["x"]},{tile["y"]}. mapwriter plugin installed?')
