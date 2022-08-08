@@ -478,7 +478,7 @@ class OsmMaps:
                         cmd.append('-o='+out_file)
 
                         run_subprocess_and_log_output(
-                            cmd, f'! Error in Osmosis with country: {country}')
+                            cmd, f'! Error in Osmosis with country: {country}. Win/out_file')
 
                         cmd = [self.osmconvert_path,
                                '-v', '--hash-memory=2500']
@@ -490,7 +490,7 @@ class OsmMaps:
                         cmd.append('-o='+out_file_names)
 
                         run_subprocess_and_log_output(
-                            cmd, '! Error in Osmosis with country: {country}')
+                            cmd, '! Error in Osmosis with country: {country}. Win/out_file_names')
 
                     # Non-Windows
                     else:
@@ -503,7 +503,7 @@ class OsmMaps:
                         cmd.extend(['--overwrite'])
 
                         run_subprocess_and_log_output(
-                            cmd, '! Error in Osmosis with country: {country}')
+                            cmd, '! Error in Osmosis with country: {country}. macOS/out_file')
 
                         cmd = ['osmium', 'extract']
                         cmd.extend(
@@ -514,7 +514,7 @@ class OsmMaps:
                         cmd.extend(['--overwrite'])
 
                         run_subprocess_and_log_output(
-                            cmd, '! Error in Osmosis with country: {country}')
+                            cmd, '! Error in Osmosis with country: {country}. macOS/out_file_names')
 
                         log.info(val['filtered_file'])
 
@@ -675,7 +675,7 @@ class OsmMaps:
                     f'tag-conf-file={os.path.join(RESOURCES_DIR, "tag_wahoo_adjusted", tag_wahoo_xml)}')
 
                 run_subprocess_and_log_output(
-                    cmd, f'Error in Osmosis with country: c // tile: {tile["x"]},{tile["y"]}')
+                    cmd, f'Error in creating map file via Osmosis with tile: {tile["x"]},{tile["y"]}. mapwriter plugin installed?')
 
                 # Windows
                 if platform.system() == "Windows":
