@@ -117,7 +117,6 @@ class OsmData():  # pylint: disable=too-few-public-methods
             o_input_data.max_days_old, o_input_data.force_download)
 
         self.force_processing = ''
-
         self.tiles = []
 
         log.info('-' * 80)
@@ -164,13 +163,12 @@ class OsmData():  # pylint: disable=too-few-public-methods
                 self.find_tiles_for_xy_combinations(xy_coordinates)
 
             # calc border country when input X/Y coordinates
-            calc_border_countries = True
+            o_input_data.process_border_countries = True
 
         # Build list of countries needed, either via CLI/GUI input or if processing x/y coordinates
         self.border_countries = {}
-        if o_input_data.process_border_countries or calc_border_countries:
-            self.calc_border_countries(True)
-        else:
+        self.calc_border_countries(o_input_data.process_border_countries)
+        if not o_input_data.process_border_countries:
             self.border_countries[self.country_name] = {}
 
         if 8 * struct.calcsize("P") == 32:
