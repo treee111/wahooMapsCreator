@@ -101,23 +101,6 @@
             ]
         },
         {
-            "name": "malta -c -km",
-            "type": "python",
-            "request": "launch",
-            "module": "wahoomc",
-            "console": "integratedTerminal",
-            "args": [
-                "cli",
-                "-co",
-                "malta",
-                "-fp",
-                "-c",
-                "-md",
-                "100",
-                "-km"
-            ]
-        },
-        {
             "name": "malta-poi",
             "type": "python",
             "request": "launch",
@@ -199,23 +182,6 @@
                 "-c",
                 "-md",
                 "100"
-            ]
-        },
-        {
-            "name": "x/y: 138/100 (malta) -c -km",
-            "type": "python",
-            "request": "launch",
-            "module": "wahoomc",
-            "console": "integratedTerminal",
-            "args": [
-                "cli",
-                "-xy",
-                "138/100",
-                "-fp",
-                "-c",
-                "-md",
-                "100",
-                "-km"
             ]
         },
         {
