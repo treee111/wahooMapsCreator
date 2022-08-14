@@ -152,11 +152,6 @@ class OsmMaps:
 
         log.info('-' * 80)
 
-        if self.o_input_data.country and self.o_input_data.xy_coordinates:
-            log.error(
-                "! country and X/Y coordinates are given. Only one of both is allowed!")
-            sys.exit()
-
         # option 1: input a country as parameter, e.g. germany
         if self.o_input_data.country:
             log.info('# Input country: %s.', self.o_input_data.country)
