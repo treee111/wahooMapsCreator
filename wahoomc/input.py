@@ -76,9 +76,6 @@ def process_call_of_the_tool():
     # only merge - used for special usecases
     options_args.add_argument('-om', '--only_merge', action='store_true',
                               help="only merge, do no other processing")
-    # option to keep the /output/country/ and /output/country-maps folders in the output
-    options_args.add_argument('-km', '--keep_map_folders', action='store_true',
-                              help="keep the country and country-maps folders in the output")
     # option to calculate tiles to process based on Geofabrik index-v1.json file
     options_args.add_argument('-gt', '--geofabrik_tiles', action='store_true',
                               help="calculate tiles based on geofabrik index-v1.json file")
@@ -111,7 +108,6 @@ def process_call_of_the_tool():
 
     o_input_data.tag_wahoo_xml = args.tag_wahoo_xml
     o_input_data.only_merge = args.only_merge
-    o_input_data.keep_map_folders = args.keep_map_folders
     o_input_data.save_cruiser = args.cruiser
     o_input_data.zip_folder = args.zip
 
@@ -154,10 +150,6 @@ class InputData():  # pylint: disable=too-many-instance-attributes,too-few-publi
         self.only_merge = False
 
         self.tag_wahoo_xml = "tag-wahoo.xml"
-        # Folder /output/country and /output/country-maps map folders
-        # True - Keep them after compression
-        # False - Delete them after compression
-        self.keep_map_folders = False
 
         # Way of calculating the relevant tiles for given input (country)
         # True - Use geofabrik index-v1.json file
@@ -265,7 +257,6 @@ class GuiInput(tk.Tk):
         self.o_input_data.geofabrik_tiles = tab1.third.checkb_geofabrik_tiles_val.get()
 
         self.o_input_data.only_merge = tab2.first.checkb_only_merge_val.get()
-        self.o_input_data.keep_map_folders = tab2.first.checkb_keep_map_folders_val.get()
         self.o_input_data.save_cruiser = tab2.first.checkb_save_cruiser_val.get()
         self.o_input_data.zip_folder = tab2.first.checkb_zip_folder_val.get()
 
@@ -417,8 +408,6 @@ class CheckbuttonsTab2(tk.Frame):
 
         self.checkb_only_merge_val = create_checkbox(self, oInputData.only_merge,
                                                      "Only merge, do no other processing", 0)
-        self.checkb_keep_map_folders_val = create_checkbox(self, oInputData.keep_map_folders,
-                                                           "Keep the country and country-maps folders in the output", 1)
         self.checkb_save_cruiser_val = create_checkbox(self, oInputData.save_cruiser,
                                                        "Save uncompressed maps for Cruiser", 2)
         self.checkb_zip_folder_val = create_checkbox(self, oInputData.zip_folder,

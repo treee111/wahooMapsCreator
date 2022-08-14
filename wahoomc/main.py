@@ -65,10 +65,8 @@ def run():
                                 o_input_data.tag_wahoo_xml)
 
     # Zip .map.lzma files
-    o_osm_maps.make_and_zip_files(
-        o_input_data.keep_map_folders, '.map.lzma', o_input_data.zip_folder)
+    o_osm_maps.make_and_zip_files('.map.lzma', o_input_data.zip_folder)
 
     # Make Cruiser map files zip file
     if o_input_data.save_cruiser is True:
-        o_osm_maps.make_and_zip_files(
-            o_input_data.keep_map_folders, '.map', o_input_data.zip_folder)
+        o_osm_maps.make_and_zip_files('.map', o_input_data.zip_folder)

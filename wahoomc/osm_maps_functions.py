@@ -701,7 +701,7 @@ class OsmMaps:
 
         log.info('+ Creating .map files: OK')
 
-    def make_and_zip_files(self, keep_map_folders, extension, zip_folder):
+    def make_and_zip_files(self, extension, zip_folder):
         """
         make or make and zip .map or .map.lzma files
         extension: '.map.lzma' for Wahoo tiles
@@ -756,14 +756,13 @@ class OsmMaps:
             run_subprocess_and_log_output(
                 cmd, f'! Error zipping map files for folder: {folder_name}', cwd=USER_WAHOO_MC)
 
-            # Keep (True) or delete (False) the country/region map folders after compression
-            if keep_map_folders is False:
-                try:
-                    shutil.rmtree(os.path.join(
-                        f'{USER_WAHOO_MC}', folder_name))
-                except OSError:
-                    log.error(
-                        '! Error, could not delete folder %s', os.path.join(USER_WAHOO_MC, folder_name))
+            # Delete the country/region map folders after compression
+            try:
+                shutil.rmtree(os.path.join(
+                    f'{USER_WAHOO_MC}', folder_name))
+            except OSError:
+                log.error(
+                    '! Error, could not delete folder %s', os.path.join(USER_WAHOO_MC, folder_name))
 
             log.info('+ Zip %s files: OK', extension)
 
