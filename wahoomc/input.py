@@ -76,15 +76,15 @@ def process_call_of_the_tool():
     # only merge - used for special usecases
     options_args.add_argument('-om', '--only_merge', action='store_true',
                               help="only merge, do no other processing")
-    # option to keep the /output/country/ and /output/country-maps folders in the output
-    options_args.add_argument('-km', '--keep_map_folders', action='store_true',
-                              help="keep the country and country-maps folders in the output")
     # option to calculate tiles to process based on Geofabrik index-v1.json file
     options_args.add_argument('-gt', '--geofabrik_tiles', action='store_true',
                               help="calculate tiles based on geofabrik index-v1.json file")
     # zip the country (and country-maps) folder
     options_args.add_argument('-z', '--zip', action='store_true',
                               help="zip the country (and country-maps) folder")
+    # option to keep the /output/country/ and /output/country-maps folders in the output
+    options_args.add_argument('-km', '--keep_map_folders', action='store_true',
+                              help="keep the country and country-maps folders in the output")
 
     args = parser_top.parse_args()
 
@@ -265,9 +265,9 @@ class GuiInput(tk.Tk):
         self.o_input_data.geofabrik_tiles = tab1.third.checkb_geofabrik_tiles_val.get()
 
         self.o_input_data.only_merge = tab2.first.checkb_only_merge_val.get()
-        self.o_input_data.keep_map_folders = tab2.first.checkb_keep_map_folders_val.get()
         self.o_input_data.save_cruiser = tab2.first.checkb_save_cruiser_val.get()
         self.o_input_data.zip_folder = tab2.first.checkb_zip_folder_val.get()
+        self.o_input_data.keep_map_folders = tab2.first.checkb_keep_map_folders_val.get()
 
         # get text without \n in the end
         self.o_input_data.tag_wahoo_xml = tab2.second.input_tag_wahoo_xml.get()
@@ -417,9 +417,9 @@ class CheckbuttonsTab2(tk.Frame):
 
         self.checkb_only_merge_val = create_checkbox(self, oInputData.only_merge,
                                                      "Only merge, do no other processing", 0)
-        self.checkb_keep_map_folders_val = create_checkbox(self, oInputData.keep_map_folders,
-                                                           "Keep the country and country-maps folders in the output", 1)
         self.checkb_save_cruiser_val = create_checkbox(self, oInputData.save_cruiser,
                                                        "Save uncompressed maps for Cruiser", 2)
         self.checkb_zip_folder_val = create_checkbox(self, oInputData.zip_folder,
                                                      "Zip folder with generated files", 3)
+        self.checkb_keep_map_folders_val = create_checkbox(self, oInputData.keep_map_folders,
+                                                           "Keep the country and country-maps folders in the output", 1)
