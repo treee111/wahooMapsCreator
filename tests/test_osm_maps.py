@@ -37,7 +37,7 @@ class TestOsmMaps(unittest.TestCase):
         self.o_osm_maps.o_input_data.country = 'malta'
         self.o_osm_maps.process_input(True)
 
-        result = self.o_osm_maps.country_name
+        result = self.o_osm_maps.o_osm_data.country_name
         self.assertEqual(result, 'malta')
 
     def test_calc_border_countries_input_country(self):
@@ -129,7 +129,7 @@ class TestOsmMaps(unittest.TestCase):
             self.o_osm_maps.o_input_data.xy_coordinates = inp_val
 
         self.o_osm_maps.process_input(calc_border_c)
-        result = self.o_osm_maps.border_countries
+        result = self.o_osm_maps.o_osm_data.border_countries
 
         self.assertEqual(result, exp_result)
 
