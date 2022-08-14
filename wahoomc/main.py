@@ -11,6 +11,7 @@ from wahoomc.input import process_call_of_the_tool
 from wahoomc.setup_functions import initialize_work_directories
 from wahoomc.setup_functions import move_old_content_into_new_dirs
 from wahoomc.osm_maps_functions import OsmMaps
+# from wahoomc.osm_maps_functions import OsmData
 
 # logging used in the terminal output:
 # # means top-level command
@@ -35,12 +36,14 @@ def run():
     initialize_work_directories()
     move_old_content_into_new_dirs()
 
+    # o_osm_data = OsmData(o_input_data)
+
     o_osm_maps = OsmMaps(o_input_data)
 
     # Read json file
     # Check for expired land polygons file and download, if too old
     # Check for expired .osm.pbf files and download, if too old
-    o_osm_maps.process_input(o_input_data.process_border_countries)
+    # o_osm_maps.process_input(o_input_data.process_border_countries)
     o_osm_maps.check_and_download_files()
 
     if o_input_data.only_merge is False:
