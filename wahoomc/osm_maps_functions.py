@@ -15,7 +15,7 @@ import shutil
 import logging
 
 # import custom python packages
-from wahoomc import file_directory_functions as fd_fct
+from wahoomc.file_directory_functions import get_tooling_win_path, read_json_file, get_folders_in_folder, get_filenames_of_jsons_in_folder
 from wahoomc.constants_functions import get_path_to_static_tile_json, translate_tags_to_keep
 
 from wahoomc.constants import USER_WAHOO_MC
@@ -60,11 +60,11 @@ def get_tile_by_one_xy_combination_from_jsons(xy_combination):
     # go through all files in all folders of the "json" directory
     file_path_jsons = os.path.join(RESOURCES_DIR, 'json')
 
-    for folder in fd_fct.get_folders_in_folder(file_path_jsons):
-        for file in fd_fct.get_filenames_of_jsons_in_folder(os.path.join(file_path_jsons, folder)):
+    for folder in get_folders_in_folder(file_path_jsons):
+        for file in get_filenames_of_jsons_in_folder(os.path.join(file_path_jsons, folder)):
 
             # get content of json in folder
-            content = fd_fct.read_json_file(
+            content = read_json_file(
                 os.path.join(file_path_jsons, folder, file + '.json'))
 
             # check tiles values against input x/y combination
@@ -105,7 +105,7 @@ class OsmMaps:
     This is a OSM data class
     """
 
-    osmosis_win_file_path = fd_fct.get_tooling_win_path(
+    osmosis_win_file_path = get_tooling_win_path(
         ['Osmosis', 'bin', 'osmosis.bat'])
 
     # Number of workers for the Osmosis read binary fast function
@@ -123,9 +123,9 @@ class OsmMaps:
             o_input_data.max_days_old, o_input_data.force_download)
 
         if 8 * struct.calcsize("P") == 32:
-            self.osmconvert_path = fd_fct.get_tooling_win_path(['osmconvert'])
+            self.osmconvert_path = get_tooling_win_path(['osmconvert'])
         else:
-            self.osmconvert_path = fd_fct.get_tooling_win_path(
+            self.osmconvert_path = get_tooling_win_path(
                 ['osmconvert64-0.8.8p'])
 
     def process_input(self, calc_border_countries):
@@ -158,7 +158,7 @@ class OsmMaps:
             else:
                 json_file_path = get_path_to_static_tile_json(
                     self.o_input_data.country)
-                self.tiles = fd_fct.read_json_file(json_file_path)
+                self.tiles = read_json_file(json_file_path)
 
             # country name is the input argument
             self.country_name = self.o_input_data.country
@@ -280,7 +280,7 @@ class OsmMaps:
 
                     log.info(
                         '+ Filtering unwanted map objects out of map of %s', key)
-                    cmd = [fd_fct.get_tooling_win_path(['osmfilter'])]
+                    cmd = [get_tooling_win_path(['osmfilter'])]
                     cmd.append(out_file_o5m)
                     cmd.append(
                         '--keep="' + translate_tags_to_keep(sys_platform=platform.system()) + '"')
@@ -291,7 +291,7 @@ class OsmMaps:
                     run_subprocess_and_log_output(
                         cmd, '! Error in OSMFilter with country: {key}')
 
-                    cmd = [fd_fct.get_tooling_win_path(['osmfilter'])]
+                    cmd = [get_tooling_win_path(['osmfilter'])]
                     cmd.append(out_file_o5m)
                     cmd.append(
                         '--keep="' + translate_tags_to_keep(
@@ -684,7 +684,7 @@ class OsmMaps:
 
                 # Windows
                 if platform.system() == "Windows":
-                    cmd = [fd_fct.get_tooling_win_path(['lzma']), 'e', out_file,
+                    cmd = [get_tooling_win_path(['lzma']), 'e', out_file,
                            out_file+'.lzma', f'-mt{threads}', '-d27', '-fb273', '-eos']
                 # Non-Windows
                 else:
@@ -746,7 +746,7 @@ class OsmMaps:
         if zip_folder:
             # Windows
             if platform.system() == "Windows":
-                cmd = [fd_fct.get_tooling_win_path(['7za']), 'a', '-tzip']
+                cmd = [get_tooling_win_path(['7za']), 'a', '-tzip']
 
                 cmd.extend(
                     [folder_name + '.zip', os.path.join(".", folder_name, "*")])
