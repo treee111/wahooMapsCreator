@@ -15,8 +15,13 @@ import requests
 
 # import custom python packages
 from wahoomc.constants import TOOLING_WIN_DIR
+from wahoomc.constants import RESOURCES_DIR
 
 log = logging.getLogger('main-logger')
+
+
+class TagWahooXmlNotFoundError(Exception):
+    """Raised when the specified tag-wahoo xml file does not exist"""
 
 
 def unzip(source_filename, dest_dir):
@@ -165,3 +170,17 @@ def get_tooling_win_path(path_in_tooling_win):
     return path to a tooling in the tooling_win directory and the given path
     """
     return os.path.join(TOOLING_WIN_DIR, *path_in_tooling_win)
+
+
+def get_tag_wahoo_xml_path(tag_wahoo_xml):
+    """
+    return path to tag-wahoo xml file if the file exists
+    """
+
+    path_tag_wahoo_xml = os.path.join(
+        RESOURCES_DIR, "tag_wahoo_adjusted", tag_wahoo_xml)
+
+    if os.path.exists(path_tag_wahoo_xml):
+        return path_tag_wahoo_xml
+
+    raise TagWahooXmlNotFoundError

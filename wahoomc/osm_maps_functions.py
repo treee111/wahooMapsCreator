@@ -478,7 +478,7 @@ class OsmMaps:
                         cmd.append('-o='+out_file)
 
                         run_subprocess_and_log_output(
-                            cmd, f'! Error in Osmosis with country: {country}')
+                            cmd, f'! Error in Osmosis with country: {country}. Win/out_file')
 
                         cmd = [self.osmconvert_path,
                                '-v', '--hash-memory=2500']
@@ -490,7 +490,7 @@ class OsmMaps:
                         cmd.append('-o='+out_file_names)
 
                         run_subprocess_and_log_output(
-                            cmd, '! Error in Osmosis with country: {country}')
+                            cmd, '! Error in Osmosis with country: {country}. Win/out_file_names')
 
                     # Non-Windows
                     else:
@@ -503,7 +503,7 @@ class OsmMaps:
                         cmd.extend(['--overwrite'])
 
                         run_subprocess_and_log_output(
-                            cmd, '! Error in Osmosis with country: {country}')
+                            cmd, '! Error in Osmosis with country: {country}. macOS/out_file')
 
                         cmd = ['osmium', 'extract']
                         cmd.extend(
@@ -514,7 +514,7 @@ class OsmMaps:
                         cmd.extend(['--overwrite'])
 
                         run_subprocess_and_log_output(
-                            cmd, '! Error in Osmosis with country: {country}')
+                            cmd, '! Error in Osmosis with country: {country}. macOS/out_file_names')
 
                         log.info(val['filtered_file'])
 
@@ -670,12 +670,17 @@ class OsmMaps:
                     f'bbox={tile["bottom"]:.6f},{tile["left"]:.6f},{tile["top"]:.6f},{tile["right"]:.6f}')
                 cmd.append('zoom-interval-conf=10,0,17')
                 cmd.append('threads=' + threads)
-                # should work on macOS and Windows
-                cmd.append(
-                    f'tag-conf-file={os.path.join(RESOURCES_DIR, "tag_wahoo_adjusted", tag_wahoo_xml)}')
+                # add path to tag-wahoo xml file
+                try:
+                    cmd.append(
+                        f'tag-conf-file={fd_fct.get_tag_wahoo_xml_path(tag_wahoo_xml)}')
+                except fd_fct.TagWahooXmlNotFoundError:
+                    log.error(
+                        'The tag-wahoo xml file was not found: ˚%s˚. Does the file exist and is your input correct?', tag_wahoo_xml)
+                    sys.exit()
 
                 run_subprocess_and_log_output(
-                    cmd, f'Error in Osmosis with country: c // tile: {tile["x"]},{tile["y"]}')
+                    cmd, f'Error in creating map file via Osmosis with tile: {tile["x"]},{tile["y"]}. mapwriter plugin installed?')
 
                 # Windows
                 if platform.system() == "Windows":
