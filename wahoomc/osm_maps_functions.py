@@ -105,7 +105,16 @@ class OsmData():  # pylint: disable=too-few-public-methods
     object with all internal parameters to process maps
     """
 
-    def __init__(self, o_input_data):
+    def __init__(self):
+        """
+        xxx
+        """
+        self.force_processing = ''
+        self.tiles = []
+        self.border_countries = {}
+        self.country_name = ''
+
+    def process_input_of_the_tool(self, o_input_data):
         """
         Process input: get relevant tiles and if border countries should be calculated
         The three primary inputs are giving by a separate value each and have separate processing:
@@ -113,77 +122,96 @@ class OsmData():  # pylint: disable=too-few-public-methods
         2. x/y combinations
         """
 
-        self.o_downloader = Downloader(
+        log.info('-' * 80)
+
+        o_downloader = Downloader(
             o_input_data.max_days_old, o_input_data.force_download)
 
+        # calc force processing
+        # takeover what is given by user
         self.force_processing = ''
         self.tiles = []
+        # if geofabrik file was downloaded, force-processing is set because there might be
+        # a change in the geofabrik file
+        if o_input_data.geofabrik_tiles and \
+                o_downloader.check_and_download_geofabrik_if_needed():
+            self.force_processing = True
 
-        log.info('-' * 80)
-
-        self.country_name = ''
-
-        # option 1: input a country as parameter, e.g. germany
+        # calc tiles
         if o_input_data.country:
-            log.info('# Input country: %s.', o_input_data.country)
-
-            # option 1a: use Geofabrik-URL to calculate the relevant tiles
-            if o_input_data.geofabrik_tiles:
-                # if geofabrik file was downloaded, force-processing is set because there might be
-                # a change in the geofabrik file
-                self.force_processing = self.o_downloader.check_and_download_geofabrik_if_needed()
-
-                o_geofabrik = Geofabrik(o_input_data.country)
-                self.tiles = o_geofabrik.get_tiles_of_country()
-
-            # option 1b: use static json files in the repo to calculate relevant tiles
-            else:
-                json_file_path = get_path_to_static_tile_json(
-                    o_input_data.country)
-                self.tiles = read_json_file(json_file_path)
-
-                # country name is the input argument
-                self.country_name = o_input_data.country
-
-        # option 2: input a x/y combinations as parameter, e.g. 134/88  or 133/88,130/100
+            self.calc_tiles_country(o_input_data)
         elif o_input_data.xy_coordinates:
-            log.info(
-                '# Input X/Y coordinates: %s.', o_input_data.xy_coordinates)
+            self.calc_tiles_xy(o_input_data)
 
-            # option 2a: use Geofabrik-URL to get the relevant tiles
-            if o_input_data.geofabrik_tiles:
-                sys.exit("X/Y coordinated via Geofabrik not implemented now")
-
-            # option 2b: use static json files in the repo to get relevant tiles
-            else:
-                xy_coordinates = get_xy_coordinates_from_input(
-                    o_input_data.xy_coordinates)
-
-                # loop through x/y combinations and find each tile in the json files
-                self.find_tiles_for_xy_combinations(xy_coordinates)
-
-            # calc border country when input X/Y coordinates
-            o_input_data.process_border_countries = True
-
-        # Build list of countries needed, either via CLI/GUI input or if processing x/y coordinates
-        self.border_countries = {}
-        self.calc_border_countries(o_input_data.process_border_countries)
-        if not o_input_data.process_border_countries:
+        # calc border countries
+        really_calc_border_countries = self.calc_border_countries(o_input_data)
+        if not really_calc_border_countries:
             self.border_countries[self.country_name] = {}
 
-        if 8 * struct.calcsize("P") == 32:
-            self.osmconvert_path = get_tooling_win_path(['osmconvert'])
-        else:
-            self.osmconvert_path = get_tooling_win_path(
-                ['osmconvert64-0.8.8p'])
+        # calc country name
+        if o_input_data.country:
+            # country name is the input argument
+            self.country_name = o_input_data.country
+        elif o_input_data.xy_coordinates:
+            self.calc_country_name_xy()
 
-    def calc_border_countries(self, calc_border_countries):
+    def calc_tiles_country(self, o_input_data):
         """
-        calculate relevant border countries for the given tiles
+        option 1: input a country as parameter, e.g. germany
+        """
+        log.info('# Input country: %s.', o_input_data.country)
+
+        # option 1a: use Geofabrik-URL to calculate the relevant tiles
+        if o_input_data.geofabrik_tiles:
+            o_geofabrik = Geofabrik(o_input_data.country)
+            self.tiles = o_geofabrik.get_tiles_of_country()
+
+        # option 1b: use static json files in the repo to calculate relevant tiles
+        else:
+            json_file_path = get_path_to_static_tile_json(
+                o_input_data.country)
+            self.tiles = read_json_file(json_file_path)
+
+    def calc_tiles_xy(self, o_input_data):
+        """
+        option 2: input a x/y combinations as parameter, e.g. 134/88  or 133/88,130/100
+        """
+        log.info(
+            '# Input X/Y coordinates: %s.', o_input_data.xy_coordinates)
+
+        # option 2a: use Geofabrik-URL to get the relevant tiles
+        if o_input_data.geofabrik_tiles:
+            sys.exit("X/Y coordinated via Geofabrik not implemented now")
+
+        # option 2b: use static json files in the repo to get relevant tiles
+        else:
+            xy_coordinates = get_xy_coordinates_from_input(
+                o_input_data.xy_coordinates)
+
+            # loop through x/y combinations and find each tile in the json files
+            for xy_comb in xy_coordinates:
+                try:
+                    self.tiles.append(get_tile_by_one_xy_combination_from_jsons(
+                        xy_comb))
+
+                except TileNotFoundError:
+                    pass
+
+    def calc_border_countries(self, o_input_data):
+        """
+        really calculate the border countries for the given tiles
+        - if CLI/GUI input by user OR
+        - if processing x/y coordinates
+
+        run the function in both situations to output the processed country(s)
         """
 
         log.info('-' * 80)
-        if calc_border_countries:
+
+        if o_input_data.process_border_countries or o_input_data.xy_coordinates:
+            really_calc_border_countries = True
+
+        if really_calc_border_countries:
             log.info('# Determine involved/border countries')
 
         # Build list of countries needed
@@ -195,8 +223,10 @@ class OsmData():  # pylint: disable=too-few-public-methods
         for country in self.border_countries:
             log.info('+ Involved country: %s', country)
 
-        if calc_border_countries and len(self.border_countries) > 1:
+        if really_calc_border_countries and len(self.border_countries) > 1:
             log.info('+ Border countries will be processed')
+
+        return really_calc_border_countries
 
     def find_tiles_for_xy_combinations(self, xy_coordinates):
         """
@@ -207,15 +237,19 @@ class OsmData():  # pylint: disable=too-few-public-methods
                 self.tiles.append(get_tile_by_one_xy_combination_from_jsons(
                     xy_comb))
 
-                # country name is the X/Y combinations separated by minus
-                # >1 x/y combinations are separated by underscore
-                if not self.country_name:
-                    self.country_name = f'{xy_comb["x"]}-{xy_comb["y"]}'
-                else:
-                    self.country_name = f'{self.country_name}_{xy_comb["x"]}-{xy_comb["y"]}'
-
             except TileNotFoundError:
                 pass
+
+    def calc_country_name_xy(self):
+        """
+        country name is the X/Y combinations separated by minus
+        >1 x/y combinations are separated by underscore
+        """
+        for tile in self.tiles:
+            if not self.country_name:
+                self.country_name = f'{tile["x"]}-{tile["y"]}'
+            else:
+                self.country_name = f'{self.country_name}_{tile["x"]}-{tile["y"]}'
 
 
 class OsmMaps:
@@ -229,9 +263,10 @@ class OsmMaps:
     # Number of workers for the Osmosis read binary fast function
     workers = '1'
 
-    def __init__(self, o_input_data):
-        self.o_osm_data = OsmData(o_input_data)
-        self.o_input_data = o_input_data
+    def __init__(self, o_input_data, o_osm_data):
+        self.o_input_data = o_input_data  # (noch benötigt?)
+        self.o_osm_data = o_osm_data
+
         self.o_downloader = Downloader(
             o_input_data.max_days_old, o_input_data.force_download)
 

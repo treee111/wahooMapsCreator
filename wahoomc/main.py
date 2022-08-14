@@ -11,7 +11,7 @@ from wahoomc.input import process_call_of_the_tool
 from wahoomc.setup_functions import initialize_work_directories
 from wahoomc.setup_functions import move_old_content_into_new_dirs
 from wahoomc.osm_maps_functions import OsmMaps
-# from wahoomc.osm_maps_functions import OsmData
+from wahoomc.osm_maps_functions import OsmData
 
 # logging used in the terminal output:
 # # means top-level command
@@ -36,9 +36,10 @@ def run():
     initialize_work_directories()
     move_old_content_into_new_dirs()
 
-    # o_osm_data = OsmData(o_input_data)
+    o_osm_data = OsmData()
+    o_osm_data.process_input_of_the_tool(o_input_data)
 
-    o_osm_maps = OsmMaps(o_input_data)
+    o_osm_maps = OsmMaps(o_input_data, o_osm_data)
 
     # Read json file
     # Check for expired land polygons file and download, if too old
