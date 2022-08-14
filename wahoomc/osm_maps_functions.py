@@ -671,8 +671,13 @@ class OsmMaps:
                 cmd.append('zoom-interval-conf=10,0,17')
                 cmd.append('threads=' + threads)
                 # add path to tag-wahoo xml file
-                cmd.append(
-                    f'tag-conf-file={fd_fct.get_tag_wahoo_xml_path(tag_wahoo_xml)}')
+                try:
+                    cmd.append(
+                        f'tag-conf-file={fd_fct.get_tag_wahoo_xml_path(tag_wahoo_xml)}')
+                except fd_fct.TagWahooXmlNotFoundError:
+                    log.error(
+                        'The tag-wahoo xml file was not found: ˚%s˚. Does the file exist and is your input correct?', tag_wahoo_xml)
+                    sys.exit()
 
                 run_subprocess_and_log_output(
                     cmd, f'Error in creating map file via Osmosis with tile: {tile["x"]},{tile["y"]}. mapwriter plugin installed?')
