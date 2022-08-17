@@ -144,9 +144,13 @@ class OsmData():  # pylint: disable=too-few-public-methods
             self.calc_tiles_xy(o_input_data)
 
         # calc border countries
-        really_calc_border_countries = self.calc_border_countries(o_input_data)
-        if not really_calc_border_countries:
-            self.border_countries[self.country_name] = {}
+        log.info('-' * 80)
+        if o_input_data.country:
+            self.calc_border_countries_country(o_input_data)
+        elif o_input_data.xy_coordinates:
+            self.calc_border_countries()
+        # log border countries when and when not calculated to output the processed country(s)
+        self.log_border_countries()
 
         # calc country name
         if o_input_data.country:
@@ -197,22 +201,23 @@ class OsmData():  # pylint: disable=too-few-public-methods
                 except TileNotFoundError:
                     pass
 
-    def calc_border_countries(self, o_input_data):
+    def calc_border_countries_country(self, o_input_data):
         """
-        really calculate the border countries for the given tiles
-        - if CLI/GUI input by user OR
+        calculate the border countries for the given tiles when input is a country
+        - if CLI/GUI input by user
+        """
+        if o_input_data.process_border_countries:
+            self.calc_border_countries()
+        else:
+            self.border_countries[o_input_data.country] = {}
+
+    def calc_border_countries(self):
+        """
+        calculate the border countries for the given tiles. i.e.
+        - if CLI/GUI input by user
         - if processing x/y coordinates
-
-        run the function in both situations to output the processed country(s)
         """
-
-        log.info('-' * 80)
-
-        if o_input_data.process_border_countries or o_input_data.xy_coordinates:
-            really_calc_border_countries = True
-
-        if really_calc_border_countries:
-            log.info('# Determine involved/border countries')
+        log.info('# Determine involved/border countries')
 
         # Build list of countries needed
         for tile in self.tiles:
@@ -220,13 +225,17 @@ class OsmData():  # pylint: disable=too-few-public-methods
                 if country not in self.border_countries:
                     self.border_countries[country] = {}
 
+    def log_border_countries(self):
+        """
+        write calculated border countries/involved countries to log
+        """
         for country in self.border_countries:
             log.info('+ Involved country: %s', country)
 
-        if really_calc_border_countries and len(self.border_countries) > 1:
+        # input can be only one country, if there are more than one,
+        # border countries must be selected
+        if len(self.border_countries) > 1:
             log.info('+ Border countries will be processed')
-
-        return really_calc_border_countries
 
     def find_tiles_for_xy_combinations(self, xy_coordinates):
         """

@@ -8,7 +8,7 @@ import unittest
 # import custom python packages
 # sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from wahoomc.osm_maps_functions import OsmMaps
+from wahoomc.osm_maps_functions import OsmData
 from wahoomc.osm_maps_functions import get_tile_by_one_xy_combination_from_jsons
 from wahoomc.osm_maps_functions import get_xy_coordinates_from_input
 from wahoomc.osm_maps_functions import TileNotFoundError
@@ -23,10 +23,7 @@ class TestOsmMaps(unittest.TestCase):
     tests for the OSM maps file
     """
 
-    def setUp(self):
-        o_input_data = InputData()
-
-        self.o_osm_maps = OsmMaps(o_input_data)
+    # def setUp(self):
 
     def test_input_country_malta(self):
         """
@@ -34,10 +31,13 @@ class TestOsmMaps(unittest.TestCase):
         check, if the given input-parameter is saved to the OsmMaps instance
         """
 
-        self.o_osm_maps.o_input_data.country = 'malta'
-        self.o_osm_maps.process_input(True)
+        o_input_data = InputData()
+        o_input_data.country = 'malta'
 
-        result = self.o_osm_maps.o_osm_data.country_name
+        o_osm_data = OsmData()
+        o_osm_data.process_input_of_the_tool(o_input_data)
+
+        result = o_osm_data.country_name
         self.assertEqual(result, 'malta')
 
     def test_calc_border_countries_input_country(self):
@@ -123,13 +123,17 @@ class TestOsmMaps(unittest.TestCase):
         helper method to process a country or json file and check the calculated border countries
         """
 
+        o_input_data = InputData()
         if inp_mode == 'country':
-            self.o_osm_maps.o_input_data.country = inp_val
+            o_input_data.country = inp_val
         elif inp_mode == 'xy_coordinate':
-            self.o_osm_maps.o_input_data.xy_coordinates = inp_val
+            o_input_data.xy_coordinates = inp_val
+        o_input_data.process_border_countries = calc_border_c
 
-        self.o_osm_maps.process_input(calc_border_c)
-        result = self.o_osm_maps.o_osm_data.border_countries
+        o_osm_data = OsmData()
+        o_osm_data.process_input_of_the_tool(o_input_data)
+
+        result = o_osm_data.border_countries
 
         self.assertEqual(result, exp_result)
 
