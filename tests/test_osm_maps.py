@@ -135,7 +135,14 @@ class TestOsmMaps(unittest.TestCase):
 
         result = o_osm_data.border_countries
 
+        # delete the path to the file, here, only the correct border countries are checked
+        for res in result:
+            result[res] = {}
+
+        # self.assertEqual(result, exp_result)
         self.assertEqual(result, exp_result)
+
+        # self.assertDictEqual()  Equal(tIn(member=exp_result, container=result)
 
 
 class TestStaticJsons(unittest.TestCase):

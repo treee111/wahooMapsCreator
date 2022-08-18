@@ -37,15 +37,13 @@ def run():
     move_old_content_into_new_dirs()
 
     o_osm_data = OsmData()
-    o_osm_data.process_input_of_the_tool(o_input_data)
+    # Check for not existing or expired files. Mark for download, if dl is needed
+    o_downloader = o_osm_data.process_input_of_the_tool(o_input_data)
 
-    o_osm_maps = OsmMaps(o_input_data, o_osm_data)
+    # Download files marked for download
+    o_downloader.download_files_if_needed()
 
-    # Read json file
-    # Check for expired land polygons file and download, if too old
-    # Check for expired .osm.pbf files and download, if too old
-    # o_osm_maps.process_input(o_input_data.process_border_countries)
-    o_osm_maps.check_and_download_files()
+    o_osm_maps = OsmMaps(o_osm_data)
 
     if o_input_data.only_merge is False:
         # Filter tags from country osm.pbf files'

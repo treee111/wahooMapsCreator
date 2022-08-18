@@ -20,7 +20,6 @@ from wahoomc.constants import USER_DL_DIR
 from wahoomc.constants import USER_MAPS_DIR
 from wahoomc.constants import LAND_POLYGONS_PATH
 from wahoomc.constants import GEOFABRIK_PATH
-from wahoomc.constants import USER_OUTPUT_DIR
 
 log = logging.getLogger('main-logger')
 
@@ -87,69 +86,61 @@ class Downloader:
     This is the class to check and download maps / artifacts"
     """
 
-    def __init__(self, max_days_old, force_download):
+    def __init__(self, max_days_old, force_download, tiles_from_json, border_countries):
         self.max_days_old = max_days_old
         self.force_download = force_download
-        self.tiles_from_json = []
-        self.border_countries = {}
+        self.tiles_from_json = tiles_from_json
+        self.border_countries = border_countries
 
-    def check_and_download_geofabrik_if_needed(self):
+        self.need_to_dl = []
+
+    def should_geofabrik_file_be_downloaded(self):
         """
         check geofabrik file if not existing or is not up-to-date
-        and download if needed
+
+        # if geofabrik file needs to be downloaded, force-processing is set because there might be
+        # a change in the geofabrik file
         """
-
-        force_processing = False
-
         if self.check_file(GEOFABRIK_PATH) is True or \
                 self.force_download is True:
             log.info('# Need to download geofabrik file')
-            download_file(GEOFABRIK_PATH,
-                          'https://download.geofabrik.de/index-v1.json', False)
-            force_processing = True
 
-        log.info('+ check geofabrik.json file: OK')
+            return True
 
-        return force_processing
+        return False
 
-    def check_and_download_files_if_needed(self):
+    def download_geofabrik_file(self):
         """
-        check land_polygons and OSM map files if not existing or are not up-to-date
-        and download if needed
+        download geofabrik file
         """
+        download_file(GEOFABRIK_PATH,
+                      'https://download.geofabrik.de/index-v1.json', False)
 
-        force_processing = False
+        log.info('+ download geofabrik.json file: OK')
+
+    def check_land_polygons_file(self):
+        """
+        check land_polygons file if not existing or are not up-to-date
+        """
 
         if self.check_file(LAND_POLYGONS_PATH) is True or \
                 self.force_download is True:
             log.info('# Need to download land polygons file')
+            self.need_to_dl.append('land_polygons')
+
+    def download_files_if_needed(self):
+        """
+        check land_polygons and OSM map files if not existing or are not up-to-date
+        and download if needed
+        """
+        if 'land_polygons' in self.need_to_dl:
             download_file(LAND_POLYGONS_PATH,
                           'https://osmdata.openstreetmap.de/download/land-polygons-split-4326.zip', True)
-            force_processing = True
 
-        log.info('+ check land_polygons.shp file: OK')
+        # log.info('+ download land_polygons.shp file: OK')
 
-        if self.check_osm_pbf_file() is True or self.force_download is True:
-            # trigger download of relevant countries' OSM files
-            for country, item in self.border_countries.items():
-                try:
-                    if item['download'] is True:
-                        map_file_path, url = get_osm_pbf_filepath_url(country)
-                        download_file(map_file_path, url, False)
-                        self.border_countries[country] = {
-                            'map_file': map_file_path}
-                except KeyError:
-                    pass
-
-            force_processing = True
-
-        log.info('+ Check countries .osm.pbf files: OK')
-
-        # if force_processing is True:
-        fd_fct.create_empty_directories(
-            USER_OUTPUT_DIR, self.tiles_from_json)
-
-        return force_processing
+        if 'osm_pbf' in self.need_to_dl:
+            self.download_osm_pbf_file()
 
     def check_file(self, target_filepath):
         """
@@ -186,7 +177,6 @@ class Downloader:
         check if the relevant countries' OSM files are up-to-date
         """
 
-        need_to_download = False
         log.info('-' * 80)
         log.info('# check countries .osm.pbf files')
 
@@ -212,7 +202,7 @@ class Downloader:
                     log.info(
                         '+ mapfile for %s: deleted. Input: %s.', transl_c, country)
                     os.remove(map_file_path[0])
-                    need_to_download = True
+                    self.need_to_dl.append('osm_pbf')
                 else:
                     self.border_countries[country] = {
                         'map_file': map_file_path[0]}
@@ -223,11 +213,21 @@ class Downloader:
             map_file_path = self.border_countries[country].get('map_file')
             if map_file_path is None or (not os.path.isfile(map_file_path) or self.force_download):
                 self.border_countries[country]['download'] = True
-                need_to_download = True
+                self.need_to_dl.append('osm_pbf')
 
-        # self.border_countries = border_countries
-
-        return need_to_download
+    def download_osm_pbf_file(self):
+        """
+        download countries' OSM files
+        """
+        for country, item in self.border_countries.items():
+            try:
+                if item['download'] is True:
+                    map_file_path, url = get_osm_pbf_filepath_url(country)
+                    download_file(map_file_path, url, False)
+                    self.border_countries[country] = {
+                        'map_file': map_file_path}
+            except KeyError:
+                pass
 
     def should_file_be_downloaded(self, file_path):
         """

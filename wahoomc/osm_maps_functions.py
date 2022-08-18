@@ -15,7 +15,7 @@ import shutil
 import logging
 
 # import custom python packages
-from wahoomc.file_directory_functions import get_tooling_win_path, read_json_file, get_folders_in_folder, get_filenames_of_jsons_in_folder
+from wahoomc.file_directory_functions import get_tooling_win_path, read_json_file, get_folders_in_folder, get_filenames_of_jsons_in_folder, create_empty_directories
 from wahoomc.constants_functions import get_path_to_static_tile_json, translate_tags_to_keep
 
 from wahoomc.constants import USER_WAHOO_MC
@@ -109,7 +109,7 @@ class OsmData():  # pylint: disable=too-few-public-methods
         """
         xxx
         """
-        self.force_processing = ''
+        self.force_processing = False
         self.tiles = []
         self.border_countries = {}
         self.country_name = ''
@@ -120,22 +120,32 @@ class OsmData():  # pylint: disable=too-few-public-methods
         The three primary inputs are giving by a separate value each and have separate processing:
         1. country name
         2. x/y combinations
+
+        # Check for not existing or expired files. Mark for download, if dl is needed
+        # - land polygons file
+        # - .osm.pbf files
+
+        steps in this function:
+        1. take over input paramters (force_processing is changed in the function further down)
+        2. check + download geofabrik file if geofabrik-processing
+        3. calculate relevant tiles for map creation
+        4. calculate border countries for map creation
+        5. evaluate the country-name for folder cration during processing
+        6. calculate if force_processing should be set to true
         """
+
+        o_downloader = Downloader(
+            o_input_data.max_days_old, o_input_data.force_download, self.tiles, self.border_countries)
+        # takeover what is given by user first for force_processing
+        self.force_processing = o_input_data.force_processing
 
         log.info('-' * 80)
 
-        o_downloader = Downloader(
-            o_input_data.max_days_old, o_input_data.force_download)
-
-        # calc force processing
-        # takeover what is given by user
-        self.force_processing = ''
-        self.tiles = []
-        # if geofabrik file was downloaded, force-processing is set because there might be
-        # a change in the geofabrik file
+        # geofabrik file
         if o_input_data.geofabrik_tiles and \
-                o_downloader.check_and_download_geofabrik_if_needed():
+                o_downloader.should_geofabrik_file_be_downloaded():
             self.force_processing = True
+            o_downloader.download_geofabrik_file()
 
         # calc tiles
         if o_input_data.country:
@@ -158,6 +168,17 @@ class OsmData():  # pylint: disable=too-few-public-methods
             self.country_name = o_input_data.country
         elif o_input_data.xy_coordinates:
             self.calc_country_name_xy()
+
+        # calc force processing
+        # Check for not existing or expired files. Mark for download, if dl is needed
+        o_downloader.check_land_polygons_file()
+        o_downloader.check_osm_pbf_file()
+
+        # If one of the files needs to be downloaded, reprocess all files
+        if o_downloader.need_to_dl:
+            self.force_processing = True
+
+        return o_downloader
 
     def calc_tiles_country(self, o_input_data):
         """
@@ -208,6 +229,7 @@ class OsmData():  # pylint: disable=too-few-public-methods
         """
         if o_input_data.process_border_countries:
             self.calc_border_countries()
+        # set the to-be-processed country as border country
         else:
             self.border_countries[o_input_data.country] = {}
 
@@ -272,12 +294,8 @@ class OsmMaps:
     # Number of workers for the Osmosis read binary fast function
     workers = '1'
 
-    def __init__(self, o_input_data, o_osm_data):
-        self.o_input_data = o_input_data  # (noch benötigt?)
+    def __init__(self, o_osm_data):
         self.o_osm_data = o_osm_data
-
-        self.o_downloader = Downloader(
-            o_input_data.max_days_old, o_input_data.force_download)
 
         if 8 * struct.calcsize("P") == 32:
             self.osmconvert_path = get_tooling_win_path(['osmconvert'])
@@ -285,21 +303,8 @@ class OsmMaps:
             self.osmconvert_path = get_tooling_win_path(
                 ['osmconvert64-0.8.8p'])
 
-    def check_and_download_files(self):
-        """
-        trigger check of land_polygons and OSM map files if not existing or are not up-to-date
-        """
-
-        self.o_downloader.tiles_from_json = self.o_osm_data.tiles
-        self.o_downloader.border_countries = self.o_osm_data.border_countries
-
-        force_processing = self.o_downloader.check_and_download_files_if_needed()
-
-        # if download is needed or force_processing given via input --> force_processing = True
-        if force_processing or self.o_input_data.force_processing or self.o_osm_data.force_processing:
-            self.o_osm_data.force_processing = True
-        else:
-            self.o_osm_data.force_processing = False
+        create_empty_directories(
+            USER_OUTPUT_DIR, self.o_osm_data.tiles)
 
     def filter_tags_from_country_osm_pbf_files(self):
         """
