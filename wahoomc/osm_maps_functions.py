@@ -15,7 +15,9 @@ import shutil
 import logging
 
 # import custom python packages
-from wahoomc.file_directory_functions import get_tooling_win_path, read_json_file, get_folders_in_folder, get_filenames_of_jsons_in_folder, create_empty_directories
+from wahoomc.file_directory_functions import get_tooling_win_path, read_json_file, \
+    get_folders_in_folder, get_filenames_of_jsons_in_folder, create_empty_directories, \
+    get_tag_wahoo_xml_path, TagWahooXmlNotFoundError
 from wahoomc.constants_functions import get_path_to_static_tile_json, translate_tags_to_keep
 
 from wahoomc.constants import USER_WAHOO_MC
@@ -731,8 +733,8 @@ class OsmMaps:
                 # add path to tag-wahoo xml file
                 try:
                     cmd.append(
-                        f'tag-conf-file={fd_fct.get_tag_wahoo_xml_path(tag_wahoo_xml)}')
-                except fd_fct.TagWahooXmlNotFoundError:
+                        f'tag-conf-file={get_tag_wahoo_xml_path(tag_wahoo_xml)}')
+                except TagWahooXmlNotFoundError:
                     log.error(
                         'The tag-wahoo xml file was not found: ˚%s˚. Does the file exist and is your input correct?', tag_wahoo_xml)
                     sys.exit()

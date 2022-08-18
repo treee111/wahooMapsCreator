@@ -86,7 +86,7 @@ class Downloader:
     This is the class to check and download maps / artifacts"
     """
 
-    def __init__(self, max_days_old, force_download, tiles_from_json, border_countries):
+    def __init__(self, max_days_old, force_download, tiles_from_json=None, border_countries=None):
         self.max_days_old = max_days_old
         self.force_download = force_download
         self.tiles_from_json = tiles_from_json
@@ -109,7 +109,7 @@ class Downloader:
 
         return False
 
-    def download_geofabrik_file(self):
+    def download_geofabrik_file(self): # pylint: disable=no-self-use
         """
         download geofabrik file
         """
