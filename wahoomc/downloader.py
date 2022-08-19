@@ -12,10 +12,9 @@ import time
 import logging
 
 # import custom python packages
-from wahoomc import file_directory_functions as fd_fct
-from wahoomc import constants_functions as const_fct
+from wahoomc.file_directory_functions import download_url_to_file, unzip
+from wahoomc.constants_functions import translate_country_input_to_geofabrik, get_geofabrik_region_of_country
 
-# User
 from wahoomc.constants import USER_DL_DIR
 from wahoomc.constants import USER_MAPS_DIR
 from wahoomc.constants import LAND_POLYGONS_PATH
@@ -45,14 +44,14 @@ def download_file(target_filepath, url, is_zip):
         last_part = url.rsplit('/', 1)[-1]
         dl_file_path = os.path.join(USER_DL_DIR, last_part)
         # download URL to file
-        fd_fct.download_url_to_file(url, dl_file_path)
+        download_url_to_file(url, dl_file_path)
         # unpack it - should work on macOS and Windows
-        fd_fct.unzip(dl_file_path, USER_DL_DIR)
+        unzip(dl_file_path, USER_DL_DIR)
         # delete .zip file
         os.remove(dl_file_path)
     else:
         # no zipping --> directly download to given target filepath
-        fd_fct.download_url_to_file(url, target_filepath)
+        download_url_to_file(url, target_filepath)
     # Check if file exists (if target file exists)
     if not os.path.isfile(target_filepath):
         log.error('! failed to find %s', target_filepath)
@@ -66,8 +65,8 @@ def get_osm_pbf_filepath_url(country):
     build the geofabrik download url to a countries' OSM file and download filepath
     """
 
-    transl_c = const_fct.translate_country_input_to_geofabrik(country)
-    region = const_fct.get_geofabrik_region_of_country(country)
+    transl_c = translate_country_input_to_geofabrik(country)
+    region = get_geofabrik_region_of_country(country)
     if region != 'no':
         url = 'https://download.geofabrik.de/' + region + \
             '/' + transl_c + '-latest.osm.pbf'
@@ -109,7 +108,7 @@ class Downloader:
 
         return False
 
-    def download_geofabrik_file(self): # pylint: disable=no-self-use
+    def download_geofabrik_file(self):  # pylint: disable=no-self-use
         """
         download geofabrik file
         """
@@ -187,7 +186,7 @@ class Downloader:
             # get translated country (geofabrik) of country
             # do not download the same file for different countries
             # --> e.g. China, Hong Kong and Macao, see Issue #11
-            transl_c = const_fct.translate_country_input_to_geofabrik(country)
+            transl_c = translate_country_input_to_geofabrik(country)
 
             # check for already existing .osm.pbf file
             map_file_path = glob.glob(
