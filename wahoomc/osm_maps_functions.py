@@ -326,7 +326,12 @@ class OsmMaps:
                 out_file_o5m_filtered_names = os.path.join(USER_OUTPUT_DIR,
                                                            f'outFileFiltered-{key}-Names.o5m')
 
-                if not os.path.isfile(out_file_o5m_filtered) or self.o_osm_data.force_processing is True:
+                if self.o_osm_data.force_processing is True:
+                    os.remove(out_file_o5m)
+                else:
+                    log.info('+ map of %s already in o5m format', key)
+
+                if not os.path.isfile(out_file_o5m):
                     log.info('+ Converting map of %s to o5m format', key)
                     cmd = [self.osmconvert_path]
                     cmd.extend(['-v', '--hash-memory=2500', '--complete-ways',
@@ -338,6 +343,7 @@ class OsmMaps:
                     run_subprocess_and_log_output(
                         cmd, '! Error in OSMConvert with country: {key}')
 
+                if not os.path.isfile(out_file_o5m_filtered) or self.o_osm_data.force_processing is True:
                     log.info(
                         '+ Filtering unwanted map objects out of map of %s', key)
                     cmd = [get_tooling_win_path(['osmfilter'])]
@@ -363,8 +369,6 @@ class OsmMaps:
 
                     run_subprocess_and_log_output(
                         cmd, '! Error in OSMFilter with country: {key}')
-
-                    os.remove(out_file_o5m)
 
                 val['filtered_file'] = out_file_o5m_filtered
                 val['filtered_file_names'] = out_file_o5m_filtered_names
