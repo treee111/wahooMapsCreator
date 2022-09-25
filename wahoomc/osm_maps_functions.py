@@ -344,7 +344,7 @@ class OsmMaps:
                     cmd.append(out_file_o5m)
                     cmd.append(
                         '--keep="' + translate_tags_to_keep(sys_platform=platform.system()) + '"')
-                    cmd.append('--keep-tags=all type= layer= "' +
+                    cmd.append('--keep-tags="all type= layer= ' +
                                translate_tags_to_keep(sys_platform=platform.system()) + '"')
                     cmd.append('-o=' + out_file_o5m_filtered)
 
@@ -356,7 +356,7 @@ class OsmMaps:
                     cmd.append(
                         '--keep="' + translate_tags_to_keep(
                             name_tags=True, sys_platform=platform.system()) + '"')
-                    cmd.append('--keep-tags=all type= name= layer= "' +
+                    cmd.append('--keep-tags="all type= name= layer= ' +
                                translate_tags_to_keep(
                                    name_tags=True, sys_platform=platform.system()) + '"')
                     cmd.append('-o=' + out_file_o5m_filtered_names)
