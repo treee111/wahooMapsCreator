@@ -25,7 +25,7 @@ options:
       - DEV
     title_maps:
       FEATURE: Features
-      FEAT: Features no.2
+      FEAT: Features
       FIX: Bug Fixes
       DEV: Development/Infrastructure/Test/CI
       BREAKING: Breaking Changes
