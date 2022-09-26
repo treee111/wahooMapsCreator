@@ -327,7 +327,10 @@ class OsmMaps:
                                                            f'outFileFiltered-{key}-Names.o5m')
 
                 if self.o_osm_data.force_processing is True:
-                    os.remove(out_file_o5m)
+                    try:
+                        os.remove(out_file_o5m)
+                    except OSError:
+                        pass
                 else:
                     log.info('+ Map of %s already in o5m format', key)
 
