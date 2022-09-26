@@ -308,7 +308,7 @@ class OsmMaps:
         create_empty_directories(
             USER_OUTPUT_DIR, self.o_osm_data.tiles)
 
-    def filter_tags_from_country_osm_pbf_files(self):
+    def filter_tags_from_country_osm_pbf_files(self):  # pylint: disable=too-many-statements
         """
         Filter tags from country osm.pbf files
         """
@@ -329,8 +329,9 @@ class OsmMaps:
                 if self.o_osm_data.force_processing is True:
                     os.remove(out_file_o5m)
                 else:
-                    log.info('+ map of %s already in o5m format', key)
+                    log.info('+ Map of %s already in o5m format', key)
 
+                # only create o5m file if not there already --> speeds up processing if one only wants to test tags / POIs
                 if not os.path.isfile(out_file_o5m):
                     log.info('+ Converting map of %s to o5m format', key)
                     cmd = [self.osmconvert_path]
