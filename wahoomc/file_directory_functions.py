@@ -113,7 +113,9 @@ def download_url_to_file(url, map_file_path):
     """
     download the content of a ULR to file
     """
-    request_geofabrik = requests.get(url, allow_redirects=True, stream=True)
+    # set timeout to 30 minutes (per file)
+    request_geofabrik = requests.get(
+        url, allow_redirects=True, stream=True, timeout=1800)
     if request_geofabrik.status_code != 200:
         log.error('! failed download URL: %s', url)
         sys.exit()
