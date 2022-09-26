@@ -643,7 +643,7 @@ class OsmMaps:
         log.info('# Creating .map files')
 
         # Number of threads to use in the mapwriter plug-in
-        threads = str(multiprocessing.cpu_count() - 1)
+        threads = multiprocessing.cpu_count() - 1
         if int(threads) < 1:
             threads = 1
 
@@ -669,7 +669,7 @@ class OsmMaps:
                 cmd.append(
                     f'bbox={tile["bottom"]:.6f},{tile["left"]:.6f},{tile["top"]:.6f},{tile["right"]:.6f}')
                 cmd.append('zoom-interval-conf=10,0,17')
-                cmd.append('threads=' + threads)
+                cmd.append(f'threads={threads}')
                 # add path to tag-wahoo xml file
                 try:
                     cmd.append(
