@@ -2,6 +2,8 @@ name: Run pylint tests - wahoomc & tests
 
 on:
   push:
+    branches:
+    - develop
   pull_request:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
