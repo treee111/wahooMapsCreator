@@ -10,6 +10,7 @@
 /wahoomc.egg-info/
 /dist/
 /build/
+/wahoomc-*/
 
 # IDE
 /.vscode/*
