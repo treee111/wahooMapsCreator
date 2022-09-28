@@ -657,14 +657,18 @@
             <symbol src="icons/drinking_water.svg" symbol-percent="150"/>
          </m>
       </m>
+
       <m k="shop">
          <m v="bakery">
-            <symbol src="icons/bakery.svg" symbol-percent="150"/>
+            <symbol src="icons/bakery.svg"/>
+         </m>
+         <m v="bicycle">
+            <symbol src="icons/shop_bicycle.svg" symbol-percent="150"/>
          </m>
       </m>
-
    </m>
-   <m k="railway" v="station|halt|stop" zoom-min="13">
+
+   <m k="railway" v="station" zoom-min="13">
       <symbol src="icons/train_station.svg" symbol-percent="130"/>
    </m>
 </rendertheme>
