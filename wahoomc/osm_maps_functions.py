@@ -526,8 +526,6 @@ class OsmMaps:
                                         f'{tile["x"]}', f'{tile["y"]}', f'split-{country}.osm.pbf')
                 out_file_names = os.path.join(USER_OUTPUT_DIR,
                                               f'{tile["x"]}', f'{tile["y"]}', f'split-{country}-names.osm.pbf')
-                out_merged = os.path.join(USER_OUTPUT_DIR,
-                                          f'{tile["x"]}', f'{tile["y"]}', 'merged.osm.pbf')
 
                 # split filtered country files to tiles every time because the result is different per constants
                 # Windows
