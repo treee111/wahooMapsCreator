@@ -108,7 +108,7 @@ class Downloader:
 
         return False
 
-    def download_geofabrik_file(self):  # pylint: disable=no-self-use
+    def download_geofabrik_file(self):
         """
         download geofabrik file
         """
