@@ -326,16 +326,8 @@ class OsmMaps:
                 out_file_o5m_filtered_names = os.path.join(USER_OUTPUT_DIR,
                                                            f'outFileFiltered-{key}-Names.o5m')
 
-                if self.o_osm_data.force_processing is True:
-                    try:
-                        os.remove(out_file_o5m)
-                    except OSError:
-                        pass
-                else:
-                    log.info('+ Map of %s already in o5m format', key)
-
                 # only create o5m file if not there already --> speeds up processing if one only wants to test tags / POIs
-                if not os.path.isfile(out_file_o5m):
+                if not os.path.isfile(out_file_o5m) or self.o_osm_data.force_processing is True:
                     log.info('+ Converting map of %s to o5m format', key)
                     cmd = [self.osmconvert_path]
                     cmd.extend(['-v', '--hash-memory=2500', '--complete-ways',
@@ -346,33 +338,36 @@ class OsmMaps:
 
                     run_subprocess_and_log_output(
                         cmd, '! Error in OSMConvert with country: {key}')
+                else:
+                    log.info('+ Map of %s already in o5m format', key)
 
-                if not os.path.isfile(out_file_o5m_filtered) or self.o_osm_data.force_processing is True:
-                    log.info(
-                        '+ Filtering unwanted map objects out of map of %s', key)
-                    cmd = [get_tooling_win_path(['osmfilter'])]
-                    cmd.append(out_file_o5m)
-                    cmd.append(
-                        '--keep="' + translate_tags_to_keep(sys_platform=platform.system()) + '"')
-                    cmd.append('--keep-tags="all type= layer= ' +
-                               translate_tags_to_keep(sys_platform=platform.system()) + '"')
-                    cmd.append('-o=' + out_file_o5m_filtered)
+                # filter out tags every time using the defined TAGS_TO_KEEP_UNIVERSAL constants
+                # because the result is different per constants
+                log.info(
+                    '+ Filtering unwanted map objects out of map of %s', key)
+                cmd = [get_tooling_win_path(['osmfilter'])]
+                cmd.append(out_file_o5m)
+                cmd.append(
+                    '--keep="' + translate_tags_to_keep(sys_platform=platform.system()) + '"')
+                cmd.append('--keep-tags="all type= layer= ' +
+                           translate_tags_to_keep(sys_platform=platform.system()) + '"')
+                cmd.append('-o=' + out_file_o5m_filtered)
 
-                    run_subprocess_and_log_output(
-                        cmd, '! Error in OSMFilter with country: {key}')
+                run_subprocess_and_log_output(
+                    cmd, '! Error in OSMFilter with country: {key}')
 
-                    cmd = [get_tooling_win_path(['osmfilter'])]
-                    cmd.append(out_file_o5m)
-                    cmd.append(
-                        '--keep="' + translate_tags_to_keep(
-                            name_tags=True, sys_platform=platform.system()) + '"')
-                    cmd.append('--keep-tags="all type= name= layer= ' +
-                               translate_tags_to_keep(
-                                   name_tags=True, sys_platform=platform.system()) + '"')
-                    cmd.append('-o=' + out_file_o5m_filtered_names)
+                cmd = [get_tooling_win_path(['osmfilter'])]
+                cmd.append(out_file_o5m)
+                cmd.append(
+                    '--keep="' + translate_tags_to_keep(
+                        name_tags=True, sys_platform=platform.system()) + '"')
+                cmd.append('--keep-tags="all type= name= layer= ' +
+                           translate_tags_to_keep(
+                               name_tags=True, sys_platform=platform.system()) + '"')
+                cmd.append('-o=' + out_file_o5m_filtered_names)
 
-                    run_subprocess_and_log_output(
-                        cmd, '! Error in OSMFilter with country: {key}')
+                run_subprocess_and_log_output(
+                    cmd, '! Error in OSMFilter with country: {key}')
 
                 val['filtered_file'] = out_file_o5m_filtered
                 val['filtered_file_names'] = out_file_o5m_filtered_names
