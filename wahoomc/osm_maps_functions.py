@@ -716,50 +716,51 @@ class OsmMaps:
                 '+ Creating map file for tile %s of %s for Coordinates: %s,%s', tile_count, len(self.o_osm_data.tiles), tile["x"], tile["y"])
             out_file = os.path.join(USER_OUTPUT_DIR,
                                     f'{tile["x"]}', f'{tile["y"]}.map')
-            if not os.path.isfile(out_file+'.lzma') or self.o_osm_data.force_processing is True:
-                merged_file = os.path.join(USER_OUTPUT_DIR,
-                                           f'{tile["x"]}', f'{tile["y"]}', 'merged.osm.pbf')
 
-                # Windows
-                if platform.system() == "Windows":
-                    cmd = [self.osmosis_win_file_path, '--rbf', merged_file,
-                           'workers=' + self.workers, '--mw', 'file='+out_file]
-                # Non-Windows
-                else:
-                    cmd = ['osmosis', '--rb', merged_file,
-                           '--mw', 'file='+out_file]
+            # apply tag-wahoo xml every time because the result is different per user input
+            merged_file = os.path.join(USER_OUTPUT_DIR,
+                                       f'{tile["x"]}', f'{tile["y"]}', 'merged.osm.pbf')
 
+            # Windows
+            if platform.system() == "Windows":
+                cmd = [self.osmosis_win_file_path, '--rbf', merged_file,
+                       'workers=' + self.workers, '--mw', 'file='+out_file]
+            # Non-Windows
+            else:
+                cmd = ['osmosis', '--rb', merged_file,
+                       '--mw', 'file='+out_file]
+
+            cmd.append(
+                f'bbox={tile["bottom"]:.6f},{tile["left"]:.6f},{tile["top"]:.6f},{tile["right"]:.6f}')
+            cmd.append('zoom-interval-conf=10,0,17')
+            cmd.append(f'threads={threads}')
+            # add path to tag-wahoo xml file
+            try:
                 cmd.append(
-                    f'bbox={tile["bottom"]:.6f},{tile["left"]:.6f},{tile["top"]:.6f},{tile["right"]:.6f}')
-                cmd.append('zoom-interval-conf=10,0,17')
-                cmd.append(f'threads={threads}')
-                # add path to tag-wahoo xml file
-                try:
-                    cmd.append(
-                        f'tag-conf-file={get_tag_wahoo_xml_path(tag_wahoo_xml)}')
-                except TagWahooXmlNotFoundError:
-                    log.error(
-                        'The tag-wahoo xml file was not found: ˚%s˚. Does the file exist and is your input correct?', tag_wahoo_xml)
-                    sys.exit()
+                    f'tag-conf-file={get_tag_wahoo_xml_path(tag_wahoo_xml)}')
+            except TagWahooXmlNotFoundError:
+                log.error(
+                    'The tag-wahoo xml file was not found: ˚%s˚. Does the file exist and is your input correct?', tag_wahoo_xml)
+                sys.exit()
 
-                run_subprocess_and_log_output(
-                    cmd, f'Error in creating map file via Osmosis with tile: {tile["x"]},{tile["y"]}. mapwriter plugin installed?')
+            run_subprocess_and_log_output(
+                cmd, f'Error in creating map file via Osmosis with tile: {tile["x"]},{tile["y"]}. mapwriter plugin installed?')
 
-                # Windows
-                if platform.system() == "Windows":
-                    cmd = [get_tooling_win_path(['lzma']), 'e', out_file,
-                           out_file+'.lzma', f'-mt{threads}', '-d27', '-fb273', '-eos']
-                # Non-Windows
-                else:
-                    # force overwrite of output file and (de)compress links
-                    cmd = ['lzma', out_file, '-f']
+            # Windows
+            if platform.system() == "Windows":
+                cmd = [get_tooling_win_path(['lzma']), 'e', out_file,
+                       out_file+'.lzma', f'-mt{threads}', '-d27', '-fb273', '-eos']
+            # Non-Windows
+            else:
+                # force overwrite of output file and (de)compress links
+                cmd = ['lzma', out_file, '-f']
 
-                    # --keep: do not delete source file
-                    if save_cruiser:
-                        cmd.append('--keep')
+                # --keep: do not delete source file
+                if save_cruiser:
+                    cmd.append('--keep')
 
-                run_subprocess_and_log_output(
-                    cmd, f'! Error creating map files for tile: {tile["x"]},{tile["y"]}')
+            run_subprocess_and_log_output(
+                cmd, f'! Error creating map files for tile: {tile["x"]},{tile["y"]}')
 
             # Create "tile present" file
             with open(out_file + '.lzma.17', mode='wb') as tile_present_file:
