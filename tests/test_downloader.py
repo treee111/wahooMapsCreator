@@ -83,6 +83,25 @@ class TestDownloader(unittest.TestCase):
 
         self.assertTrue(os.path.exists(path))
 
+    def test_download_geofabrik_file_2(self):
+        """
+        Test the download of geofabrik file via URL.
+        check & download via built functions of downloader class
+        """
+        path = os.path.join(constants.USER_DL_DIR, 'geofabrik.json')
+
+        if os.path.exists(path):
+            os.remove(path)
+
+        self.assertTrue(
+            self.o_downloader.should_geofabrik_file_be_downloaded())
+
+        self.o_downloader.download_geofabrik_file()
+
+        self.assertTrue(os.path.exists(path))
+        self.assertFalse(
+            self.o_downloader.should_geofabrik_file_be_downloaded())
+
     def test_download_malta_osm_pbf_file(self):
         """
         Test the download of geofabrik file via URL
@@ -114,6 +133,21 @@ class TestDownloader(unittest.TestCase):
 
         with self.assertRaises(FileNotFoundError):
             os.remove(path)
+
+    def test_check_dl_needed_geofabrik(self):
+        """
+        Test if geofabrik file needs to be downloaded
+        """
+        path = os.path.join(constants.USER_DL_DIR, 'geofabrik.json')
+
+        if os.path.exists(path):
+            os.remove(path)
+
+        self.o_downloader.max_days_old = 24
+        # self.o_downloader.check_geofabrik_file()
+
+        self.assertTrue(
+            self.o_downloader.should_geofabrik_file_be_downloaded())
 
 
 if __name__ == '__main__':

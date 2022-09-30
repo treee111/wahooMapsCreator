@@ -8,8 +8,11 @@ import os
 import logging
 
 # import custom python packages
-from wahoomc import file_directory_functions as fd_fct
-from wahoomc import constants
+from wahoomc.file_directory_functions import move_content
+from wahoomc.constants import USER_WAHOO_MC
+from wahoomc.constants import USER_DL_DIR
+from wahoomc.constants import USER_MAPS_DIR
+from wahoomc.constants import USER_OUTPUT_DIR
 
 log = logging.getLogger('main-logger')
 
@@ -18,10 +21,10 @@ def initialize_work_directories():
     """
     Initialize work directories
     """
-    os.makedirs(constants.USER_WAHOO_MC, exist_ok=True)
-    os.makedirs(constants.USER_DL_DIR, exist_ok=True)
-    os.makedirs(constants.USER_MAPS_DIR, exist_ok=True)
-    os.makedirs(constants.USER_OUTPUT_DIR, exist_ok=True)
+    os.makedirs(USER_WAHOO_MC, exist_ok=True)
+    os.makedirs(USER_DL_DIR, exist_ok=True)
+    os.makedirs(USER_MAPS_DIR, exist_ok=True)
+    os.makedirs(USER_OUTPUT_DIR, exist_ok=True)
 
 
 def move_old_content_into_new_dirs():
@@ -33,5 +36,5 @@ def move_old_content_into_new_dirs():
     This coding is only valid/needed when using the cloned version or .zip version.
     If working with a installed version via PyPI, nothing will be done because folders to copy do not exist
     """
-    fd_fct.move_content('wahooMapsCreator_download', constants.USER_DL_DIR)
-    fd_fct.move_content('wahooMapsCreator_output', constants.USER_OUTPUT_DIR)
+    move_content('wahooMapsCreator_download', USER_DL_DIR)
+    move_content('wahooMapsCreator_output', USER_OUTPUT_DIR)

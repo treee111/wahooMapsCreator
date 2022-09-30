@@ -12,7 +12,8 @@ import geojson
 from shapely.geometry import Polygon, shape
 
 # import custom python packages
-from wahoomc import constants
+from wahoomc.constants import GEOFABRIK_PATH
+from wahoomc.constants import special_regions, geofabrik_regions, block_download
 
 log = logging.getLogger('main-logger')
 
@@ -142,7 +143,7 @@ def geom(wanted):
     input parameter is the name of the desired country/region as use by Geofabric
     in their json file.
     """
-    with open(constants.GEOFABRIK_PATH, encoding='utf8') as file_handle:
+    with open(GEOFABRIK_PATH, encoding='utf8') as file_handle:
         data = geojson.load(file_handle)
     file_handle.close()
 
@@ -196,7 +197,7 @@ def find_needed_countries(bbox_tiles, wanted_map, wanted_region_polygon):
     """
     output = []
 
-    with open(constants.GEOFABRIK_PATH, encoding='utf8') as file_handle:
+    with open(GEOFABRIK_PATH, encoding='utf8') as file_handle:
         geofabrik_json_data = geojson.load(file_handle)
     file_handle.close()
 
@@ -244,19 +245,19 @@ def find_needed_countries(bbox_tiles, wanted_map, wanted_region_polygon):
                 if rshape.intersects(poly):  # if so
                     # catch special_regions like (former) colonies where the map of the region is not fysically in the map of the parent country.
                     # example Guadeloupe, it's parent country is France but Guadeloupe is not located within the region covered by the map of France
-                    if wanted_map not in constants.special_regions:
+                    if wanted_map not in special_regions:
                         # If we are proseccing a sub-region add the parent of this sub-region
                         # to the must download list.
                         # This to prevent downloading several small regions AND it's containing region
                         # we are processing a sub-regiongo find the parent region:
-                        if parent not in constants.geofabrik_regions and regionname not in constants.geofabrik_regions:
+                        if parent not in geofabrik_regions and regionname not in geofabrik_regions:
                             # we are processing a sub-regiongo find the parent region
                             x_value = 0
                             # handle sub-sub-regions like unterfranken->bayern->germany
-                            while parent not in constants.geofabrik_regions:
+                            while parent not in geofabrik_regions:
                                 parent, child = find_geofbrik_parent(
                                     parent, geofabrik_json_data)
-                                if parent in constants.geofabrik_regions:
+                                if parent in geofabrik_regions:
                                     parent = child
                                     break
                                 if x_value > 10:  # prevent endless loop
@@ -288,7 +289,7 @@ def find_needed_countries(bbox_tiles, wanted_map, wanted_region_polygon):
             if regionname != wanted_map:
                 # check if we are processing a country or a sub-region.
                 # For countries only process other countries. also block special geofabrik sub regions
-                if parent in constants.geofabrik_regions and regionname not in constants.block_download:
+                if parent in geofabrik_regions and regionname not in block_download:
                     # processing a country and no special sub-region
                     # check if rshape is subset of desired region. If so discard it
                     if wanted_region_polygon.contains(rshape):

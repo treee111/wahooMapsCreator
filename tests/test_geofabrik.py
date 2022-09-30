@@ -46,7 +46,7 @@ class TestGeofabrik(unittest.TestCase):
 
         if not os.path.isfile(constants.GEOFABRIK_PATH):
             o_downloader = Downloader(24, False)
-            o_downloader.check_and_download_geofabrik_if_needed()
+            o_downloader.download_geofabrik_file()
 
     def test_tiles_via_geofabrik_malta(self):
         """

@@ -15,7 +15,9 @@ import shutil
 import logging
 
 # import custom python packages
-from wahoomc import file_directory_functions as fd_fct
+from wahoomc.file_directory_functions import get_tooling_win_path, read_json_file, \
+    get_folders_in_folder, get_filenames_of_jsons_in_folder, create_empty_directories, \
+    get_tag_wahoo_xml_path, TagWahooXmlNotFoundError
 from wahoomc.constants_functions import get_path_to_static_tile_json, translate_tags_to_keep
 
 from wahoomc.constants import USER_WAHOO_MC
@@ -60,11 +62,11 @@ def get_tile_by_one_xy_combination_from_jsons(xy_combination):
     # go through all files in all folders of the "json" directory
     file_path_jsons = os.path.join(RESOURCES_DIR, 'json')
 
-    for folder in fd_fct.get_folders_in_folder(file_path_jsons):
-        for file in fd_fct.get_filenames_of_jsons_in_folder(os.path.join(file_path_jsons, folder)):
+    for folder in get_folders_in_folder(file_path_jsons):
+        for file in get_filenames_of_jsons_in_folder(os.path.join(file_path_jsons, folder)):
 
             # get content of json in folder
-            content = fd_fct.read_json_file(
+            content = read_json_file(
                 os.path.join(file_path_jsons, folder, file + '.json'))
 
             # check tiles values against input x/y combination
@@ -100,95 +102,164 @@ def run_subprocess_and_log_output(cmd, error_message, cwd=""):
         sys.exit()
 
 
-class OsmMaps:
+class OsmData():  # pylint: disable=too-few-public-methods
     """
-    This is a OSM data class
+    object with all internal parameters to process maps
     """
 
-    osmosis_win_file_path = fd_fct.get_tooling_win_path(
-        ['Osmosis', 'bin', 'osmosis.bat'])
-
-    # Number of workers for the Osmosis read binary fast function
-    workers = '1'
-
-    def __init__(self, o_input_data):
-        self.force_processing = ''
-
+    def __init__(self):
+        """
+        xxx
+        """
+        self.force_processing = False
         self.tiles = []
         self.border_countries = {}
         self.country_name = ''
 
-        self.o_input_data = o_input_data
-        self.o_downloader = Downloader(
-            o_input_data.max_days_old, o_input_data.force_download)
-
-        if 8 * struct.calcsize("P") == 32:
-            self.osmconvert_path = fd_fct.get_tooling_win_path(['osmconvert'])
-        else:
-            self.osmconvert_path = fd_fct.get_tooling_win_path(
-                ['osmconvert64-0.8.8p'])
-
-    def process_input(self, calc_border_countries):
+    def process_input_of_the_tool(self, o_input_data):
         """
         Process input: get relevant tiles and if border countries should be calculated
         The three primary inputs are giving by a separate value each and have separate processing:
         1. country name
         2. x/y combinations
+
+        # Check for not existing or expired files. Mark for download, if dl is needed
+        # - land polygons file
+        # - .osm.pbf files
+
+        steps in this function:
+        1. take over input paramters (force_processing is changed in the function further down)
+        2. check + download geofabrik file if geofabrik-processing
+        3. calculate relevant tiles for map creation
+        4. calculate border countries for map creation
+        5. evaluate the country-name for folder cration during processing
+        6. calculate if force_processing should be set to true
         """
+
+        o_downloader = Downloader(
+            o_input_data.max_days_old, o_input_data.force_download, self.tiles, self.border_countries)
+        # takeover what is given by user first for force_processing
+        self.force_processing = o_input_data.force_processing
 
         log.info('-' * 80)
 
-        if self.o_input_data.country and self.o_input_data.xy_coordinates:
-            log.error(
-                "! country and X/Y coordinates are given. Only one of both is allowed!")
-            sys.exit()
+        # geofabrik file
+        if o_input_data.geofabrik_tiles and \
+                o_downloader.should_geofabrik_file_be_downloaded():
+            self.force_processing = True
+            o_downloader.download_geofabrik_file()
 
-        # option 1: input a country as parameter, e.g. germany
-        if self.o_input_data.country:
-            log.info('# Input country: %s.', self.o_input_data.country)
+        # calc tiles
+        if o_input_data.country:
+            self.calc_tiles_country(o_input_data)
+        elif o_input_data.xy_coordinates:
+            self.calc_tiles_xy(o_input_data)
 
-            # option 1a: use Geofabrik-URL to calculate the relevant tiles
-            if self.o_input_data.geofabrik_tiles:
-                self.force_processing = self.o_downloader.check_and_download_geofabrik_if_needed()
+        # calc border countries
+        log.info('-' * 80)
+        if o_input_data.country:
+            self.calc_border_countries_country(o_input_data)
+        elif o_input_data.xy_coordinates:
+            self.calc_border_countries()
+        # log border countries when and when not calculated to output the processed country(s)
+        self.log_border_countries()
 
-                o_geofabrik = Geofabrik(self.o_input_data.country)
-                self.tiles = o_geofabrik.get_tiles_of_country()
-
-            # option 1b: use static json files in the repo to calculate relevant tiles
-            else:
-                json_file_path = get_path_to_static_tile_json(
-                    self.o_input_data.country)
-                self.tiles = fd_fct.read_json_file(json_file_path)
-
+        # calc country name
+        if o_input_data.country:
             # country name is the input argument
-            self.country_name = self.o_input_data.country
+            self.country_name = o_input_data.country
+        elif o_input_data.xy_coordinates:
+            self.calc_country_name_xy()
 
-        # option 2: input a x/y combinations as parameter, e.g. 134/88  or 133/88,130/100
-        elif self.o_input_data.xy_coordinates:
-            log.info(
-                '# Input X/Y coordinates: %s.', self.o_input_data.xy_coordinates)
+        # calc force processing
+        # Check for not existing or expired files. Mark for download, if dl is needed
+        o_downloader.check_land_polygons_file()
+        o_downloader.check_osm_pbf_file()
 
-            # option 2a: use Geofabrik-URL to get the relevant tiles
-            if self.o_input_data.geofabrik_tiles:
-                sys.exit("X/Y coordinated via Geofabrik not implemented now")
+        # If one of the files needs to be downloaded, reprocess all files
+        if o_downloader.need_to_dl:
+            self.force_processing = True
 
-            # option 2b: use static json files in the repo to get relevant tiles
-            else:
-                xy_coordinates = get_xy_coordinates_from_input(
-                    self.o_input_data.xy_coordinates)
+        return o_downloader
 
-                # loop through x/y combinations and find each tile in the json files
-                self.find_tiles_for_xy_combinations(xy_coordinates)
+    def calc_tiles_country(self, o_input_data):
+        """
+        option 1: input a country as parameter, e.g. germany
+        """
+        log.info('# Input country: %s.', o_input_data.country)
 
-            # calc border country when input X/Y coordinates
-            calc_border_countries = True
+        # option 1a: use Geofabrik-URL to calculate the relevant tiles
+        if o_input_data.geofabrik_tiles:
+            o_geofabrik = Geofabrik(o_input_data.country)
+            self.tiles = o_geofabrik.get_tiles_of_country()
+
+        # option 1b: use static json files in the repo to calculate relevant tiles
+        else:
+            json_file_path = get_path_to_static_tile_json(
+                o_input_data.country)
+            self.tiles = read_json_file(json_file_path)
+
+    def calc_tiles_xy(self, o_input_data):
+        """
+        option 2: input a x/y combinations as parameter, e.g. 134/88  or 133/88,130/100
+        """
+        log.info(
+            '# Input X/Y coordinates: %s.', o_input_data.xy_coordinates)
+
+        # option 2a: use Geofabrik-URL to get the relevant tiles
+        if o_input_data.geofabrik_tiles:
+            sys.exit("X/Y coordinated via Geofabrik not implemented now")
+
+        # option 2b: use static json files in the repo to get relevant tiles
+        else:
+            xy_coordinates = get_xy_coordinates_from_input(
+                o_input_data.xy_coordinates)
+
+            # loop through x/y combinations and find each tile in the json files
+            for xy_comb in xy_coordinates:
+                try:
+                    self.tiles.append(get_tile_by_one_xy_combination_from_jsons(
+                        xy_comb))
+
+                except TileNotFoundError:
+                    pass
+
+    def calc_border_countries_country(self, o_input_data):
+        """
+        calculate the border countries for the given tiles when input is a country
+        - if CLI/GUI input by user
+        """
+        if o_input_data.process_border_countries:
+            self.calc_border_countries()
+        # set the to-be-processed country as border country
+        else:
+            self.border_countries[o_input_data.country] = {}
+
+    def calc_border_countries(self):
+        """
+        calculate the border countries for the given tiles. i.e.
+        - if CLI/GUI input by user
+        - if processing x/y coordinates
+        """
+        log.info('# Determine involved/border countries')
 
         # Build list of countries needed
-        self.border_countries = {}
-        if calc_border_countries:
-            self.calc_border_countries(calc_border_countries)
-        else:
-            self.border_countries[self.country_name] = {}
+        for tile in self.tiles:
+            for country in tile['countries']:
+                if country not in self.border_countries:
+                    self.border_countries[country] = {}
+
+    def log_border_countries(self):
+        """
+        write calculated border countries/involved countries to log
+        """
+        for country in self.border_countries:
+            log.info('+ Involved country: %s', country)
+
+        # input can be only one country, if there are more than one,
+        # border countries must be selected
+        if len(self.border_countries) > 1:
+            log.info('+ Border countries will be processed')
 
     def find_tiles_for_xy_combinations(self, xy_coordinates):
         """
@@ -199,54 +270,43 @@ class OsmMaps:
                 self.tiles.append(get_tile_by_one_xy_combination_from_jsons(
                     xy_comb))
 
-                # country name is the X/Y combinations separated by minus
-                # >1 x/y combinations are separated by underscore
-                if not self.country_name:
-                    self.country_name = f'{xy_comb["x"]}-{xy_comb["y"]}'
-                else:
-                    self.country_name = f'{self.country_name}_{xy_comb["x"]}-{xy_comb["y"]}'
-
             except TileNotFoundError:
                 pass
 
-    def check_and_download_files(self):
+    def calc_country_name_xy(self):
         """
-        trigger check of land_polygons and OSM map files if not existing or are not up-to-date
+        country name is the X/Y combinations separated by minus
+        >1 x/y combinations are separated by underscore
         """
-
-        self.o_downloader.tiles_from_json = self.tiles
-        self.o_downloader.border_countries = self.border_countries
-
-        force_processing = self.o_downloader.check_and_download_files_if_needed()
-
-        # if download is needed or force_processing given via input --> force_processing = True
-        if force_processing or self.o_input_data.force_processing or self.force_processing:
-            self.force_processing = True
-        else:
-            self.force_processing = False
-
-    def calc_border_countries(self, calc_border_countries):
-        """
-        calculate relevant border countries for the given tiles
-        """
-
-        log.info('-' * 80)
-        if calc_border_countries:
-            log.info('# Determine involved/border countries')
-
-        # Build list of countries needed
         for tile in self.tiles:
-            for country in tile['countries']:
-                if country not in self.border_countries:
-                    self.border_countries[country] = {}
+            if not self.country_name:
+                self.country_name = f'{tile["x"]}-{tile["y"]}'
+            else:
+                self.country_name = f'{self.country_name}_{tile["x"]}-{tile["y"]}'
 
-        # log.info('+ Count of involved countries: %s',
-        #          len(self.border_countries))
-        for country in self.border_countries:
-            log.info('+ Involved country: %s', country)
 
-        if calc_border_countries and len(self.border_countries) > 1:
-            log.info('+ Border countries will be processed')
+class OsmMaps:
+    """
+    This is a OSM data class
+    """
+
+    osmosis_win_file_path = get_tooling_win_path(
+        ['Osmosis', 'bin', 'osmosis.bat'])
+
+    # Number of workers for the Osmosis read binary fast function
+    workers = '1'
+
+    def __init__(self, o_osm_data):
+        self.o_osm_data = o_osm_data
+
+        if 8 * struct.calcsize("P") == 32:
+            self.osmconvert_path = get_tooling_win_path(['osmconvert'])
+        else:
+            self.osmconvert_path = get_tooling_win_path(
+                ['osmconvert64-0.8.8p'])
+
+        create_empty_directories(
+            USER_OUTPUT_DIR, self.o_osm_data.tiles)
 
     def filter_tags_from_country_osm_pbf_files(self):
         """
@@ -258,7 +318,7 @@ class OsmMaps:
 
         # Windows
         if platform.system() == "Windows":
-            for key, val in self.border_countries.items():
+            for key, val in self.o_osm_data.border_countries.items():
                 out_file_o5m = os.path.join(USER_OUTPUT_DIR,
                                             f'outFile-{key}.o5m')
                 out_file_o5m_filtered = os.path.join(USER_OUTPUT_DIR,
@@ -266,7 +326,7 @@ class OsmMaps:
                 out_file_o5m_filtered_names = os.path.join(USER_OUTPUT_DIR,
                                                            f'outFileFiltered-{key}-Names.o5m')
 
-                if not os.path.isfile(out_file_o5m_filtered) or self.force_processing is True:
+                if not os.path.isfile(out_file_o5m_filtered) or self.o_osm_data.force_processing is True:
                     log.info('+ Converting map of %s to o5m format', key)
                     cmd = [self.osmconvert_path]
                     cmd.extend(['-v', '--hash-memory=2500', '--complete-ways',
@@ -280,7 +340,7 @@ class OsmMaps:
 
                     log.info(
                         '+ Filtering unwanted map objects out of map of %s', key)
-                    cmd = [fd_fct.get_tooling_win_path(['osmfilter'])]
+                    cmd = [get_tooling_win_path(['osmfilter'])]
                     cmd.append(out_file_o5m)
                     cmd.append(
                         '--keep="' + translate_tags_to_keep(sys_platform=platform.system()) + '"')
@@ -291,7 +351,7 @@ class OsmMaps:
                     run_subprocess_and_log_output(
                         cmd, '! Error in OSMFilter with country: {key}')
 
-                    cmd = [fd_fct.get_tooling_win_path(['osmfilter'])]
+                    cmd = [get_tooling_win_path(['osmfilter'])]
                     cmd.append(out_file_o5m)
                     cmd.append(
                         '--keep="' + translate_tags_to_keep(
@@ -311,12 +371,12 @@ class OsmMaps:
 
         # Non-Windows
         else:
-            for key, val in self.border_countries.items():
+            for key, val in self.o_osm_data.border_countries.items():
                 out_file_o5m_filtered = os.path.join(USER_OUTPUT_DIR,
                                                      f'filtered-{key}.o5m.pbf')
                 out_file_o5m_filtered_names = os.path.join(USER_OUTPUT_DIR,
                                                            f'outFileFiltered-{key}-Names.o5m.pbf')
-                if not os.path.isfile(out_file_o5m_filtered) or self.force_processing is True:
+                if not os.path.isfile(out_file_o5m_filtered) or self.o_osm_data.force_processing is True:
                     log.info('+ Create filtered country file for %s', key)
 
                     # https://docs.osmcode.org/osmium/latest/osmium-tags-filter.html
@@ -354,16 +414,16 @@ class OsmMaps:
         log.info('# Generate land')
 
         tile_count = 1
-        for tile in self.tiles:
+        for tile in self.o_osm_data.tiles:
             land_file = os.path.join(USER_OUTPUT_DIR,
                                      f'{tile["x"]}', f'{tile["y"]}', 'land.shp')
             out_file = os.path.join(USER_OUTPUT_DIR,
                                     f'{tile["x"]}', f'{tile["y"]}', 'land')
 
             # create land.dbf, land.prj, land.shp, land.shx
-            if not os.path.isfile(land_file) or self.force_processing is True:
+            if not os.path.isfile(land_file) or self.o_osm_data.force_processing is True:
                 log.info(
-                    '+ Generate land %s of %s for Coordinates: %s,%s', tile_count, len(self.tiles), tile["x"], tile["y"])
+                    '+ Generate land %s of %s for Coordinates: %s,%s', tile_count, len(self.o_osm_data.tiles), tile["x"], tile["y"])
                 cmd = ['ogr2ogr', '-overwrite', '-skipfailures']
                 # Try to prevent getting outside of the +/-180 and +/- 90 degrees borders. Normally the +/- 0.1 are there to prevent white lines at border borders.
                 if tile["x"] == 255 or tile["y"] == 255 or tile["x"] == 0 or tile["y"] == 0:
@@ -383,7 +443,7 @@ class OsmMaps:
                     cmd, f'! Error generating land for tile: {tile["x"]},{tile["y"]}')
 
             # create land1.osm
-            if not os.path.isfile(out_file+'1.osm') or self.force_processing is True:
+            if not os.path.isfile(out_file+'1.osm') or self.o_osm_data.force_processing is True:
                 # Windows
                 if platform.system() == "Windows":
                     cmd = ['python', os.path.join(RESOURCES_DIR,
@@ -409,12 +469,12 @@ class OsmMaps:
         log.info('# Generate sea')
 
         tile_count = 1
-        for tile in self.tiles:
+        for tile in self.o_osm_data.tiles:
             out_file = os.path.join(USER_OUTPUT_DIR,
                                     f'{tile["x"]}', f'{tile["y"]}', 'sea.osm')
-            if not os.path.isfile(out_file) or self.force_processing is True:
+            if not os.path.isfile(out_file) or self.o_osm_data.force_processing is True:
                 log.info(
-                    '+ Generate sea %s of %s for Coordinates: %s,%s', tile_count, len(self.tiles), tile["x"], tile["y"])
+                    '+ Generate sea %s of %s for Coordinates: %s,%s', tile_count, len(self.o_osm_data.tiles), tile["x"], tile["y"])
                 with open(os.path.join(RESOURCES_DIR, 'sea.osm'), encoding="utf-8") as sea_file:
                     sea_data = sea_file.read()
 
@@ -452,20 +512,20 @@ class OsmMaps:
         log.info('-' * 80)
         log.info('# Split filtered country files to tiles')
         tile_count = 1
-        for tile in self.tiles:
+        for tile in self.o_osm_data.tiles:
 
-            for country, val in self.border_countries.items():
+            for country, val in self.o_osm_data.border_countries.items():
                 if country not in tile['countries']:
                     continue
                 log.info(
-                    '+ Splitting tile %s of %s for Coordinates: %s,%s from map of %s', tile_count, len(self.tiles), tile["x"], tile["y"], country)
+                    '+ Splitting tile %s of %s for Coordinates: %s,%s from map of %s', tile_count, len(self.o_osm_data.tiles), tile["x"], tile["y"], country)
                 out_file = os.path.join(USER_OUTPUT_DIR,
                                         f'{tile["x"]}', f'{tile["y"]}', f'split-{country}.osm.pbf')
                 out_file_names = os.path.join(USER_OUTPUT_DIR,
                                               f'{tile["x"]}', f'{tile["y"]}', f'split-{country}-names.osm.pbf')
                 out_merged = os.path.join(USER_OUTPUT_DIR,
                                           f'{tile["x"]}', f'{tile["y"]}', 'merged.osm.pbf')
-                if not os.path.isfile(out_merged) or self.force_processing is True:
+                if not os.path.isfile(out_merged) or self.o_osm_data.force_processing is True:
                     # Windows
                     if platform.system() == "Windows":
                         cmd = [self.osmconvert_path,
@@ -530,9 +590,9 @@ class OsmMaps:
         log.info('-' * 80)
         log.info('# Merge splitted tiles with land an sea')
         tile_count = 1
-        for tile in self.tiles:  # pylint: disable=too-many-nested-blocks
+        for tile in self.o_osm_data.tiles:  # pylint: disable=too-many-nested-blocks
             log.info(
-                '+ Merging tiles for tile %s of %s for Coordinates: %s,%s', tile_count, len(self.tiles), tile["x"], tile["y"])
+                '+ Merging tiles for tile %s of %s for Coordinates: %s,%s', tile_count, len(self.o_osm_data.tiles), tile["x"], tile["y"])
 
             out_tile_dir = os.path.join(USER_OUTPUT_DIR,
                                         f'{tile["x"]}', f'{tile["y"]}')
@@ -540,7 +600,7 @@ class OsmMaps:
 
             land_files = glob.glob(os.path.join(out_tile_dir, 'land*.osm'))
 
-            if not os.path.isfile(out_file) or self.force_processing is True:
+            if not os.path.isfile(out_file) or self.o_osm_data.force_processing is True:
                 # sort land* osm files
                 self.sort_osm_files(tile)
 
@@ -551,7 +611,7 @@ class OsmMaps:
                     # loop through all countries of tile, if border-countries should be processed.
                     # if border-countries should not be processed, only process the "entered" country
                     for country in tile['countries']:
-                        if process_border_countries or country in self.border_countries:
+                        if process_border_countries or country in self.o_osm_data.border_countries:
                             cmd.append('--rbf')
                             cmd.append(os.path.join(
                                 out_tile_dir, f'split-{country}.osm.pbf'))
@@ -581,7 +641,7 @@ class OsmMaps:
                     # loop through all countries of tile, if border-countries should be processed.
                     # if border-countries should not be processed, only process the "entered" country
                     for country in tile['countries']:
-                        if process_border_countries or country in self.border_countries:
+                        if process_border_countries or country in self.o_osm_data.border_countries:
                             cmd.append(os.path.join(
                                 out_tile_dir, f'split-{country}.osm.pbf'))
                             cmd.append(os.path.join(
@@ -648,12 +708,12 @@ class OsmMaps:
             threads = 1
 
         tile_count = 1
-        for tile in self.tiles:
+        for tile in self.o_osm_data.tiles:
             log.info(
-                '+ Creating map file for tile %s of %s for Coordinates: %s,%s', tile_count, len(self.tiles), tile["x"], tile["y"])
+                '+ Creating map file for tile %s of %s for Coordinates: %s,%s', tile_count, len(self.o_osm_data.tiles), tile["x"], tile["y"])
             out_file = os.path.join(USER_OUTPUT_DIR,
                                     f'{tile["x"]}', f'{tile["y"]}.map')
-            if not os.path.isfile(out_file+'.lzma') or self.force_processing is True:
+            if not os.path.isfile(out_file+'.lzma') or self.o_osm_data.force_processing is True:
                 merged_file = os.path.join(USER_OUTPUT_DIR,
                                            f'{tile["x"]}', f'{tile["y"]}', 'merged.osm.pbf')
 
@@ -673,8 +733,8 @@ class OsmMaps:
                 # add path to tag-wahoo xml file
                 try:
                     cmd.append(
-                        f'tag-conf-file={fd_fct.get_tag_wahoo_xml_path(tag_wahoo_xml)}')
-                except fd_fct.TagWahooXmlNotFoundError:
+                        f'tag-conf-file={get_tag_wahoo_xml_path(tag_wahoo_xml)}')
+                except TagWahooXmlNotFoundError:
                     log.error(
                         'The tag-wahoo xml file was not found: ˚%s˚. Does the file exist and is your input correct?', tag_wahoo_xml)
                     sys.exit()
@@ -684,7 +744,7 @@ class OsmMaps:
 
                 # Windows
                 if platform.system() == "Windows":
-                    cmd = [fd_fct.get_tooling_win_path(['lzma']), 'e', out_file,
+                    cmd = [get_tooling_win_path(['lzma']), 'e', out_file,
                            out_file+'.lzma', f'-mt{threads}', '-d27', '-fb273', '-eos']
                 # Non-Windows
                 else:
@@ -714,24 +774,24 @@ class OsmMaps:
         """
 
         if extension == '.map.lzma':
-            folder_name = self.country_name
+            folder_name = self.o_osm_data.country_name
         else:
-            folder_name = self.country_name + '-maps'
+            folder_name = self.o_osm_data.country_name + '-maps'
 
         log.info('-' * 80)
         log.info('# Create: %s files', extension)
-        log.info('+ Country: %s', self.country_name)
+        log.info('+ Country: %s', self.o_osm_data.country_name)
 
         # Check for us/utah etc names
         try:
-            res = self.country_name.index('/')
-            self.country_name = self.country_name[res+1:]
+            res = self.o_osm_data.country_name.index('/')
+            self.o_osm_data.country_name = self.o_osm_data.country_name[res+1:]
         except ValueError:
             pass
 
         # copy the needed tiles to the country folder
         log.info('+ Copying %s tiles to output folders', extension)
-        for tile in self.tiles:
+        for tile in self.o_osm_data.tiles:
             src = os.path.join(f'{USER_OUTPUT_DIR}',
                                f'{tile["x"]}', f'{tile["y"]}') + extension
             dst = os.path.join(
@@ -746,7 +806,7 @@ class OsmMaps:
         if zip_folder:
             # Windows
             if platform.system() == "Windows":
-                cmd = [fd_fct.get_tooling_win_path(['7za']), 'a', '-tzip']
+                cmd = [get_tooling_win_path(['7za']), 'a', '-tzip']
 
                 cmd.extend(
                     [folder_name + '.zip', os.path.join(".", folder_name, "*")])
@@ -788,5 +848,5 @@ class OsmMaps:
             shutil.copy2(src, dst)
         except Exception as exception:  # pylint: disable=broad-except
             log.error(
-                '! Error copying %s files for country %s: %s', extension, self.country_name, exception)
+                '! Error copying %s files for country %s: %s', extension, self.o_osm_data.country_name, exception)
             sys.exit()

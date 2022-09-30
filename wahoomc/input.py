@@ -172,6 +172,9 @@ class InputData():  # pylint: disable=too-many-instance-attributes,too-few-publi
                          "Or in the GUI select a country to create maps for.")
             else:
                 sys.exit()
+        elif self.country and self.xy_coordinates:
+            sys.exit(
+                "Country and X/Y coordinates are given. Only one of both is allowed!")
         else:
             return True
 
