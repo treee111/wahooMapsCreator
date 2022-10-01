@@ -49,8 +49,8 @@ def check_installation_of_required_programs():
     """
     check if required programs are installed
     """
-    text_to_docu = "Please refer to the Quickstart Guide of wahooMapsCreator for instructions:\n https://github.com/treee111/wahooMapsCreator/blob/develop/docs/QUICKSTART_ANACONDA.md \
-                    or create an issue:\n https://github.com/treee111/wahooMapsCreator/issues"
+    text_to_docu = "\nPlease refer to the Quickstart Guide of wahooMapsCreator for instructions:\n- https://github.com/treee111/wahooMapsCreator/blob/develop/docs/QUICKSTART_ANACONDA.md \
+                    \nor create an issue:\n- https://github.com/treee111/wahooMapsCreator/issues"
 
     if not is_program_installed("java"):
         sys.exit(
@@ -104,6 +104,7 @@ def is_map_writer_plugin_installed():
 
     Example filename for the map-writer-plugin
     mapsforge-map-writer-master-20210527.154736-408-jar-with-dependencies.jar
+    downloaded on 01.10.2022: mapsforge-map-writer-0.18.0-jar-with-dependencies.jar
     """
     map_writer_path = os.path.join(
         str(Path.home()), '.openstreetmap', 'osmosis', 'plugins')
