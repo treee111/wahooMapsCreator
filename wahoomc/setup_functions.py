@@ -108,8 +108,13 @@ def is_map_writer_plugin_installed():
     map_writer_path = os.path.join(
         str(Path.home()), '.openstreetmap', 'osmosis', 'plugins')
 
-    for file in os.listdir(map_writer_path):
-        if "mapsforge-map-writer" in file:
-            return True
+    # test if the file is there
+    try:
+        for file in os.listdir(map_writer_path):
+            if "mapsforge-map-writer" in file:
+                return True
+    # if there is no file in the plugins directory
+    except FileNotFoundError:
+        pass
 
     return False
