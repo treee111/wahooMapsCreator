@@ -387,7 +387,6 @@ class OsmMaps:
                     sys_platform=platform.system()))
                 cmd.extend(['-o', out_file_pbf_filtered_mac])
                 cmd.append('--overwrite')
-                cmd.append('-v')
 
                 run_subprocess_and_log_output(
                     cmd, f'! Error in Osmium with country: {key}')
@@ -398,7 +397,6 @@ class OsmMaps:
                     name_tags=True, sys_platform=platform.system()))
                 cmd.extend(['-o', out_file_pbf_filtered_names_mac])
                 cmd.append('--overwrite')
-                cmd.append('-v')
 
                 run_subprocess_and_log_output(
                     cmd, f'! Error in Osmium with country: {key}')
