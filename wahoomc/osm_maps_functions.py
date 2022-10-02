@@ -326,7 +326,8 @@ class OsmMaps:
                 out_file_o5m_filtered_names = os.path.join(USER_OUTPUT_DIR,
                                                            f'outFileFiltered-{key}-Names.o5m')
 
-                # only create o5m file if not there already --> speeds up processing if one only wants to test tags / POIs
+                # only create o5m file if not there already or force processing (no user input possible)
+                # --> speeds up processing if one only wants to test tags / POIs
                 if not os.path.isfile(out_file_o5m) or self.o_osm_data.force_processing is True:
                     log.info('+ Converting map of %s to o5m format', key)
                     cmd = [self.osmconvert_path]
@@ -342,7 +343,7 @@ class OsmMaps:
                     log.info('+ Map of %s already in o5m format', key)
 
                 # filter out tags every time using the defined TAGS_TO_KEEP_UNIVERSAL constants
-                # because the result is different per constants
+                # because the result is different per constants (user input)
                 log.info(
                     '+ Filtering unwanted map objects out of map of %s', key)
                 cmd = [get_tooling_win_path(['osmfilter'])]
@@ -527,7 +528,7 @@ class OsmMaps:
                 out_file_names = os.path.join(USER_OUTPUT_DIR,
                                               f'{tile["x"]}', f'{tile["y"]}', f'split-{country}-names.osm.pbf')
 
-                # split filtered country files to tiles every time because the result is different per constants
+                # split filtered country files to tiles every time because the result is different per constants (user input)
                 # Windows
                 if platform.system() == "Windows":
                     cmd = [self.osmconvert_path,
@@ -602,7 +603,7 @@ class OsmMaps:
 
             land_files = glob.glob(os.path.join(out_tile_dir, 'land*.osm'))
 
-            # merge splitted tiles with land and sea every time because the result is different per constants
+            # merge splitted tiles with land and sea every time because the result is different per constants (user input)
             # sort land* osm files
             self.sort_osm_files(tile)
 
@@ -716,7 +717,7 @@ class OsmMaps:
             out_file = os.path.join(USER_OUTPUT_DIR,
                                     f'{tile["x"]}', f'{tile["y"]}.map')
 
-            # apply tag-wahoo xml every time because the result is different per user input
+            # apply tag-wahoo xml every time because the result is different per .xml file (user input)
             merged_file = os.path.join(USER_OUTPUT_DIR,
                                        f'{tile["x"]}', f'{tile["y"]}', 'merged.osm.pbf')
 
