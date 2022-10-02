@@ -1,12 +1,14 @@
 """
 tests for the downloader file
 """
+import os
 import unittest
 from mock import patch
 
 
-from wahoomc.constants_functions import translate_country_input_to_geofabrik
-from wahoomc.constants_functions import translate_tags_to_keep
+from wahoomc.constants_functions import translate_country_input_to_geofabrik, translate_tags_to_keep, \
+    get_tag_wahoo_xml_path, TagWahooXmlNotFoundError
+from wahoomc.constants import RESOURCES_DIR
 
 
 class TestTranslateCountries(unittest.TestCase):
@@ -174,6 +176,29 @@ class TestTranslateTags(unittest.TestCase):
         transl_tags = translate_tags_to_keep(
             name_tags=True, sys_platform='Windows')
         self.assertEqual(names_tags_win, transl_tags)
+
+
+class TestTagWahooXML(unittest.TestCase):
+    """
+    tests for tag-wahoo xml file
+    """
+
+    def test_not_existing_tag_wahoo_xml(self):
+        """
+        check if a non-existing tag-wahoo xml file issues an exception
+        """
+        with self.assertRaises(TagWahooXmlNotFoundError):
+            get_tag_wahoo_xml_path("not_existing.xml")
+
+    def test_existing_tag_wahoo_xml(self):
+        """
+        check if the correct path of an existing tag-wahoo xml file is returned
+        """
+
+        expected_path = os.path.join(
+            RESOURCES_DIR, "tag_wahoo_adjusted", "tag-wahoo-poi.xml")
+        self.assertEqual(get_tag_wahoo_xml_path(
+            "tag-wahoo-poi.xml"), expected_path)
 
 
 if __name__ == '__main__':

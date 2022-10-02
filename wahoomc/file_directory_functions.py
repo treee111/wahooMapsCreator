@@ -14,13 +14,8 @@ import shutil
 import requests
 
 # import custom python packages
-from wahoomc.constants import RESOURCES_DIR
 
 log = logging.getLogger('main-logger')
-
-
-class TagWahooXmlNotFoundError(Exception):
-    """Raised when the specified tag-wahoo xml file does not exist"""
 
 
 def unzip(source_filename, dest_dir):
@@ -164,17 +159,3 @@ def get_filenames_of_jsons_in_folder(folder):
             json_files.extend([filename])
 
     return json_files
-
-
-def get_tag_wahoo_xml_path(tag_wahoo_xml):
-    """
-    return path to tag-wahoo xml file if the file exists
-    """
-
-    path_tag_wahoo_xml = os.path.join(
-        RESOURCES_DIR, "tag_wahoo_adjusted", tag_wahoo_xml)
-
-    if os.path.exists(path_tag_wahoo_xml):
-        return path_tag_wahoo_xml
-
-    raise TagWahooXmlNotFoundError
