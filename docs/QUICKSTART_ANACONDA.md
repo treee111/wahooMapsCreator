@@ -19,7 +19,9 @@
 # Download and Install required programs
 
 ## Anaconda
-1. Download `Anaconda Individual Edition` for your OS from
+1. Download `Anaconda Individual Edition` for your OS
+
+CLick Download of `Anaconda Distribution` on top for your OS:
 
 https://www.anaconda.com/products/individual
 
@@ -29,7 +31,9 @@ https://www.anaconda.com/products/individual
 ## Java
 Java needs to be installed for every OS (Windows, macOS, Linux)
 
-https://www.oracle.com/technetwork/java/javase/downloads
+Download the Java Runtime Environment for your OS from:
+
+https://www.java.com/de/download/
 
 ## macOS, Linux only
 The following programs are needed for macOS and Linux
