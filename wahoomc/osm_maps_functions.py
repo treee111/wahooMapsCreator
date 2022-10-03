@@ -413,8 +413,8 @@ class OsmMaps:
         for tile in self.o_osm_data.tiles:
             land_file = os.path.join(USER_OUTPUT_DIR,
                                      f'{tile["x"]}', f'{tile["y"]}', 'land.shp')
-            out_file = os.path.join(USER_OUTPUT_DIR,
-                                    f'{tile["x"]}', f'{tile["y"]}', 'land')
+            out_file_land1 = os.path.join(USER_OUTPUT_DIR,
+                                          f'{tile["x"]}', f'{tile["y"]}', 'land')
 
             # create land.dbf, land.prj, land.shp, land.shx
             if not os.path.isfile(land_file) or self.o_osm_data.force_processing is True:
@@ -439,16 +439,16 @@ class OsmMaps:
                     cmd, f'! Error generating land for tile: {tile["x"]},{tile["y"]}')
 
             # create land1.osm
-            if not os.path.isfile(out_file+'1.osm') or self.o_osm_data.force_processing is True:
+            if not os.path.isfile(out_file_land1+'1.osm') or self.o_osm_data.force_processing is True:
                 # Windows
                 if platform.system() == "Windows":
                     cmd = ['python', os.path.join(RESOURCES_DIR,
-                                                  'shape2osm.py'), '-l', out_file, land_file]
+                                                  'shape2osm.py'), '-l', out_file_land1, land_file]
 
                 # Non-Windows
                 else:
                     cmd = ['python', os.path.join(RESOURCES_DIR,
-                                                  'shape2osm.py'), '-l', out_file, land_file]
+                                                  'shape2osm.py'), '-l', out_file_land1, land_file]
 
                 run_subprocess_and_log_output(
                     cmd, f'! Error creating land.osm for tile: {tile["x"]},{tile["y"]}')
@@ -466,9 +466,9 @@ class OsmMaps:
 
         tile_count = 1
         for tile in self.o_osm_data.tiles:
-            out_file = os.path.join(USER_OUTPUT_DIR,
-                                    f'{tile["x"]}', f'{tile["y"]}', 'sea.osm')
-            if not os.path.isfile(out_file) or self.o_osm_data.force_processing is True:
+            out_file_sea = os.path.join(USER_OUTPUT_DIR,
+                                        f'{tile["x"]}', f'{tile["y"]}', 'sea.osm')
+            if not os.path.isfile(out_file_sea) or self.o_osm_data.force_processing is True:
                 log.info(
                     '+ Generate sea %s of %s for Coordinates: %s,%s', tile_count, len(self.o_osm_data.tiles), tile["x"], tile["y"])
                 with open(os.path.join(RESOURCES_DIR, 'sea.osm'), encoding="utf-8") as sea_file:
@@ -494,7 +494,7 @@ class OsmMaps:
                         sea_data = sea_data.replace(
                             '$TOP', f'{tile["top"]+0.1:.6f}')
 
-                    with open(out_file, mode='w', encoding="utf-8") as output_file:
+                    with open(out_file_sea, mode='w', encoding="utf-8") as output_file:
                         output_file.write(sea_data)
             tile_count += 1
 
@@ -591,7 +591,7 @@ class OsmMaps:
 
             out_tile_dir = os.path.join(USER_OUTPUT_DIR,
                                         f'{tile["x"]}', f'{tile["y"]}')
-            out_file = os.path.join(out_tile_dir, 'merged.osm.pbf')
+            out_file_merged = os.path.join(out_tile_dir, 'merged.osm.pbf')
 
             land_files = glob.glob(os.path.join(out_tile_dir, 'land*.osm'))
 
@@ -628,7 +628,7 @@ class OsmMaps:
                 cmd.extend(
                     ['--rx', 'file='+os.path.join(out_tile_dir, 'sea.osm'), '--s', '--m'])
                 cmd.extend(['--tag-transform', 'file=' + os.path.join(RESOURCES_DIR,
-                                                                      'tunnel-transform.xml'), '--wb', out_file, 'omitmetadata=true'])
+                                                                      'tunnel-transform.xml'), '--wb', out_file_merged, 'omitmetadata=true'])
 
             # Non-Windows
             else:
@@ -645,7 +645,7 @@ class OsmMaps:
                 for land in land_files:
                     cmd.append(land)
                 cmd.append(os.path.join(out_tile_dir, 'sea.osm'))
-                cmd.extend(['-o', out_file])
+                cmd.extend(['-o', out_file_merged])
 
             run_subprocess_and_log_output(
                 cmd, f'! Error in Osmosis with tile: {tile["x"]},{tile["y"]}')
@@ -706,8 +706,8 @@ class OsmMaps:
         for tile in self.o_osm_data.tiles:
             log.info(
                 '+ Creating map file for tile %s of %s for Coordinates: %s,%s', tile_count, len(self.o_osm_data.tiles), tile["x"], tile["y"])
-            out_file = os.path.join(USER_OUTPUT_DIR,
-                                    f'{tile["x"]}', f'{tile["y"]}.map')
+            out_file_map = os.path.join(USER_OUTPUT_DIR,
+                                        f'{tile["x"]}', f'{tile["y"]}.map')
 
             # apply tag-wahoo xml every time because the result is different per .xml file (user input)
             merged_file = os.path.join(USER_OUTPUT_DIR,
@@ -716,11 +716,11 @@ class OsmMaps:
             # Windows
             if platform.system() == "Windows":
                 cmd = [self.osmosis_win_file_path, '--rbf', merged_file,
-                       'workers=' + self.workers, '--mw', 'file='+out_file]
+                       'workers=' + self.workers, '--mw', 'file='+out_file_map]
             # Non-Windows
             else:
                 cmd = ['osmosis', '--rb', merged_file,
-                       '--mw', 'file='+out_file]
+                       '--mw', 'file='+out_file_map]
 
             cmd.append(
                 f'bbox={tile["bottom"]:.6f},{tile["left"]:.6f},{tile["top"]:.6f},{tile["right"]:.6f}')
@@ -740,12 +740,12 @@ class OsmMaps:
 
             # Windows
             if platform.system() == "Windows":
-                cmd = [get_tooling_win_path(['lzma']), 'e', out_file,
-                       out_file+'.lzma', f'-mt{threads}', '-d27', '-fb273', '-eos']
+                cmd = [get_tooling_win_path(['lzma']), 'e', out_file_map,
+                       out_file_map+'.lzma', f'-mt{threads}', '-d27', '-fb273', '-eos']
             # Non-Windows
             else:
                 # force overwrite of output file and (de)compress links
-                cmd = ['lzma', out_file, '-f']
+                cmd = ['lzma', out_file_map, '-f']
 
                 # --keep: do not delete source file
                 if save_cruiser:
@@ -755,7 +755,7 @@ class OsmMaps:
                 cmd, f'! Error creating map files for tile: {tile["x"]},{tile["y"]}')
 
             # Create "tile present" file
-            with open(out_file + '.lzma.17', mode='wb') as tile_present_file:
+            with open(out_file_map + '.lzma.17', mode='wb') as tile_present_file:
                 tile_present_file.close()
 
             tile_count += 1
