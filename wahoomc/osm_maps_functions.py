@@ -316,32 +316,32 @@ class OsmMaps:
         log.info('-' * 80)
         log.info('# Filter tags from country osm.pbf files')
 
-        # Windows
-        if platform.system() == "Windows":
-            for key, val in self.o_osm_data.border_countries.items():
-                out_file_o5m = os.path.join(USER_OUTPUT_DIR,
-                                            f'outFile-{key}.o5m')
-                out_file_o5m_filtered = os.path.join(USER_OUTPUT_DIR,
-                                                     f'outFileFiltered-{key}.o5m')
-                out_file_o5m_filtered_names = os.path.join(USER_OUTPUT_DIR,
-                                                           f'outFileFiltered-{key}-Names.o5m')
+        for key, val in self.o_osm_data.border_countries.items():
+            out_file_o5m = os.path.join(USER_OUTPUT_DIR,
+                                        f'outFile-{key}.o5m')
+            out_file_o5m_filtered = os.path.join(USER_OUTPUT_DIR,
+                                                 f'outFileFiltered-{key}.o5m')
+            out_file_o5m_filtered_names = os.path.join(USER_OUTPUT_DIR,
+                                                       f'outFileFiltered-{key}-Names.o5m')
 
-                # only create o5m file if not there already or force processing (no user input possible)
-                # --> speeds up processing if one only wants to test tags / POIs
-                if not os.path.isfile(out_file_o5m) or self.o_osm_data.force_processing is True:
-                    log.info('+ Converting map of %s to o5m format', key)
-                    cmd = [self.osmconvert_path]
-                    cmd.extend(['-v', '--hash-memory=2500', '--complete-ways',
-                                '--complete-multipolygons', '--complete-boundaries',
-                                '--drop-author', '--drop-version'])
-                    cmd.append(val['map_file'])
-                    cmd.append('-o='+out_file_o5m)
+            # only create o5m file if not there already or force processing (no user input possible)
+            # --> speeds up processing if one only wants to test tags / POIs
+            if not os.path.isfile(out_file_o5m) or self.o_osm_data.force_processing is True:
+                log.info('+ Converting map of %s to o5m format', key)
+                cmd = [self.osmconvert_path]
+                cmd.extend(['-v', '--hash-memory=2500', '--complete-ways',
+                            '--complete-multipolygons', '--complete-boundaries',
+                            '--drop-author', '--drop-version'])
+                cmd.append(val['map_file'])
+                cmd.append('-o='+out_file_o5m)
 
-                    run_subprocess_and_log_output(
-                        cmd, '! Error in OSMConvert with country: {key}')
-                else:
-                    log.info('+ Map of %s already in o5m format', key)
+                run_subprocess_and_log_output(
+                    cmd, '! Error in OSMConvert with country: {key}')
+            else:
+                log.info('+ Map of %s already in o5m format', key)
 
+            # Windows
+            if platform.system() == "Windows":
                 # filter out tags every time using the defined TAGS_TO_KEEP_UNIVERSAL constants
                 # because the result is different per constants (user input)
                 log.info(
@@ -370,42 +370,34 @@ class OsmMaps:
                 run_subprocess_and_log_output(
                     cmd, '! Error in OSMFilter with country: {key}')
 
-                val['filtered_file'] = out_file_o5m_filtered
-                val['filtered_file_names'] = out_file_o5m_filtered_names
+            # Non-Windows
+            else:
+                log.info(
+                    '+ Filtering unwanted map objects out of map of %s', key)
 
-        # Non-Windows
-        else:
-            for key, val in self.o_osm_data.border_countries.items():
-                out_file_o5m_filtered = os.path.join(USER_OUTPUT_DIR,
-                                                     f'filtered-{key}.o5m.pbf')
-                out_file_o5m_filtered_names = os.path.join(USER_OUTPUT_DIR,
-                                                           f'outFileFiltered-{key}-Names.o5m.pbf')
-                if not os.path.isfile(out_file_o5m_filtered) or self.o_osm_data.force_processing is True:
-                    log.info('+ Create filtered country file for %s', key)
+                # https://docs.osmcode.org/osmium/latest/osmium-tags-filter.html
+                cmd = ['osmium', 'tags-filter', '--remove-tags']
+                cmd.append(val['map_file'])
+                cmd.extend(translate_tags_to_keep(
+                    sys_platform=platform.system()))
+                cmd.extend(['-o', out_file_o5m_filtered])
+                cmd.append('--overwrite')
 
-                    # https://docs.osmcode.org/osmium/latest/osmium-tags-filter.html
-                    cmd = ['osmium', 'tags-filter', '--remove-tags']
-                    cmd.append(val['map_file'])
-                    cmd.extend(translate_tags_to_keep(
-                        sys_platform=platform.system()))
-                    cmd.extend(['-o', out_file_o5m_filtered])
-                    cmd.append('--overwrite')
+                run_subprocess_and_log_output(
+                    cmd, '! Error in Osmium with country: {key}')
 
-                    run_subprocess_and_log_output(
-                        cmd, '! Error in Osmium with country: {key}')
+                cmd = ['osmium', 'tags-filter', '--remove-tags']
+                cmd.append(val['map_file'])
+                cmd.extend(translate_tags_to_keep(
+                    name_tags=True, sys_platform=platform.system()))
+                cmd.extend(['-o', out_file_o5m_filtered_names])
+                cmd.append('--overwrite')
 
-                    cmd = ['osmium', 'tags-filter', '--remove-tags']
-                    cmd.append(val['map_file'])
-                    cmd.extend(translate_tags_to_keep(
-                        name_tags=True, sys_platform=platform.system()))
-                    cmd.extend(['-o', out_file_o5m_filtered_names])
-                    cmd.append('--overwrite')
+                run_subprocess_and_log_output(
+                    cmd, '! Error in Osmium with country: {key}')
 
-                    run_subprocess_and_log_output(
-                        cmd, '! Error in Osmium with country: {key}')
-
-                val['filtered_file'] = out_file_o5m_filtered
-                val['filtered_file_names'] = out_file_o5m_filtered_names
+            val['filtered_file'] = out_file_o5m_filtered
+            val['filtered_file_names'] = out_file_o5m_filtered_names
 
         log.info('+ Filter tags from country osm.pbf files: OK')
 
