@@ -69,18 +69,13 @@ To create maps for only one tile and not a whole country, one can use the X/Y co
 
 ## POIs - Points of Interest
 For creating maps which include POIs and have them displayed on your Wahoo device, these steps need to be done:
-1. Create custom maps including POIs
-  - a) via CLI
-     - `python -m wahoomc cli -co malta -tag tag-wahoo-poi.xml`
-  - b) via GUI
-     - `python -m wahoomc gui`
-     - Fill into Advanced-->Tag wahoo XML file: `tag-wahoo-poi.xml`
+1. Create custom maps including POIs like [normally](#run-wahoomapscreator-for-your-country), POI's are included per default.
 
-By using the tag-wahoo-poi.xml file, wahooMapsCreator includes fuel stations, backeries, cafes and railway stations POI's into the generated maps. 
+Actually, wahooMapsCreator includes fuel stations, backeries, cafes and railway stations POI's into the generated maps. 
 
 2. Copy POIs relevant files to your device
 - [:floppy_disk: docu](COPY_TO_WAHOO.md#copy-relevant-files-for-pois)
 
-1. Activate VTM rendering if needed
+3. Activate VTM rendering if needed
 - [see here](COPY_TO_WAHOO.md#activate-vtm-rendering)
 - see also: https://github.com/treee111/wahooMapsCreator/wiki/Enable-hidden-features

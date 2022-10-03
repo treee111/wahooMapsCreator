@@ -149,7 +149,7 @@ class InputData():  # pylint: disable=too-many-instance-attributes,too-few-publi
         self.save_cruiser = False
         self.only_merge = False
 
-        self.tag_wahoo_xml = "tag-wahoo.xml"
+        self.tag_wahoo_xml = "tag-wahoo-poi.xml"
 
         # Way of calculating the relevant tiles for given input (country)
         # True - Use geofabrik index-v1.json file
