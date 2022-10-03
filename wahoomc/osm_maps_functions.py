@@ -323,25 +323,24 @@ class OsmMaps:
                                                  f'outFileFiltered-{key}.o5m')
             out_file_o5m_filtered_names = os.path.join(USER_OUTPUT_DIR,
                                                        f'outFileFiltered-{key}-Names.o5m')
-
-            # only create o5m file if not there already or force processing (no user input possible)
-            # --> speeds up processing if one only wants to test tags / POIs
-            if not os.path.isfile(out_file_o5m) or self.o_osm_data.force_processing is True:
-                log.info('+ Converting map of %s to o5m format', key)
-                cmd = [self.osmconvert_path]
-                cmd.extend(['-v', '--hash-memory=2500', '--complete-ways',
-                            '--complete-multipolygons', '--complete-boundaries',
-                            '--drop-author', '--drop-version'])
-                cmd.append(val['map_file'])
-                cmd.append('-o='+out_file_o5m)
-
-                run_subprocess_and_log_output(
-                    cmd, '! Error in OSMConvert with country: {key}')
-            else:
-                log.info('+ Map of %s already in o5m format', key)
-
             # Windows
             if platform.system() == "Windows":
+                # only create o5m file if not there already or force processing (no user input possible)
+                # --> speeds up processing if one only wants to test tags / POIs
+                if not os.path.isfile(out_file_o5m) or self.o_osm_data.force_processing is True:
+                    log.info('+ Converting map of %s to o5m format', key)
+                    cmd = [self.osmconvert_path]
+                    cmd.extend(['-v', '--hash-memory=2500', '--complete-ways',
+                                '--complete-multipolygons', '--complete-boundaries',
+                                '--drop-author', '--drop-version'])
+                    cmd.append(val['map_file'])
+                    cmd.append('-o='+out_file_o5m)
+
+                    run_subprocess_and_log_output(
+                        cmd, '! Error in OSMConvert with country: {key}')
+                else:
+                    log.info('+ Map of %s already in o5m format', key)
+
                 # filter out tags every time using the defined TAGS_TO_KEEP_UNIVERSAL constants
                 # because the result is different per constants (user input)
                 log.info(
