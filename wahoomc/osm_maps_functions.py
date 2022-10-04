@@ -337,7 +337,7 @@ class OsmMaps:
                     cmd.append('-o='+out_file_o5m)
 
                     run_subprocess_and_log_output(
-                        cmd, '! Error in OSMConvert with country: {key}')
+                        cmd, f'! Error in OSMConvert with country: {key}')
                 else:
                     log.info('+ Map of %s already in o5m format', key)
 
@@ -354,7 +354,7 @@ class OsmMaps:
                 cmd.append('-o=' + out_file_o5m_filtered_win)
 
                 run_subprocess_and_log_output(
-                    cmd, '! Error in OSMFilter with country: {key}')
+                    cmd, f'! Error in OSMFilter with country: {key}')
 
                 cmd = [get_tooling_win_path(['osmfilter'])]
                 cmd.append(out_file_o5m)
@@ -367,7 +367,7 @@ class OsmMaps:
                 cmd.append('-o=' + out_file_o5m_filtered_names_win)
 
                 run_subprocess_and_log_output(
-                    cmd, '! Error in OSMFilter with country: {key}')
+                    cmd, f'! Error in OSMFilter with country: {key}')
 
                 val['filtered_file'] = out_file_o5m_filtered_win
                 val['filtered_file_names'] = out_file_o5m_filtered_names_win
@@ -389,7 +389,7 @@ class OsmMaps:
                 cmd.append('--overwrite')
 
                 run_subprocess_and_log_output(
-                    cmd, '! Error in Osmium with country: {key}')
+                    cmd, f'! Error in Osmium with country: {key}')
 
                 cmd = ['osmium', 'tags-filter', '--remove-tags']
                 cmd.append(val['map_file'])
@@ -399,7 +399,7 @@ class OsmMaps:
                 cmd.append('--overwrite')
 
                 run_subprocess_and_log_output(
-                    cmd, '! Error in Osmium with country: {key}')
+                    cmd, f'! Error in Osmium with country: {key}')
 
                 val['filtered_file'] = out_file_pbf_filtered_mac
                 val['filtered_file_names'] = out_file_pbf_filtered_names_mac
