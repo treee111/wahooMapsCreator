@@ -576,8 +576,6 @@ class OsmMaps:
                     run_subprocess_and_log_output(
                         cmd, '! Error in Osmosis with country: {country}. macOS/out_file_names')
 
-                    log.info(val['filtered_file'])
-
             tile_count += 1
 
         log.info('+ Split filtered country files to tiles: OK')

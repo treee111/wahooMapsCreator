@@ -38,7 +38,7 @@ def download_file(target_filepath, url, is_zip):
     """
     logging_filename = target_filepath.split(os.sep)[-1]
     log.info('-' * 80)
-    log.info('+ Downloading %s file', logging_filename)
+    log.info('# Downloading %s file', logging_filename)
     if is_zip:
         # build target-filepath based on last element of URL
         last_part = url.rsplit('/', 1)[-1]
@@ -124,7 +124,7 @@ class Downloader:
 
         if self.check_file(LAND_POLYGONS_PATH) is True or \
                 self.force_download is True:
-            log.info('# Need to download land polygons file')
+            log.info('+ Need to download land polygons file')
             self.need_to_dl.append('land_polygons')
 
     def download_files_if_needed(self):
