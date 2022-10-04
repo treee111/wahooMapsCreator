@@ -316,16 +316,15 @@ class OsmMaps:
         log.info('-' * 80)
         log.info('# Filter tags from country osm.pbf files')
 
-        # Windows
-        if platform.system() == "Windows":
-            for key, val in self.o_osm_data.border_countries.items():
+        for key, val in self.o_osm_data.border_countries.items():
+            out_file_o5m_filtered_win = os.path.join(USER_OUTPUT_DIR,
+                                                     f'outFileFiltered-{key}.o5m')
+            out_file_o5m_filtered_names_win = os.path.join(USER_OUTPUT_DIR,
+                                                           f'outFileFiltered-{key}-Names.o5m')
+            # Windows
+            if platform.system() == "Windows":
                 out_file_o5m = os.path.join(USER_OUTPUT_DIR,
                                             f'outFile-{key}.o5m')
-                out_file_o5m_filtered = os.path.join(USER_OUTPUT_DIR,
-                                                     f'outFileFiltered-{key}.o5m')
-                out_file_o5m_filtered_names = os.path.join(USER_OUTPUT_DIR,
-                                                           f'outFileFiltered-{key}-Names.o5m')
-
                 # only create o5m file if not there already or force processing (no user input possible)
                 # --> speeds up processing if one only wants to test tags / POIs
                 if not os.path.isfile(out_file_o5m) or self.o_osm_data.force_processing is True:
@@ -352,7 +351,7 @@ class OsmMaps:
                     '--keep="' + translate_tags_to_keep(sys_platform=platform.system()) + '"')
                 cmd.append('--keep-tags="all type= layer= ' +
                            translate_tags_to_keep(sys_platform=platform.system()) + '"')
-                cmd.append('-o=' + out_file_o5m_filtered)
+                cmd.append('-o=' + out_file_o5m_filtered_win)
 
                 run_subprocess_and_log_output(
                     cmd, '! Error in OSMFilter with country: {key}')
@@ -365,47 +364,45 @@ class OsmMaps:
                 cmd.append('--keep-tags="all type= name= layer= ' +
                            translate_tags_to_keep(
                                name_tags=True, sys_platform=platform.system()) + '"')
-                cmd.append('-o=' + out_file_o5m_filtered_names)
+                cmd.append('-o=' + out_file_o5m_filtered_names_win)
 
                 run_subprocess_and_log_output(
                     cmd, '! Error in OSMFilter with country: {key}')
 
-                val['filtered_file'] = out_file_o5m_filtered
-                val['filtered_file_names'] = out_file_o5m_filtered_names
+                val['filtered_file'] = out_file_o5m_filtered_win
+                val['filtered_file_names'] = out_file_o5m_filtered_names_win
 
-        # Non-Windows
-        else:
-            for key, val in self.o_osm_data.border_countries.items():
-                out_file_o5m_filtered = os.path.join(USER_OUTPUT_DIR,
-                                                     f'filtered-{key}.o5m.pbf')
-                out_file_o5m_filtered_names = os.path.join(USER_OUTPUT_DIR,
-                                                           f'outFileFiltered-{key}-Names.o5m.pbf')
-                if not os.path.isfile(out_file_o5m_filtered) or self.o_osm_data.force_processing is True:
-                    log.info('+ Create filtered country file for %s', key)
+            # Non-Windows
+            else:
+                out_file_pbf_filtered_mac = f'{out_file_o5m_filtered_win}.pbf'
+                out_file_pbf_filtered_names_mac = f'{out_file_o5m_filtered_names_win}.pbf'
 
-                    # https://docs.osmcode.org/osmium/latest/osmium-tags-filter.html
-                    cmd = ['osmium', 'tags-filter', '--remove-tags']
-                    cmd.append(val['map_file'])
-                    cmd.extend(translate_tags_to_keep(
-                        sys_platform=platform.system()))
-                    cmd.extend(['-o', out_file_o5m_filtered])
-                    cmd.append('--overwrite')
+                log.info(
+                    '+ Filtering unwanted map objects out of map of %s', key)
 
-                    run_subprocess_and_log_output(
-                        cmd, '! Error in Osmium with country: {key}')
+                # https://docs.osmcode.org/osmium/latest/osmium-tags-filter.html
+                cmd = ['osmium', 'tags-filter', '--remove-tags']
+                cmd.append(val['map_file'])
+                cmd.extend(translate_tags_to_keep(
+                    sys_platform=platform.system()))
+                cmd.extend(['-o', out_file_pbf_filtered_mac])
+                cmd.append('--overwrite')
 
-                    cmd = ['osmium', 'tags-filter', '--remove-tags']
-                    cmd.append(val['map_file'])
-                    cmd.extend(translate_tags_to_keep(
-                        name_tags=True, sys_platform=platform.system()))
-                    cmd.extend(['-o', out_file_o5m_filtered_names])
-                    cmd.append('--overwrite')
+                run_subprocess_and_log_output(
+                    cmd, '! Error in Osmium with country: {key}')
 
-                    run_subprocess_and_log_output(
-                        cmd, '! Error in Osmium with country: {key}')
+                cmd = ['osmium', 'tags-filter', '--remove-tags']
+                cmd.append(val['map_file'])
+                cmd.extend(translate_tags_to_keep(
+                    name_tags=True, sys_platform=platform.system()))
+                cmd.extend(['-o', out_file_pbf_filtered_names_mac])
+                cmd.append('--overwrite')
 
-                val['filtered_file'] = out_file_o5m_filtered
-                val['filtered_file_names'] = out_file_o5m_filtered_names
+                run_subprocess_and_log_output(
+                    cmd, '! Error in Osmium with country: {key}')
+
+                val['filtered_file'] = out_file_pbf_filtered_mac
+                val['filtered_file_names'] = out_file_pbf_filtered_names_mac
 
         log.info('+ Filter tags from country osm.pbf files: OK')
 
@@ -421,8 +418,8 @@ class OsmMaps:
         for tile in self.o_osm_data.tiles:
             land_file = os.path.join(USER_OUTPUT_DIR,
                                      f'{tile["x"]}', f'{tile["y"]}', 'land.shp')
-            out_file = os.path.join(USER_OUTPUT_DIR,
-                                    f'{tile["x"]}', f'{tile["y"]}', 'land')
+            out_file_land1 = os.path.join(USER_OUTPUT_DIR,
+                                          f'{tile["x"]}', f'{tile["y"]}', 'land')
 
             # create land.dbf, land.prj, land.shp, land.shx
             if not os.path.isfile(land_file) or self.o_osm_data.force_processing is True:
@@ -447,16 +444,16 @@ class OsmMaps:
                     cmd, f'! Error generating land for tile: {tile["x"]},{tile["y"]}')
 
             # create land1.osm
-            if not os.path.isfile(out_file+'1.osm') or self.o_osm_data.force_processing is True:
+            if not os.path.isfile(out_file_land1+'1.osm') or self.o_osm_data.force_processing is True:
                 # Windows
                 if platform.system() == "Windows":
                     cmd = ['python', os.path.join(RESOURCES_DIR,
-                                                  'shape2osm.py'), '-l', out_file, land_file]
+                                                  'shape2osm.py'), '-l', out_file_land1, land_file]
 
                 # Non-Windows
                 else:
                     cmd = ['python', os.path.join(RESOURCES_DIR,
-                                                  'shape2osm.py'), '-l', out_file, land_file]
+                                                  'shape2osm.py'), '-l', out_file_land1, land_file]
 
                 run_subprocess_and_log_output(
                     cmd, f'! Error creating land.osm for tile: {tile["x"]},{tile["y"]}')
@@ -474,9 +471,9 @@ class OsmMaps:
 
         tile_count = 1
         for tile in self.o_osm_data.tiles:
-            out_file = os.path.join(USER_OUTPUT_DIR,
-                                    f'{tile["x"]}', f'{tile["y"]}', 'sea.osm')
-            if not os.path.isfile(out_file) or self.o_osm_data.force_processing is True:
+            out_file_sea = os.path.join(USER_OUTPUT_DIR,
+                                        f'{tile["x"]}', f'{tile["y"]}', 'sea.osm')
+            if not os.path.isfile(out_file_sea) or self.o_osm_data.force_processing is True:
                 log.info(
                     '+ Generate sea %s of %s for Coordinates: %s,%s', tile_count, len(self.o_osm_data.tiles), tile["x"], tile["y"])
                 with open(os.path.join(RESOURCES_DIR, 'sea.osm'), encoding="utf-8") as sea_file:
@@ -502,7 +499,7 @@ class OsmMaps:
                         sea_data = sea_data.replace(
                             '$TOP', f'{tile["top"]+0.1:.6f}')
 
-                    with open(out_file, mode='w', encoding="utf-8") as output_file:
+                    with open(out_file_sea, mode='w', encoding="utf-8") as output_file:
                         output_file.write(sea_data)
             tile_count += 1
 
@@ -599,7 +596,7 @@ class OsmMaps:
 
             out_tile_dir = os.path.join(USER_OUTPUT_DIR,
                                         f'{tile["x"]}', f'{tile["y"]}')
-            out_file = os.path.join(out_tile_dir, 'merged.osm.pbf')
+            out_file_merged = os.path.join(out_tile_dir, 'merged.osm.pbf')
 
             land_files = glob.glob(os.path.join(out_tile_dir, 'land*.osm'))
 
@@ -636,7 +633,7 @@ class OsmMaps:
                 cmd.extend(
                     ['--rx', 'file='+os.path.join(out_tile_dir, 'sea.osm'), '--s', '--m'])
                 cmd.extend(['--tag-transform', 'file=' + os.path.join(RESOURCES_DIR,
-                                                                      'tunnel-transform.xml'), '--wb', out_file, 'omitmetadata=true'])
+                                                                      'tunnel-transform.xml'), '--wb', out_file_merged, 'omitmetadata=true'])
 
             # Non-Windows
             else:
@@ -653,7 +650,7 @@ class OsmMaps:
                 for land in land_files:
                     cmd.append(land)
                 cmd.append(os.path.join(out_tile_dir, 'sea.osm'))
-                cmd.extend(['-o', out_file])
+                cmd.extend(['-o', out_file_merged])
 
             run_subprocess_and_log_output(
                 cmd, f'! Error in Osmosis with tile: {tile["x"]},{tile["y"]}')
@@ -714,8 +711,8 @@ class OsmMaps:
         for tile in self.o_osm_data.tiles:
             log.info(
                 '+ Creating map file for tile %s of %s for Coordinates: %s,%s', tile_count, len(self.o_osm_data.tiles), tile["x"], tile["y"])
-            out_file = os.path.join(USER_OUTPUT_DIR,
-                                    f'{tile["x"]}', f'{tile["y"]}.map')
+            out_file_map = os.path.join(USER_OUTPUT_DIR,
+                                        f'{tile["x"]}', f'{tile["y"]}.map')
 
             # apply tag-wahoo xml every time because the result is different per .xml file (user input)
             merged_file = os.path.join(USER_OUTPUT_DIR,
@@ -724,11 +721,11 @@ class OsmMaps:
             # Windows
             if platform.system() == "Windows":
                 cmd = [self.osmosis_win_file_path, '--rbf', merged_file,
-                       'workers=' + self.workers, '--mw', 'file='+out_file]
+                       'workers=' + self.workers, '--mw', 'file='+out_file_map]
             # Non-Windows
             else:
                 cmd = ['osmosis', '--rb', merged_file,
-                       '--mw', 'file='+out_file]
+                       '--mw', 'file='+out_file_map]
 
             cmd.append(
                 f'bbox={tile["bottom"]:.6f},{tile["left"]:.6f},{tile["top"]:.6f},{tile["right"]:.6f}')
@@ -748,12 +745,12 @@ class OsmMaps:
 
             # Windows
             if platform.system() == "Windows":
-                cmd = [get_tooling_win_path(['lzma']), 'e', out_file,
-                       out_file+'.lzma', f'-mt{threads}', '-d27', '-fb273', '-eos']
+                cmd = [get_tooling_win_path(['lzma']), 'e', out_file_map,
+                       out_file_map+'.lzma', f'-mt{threads}', '-d27', '-fb273', '-eos']
             # Non-Windows
             else:
                 # force overwrite of output file and (de)compress links
-                cmd = ['lzma', out_file, '-f']
+                cmd = ['lzma', out_file_map, '-f']
 
                 # --keep: do not delete source file
                 if save_cruiser:
@@ -763,7 +760,7 @@ class OsmMaps:
                 cmd, f'! Error creating map files for tile: {tile["x"]},{tile["y"]}')
 
             # Create "tile present" file
-            with open(out_file + '.lzma.17', mode='wb') as tile_present_file:
+            with open(out_file_map + '.lzma.17', mode='wb') as tile_present_file:
                 tile_present_file.close()
 
             tile_count += 1
