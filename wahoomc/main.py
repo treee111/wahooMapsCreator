@@ -11,6 +11,7 @@ from wahoomc.input import process_call_of_the_tool, cli_init
 from wahoomc.setup_functions import initialize_work_directories, \
     check_installation_of_required_programs, write_config_file, \
     adjustments_due_to_breaking_changes, copy_jsons_from_repo_to_user
+from wahoomc.downloader import download_tooling_win
 
 from wahoomc.osm_maps_functions import OsmMaps
 from wahoomc.osm_maps_functions import OsmData
@@ -31,6 +32,7 @@ def run(run_level):
 
     initialize_work_directories()
     adjustments_due_to_breaking_changes()
+    download_tooling_win()
     check_installation_of_required_programs()
 
     if run_level == 'init':

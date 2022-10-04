@@ -10,6 +10,7 @@ import os.path
 import sys
 import time
 import logging
+import platform
 
 # import custom python packages
 from wahoomc.file_directory_functions import download_url_to_file, unzip
@@ -20,6 +21,7 @@ from wahoomc.constants import USER_DL_DIR
 from wahoomc.constants import USER_MAPS_DIR
 from wahoomc.constants import LAND_POLYGONS_PATH
 from wahoomc.constants import GEOFABRIK_PATH
+from wahoomc.constants import OSMOSIS_WIN_FILE_PATH
 
 log = logging.getLogger('main-logger')
 
@@ -33,7 +35,7 @@ def older_than_x_days(file_creation_timestamp, max_days_old):
     return bool(file_creation_timestamp < to_old_timestamp)
 
 
-def download_file(target_filepath, url, is_zip):
+def download_file(target_filepath, url, is_zip, target_dir=""):
     """
     download given file and eventually unzip it
     """
@@ -46,8 +48,13 @@ def download_file(target_filepath, url, is_zip):
         dl_file_path = os.path.join(USER_DL_DIR, last_part)
         # download URL to file
         download_url_to_file(url, dl_file_path)
-        # unpack it - should work on macOS and Windows
-        unzip(dl_file_path, USER_DL_DIR)
+        # unpack it
+        # if a target directory is given --> extract into that folder
+        if target_dir:
+            unzip(dl_file_path, os.path.join(USER_DL_DIR, target_dir))
+        # no target directory is given --> extract as is
+        else:
+            unzip(dl_file_path, USER_DL_DIR)
         # delete .zip file
         os.remove(dl_file_path)
     else:
@@ -79,6 +86,19 @@ def get_osm_pbf_filepath_url(country):
 
     # return URL and download filepath
     return map_file_path, url
+
+
+def download_tooling_win():
+    """
+    check for Windows tooling and download if not here already
+    this is done to bring down the filesize of the python module
+    """
+    # Windows
+    if platform.system() == "Windows":
+        if not os.path.isfile(OSMOSIS_WIN_FILE_PATH):
+            log.info('# Need to download Osmosis application for Windows')
+            download_file(OSMOSIS_WIN_FILE_PATH,
+                          'https://github.com/openstreetmap/osmosis/releases/download/0.48.3/osmosis-0.48.3.zip', True, os.path.join('tooling_win', 'Osmosis'))
 
 
 class Downloader:

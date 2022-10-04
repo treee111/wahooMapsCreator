@@ -26,6 +26,7 @@ from wahoomc.constants import USER_OUTPUT_DIR
 from wahoomc.constants import RESOURCES_DIR
 from wahoomc.constants import LAND_POLYGONS_PATH
 from wahoomc.constants import VERSION
+from wahoomc.constants import OSMOSIS_WIN_FILE_PATH
 
 from wahoomc.downloader import Downloader
 from wahoomc.geofabrik import Geofabrik
@@ -300,9 +301,6 @@ class OsmMaps:
     """
     This is a OSM data class
     """
-
-    osmosis_win_file_path = get_tooling_win_path(
-        ['Osmosis', 'bin', 'osmosis.bat'])
 
     # Number of workers for the Osmosis read binary fast function
     workers = '1'
@@ -635,7 +633,7 @@ class OsmMaps:
 
             # Windows
             if platform.system() == "Windows":
-                cmd = [self.osmosis_win_file_path]
+                cmd = [OSMOSIS_WIN_FILE_PATH]
             # Non-Windows
             else:
                 cmd = ['osmosis']
@@ -692,7 +690,7 @@ class OsmMaps:
 
         for land in land_files:
             if platform.system() == "Windows":
-                cmd = [self.osmosis_win_file_path]
+                cmd = [OSMOSIS_WIN_FILE_PATH]
             else:
                 cmd = ['osmosis']
 
@@ -732,7 +730,7 @@ class OsmMaps:
 
             # Windows
             if platform.system() == "Windows":
-                cmd = [self.osmosis_win_file_path, '--rbf', merged_file,
+                cmd = [OSMOSIS_WIN_FILE_PATH, '--rbf', merged_file,
                        'workers=' + self.workers, '--mw', 'file='+out_file_map]
             # Non-Windows
             else:
