@@ -13,8 +13,19 @@
     <osm-tag key="railway" value="station" zoom-appear="13" />
     <osm-tag key="railway" value="stop" zoom-appear="13" />
 
-
   </pois>
+
+  <ways>
+    <osm-tag key="amenity" value="fuel" zoom-appear="14" />
+    <osm-tag key="amenity" value="cafe" zoom-appear="14" />
+    <osm-tag key="amenity" value="drinking_water" zoom-appear="14" />
+    <osm-tag key="shop" value="bakery" zoom-appear="14" />
+    <osm-tag key="shop" value="bicycle" zoom-appear="14" />
+
+    <osm-tag key="railway" value="station" zoom-appear="13" />
+    <osm-tag key="railway" value="stop" zoom-appear="13" />
+  </ways>
+
   <!-- PLACES TAGS -->
   <pois>
     <osm-tag key="place" value="city" zoom-appear="6" />
