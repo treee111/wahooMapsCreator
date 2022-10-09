@@ -14,7 +14,7 @@
     </p>
     <h1>Wahoo Maps Creator</h1>
 </div>
-A tool to create up-to-date maps for your Wahoo BOLTv1 and BOLTv2, ROAM and ELEMNT!
+A tool to create up-to-date maps for your Wahoo BOLTv1 and BOLTv2, ROAM, ROAMv2 and ELEMNT!
 
 It runs on Windows, macOS as well as on Linux!
 
@@ -81,3 +81,5 @@ More details can be found here: [CONTRIBUTING](.github/CONTRIBUTING.md#contribut
 [@zenziwerken](https://github.com/zenziwerken) for the work done for [POIs](https://github.com/zenziwerken/Bolt2-Mapsforge-Rendertheme)!
 
 [@macdet](https://github.com/macdet) for bringing in new thoughts, testing and making this a little more public
+
+[@vti](https://github.com/vti) for creating a GUI application to copy maps to wahoo and configure the device [POIs](https://github.com/vti/elemntary) as well as an [docker image](https://github.com/vti/wahooMapsCreator-docker) for wahooMapsCreator!
