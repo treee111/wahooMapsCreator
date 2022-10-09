@@ -255,7 +255,7 @@ TAGS_TO_KEEP_UNIVERSAL = {
     'shop': ['bakery','bicycle'],
     'highway': ['abandoned', 'bus_guideway', 'disused', 'bridleway', 'byway', 'construction', 'cycleway', 'footway', 'living_street', 'motorway', 'motorway_link', 'path', 'pedestrian', 'primary', 'primary_link', 'residential', 'road', 'secondary', 'secondary_link', 'service', 'steps', 'tertiary', 'tertiary_link', 'track', 'trunk', 'trunk_link', 'unclassified'],
     'natural': ['coastline', 'nosea', 'sea', 'beach', 'land', 'scrub', 'water', 'wetland', 'wood'],
-    'landuse': 'forest',
+    'landuse': ['forest', 'commercial','industrial','residential','retail'],
     'leisure': ['park', 'nature_reserve'],
     'railway': ['abandoned', 'bus_guideway', 'disused', 'funicular', 'light_rail', 'miniature', 'narrow_gauge', 'preserved', 'rail', 'subway', 'tram'],
     'surface': '',
