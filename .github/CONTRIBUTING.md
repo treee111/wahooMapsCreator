@@ -2,29 +2,68 @@
 
 #### Table of contents <!-- omit in toc --> 
 - [How to Contribute](#how-to-contribute)
+- [Developer Anaconda environment](#developer-anaconda-environment)
+- [Structure of the repository](#structure-of-the-repository)
+- [User directory](#user-directory)
 - [Git Guidelines](#git-guidelines)
   - [No Merge Commits](#no-merge-commits)
   - [Pull Requests](#pull-requests)
     - [Pull Request Title](#pull-request-title)
+      - [Types](#types)
     - [Squash Commit Summary](#squash-commit-summary)
+      - [Example](#example)
 - [Release](#release)
   - [Automatic CHANGELOG creation](#automatic-changelog-creation)
   - [PyPI commands](#pypi-commands)
-- [Structure of the repository](#structure-of-the-repository)
-- [User directory](#user-directory)
-- [Anaconda environment](#anaconda-environment)
 - [Other command](#other-command)
 
 ## How to Contribute
-1. Create a branch by forking the repository and apply your change.
-2. Commit and push your change on that branch.
-3. Create a pull request in the relevant repository.
+1. Create a Anaconda environment for developers
+2. Create a branch by forking the repository and apply your change.
+3. Commit and push your change on that branch.
+4. Create a pull request.
     - 👉 **Please follow the [Git Guidlines](#Git-Guidelines).**
-4. Follow the link posted by the CLA assistant to your pull request and accept it, as described above.
 5. Wait for our code review and approval, possibly enhancing your change on request.
-    - Note that the UI5 developers have many duties. So, depending on the required effort for reviewing, testing, and clarification, this may take a while.
+    - Note that the wahooMapsCreator maintainers have many duties. So, depending on the required effort for reviewing, testing, and clarification, this may take a while.
 6. Once the change has been approved and merged, we will inform you in a comment.
 7. Celebrate! 🎉
+
+## Developer Anaconda environment 
+- /conda_env/gdal-user.yml is for creating Anaconda environment for users
+- /conda_env/gdal-dev.yml is for creating Anaconda environment for developers
+
+The Anaconda environment for development can be installed via
+
+  - macOS/ Linux
+```
+conda env create -f ./conda_env/gdal-dev.yml
+```
+  - Windows
+```
+conda env create -f .\conda_env\gdal-dev.yml 
+```
+
+more information on [documentation for sharing Anaconda environments](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#exporting-an-environment-file-across-platforms)
+
+The .yml files with only the installed packages were created via
+```
+conda env export > environment.yml --from-history
+```
+
+## Structure of the repository
+There is one python coding base for both Windows and for macOS.
+Differences between the different OS are the used programs.
+The folders in the repo have the following purposes:
+- `wahoo_mc` - custom python files
+- `wahoo_mc/resources` - config, json files
+- `wahoo_mc/tooling_win` - programs, scripts for Windows
+- `tooling` - programs, scripts used by Windows and macOS to test and check the generated maps
+
+## User directory
+Files which are processed through the tool are stored in the user directory to be release-independent. The name of the directory is: `$user_directory/wahooMapsCreatorData` and has the follwing folders:
+- root - generated files are saved here
+- `_download` - all downloaded files are saved and extracted here
+- `_tiles` - intermediate files per tile are stored here
 
 ## Git Guidelines
 ### No Merge Commits
@@ -63,7 +102,7 @@ For a squash commit to appear in the CHANGELOG.md later on, it has to follow a c
 ```
 ## Release
 Coding is updated in the develop-branch mainly via pull requests.  
-After testing carefully, changes are merged into main and a Release will be created.
+After testing carefully, a Release will be created based on branch devlop or a hotfix branc.
 
 ### Automatic CHANGELOG creation 
 After installing [git-chglog](https://github.com/git-chglog/git-chglog) locally, the CHANGELOG.md can be generated with this command:  
@@ -87,41 +126,8 @@ py -m build
 twine upload dist\*
 ```
 
-## Structure of the repository
-There is one python coding base for both Windows and for macOS.
-Differences between the different OS are the used programs.
-The folders in the repo have the following purposes:
-- `wahoo_mc` - custom python files
-- `wahoo_mc/resources` - config, json files
-- `wahoo_mc/tooling_win` - programs, scripts for Windows
-- `tooling` - programs, scripts used by Windows and macOS to test and check the generated maps
-
-## User directory
-Files which are processed through the tool are stored in the user directory to be release-independent. The name of the directory is: `$user_directory/wahooMapsCreatorData` and has the follwing folders:
-- root - generated files are saved here
-- `_download` - all downloaded files are saved and extracted here
-- `_tiles` - intermediate files per tile are stored here
-
-## Anaconda environment
-- /conda_env/gdal-user.yml is for creating Anaconda environment for users
-- /conda_env/gdal-dev.yml is for creating Anaconda environment for developers
-- /conda_env/ ..mac.yml and ..win.yml files contain the installed packages including dependencies of the gdal-dev.yml env
-
-.yml files with only the installed packages were installed via
-```
-conda env export > environment.yml --from-history
-```
-and the .yml files with the dependencies via
-```
-conda env export > environment.yml
-```
-
-The installation of Anaconda envirionments is described [here](docs/QUICKSTART_ANACONDA.md)
-
-more information on [documentation for sharing Anaconda environments](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#exporting-an-environment-file-across-platforms)
-
 ## Other command
 Run pylint for all relevant directories/files
 ```
-pylint -j 0 ./wahoomc ./tests  
+pylint -j 0 ./wahoomc ./tests
 ```

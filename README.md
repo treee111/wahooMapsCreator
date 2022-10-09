@@ -36,7 +36,7 @@ If anything is unclear or seams wrong, write an [:pencil2: issue](https://github
 ## Download and Install required programs
 Using Anaconda to setup a virtual Python environment is the fastest way to get wahooMapsCreator running!
 
-[:rocket: Quick Start Guide for Anaconda](docs/QUICKSTART_ANACONDA.md#download-and-install-required-programs)
+[:rocket: Quick Start Guide](docs/QUICKSTART_ANACONDA.md#download-and-install-required-programs)
 
 ## Run wahooMapsCreator
 Activate Anaconda environment
@@ -68,7 +68,6 @@ You can use a custom theme to control which OSM-tags are displayed on your devic
 You are welcome to provide input via Pull Requests, Issues or in any other way!
 Discussion goes on:
 - in this telegram channel: https://t.me/joinchat/TaMhjouxlsAzNWZk
-- in this google group: https://groups.google.com/g/wahoo-elemnt-users/c/PSrdapfWLUE
 
 More details can be found here: [CONTRIBUTING](.github/CONTRIBUTING.md#contributing-to-wahoomapscreator-)
 
