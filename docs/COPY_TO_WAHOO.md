@@ -54,8 +54,10 @@ adb devices
 ```
 
 ## Copy map files
-copy map folders per tile to `\ELEMNT-BOLT\USB storage\maps\tiles\8\`
-With a tool of your [choice](#tools-to-copy-maps-onto-your-wahoo).
+The generated maps are stored in a folder per country or processed X/Y coordinates in this folder in your user account: `wahooMapsCreatorData`.
+
+Copy the whole folder or just the content of the X-folders (if the folder exists already) to `\ELEMNT-BOLT\USB storage\maps\tiles\8\` with a tool of your [choice](#tools-to-copy-maps-onto-your-wahoo).
+
 After copying, it should look like that:
 
 <img src="./maps-file-strucutre.png" alt="filestructure on device" width=30%>
