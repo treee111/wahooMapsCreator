@@ -11,7 +11,6 @@
     <osm-tag key="shop" value="bicycle" zoom-appear="14" />
 
     <osm-tag key="railway" value="station" zoom-appear="13" />
-    <osm-tag key="railway" value="halt" zoom-appear="13" />
     <osm-tag key="railway" value="stop" zoom-appear="13" />
 
 
@@ -89,6 +88,7 @@
   <!-- PUBLIC TRANSPORT -->
   <ways>
     <osm-tag key="railway" value="rail" zoom-appear="10" />
+    <osm-tag key="railway" value="tram" zoom-appear="12"/>
   </ways>
 
   <!-- OTHER TAGS -->

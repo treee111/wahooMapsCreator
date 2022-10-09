@@ -257,7 +257,7 @@ TAGS_TO_KEEP_UNIVERSAL = {
     'natural': ['coastline', 'nosea', 'sea', 'beach', 'land', 'scrub', 'water', 'wetland', 'wood'],
     'landuse': ['forest', 'commercial','industrial','residential','retail'],
     'leisure': ['park', 'nature_reserve'],
-    'railway': ['abandoned', 'bus_guideway', 'disused', 'funicular', 'light_rail', 'miniature', 'narrow_gauge', 'preserved', 'rail', 'subway', 'tram'],
+    'railway': ['rail','tram','station'],
     'surface': '',
     'tracktype': '',
     'tunnel': '',
