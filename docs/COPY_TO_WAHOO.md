@@ -3,10 +3,10 @@
 #### Table of contents <!-- omit in toc -->
 - [Steps to carry out](#steps-to-carry-out)
   - [Location of the generated maps](#location-of-the-generated-maps)
+  - [Tools to copy maps onto your Wahoo](#tools-to-copy-maps-onto-your-wahoo)
   - [Install adb](#install-adb)
   - [Authorize Wahoo device](#authorize-wahoo-device)
   - [Copy map files](#copy-map-files)
-    - [Simplified usage with MTP-tranfer (under Windows)](#simplified-usage-with-mtp-tranfer-under-windows)
   - [Copy device theme](#copy-device-theme)
 - [POIs](#pois)
   - [Copy relevant files for POIs](#copy-relevant-files-for-pois)
@@ -19,6 +19,17 @@
 The generated maps are saved in the user directory in folder: `$user_directory/wahooMapsCreatorData`.
 
 There is a folder per country or for the X/Y combination with the relevant tiles.
+
+## Tools to copy maps onto your Wahoo
+There are some different tools you can use to copy the created files onto your device.
+You always have to first [authorize to your Wahoo device](#authorize-wahoo-device).
+
+- The most easy to use toll with a GUI would be the Elemntary app: https://github.com/vti/elemntary
+- Windows
+  - Copy via Windows built in MTP protocol . On windows you can navigate to the maps folder and drag new map files onto the folder called `maps\8` ([the Wahoo documentation](https://support.wahoofitness.com/hc/en-us/articles/115000127910-Connecting-ELEMNT-BOLT-ROAM-to-Desktop-or-Laptop-Computers))
+  - GIU tool: https://github.com/hexadezi/adbGUI
+- macOS
+  - GUI tool: https://www.android.com/filetransfer/
 
 ## Install adb
 You can download the lates adb-tools (included in the SDK Platform Tools) for your OS here:
@@ -43,14 +54,11 @@ adb devices
 ```
 
 ## Copy map files
-copy map folders per tile to \ELEMNT-BOLT\USB storage\maps\tiles\8\
+copy map folders per tile to `\ELEMNT-BOLT\USB storage\maps\tiles\8\`
+With a tool of your [choice](#tools-to-copy-maps-onto-your-wahoo).
+After copying, it should look like that:
 
-These tools can be helpful if you want to copy the files with a GUI and not via CLI:
-- Windows: https://github.com/hexadezi/adbGUI
-- macOS: https://www.android.com/filetransfer/
-
-### Simplified usage with MTP-tranfer (under Windows)
-According to [the Wahoo documentation](https://support.wahoofitness.com/hc/en-us/articles/115000127910-Connecting-ELEMNT-BOLT-ROAM-to-Desktop-or-Laptop-Computers) the device is able to connect via MTP. On windows you can navigate to the maps folder and drag new map files onto the folder called `maps\8`. The system will ask if you want to overwrite existing files. Don't forget to [delete temp-files and Clear Cache](#delete-temp-files-and-clear-cache). You can simply reboot to clear the cache.
+<img src="./maps-file-strucutre.png" alt="filestructure on device" width=30%>
 
 ## Copy device theme
 In this repo, device themes are stored in folder `device_themes`. There are initial versions and adjusted versions. Both can be further changed to your requirements!
