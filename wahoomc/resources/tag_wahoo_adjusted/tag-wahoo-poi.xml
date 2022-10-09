@@ -93,7 +93,7 @@
 
   <!-- BUILDINGS -->
   <ways>
-    <osm-tag key='landuse' value='building' equivalent-values='commercial,industrial,residential,retail' zoom-appear="10" />
+    <osm-tag key="landuse" value="building" equivalent-values="commercial,industrial,residential,retail" zoom-appear="10" />
   </ways>
 
   <!-- PUBLIC TRANSPORT -->
@@ -125,16 +125,16 @@
     <osm-tag key="tracktype" value="grade4" renderable="false"/>
     <osm-tag key="tracktype" value="grade5" renderable="false"/>
 
-    <osm-tag key='surface' value='bic_paved' equivalent-values='paved,asphalt,concrete' renderable='false' />
-    <osm-tag key='surface' value='bic_unpaved' equivalent-values='raw,gravel,rock,pebblestone,ground,dirt,earth,mud' renderable='false' />
+    <osm-tag key="surface" value="bic_paved" equivalent-values="paved,asphalt,concrete" renderable="false" />
+    <osm-tag key="surface" value="bic_unpaved" equivalent-values="raw,gravel,rock,pebblestone,ground,dirt,earth,mud" renderable="false" />
 
     <osm-tag key="tunnel" value="yes" renderable="false"/>
     <osm-tag key="tunnel" value="no" renderable="false"/>
 
-    <osm-tag key='bicycle' value='bic_yes' equivalent-values='yes,public,allowed' renderable='false' />
-    <osm-tag key='bicycle' value='bic_designated' equivalent-values='designated,official' renderable='false' />
+    <osm-tag key="bicycle" value="bic_yes" equivalent-values="yes,public,allowed" renderable="false" />
+    <osm-tag key="bicycle" value="bic_designated" equivalent-values="designated,official" renderable="false" />
 
-    <osm-tag key='foot' value='ft_yes' equivalent-values='yes,public,allowed' renderable='false' />
-    <osm-tag key='foot' value='ft_designated' equivalent-values='designated,official' renderable='false' />
+    <osm-tag key="foot" value="ft_yes" equivalent-values="yes,public,allowed" renderable="false" />
+    <osm-tag key="foot" value="ft_designated" equivalent-values="designated,official" renderable="false" />
   </ways>
 </tag-mapping>
