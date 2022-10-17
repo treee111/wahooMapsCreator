@@ -15,10 +15,10 @@ import shutil
 import logging
 
 # import custom python packages
-from wahoomc.file_directory_functions import get_tooling_win_path, read_json_file, \
-    get_folders_in_folder, get_filenames_of_jsons_in_folder, create_empty_directories, \
-    get_tag_wahoo_xml_path, TagWahooXmlNotFoundError
-from wahoomc.constants_functions import get_path_to_static_tile_json, translate_tags_to_keep
+from wahoomc.file_directory_functions import read_json_file, \
+    get_folders_in_folder, get_filenames_of_jsons_in_folder, create_empty_directories
+from wahoomc.constants_functions import get_path_to_static_tile_json, translate_tags_to_keep, \
+    get_tooling_win_path, get_tag_wahoo_xml_path, TagWahooXmlNotFoundError
 
 from wahoomc.constants import USER_WAHOO_MC
 from wahoomc.constants import USER_OUTPUT_DIR
