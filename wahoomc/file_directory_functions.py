@@ -159,3 +159,48 @@ def get_filenames_of_jsons_in_folder(folder):
             json_files.extend([filename])
 
     return json_files
+
+
+def read_json(json_file_path):
+    """
+    read given json file
+    """
+    with open(json_file_path, encoding="utf-8") as json_file:
+        json_content = json.load(json_file)
+        json_file.close()
+    if json_content == '':
+        log.error('! Json file could not be opened.')
+        sys.exit()
+
+    log.debug(
+        '+ Use json file %s with %s tiles', json_file.name, len(json_content))
+    log.debug('+ Read json file: OK')
+
+    return json_content
+
+
+def write_json(json_file_path, json_content):
+    """
+    writes content to .json file
+    """
+    # Serializing json
+    json_object = json.dumps(json_content, indent=4)
+
+    # Writing to file
+    with open(json_file_path, "w", encoding="utf-8") as outfile:
+        outfile.write(json_object)
+        outfile.close()
+
+
+def delete_o5m_pbf_files_in_folder(folder):
+    """
+    delete .o5m and .pbf files of given folder
+    """
+    onlyfiles = [f for f in os.listdir(folder) if isfile(join(folder, f))]
+
+    for file in onlyfiles:
+        if file.endswith('.o5m') or file.endswith('.pbf'):
+            try:
+                os.remove(os.path.join(folder, file))
+            except OSError:
+                pass

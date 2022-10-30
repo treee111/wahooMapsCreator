@@ -11,6 +11,8 @@ from wahoomc.input import process_call_of_the_tool
 from wahoomc.setup_functions import initialize_work_directories
 from wahoomc.setup_functions import move_old_content_into_new_dirs
 from wahoomc.setup_functions import check_installation_of_required_programs
+from wahoomc.setup_functions import write_config_file
+from wahoomc.setup_functions import do_stuff_based_on_versioning
 from wahoomc.osm_maps_functions import OsmMaps
 from wahoomc.osm_maps_functions import OsmData
 
@@ -36,6 +38,7 @@ def run():
     # Is there something to do?
     o_input_data.is_required_input_given_or_exit(issue_message=True)
 
+    do_stuff_based_on_versioning()
     initialize_work_directories()
     move_old_content_into_new_dirs()
 
@@ -75,3 +78,6 @@ def run():
     # Make Cruiser map files zip file
     if o_input_data.save_cruiser is True:
         o_osm_maps.make_and_zip_files('.map', o_input_data.zip_folder)
+
+    # run was successful --> write config file
+    write_config_file()
