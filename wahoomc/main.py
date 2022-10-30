@@ -9,7 +9,6 @@ import logging
 # import custom python packages
 from wahoomc.input import process_call_of_the_tool
 from wahoomc.setup_functions import initialize_work_directories
-from wahoomc.setup_functions import move_old_content_into_new_dirs
 from wahoomc.setup_functions import check_installation_of_required_programs
 from wahoomc.setup_functions import write_config_file
 from wahoomc.setup_functions import do_stuff_based_on_versioning
@@ -40,7 +39,6 @@ def run():
 
     do_stuff_based_on_versioning()
     initialize_work_directories()
-    move_old_content_into_new_dirs()
 
     o_osm_data = OsmData()
     # Check for not existing or expired files. Mark for download, if dl is needed

@@ -48,6 +48,10 @@ def move_old_content_into_new_dirs():
     This coding is only valid/needed when using the cloned version or .zip version.
     If working with a installed version via PyPI, nothing will be done because folders to copy do not exist
     """
+    # create directories first because initialize_work_directories is now called later
+    os.makedirs(USER_DL_DIR, exist_ok=True)
+    os.makedirs(USER_OUTPUT_DIR, exist_ok=True)
+
     move_content('wahooMapsCreator_download', USER_DL_DIR)
     move_content('wahooMapsCreator_output', USER_OUTPUT_DIR)
 
@@ -65,6 +69,12 @@ def do_stuff_based_on_versioning():
         log.info(
             'Last run was with version %s, deleting %s directory due to breaking changes.', version_last_run, USER_OUTPUT_DIR)
         delete_o5m_pbf_files_in_folder(USER_OUTPUT_DIR)
+
+    if version_last_run is None or \
+            pkg_resources.parse_version(version_last_run) < pkg_resources.parse_version('1.1.0'):
+        log.info(
+            'Last run was with version %s, moving content to new directories due to breaking changes.', version_last_run)
+        move_old_content_into_new_dirs()
 
 
 def check_installation_of_required_programs():
