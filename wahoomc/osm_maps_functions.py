@@ -323,7 +323,7 @@ class OsmMaps:
             out_file_o5m_filtered_names_win = os.path.join(USER_OUTPUT_DIR, key,
                                                            'filtered_names.o5m')
             os.makedirs(os.path.join(USER_OUTPUT_DIR, key), exist_ok=True)
-            self.write_country_config_file(os.path.join(USER_OUTPUT_DIR, key))
+            tags_are_different = self.compare_tags_to_last_run(key)
 
             # Windows
             if platform.system() == "Windows":
@@ -345,33 +345,37 @@ class OsmMaps:
                 else:
                     log.info('+ Map of %s already in o5m format', key)
 
-                # filter out tags every time using the defined TAGS_TO_KEEP_UNIVERSAL constants
-                # because the result is different per constants (user input)
-                log.info(
-                    '+ Filtering unwanted map objects out of map of %s', key)
-                cmd = [get_tooling_win_path(['osmfilter'])]
-                cmd.append(out_file_o5m)
-                cmd.append(
-                    '--keep="' + translate_tags_to_keep(sys_platform=platform.system()) + '"')
-                cmd.append('--keep-tags="all type= layer= ' +
-                           translate_tags_to_keep(sys_platform=platform.system()) + '"')
-                cmd.append('-o=' + out_file_o5m_filtered_win)
+                # filter out tags:
+                # - if no filtered files exist
+                # - force processing is set (this is also when new map files were dowwnloaded)
+                # - the defined TAGS_TO_KEEP_UNIVERSAL constants have changed are changed (user input or new release)
+                if not os.path.isfile(out_file_o5m_filtered_win) or not os.path.isfile(out_file_o5m_filtered_names_win) \
+                        or self.o_osm_data.force_processing is True or tags_are_different:
+                    log.info(
+                        '+ Filtering unwanted map objects out of map of %s', key)
+                    cmd = [get_tooling_win_path(['osmfilter'])]
+                    cmd.append(out_file_o5m)
+                    cmd.append(
+                        '--keep="' + translate_tags_to_keep(sys_platform=platform.system()) + '"')
+                    cmd.append('--keep-tags="all type= layer= ' +
+                               translate_tags_to_keep(sys_platform=platform.system()) + '"')
+                    cmd.append('-o=' + out_file_o5m_filtered_win)
 
-                run_subprocess_and_log_output(
-                    cmd, f'! Error in OSMFilter with country: {key}')
+                    run_subprocess_and_log_output(
+                        cmd, f'! Error in OSMFilter with country: {key}')
 
-                cmd = [get_tooling_win_path(['osmfilter'])]
-                cmd.append(out_file_o5m)
-                cmd.append(
-                    '--keep="' + translate_tags_to_keep(
-                        name_tags=True, sys_platform=platform.system()) + '"')
-                cmd.append('--keep-tags="all type= name= layer= ' +
-                           translate_tags_to_keep(
-                               name_tags=True, sys_platform=platform.system()) + '"')
-                cmd.append('-o=' + out_file_o5m_filtered_names_win)
+                    cmd = [get_tooling_win_path(['osmfilter'])]
+                    cmd.append(out_file_o5m)
+                    cmd.append(
+                        '--keep="' + translate_tags_to_keep(
+                            name_tags=True, sys_platform=platform.system()) + '"')
+                    cmd.append('--keep-tags="all type= name= layer= ' +
+                               translate_tags_to_keep(
+                                   name_tags=True, sys_platform=platform.system()) + '"')
+                    cmd.append('-o=' + out_file_o5m_filtered_names_win)
 
-                run_subprocess_and_log_output(
-                    cmd, f'! Error in OSMFilter with country: {key}')
+                    run_subprocess_and_log_output(
+                        cmd, f'! Error in OSMFilter with country: {key}')
 
                 val['filtered_file'] = out_file_o5m_filtered_win
                 val['filtered_file_names'] = out_file_o5m_filtered_names_win
@@ -381,32 +385,42 @@ class OsmMaps:
                 out_file_pbf_filtered_mac = f'{out_file_o5m_filtered_win}.pbf'
                 out_file_pbf_filtered_names_mac = f'{out_file_o5m_filtered_names_win}.pbf'
 
-                log.info(
-                    '+ Filtering unwanted map objects out of map of %s', key)
+                # filter out tags:
+                # - if no filtered files exist
+                # - force processing is set (this is also when new map files were dowwnloaded)
+                # - the defined TAGS_TO_KEEP_UNIVERSAL constants have changed are changed (user input or new release)
+                if not os.path.isfile(out_file_pbf_filtered_mac) or not os.path.isfile(out_file_pbf_filtered_names_mac) \
+                        or self.o_osm_data.force_processing is True or tags_are_different:
 
-                # https://docs.osmcode.org/osmium/latest/osmium-tags-filter.html
-                cmd = ['osmium', 'tags-filter', '--remove-tags']
-                cmd.append(val['map_file'])
-                cmd.extend(translate_tags_to_keep(
-                    sys_platform=platform.system()))
-                cmd.extend(['-o', out_file_pbf_filtered_mac])
-                cmd.append('--overwrite')
+                    log.info(
+                        '+ Filtering unwanted map objects out of map of %s', key)
 
-                run_subprocess_and_log_output(
-                    cmd, f'! Error in Osmium with country: {key}')
+                    # https://docs.osmcode.org/osmium/latest/osmium-tags-filter.html
+                    cmd = ['osmium', 'tags-filter', '--remove-tags']
+                    cmd.append(val['map_file'])
+                    cmd.extend(translate_tags_to_keep(
+                        sys_platform=platform.system()))
+                    cmd.extend(['-o', out_file_pbf_filtered_mac])
+                    cmd.append('--overwrite')
 
-                cmd = ['osmium', 'tags-filter', '--remove-tags']
-                cmd.append(val['map_file'])
-                cmd.extend(translate_tags_to_keep(
-                    name_tags=True, sys_platform=platform.system()))
-                cmd.extend(['-o', out_file_pbf_filtered_names_mac])
-                cmd.append('--overwrite')
+                    run_subprocess_and_log_output(
+                        cmd, f'! Error in Osmium with country: {key}')
 
-                run_subprocess_and_log_output(
-                    cmd, f'! Error in Osmium with country: {key}')
+                    cmd = ['osmium', 'tags-filter', '--remove-tags']
+                    cmd.append(val['map_file'])
+                    cmd.extend(translate_tags_to_keep(
+                        name_tags=True, sys_platform=platform.system()))
+                    cmd.extend(['-o', out_file_pbf_filtered_names_mac])
+                    cmd.append('--overwrite')
+
+                    run_subprocess_and_log_output(
+                        cmd, f'! Error in Osmium with country: {key}')
 
                 val['filtered_file'] = out_file_pbf_filtered_mac
                 val['filtered_file_names'] = out_file_pbf_filtered_names_mac
+
+            # write config file for country
+            self.write_country_config_file(os.path.join(USER_OUTPUT_DIR, key))
 
         log.info('+ Filter tags from country osm.pbf files: OK')
 
@@ -863,6 +877,23 @@ class OsmMaps:
         configuration = {
             "version_last_run": VERSION
         }
+        configuration["tags_last_run"] = translate_tags_to_keep()
 
         write_json_file_generic(os.path.join(
             config_dir, ".config.json"), configuration)
+
+    def compare_tags_to_last_run(self, country):
+        """
+        conpare tags of this run with used tags from last run stored in _tiles/{country} directory
+        """
+        tags_are_different = False
+
+        try:
+            country_config = read_json_file(os.path.join(
+                USER_OUTPUT_DIR, country, ".config.json"))
+            if not country_config["tags_last_run"] == translate_tags_to_keep(sys_platform=platform.system()):
+                tags_are_different = True
+        except (FileNotFoundError, KeyError):
+            tags_are_different = True
+
+        return tags_are_different
