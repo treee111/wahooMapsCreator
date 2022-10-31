@@ -8,9 +8,10 @@ import logging
 
 # import custom python packages
 from wahoomc.input import process_call_of_the_tool
-from wahoomc.setup_functions import initialize_work_directories
-from wahoomc.setup_functions import move_old_content_into_new_dirs
-from wahoomc.setup_functions import check_installation_of_required_programs
+from wahoomc.setup_functions import initialize_work_directories, \
+    check_installation_of_required_programs, write_config_file, \
+    adjustments_due_to_breaking_changes
+
 from wahoomc.osm_maps_functions import OsmMaps
 from wahoomc.osm_maps_functions import OsmData
 
@@ -36,8 +37,8 @@ def run():
     # Is there something to do?
     o_input_data.is_required_input_given_or_exit(issue_message=True)
 
+    adjustments_due_to_breaking_changes()
     initialize_work_directories()
-    move_old_content_into_new_dirs()
 
     o_osm_data = OsmData()
     # Check for not existing or expired files. Mark for download, if dl is needed
@@ -75,3 +76,6 @@ def run():
     # Make Cruiser map files zip file
     if o_input_data.save_cruiser is True:
         o_osm_maps.make_and_zip_files('.map', o_input_data.zip_folder)
+
+    # run was successful --> write config file
+    write_config_file()

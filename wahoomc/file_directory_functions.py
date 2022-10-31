@@ -103,6 +103,30 @@ def read_json_file(json_file_path):
     return tiles_from_json
 
 
+def read_json_file_generic(json_file_path):
+    """
+    reads content of given .json file
+    """
+    with open(json_file_path, encoding="utf-8") as json_file:
+        json_content = json.load(json_file)
+        json_file.close()
+
+    return json_content
+
+
+def write_json_file_generic(json_file_path, json_content):
+    """
+    writes content to .json file
+    """
+    # Serializing json
+    json_content = json.dumps(json_content, indent=4)
+
+    # Writing to file
+    with open(json_file_path, "w", encoding="utf-8") as json_file:
+        json_file.write(json_content)
+        json_file.close()
+
+
 def download_url_to_file(url, map_file_path):
     """
     download the content of a ULR to file
@@ -159,3 +183,17 @@ def get_filenames_of_jsons_in_folder(folder):
             json_files.extend([filename])
 
     return json_files
+
+
+def delete_o5m_pbf_files_in_folder(folder):
+    """
+    delete .o5m and .pbf files of given folder
+    """
+    onlyfiles = [f for f in os.listdir(folder) if isfile(join(folder, f))]
+
+    for file in onlyfiles:
+        if file.endswith('.o5m') or file.endswith('.pbf'):
+            try:
+                os.remove(os.path.join(folder, file))
+            except OSError:
+                pass
