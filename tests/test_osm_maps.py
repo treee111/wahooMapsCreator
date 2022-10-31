@@ -9,6 +9,7 @@ import unittest
 # sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from wahoomc.osm_maps_functions import OsmData
+from wahoomc.osm_maps_functions import OsmMaps
 from wahoomc.osm_maps_functions import get_tile_by_one_xy_combination_from_jsons
 from wahoomc.osm_maps_functions import get_xy_coordinates_from_input
 from wahoomc.osm_maps_functions import TileNotFoundError
@@ -350,6 +351,35 @@ class TestStaticJsons(unittest.TestCase):
         for country in constants.unitedstates:
             self.calculate_path_to_static_tile_json(
                 country, os.path.join("united_states", country))
+
+
+class TestConfigFile(unittest.TestCase):
+    """
+    tests for the config .json file in the "wahooMapsCreatorData/_tiles/{country}" directory
+    """
+
+    def test_version_and_tags_of_country_config_file(self):
+        """
+        tests, if the return value of version is OK and if the tags are the same
+        """
+
+        o_input_data = InputData()
+        o_input_data.country = 'malta'
+
+        o_osm_data = OsmData()
+        o_osm_data.process_input_of_the_tool(o_input_data)
+
+        o_osm_maps = OsmMaps(o_osm_data)
+
+        o_osm_maps.write_country_config_file(o_input_data.country)
+
+        self.assertTrue(
+            o_osm_maps.tags_are_identical_to_last_run(o_input_data.country))
+
+        country_config = fd_fct.read_json_file(os.path.join(
+            constants.USER_OUTPUT_DIR, o_input_data.country, ".config.json"))
+
+        self.assertEqual(constants.VERSION, country_config["version_last_run"])
 
 
 if __name__ == '__main__':

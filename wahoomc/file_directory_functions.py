@@ -70,15 +70,18 @@ def move_content(src_folder_name, dst_path):
         shutil.rmtree(source_dir)
 
 
-def create_empty_directories(parent_dir, tiles_from_json):
+def create_empty_directories(parent_dir, tiles_from_json, border_countries):
     """
-    create empty directory for the files
+    create empty directories for each tile and each country
     """
     for tile in tiles_from_json:
         outdir = os.path.join(parent_dir,
                               f'{tile["x"]}', f'{tile["y"]}')
-        if not os.path.isdir(outdir):
-            os.makedirs(outdir)
+        os.makedirs(outdir, exist_ok=True)
+
+    for country in border_countries:
+        outdir = os.path.join(parent_dir, country)
+        os.makedirs(outdir, exist_ok=True)
 
 
 def read_json_file(json_file_path):
