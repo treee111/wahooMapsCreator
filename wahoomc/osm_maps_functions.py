@@ -318,17 +318,21 @@ class OsmMaps:
         log.info('# Filter tags from country osm.pbf files')
 
         for key, val in self.o_osm_data.border_countries.items():
-            out_file_o5m_filtered_win = os.path.join(USER_OUTPUT_DIR, key,
-                                                     'filtered.o5m')
-            out_file_o5m_filtered_names_win = os.path.join(USER_OUTPUT_DIR, key,
-                                                           'filtered_names.o5m')
-            os.makedirs(os.path.join(USER_OUTPUT_DIR, key), exist_ok=True)
+            # evaluate contry directory, create if not exists
+            country_dir = os.path.join(USER_OUTPUT_DIR, key)
+            os.makedirs(country_dir, exist_ok=True)
+            # check if filtered files were created with the same tags already
             tags_are_different = self.compare_tags_to_last_run(key)
+
+            # set names for filtered files for WIN, later on add ".pbf" for macOS/Linux
+            out_file_o5m_filtered_win = os.path.join(country_dir,
+                                                     'filtered.o5m')
+            out_file_o5m_filtered_names_win = os.path.join(country_dir,
+                                                           'filtered_names.o5m')
 
             # Windows
             if platform.system() == "Windows":
-                out_file_o5m = os.path.join(
-                    USER_OUTPUT_DIR, key, 'outFile.o5m')
+                out_file_o5m = os.path.join(country_dir, 'outFile.o5m')
                 # only create o5m file if not there already or force processing (no user input possible)
                 # --> speeds up processing if one only wants to test tags / POIs
                 if not os.path.isfile(out_file_o5m) or self.o_osm_data.force_processing is True:
@@ -391,7 +395,6 @@ class OsmMaps:
                 # - the defined TAGS_TO_KEEP_UNIVERSAL constants have changed are changed (user input or new release)
                 if not os.path.isfile(out_file_pbf_filtered_mac) or not os.path.isfile(out_file_pbf_filtered_names_mac) \
                         or self.o_osm_data.force_processing is True or tags_are_different:
-
                     log.info(
                         '+ Filtering unwanted map objects out of map of %s', key)
 
@@ -420,7 +423,7 @@ class OsmMaps:
                 val['filtered_file_names'] = out_file_pbf_filtered_names_mac
 
             # write config file for country
-            self.write_country_config_file(os.path.join(USER_OUTPUT_DIR, key))
+            self.write_country_config_file(country_dir)
 
         log.info('+ Filter tags from country osm.pbf files: OK')
 
