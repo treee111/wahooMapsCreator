@@ -56,7 +56,7 @@ def move_old_content_into_new_dirs():
     move_content('wahooMapsCreator_output', USER_OUTPUT_DIR)
 
 
-def do_stuff_based_on_versioning():
+def adjustments_due_to_breaking_changes():
     """
     copy files from download- and output- directory of earlier version to the new folders
     """
