@@ -12,6 +12,7 @@ import unittest
 
 # import custom python packages
 from wahoomc import constants
+# from wahoomc.file_directory_functions import get_files_in_folder
 
 dirname_of_file = os.path.dirname(__file__)
 
@@ -80,8 +81,7 @@ class TestGeneratedFiles(unittest.TestCase):
         self.run_wahoomapscreator_cli('malta')
 
         # compare generated given merged.osm.pbf-file with reference-file
-        self.compare_dir_sub_test_resource_and_output(
-            os.path.join('138', '100'))
+        self.compare_dir_sub_test_resource_and_output('138')
 
     def test_calc_output_liechtenstein_and_compare(self):
         """
@@ -92,8 +92,7 @@ class TestGeneratedFiles(unittest.TestCase):
         self.run_wahoomapscreator_cli('liechtenstein')
 
         # compare generated given merged.osm.pbf-file with reference-file
-        self.compare_dir_sub_test_resource_and_output(
-            os.path.join('134', '89'))
+        self.compare_dir_sub_test_resource_and_output('134')
 
     def run_wahoomapscreator_cli(self, country):
         """
@@ -106,6 +105,22 @@ class TestGeneratedFiles(unittest.TestCase):
 
         # check if run was successful
         self.assertEqual(result, 0)
+
+    def test_malta_compare(self):
+        """
+        compare output of malta
+        - of malta
+        """
+        # compare generated X/Y files with reference-file
+        self.compare_dir_sub_test_resource_and_output('138')
+
+    def test_liechtenstein_compare(self):
+        """
+        compare output of malta
+        - of liechtenstein
+        """
+        # compare generated X/Y files with reference-file
+        self.compare_dir_sub_test_resource_and_output('134')
 
     def compare_dir_sub_test_resource_and_output(self, dir_to_compare):
         """
@@ -120,12 +135,14 @@ class TestGeneratedFiles(unittest.TestCase):
             path_to_dir = os.path.join(
                 dirname_of_file, 'resources', 'macos', dir_to_compare)
 
-        # check files in subdir of given dir
+        # check files in subdir of given dir (i.e. the X/Y directory)
         for (dirpath, dirnames, filenames) in walk(path_to_dir):
             for directory in dirnames:
                 for (dirpath_2, dirnames_2, filenames_2) in walk(os.path.join(  # pylint: disable=unused-variable
                         dirpath, directory)):
                     for file in filenames_2:
+                        if file == '.DS_Store':
+                            continue
                         given_output_file = os.path.join(
                             dirpath_2, file)
                         calculated_output_file = os.path.join(
@@ -136,16 +153,17 @@ class TestGeneratedFiles(unittest.TestCase):
                                                     shallow=False), f'not equal: {calculated_output_file}')
 
         # check files in given dir
-        for (dirpath, dirnames, filenames) in walk(path_to_dir):
-            for file in filenames:
-                given_output_file = os.path.join(
-                    dirpath, file)
-                calculated_output_file = os.path.join(
-                    constants.USER_OUTPUT_DIR, dir_to_compare, file)
+        # for file in get_files_in_folder(path_to_dir):
+        #     if file == '.DS_Store':
+        #         continue
+        #     given_output_file = os.path.join(
+        #         path_to_dir, file)
+        #     calculated_output_file = os.path.join(
+        #         constants.USER_OUTPUT_DIR, dir_to_compare, file)
 
-                # is file equal?
-                self.assertTrue(filecmp.cmp(given_output_file, calculated_output_file,
-                                            shallow=False), f'not equal: {calculated_output_file}')
+        #     # is file equal?
+        #     self.assertTrue(filecmp.cmp(given_output_file, calculated_output_file,
+        #                                 shallow=False), f'not equal: {calculated_output_file}')
 
 
 if __name__ == '__main__':
