@@ -317,14 +317,16 @@ class OsmMaps:
         log.info('# Filter tags from country osm.pbf files')
 
         for key, val in self.o_osm_data.border_countries.items():
-            out_file_o5m_filtered_win = os.path.join(USER_OUTPUT_DIR,
-                                                     f'outFileFiltered-{key}.o5m')
-            out_file_o5m_filtered_names_win = os.path.join(USER_OUTPUT_DIR,
-                                                           f'outFileFiltered-{key}-Names.o5m')
+            out_file_o5m_filtered_win = os.path.join(USER_OUTPUT_DIR, key,
+                                                     'filtered.o5m')
+            out_file_o5m_filtered_names_win = os.path.join(USER_OUTPUT_DIR, key,
+                                                           'filtered_names.o5m')
+            os.makedirs(os.path.join(USER_OUTPUT_DIR, key), exist_ok=True)
+
             # Windows
             if platform.system() == "Windows":
-                out_file_o5m = os.path.join(USER_OUTPUT_DIR,
-                                            f'outFile-{key}.o5m')
+                out_file_o5m = os.path.join(
+                    USER_OUTPUT_DIR, key, 'outFile.o5m')
                 # only create o5m file if not there already or force processing (no user input possible)
                 # --> speeds up processing if one only wants to test tags / POIs
                 if not os.path.isfile(out_file_o5m) or self.o_osm_data.force_processing is True:
