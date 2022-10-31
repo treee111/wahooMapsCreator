@@ -13,10 +13,7 @@ import sys
 import pkg_resources
 
 # import custom python packages
-from wahoomc.file_directory_functions import move_content
-from wahoomc.file_directory_functions import write_json
-from wahoomc.file_directory_functions import read_json
-from wahoomc.file_directory_functions import delete_o5m_pbf_files_in_folder
+from wahoomc.file_directory_functions import move_content, write_json_file_generic, read_json_file_generic, delete_o5m_pbf_files_in_folder
 from wahoomc.constants_functions import get_tooling_win_path
 from wahoomc.constants import USER_WAHOO_MC
 from wahoomc.constants import USER_DL_DIR
@@ -26,7 +23,7 @@ from wahoomc.constants import VERSION
 
 log = logging.getLogger('main-logger')
 
-config_path = os.path.join(USER_WAHOO_MC, ".config.json")
+config_file_path = os.path.join(USER_WAHOO_MC, ".config.json")
 
 
 def initialize_work_directories():
@@ -63,13 +60,15 @@ def adjustments_due_to_breaking_changes():
     version_last_run = read_version_last_run()
 
     # file-names of filteres country files were uniformed in #153.
-    # due to that old files are sometimes no longer accessed and the whole _.
+    # due to that old files are sometimes no longer accessed and files in the _tiles folder are deleted here.
     if version_last_run is None or \
             pkg_resources.parse_version(VERSION) > pkg_resources.parse_version('2.0.2'):
         log.info(
             'Last run was with version %s, deleting files of %s directory due to breaking changes.', version_last_run, USER_OUTPUT_DIR)
         delete_o5m_pbf_files_in_folder(USER_OUTPUT_DIR)
 
+    # version 1.1.0 moved the directories with "processing" files out of the repo folder due to the publishing via PyPI
+    # old files are moved to the new structure. Can be deleted soon (in version 3.0.x)
     if version_last_run is None or \
             pkg_resources.parse_version(VERSION) < pkg_resources.parse_version('1.1.0'):
         log.info(
@@ -153,19 +152,6 @@ def is_map_writer_plugin_installed():
     return False
 
 
-def read_version_last_run():
-    """
-    Read the version of wahoomc's last run
-    by reading json and access version attribute, if not set, issue None
-    """
-    try:
-        version_last_run = read_json(config_path)["version_last_run"]
-    except (FileNotFoundError, KeyError):
-        version_last_run = None
-
-    return version_last_run
-
-
 def write_config_file():
     """
     Write config file of wahoomc to root directory
@@ -175,4 +161,18 @@ def write_config_file():
         "version_last_run": VERSION
     }
 
-    write_json(config_path, configuration)
+    write_json_file_generic(config_file_path, configuration)
+
+
+def read_version_last_run():
+    """
+    Read the version of wahoomc's last run
+    by reading json and access version attribute, if not set, give None
+    """
+    try:
+        version_last_run = read_json_file_generic(config_file_path)[
+            "version_last_run"]
+    except (FileNotFoundError, KeyError):
+        version_last_run = None
+
+    return version_last_run

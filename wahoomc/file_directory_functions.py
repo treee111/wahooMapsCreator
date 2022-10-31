@@ -103,6 +103,30 @@ def read_json_file(json_file_path):
     return tiles_from_json
 
 
+def read_json_file_generic(json_file_path):
+    """
+    reads content of given .json file
+    """
+    with open(json_file_path, encoding="utf-8") as json_file:
+        json_content = json.load(json_file)
+        json_file.close()
+
+    return json_content
+
+
+def write_json_file_generic(json_file_path, json_content):
+    """
+    writes content to .json file
+    """
+    # Serializing json
+    json_content = json.dumps(json_content, indent=4)
+
+    # Writing to file
+    with open(json_file_path, "w", encoding="utf-8") as json_file:
+        json_file.write(json_content)
+        json_file.close()
+
+
 def download_url_to_file(url, map_file_path):
     """
     download the content of a ULR to file
@@ -159,37 +183,6 @@ def get_filenames_of_jsons_in_folder(folder):
             json_files.extend([filename])
 
     return json_files
-
-
-def read_json(json_file_path):
-    """
-    read given json file
-    """
-    with open(json_file_path, encoding="utf-8") as json_file:
-        json_content = json.load(json_file)
-        json_file.close()
-    if json_content == '':
-        log.error('! Json file could not be opened.')
-        sys.exit()
-
-    log.debug(
-        '+ Use json file %s with %s tiles', json_file.name, len(json_content))
-    log.debug('+ Read json file: OK')
-
-    return json_content
-
-
-def write_json(json_file_path, json_content):
-    """
-    writes content to .json file
-    """
-    # Serializing json
-    json_object = json.dumps(json_content, indent=4)
-
-    # Writing to file
-    with open(json_file_path, "w", encoding="utf-8") as outfile:
-        outfile.write(json_object)
-        outfile.close()
 
 
 def delete_o5m_pbf_files_in_folder(folder):
