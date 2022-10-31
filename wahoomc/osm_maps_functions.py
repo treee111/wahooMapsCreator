@@ -16,7 +16,7 @@ import logging
 
 # import custom python packages
 from wahoomc.file_directory_functions import read_json_file, \
-    get_folders_in_folder, get_filenames_of_jsons_in_folder, create_empty_directories
+    get_folders_in_folder, get_filenames_of_jsons_in_folder, create_empty_directories, write_json_file_generic
 from wahoomc.constants_functions import get_path_to_static_tile_json, translate_tags_to_keep, \
     get_tooling_win_path, get_tag_wahoo_xml_path, TagWahooXmlNotFoundError
 
@@ -24,6 +24,7 @@ from wahoomc.constants import USER_WAHOO_MC
 from wahoomc.constants import USER_OUTPUT_DIR
 from wahoomc.constants import RESOURCES_DIR
 from wahoomc.constants import LAND_POLYGONS_PATH
+from wahoomc.constants import VERSION
 
 from wahoomc.downloader import Downloader
 from wahoomc.geofabrik import Geofabrik
@@ -322,6 +323,7 @@ class OsmMaps:
             out_file_o5m_filtered_names_win = os.path.join(USER_OUTPUT_DIR, key,
                                                            'filtered_names.o5m')
             os.makedirs(os.path.join(USER_OUTPUT_DIR, key), exist_ok=True)
+            self.write_country_config_file(os.path.join(USER_OUTPUT_DIR, key))
 
             # Windows
             if platform.system() == "Windows":
@@ -852,3 +854,15 @@ class OsmMaps:
             log.error(
                 '! Error copying %s files for country %s: %s', extension, self.o_osm_data.country_name, exception)
             sys.exit()
+
+    def write_country_config_file(self, config_dir):
+        """
+        Write country config file of _tiles/{country} directory
+        """
+        # Data to be written
+        configuration = {
+            "version_last_run": VERSION
+        }
+
+        write_json_file_generic(os.path.join(
+            config_dir, ".config.json"), configuration)
