@@ -13,8 +13,10 @@ import sys
 import pkg_resources
 
 # import custom python packages
-from wahoomc.file_directory_functions import move_content, write_json_file_generic, read_json_file_generic, delete_o5m_pbf_files_in_folder
+from wahoomc.file_directory_functions import move_content, write_json_file_generic, \
+    read_json_file_generic, delete_o5m_pbf_files_in_folder
 from wahoomc.constants_functions import get_tooling_win_path
+
 from wahoomc.constants import USER_WAHOO_MC
 from wahoomc.constants import USER_DL_DIR
 from wahoomc.constants import USER_MAPS_DIR

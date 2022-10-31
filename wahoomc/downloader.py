@@ -13,7 +13,8 @@ import logging
 
 # import custom python packages
 from wahoomc.file_directory_functions import download_url_to_file, unzip
-from wahoomc.constants_functions import translate_country_input_to_geofabrik, get_geofabrik_region_of_country
+from wahoomc.constants_functions import translate_country_input_to_geofabrik, \
+    get_geofabrik_region_of_country
 
 from wahoomc.constants import USER_DL_DIR
 from wahoomc.constants import USER_MAPS_DIR
