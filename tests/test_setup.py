@@ -6,8 +6,10 @@ import platform
 import os
 
 # import custom python packages
-from wahoomc.setup_functions import is_program_installed, is_map_writer_plugin_installed
+from wahoomc.setup_functions import is_program_installed, is_map_writer_plugin_installed, read_version_last_run
 from wahoomc.constants_functions import get_tooling_win_path
+from wahoomc.constants import USER_WAHOO_MC
+from wahoomc.file_directory_functions import write_json_file_generic
 
 
 class TestSetup(unittest.TestCase):
@@ -47,10 +49,46 @@ class TestSetup(unittest.TestCase):
         """
         tests, if a given program is installed
         """
-
         result = is_program_installed(program)
 
         self.assertTrue(result)
+
+
+class TestConfigFile(unittest.TestCase):
+    """
+    tests for the config .json file in the "wahooMapsCreatorData" directory
+    """
+
+    config_file_path = os.path.join(USER_WAHOO_MC, ".config.json")
+
+    def test_version_if_no_config_file_exists(self):
+        """
+        tests, if the return value is None if the config file is deleted
+        """
+        if os.path.exists(self.config_file_path):
+            os.remove(self.config_file_path)
+
+        self.assertEqual(None, read_version_last_run())
+
+    def test_version_if_written_eq(self):
+        """
+        tests, if return version is the one saved
+        """
+        # write dictionary to config file
+        write_json_file_generic(self.config_file_path, {
+                                "version_last_run": '2.0.2'})
+
+        self.assertEqual('2.0.2', read_version_last_run())
+
+    def test_version_if_written_neq(self):
+        """
+        tests, if the comparison of the returned version_last_run is OK
+        """
+        # write dictionary to config file
+        write_json_file_generic(self.config_file_path, {
+                                "version_last_run": '2.0.3'})
+
+        self.assertNotEqual('2.0.2', read_version_last_run())
 
 
 if __name__ == '__main__':
