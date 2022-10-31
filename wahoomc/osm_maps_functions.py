@@ -422,7 +422,7 @@ class OsmMaps:
                 val['filtered_file_names'] = out_file_pbf_filtered_names_mac
 
             # write config file for country
-            self.write_country_config_file(country_dir)
+            self.write_country_config_file(key)
 
         log.info('+ Filter tags from country osm.pbf files: OK')
 
@@ -871,18 +871,18 @@ class OsmMaps:
                 '! Error copying %s files for country %s: %s', extension, self.o_osm_data.country_name, exception)
             sys.exit()
 
-    def write_country_config_file(self, config_dir):
+    def write_country_config_file(self, country):
         """
-        Write country config file of _tiles/{country} directory
+        Write country config file into _tiles/{country} directory
         """
         # Data to be written
         configuration = {
-            "version_last_run": VERSION
+            "version_last_run": VERSION,
+            "tags_last_run": translate_tags_to_keep()
         }
-        configuration["tags_last_run"] = translate_tags_to_keep()
 
         write_json_file_generic(os.path.join(
-            config_dir, ".config.json"), configuration)
+            USER_OUTPUT_DIR, country, ".config.json"), configuration)
 
     def compare_tags_to_last_run(self, country):
         """
