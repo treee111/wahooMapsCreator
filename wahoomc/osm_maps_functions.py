@@ -320,8 +320,6 @@ class OsmMaps:
         for key, val in self.o_osm_data.border_countries.items():
             # evaluate contry directory, create if not exists
             country_dir = os.path.join(USER_OUTPUT_DIR, key)
-            # check if filtered files were created with the same tags already
-            tags_are_different = self.compare_tags_to_last_run(key)
 
             # set names for filtered files for WIN, later on add ".pbf" for macOS/Linux
             out_file_o5m_filtered_win = os.path.join(country_dir,
@@ -353,7 +351,7 @@ class OsmMaps:
                 # - force processing is set (this is also when new map files were dowwnloaded)
                 # - the defined TAGS_TO_KEEP_UNIVERSAL constants have changed are changed (user input or new release)
                 if not os.path.isfile(out_file_o5m_filtered_win) or not os.path.isfile(out_file_o5m_filtered_names_win) \
-                        or self.o_osm_data.force_processing is True or tags_are_different:
+                        or self.o_osm_data.force_processing is True or self.tags_are_identical_to_last_run(key) is False:
                     log.info(
                         '+ Filtering unwanted map objects out of map of %s', key)
                     cmd = [get_tooling_win_path(['osmfilter'])]
@@ -393,7 +391,7 @@ class OsmMaps:
                 # - force processing is set (this is also when new map files were dowwnloaded)
                 # - the defined TAGS_TO_KEEP_UNIVERSAL constants have changed are changed (user input or new release)
                 if not os.path.isfile(out_file_pbf_filtered_mac) or not os.path.isfile(out_file_pbf_filtered_names_mac) \
-                        or self.o_osm_data.force_processing is True or tags_are_different:
+                        or self.o_osm_data.force_processing is True or self.tags_are_identical_to_last_run(key) is False:
                     log.info(
                         '+ Filtering unwanted map objects out of map of %s', key)
 
@@ -884,18 +882,18 @@ class OsmMaps:
         write_json_file_generic(os.path.join(
             USER_OUTPUT_DIR, country, ".config.json"), configuration)
 
-    def compare_tags_to_last_run(self, country):
+    def tags_are_identical_to_last_run(self, country):
         """
-        conpare tags of this run with used tags from last run stored in _tiles/{country} directory
+        compare tags of this run with used tags from last run stored in _tiles/{country} directory
         """
-        tags_are_different = False
+        tags_are_identical = True
 
         try:
             country_config = read_json_file(os.path.join(
                 USER_OUTPUT_DIR, country, ".config.json"))
             if not country_config["tags_last_run"] == translate_tags_to_keep(sys_platform=platform.system()):
-                tags_are_different = True
+                tags_are_identical = False
         except (FileNotFoundError, KeyError):
-            tags_are_different = True
+            tags_are_identical = False
 
-        return tags_are_different
+        return tags_are_identical
