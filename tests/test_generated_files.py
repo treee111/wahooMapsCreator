@@ -136,7 +136,7 @@ class TestGeneratedFiles(unittest.TestCase):
                 dirname_of_file, 'resources', 'macos')
 
         # check files in subdir of given dir (i.e. the X/Y directory)
-        for (dirpath, dirnames, filenames) in walk(os.path.join(path_to_dir, dir_to_compare)):
+        for (dirpath, dirnames, filenames) in walk(os.path.join(path_to_dir, dir_to_compare)):  # pylint: disable=unused-variable
             for directory in dirnames:
                 for (dirpath_2, dirnames_2, filenames_2) in walk(os.path.join(  # pylint: disable=unused-variable
                         dirpath, directory)):
