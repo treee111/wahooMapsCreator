@@ -307,7 +307,7 @@ class OsmMaps:
                 ['osmconvert64-0.8.8p'])
 
         create_empty_directories(
-            USER_OUTPUT_DIR, self.o_osm_data.tiles)
+            USER_OUTPUT_DIR, self.o_osm_data.tiles, self.o_osm_data.border_countries)
 
     def filter_tags_from_country_osm_pbf_files(self):  # pylint: disable=too-many-statements
         """
@@ -320,7 +320,6 @@ class OsmMaps:
         for key, val in self.o_osm_data.border_countries.items():
             # evaluate contry directory, create if not exists
             country_dir = os.path.join(USER_OUTPUT_DIR, key)
-            os.makedirs(country_dir, exist_ok=True)
             # check if filtered files were created with the same tags already
             tags_are_different = self.compare_tags_to_last_run(key)
 
