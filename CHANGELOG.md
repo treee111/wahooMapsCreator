@@ -4,7 +4,55 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-A list of unreleased changes can be found [here](https://github.com/treee111/wahooMapsCreator/compare/v2.0.2...HEAD).
+A list of unreleased changes can be found [here](https://github.com/treee111/wahooMapsCreator/compare/v3.0.0...HEAD).
+
+<a name="3.0.0"></a>
+## [3.0.0] - 2022-11-01
+### Breaking Changes
+- Remove argument `-km` (keep_map_folders) ([#140](https://github.com/treee111/wahooMapsCreator/issues/140)) [`b6157ab`](https://github.com/treee111/wahooMapsCreator/commit/b6157ab338a2963778c10e08532c24440240fb97)
+- Process coding that can be influenced by user-input without `-fp` - speeds up playing with tags ([#150](https://github.com/treee111/wahooMapsCreator/issues/150)) [`71161c1`](https://github.com/treee111/wahooMapsCreator/commit/71161c12ecc769a4240cd2fec6fb71673fcecd71)
+- By default include POI's into generated maps ([#151](https://github.com/treee111/wahooMapsCreator/issues/151)) [`15b9e26`](https://github.com/treee111/wahooMapsCreator/commit/15b9e26365a85eb2abf8ea38b97da80e81e4372d)
+
+### Features
+- Check for required programs at wahooMapsCreator start ([#127](https://github.com/treee111/wahooMapsCreator/issues/127)) [`bcb2dc0`](https://github.com/treee111/wahooMapsCreator/commit/bcb2dc0a91983fbbf43a152740b53fa4ba7dc26d)
+
+### Features
+- Use `python` instead of `python3` to call `shape2osm.py` to be macOS Monterey/M1 compatible ([#131](https://github.com/treee111/wahooMapsCreator/issues/131)) [`c73bd8a`](https://github.com/treee111/wahooMapsCreator/commit/c73bd8addda364daa2be85394ca50fe7d9c73e93)
+- Write v17 map tile indicator ([#138](https://github.com/treee111/wahooMapsCreator/issues/138)) [`58b7a12`](https://github.com/treee111/wahooMapsCreator/commit/58b7a12d303a40fefc897c20d8b1b1e41220c48a)
+- Refactor getting tag-wahoo xml file, distinguish Osmosis errors, reset default logging level to INFO ([#141](https://github.com/treee111/wahooMapsCreator/issues/141)) [`1b5f89f`](https://github.com/treee111/wahooMapsCreator/commit/1b5f89f49554068cef0d0e9f2f874c939fe0c926)
+- Refactor a lot to decouple and make maintenance easier (focus osm_maps_functions.py) ([#152](https://github.com/treee111/wahooMapsCreator/issues/152)) [`9810b6d`](https://github.com/treee111/wahooMapsCreator/commit/9810b6dd0b9fda6ec3f0121823091668e9b9fbf0)
+- Rename variable names to make them more understandable. Restructure one for-loop ([#153](https://github.com/treee111/wahooMapsCreator/issues/153)) [`60c1c6c`](https://github.com/treee111/wahooMapsCreator/commit/60c1c6c5593fd5cc144ef861867bd7ecf95ce78d)
+- Make logging uniformly and include variables into the message correctly ([#154](https://github.com/treee111/wahooMapsCreator/issues/154)) [`f59c138`](https://github.com/treee111/wahooMapsCreator/commit/f59c138d76405170d176b1f1af2f42172a408e4c)
+- Filter country file if new new tags are being used // introduce country config file .config.json ([#162](https://github.com/treee111/wahooMapsCreator/issues/162)) [`9157286`](https://github.com/treee111/wahooMapsCreator/commit/91572865e55a883d924439e4e950fd528726a8f5)
+- Add shop/bicycle POIs, show also "ways" POIs ([#158](https://github.com/treee111/wahooMapsCreator/issues/158)) [`30ee102`](https://github.com/treee111/wahooMapsCreator/commit/30ee1029f630ab5d77af11cac02948a75b85b6d6)
+
+### Bug Fixes
+- handle USA json country names via conversion of `_` to `-` ([#137](https://github.com/treee111/wahooMapsCreator/issues/137)) [`f235b8c`](https://github.com/treee111/wahooMapsCreator/commit/f235b8cbe8c78c1f3fb68e678e011ac6e49a96ee)
+- Set timeout for file downloads to 30 minutes per file (pylint finding) ([#149](https://github.com/treee111/wahooMapsCreator/issues/149)) [`ce48d55`](https://github.com/treee111/wahooMapsCreator/commit/ce48d55dcba0b672184fcbb14d6a60edb686a0b6)
+- handle threads as int and use f-typing to append it to cmd ([#147](https://github.com/treee111/wahooMapsCreator/issues/147)) [`3cdb75d`](https://github.com/treee111/wahooMapsCreator/commit/3cdb75de2c744b9baec65c51cd99b07e2d3d997e)
+
+### Development/Infrastructure/Test/CI
+- delete cruiser tooling and do not publish as .zip in a release [`a252202`](https://github.com/treee111/wahooMapsCreator/commit/a25220255cfa5227ba59a247c5494d782120f848)
+- Update unittest files after changes of release v2.0.0 ([#124](https://github.com/treee111/wahooMapsCreator/issues/124)) [`e39f984`](https://github.com/treee111/wahooMapsCreator/commit/e39f9845a10e996b49eefb0381c7e532f5632a86)
+- Refactor generated_files unittests ([#125](https://github.com/treee111/wahooMapsCreator/issues/125)) [`0bab7a9`](https://github.com/treee111/wahooMapsCreator/commit/0bab7a9d91b5f1728127e4df9ccdb68395d2a778)
+- Refactor constants and setup functions ([#126](https://github.com/treee111/wahooMapsCreator/issues/126)) [`ce7d7a4`](https://github.com/treee111/wahooMapsCreator/commit/ce7d7a4b91d03f1a7474d093ef413c6b8a063cce)
+- add FEAT commits to changelog [`ccbe03c`](https://github.com/treee111/wahooMapsCreator/commit/ccbe03c40b81c04d1e45b7ed2265446f407fc92c)
+- Run pylint tests also on pull requests [`450073b`](https://github.com/treee111/wahooMapsCreator/commit/450073b641e3f479d447fc886f841623a4a30c40)
+- **install:** Update python packages to latest minor release and delete unused environment files ([#148](https://github.com/treee111/wahooMapsCreator/issues/148)) [`47e0fb7`](https://github.com/treee111/wahooMapsCreator/commit/47e0fb7271cfc518f9cb585cce4da3a6fe1340f9)
+- **CI/CD:** only run tests at push onto develop or PR's [`beee898`](https://github.com/treee111/wahooMapsCreator/commit/beee898b9720e88cbef728dec6792d6c08d1d563)
+- **docu:** of copy-to-wahoo, installation, contribution ([#157](https://github.com/treee111/wahooMapsCreator/issues/157)) [`6ad9d6f`](https://github.com/treee111/wahooMapsCreator/commit/6ad9d6fc6a7d39a98d03fd173476adf800c59289)
+- **install:** introduce config file .config.json // store python module version ([#161](https://github.com/treee111/wahooMapsCreator/issues/161)) [`00a9b92`](https://github.com/treee111/wahooMapsCreator/commit/00a9b928e6abc840bcdc3ba7f6c08e3130a86e86)
+- Correct unittests of generated files for v3.0.0 changes ([#163](https://github.com/treee111/wahooMapsCreator/issues/163)) [`4aaf161`](https://github.com/treee111/wahooMapsCreator/commit/4aaf161fcffc415fd1630fb77d4d85a6020ec4df)
+
+### BREAKING CHANGE
+
+As most of the people use wahooMapsCreator to create maps including POI's, this is now golden standard without any arguments.
+
+Coding that can be influenced by user-input is now processed without giving `-fp` and coding that can not be influenced is only re-procecced when issuing `-fp`. That speeds up playing with tags.
+
+- argument `-km`, keep_map_folders does no longer exist
+- either start the tool without the -zip argument or unzip the conpressed output after processing
+
 
 <a name="2.0.2"></a>
 ## [2.0.2] - 2022-06-06
@@ -281,6 +329,7 @@ wahooMapsCreator can now be used much quicker and easier!
     - Windows:    `tooling_windows/Windows-Wahoo-Map-Creator-Osmosis/wahoo-map-creator-osmosis.py`
 
 
+[3.0.0]: https://github.com/treee111/wahooMapsCreator/compare/v2.0.2...v3.0.0
 [2.0.2]: https://github.com/treee111/wahooMapsCreator/compare/v2.0.1...v2.0.2
 [2.0.1]: https://github.com/treee111/wahooMapsCreator/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/treee111/wahooMapsCreator/compare/v1.1.1...v2.0.0

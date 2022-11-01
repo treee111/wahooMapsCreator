@@ -7,4 +7,4 @@ dependencies:
   - gdal=3.4.*
   - pip
   - pip:
-      - wahoomc==2.0.2
+      - wahoomc==3.0.0
