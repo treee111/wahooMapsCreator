@@ -668,7 +668,7 @@
       </m>
    </m>
 
-   <m k="railway" v="station" zoom-min="13">
+   <m k="railway" v="station|stop" zoom-min="13">
       <symbol src="icons/train_station.svg" symbol-percent="130"/>
    </m>
 </rendertheme>
