@@ -38,7 +38,6 @@ cp -a ../../CHANGELOG.md ../../README.md ./
 
 # file for virtual environments / legacy pip install
 cp -a ../../conda_env/gdal-user.yml ./conda_env/
-cp -a ../../conda_env/requirements.txt ./conda_env/
 
 # navigate one dir up into "dist" folder and copy content from Mac to Win
 cd ..
