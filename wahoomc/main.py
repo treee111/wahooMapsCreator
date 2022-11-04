@@ -49,18 +49,17 @@ def run():
 
     o_osm_maps = OsmMaps(o_osm_data)
 
-    if o_input_data.only_merge is False:
-        # Filter tags from country osm.pbf files'
-        o_osm_maps.filter_tags_from_country_osm_pbf_files()
+    # Filter tags from country osm.pbf files'
+    o_osm_maps.filter_tags_from_country_osm_pbf_files()
 
-        # Generate land
-        o_osm_maps.generate_land()
+    # Generate land
+    o_osm_maps.generate_land()
 
-        # Generate sea
-        o_osm_maps.generate_sea()
+    # Generate sea
+    o_osm_maps.generate_sea()
 
-        # Split filtered country files to tiles
-        o_osm_maps.split_filtered_country_files_to_tiles()
+    # Split filtered country files to tiles
+    o_osm_maps.split_filtered_country_files_to_tiles()
 
     # Merge splitted tiles with land an sea
     o_osm_maps.merge_splitted_tiles_with_land_and_sea(

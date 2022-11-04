@@ -73,9 +73,6 @@ def process_call_of_the_tool():
     # specify the file with tags to keep in the output // file needs to be in wahoo_mc/resources/tag_wahoo_adjusted
     options_args.add_argument('-tag', '--tag_wahoo_xml', default=InputData().tag_wahoo_xml,
                               help="file with tags to keep in the output")
-    # only merge - used for special usecases
-    options_args.add_argument('-om', '--only_merge', action='store_true',
-                              help="only merge, do no other processing")
     # option to calculate tiles to process based on Geofabrik index-v1.json file
     options_args.add_argument('-gt', '--geofabrik_tiles', action='store_true',
                               help="calculate tiles based on geofabrik index-v1.json file")
@@ -107,7 +104,6 @@ def process_call_of_the_tool():
     o_input_data.geofabrik_tiles = args.geofabrik_tiles
 
     o_input_data.tag_wahoo_xml = args.tag_wahoo_xml
-    o_input_data.only_merge = args.only_merge
     o_input_data.save_cruiser = args.cruiser
     o_input_data.zip_folder = args.zip
 
@@ -147,7 +143,6 @@ class InputData():  # pylint: disable=too-many-instance-attributes,too-few-publi
         self.force_processing = False
         self.process_border_countries = True
         self.save_cruiser = False
-        self.only_merge = False
 
         self.tag_wahoo_xml = "tag-wahoo-poi.xml"
 
@@ -259,7 +254,6 @@ class GuiInput(tk.Tk):
         self.o_input_data.process_border_countries = tab1.third.checkb_border_countries_val.get()
         self.o_input_data.geofabrik_tiles = tab1.third.checkb_geofabrik_tiles_val.get()
 
-        self.o_input_data.only_merge = tab2.first.checkb_only_merge_val.get()
         self.o_input_data.save_cruiser = tab2.first.checkb_save_cruiser_val.get()
         self.o_input_data.zip_folder = tab2.first.checkb_zip_folder_val.get()
 
@@ -409,8 +403,6 @@ class CheckbuttonsTab2(tk.Frame):
     def __init__(self, parent, oInputData):
         tk.Frame.__init__(self, parent)
 
-        self.checkb_only_merge_val = create_checkbox(self, oInputData.only_merge,
-                                                     "Only merge, do no other processing", 0)
         self.checkb_save_cruiser_val = create_checkbox(self, oInputData.save_cruiser,
                                                        "Save uncompressed maps for Cruiser", 2)
         self.checkb_zip_folder_val = create_checkbox(self, oInputData.zip_folder,
