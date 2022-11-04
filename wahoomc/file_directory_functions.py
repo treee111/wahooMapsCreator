@@ -11,7 +11,6 @@ import sys
 import zipfile
 import logging
 import shutil
-import requests
 
 # import custom python packages
 
@@ -131,21 +130,6 @@ def write_json_file_generic(json_file_path, json_content):
     with open(json_file_path, "w", encoding="utf-8") as json_file:
         json_file.write(json_content)
         json_file.close()
-
-
-def download_url_to_file(url, map_file_path):
-    """
-    download the content of a ULR to file
-    """
-    # set timeout to 30 minutes (per file)
-    request_geofabrik = requests.get(
-        url, allow_redirects=True, stream=True, timeout=1800)
-    if request_geofabrik.status_code != 200:
-        log.error('! failed download URL: %s', url)
-        sys.exit()
-
-    # write content to file
-    write_to_file(map_file_path, request_geofabrik)
 
 
 def write_to_file(file_path, request):

@@ -10,9 +10,10 @@ import os.path
 import sys
 import time
 import logging
+import requests
 
 # import custom python packages
-from wahoomc.file_directory_functions import download_url_to_file, unzip
+from wahoomc.file_directory_functions import write_to_file, unzip
 from wahoomc.constants_functions import translate_country_input_to_geofabrik, \
     get_geofabrik_region_of_country
 
@@ -79,6 +80,21 @@ def get_osm_pbf_filepath_url(country):
 
     # return URL and download filepath
     return map_file_path, url
+
+
+def download_url_to_file(url, map_file_path):
+    """
+    download the content of a ULR to file
+    """
+    # set timeout to 30 minutes (per file)
+    request_geofabrik = requests.get(
+        url, allow_redirects=True, stream=True, timeout=1800)
+    if request_geofabrik.status_code != 200:
+        log.error('! failed download URL: %s', url)
+        sys.exit()
+
+    # write content to file
+    write_to_file(map_file_path, request_geofabrik)
 
 
 class Downloader:
