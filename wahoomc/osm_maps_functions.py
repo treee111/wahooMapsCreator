@@ -876,7 +876,8 @@ class OsmMaps:
         # Data to be written
         configuration = {
             "version_last_run": VERSION,
-            "tags_last_run": translate_tags_to_keep()
+            "tags_last_run": translate_tags_to_keep(sys_platform=platform.system()),
+            "name_tags_last_run": translate_tags_to_keep(name_tags=True, sys_platform=platform.system())
         }
 
         write_json_file_generic(os.path.join(
@@ -891,7 +892,8 @@ class OsmMaps:
         try:
             country_config = read_json_file(os.path.join(
                 USER_OUTPUT_DIR, country, ".config.json"))
-            if not country_config["tags_last_run"] == translate_tags_to_keep(sys_platform=platform.system()):
+            if not country_config["tags_last_run"] == translate_tags_to_keep(sys_platform=platform.system()) \
+                    or not country_config["name_tags_last_run"] == translate_tags_to_keep(name_tags=True, sys_platform=platform.system()):
                 tags_are_identical = False
         except (FileNotFoundError, KeyError):
             tags_are_identical = False
