@@ -13,6 +13,7 @@ from wahoomc import constants
 from wahoomc.constants import RESOURCES_DIR
 from wahoomc.constants import TOOLING_WIN_DIR
 from wahoomc.constants import USER_WAHOO_MC
+from wahoomc.file_directory_functions import read_json_file_generic
 
 log = logging.getLogger('main-logger')
 
@@ -111,10 +112,14 @@ def translate_tags_to_keep(name_tags=False, sys_platform=''):
 
     tags_modif = []
 
+    # read tags-to-keep from .json
+    tags_from_json = read_json_file_generic(
+        os.path.join(RESOURCES_DIR, 'tags-to-keep.json'))
+
     if not name_tags:
-        universal_tags = constants.TAGS_TO_KEEP_UNIVERSAL
+        universal_tags = tags_from_json['TAGS_TO_KEEP_UNIVERSAL']
     else:
-        universal_tags = constants.NAME_TAGS_TO_KEEP_UNIVERSAL
+        universal_tags = tags_from_json['NAME_TAGS_TO_KEEP_UNIVERSAL']
 
     for tag, value in universal_tags.items():
         to_append = transl_tag_value(sys_platform, separator, tag, value)

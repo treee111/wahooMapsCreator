@@ -244,32 +244,3 @@ block_download = ['dach', 'alps', 'britain-and-ireland', 'south-africa-and-lesot
 # Special_regions like (former) colonies where the map of the wanted region is not present in the map of the parent country.
 # example Guadeloupe, it's Geofabrik parent country is France but Guadeloupe is not located within the region covered by the map of France.
 special_regions = ['guadeloupe', 'guyane', 'martinique', 'mayotte', 'reunion']
-
-# Tags to keep
-TAGS_TO_KEEP_UNIVERSAL = {
-    'access': '',
-    'area': 'yes',
-    'bicycle': '',
-    'bridge': '',
-    'foot': ['ft_yes', 'foot_designated'],
-    'amenity': ['fuel', 'cafe', 'drinking_water'],
-    'shop': ['bakery', 'bicycle'],
-    'highway': ['abandoned', 'bus_guideway', 'disused', 'bridleway', 'byway', 'construction', 'cycleway', 'footway', 'living_street', 'motorway', 'motorway_link', 'path', 'pedestrian', 'primary', 'primary_link', 'residential', 'road', 'secondary', 'secondary_link', 'service', 'steps', 'tertiary', 'tertiary_link', 'track', 'trunk', 'trunk_link', 'unclassified'],
-    'natural': ['coastline', 'nosea', 'sea', 'beach', 'land', 'scrub', 'water', 'wetland', 'wood'],
-    'landuse': ['forest', 'commercial', 'industrial', 'residential', 'retail'],
-    'leisure': ['park', 'nature_reserve'],
-    'railway': ['rail', 'tram', 'station', 'stop'],
-    'surface': '',
-    'tracktype': '',
-    'tunnel': '',
-    'waterway': ['canal', 'drain', 'river', 'riverbank'],
-    'wood': 'deciduous'
-}
-
-NAME_TAGS_TO_KEEP_UNIVERSAL = {
-    'admin_level': '2',
-    'area': 'yes',
-    'mountain_pass': '',
-    'natural': '',
-    'place': ['city', 'hamlet', 'island', 'isolated_dwelling', 'islet', 'locality', 'suburb', 'town', 'village', 'country']
-}
