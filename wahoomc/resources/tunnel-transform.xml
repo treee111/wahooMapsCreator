@@ -15,7 +15,7 @@
     </match>
     <output>
       <copy-all/>
-      <tag k="layer" v="2"/>
+      <tag k="layer" v="0"/>
     </output>
   </translation>
 </translations>
