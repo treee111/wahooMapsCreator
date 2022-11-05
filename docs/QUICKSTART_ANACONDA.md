@@ -12,9 +12,7 @@
   - [Install wahooMapsCreator into Anaconda environment](#install-wahoomapscreator-into-anaconda-environment)
     - [Update wahooMapsCreator](#update-wahoomapscreator)
 - [Run wahooMapsCreator](#run-wahoomapscreator)
-- [Archive](#archive)
-  - [old but still valid way to get wahooMapsCreator](#old-but-still-valid-way-to-get-wahoomapscreator)
-    - [Create Anaconda Environment](#create-anaconda-environment-1)
+- [Additional information](#additional-information)
 
 # Download and Install required programs
 
@@ -93,31 +91,5 @@ pip install wahoomc==2.0.0a5 --upgrade
 # Run wahooMapsCreator
 Run wahooMapsCreater as described in the [README](../README.md/#Run-wahooMapsCreator)
 
-
-# Archive
-## old but still valid way to get wahooMapsCreator
-This was the way to install wahooMapsCreator until release v1.1.1
-
-Download the latest .zip file from the [Releases](https://github.com/treee111/wahooMapsCreator/releases) page for your OS and save the folder on your drive. Extract the folder.
-You can also clone the repository to have the latest coding.
-
-### Create Anaconda Environment
-1. Open (or change to) the root of the extracted wahooMapsCreator folder in terminal (macOS/Linux) or **Anaconda Prompt** (Windows, via Startmenu)
-2. Create a new Anaconda environment via
-
-  - macOS/ Linux
-```
-conda env create -f ./conda_env/gdal-user.yml
-```
-  - Windows
-```
-conda env create -f .\conda_env\gdal-user.yml 
-```
-3. activate Anaconda environment with the command printed out (this needs to be done each time you want to create maps)
-```
-conda activate gdal-user
-```
-
-Additional informations: https://opensourceoptions.com/blog/how-to-install-gdal-with-anaconda/
-
-continue with [Run wahooMapsCreator](#run-wahoomapscreator) to use wahooMapsCreator
+# Additional information
+Additional information: https://opensourceoptions.com/blog/how-to-install-gdal-with-anaconda/
