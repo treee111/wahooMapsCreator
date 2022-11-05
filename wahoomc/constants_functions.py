@@ -12,6 +12,7 @@ import os
 from wahoomc import constants
 from wahoomc.constants import RESOURCES_DIR
 from wahoomc.constants import TOOLING_WIN_DIR
+from wahoomc.constants import USER_WAHOO_MC
 
 log = logging.getLogger('main-logger')
 
@@ -174,3 +175,25 @@ def get_tag_wahoo_xml_path(tag_wahoo_xml):
         return path_tag_wahoo_xml
 
     raise TagWahooXmlNotFoundError
+
+
+def get_absolute_dir_user_or_repo(folder, file=''):
+    """
+    return the absolute path to the folder (and file) in this priorization
+    1. user dir
+    2. wahoomc package dir
+
+    Priorization is important later on because user- should always be used in favor of repo-dir!
+    """
+    absolute_paths = []
+    if file:
+        absolute_paths.append(os.path.join(
+            USER_WAHOO_MC, '_config', folder, file))
+        absolute_paths.append(os.path.join(
+            RESOURCES_DIR, folder, file))
+    else:
+        absolute_paths.append(os.path.join(USER_WAHOO_MC, folder))
+        absolute_paths.append(os.path.join(
+            RESOURCES_DIR, '_config', folder))
+
+    return absolute_paths
