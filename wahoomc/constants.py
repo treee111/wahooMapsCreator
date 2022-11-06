@@ -31,6 +31,7 @@ Translate_Country = {
     'british_indian_ocean_territory':   'asia',
     'brunei':                           'malaysia-singapore-brunei',
     'burkina_faso':                     'burkina-faso',
+    'canary_islands':					'canary-islands',
     'cape_verde':                       'cape-verde',
     'christmas_island':                 'indonesia',
     'cocos_islands':                    'australia',
@@ -96,7 +97,7 @@ continents = ['europe', 'unitedstates', 'north-america', 'south-america', 'asia'
               'africa', 'antarctica']
 
 africa = ['algeria', 'angola', 'benin', 'botswana', 'burkina_faso', 'burundi',
-          'cameroon', 'cape_verde', 'central_african_republic', 'chad', 'comoros',
+          'cameroon', 'canary_islands', 'cape_verde', 'central_african_republic', 'chad', 'comoros',
           'cote_d_ivoire', 'democratic_republic_of_the_congo', 'djibouti', 'egypt',
           'equatorial_guinea', 'eritrea', 'ethiopia', 'french_southern_territories', 'gabon',
           'gambia', 'ghana', 'guinea-bissau', 'guinea', 'kenya', 'lesotho', 'liberia',
@@ -161,7 +162,7 @@ unitedstates = ['alabama', 'alaska', 'american_samoa', 'arizona', 'arkansas',
                 'vermont', 'virginia', 'washington', 'west_virginia', 'wisconsin', 'wyoming']
 
 africa_geofabrik = ['algeria', 'angola', 'benin', 'botswana', 'burkina-faso', 'burundi',
-                    'cameroon', 'Canary Islands', 'cape-verde', 'central african republic', 'chad',
+                    'cameroon', 'canary-islands', 'cape-verde', 'central african republic', 'chad',
                     'comores', 'Congo (Republic/Brazzaville)', 'congo-democratic-republic', 'djibouti',
                     'egypt', 'Equatorial Guinea', 'eritrea', 'ethiopia', 'gabon', 'ghana', 'guinea',
                     'guinea-bissau', 'ivory-coast', 'kenya', 'lesotho', 'liberia', 'libya', 'madagascar',
