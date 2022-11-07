@@ -22,6 +22,10 @@ class TagWahooXmlNotFoundError(Exception):
     """Raised when the specified tag-wahoo xml file does not exist"""
 
 
+class TagsToKeepNotFoundError(Exception):
+    """Raised when the specified tags to keep .json file does not exist"""
+
+
 def get_region_of_country(county):
     """
     returns the region / continent of a given country
@@ -112,9 +116,14 @@ def translate_tags_to_keep(name_tags=False, sys_platform=''):
 
     tags_modif = []
 
-    # read tags-to-keep from .json
-    tags_from_json = read_json_file_generic(
-        os.path.join(RESOURCES_DIR, 'tags-to-keep.json'))
+    # read tags-to-keep .json from user-dir in favor of python installation
+    for path in get_absolute_dir_user_or_repo('', file='tags-to-keep.json'):
+        if os.path.exists(path):
+            tags_from_json = read_json_file_generic(path)
+            break
+
+    if not tags_from_json:
+        raise TagsToKeepNotFoundError
 
     if not name_tags:
         universal_tags = tags_from_json['TAGS_TO_KEEP_UNIVERSAL']
