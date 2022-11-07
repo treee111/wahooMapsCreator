@@ -677,21 +677,15 @@ class OsmMaps:
         land_files = glob.glob(os.path.join(USER_OUTPUT_DIR,
                                             f'{tile["x"]}', f'{tile["y"]}', 'land*.osm'))
 
-        # Windows
-        if platform.system() == "Windows":
-            for land in land_files:
+        for land in land_files:
+            if platform.system() == "Windows":
                 cmd = [self.osmosis_win_file_path]
+            else:
+                cmd = ['osmosis']
 
-                cmd.extend(['--read-xml', 'file='+os.path.join(land)])
-                cmd.append('--sort')
-                cmd.extend(['--write-xml', 'file='+os.path.join(land)])
-
-        # Non-Windows
-        else:
-            for land in land_files:
-                cmd = ['osmium', 'sort', '--overwrite']
-                cmd.append(land)
-                cmd.extend(['-o', land])
+            cmd.extend(['--read-xml', 'file='+land])
+            cmd.append('--sort')
+            cmd.extend(['--write-xml', 'file='+land])
 
         run_subprocess_and_log_output(
             cmd, f'Error in Osmosis with sorting land* osm files of tile: {tile["x"]},{tile["y"]}')
