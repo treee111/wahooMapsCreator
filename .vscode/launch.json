@@ -135,6 +135,24 @@
             ]
         },
         {
+            "name": "x/y: 135/91 (Garda) -poi",
+            "type": "python",
+            "request": "launch",
+            "module": "wahoomc",
+            "console": "integratedTerminal",
+            "args": [
+                "cli",
+                "-xy",
+                "135/91",
+                "-tag",
+                "tag-wahoo-poi.xml",
+                "-fp",
+                "-c",
+                "-md",
+                "2000"
+            ]
+        },
+        {
             "name": "gui",
             "type": "python",
             "request": "launch",
