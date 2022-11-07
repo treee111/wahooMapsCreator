@@ -13,6 +13,7 @@ options:
         - FEATURE
         - FEAT
         - FIX
+        - BUGFIX
         - DEV
         - BREAKING
   commit_groups:
@@ -22,11 +23,13 @@ options:
       - FEATURE
       - FEAT
       - FIX
+      - BUGFIX
       - DEV
     title_maps:
       FEATURE: Features
       FEAT: Features
       FIX: Bug Fixes
+      BUGFIX: Bug Fixes
       DEV: Development/Infrastructure/Test/CI
       BREAKING: Breaking Changes
   header:
