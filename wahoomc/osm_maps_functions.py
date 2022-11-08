@@ -358,7 +358,7 @@ class OsmMaps:
                         or self.last_changed_is_identical_to_last_run(key) is False:
                     log.info(
                         '+ Filtering unwanted map objects out of map of %s', key)
-                    cmd = [get_tooling_win_path(['osmfilter'])]
+                    cmd = [get_tooling_win_path_user(['osmfilter'])]
                     cmd.append(out_file_o5m)
                     cmd.append(
                         '--keep="' + translate_tags_to_keep(sys_platform=platform.system()) + '"')
@@ -369,7 +369,7 @@ class OsmMaps:
                     run_subprocess_and_log_output(
                         cmd, f'! Error in OSMFilter with country: {key}')
 
-                    cmd = [get_tooling_win_path(['osmfilter'])]
+                    cmd = [get_tooling_win_path_user(['osmfilter'])]
                     cmd.append(out_file_o5m)
                     cmd.append(
                         '--keep="' + translate_tags_to_keep(

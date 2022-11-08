@@ -107,6 +107,12 @@ def download_tooling_win():
             download_file(osmconvert_path,
                           f'http://m.m.i24.cc/{os.path.split(osmconvert_path)[1]}', False, os.path.join('tooling_win'))
 
+        if not os.path.isfile(get_tooling_win_path_user(['osmfilter.exe'])):
+            log.info('# Need to download osmfilter application for Windows')
+
+            download_file(get_tooling_win_path_user(['osmfilter.exe']),
+                          'http://m.m.i24.cc/osmfilter.exe', False, os.path.join('tooling_win'))
+
 
 class Downloader:
     """
