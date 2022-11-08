@@ -5,6 +5,8 @@ import os
 # import sys
 import unittest
 import time
+import shutil
+import platform
 
 # import custom python packages
 # sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -12,8 +14,10 @@ import time
 from wahoomc.downloader import older_than_x_days
 from wahoomc.downloader import download_file
 from wahoomc.downloader import get_osm_pbf_filepath_url
+from wahoomc.downloader import download_tooling_win
 from wahoomc.downloader import Downloader
 from wahoomc import constants
+from wahoomc.constants_functions import get_tooling_win_path_user
 
 
 class TestDownloader(unittest.TestCase):
@@ -148,6 +152,22 @@ class TestDownloader(unittest.TestCase):
 
         self.assertTrue(
             self.o_downloader.should_geofabrik_file_be_downloaded())
+
+    def test_download_windows_files(self):
+        """
+        Test if Windows tooling files download is successful
+        """
+        if platform.system() == "Windows":
+            path = os.path.join(constants.USER_TOOLING_WIN_DIR)
+
+            if os.path.exists(path):
+                shutil.rmtree(path)
+
+            os.makedirs(constants.USER_TOOLING_WIN_DIR, exist_ok=True)
+            download_tooling_win()
+
+            self.assertTrue(
+                os.path.exists(get_tooling_win_path_user(['osmconvert.exe'])))
 
 
 if __name__ == '__main__':

@@ -8,7 +8,6 @@ from datetime import datetime
 import glob
 import multiprocessing
 import os
-import struct
 import subprocess
 import sys
 import platform
@@ -19,7 +18,7 @@ import logging
 from wahoomc.file_directory_functions import read_json_file, \
     get_folders_in_folder, get_filenames_of_jsons_in_folder, create_empty_directories, write_json_file_generic
 from wahoomc.constants_functions import get_path_to_static_tile_json, translate_tags_to_keep, \
-    get_tooling_win_path, get_tag_wahoo_xml_path, TagWahooXmlNotFoundError
+    get_tooling_win_path, get_tooling_win_path_user, get_tag_wahoo_xml_path, TagWahooXmlNotFoundError
 
 from wahoomc.constants import USER_WAHOO_MC
 from wahoomc.constants import USER_OUTPUT_DIR
@@ -307,12 +306,7 @@ class OsmMaps:
 
     def __init__(self, o_osm_data):
         self.o_osm_data = o_osm_data
-
-        if 8 * struct.calcsize("P") == 32:
-            self.osmconvert_path = get_tooling_win_path(['osmconvert'])
-        else:
-            self.osmconvert_path = get_tooling_win_path(
-                ['osmconvert64-0.8.8p'])
+        self.osmconvert_path = get_tooling_win_path_user(['osmconvert'])
 
         create_empty_directories(
             USER_OUTPUT_DIR, self.o_osm_data.tiles, self.o_osm_data.border_countries)

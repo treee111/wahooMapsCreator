@@ -7,12 +7,14 @@ functions and object for constants
 import sys
 import logging
 import os
+import struct
 
 # import custom python packages
 from wahoomc import constants
 from wahoomc.constants import RESOURCES_DIR
 from wahoomc.constants import TOOLING_WIN_DIR
 from wahoomc.constants import USER_CONFIG_DIR
+from wahoomc.constants import USER_TOOLING_WIN_DIR
 from wahoomc.file_directory_functions import read_json_file_generic
 
 log = logging.getLogger('main-logger')
@@ -183,6 +185,20 @@ def get_tooling_win_path(path_in_tooling_win):
     return path to a tooling in the tooling_win directory and the given path
     """
     return os.path.join(TOOLING_WIN_DIR, *path_in_tooling_win)
+
+
+def get_tooling_win_path_user(path_in_tooling_win):
+    """
+    return path to a tooling in the user tooling_win directory and the given path
+    """
+    # special for osmconvert: handle 32 and 64 bit here
+    if path_in_tooling_win[0] == 'osmconvert' or path_in_tooling_win[0] == 'osmconvert.exe':
+        if 8 * struct.calcsize("P") == 32:
+            return os.path.join(USER_TOOLING_WIN_DIR, path_in_tooling_win[0])
+        # 64 bit: replace with 64 in the end
+        return os.path.join(USER_TOOLING_WIN_DIR, path_in_tooling_win[0].replace("osmconvert", "osmconvert64"))
+
+    return os.path.join(USER_TOOLING_WIN_DIR, *path_in_tooling_win)
 
 
 def get_tag_wahoo_xml_path(tag_wahoo_xml):

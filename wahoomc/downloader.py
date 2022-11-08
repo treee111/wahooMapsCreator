@@ -15,7 +15,7 @@ import platform
 # import custom python packages
 from wahoomc.file_directory_functions import download_url_to_file, unzip
 from wahoomc.constants_functions import translate_country_input_to_geofabrik, \
-    get_geofabrik_region_of_country
+    get_geofabrik_region_of_country, get_tooling_win_path_user
 
 from wahoomc.constants import USER_DL_DIR
 from wahoomc.constants import USER_MAPS_DIR
@@ -99,6 +99,13 @@ def download_tooling_win():
             log.info('# Need to download Osmosis application for Windows')
             download_file(OSMOSIS_WIN_FILE_PATH,
                           'https://github.com/openstreetmap/osmosis/releases/download/0.48.3/osmosis-0.48.3.zip', True, os.path.join('tooling_win', 'Osmosis'))
+
+        osmconvert_path = get_tooling_win_path_user(['osmconvert.exe'])
+        if not os.path.isfile(osmconvert_path):
+            log.info('# Need to download osmconvert application for Windows')
+
+            download_file(osmconvert_path,
+                          f'http://m.m.i24.cc/{os.path.split(osmconvert_path)[1]}', False, os.path.join('tooling_win'))
 
 
 class Downloader:
