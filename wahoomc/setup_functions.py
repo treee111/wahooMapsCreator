@@ -23,6 +23,7 @@ from wahoomc.constants import USER_MAPS_DIR
 from wahoomc.constants import USER_OUTPUT_DIR
 from wahoomc.constants import USER_CONFIG_DIR
 from wahoomc.constants import VERSION
+from wahoomc.constants import USER_TOOLING_WIN_DIR
 
 log = logging.getLogger('main-logger')
 
@@ -39,6 +40,9 @@ def initialize_work_directories():
     os.makedirs(USER_OUTPUT_DIR, exist_ok=True)
     os.makedirs(USER_CONFIG_DIR, exist_ok=True)
 
+    if platform.system() == "Windows":
+        os.makedirs(USER_TOOLING_WIN_DIR, exist_ok=True)
+
 
 def move_old_content_into_new_dirs():
     """
@@ -49,10 +53,6 @@ def move_old_content_into_new_dirs():
     This coding is only valid/needed when using the cloned version or .zip version.
     If working with a installed version via PyPI, nothing will be done because folders to copy do not exist
     """
-    # create directories first because initialize_work_directories is now called later
-    os.makedirs(USER_DL_DIR, exist_ok=True)
-    os.makedirs(USER_OUTPUT_DIR, exist_ok=True)
-
     move_content('wahooMapsCreator_download', USER_DL_DIR)
     move_content('wahooMapsCreator_output', USER_OUTPUT_DIR)
 
