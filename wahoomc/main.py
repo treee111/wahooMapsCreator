@@ -29,6 +29,8 @@ def run():
     logging.basicConfig(format='%(levelname)s:%(message)s',
                         level=logging.INFO)
 
+    initialize_work_directories()
+    adjustments_due_to_breaking_changes()
     check_installation_of_required_programs()
 
     # handle GUI and CLI processing via one function and different cli-calls
@@ -39,9 +41,6 @@ def run():
 
     # Is there something to do?
     o_input_data.is_required_input_given_or_exit(issue_message=True)
-
-    adjustments_due_to_breaking_changes()
-    initialize_work_directories()
 
     o_osm_data = OsmData()
     # Check for not existing or expired files. Mark for download, if dl is needed
