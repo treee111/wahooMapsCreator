@@ -46,7 +46,7 @@
             ]
         },
         {
-            "name": "malta",
+            "name": "malta (no POI)",
             "type": "python",
             "request": "launch",
             "module": "wahoomc",
@@ -64,7 +64,7 @@
             ]
         },
         {
-            "name": "malta-geofabrik",
+            "name": "malta-geofabrik (no POI)",
             "type": "python",
             "request": "launch",
             "module": "wahoomc",
@@ -83,7 +83,22 @@
             ]
         },
         {
-            "name": "malta -c",
+            "name": "malta -c NO -fp",
+            "type": "python",
+            "request": "launch",
+            "module": "wahoomc",
+            "console": "integratedTerminal",
+            "args": [
+                "cli",
+                "-co",
+                "malta",
+                "-c",
+                "-md",
+                "100"
+            ]
+        },
+        {
+            "name": "malta",
             "type": "python",
             "request": "launch",
             "module": "wahoomc",
@@ -99,43 +114,7 @@
             ]
         },
         {
-            "name": "malta-poi",
-            "type": "python",
-            "request": "launch",
-            "module": "wahoomc",
-            "console": "integratedTerminal",
-            "args": [
-                "cli",
-                "-co",
-                "malta",
-                "-tag",
-                "tag-wahoo-poi.xml",
-                "-fp",
-                "-c",
-                "-md",
-                "400"
-            ]
-        },
-        {
-            "name": "x/y: 134/88 (STG) -poi",
-            "type": "python",
-            "request": "launch",
-            "module": "wahoomc",
-            "console": "integratedTerminal",
-            "args": [
-                "cli",
-                "-xy",
-                "134/88",
-                "-tag",
-                "tag-wahoo-poi.xml",
-                "-fp",
-                "-c",
-                "-md",
-                "400"
-            ]
-        },
-        {
-            "name": "x/y: 135/91 (Garda) -poi",
+            "name": "x/y: 135/91 (Garda) #160",
             "type": "python",
             "request": "launch",
             "module": "wahoomc",
@@ -144,12 +123,10 @@
                 "cli",
                 "-xy",
                 "135/91",
-                "-tag",
-                "tag-wahoo-poi.xml",
                 "-fp",
                 "-c",
                 "-md",
-                "2000"
+                "100"
             ]
         },
         {
@@ -201,18 +178,6 @@
             ]
         },
         {
-            "name": "x/y: 138/100,133/88 (two tiles)",
-            "type": "python",
-            "request": "launch",
-            "module": "wahoomc",
-            "console": "integratedTerminal",
-            "args": [
-                "cli",
-                "-xy",
-                "138/100,133/88"
-            ]
-        },
-        {
             "name": "x/y: stg->gardasee (ten tiles)",
             "type": "python",
             "request": "launch",
@@ -225,20 +190,7 @@
             ]
         },
         {
-            "name": "mexico with bc",
-            "type": "python",
-            "request": "launch",
-            "module": "wahoomc",
-            "console": "integratedTerminal",
-            "args": [
-                "mexico",
-                "-md",
-                "100",
-                "-bc"
-            ]
-        },
-        {
-            "name": "malta only merge - user directory test",
+            "name": "mexico #113",
             "type": "python",
             "request": "launch",
             "module": "wahoomc",
@@ -246,8 +198,7 @@
             "args": [
                 "cli",
                 "-co",
-                "malta",
-                "-c",
+                "mexico",
                 "-md",
                 "100"
             ]
