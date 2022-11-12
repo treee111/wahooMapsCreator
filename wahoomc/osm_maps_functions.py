@@ -608,7 +608,7 @@ class OsmMaps:
         tile_count = 1
         for tile in self.o_osm_data.tiles:  # pylint: disable=too-many-nested-blocks
             log.info(
-                '+ Merging tiles for tile %s of %s for Coordinates: %s,%s', tile_count, len(self.o_osm_data.tiles), tile["x"], tile["y"])
+                '+ Coordinates: %s,%s (%s of %s)', tile["x"], tile["y"], tile_count, len(self.o_osm_data.tiles))
 
             out_tile_dir = os.path.join(USER_OUTPUT_DIR,
                                         f'{tile["x"]}', f'{tile["y"]}')
@@ -670,8 +670,8 @@ class OsmMaps:
         https://github.com/osmcode/osmium-tool/releases/tag/v1.13.2
         """
 
-        log.info('-' * 80)
-        log.info('# Sorting land* osm files')
+        log.debug('-' * 80)
+        log.debug('# Sorting land* osm files')
 
         # get all land* osm files
         land_files = glob.glob(os.path.join(USER_OUTPUT_DIR,
@@ -690,7 +690,7 @@ class OsmMaps:
         run_subprocess_and_log_output(
             cmd, f'Error in Osmosis with sorting land* osm files of tile: {tile["x"]},{tile["y"]}')
 
-        log.info('+ Sorting land* osm files: OK')
+        log.debug('+ Sorting land* osm files: OK')
 
     def create_map_files(self, save_cruiser, tag_wahoo_xml):
         """
