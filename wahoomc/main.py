@@ -34,6 +34,9 @@ def run():
     # handle GUI and CLI processing via one function and different cli-calls
     o_input_data = process_call_of_the_tool()
 
+    if o_input_data.verbose:
+        logging.getLogger().setLevel(logging.DEBUG)
+
     # Is there something to do?
     o_input_data.is_required_input_given_or_exit(issue_message=True)
 

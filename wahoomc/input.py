@@ -79,6 +79,8 @@ def process_call_of_the_tool():
     # zip the country (and country-maps) folder
     options_args.add_argument('-z', '--zip', action='store_true',
                               help="zip the country (and country-maps) folder")
+    options_args.add_argument('-v', '--verbose', action='store_true',
+                              help="output debug logger messages")
 
     args = parser_top.parse_args()
 
@@ -106,6 +108,8 @@ def process_call_of_the_tool():
     o_input_data.tag_wahoo_xml = args.tag_wahoo_xml
     o_input_data.save_cruiser = args.cruiser
     o_input_data.zip_folder = args.zip
+
+    o_input_data.verbose = args.verbose
 
     return o_input_data
 
@@ -152,6 +156,7 @@ class InputData():  # pylint: disable=too-many-instance-attributes,too-few-publi
         self.geofabrik_tiles = False
 
         self.zip_folder = False
+        self.verbose = False
 
     def is_required_input_given_or_exit(self, issue_message):
         """
@@ -256,6 +261,7 @@ class GuiInput(tk.Tk):
 
         self.o_input_data.save_cruiser = tab2.first.checkb_save_cruiser_val.get()
         self.o_input_data.zip_folder = tab2.first.checkb_zip_folder_val.get()
+        self.o_input_data.verbose = tab2.first.checkb_verbose_val.get()
 
         # get text without \n in the end
         self.o_input_data.tag_wahoo_xml = tab2.second.input_tag_wahoo_xml.get()
@@ -407,3 +413,5 @@ class CheckbuttonsTab2(tk.Frame):
                                                        "Save uncompressed maps for Cruiser", 2)
         self.checkb_zip_folder_val = create_checkbox(self, oInputData.zip_folder,
                                                      "Zip folder with generated files", 3)
+        self.checkb_verbose_val = create_checkbox(self, oInputData.verbose,
+                                                "output debug logger messages", 4)
