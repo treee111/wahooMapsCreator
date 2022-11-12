@@ -178,39 +178,49 @@
    	<!-- region tunnels: todo: bring in foreground, before <m e="way" k="natural|landcover|landuse" v="wood|trees|scrub|forest"> -->
    	<m e="way" k="tunnel" v="true|yes" zoom-min="8">
       	<m e="way" k="highway" v="residential|living_street|road|unclassified" zoom-min="13">
-           <line cat="roam" stroke="#AAAAAA" width="1.3" dasharray="10,7" cap="round" />
+           <line cat="roam, bolt2" stroke="#AAAAAA" width="1.3" dasharray="10,7" cap="round" />
+           <line cat="bolt" outline="tunnel-bolt" width="1.3" dasharray="10,7" cap="round"  />
         </m>
         <m e="way" k="highway" v="residential|living_street|road|unclassified" zoom-min="10" zoom-max="12">
-           <line cat="roam" stroke="#AAAAAA" width="1.5" dasharray="10,7" cap="round" />
+           <line cat="roam, bolt2" stroke="#AAAAAA" width="1.5" dasharray="10,7" cap="round" />
+           <line cat="bolt" outline="tunnel-bolt" width="1.5" dasharray="10,7" cap="round"  />
         </m>
         <m e="way" k="highway" v="tertiary|tertiary_link|secondary_link|secondary" zoom-min="9">
-           <line cat="roam" stroke="#FFFF00" width="2.0" dasharray="10,7" cap="round" />
+           <line cat="roam, bolt2" stroke="#FFFF00" width="2.0" dasharray="10,7" cap="round" />
+           <line cat="bolt" outline="tunnel-bolt" width="2.0"  dasharray="10,7" cap="round" />
         </m>
         <m e="way" k="highway" v="primary_link|trunk_link|motorway_link|primary|trunk" zoom-min="9">
-           <line cat="roam" stroke="#FFAA00" width="2.0" dasharray="10,7" cap="round" />
+           <line cat="roam, bolt2" stroke="#FFAA00" width="2.0" dasharray="10,7" cap="round" />
+           <line cat="bolt" outline="tunnel-bolt" width="2.0" dasharray="10,7" cap="round" />
         </m>
         <m e="way" k="highway" v="motorway" zoom-min="12">
-           <line cat="roam" stroke="#AA5500" width="3.5" dasharray="10,7" cap="round" />
+           <line cat="roam, bolt2" stroke="#AA5500" width="3.5" dasharray="10,7" cap="round" />
+           <line cat="bolt" outline="tunnel-bolt" width="3.5" dasharray="10,7" cap="round"  />
         </m>
         <m e="way" k="highway" v="motorway" zoom-min="8" zoom-max="11">
-           <line cat="ROAM" stroke="#AA5500" width="4.0" dasharray="10,7" cap="round" />
+           <line cat="roam, bolt2" stroke="#AA5500" width="4.0" dasharray="10,7" cap="round" />
+           <line cat="bolt" outline="tunnel-bolt" width="4.0" dasharray="10,7" cap="round"  />
         </m>
         
         <!-- tunnel trails -->
         <m cat="trails-osm" k="access" v="-|private" >
             <m e="way" k="highway" v="footway|pedestrian" zoom-min="14">
                <line use="bolt2-footpath" dasharray="10,7"/>
+               <line use="bolt-footpath" dasharray="10,7"/>
             </m>
             <m e="way" k="highway" v="steps" zoom-min="14">
                <line use="bolt2-steps" dasharray="10,7"/>
+               <line use="bolt-steps" dasharray="10,7"/>
             </m>		
             <m cat="trails-osm" e="way" k="highway" v="cycleway" zoom-min="12" select="first">
                <!-- cycleways can be paved or raw -->
                <m k="surface" v="bic_unpaved">
                   <line use="bolt2-track-raw-cycle" dasharray="10,7"/>
+                  <line use="bolt-track-raw-cycle" dasharray="10,7"/>
                </m>
                <m k="highway" v="cycleway">
-                  <line use="bolt2-cycle" outline="bolt2-bikepath" dasharray="10,7"/>
+                  <line use="bolt2-cycle" outline="bolt2-bikepath" dasharray="10,7"/>7
+                  <line use="bolt-cycle" dasharray="10,7"/>
                </m>
             </m>
             <m e="way" k="highway" v="path" zoom-min="12" select="first">
@@ -218,18 +228,22 @@
 						<!-- specifically for cycle -->
 						<m k="surface" v="bic_paved">
 							<line use="bolt2-trail" dasharray="10,7" outline="bolt2-bikepath"/>
+                     <line use="bolt-trail" dasharray="10,7"/>
 						</m>
 					</m>
 					<m k="surface" v="bic_paved">
 						<line use="bolt2-track-paved" dasharray="10,7"/>
+                  <line use="bolt-track-paved" dasharray="10,7"/>
 					</m>
 					<m k="foot" v="ft_yes|foot_designated" zoom-min="13">
 						<!-- specifically for foot -->
 						<line use="bolt2-footpath" dasharray="10,7"/>
+                  <line use="bolt-footpath" dasharray="10,7"/>
 					</m>
 					<m k="highway" v="path" zoom-min="14">
 						<!-- remainder -->
 						<line use="bolt2-footpath" dasharray="3,10"/>
+                  <line use="bolt-footpath" dasharray="3,10"/>
 					</m>
             </m>
             <m e="way" k="highway" v="track|byway" zoom-min="13" select="first">   
@@ -237,9 +251,11 @@
                   <!-- Solid. Usually a paved or sealed surface-->
                   <m k="bicycle" v="bic_yes|bic_designated">
                      <line use="bolt2-track-paved-cycle" dasharray="10,7"/>
+                     <line use="bolt-track-paved-cycle" dasharray="10,7"/>
                   </m>
                   <m k="bicycle" v="~">
                      <line use="bolt2-track-paved" dasharray="10,7"/>
+                     <line use="bolt-track-paved" dasharray="10,7"/>
                   </m>
                </m>
 			   <m zoom-min="14">
@@ -247,18 +263,22 @@
                   <!-- Solid but unpaved. Usually an unpaved track with surface of gravel. -->
                   <m k="bicycle" v="bic_yes|bic_designated">
                      <line use="bolt2-track-raw-cycle" dasharray="10,7" />
+                     <line use="bolt-track-raw-cycle" dasharray="10,7" />
                   </m>
                   <m k="bicycle" v="~">
                      <line use="bolt2-track-raw" dasharray="10,7" />
+                     <line use="bolt-track-raw" dasharray="10,7" />
                   </m>
                </m>
                <m k="tracktype" v="grade3">			   
                   <!-- Mostly solid. Even mixture of hard and soft materials. -->
                   <m k="bicycle" v="bic_yes|bic_designated">
                      <line use="bolt2-track-raw-cycle" dasharray="10,7" />
+                     <line use="bolt-track-raw-cycle" dasharray="10,7" />
                   </m>
                   <m k="bicycle" v="~">
                      <line use="bolt2-track-raw" dasharray="10,7" />
+                     <line use="bolt-track-raw" dasharray="10,7" />
                   </m>
                </m>
                <m k="tracktype" v="grade4">
@@ -266,9 +286,11 @@
 						but with some hard or compacted materials mixed in. -->
                   <m k="bicycle" v="bic_yes|bic_designated">
                      <line use="bolt2-track-raw-cycle" dasharray="10,7" />
+                     <line use="bolt-track-raw-cycle" dasharray="10,7" />
                   </m>
                   <m k="bicycle" v="~">
                      <line use="bolt2-track-raw" dasharray="10,7" />
+                     <line use="bolt-track-raw" dasharray="10,7" />
                   </m>
                </m>
                <m k="tracktype" v="grade5">
@@ -277,28 +299,34 @@
 						eg. -27.611406,153.165486 -->
                   <m k="bicycle" v="bic_yes|bic_designated">
                      <line use="bolt2-track-raw-cycle" dasharray="10,7" />
+                     <line use="bolt-track-raw-cycle" dasharray="10,7" />
                   </m>
                   <m k="bicycle" v="~">
                      <line use="bolt2-track-raw" dasharray="10,7" />
+                     <line use="bolt-track-raw" dasharray="10,7" />
                   </m>
                </m>			   
                <m k="highway" v="path">
                   <!--  other paths that haven't already matched -->
                   <line use="bolt2-footpath" dasharray="10,7"/>
+                  <line use="bolt-footpath" dasharray="10,7"/>
                </m>
                <m e="way" k="tracktype" v="~" select="first">
                   <!--  other tracks that haven't already matched -->
                   <m k="bicycle" v="bic_yes|bic_designated">
                      <line use="bolt2-track-other-cycle" dasharray="10,7" cap="butt" />
+                     <line use="bolt-track-other-cycle" dasharray="10,7" cap="butt" />
                      <line stroke="#FFFFFF" width="0.5" dasharray="10,7" cap="butt" />
                   </m>
                   <m k="bicycle" v="~">
                      <line use="bolt2-track-other" dasharray="10,7" cap="butt" />
+                     <line use="bolt-track-other" dasharray="10,7" cap="butt" />
                      <line stroke="#FFFFFF" width="0.5" dasharray="10,7" cap="butt" />
                   </m>
                   <m k="foot" v="ft_yes|foot_designated">
                      <!-- specifically for foot -->
                      <line use="bolt2-footpath" dasharray="10,7" />
+                     <line use="bolt-footpath" dasharray="10,7" />
                   </m>
                </m>
             </m>
