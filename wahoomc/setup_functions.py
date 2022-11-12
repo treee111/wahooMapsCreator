@@ -64,7 +64,7 @@ def adjustments_due_to_breaking_changes():
     # file-names of filteres country files were uniformed in #153.
     # due to that old files are sometimes no longer accessed and files in the _tiles folder are deleted here.
     if version_last_run is None or \
-            pkg_resources.parse_version(VERSION) > pkg_resources.parse_version('2.0.2'):
+            pkg_resources.parse_version(VERSION) <= pkg_resources.parse_version('2.0.2'):
         log.info(
             'Last run was with version %s, deleting files of %s directory due to breaking changes.', version_last_run, USER_OUTPUT_DIR)
         delete_o5m_pbf_files_in_folder(USER_OUTPUT_DIR)
