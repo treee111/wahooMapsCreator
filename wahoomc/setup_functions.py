@@ -14,8 +14,8 @@ import pkg_resources
 
 # import custom python packages
 from wahoomc.file_directory_functions import move_content, write_json_file_generic, \
-    read_json_file_generic, delete_o5m_pbf_files_in_folder
-from wahoomc.constants_functions import get_tooling_win_path
+    read_json_file_generic, delete_o5m_pbf_files_in_folder, copy_or_move_files_and_folder
+from wahoomc.constants_functions import get_tooling_win_path, get_absolute_dir_user_or_repo
 
 from wahoomc.constants import USER_WAHOO_MC
 from wahoomc.constants import USER_DL_DIR
@@ -180,3 +180,20 @@ def read_version_last_run():
         version_last_run = None
 
     return version_last_run
+
+
+def copy_jsons_from_repo_to_user(folder, file=''):
+    """
+    copies files from wahoomc repo/package to the user-directory
+    """
+    absolute_paths = get_absolute_dir_user_or_repo(folder, file)
+
+    log.debug('# Copy "%s" files from repo to directory if not existing: %s',
+              folder, absolute_paths[0])
+
+    # copy files of gitcommon package directory to user directory
+    copy_or_move_files_and_folder(
+        absolute_paths[1], absolute_paths[0], delete_from_dir=False)
+
+    log.info('# Copy "%s" files from repo or gitcommon to directory if not existing: %s : OK',
+             folder, absolute_paths[0])
