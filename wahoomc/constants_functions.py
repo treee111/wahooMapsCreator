@@ -104,7 +104,7 @@ def translate_country_input_to_geofabrik(county):
     return c_translated
 
 
-def translate_tags_to_keep(name_tags=False, sys_platform=''):
+def translate_tags_to_keep(name_tags=False, sys_platform='', use_repo=False):
     """
     translates the given tags to format of the operating system.
     """
@@ -117,10 +117,18 @@ def translate_tags_to_keep(name_tags=False, sys_platform=''):
     tags_modif = []
 
     # read tags-to-keep .json from user-dir in favor of python installation
-    for path in get_absolute_dir_user_or_repo('', file='tags-to-keep.json'):
-        if os.path.exists(path):
-            tags_from_json = read_json_file_generic(path)
-            break
+    # evaluate path first: user-dir in favor of PyPI installation
+    if not use_repo:
+        for path in get_absolute_dir_user_or_repo('', file='tags-to-keep.json'):
+            if os.path.exists(path):
+                break
+    # force using file from repo - used in unittests for equal output
+    else:
+        path = get_absolute_dir_user_or_repo(
+            '', file='tags-to-keep.json')[1]
+
+    # read the tags from the evaluated path above
+    tags_from_json = read_json_file_generic(path)
 
     if not tags_from_json:
         raise TagsToKeepNotFoundError

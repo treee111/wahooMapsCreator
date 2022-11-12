@@ -123,7 +123,7 @@ class TestTranslateTags(unittest.TestCase):
                 'leisure=park, nature_reserve', 'railway=rail, tram, station, stop',
                 'surface', 'tracktype', 'tunnel', 'waterway=canal, drain, river, riverbank', 'wood=deciduous']
 
-        transl_tags = translate_tags_to_keep()
+        transl_tags = translate_tags_to_keep(use_repo=True)
         self.assertEqual(tags, transl_tags)
 
     def test_translate_tags_to_keep_full_win(self):
@@ -132,7 +132,8 @@ class TestTranslateTags(unittest.TestCase):
         """
         tags_win = 'access= area=yes bicycle= bridge= foot=ft_yes =foot_designated amenity=fuel =cafe =drinking_water shop=bakery =bicycle highway=abandoned =bus_guideway =disused =bridleway =byway =construction =cycleway =footway =living_street =motorway =motorway_link =path =pedestrian =primary =primary_link =residential =road =secondary =secondary_link =service =steps =tertiary =tertiary_link =track =trunk =trunk_link =unclassified natural=coastline =nosea =sea =beach =land =scrub =water =wetland =wood landuse=forest =commercial =industrial =residential =retail leisure=park =nature_reserve railway=rail =tram =station =stop surface= tracktype= tunnel= waterway=canal =drain =river =riverbank wood=deciduous'
 
-        transl_tags = translate_tags_to_keep(sys_platform='Windows')
+        transl_tags = translate_tags_to_keep(
+            sys_platform='Windows', use_repo=True)
         self.assertEqual(tags_win, transl_tags)
 
     def test_translate_name_tags_to_keep_full_macos(self):
@@ -142,7 +143,7 @@ class TestTranslateTags(unittest.TestCase):
         names_tags = ['admin_level=2', 'area=yes', 'mountain_pass', 'natural',
                       'place=city, hamlet, island, isolated_dwelling, islet, locality, suburb, town, village, country']
 
-        transl_tags = translate_tags_to_keep(name_tags=True)
+        transl_tags = translate_tags_to_keep(name_tags=True, use_repo=True)
         self.assertEqual(names_tags, transl_tags)
 
     def test_translate_name_tags_to_keep_full_win(self):
@@ -153,7 +154,7 @@ class TestTranslateTags(unittest.TestCase):
         names_tags_win = 'admin_level=2 area=yes mountain_pass= natural= place=city =hamlet =island =isolated_dwelling =islet =locality =suburb =town =village =country'
 
         transl_tags = translate_tags_to_keep(
-            name_tags=True, sys_platform='Windows')
+            name_tags=True, sys_platform='Windows', use_repo=True)
         self.assertEqual(names_tags_win, transl_tags)
 
 
