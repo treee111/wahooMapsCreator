@@ -623,50 +623,38 @@ class OsmMaps:
             # Windows
             if platform.system() == "Windows":
                 cmd = [self.osmosis_win_file_path]
-                loop = 0
-                # loop through all countries of tile, if border-countries should be processed.
-                # if border-countries should not be processed, only process the "entered" country
-                for country in tile['countries']:
-                    if process_border_countries or country in self.o_osm_data.border_countries:
-                        cmd.append('--rbf')
-                        cmd.append(os.path.join(
-                            out_tile_dir, f'split-{country}.osm.pbf'))
-                        cmd.append('workers=' + self.workers)
-                        if loop > 0:
-                            cmd.append('--merge')
-
-                        cmd.append('--rbf')
-                        cmd.append(os.path.join(
-                            out_tile_dir, f'split-{country}-names.osm.pbf'))
-                        cmd.append('workers=' + self.workers)
-                        cmd.append('--merge')
-
-                        loop += 1
-
-                for land in land_files:
-                    cmd.extend(
-                        ['--rx', 'file='+os.path.join(out_tile_dir, f'{land}'), '--s', '--m'])
-                cmd.extend(
-                    ['--rx', 'file='+os.path.join(out_tile_dir, 'sea.osm'), '--s', '--m'])
-                cmd.extend(['--tag-transform', 'file=' + os.path.join(RESOURCES_DIR,
-                                                                      'tunnel-transform.xml'), '--wb', out_file_merged, 'omitmetadata=true'])
-
             # Non-Windows
             else:
-                cmd = ['osmium', 'merge', '--overwrite']
-                # loop through all countries of tile, if border-countries should be processed.
-                # if border-countries should not be processed, only process the "entered" country
-                for country in tile['countries']:
-                    if process_border_countries or country in self.o_osm_data.border_countries:
-                        cmd.append(os.path.join(
-                            out_tile_dir, f'split-{country}.osm.pbf'))
-                        cmd.append(os.path.join(
-                            out_tile_dir, f'split-{country}-names.osm.pbf'))
+                cmd = ['osmosis']
 
-                for land in land_files:
-                    cmd.append(land)
-                cmd.append(os.path.join(out_tile_dir, 'sea.osm'))
-                cmd.extend(['-o', out_file_merged])
+            loop = 0
+            # loop through all countries of tile, if border-countries should be processed.
+            # if border-countries should not be processed, only process the "entered" country
+            for country in tile['countries']:
+                if process_border_countries or country in self.o_osm_data.border_countries:
+                    cmd.append('--rbf')
+                    cmd.append(os.path.join(
+                        out_tile_dir, f'split-{country}.osm.pbf'))
+                    cmd.append('workers=' + self.workers)
+                    if loop > 0:
+                        cmd.append('--merge')
+
+                    cmd.append('--rbf')
+                    cmd.append(os.path.join(
+                        out_tile_dir, f'split-{country}-names.osm.pbf'))
+                    cmd.append('workers=' + self.workers)
+                    cmd.append('--merge')
+
+                    loop += 1
+
+            for land in land_files:
+                cmd.extend(
+                    ['--rx', 'file='+land, '--s', '--m'])
+
+            cmd.extend(
+                ['--rx', 'file='+os.path.join(out_tile_dir, 'sea.osm'), '--s', '--m'])
+            cmd.extend(['--tag-transform', 'file=' + os.path.join(RESOURCES_DIR,
+                                                                  'tunnel-transform.xml'), '--wb', out_file_merged, 'omitmetadata=true'])
 
             run_subprocess_and_log_output(
                 cmd, f'! Error in Osmosis with tile: {tile["x"]},{tile["y"]}')
@@ -689,21 +677,15 @@ class OsmMaps:
         land_files = glob.glob(os.path.join(USER_OUTPUT_DIR,
                                             f'{tile["x"]}', f'{tile["y"]}', 'land*.osm'))
 
-        # Windows
-        if platform.system() == "Windows":
-            for land in land_files:
+        for land in land_files:
+            if platform.system() == "Windows":
                 cmd = [self.osmosis_win_file_path]
+            else:
+                cmd = ['osmosis']
 
-                cmd.extend(['--read-xml', 'file='+os.path.join(land)])
-                cmd.append('--sort')
-                cmd.extend(['--write-xml', 'file='+os.path.join(land)])
-
-        # Non-Windows
-        else:
-            for land in land_files:
-                cmd = ['osmium', 'sort', '--overwrite']
-                cmd.append(land)
-                cmd.extend(['-o', land])
+            cmd.extend(['--read-xml', 'file='+land])
+            cmd.append('--sort')
+            cmd.extend(['--write-xml', 'file='+land])
 
         run_subprocess_and_log_output(
             cmd, f'Error in Osmosis with sorting land* osm files of tile: {tile["x"]},{tile["y"]}')
