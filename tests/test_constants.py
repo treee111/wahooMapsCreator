@@ -64,7 +64,7 @@ class TestTranslateTags(unittest.TestCase):
 
     @ mock.patch("wahoomc.file_directory_functions.json.load")
     @ mock.patch("wahoomc.open")
-    def test_translate_tags_to_keep_simple_macos(self, mock_open, mock_json_load):
+    def test_translate_tags_to_keep_simple_macos(self, mock_open, mock_json_load):  # pylint: disable=unused-argument
         """
         Test translating tags to keep from universal format to macOS
         """
@@ -76,7 +76,7 @@ class TestTranslateTags(unittest.TestCase):
 
     @ mock.patch("wahoomc.file_directory_functions.json.load")
     @ mock.patch("wahoomc.open")
-    def test_translate_tags_to_keep_simple_win(self, mock_open, mock_json_load):
+    def test_translate_tags_to_keep_simple_win(self, mock_open, mock_json_load):  # pylint: disable=unused-argument
         """
         Test translating tags to keep from universal format to Windows
         """
@@ -88,7 +88,7 @@ class TestTranslateTags(unittest.TestCase):
 
     @ mock.patch("wahoomc.file_directory_functions.json.load")
     @ mock.patch("wahoomc.open")
-    def test_translate_tags_to_keep_adv_macos(self, mock_open, mock_json_load):
+    def test_translate_tags_to_keep_adv_macos(self, mock_open, mock_json_load):  # pylint: disable=unused-argument
         """
         Test translating tags to keep from universal format to macOS
         """
@@ -101,7 +101,7 @@ class TestTranslateTags(unittest.TestCase):
 
     @ mock.patch("wahoomc.file_directory_functions.json.load")
     @ mock.patch("wahoomc.open")
-    def test_translate_tags_to_keep_adv_win(self, mock_open, mock_json_load):
+    def test_translate_tags_to_keep_adv_win(self, mock_open, mock_json_load):  # pylint: disable=unused-argument
         """
         Test translating tags to keep from universal format to Windows
         """
