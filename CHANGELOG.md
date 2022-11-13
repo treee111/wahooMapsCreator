@@ -4,7 +4,33 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-A list of unreleased changes can be found [here](https://github.com/treee111/wahooMapsCreator/compare/v3.0.0...HEAD).
+A list of unreleased changes can be found [here](https://github.com/treee111/wahooMapsCreator/compare/v3.1.0...HEAD).
+
+<a name="3.1.0"></a>
+## [3.1.0] - 2022-11-14
+### Features
+- correctly integrate tunnels to maps in macOS (in the same way as in Windows) ([#165](https://github.com/treee111/wahooMapsCreator/issues/165)) [`7d5520b`](https://github.com/treee111/wahooMapsCreator/commit/7d5520b4c1fc2597e83bb6a1913053b2fdf874a4)
+- possibility to verbose output with -v in CLI and GUI [`9075b43`](https://github.com/treee111/wahooMapsCreator/commit/9075b43689bdd7c034e3c221b3c0c10e47c2012a)
+- save timestamp of last-changed of raw map files being processed [`a29fd99`](https://github.com/treee111/wahooMapsCreator/commit/a29fd990e0fb00dd8ed34d20ae1efede1ff6f437)
+- Read tag-wahoo.xml and tags-to-keep.json from user directory first (from python module as fallback) ([#170](https://github.com/treee111/wahooMapsCreator/issues/170)) [`fd23b8a`](https://github.com/treee111/wahooMapsCreator/commit/fd23b8a6d558c2c6e9611803b18e16a8854117a6)
+
+### Bug Fixes
+- write tags per OS & include name-tags [`4ec269e`](https://github.com/treee111/wahooMapsCreator/commit/4ec269e3555c246679c849c0cf4d885465d17cd5)
+- Enable canary islands processing. Mapping in constants.py and movement of .json content ([#169](https://github.com/treee111/wahooMapsCreator/issues/169)) [`88a51ec`](https://github.com/treee111/wahooMapsCreator/commit/88a51ec0cdb1f2363fd0f7994b9c1e2dd64f412c)
+- Enable ukraine processing. Mapping in constants.py [`a4f94ea`](https://github.com/treee111/wahooMapsCreator/commit/a4f94eabb3f43e7b4f75f177883336eebb904c33)
+- harmonize logging of "merging splitted tiles" with the rest [`5ba0c22`](https://github.com/treee111/wahooMapsCreator/commit/5ba0c223d0890343f084ab1bc9783e16042a1c88)
+- correctly compare the version of last run. fix for [#161](https://github.com/treee111/wahooMapsCreator/issues/161) [`d9893d7`](https://github.com/treee111/wahooMapsCreator/commit/d9893d76a9462deef136a47eca08c816cdc85035)
+
+### Development/Infrastructure/Test/CI
+- remove copying and remove deprecated files [#148](https://github.com/treee111/wahooMapsCreator/issues/148) [`3472a25`](https://github.com/treee111/wahooMapsCreator/commit/3472a253e2f24b083f8a465fc3e9cb5cce24927c)
+- remove argument `-om` [`60e0019`](https://github.com/treee111/wahooMapsCreator/commit/60e00195bd08de7aa4bdadc6d946f3e0dc4fa6f2)
+- don't publish wahooMapsCreator as .zip and don't mention in docs [`24bfef9`](https://github.com/treee111/wahooMapsCreator/commit/24bfef93e63552bd4474f8049ce4eb0c80aac912)
+- Fix unittests & update unittest files after changes of release v3.0.0 ([#164](https://github.com/treee111/wahooMapsCreator/issues/164)) [`b473a97`](https://github.com/treee111/wahooMapsCreator/commit/b473a975deb62c7bcea55ee2a5b6e6fc75794d78)
+
+### BREAKING CHANGE
+
+Users who downloaded the .zip files from the release page should migrate to the PyPI version and update the python module accordingly.
+
 
 <a name="3.0.0"></a>
 ## [3.0.0] - 2022-11-01
@@ -329,6 +355,7 @@ wahooMapsCreator can now be used much quicker and easier!
     - Windows:    `tooling_windows/Windows-Wahoo-Map-Creator-Osmosis/wahoo-map-creator-osmosis.py`
 
 
+[3.1.0]: https://github.com/treee111/wahooMapsCreator/compare/v3.0.0...v3.1.0
 [3.0.0]: https://github.com/treee111/wahooMapsCreator/compare/v2.0.2...v3.0.0
 [2.0.2]: https://github.com/treee111/wahooMapsCreator/compare/v2.0.1...v2.0.2
 [2.0.1]: https://github.com/treee111/wahooMapsCreator/compare/v2.0.0...v2.0.1
