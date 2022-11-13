@@ -1,7 +1,7 @@
 # Usage of wahooMapsCreator <!-- omit in toc -->
 #### Table of contents <!-- omit in toc -->
 - [Usage of wahooMapsCreator](#usage-of-wahoomapscreator)
-    - [Always activate environment first](#always-activate-environment-first)
+  - [Always activate environment first](#always-activate-environment-first)
   - [Run wahooMapsCreator for your country](#run-wahoomapscreator-for-your-country)
   - [GUI (Graphical User Interface)](#gui-graphical-user-interface)
   - [CLI (Command Line Interface)](#cli-command-line-interface)
@@ -9,6 +9,7 @@
     - [Main arguments](#main-arguments)
     - [Examples](#examples)
   - [POIs - Points of Interest](#pois---points-of-interest)
+  - [User specific configuration](#user-specific-configuration)
 
 # Usage of wahooMapsCreator
 wahooMapsCreator can be used in two different ways:
@@ -17,7 +18,10 @@ wahooMapsCreator can be used in two different ways:
 
 Both ways support the same arguments to be used for the map-creation process. You can choose the arguments via GUI or as [CLI-arguments](#advanced-cli-usage).
 
-### Always activate environment first
+## Always activate environment first
+```
+conda activate gdal-user
+```
 
 ## Run wahooMapsCreator for your country
 It might be a good idea to run wahooMapsCreator first for a small country e.g. Malta to check if everything is running fine.
@@ -79,3 +83,14 @@ Actually, wahooMapsCreator includes fuel stations, backeries, cafes and railway 
 3. Activate VTM rendering if needed
 - [see here](COPY_TO_WAHOO.md#activate-vtm-rendering)
 - see also: https://github.com/treee111/wahooMapsCreator/wiki/Enable-hidden-features
+
+## User specific configuration
+You can control popular configuration with your own files in the home directory `wahooMapsCreatorData/_config`.
+
+Actually, it is possible to control which OSM tags will stay on the map while filtering tags ([documentation](TAGS_ON_MAP_AND_DEVICE.md#file-tags-to-keepjson)) with `~/wahooMapsCreatorData/_config/tags-to-keep.json` . Furthermore, you can control which and how OSM tags will be included in the generated maps with tag-wahoo .xml ([documentation](TAGS_ON_MAP_AND_DEVICE.md#file-tag-wahooxml)) in directory `~/wahooMapsCreatorData/_config/tag_wahoo_adjusted/` and specify the file via `-tag` argument or via GUI.
+
+You can start the tool with `python -m wahoomc.init` to copy the files from the python module to the user directory. You'll have a structure and can change the files to your needs.
+
+The tool searches for configuration in your home directory first and secondly (fallback) in the python installation. If a file is in both directories with the same name, the file of the user directory will be used.
+
+The structure of `~/wahooMapsCreatorData/_config/tag_wahoo_adjusted/` is analogue to the one in the repo: `wahooMapsCreatorwahoomc/resources`.

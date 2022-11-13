@@ -12,18 +12,15 @@
         <a href="#sponsors" alt="Contributions welcome">
             <img src="https://img.shields.io/badge/contributions-welcome-orange.svg" /></a>
     </p>
-    <h1>Wahoo Maps Creator</h1>
+    <h1>wahooMapsCreator</h1>
 </div>
-A tool to create up-to-date maps for your Wahoo BOLTv1 and BOLTv2, ROAM, ROAMv2 and ELEMNT!
+wahooMapsCreator is a tool to create up-to-date maps for your Wahoo BOLTv1 and BOLTv2, ROAM, ROAMv2 and ELEMNT!
 
 It runs on Windows, macOS as well as on Linux!
 
-## Basic Overview
-WahooMapsCreator is a tool to create maps based on the latest OSM data for your Wahoo devices. You can generate maps for the countries you like and you can control which OSM-tags are included.
+You can generate maps for the countries you like and you can control which OSM-tags are included based on latest OSM data.
 
 The maps of your device may be old because Wahoo did not release a newer version in the last years.
-
-OSM maps are constantly updated. With this program, the updated maps can be used on our Wahoo.
 
 # Get it running
 The instructions are intended to be suitable for beginners.
@@ -32,6 +29,9 @@ If anything is unclear or seams wrong, write an [:pencil2: issue](https://github
 
 ## Brand-New: Get POIs displayed on your Wahoo!
 [:cookie: here](docs/USAGE.md#pois---points-of-interest)
+
+## Brand-New: Control OSM tags to be included in your maps!
+[:wrench: here](docs/USAGE.md#user-specific-configuration)
 
 ## Download and Install required programs
 Using Anaconda to setup a virtual Python environment is the fastest way to get wahooMapsCreator running!
