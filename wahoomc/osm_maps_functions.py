@@ -4,6 +4,7 @@ functions and object for managing OSM maps
 #!/usr/bin/python
 
 # import official python packages
+from datetime import datetime
 import glob
 import multiprocessing
 import os
@@ -101,6 +102,15 @@ def run_subprocess_and_log_output(cmd, error_message, cwd=""):
     if error_message and process.wait() != 0:  # 0 means success
         log.error(error_message)
         sys.exit()
+
+
+def get_timestamp_last_changed(file_path):
+    """
+    returns the timestamp of the last-changed datetime of the given file
+    """
+    chg_time = os.path.getmtime(file_path)
+
+    return datetime.fromtimestamp(chg_time).isoformat()
 
 
 class OsmData():  # pylint: disable=too-few-public-methods
@@ -332,7 +342,8 @@ class OsmMaps:
                 out_file_o5m = os.path.join(country_dir, 'outFile.o5m')
                 # only create o5m file if not there already or force processing (no user input possible)
                 # --> speeds up processing if one only wants to test tags / POIs
-                if not os.path.isfile(out_file_o5m) or self.o_osm_data.force_processing is True:
+                if not os.path.isfile(out_file_o5m) or self.o_osm_data.force_processing is True \
+                        or self.last_changed_is_identical_to_last_run(key) is False:
                     log.info('+ Converting map of %s to o5m format', key)
                     cmd = [self.osmconvert_path]
                     cmd.extend(['-v', '--hash-memory=2500', '--complete-ways',
@@ -351,7 +362,8 @@ class OsmMaps:
                 # - force processing is set (this is also when new map files were dowwnloaded)
                 # - the defined TAGS_TO_KEEP_UNIVERSAL constants have changed are changed (user input or new release)
                 if not os.path.isfile(out_file_o5m_filtered_win) or not os.path.isfile(out_file_o5m_filtered_names_win) \
-                        or self.o_osm_data.force_processing is True or self.tags_are_identical_to_last_run(key) is False:
+                        or self.o_osm_data.force_processing is True or self.tags_are_identical_to_last_run(key) is False \
+                        or self.last_changed_is_identical_to_last_run(key) is False:
                     log.info(
                         '+ Filtering unwanted map objects out of map of %s', key)
                     cmd = [get_tooling_win_path(['osmfilter'])]
@@ -391,7 +403,8 @@ class OsmMaps:
                 # - force processing is set (this is also when new map files were dowwnloaded)
                 # - the defined TAGS_TO_KEEP_UNIVERSAL constants have changed are changed (user input or new release)
                 if not os.path.isfile(out_file_pbf_filtered_mac) or not os.path.isfile(out_file_pbf_filtered_names_mac) \
-                        or self.o_osm_data.force_processing is True or self.tags_are_identical_to_last_run(key) is False:
+                        or self.o_osm_data.force_processing is True or self.tags_are_identical_to_last_run(key) is False \
+                        or self.last_changed_is_identical_to_last_run(key) is False:
                     log.info(
                         '+ Filtering unwanted map objects out of map of %s', key)
 
@@ -858,6 +871,7 @@ class OsmMaps:
         # Data to be written
         configuration = {
             "version_last_run": VERSION,
+            "changed_ts_map_last_run": get_timestamp_last_changed(self.o_osm_data.border_countries[country]['map_file']),
             "tags_last_run": translate_tags_to_keep(sys_platform=platform.system()),
             "name_tags_last_run": translate_tags_to_keep(name_tags=True, sys_platform=platform.system())
         }
@@ -881,3 +895,19 @@ class OsmMaps:
             tags_are_identical = False
 
         return tags_are_identical
+
+    def last_changed_is_identical_to_last_run(self, country):
+        """
+        compare tags of this run with used tags from last run stored in _tiles/{country} directory
+        """
+        last_changed_is_identical = True
+
+        try:
+            country_config = read_json_file(os.path.join(
+                USER_OUTPUT_DIR, country, ".config.json"))
+            if not country_config["changed_ts_map_last_run"] == get_timestamp_last_changed(self.o_osm_data.border_countries[country]['map_file']):
+                last_changed_is_identical = False
+        except (FileNotFoundError, KeyError):
+            last_changed_is_identical = False
+
+        return last_changed_is_identical
