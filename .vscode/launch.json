@@ -150,6 +150,14 @@
             ]
         },
         {
+            "name": "cli.init",
+            "type": "python",
+            "request": "launch",
+            "module": "wahoomc.init",
+            "console": "integratedTerminal",
+            "args": []
+        },
+        {
             "name": "x/y: 133/88 (germany&france)",
             "type": "python",
             "request": "launch",

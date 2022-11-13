@@ -114,6 +114,25 @@ def process_call_of_the_tool():
     return o_input_data
 
 
+def cli_init():
+    """
+    Provides cli for initialization of user directory
+    """
+
+    parser = argparse.ArgumentParser(
+        description='Copy config files to user directory')
+    parser.add_argument('-v', '--verbose', action='store_true',
+                        help="output debug logger messages")
+
+    args = parser.parse_args()
+
+    # cli processing
+    o_input_data = InputData()
+    o_input_data.verbose = args.verbose
+
+    return o_input_data
+
+
 def create_checkbox(self, default_value, description, row):
     """
     this is a reuse function for creating checkboxes.

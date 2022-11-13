@@ -47,6 +47,9 @@ def move_content(src_folder_name, dst_path):
     """
     copy files from source directory of to destination directory
     delete source directory afterwards
+
+    similar function to copy_or_move_files_and_folder but without user-request when overwriting
+    and only support for directories
     """
     # build path to old folder on the same level as wahooMapsCreator
     par_dir = os.path.abspath(os.path.join(os.path.join(
@@ -200,3 +203,69 @@ def delete_o5m_pbf_files_in_folder(folder):
                 os.remove(os.path.join(folder, file))
             except OSError:
                 pass
+
+
+def copy_or_move_files_and_folder(from_path, to_path, delete_from_dir=False):
+    """
+    copy content from source directory to destination directory
+    optionally delete source directory afterwards
+
+    similar function to move_content but with user-request when overwriting and support for files
+    """
+    # check if from path/file exists at all
+    if os.path.exists(from_path):
+
+        # given path is a directory
+        if os.path.isdir(from_path):
+            # first create the to-directory if not already there
+            os.makedirs(to_path, exist_ok=True)
+
+            for item in os.listdir(from_path):
+                from_item = os.path.join(from_path, item)
+                to_item = os.path.join(to_path, item)
+
+                # copy directory
+                if os.path.isdir(from_item):
+                    copy_directory_w_user_input(from_item, to_item)
+
+                # copy file
+                else:
+                    copy_file_w_user_input(from_item, to_item)
+
+        # given path is a file
+        else:
+            copy_file_w_user_input(from_path, to_path)
+
+        # directory
+        if delete_from_dir:
+            shutil.rmtree(from_path)
+
+
+def copy_directory_w_user_input(from_item, to_item):
+    """
+    copy content from source directory to destination directory
+    """
+    if not os.path.isdir(to_item):
+        shutil.copytree(from_item, to_item)
+    else:
+        val = input(f"{to_item} exists already. Overwrite? (y/n):")
+        if val == 'y':
+            shutil.copytree(from_item, to_item)
+            log.info('! %s overwritten', to_item)
+        else:
+            log.debug('! %s not copied, exists already.', to_item)
+
+
+def copy_file_w_user_input(from_item, to_item):
+    """
+    copy source file to destination file
+    """
+    if not os.path.isfile(to_item):
+        shutil.copy2(from_item, to_item)
+    else:
+        val = input(f"{to_item} exists already. Overwrite? (y/n):")
+        if val == 'y':
+            shutil.copy2(from_item, to_item)
+            log.info('! %s overwritten', to_item)
+        else:
+            log.debug('! %s not copied, exists already.', to_item)

@@ -12,12 +12,18 @@ import os
 from wahoomc import constants
 from wahoomc.constants import RESOURCES_DIR
 from wahoomc.constants import TOOLING_WIN_DIR
+from wahoomc.constants import USER_CONFIG_DIR
+from wahoomc.file_directory_functions import read_json_file_generic
 
 log = logging.getLogger('main-logger')
 
 
 class TagWahooXmlNotFoundError(Exception):
     """Raised when the specified tag-wahoo xml file does not exist"""
+
+
+class TagsToKeepNotFoundError(Exception):
+    """Raised when the specified tags to keep .json file does not exist"""
 
 
 def get_region_of_country(county):
@@ -98,7 +104,7 @@ def translate_country_input_to_geofabrik(county):
     return c_translated
 
 
-def translate_tags_to_keep(name_tags=False, sys_platform=''):
+def translate_tags_to_keep(name_tags=False, sys_platform='', use_repo=False):
     """
     translates the given tags to format of the operating system.
     """
@@ -110,10 +116,27 @@ def translate_tags_to_keep(name_tags=False, sys_platform=''):
 
     tags_modif = []
 
-    if not name_tags:
-        universal_tags = constants.TAGS_TO_KEEP_UNIVERSAL
+    # read tags-to-keep .json from user-dir in favor of python installation
+    # evaluate path first: user-dir in favor of PyPI installation
+    if not use_repo:
+        for path in get_absolute_dir_user_or_repo('', file='tags-to-keep.json'):
+            if os.path.exists(path):
+                break
+    # force using file from repo - used in unittests for equal output
     else:
-        universal_tags = constants.NAME_TAGS_TO_KEEP_UNIVERSAL
+        path = get_absolute_dir_user_or_repo(
+            '', file='tags-to-keep.json')[1]
+
+    # read the tags from the evaluated path above
+    tags_from_json = read_json_file_generic(path)
+
+    if not tags_from_json:
+        raise TagsToKeepNotFoundError
+
+    if not name_tags:
+        universal_tags = tags_from_json['TAGS_TO_KEEP_UNIVERSAL']
+    else:
+        universal_tags = tags_from_json['NAME_TAGS_TO_KEEP_UNIVERSAL']
 
     for tag, value in universal_tags.items():
         to_append = transl_tag_value(sys_platform, separator, tag, value)
@@ -165,12 +188,34 @@ def get_tooling_win_path(path_in_tooling_win):
 def get_tag_wahoo_xml_path(tag_wahoo_xml):
     """
     return path to tag-wahoo xml file if the file exists
+    - from the user directory "USER_WAHOO_MC/_config/tag_wahoo_adjusted/tag_wahoo_xml"
+    - 2ndly from the PyPI installation: "RESOURCES_DIR/tag_wahoo_adjusted/tag_wahoo_xml"
     """
 
-    path_tag_wahoo_xml = os.path.join(
-        RESOURCES_DIR, "tag_wahoo_adjusted", tag_wahoo_xml)
-
-    if os.path.exists(path_tag_wahoo_xml):
-        return path_tag_wahoo_xml
+    for path in get_absolute_dir_user_or_repo("tag_wahoo_adjusted", tag_wahoo_xml):
+        if os.path.exists(path):
+            return path
 
     raise TagWahooXmlNotFoundError
+
+
+def get_absolute_dir_user_or_repo(folder, file=''):
+    """
+    return the absolute path to the folder (and file) in this priorization
+    1. user dir
+    2. wahoomc package dir
+
+    Priorization is important later on because user- should always be used in favor of repo-dir!
+    """
+    absolute_paths = []
+    if file:
+        absolute_paths.append(os.path.join(
+            USER_CONFIG_DIR, folder, file))
+        absolute_paths.append(os.path.join(
+            RESOURCES_DIR, folder, file))
+    else:
+        absolute_paths.append(os.path.join(USER_CONFIG_DIR, folder))
+        absolute_paths.append(os.path.join(
+            RESOURCES_DIR, folder))
+
+    return absolute_paths
