@@ -4,7 +4,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-A list of unreleased changes can be found [here](https://github.com/treee111/wahooMapsCreator/compare/v3.1.0...HEAD).
+A list of unreleased changes can be found [here](https://github.com/treee111/wahooMapsCreator/compare/v3.1.1...HEAD).
+
+<a name="3.1.1"></a>
+## [3.1.1] - 2022-11-15
+### Bug Fixes
+- publish device themes as zip [`a5afd6e`](https://github.com/treee111/wahooMapsCreator/commit/a5afd6e0edd52de741e9a1678af799f1a331a1f0)
+- Include wahoomc.init module in published PyPI version ([#172](https://github.com/treee111/wahooMapsCreator/issues/172)) [`b4da480`](https://github.com/treee111/wahooMapsCreator/commit/b4da480d7f82b2a2dc2b839157568a025778a05d)
+
 
 <a name="3.1.0"></a>
 ## [3.1.0] - 2022-11-14
@@ -355,6 +362,7 @@ wahooMapsCreator can now be used much quicker and easier!
     - Windows:    `tooling_windows/Windows-Wahoo-Map-Creator-Osmosis/wahoo-map-creator-osmosis.py`
 
 
+[3.1.1]: https://github.com/treee111/wahooMapsCreator/compare/v3.1.0...v3.1.1
 [3.1.0]: https://github.com/treee111/wahooMapsCreator/compare/v3.0.0...v3.1.0
 [3.0.0]: https://github.com/treee111/wahooMapsCreator/compare/v2.0.2...v3.0.0
 [2.0.2]: https://github.com/treee111/wahooMapsCreator/compare/v2.0.1...v2.0.2
