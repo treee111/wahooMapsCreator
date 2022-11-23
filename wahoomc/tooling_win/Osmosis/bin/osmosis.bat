@@ -1,5 +1,8 @@
 @ECHO OFF
 
+REM # set the max. memory to be used to 3GB
+set JAVACMD_OPTIONS=""-server -Xmx3G""
+
 REM This is an equivalent Windows batch file to complement the unix shell script
 REM Corresponding lines from the shell script are printed before the matching batch file commands
 
