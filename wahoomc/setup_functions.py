@@ -11,6 +11,7 @@ import shutil
 from pathlib import Path
 import sys
 import pkg_resources
+import requests
 
 # import custom python packages
 from wahoomc.file_directory_functions import move_content, write_json_file_generic, \
@@ -191,9 +192,26 @@ def copy_jsons_from_repo_to_user(folder, file=''):
     log.debug('# Copy "%s" files from repo to directory if not existing: %s',
               folder, absolute_paths[0])
 
-    # copy files of gitcommon package directory to user directory
+    # copy files of wahoomc package directory to user directory
     copy_or_move_files_and_folder(
         absolute_paths[1], absolute_paths[0], delete_from_dir=False)
 
-    log.info('# Copy "%s" files from repo or gitcommon to directory if not existing: %s : OK',
+    log.info('# Copy "%s" files from wahoomc installation to directory if not existing: %s : OK',
              folder, absolute_paths[0])
+
+
+def check_installed_version_against_latest_pypi():
+    """
+    get latest wahoomc version available on PyPI and compare with locally installed version
+    """
+    # get latest wahoomc version available on PyPI
+    response = requests.get('https://pypi.org/pypi/wahoomc/json', timeout=15)
+    latest_version = response.json()['info']['version']
+
+    # compare installed version against latest and issue a info if a new version is available
+    if pkg_resources.parse_version(VERSION) < pkg_resources.parse_version(latest_version):
+        log.info('# A new version of wahoomc is available: "%s". You have installed version "%s". \
+                \nYou can upgrade wahoomc with "pip install wahoomc --upgrade" \
+                \nRelease notes are here: https://github.com/treee111/wahooMapsCreator/releases/latest \
+                \n',
+                 latest_version, VERSION)
