@@ -205,8 +205,12 @@ def check_installed_version_against_latest_pypi():
     get latest wahoomc version available on PyPI and compare with locally installed version
     """
     # get latest wahoomc version available on PyPI
-    response = requests.get('https://pypi.org/pypi/wahoomc/json', timeout=15)
-    latest_version = response.json()['info']['version']
+    try:
+        response = requests.get(
+            'https://pypi.org/pypi/wahoomc/json', timeout=3)
+        latest_version = response.json()['info']['version']
+    except requests.exceptions.ConnectTimeout:
+        return
 
     # compare installed version against latest and issue a info if a new version is available
     if pkg_resources.parse_version(VERSION) < pkg_resources.parse_version(latest_version):
