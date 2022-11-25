@@ -22,6 +22,7 @@ from wahoomc.constants import USER_MAPS_DIR
 from wahoomc.constants import LAND_POLYGONS_PATH
 from wahoomc.constants import GEOFABRIK_PATH
 from wahoomc.constants import OSMOSIS_WIN_FILE_PATH
+from wahoomc.constants import USER_TOOLING_WIN_DIR
 
 log = logging.getLogger('main-logger')
 
@@ -48,14 +49,16 @@ def download_file(target_filepath, url, is_zip, target_dir=""):
         dl_file_path = os.path.join(USER_DL_DIR, last_part)
         # download URL to file
         download_url_to_file(url, dl_file_path)
-        # unpack it
+
         # if a target directory is given --> extract into that folder
         if target_dir:
-            unzip(dl_file_path, os.path.join(USER_DL_DIR, target_dir))
-        # no target directory is given --> extract as is
+            target_path = os.path.join(USER_DL_DIR, target_dir)
         else:
-            unzip(dl_file_path, USER_DL_DIR)
-        # delete .zip file
+            target_path = USER_DL_DIR
+
+        # unpack it
+        unzip(dl_file_path, target_path)
+
         os.remove(dl_file_path)
     else:
         # no zipping --> directly download to given target filepath
@@ -98,14 +101,23 @@ def download_tooling_win():
         if not os.path.isfile(OSMOSIS_WIN_FILE_PATH):
             log.info('# Need to download Osmosis application for Windows')
             download_file(OSMOSIS_WIN_FILE_PATH,
-                          'https://github.com/openstreetmap/osmosis/releases/download/0.48.3/osmosis-0.48.3.zip', True, os.path.join('tooling_win', 'Osmosis'))
+                          'https://github.com/openstreetmap/osmosis/releases/download/0.48.3/osmosis-0.48.3.zip',
+                          True, os.path.join('tooling_win', 'Osmosis'))
+
+        new_p = os.path.join(USER_TOOLING_WIN_DIR,
+                             'Osmosis', 'lib', 'default', 'mapsforge-map-writer-0.18.0-jar-with-dependencies.jar')
+        if not os.path.isfile(new_p):
+            download_file(new_p,
+                          'https://search.maven.org/remotecontent?filepath=org/mapsforge/mapsforge-map-writer/0.18.0/mapsforge-map-writer-0.18.0-jar-with-dependencies.jar',
+                          False)
 
         osmconvert_path = get_tooling_win_path_user(['osmconvert.exe'])
         if not os.path.isfile(osmconvert_path):
             log.info('# Need to download osmconvert application for Windows')
 
             download_file(osmconvert_path,
-                          f'http://m.m.i24.cc/{os.path.split(osmconvert_path)[1]}', False, os.path.join('tooling_win'))
+                          f'http://m.m.i24.cc/{os.path.split(osmconvert_path)[1]}',
+                          False, os.path.join('tooling_win'))
 
         if not os.path.isfile(get_tooling_win_path_user(['osmfilter.exe'])):
             log.info('# Need to download osmfilter application for Windows')
@@ -168,7 +180,8 @@ class Downloader:
         """
         if 'land_polygons' in self.need_to_dl:
             download_file(LAND_POLYGONS_PATH,
-                          'https://osmdata.openstreetmap.de/download/land-polygons-split-4326.zip', True)
+                          'https://osmdata.openstreetmap.de/download/land-polygons-split-4326.zip',
+                          True)
 
         # log.info('+ download land_polygons.shp file: OK')
 
