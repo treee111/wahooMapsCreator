@@ -33,11 +33,11 @@ def run(run_level):
 
     # initializing work directories needs to be the first call,
     # because other setup stuff relies on that (breaking changes)
+    check_installed_version_against_latest_pypi()
     initialize_work_directories()
     adjustments_due_to_breaking_changes()
     download_tooling_win()
     check_installation_of_required_programs()
-    check_installed_version_against_latest_pypi()
 
     if run_level == 'init':
         o_input_data = cli_init()
