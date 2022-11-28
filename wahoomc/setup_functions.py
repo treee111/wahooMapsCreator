@@ -97,7 +97,7 @@ def check_installation_of_required_programs():
             sys.exit(
                 f"Osmosis is not available. {text_to_docu}")
 
-        if not os.path.exists(get_tooling_win_path_user(['osmconvert.exe'])):
+        if not os.path.exists(get_tooling_win_path(['osmconvert.exe'])):
             sys.exit(
                 f"osmconvert is not available. {text_to_docu}")
 

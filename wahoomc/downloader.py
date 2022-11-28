@@ -110,13 +110,6 @@ def download_tooling_win():
             download_file(new_p,
                           'https://search.maven.org/remotecontent?filepath=org/mapsforge/mapsforge-map-writer/0.18.0/mapsforge-map-writer-0.18.0-jar-with-dependencies.jar')
 
-        osmconvert_path = get_tooling_win_path_user(['osmconvert.exe'])
-        if not os.path.isfile(osmconvert_path):
-            log.info('# Need to download osmconvert application for Windows')
-
-            download_file(osmconvert_path,
-                          f'http://m.m.i24.cc/{os.path.split(osmconvert_path)[1]}')
-
         if not os.path.isfile(get_tooling_win_path_user(['osmfilter.exe'])):
             log.info('# Need to download osmfilter application for Windows')
 

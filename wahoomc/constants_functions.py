@@ -184,6 +184,13 @@ def get_tooling_win_path(path_in_tooling_win):
     """
     return path to a tooling in the tooling_win directory and the given path
     """
+    # special for osmconvert: handle 32 and 64 bit here
+    if path_in_tooling_win[0] == 'osmconvert' or path_in_tooling_win[0] == 'osmconvert.exe':
+        if 8 * struct.calcsize("P") == 32:
+            return os.path.join(TOOLING_WIN_DIR, path_in_tooling_win[0])
+        # 64 bit: replace with 64 in the end
+        return os.path.join(TOOLING_WIN_DIR, path_in_tooling_win[0].replace("osmconvert", "osmconvert64-0.8.8p"))
+
     return os.path.join(TOOLING_WIN_DIR, *path_in_tooling_win)
 
 

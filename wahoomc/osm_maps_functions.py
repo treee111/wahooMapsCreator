@@ -306,7 +306,7 @@ class OsmMaps:
 
     def __init__(self, o_osm_data):
         self.o_osm_data = o_osm_data
-        self.osmconvert_path = get_tooling_win_path_user(['osmconvert'])
+        self.osmconvert_path = get_tooling_win_path(['osmconvert'])
 
         create_empty_directories(
             USER_OUTPUT_DIR, self.o_osm_data.tiles, self.o_osm_data.border_countries)
