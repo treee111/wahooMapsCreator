@@ -167,7 +167,7 @@ class TestDownloader(unittest.TestCase):
             download_tooling_win()
 
             self.assertTrue(
-                os.path.exists(get_tooling_win_path_user(['osmconvert.exe'])))
+                os.path.exists(get_tooling_win_path_user(['osmfilter.exe'])))
 
 
 if __name__ == '__main__':
