@@ -210,7 +210,8 @@ def check_installed_version_against_latest_pypi():
     # compare installed version against latest and issue a info if a new version is available
     if latest_version \
             and pkg_resources.parse_version(VERSION) < pkg_resources.parse_version(latest_version):
-        log.info('# A new version of wahoomc is available: "%s". You have installed version "%s". \
+        log.info('\n\nUpdate available! \
+                \nA new version of wahoomc is available: "%s". You have installed version "%s". \
                 \nYou can upgrade wahoomc with "pip install wahoomc --upgrade" \
                 \nRelease notes are here: https://github.com/treee111/wahooMapsCreator/releases/latest \
                 \n',
