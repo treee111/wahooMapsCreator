@@ -11,10 +11,10 @@ import sys
 import time
 import logging
 import platform
+import zipfile
 import requests
 
 # import custom python packages
-from wahoomc.file_directory_functions import write_to_file, unzip
 from wahoomc.constants_functions import translate_country_input_to_geofabrik, \
     get_geofabrik_region_of_country, get_tooling_win_path
 
@@ -144,6 +144,23 @@ def get_latest_pypi_version():
         return response.json()['info']['version']
     except (requests.ConnectionError, requests.Timeout):
         return None
+
+
+def write_to_file(file_path, request):
+    """
+    write content of request into given file path
+    """
+    with open(file_path, mode='wb') as file_handle:
+        for chunk in request.iter_content(chunk_size=1024*100):
+            file_handle.write(chunk)
+
+
+def unzip(source_filename, dest_dir):
+    """
+    unzip the given file into the given directory
+    """
+    with zipfile.ZipFile(source_filename, 'r') as zip_ref:
+        zip_ref.extractall(dest_dir)
 
 
 class Downloader:
