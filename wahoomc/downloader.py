@@ -10,17 +10,20 @@ import os.path
 import sys
 import time
 import logging
+import platform
 import requests
 
 # import custom python packages
 from wahoomc.file_directory_functions import write_to_file, unzip
 from wahoomc.constants_functions import translate_country_input_to_geofabrik, \
-    get_geofabrik_region_of_country
+    get_geofabrik_region_of_country, get_tooling_win_path
 
 from wahoomc.constants import USER_DL_DIR
 from wahoomc.constants import USER_MAPS_DIR
 from wahoomc.constants import LAND_POLYGONS_PATH
 from wahoomc.constants import GEOFABRIK_PATH
+from wahoomc.constants import OSMOSIS_WIN_FILE_PATH
+from wahoomc.constants import USER_TOOLING_WIN_DIR
 
 log = logging.getLogger('main-logger')
 
@@ -34,22 +37,29 @@ def older_than_x_days(file_creation_timestamp, max_days_old):
     return bool(file_creation_timestamp < to_old_timestamp)
 
 
-def download_file(target_filepath, url, is_zip):
+def download_file(target_filepath, url, target_dir=""):
     """
     download given file and eventually unzip it
     """
     logging_filename = target_filepath.split(os.sep)[-1]
     log.info('-' * 80)
     log.info('# Downloading %s file', logging_filename)
-    if is_zip:
+    if url.split('.')[-1] == 'zip':
         # build target-filepath based on last element of URL
         last_part = url.rsplit('/', 1)[-1]
         dl_file_path = os.path.join(USER_DL_DIR, last_part)
         # download URL to file
         download_url_to_file(url, dl_file_path)
-        # unpack it - should work on macOS and Windows
-        unzip(dl_file_path, USER_DL_DIR)
-        # delete .zip file
+
+        # if a target directory is given --> extract into that folder
+        if target_dir:
+            target_path = target_dir
+        else:
+            target_path = USER_DL_DIR
+
+        # unpack it
+        unzip(dl_file_path, target_path)
+
         os.remove(dl_file_path)
     else:
         # no zipping --> directly download to given target filepath
@@ -97,6 +107,45 @@ def download_url_to_file(url, map_file_path):
     write_to_file(map_file_path, request_geofabrik)
 
 
+def download_tooling_win():
+    """
+    check for Windows tooling and download if not here already
+    this is done to bring down the filesize of the python module
+    """
+    # Windows
+    if platform.system() == "Windows":
+        if not os.path.isfile(OSMOSIS_WIN_FILE_PATH):
+            log.info('# Need to download Osmosis application for Windows')
+            download_file(OSMOSIS_WIN_FILE_PATH,
+                          'https://github.com/openstreetmap/osmosis/releases/download/0.48.3/osmosis-0.48.3.zip',
+                          get_tooling_win_path('Osmosis', in_user_dir=True))
+
+        mapwriter_plugin_path = os.path.join(USER_TOOLING_WIN_DIR,
+                                             'Osmosis', 'lib', 'default', 'mapsforge-map-writer-0.18.0-jar-with-dependencies.jar')
+        if not os.path.isfile(mapwriter_plugin_path):
+            log.info('# Need to download Osmosis mapwriter plugin for Windows')
+            download_file(mapwriter_plugin_path,
+                          'https://search.maven.org/remotecontent?filepath=org/mapsforge/mapsforge-map-writer/0.18.0/mapsforge-map-writer-0.18.0-jar-with-dependencies.jar')
+
+        if not os.path.isfile(get_tooling_win_path('osmfilter.exe', in_user_dir=True)):
+            log.info('# Need to download osmfilter application for Windows')
+
+            download_file(get_tooling_win_path('osmfilter.exe', in_user_dir=True),
+                          'http://m.m.i24.cc/osmfilter.exe')
+
+
+def get_latest_pypi_version():
+    """
+    get latest wahoomc version available on PyPI
+    """
+    try:
+        response = requests.get(
+            'https://pypi.org/pypi/wahoomc/json', timeout=1)
+        return response.json()['info']['version']
+    except (requests.ConnectionError, requests.Timeout):
+        return None
+
+
 class Downloader:
     """
     This is the class to check and download maps / artifacts"
@@ -130,7 +179,7 @@ class Downloader:
         download geofabrik file
         """
         download_file(GEOFABRIK_PATH,
-                      'https://download.geofabrik.de/index-v1.json', False)
+                      'https://download.geofabrik.de/index-v1.json')
 
         log.info('+ download geofabrik.json file: OK')
 
@@ -151,7 +200,7 @@ class Downloader:
         """
         if 'land_polygons' in self.need_to_dl:
             download_file(LAND_POLYGONS_PATH,
-                          'https://osmdata.openstreetmap.de/download/land-polygons-split-4326.zip', True)
+                          'https://osmdata.openstreetmap.de/download/land-polygons-split-4326.zip')
 
         # log.info('+ download land_polygons.shp file: OK')
 
@@ -239,7 +288,7 @@ class Downloader:
             try:
                 if item['download'] is True:
                     map_file_path, url = get_osm_pbf_filepath_url(country)
-                    download_file(map_file_path, url, False)
+                    download_file(map_file_path, url)
                     self.border_countries[country] = {
                         'map_file': map_file_path}
             except KeyError:

@@ -16,6 +16,7 @@ import pkg_resources
 from wahoomc.file_directory_functions import move_content, write_json_file_generic, \
     read_json_file_generic, delete_o5m_pbf_files_in_folder, copy_or_move_files_and_folder
 from wahoomc.constants_functions import get_tooling_win_path, get_absolute_dir_user_or_repo
+from wahoomc.downloader import get_latest_pypi_version
 
 from wahoomc.constants import USER_WAHOO_MC
 from wahoomc.constants import USER_DL_DIR
@@ -23,6 +24,7 @@ from wahoomc.constants import USER_MAPS_DIR
 from wahoomc.constants import USER_OUTPUT_DIR
 from wahoomc.constants import USER_CONFIG_DIR
 from wahoomc.constants import VERSION
+from wahoomc.constants import USER_TOOLING_WIN_DIR
 
 log = logging.getLogger('main-logger')
 
@@ -39,6 +41,9 @@ def initialize_work_directories():
     os.makedirs(USER_OUTPUT_DIR, exist_ok=True)
     os.makedirs(USER_CONFIG_DIR, exist_ok=True)
 
+    if platform.system() == "Windows":
+        os.makedirs(USER_TOOLING_WIN_DIR, exist_ok=True)
+
 
 def move_old_content_into_new_dirs():
     """
@@ -49,10 +54,6 @@ def move_old_content_into_new_dirs():
     This coding is only valid/needed when using the cloned version or .zip version.
     If working with a installed version via PyPI, nothing will be done because folders to copy do not exist
     """
-    # create directories first because initialize_work_directories is now called later
-    os.makedirs(USER_DL_DIR, exist_ok=True)
-    os.makedirs(USER_OUTPUT_DIR, exist_ok=True)
-
     move_content('wahooMapsCreator_download', USER_DL_DIR)
     move_content('wahooMapsCreator_output', USER_OUTPUT_DIR)
 
@@ -93,19 +94,19 @@ def check_installation_of_required_programs():
 
     if platform.system() == "Windows":
         if not os.path.exists(get_tooling_win_path(
-                ['Osmosis', 'bin', 'osmosis.bat'])):
+                os.path.join('Osmosis', 'bin', 'osmosis.bat'), in_user_dir=True)):
             sys.exit(
                 f"Osmosis is not available. {text_to_docu}")
 
-        if not os.path.exists(get_tooling_win_path(['osmconvert.exe'])):
+        if not os.path.exists(get_tooling_win_path('osmconvert.exe')):
             sys.exit(
                 f"osmconvert is not available. {text_to_docu}")
 
-        if not os.path.exists(get_tooling_win_path(['osmfilter.exe'])):
+        if not os.path.exists(get_tooling_win_path('osmfilter.exe', in_user_dir=True)):
             sys.exit(
                 f"osmfilter is not available. {text_to_docu}")
 
-        if not os.path.exists(get_tooling_win_path(['7za.exe'])):
+        if not os.path.exists(get_tooling_win_path('7za.exe')):
             sys.exit(
                 f"7za is not available. {text_to_docu}")
 
@@ -191,9 +192,27 @@ def copy_jsons_from_repo_to_user(folder, file=''):
     log.debug('# Copy "%s" files from repo to directory if not existing: %s',
               folder, absolute_paths[0])
 
-    # copy files of gitcommon package directory to user directory
+    # copy files of wahoomc package directory to user directory
     copy_or_move_files_and_folder(
         absolute_paths[1], absolute_paths[0], delete_from_dir=False)
 
-    log.info('# Copy "%s" files from repo or gitcommon to directory if not existing: %s : OK',
+    log.info('# Copy "%s" files from wahoomc installation to directory if not existing: %s : OK',
              folder, absolute_paths[0])
+
+
+def check_installed_version_against_latest_pypi():
+    """
+    get latest wahoomc version available on PyPI and compare with locally installed version
+    """
+    # get latest wahoomc version available on PyPI
+    latest_version = get_latest_pypi_version()
+
+    # compare installed version against latest and issue a info if a new version is available
+    if latest_version \
+            and pkg_resources.parse_version(VERSION) < pkg_resources.parse_version(latest_version):
+        log.info('\n\nUpdate available! \
+                \nA new version of wahoomc is available: "%s". You have installed version "%s". \
+                \nUpgrade wahoomc with "pip install wahoomc --upgrade". \
+                \nRelease notes are here: https://github.com/treee111/wahooMapsCreator/releases/latest. \
+                \n',
+                 latest_version, VERSION)

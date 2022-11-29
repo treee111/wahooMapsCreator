@@ -64,12 +64,13 @@ The device theme defines, which OSM-tags are rendered on the device. In cruiser,
 There are two types of rendering methods: VTM and non-VTM rendering. This table shows the default rendering per device:
 | device | default rendering |
 | ------ | :---------------: |
+| ROAMv2 |        VTM        |
 | BOLTv2 |        VTM        |
-| ROAM   |      non-VTM      |
+| ROAMv1 |      non-VTM      |
 | BOLTv1 |      non-VTM      |
 | ELEMNT |      non-VTM      |
 
-You can enable the VTM rendering method on Wahoo devices other than BOLTv2 by creating a empty file on the device with the name "cfg_BHomeActivity_VtmMaps" in the root folder.
+You can enable the VTM rendering method on Wahoo devices other than BOLTv2/ROAMv2 by creating a empty file on the device with the name "cfg_BHomeActivity_VtmMaps" in the root folder.
 
 The device theme is named `mapsforge-bolt.xml` or `mapsforge-roam.xml` for non-VTM rendering and `vtm-elemnt.xml` for VTM-rendering. It's content is more or less equal to the `tag-wahoo.xml` files.
 

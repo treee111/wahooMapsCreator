@@ -21,25 +21,8 @@ def unzip(source_filename, dest_dir):
     """
     unzip the given file into the given directory
     """
-    with zipfile.ZipFile(source_filename) as zip_file:
-        for member in zip_file.infolist():
-            # Path traversal defense copied from
-            # http://hg.python.org/cpython/file/tip/Lib/http/server.py#l789
-            words = member.filename.split('/')
-            path = dest_dir
-            for word in words[:-1]:
-                while True:
-                    drive, word = os.path.splitdrive(word)
-                    head, word = os.path.split(  # pylint: disable=unused-variable
-                        word)
-                    if not drive:
-                        break
-                if word in (os.curdir, os.pardir, ''):
-                    continue
-                path = os.path.join(path, word)
-            if member.filename.split('/').pop():
-                member.filename = member.filename.split('/').pop()
-            zip_file.extract(member, path)
+    with zipfile.ZipFile(source_filename, 'r') as zip_ref:
+        zip_ref.extractall(dest_dir)
 
 
 def move_content(src_folder_name, dst_path):
