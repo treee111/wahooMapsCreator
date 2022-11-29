@@ -15,7 +15,7 @@ import pkg_resources
 # import custom python packages
 from wahoomc.file_directory_functions import move_content, write_json_file_generic, \
     read_json_file_generic, delete_o5m_pbf_files_in_folder, copy_or_move_files_and_folder
-from wahoomc.constants_functions import get_tooling_win_path, get_absolute_dir_user_or_repo, get_tooling_win_path_user
+from wahoomc.constants_functions import get_tooling_win_path, get_absolute_dir_user_or_repo
 
 from wahoomc.constants import USER_WAHOO_MC
 from wahoomc.constants import USER_DL_DIR
@@ -92,20 +92,20 @@ def check_installation_of_required_programs():
             f"Java is not installed. {text_to_docu}")
 
     if platform.system() == "Windows":
-        if not os.path.exists(get_tooling_win_path_user(
-                ['Osmosis', 'bin', 'osmosis.bat'])):
+        if not os.path.exists(get_tooling_win_path(
+                os.path.join('Osmosis', 'bin', 'osmosis.bat'), in_user_dir=True)):
             sys.exit(
                 f"Osmosis is not available. {text_to_docu}")
 
-        if not os.path.exists(get_tooling_win_path(['osmconvert.exe'])):
+        if not os.path.exists(get_tooling_win_path('osmconvert.exe')):
             sys.exit(
                 f"osmconvert is not available. {text_to_docu}")
 
-        if not os.path.exists(get_tooling_win_path_user(['osmfilter.exe'])):
+        if not os.path.exists(get_tooling_win_path('osmfilter.exe', in_user_dir=True)):
             sys.exit(
                 f"osmfilter is not available. {text_to_docu}")
 
-        if not os.path.exists(get_tooling_win_path(['7za.exe'])):
+        if not os.path.exists(get_tooling_win_path('7za.exe')):
             sys.exit(
                 f"7za is not available. {text_to_docu}")
 

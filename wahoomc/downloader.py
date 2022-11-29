@@ -15,7 +15,7 @@ import platform
 # import custom python packages
 from wahoomc.file_directory_functions import download_url_to_file, unzip
 from wahoomc.constants_functions import translate_country_input_to_geofabrik, \
-    get_geofabrik_region_of_country, get_tooling_win_path_user
+    get_geofabrik_region_of_country, get_tooling_win_path
 
 from wahoomc.constants import USER_DL_DIR
 from wahoomc.constants import USER_MAPS_DIR
@@ -110,10 +110,10 @@ def download_tooling_win():
             download_file(new_p,
                           'https://search.maven.org/remotecontent?filepath=org/mapsforge/mapsforge-map-writer/0.18.0/mapsforge-map-writer-0.18.0-jar-with-dependencies.jar')
 
-        if not os.path.isfile(get_tooling_win_path_user(['osmfilter.exe'])):
+        if not os.path.isfile(get_tooling_win_path('osmfilter.exe', in_user_dir=True)):
             log.info('# Need to download osmfilter application for Windows')
 
-            download_file(get_tooling_win_path_user(['osmfilter.exe']),
+            download_file(get_tooling_win_path('osmfilter.exe', in_user_dir=True),
                           'http://m.m.i24.cc/osmfilter.exe')
 
 

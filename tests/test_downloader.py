@@ -17,7 +17,7 @@ from wahoomc.downloader import get_osm_pbf_filepath_url
 from wahoomc.downloader import download_tooling_win
 from wahoomc.downloader import Downloader
 from wahoomc import constants
-from wahoomc.constants_functions import get_tooling_win_path_user
+from wahoomc.constants_functions import get_tooling_win_path
 
 
 class TestDownloader(unittest.TestCase):
@@ -167,7 +167,7 @@ class TestDownloader(unittest.TestCase):
             download_tooling_win()
 
             self.assertTrue(
-                os.path.exists(get_tooling_win_path_user(['osmfilter.exe'])))
+                os.path.exists(get_tooling_win_path('osmfilter.exe', in_user_dir=True)))
 
 
 if __name__ == '__main__':

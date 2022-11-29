@@ -7,7 +7,7 @@ import os
 
 # import custom python packages
 from wahoomc.setup_functions import is_program_installed, is_map_writer_plugin_installed, read_version_last_run
-from wahoomc.constants_functions import get_tooling_win_path, get_tooling_win_path_user
+from wahoomc.constants_functions import get_tooling_win_path
 from wahoomc.constants import USER_WAHOO_MC
 from wahoomc.file_directory_functions import write_json_file_generic
 
@@ -37,13 +37,13 @@ class TestSetup(unittest.TestCase):
         if platform.system() == "Windows":
             self.check_installation_of_program("java")
 
-            self.assertTrue(os.path.exists(get_tooling_win_path_user(
-                ['Osmosis', 'bin', 'osmosis.bat'])))
+            self.assertTrue(os.path.exists(get_tooling_win_path(
+                os.path.join('Osmosis', 'bin', 'osmosis.bat'), in_user_dir=True)))
             self.assertTrue(os.path.exists(
-                get_tooling_win_path(['osmconvert.exe'])))
+                get_tooling_win_path('osmconvert.exe')))
             self.assertTrue(os.path.exists(
-                get_tooling_win_path_user(['osmfilter.exe'])))
-            self.assertTrue(os.path.exists(get_tooling_win_path(['7za.exe'])))
+                get_tooling_win_path('osmfilter.exe', in_user_dir=True)))
+            self.assertTrue(os.path.exists(get_tooling_win_path('7za.exe')))
 
     def check_installation_of_program(self, program):
         """
