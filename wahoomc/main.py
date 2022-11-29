@@ -30,6 +30,8 @@ def run(run_level):
     logging.basicConfig(format='%(levelname)s:%(message)s',
                         level=logging.INFO)
 
+    # initializing work directories needs to be the first call,
+    # because other setup stuff relies on that (breaking changes)
     initialize_work_directories()
     adjustments_due_to_breaking_changes()
     download_tooling_win()
