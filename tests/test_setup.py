@@ -4,12 +4,15 @@ tests for setup functions
 import unittest
 import platform
 import os
+import pkg_resources
 
 # import custom python packages
-from wahoomc.setup_functions import is_program_installed, is_map_writer_plugin_installed, read_version_last_run
+from wahoomc.setup_functions import is_program_installed, is_map_writer_plugin_installed, \
+    read_version_last_run
 from wahoomc.constants_functions import get_tooling_win_path
-from wahoomc.constants import USER_WAHOO_MC
+from wahoomc.constants import USER_WAHOO_MC, VERSION
 from wahoomc.file_directory_functions import write_json_file_generic
+from wahoomc.downloader import get_latest_pypi_version
 
 
 class TestSetup(unittest.TestCase):
@@ -89,6 +92,16 @@ class TestConfigFile(unittest.TestCase):
                                 "version_last_run": '2.0.3'})
 
         self.assertNotEqual('2.0.2', read_version_last_run())
+
+    def test_version_constants_against_pypi(self):
+        """
+        tests, if the version of constants.py is equal to the latest available version on PyPI
+        """
+        latest_version = pkg_resources.parse_version(
+            get_latest_pypi_version()).public
+
+        self.assertEqual(
+            VERSION, latest_version)
 
 
 if __name__ == '__main__':

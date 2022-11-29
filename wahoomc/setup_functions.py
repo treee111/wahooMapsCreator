@@ -16,6 +16,7 @@ import pkg_resources
 from wahoomc.file_directory_functions import move_content, write_json_file_generic, \
     read_json_file_generic, delete_o5m_pbf_files_in_folder, copy_or_move_files_and_folder
 from wahoomc.constants_functions import get_tooling_win_path, get_absolute_dir_user_or_repo
+from wahoomc.downloader import get_latest_pypi_version
 
 from wahoomc.constants import USER_WAHOO_MC
 from wahoomc.constants import USER_DL_DIR
@@ -191,9 +192,27 @@ def copy_jsons_from_repo_to_user(folder, file=''):
     log.debug('# Copy "%s" files from repo to directory if not existing: %s',
               folder, absolute_paths[0])
 
-    # copy files of gitcommon package directory to user directory
+    # copy files of wahoomc package directory to user directory
     copy_or_move_files_and_folder(
         absolute_paths[1], absolute_paths[0], delete_from_dir=False)
 
-    log.info('# Copy "%s" files from repo or gitcommon to directory if not existing: %s : OK',
+    log.info('# Copy "%s" files from wahoomc installation to directory if not existing: %s : OK',
              folder, absolute_paths[0])
+
+
+def check_installed_version_against_latest_pypi():
+    """
+    get latest wahoomc version available on PyPI and compare with locally installed version
+    """
+    # get latest wahoomc version available on PyPI
+    latest_version = get_latest_pypi_version()
+
+    # compare installed version against latest and issue a info if a new version is available
+    if latest_version \
+            and pkg_resources.parse_version(VERSION) < pkg_resources.parse_version(latest_version):
+        log.info('\n\nUpdate available! \
+                \nA new version of wahoomc is available: "%s". You have installed version "%s". \
+                \nUpgrade wahoomc with "pip install wahoomc --upgrade". \
+                \nRelease notes are here: https://github.com/treee111/wahooMapsCreator/releases/latest. \
+                \n',
+                 latest_version, VERSION)

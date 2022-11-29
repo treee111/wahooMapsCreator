@@ -10,7 +10,8 @@ import logging
 from wahoomc.input import process_call_of_the_tool, cli_init
 from wahoomc.setup_functions import initialize_work_directories, \
     check_installation_of_required_programs, write_config_file, \
-    adjustments_due_to_breaking_changes, copy_jsons_from_repo_to_user
+    adjustments_due_to_breaking_changes, copy_jsons_from_repo_to_user, \
+    check_installed_version_against_latest_pypi
 from wahoomc.downloader import download_tooling_win
 
 from wahoomc.osm_maps_functions import OsmMaps
@@ -32,6 +33,7 @@ def run(run_level):
 
     # initializing work directories needs to be the first call,
     # because other setup stuff relies on that (breaking changes)
+    check_installed_version_against_latest_pypi()
     initialize_work_directories()
     adjustments_due_to_breaking_changes()
     download_tooling_win()

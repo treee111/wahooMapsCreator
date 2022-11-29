@@ -11,6 +11,7 @@ import sys
 import time
 import logging
 import platform
+import requests
 
 # import custom python packages
 from wahoomc.file_directory_functions import download_url_to_file, unzip
@@ -116,6 +117,18 @@ def download_tooling_win():
 
             download_file(get_tooling_win_path('osmfilter.exe', in_user_dir=True),
                           'http://m.m.i24.cc/osmfilter.exe')
+
+
+def get_latest_pypi_version():
+    """
+    get latest wahoomc version available on PyPI
+    """
+    try:
+        response = requests.get(
+            'https://pypi.org/pypi/wahoomc/json', timeout=1)
+        return response.json()['info']['version']
+    except (requests.ConnectionError, requests.Timeout):
+        return None
 
 
 class Downloader:
