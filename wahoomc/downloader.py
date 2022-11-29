@@ -104,11 +104,11 @@ def download_tooling_win():
                           'https://github.com/openstreetmap/osmosis/releases/download/0.48.3/osmosis-0.48.3.zip',
                           get_tooling_win_path('Osmosis', in_user_dir=True))
 
-        new_p = os.path.join(USER_TOOLING_WIN_DIR,
-                             'Osmosis', 'lib', 'default', 'mapsforge-map-writer-0.18.0-jar-with-dependencies.jar')
-        if not os.path.isfile(new_p):
+        mapwriter_plugin_path = os.path.join(USER_TOOLING_WIN_DIR,
+                                             'Osmosis', 'lib', 'default', 'mapsforge-map-writer-0.18.0-jar-with-dependencies.jar')
+        if not os.path.isfile(mapwriter_plugin_path):
             log.info('# Need to download Osmosis mapwriter plugin for Windows')
-            download_file(new_p,
+            download_file(mapwriter_plugin_path,
                           'https://search.maven.org/remotecontent?filepath=org/mapsforge/mapsforge-map-writer/0.18.0/mapsforge-map-writer-0.18.0-jar-with-dependencies.jar')
 
         if not os.path.isfile(get_tooling_win_path('osmfilter.exe', in_user_dir=True)):
