@@ -24,7 +24,7 @@ WAHOO_MC_DIR = os.path.dirname(__file__)
 RESOURCES_DIR = os.path.join(WAHOO_MC_DIR, 'resources')
 TOOLING_WIN_DIR = os.path.join(WAHOO_MC_DIR, 'tooling_win')
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
-VERSION = '3.1.1'
+VERSION = '3.2.0'
 
 Translate_Country = {
     'alaska':                           'united_states_of_america',
