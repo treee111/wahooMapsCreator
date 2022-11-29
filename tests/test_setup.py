@@ -32,18 +32,18 @@ class TestSetup(unittest.TestCase):
 
     def test_installed_programs_windows(self):
         """
-        tests, if the mac-relevant programs are installed
+        tests, if the windows-relevant programs are installed
         """
         if platform.system() == "Windows":
             self.check_installation_of_program("java")
 
             self.assertTrue(os.path.exists(get_tooling_win_path(
-                ['Osmosis', 'bin', 'osmosis.bat'])))
+                os.path.join('Osmosis', 'bin', 'osmosis.bat'), in_user_dir=True)))
             self.assertTrue(os.path.exists(
-                get_tooling_win_path(['osmconvert.exe'])))
+                get_tooling_win_path('osmconvert.exe')))
             self.assertTrue(os.path.exists(
-                get_tooling_win_path(['osmfilter.exe'])))
-            self.assertTrue(os.path.exists(get_tooling_win_path(['7za.exe'])))
+                get_tooling_win_path('osmfilter.exe', in_user_dir=True)))
+            self.assertTrue(os.path.exists(get_tooling_win_path('7za.exe')))
 
     def check_installation_of_program(self, program):
         """

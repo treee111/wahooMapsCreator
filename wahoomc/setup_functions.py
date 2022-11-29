@@ -23,6 +23,7 @@ from wahoomc.constants import USER_MAPS_DIR
 from wahoomc.constants import USER_OUTPUT_DIR
 from wahoomc.constants import USER_CONFIG_DIR
 from wahoomc.constants import VERSION
+from wahoomc.constants import USER_TOOLING_WIN_DIR
 
 log = logging.getLogger('main-logger')
 
@@ -39,6 +40,9 @@ def initialize_work_directories():
     os.makedirs(USER_OUTPUT_DIR, exist_ok=True)
     os.makedirs(USER_CONFIG_DIR, exist_ok=True)
 
+    if platform.system() == "Windows":
+        os.makedirs(USER_TOOLING_WIN_DIR, exist_ok=True)
+
 
 def move_old_content_into_new_dirs():
     """
@@ -49,10 +53,6 @@ def move_old_content_into_new_dirs():
     This coding is only valid/needed when using the cloned version or .zip version.
     If working with a installed version via PyPI, nothing will be done because folders to copy do not exist
     """
-    # create directories first because initialize_work_directories is now called later
-    os.makedirs(USER_DL_DIR, exist_ok=True)
-    os.makedirs(USER_OUTPUT_DIR, exist_ok=True)
-
     move_content('wahooMapsCreator_download', USER_DL_DIR)
     move_content('wahooMapsCreator_output', USER_OUTPUT_DIR)
 
@@ -93,19 +93,19 @@ def check_installation_of_required_programs():
 
     if platform.system() == "Windows":
         if not os.path.exists(get_tooling_win_path(
-                ['Osmosis', 'bin', 'osmosis.bat'])):
+                os.path.join('Osmosis', 'bin', 'osmosis.bat'), in_user_dir=True)):
             sys.exit(
                 f"Osmosis is not available. {text_to_docu}")
 
-        if not os.path.exists(get_tooling_win_path(['osmconvert.exe'])):
+        if not os.path.exists(get_tooling_win_path('osmconvert.exe')):
             sys.exit(
                 f"osmconvert is not available. {text_to_docu}")
 
-        if not os.path.exists(get_tooling_win_path(['osmfilter.exe'])):
+        if not os.path.exists(get_tooling_win_path('osmfilter.exe', in_user_dir=True)):
             sys.exit(
                 f"osmfilter is not available. {text_to_docu}")
 
-        if not os.path.exists(get_tooling_win_path(['7za.exe'])):
+        if not os.path.exists(get_tooling_win_path('7za.exe')):
             sys.exit(
                 f"7za is not available. {text_to_docu}")
 
