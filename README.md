@@ -69,7 +69,7 @@ You are welcome to provide input via Pull Requests, Issues or in any other way!
 Discussion goes on:
 - in this telegram channel: https://t.me/joinchat/TaMhjouxlsAzNWZk
 
-More details can be found here: [CONTRIBUTING](.github/CONTRIBUTING.md#contributing-to-wahoomapscreator-)
+More details can be found here: [CONTRIBUTING](docs/CONTRIBUTING.md#contributing-to-wahoomapscreator-)
 
 ## Thanks to
 [@Intyre](https://github.com/Intyre)/Hank for the initial version of the script
