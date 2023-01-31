@@ -67,12 +67,12 @@ In this repo, device themes are stored in folder `device_themes`. There are init
 
 The following table shows the file per device and the location where the device theme needs to be copied to.
 
-| device | file                 | location                                 |
-| ------ | -------------------- | ---------------------------------------- |
-| BOLTv2 | `vtm-elemnt.xml`     | `maps/vtm-elemnt/vtm-elemnt.xml`         |
-| ROAM   | `mapsforge-roam.xml` | `maps/mapsforge-roam/mapsforge-roam.xml` |
-| BOLTv1 | `mapsforge-bolt.xml` | `maps/mapsforge-bolt/mapsforge-bolt.xml` |
-| ELEMNT | `mapsforge-bolt.xml` | `maps/mapsforge-bolt/mapsforge-bolt.xml` |
+| device | rendering |  file                 | location                                 |
+| ------ | ------ | -------------------- | ---------------------------------------- |
+| all | VTM | `vtm-elemnt.xml`     | `maps/vtm-elemnt/vtm-elemnt.xml`         |
+| ROAM   | non-VTM | `mapsforge-roam.xml` | `maps/mapsforge-roam/mapsforge-roam.xml` |
+| BOLTv1 | non-VTM | `mapsforge-bolt.xml` | `maps/mapsforge-bolt/mapsforge-bolt.xml` |
+| ELEMNT | non-VTM | `mapsforge-bolt.xml` | `maps/mapsforge-bolt/mapsforge-bolt.xml` |
 
 Device themes are described [here](TAGS_ON_MAP_AND_DEVICE.md#Device-Theme)
 

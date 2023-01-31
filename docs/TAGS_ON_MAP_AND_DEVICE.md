@@ -70,9 +70,9 @@ There are two types of rendering methods: VTM and non-VTM rendering. This table 
 | BOLTv1 |      non-VTM      |
 | ELEMNT |      non-VTM      |
 
-You can enable the VTM rendering method on Wahoo devices other than BOLTv2/ROAMv2 by creating a empty file on the device with the name "cfg_BHomeActivity_VtmMaps" in the root folder.
+You can enable the VTM rendering method on Wahoo devices which do not have VTOM rendering as default by creating a empty file on the device with the name "cfg_BHomeActivity_VtmMaps" in the root folder.
 
-The device theme is named `mapsforge-bolt.xml` or `mapsforge-roam.xml` for non-VTM rendering and `vtm-elemnt.xml` for VTM-rendering. It's content is more or less equal to the `tag-wahoo.xml` files.
+The VTM rendering device theme is called `vtm-elemnt.xml` and for the non-VTM devices the themes are named like the device, e.g. `mapsforge-bolt.xml` or `mapsforge-roam.xml`. Content wise it is more or less equal to the `tag-wahoo.xml` files.
 
 ## Attribute "zoom-min"
 Each entry in the theme has a "zoom-min" attribute, which defines from which zoom level onwards the element will be shown. If zoom-min is set to 13, the OSM-tag will be displayed in zoom level 500m, 200m and 100m.
@@ -85,7 +85,7 @@ You should always use the corresponding theme in cruiser if you preview generate
 Because the theme kind of determines what you're gonna see, you want to preview what later on will be visible on the device.
 
 ## Combination of tag-wahoo.xml and device-theme
-This zoom-appear in combination with the settings in the theme on the device (which can also be applied in cruiser) controls when certain elements are shown on our BOLT/ROAM etc (zoom-min).
+This zoom-appear in combination with the settings in the theme on the device (which can also be applied in cruiser) controls when certain elements are shown on our your Wahoo device etc (zoom-min).
 
 If a element is included in the map beginning from zoom level 10 (zoom-appear in tag-wahoo.xml) but on the device only displayed beginning with zoom level 12 (zoom-min in mapsforge-bolt.xml), the element is only displayed beginning zoom level 12.
 
