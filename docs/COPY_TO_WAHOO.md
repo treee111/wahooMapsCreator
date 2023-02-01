@@ -40,10 +40,10 @@ The Wahoo device must be authorized for ADB to be reachable from Windows and mac
 1. disconnect device from your computer
 2. turn the device on
 3. press keys on device
-   * **BOLT v1 and ROAM**
+   * **BOLT v1, ROAM, EMENT**
      * press the power button (you enter the settings menu)
      * press the power button again (you return to the normal screen)
-   * **BOLT v2**
+   * **BOLT v2, ROAMv2**
      * press the power, up and down buttons at the same time
 4. connect the device to your pc
 
