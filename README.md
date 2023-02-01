@@ -12,22 +12,21 @@
         <a href="#sponsors" alt="Contributions welcome">
             <img src="https://img.shields.io/badge/contributions-welcome-orange.svg" /></a>
     </p>
-    <h1>wahooMapsCreator</h1>
 </div>
-wahooMapsCreator is a tool to create up-to-date maps for your Wahoo BOLTv1 and BOLTv2, ROAM, ROAMv2 and ELEMNT!
 
-It runs on Windows, macOS as well as on Linux!
+# wahooMapsCreator
+wahooMapsCreator is a tool to create up-to-date maps for your Wahoo device. It supports BOLTv1, BOLTv2, ROAM, ROAMv2 and ELEMNT!
 
-You can generate maps for the countries you like and you can control which OSM-tags are included based on latest OSM data.
+You can generate maps for the countries you like with latest OSM data and you can control which OSM-tags are included.
 
-The maps of your device may be old because Wahoo did not release a newer version in the last years.
+> why? The maps of your device may be old because Wahoo did not release a newer version in the last years.
 
-# Get it running
+## Get it running
 The instructions are intended to be suitable for beginners.
 
-If anything is unclear or seams wrong, write an [:pencil2: issue](https://github.com/treee111/wahooMapsCreator/issues)!
+If anything is unclear or seams wrong, write an [:pencil2: issue](https://github.com/treee111/wahooMapsCreator/issues)
 
-# To start with...
+## To start with...
 1. [:rocket: Quick Start Guide to download and install required programs](docs/QUICKSTART_ANACONDA.md#download-and-install-required-programs)
 
 2. [:computer: Run wahooMapsCreator - detailled usage description](docs/USAGE.md#usage-of-wahoomapscreator)
@@ -41,7 +40,7 @@ python -m wahoomc gui
 
 3. [:floppy_disk: Copy the map-files to your device after generation](docs/COPY_TO_WAHOO.md#copy-maps-files-to-wahoo-device-)
 
-# To further adjust...
+## To further adjust...
 * [:cookie: Get POIs displayed on your Wahoo](docs/USAGE.md#pois---points-of-interest)
 
 * [:wrench: Control OSM tags to be included in your maps ](docs/USAGE.md#user-specific-configuration)
