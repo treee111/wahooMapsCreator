@@ -1,5 +1,4 @@
 # Usage of wahooMapsCreator <!-- omit in toc -->
-#### Table of contents <!-- omit in toc -->
 - [Usage of wahooMapsCreator](#usage-of-wahoomapscreator)
   - [Always activate environment first](#always-activate-environment-first)
   - [Run wahooMapsCreator for your country](#run-wahoomapscreator-for-your-country)

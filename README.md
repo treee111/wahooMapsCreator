@@ -27,10 +27,10 @@ The instructions are intended to be suitable for beginners.
 
 If anything is unclear or seams wrong, write an [:pencil2: issue](https://github.com/treee111/wahooMapsCreator/issues)!
 
-## Brand-New: Get POIs displayed on your Wahoo!
+## Get POIs displayed on your Wahoo!
 [:cookie: here](docs/USAGE.md#pois---points-of-interest)
 
-## Brand-New: Control OSM tags to be included in your maps!
+## Control OSM tags to be included in your maps!
 [:wrench: here](docs/USAGE.md#user-specific-configuration)
 
 ## Download and Install required programs
@@ -55,7 +55,8 @@ python -m wahoomc cli -co malta
 A detailled description of the usage is documented [:computer: here](docs/USAGE.md#usage-of-wahoomapscreator)
 
 ## (Optional) Preview your generated maps with cruiser
-Preview the generated maps on your computer before copying to your Wahoo device [:computer:](USAGE_CRUISER.md#usage-of-cruiser).
+Preview the generated maps on your computer before copying to your Wahoo device [:computer: here](docs/USAGE_CRUISER.md#usage-of-cruiser)
+
 ## Copy the map-files to your device
 When file-creation is finished, copy the maps files to your Wahoo device.
 
@@ -66,10 +67,12 @@ You can use a custom theme to control which OSM-tags are displayed on your devic
 
 [:mag: docu](docs/TAGS_ON_MAP_AND_DEVICE.md#osm-tags-during-map-creation-and-on-your-device-)
 
-## Contribution
+## Contribution / Questions
 You are welcome to provide input via Pull Requests, Issues or in any other way!
-Discussion goes on:
-- in this telegram channel: https://t.me/joinchat/TaMhjouxlsAzNWZk
+If you have trouble using wahooMapsCreator, look into the FAQ, write an issue or join the telegram channel
+- [FAQ](docs/FAQ.md#frequently-asked-questions)
+- [:pencil2: issue](https://github.com/treee111/wahooMapsCreator/issues)
+- telegram channel: https://t.me/joinchat/TaMhjouxlsAzNWZk
 
 More details can be found here: [CONTRIBUTING](docs/CONTRIBUTING.md#contributing-to-wahoomapscreator-)
 
