@@ -33,7 +33,7 @@ From the `root` folder of wahooMapsCreator, run:
 
 Set your arguments as required via the window:
 
-<img src="https://github.com/treee111/wahooMapsCreator/blob/develop/docs/gui.png" alt="wahooMapsCreator GUI" width=35%>
+<img src="./pictures/gui.png" alt="wahooMapsCreator GUI" width=35%>
 
 ## CLI (Command Line Interface)
 

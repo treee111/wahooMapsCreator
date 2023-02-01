@@ -59,7 +59,7 @@ Copy the the whole content of the country- or X/Y folder or just the content of 
 
 After copying, it should look like that:
 
-<img src="./maps-file-strucutre.png" alt="filestructure on device" width=30%>
+<img src="./pictures/maps-file-structure.png" alt="filestructure on device" width=30%>
 
 For another way of explanation, see [here](FAQ.md#where-on-my-wahoo-do-i-have-to-copy-the-maps)
 

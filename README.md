@@ -1,8 +1,8 @@
 <div align="center">
     <p>
-    <img src="https://github.com/treee111/wahooMapsCreator/blob/develop/docs/wahoo_elemnt_bolt_poi1.png" alt="wahooMapsCreator Logo" width=20%>
-    <img src="https://github.com/treee111/wahooMapsCreator/blob/develop/docs/wahoo_elemnt_bolt.png" alt="wahooMapsCreator Logo" width=20%>
-    <img src="https://github.com/treee111/wahooMapsCreator/blob/develop/docs/wahoo_elemnt_bolt_poi2.png" alt="wahooMapsCreator Logo" width=20%>
+    <img src="./docs/pictures/wahoo_elemnt_bolt_poi1.png" alt="wahooMapsCreator Logo" width=20%>
+    <img src="./docs/pictures/wahoo_elemnt_bolt.png" alt="wahooMapsCreator Logo" width=20%>
+    <img src="./docs/pictures/wahoo_elemnt_bolt_poi2.png" alt="wahooMapsCreator Logo" width=20%>
     </p>
     <p>
         <a href="https://img.shields.io/badge/python-v3.6+-blue.svg" alt="Python">

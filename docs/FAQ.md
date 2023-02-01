@@ -30,13 +30,13 @@ The content of this folder is relevant.
 
 As an example, lets assume, we want to copy the maps of american_samoa
 
-<img src="./maps-american_samoa-generated.png" alt="generated maps after generation" width=50%>
+<img src="./pictures/maps-american_samoa-generated.png" alt="generated maps after generation" width=50%>
 
 We need to copy the folders under the `american_samoa` directory into the `maps/tiles/8` directory on the Wahoo device (see [docs](https://github.com/treee111/wahooMapsCreator/blob/develop/docs/COPY_TO_WAHOO.md#copy-map-files)).
 
 It should look like that after copying the files
 
-<img src="./maps-american_samoa-wahoo.png" alt="generated maps on wahoo device" width=50%>
+<img src="./pictures/maps-american_samoa-wahoo.png" alt="generated maps on wahoo device" width=50%>
 
 If the folder, i.e. `maps/tiles/8/6` does already exist on your Wahoo device, copy the .map.lzma and .map.lzma.17 files into the existing folder.
 
