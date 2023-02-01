@@ -54,6 +54,8 @@ python -m wahoomc cli -co malta
 
 A detailled description of the usage is documented [:computer: here](docs/USAGE.md#usage-of-wahoomapscreator)
 
+## (Optional) Preview your generated maps with cruiser
+Preview the generated maps on your computer before copying to your Wahoo device [:computer:](USAGE_CRUISER.md#usage-of-cruiser).
 ## Copy the map-files to your device
 When file-creation is finished, copy the maps files to your Wahoo device.
 
