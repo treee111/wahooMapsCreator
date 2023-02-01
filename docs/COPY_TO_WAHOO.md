@@ -40,7 +40,7 @@ The Wahoo device must be authorized for ADB to be reachable from Windows and mac
 1. disconnect device from your computer
 2. turn the device on
 3. press keys on device
-   * **BOLT v1, ROAM, EMENT**
+   * **BOLT v1, ROAMv1, ELEMNT**
      * press the power button (you enter the settings menu)
      * press the power button again (you return to the normal screen)
    * **BOLT v2, ROAMv2**
@@ -73,7 +73,7 @@ The following table shows the file per device and the location where the device 
 | all    | VTM       | `vtm-elemnt.xml`     | `maps/vtm-elemnt/vtm-elemnt.xml`         |
 | ROAM   | non-VTM   | `mapsforge-roam.xml` | `maps/mapsforge-roam/mapsforge-roam.xml` |
 | BOLTv1 | non-VTM   | `mapsforge-bolt.xml` | `maps/mapsforge-bolt/mapsforge-bolt.xml` |
-| ELEMNT | non-VTM   | `mapsforge-bolt.xml` | `maps/mapsforge-bolt/mapsforge-bolt.xml` |
+| ELEMNT | non-VTM   | ?                    | ?                                        |
 
 Device themes are described [here](TAGS_ON_MAP_AND_DEVICE.md#Device-Theme)
 
