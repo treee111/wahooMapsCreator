@@ -27,45 +27,29 @@ The instructions are intended to be suitable for beginners.
 
 If anything is unclear or seams wrong, write an [:pencil2: issue](https://github.com/treee111/wahooMapsCreator/issues)!
 
-## Get POIs displayed on your Wahoo!
-[:cookie: here](docs/USAGE.md#pois---points-of-interest)
+# To start with...
+1. [:rocket: Quick Start Guide to download and install required programs](docs/QUICKSTART_ANACONDA.md#download-and-install-required-programs)
 
-## Control OSM tags to be included in your maps!
-[:wrench: here](docs/USAGE.md#user-specific-configuration)
+2. [:computer: Run wahooMapsCreator - detailled usage description](docs/USAGE.md#usage-of-wahoomapscreator)
 
-## Download and Install required programs
-Using Anaconda to setup a virtual Python environment is the fastest way to get wahooMapsCreator running!
-
-[:rocket: Quick Start Guide](docs/QUICKSTART_ANACONDA.md#download-and-install-required-programs)
-
-## Run wahooMapsCreator
-Activate Anaconda environment
+> In short: activate Anaconda environment, run wahooMapsCreator via CLI or via GUI.
 ```
 conda activate gdal-user
-```
-Run wahooMapsCreator via GUI
-```
+python -m wahoomc cli -co malta
 python -m wahoomc gui
 ```
-Or run wahooMapsCreator via CLI
-```
-python -m wahoomc cli -co malta
-```
 
-A detailled description of the usage is documented [:computer: here](docs/USAGE.md#usage-of-wahoomapscreator)
+3. [:floppy_disk: Copy the map-files to your device after generation](docs/COPY_TO_WAHOO.md#copy-maps-files-to-wahoo-device-)
 
-## (Optional) Preview your generated maps with cruiser
-Preview the generated maps on your computer before copying to your Wahoo device [:computer: here](docs/USAGE_CRUISER.md#usage-of-cruiser)
+# To further adjust...
+* [:cookie: Get POIs displayed on your Wahoo](docs/USAGE.md#pois---points-of-interest)
 
-## Copy the map-files to your device
-When file-creation is finished, copy the maps files to your Wahoo device.
+* [:wrench: Control OSM tags to be included in your maps ](docs/USAGE.md#user-specific-configuration)
 
-[:floppy_disk: docu](docs/COPY_TO_WAHOO.md#copy-maps-files-to-wahoo-device-)
+* [:computer: Preview your generated maps with cruiser ](docs/USAGE_CRUISER.md#usage-of-cruiser)
 
-## (Optional) Use a custom theme on your Wahoo
-You can use a custom theme to control which OSM-tags are displayed on your device. Also in which zoom-level certain streets appear!
 
-[:mag: docu](docs/TAGS_ON_MAP_AND_DEVICE.md#osm-tags-during-map-creation-and-on-your-device-)
+* [:mag: Use a custom theme on your Wahoo to control what and in which zoom-level certain elements are rendered](docs/TAGS_ON_MAP_AND_DEVICE.md#osm-tags-during-map-creation-and-on-your-device-)
 
 ## Contribution / Questions
 You are welcome to provide input via Pull Requests, Issues or in any other way!
