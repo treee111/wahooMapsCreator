@@ -2,7 +2,7 @@ name: gdal-user
 channels:
   - conda-forge
 dependencies:
-  - python=3.7
+  - python=3.11
   - geojson=2.5.*
   - gdal=3.4.*
   - pip
