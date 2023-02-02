@@ -4,7 +4,7 @@ channels:
 dependencies:
   - python=3.11
   - geojson=2.5.*
-  - gdal=3.4.*
+  - gdal=3.6.*
   - pip
   - pip:
       - wahoomc==3.2.0

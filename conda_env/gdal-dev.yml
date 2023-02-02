@@ -3,7 +3,7 @@ channels:
   - conda-forge
 dependencies:
   - python=3.11
-  - gdal=3.4.*
+  - gdal=3.6.*
   - requests=2.28.*
   - pylint=2.15.*
   - geojson=2.5.*
