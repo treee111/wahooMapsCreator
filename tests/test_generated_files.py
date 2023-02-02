@@ -188,7 +188,7 @@ class TestGeneratedFiles(unittest.TestCase):
         else:
             cmd = ['osmium', 'diff', '-q',
                    given_file, calculated_file]
-            result = subprocess.run(cmd)
+            result = subprocess.run(cmd, check=False)
 
             self.assertEqual(
                 0, result.returncode, f'not equal: {calculated_file}. Using osmium diff.')
