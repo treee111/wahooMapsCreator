@@ -169,14 +169,19 @@ class TestGeneratedFiles(unittest.TestCase):
     def compare_two_map_files(self, given_file, calculated_file):
         """
         compare two given (map) files for equalness.
-        classic map files are compared using CLI command "osmium diff",
-        the others are compared using "filecmp.cmp"
+        macOS / Linux:
+        - classic map files are compared using CLI command "osmium diff",
+        - the others are compared using "filecmp.cmp"
+        Windows:
+        - compare all files using "filecmp.cmp".
+          osmosis and osmconvert do not offer a possibility to compare with returning a errorcode
         """
 
         no_osmosis_file_extensions = ['shx', 'shp', 'prj']
 
         # some file extensions can not be comapared using osmium
-        if given_file.split('.')[-1] in no_osmosis_file_extensions:
+        if given_file.split('.')[-1] in no_osmosis_file_extensions or \
+                platform.system() == "Windows":
             self.assertTrue(filecmp.cmp(given_file, calculated_file,
                                         shallow=False), f'not equal: {calculated_file}. Using filecmp.cmp.')
         # compare map files using osmium
