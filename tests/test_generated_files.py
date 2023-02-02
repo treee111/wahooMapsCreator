@@ -8,6 +8,7 @@ from os import walk
 import platform
 import shutil
 import unittest
+import subprocess
 
 
 # import custom python packages
@@ -148,22 +149,9 @@ class TestGeneratedFiles(unittest.TestCase):
                         calculated_output_file = os.path.join(
                             constants.USER_OUTPUT_DIR, dir_to_compare, directory, file)
 
-                        # is file equal?
-                        self.assertTrue(filecmp.cmp(given_output_file, calculated_output_file,
-                                                    shallow=False), f'not equal: {calculated_output_file}')
-
-        # check files in given dir
-        # for file in get_files_in_folder(path_to_dir):
-        #     if file == '.DS_Store':
-        #         continue
-        #     given_output_file = os.path.join(
-        #         path_to_dir, file)
-        #     calculated_output_file = os.path.join(
-        #         constants.USER_OUTPUT_DIR, dir_to_compare, file)
-
-        #     # is file equal?
-        #     self.assertTrue(filecmp.cmp(given_output_file, calculated_output_file,
-        #                                 shallow=False), f'not equal: {calculated_output_file}')
+                        # are these two files equal?
+                        self.compare_two_map_files(
+                            given_output_file, calculated_output_file)
 
         # check files in given dir - {country} folder. filtered_* files
         for file in get_files_in_folder(os.path.join(path_to_dir, country)):
@@ -174,9 +162,31 @@ class TestGeneratedFiles(unittest.TestCase):
             calculated_output_file = os.path.join(
                 constants.USER_OUTPUT_DIR, country, file)
 
-            # is file equal?
-            self.assertTrue(filecmp.cmp(given_output_file, calculated_output_file,
-                                        shallow=False), f'not equal: {calculated_output_file}')
+            # are these two files equal?
+            self.compare_two_map_files(
+                given_output_file, calculated_output_file)
+
+    def compare_two_map_files(self, given_file, calculated_file):
+        """
+        compare two given (map) files for equalness.
+        classic map files are compared using CLI command "osmium diff",
+        the others are compared using "filecmp.cmp"
+        """
+
+        no_osmosis_file_extensions = ['shx', 'shp', 'prj']
+
+        # some file extensions can not be comapared using osmium
+        if given_file.split('.')[-1] in no_osmosis_file_extensions:
+            self.assertTrue(filecmp.cmp(given_file, calculated_file,
+                                        shallow=False), f'not equal: {calculated_file}. Using filecmp.cmp.')
+        # compare map files using osmium
+        else:
+            cmd = ['osmium', 'diff', '-q',
+                   given_file, calculated_file]
+            result = subprocess.run(cmd)
+
+            self.assertEqual(
+                0, result.returncode, f'not equal: {calculated_file}. Using osmium diff.')
 
 
 if __name__ == '__main__':
