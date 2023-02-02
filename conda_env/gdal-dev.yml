@@ -8,7 +8,7 @@ dependencies:
   - pylint=2.15.*
   - geojson=2.5.*
   - shapely=1.8.*
-  - autopep8=1.7.*
+  - autopep8=2.0.*
   - mock
   - twine
   - pip
