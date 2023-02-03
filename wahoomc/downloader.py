@@ -24,6 +24,7 @@ from wahoomc.constants import LAND_POLYGONS_PATH
 from wahoomc.constants import GEOFABRIK_PATH
 from wahoomc.constants import OSMOSIS_WIN_FILE_PATH
 from wahoomc.constants import USER_TOOLING_WIN_DIR
+from wahoomc.constants import USER_DIR
 
 log = logging.getLogger('main-logger')
 
@@ -92,31 +93,48 @@ def get_osm_pbf_filepath_url(country):
     return map_file_path, url
 
 
-def download_tooling_win():
+def download_tooling():
     """
-    check for Windows tooling and download if not here already
-    this is done to bring down the filesize of the python module
+    Windows
+    - check for Windows tooling
+    - download if Windows tooling is not available
+    --> this is done to bring down the filesize of the python module
+
+    macOS
+    - check for mapwriter plugin and download if not existing
     """
+
+    mapwriter_plugin_url = 'https://search.maven.org/remotecontent?filepath=org/mapsforge/mapsforge-map-writer/0.18.0/mapsforge-map-writer-0.18.0-jar-with-dependencies.jar'
+
     # Windows
     if platform.system() == "Windows":
+        os.makedirs(USER_TOOLING_WIN_DIR, exist_ok=True)
+
         if not os.path.isfile(OSMOSIS_WIN_FILE_PATH):
             log.info('# Need to download Osmosis application for Windows')
             download_file(OSMOSIS_WIN_FILE_PATH,
                           'https://github.com/openstreetmap/osmosis/releases/download/0.48.3/osmosis-0.48.3.zip',
                           get_tooling_win_path('Osmosis', in_user_dir=True))
 
-        mapwriter_plugin_path = os.path.join(USER_TOOLING_WIN_DIR,
-                                             'Osmosis', 'lib', 'default', 'mapsforge-map-writer-0.18.0-jar-with-dependencies.jar')
-        if not os.path.isfile(mapwriter_plugin_path):
-            log.info('# Need to download Osmosis mapwriter plugin for Windows')
-            download_file(mapwriter_plugin_path,
-                          'https://search.maven.org/remotecontent?filepath=org/mapsforge/mapsforge-map-writer/0.18.0/mapsforge-map-writer-0.18.0-jar-with-dependencies.jar')
-
         if not os.path.isfile(get_tooling_win_path('osmfilter.exe', in_user_dir=True)):
             log.info('# Need to download osmfilter application for Windows')
 
             download_file(get_tooling_win_path('osmfilter.exe', in_user_dir=True),
                           'http://m.m.i24.cc/osmfilter.exe')
+
+        mapwriter_plugin_path = os.path.join(USER_TOOLING_WIN_DIR,
+                                             'Osmosis', 'lib', 'default', 'mapsforge-map-writer-0.18.0-jar-with-dependencies.jar')
+
+    # Non-Windows
+    else:
+        mapwriter_plugin_path = os.path.join(
+            str(USER_DIR), '.openstreetmap', 'osmosis', 'plugins', 'mapsforge-map-writer-0.18.0-jar-with-dependencies.jar')
+
+    if not os.path.isfile(mapwriter_plugin_path):
+        log.info('# Need to download Osmosis mapwriter plugin')
+        # create plugins directory
+        os.makedirs(os.path.dirname(mapwriter_plugin_path), exist_ok=True)
+        download_file(mapwriter_plugin_path, mapwriter_plugin_url)
 
 
 def get_latest_pypi_version():

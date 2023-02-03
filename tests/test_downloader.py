@@ -14,7 +14,7 @@ import platform
 from wahoomc.downloader import older_than_x_days
 from wahoomc.downloader import download_file
 from wahoomc.downloader import get_osm_pbf_filepath_url
-from wahoomc.downloader import download_tooling_win
+from wahoomc.downloader import download_tooling
 from wahoomc.downloader import Downloader
 from wahoomc import constants
 from wahoomc.constants_functions import get_tooling_win_path
@@ -158,16 +158,36 @@ class TestDownloader(unittest.TestCase):
         Test if Windows tooling files download is successful
         """
         if platform.system() == "Windows":
-            path = os.path.join(constants.USER_TOOLING_WIN_DIR)
+            path = constants.USER_TOOLING_WIN_DIR
 
             if os.path.exists(path):
                 shutil.rmtree(path)
 
-            os.makedirs(constants.USER_TOOLING_WIN_DIR, exist_ok=True)
-            download_tooling_win()
+            self.assertFalse(os.path.exists(path))
+
+            download_tooling()
+
+            self.assertTrue(os.path.exists(path))
 
             self.assertTrue(
                 os.path.exists(get_tooling_win_path('osmfilter.exe', in_user_dir=True)))
+
+    def test_download_macos_files(self):
+        """
+        Test if macOS tooling files download is successful
+        """
+        if platform.system() != "Windows":
+            path = os.path.join(str(constants.USER_DIR), '.openstreetmap', 'osmosis',
+                                'plugins', 'mapsforge-map-writer-0.18.0-jar-with-dependencies.jar')
+
+            if os.path.exists(path):
+                os.remove(path)
+
+            self.assertFalse(os.path.exists(path))
+
+            download_tooling()
+
+            self.assertTrue(os.path.exists(path))
 
 
 if __name__ == '__main__':
