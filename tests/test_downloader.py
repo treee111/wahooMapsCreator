@@ -163,7 +163,11 @@ class TestDownloader(unittest.TestCase):
             if os.path.exists(path):
                 shutil.rmtree(path)
 
+            self.assertFalse(os.path.exists(path))
+
             download_tooling()
+
+            self.assertTrue(os.path.exists(path))
 
             self.assertTrue(
                 os.path.exists(get_tooling_win_path('osmfilter.exe', in_user_dir=True)))
@@ -179,14 +183,11 @@ class TestDownloader(unittest.TestCase):
             if os.path.exists(path):
                 os.remove(path)
 
-            self.assertFalse(
-                os.path.exists(path))
+            self.assertFalse(os.path.exists(path))
 
-            # os.makedirs(constants.USER_TOOLING_WIN_DIR, exist_ok=True)
             download_tooling()
 
-            self.assertTrue(
-                os.path.exists(path))
+            self.assertTrue(os.path.exists(path))
 
 
 if __name__ == '__main__':
