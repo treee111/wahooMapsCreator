@@ -71,16 +71,6 @@ brew install osmium-tool
 brew install osmosis
 ```
 
-3. Install mapsforge-map-writer plugin (Osmosis Plugin)
-* Download the [mapsforge-map-writer](https://search.maven.org/search?q=a:mapsforge-map-writer) plugin, click on "file_download" and select "jar-with-dependecies.jar".
-* Create this directory when it doesn't exist: `~/.openstreetmap/osmosis/plugins`. For example via terminal:
-```
-cd ~
-mkdir -p .openstreetmap/osmosis/plugins
-```
-* Put the .jar into the `plugins` directory. You may have to enable showing hidden folders in finder via `Command + Shift + . (period)`
-* more information: https://github.com/mapsforge/mapsforge/blob/master/docs/Getting-Started-Map-Writer.md#plugin-installation
-
 # wahooMapsCreator
 ## Create Anaconda Environment
 1. Open terminal (macOS/Linux) or **Anaconda Prompt** (Windows, via Startmenu)

@@ -7,6 +7,7 @@ import os
 from pathlib import Path
 
 # User
+USER_DIR = str(Path.home())
 USER_WAHOO_MC = os.path.join(str(Path.home()), 'wahooMapsCreatorData')
 USER_DL_DIR = os.path.join(USER_WAHOO_MC, '_download')
 USER_MAPS_DIR = os.path.join(USER_DL_DIR, 'maps')
