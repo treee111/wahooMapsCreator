@@ -86,7 +86,7 @@ mkdir -p .openstreetmap/osmosis/plugins
 1. Open terminal (macOS/Linux) or **Anaconda Prompt** (Windows, via Startmenu)
 2. Create a new Anaconda environment with needed packages
 ```
-conda create -n gdal-user python=3.7 geojson=2.5 gdal=3.4 pip --channel conda-forge --override-channels
+conda create -n gdal-user python=3.11 geojson=2.5 gdal=3.6 pip --channel conda-forge --override-channels
 ```
 3. activate Anaconda environment with the command printed out (this needs to be done each time you want to use wahooMapsCreator maps)
 ```
