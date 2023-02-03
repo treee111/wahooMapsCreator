@@ -108,6 +108,8 @@ def download_tooling():
 
     # Windows
     if platform.system() == "Windows":
+        os.makedirs(USER_TOOLING_WIN_DIR, exist_ok=True)
+
         if not os.path.isfile(OSMOSIS_WIN_FILE_PATH):
             log.info('# Need to download Osmosis application for Windows')
             download_file(OSMOSIS_WIN_FILE_PATH,

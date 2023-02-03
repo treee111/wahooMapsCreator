@@ -163,7 +163,6 @@ class TestDownloader(unittest.TestCase):
             if os.path.exists(path):
                 shutil.rmtree(path)
 
-            os.makedirs(constants.USER_TOOLING_WIN_DIR, exist_ok=True)
             download_tooling()
 
             self.assertTrue(
