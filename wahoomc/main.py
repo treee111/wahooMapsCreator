@@ -12,7 +12,7 @@ from wahoomc.setup_functions import initialize_work_directories, \
     check_installation_of_required_programs, write_config_file, \
     adjustments_due_to_breaking_changes, copy_jsons_from_repo_to_user, \
     check_installed_version_against_latest_pypi
-from wahoomc.downloader import download_tooling_win
+from wahoomc.downloader import download_tooling
 
 from wahoomc.osm_maps_functions import OsmMaps
 from wahoomc.osm_maps_functions import OsmData
@@ -36,7 +36,7 @@ def run(run_level):
     check_installed_version_against_latest_pypi()
     initialize_work_directories()
     adjustments_due_to_breaking_changes()
-    download_tooling_win()
+    download_tooling()
     check_installation_of_required_programs()
 
     if run_level == 'init':

@@ -24,7 +24,6 @@ from wahoomc.constants import USER_MAPS_DIR
 from wahoomc.constants import USER_OUTPUT_DIR
 from wahoomc.constants import USER_CONFIG_DIR
 from wahoomc.constants import VERSION
-from wahoomc.constants import USER_TOOLING_WIN_DIR
 
 log = logging.getLogger('main-logger')
 
@@ -40,9 +39,6 @@ def initialize_work_directories():
     os.makedirs(USER_MAPS_DIR, exist_ok=True)
     os.makedirs(USER_OUTPUT_DIR, exist_ok=True)
     os.makedirs(USER_CONFIG_DIR, exist_ok=True)
-
-    if platform.system() == "Windows":
-        os.makedirs(USER_TOOLING_WIN_DIR, exist_ok=True)
 
 
 def move_old_content_into_new_dirs():
