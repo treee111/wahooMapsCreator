@@ -26,6 +26,7 @@ The instructions are intended to be suitable for beginners.
 
 If anything is unclear or seams wrong, write an [:pencil2: issue](https://github.com/treee111/wahooMapsCreator/issues)
 
+
 ## To start with...
 1. [:rocket: Quick Start Guide to download and install required programs](docs/QUICKSTART_ANACONDA.md#download-and-install-required-programs)
 
