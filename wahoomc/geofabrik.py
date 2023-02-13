@@ -17,6 +17,10 @@ from wahoomc.constants import special_regions, geofabrik_regions, block_download
 
 log = logging.getLogger('main-logger')
 
+with open(GEOFABRIK_PATH, encoding='utf8') as file_handle:
+    geofabrik_json_data = geojson.load(file_handle)
+file_handle.close()
+
 
 class Geofabrik:
     """
@@ -143,12 +147,8 @@ def geom(wanted):
     input parameter is the name of the desired country/region as use by Geofabric
     in their json file.
     """
-    with open(GEOFABRIK_PATH, encoding='utf8') as file_handle:
-        data = geojson.load(file_handle)
-    file_handle.close()
-
     # loop through all entries in the json file to find the one we want
-    for feature in data.features:
+    for feature in geofabrik_json_data.features:
         props = feature.properties
         ident_no = props.get('id', '')
         if ident_no != wanted:
@@ -159,11 +159,11 @@ def geom(wanted):
     return None, None
 
 
-def find_geofbrik_parent(name, geofabrik_json):
+def find_geofbrik_parent(name):
     """
     Get the parent map/region of a region from the already loaded json data
     """
-    for feature in geofabrik_json.features:
+    for feature in geofabrik_json_data.features:
         props = feature.properties
         ident_no = props.get('id', '')
         if ident_no != name:
@@ -172,11 +172,11 @@ def find_geofbrik_parent(name, geofabrik_json):
     return None, None
 
 
-def find_geofbrik_url(name, geofabrik_json):
+def find_geofbrik_url(name):
     """
     Get the map download url from a region with the already loaded json data
     """
-    for feature in geofabrik_json.features:
+    for feature in geofabrik_json_data.features:
         props = feature.properties
         ident_no = props.get('id', '')
         if ident_no != name:
@@ -196,10 +196,6 @@ def find_needed_countries(bbox_tiles, wanted_map, wanted_region_polygon):
       - polygon of desired region as present in the Geofabrik json file
     """
     output = []
-
-    with open(GEOFABRIK_PATH, encoding='utf8') as file_handle:
-        geofabrik_json_data = geojson.load(file_handle)
-    file_handle.close()
 
     # itterate through tiles and find Geofabrik regions that are in the tiles
     counter = 1
@@ -256,7 +252,7 @@ def find_needed_countries(bbox_tiles, wanted_map, wanted_region_polygon):
                             # handle sub-sub-regions like unterfranken->bayern->germany
                             while parent not in geofabrik_regions:
                                 parent, child = find_geofbrik_parent(
-                                    parent, geofabrik_json_data)
+                                        parent)
                                 if parent in geofabrik_regions:
                                     parent = child
                                     break
@@ -268,7 +264,7 @@ def find_needed_countries(bbox_tiles, wanted_map, wanted_region_polygon):
                             if parent not in must_download_maps:
                                 must_download_maps.append(parent)
                                 must_download_urls.append(
-                                    find_geofbrik_url(parent, geofabrik_json_data))
+                                        find_geofbrik_url(parent))
                                 #parent_added = 1
                         else:
                             if regionname not in must_download_maps:
