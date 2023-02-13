@@ -219,7 +219,18 @@ class OsmData():  # pylint: disable=too-few-public-methods
 
         # option 2a: use Geofabrik-URL to get the relevant tiles
         if o_input_data.geofabrik_tiles:
-            sys.exit("X/Y coordinated via Geofabrik not implemented now")
+            o_geofabrik = Geofabrik("1239871230978")
+
+            xy_coordinates = get_xy_coordinates_from_input(
+                o_input_data.xy_coordinates)
+
+            # loop through x/y combinations and find each tile in the json files
+            for xy_comb in xy_coordinates:
+                try:
+                    self.tiles.append(o_geofabrik.get_tile_by_one_xy_combination_from_geofabrik(
+                        xy_comb))
+                except TileNotFoundError:
+                    pass
 
         # option 2b: use static json files in the repo to get relevant tiles
         else:

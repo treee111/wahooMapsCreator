@@ -18,6 +18,23 @@
             ]
         },
         {
+            "name": "x/y: 134/88 geofabrik (STG)",
+            "type": "python",
+            "request": "launch",
+            "module": "wahoomc",
+            "console": "integratedTerminal",
+            "args": [
+                "cli",
+                "-xy",
+                "134/88",
+                "-md",
+                "100",
+                "-fp",
+                "-c",
+                "-gt"
+            ]
+        },
+        {
             "name": "x/y: 134/88,134/87 (STG+HN)",
             "type": "python",
             "request": "launch",
@@ -64,7 +81,7 @@
             ]
         },
         {
-            "name": "malta-geofabrik (no POI)",
+            "name": "malta geofabrik (no POI)",
             "type": "python",
             "request": "launch",
             "module": "wahoomc",
@@ -111,6 +128,23 @@
                 "-c",
                 "-md",
                 "100"
+            ]
+        },
+        {
+            "name": "x/y: malta geofabrik",
+            "type": "python",
+            "request": "launch",
+            "module": "wahoomc",
+            "console": "integratedTerminal",
+            "args": [
+                "cli",
+                "-xy",
+                "138/100",
+                "-fp",
+                "-c",
+                "-md",
+                "100",
+                "-gt"
             ]
         },
         {
@@ -170,6 +204,34 @@
             ]
         },
         {
+            "name": "x/y: 133/88 geofabrik (germany&france)",
+            "type": "python",
+            "request": "launch",
+            "module": "wahoomc",
+            "console": "integratedTerminal",
+            "args": [
+                "cli",
+                "-xy",
+                "133/88",
+                "-gt",
+                "-c"
+            ]
+        },
+        {
+            "name": "x/y: 134/89 geofabrik (bodensee 4 countries?!)",
+            "type": "python",
+            "request": "launch",
+            "module": "wahoomc",
+            "console": "integratedTerminal",
+            "args": [
+                "cli",
+                "-xy",
+                "134/89",
+                "-gt",
+                "-c"
+            ]
+        },
+        {
             "name": "x/y: 138/100 (malta) -c",
             "type": "python",
             "request": "launch",
@@ -183,6 +245,41 @@
                 "-c",
                 "-md",
                 "100"
+            ]
+        },
+        {
+            "name": "x/y: 72/98 geofabrik (virginia)",
+            "type": "python",
+            "request": "launch",
+            "module": "wahoomc",
+            "console": "integratedTerminal",
+            "args": [
+                "cli",
+                "-xy",
+                "72/98",
+                "-fp",
+                "-c",
+                "-md",
+                "100",
+                "-gt"
+            ]
+        },
+        {
+            "name": "virginia geofabrik -nbc",
+            "type": "python",
+            "request": "launch",
+            "module": "wahoomc",
+            "console": "integratedTerminal",
+            "args": [
+                "cli",
+                "-co",
+                "virginia",
+                "-fp",
+                "-c",
+                "-md",
+                "100",
+                "-gt",
+                "-nbc"
             ]
         },
         {

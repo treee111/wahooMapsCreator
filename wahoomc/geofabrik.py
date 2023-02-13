@@ -2,7 +2,7 @@
 functions and object for managing OSM maps
 """
 #!/usr/bin/python
-#pylint: skip-file
+# pylint: skip-file
 
 # import official python packages
 import sys
@@ -57,7 +57,7 @@ class Geofabrik:
 
         # convert to shape (multipolygon)
         wanted_region = shape(wanted_map_geom)
-        #print (f'shape = {wanted_region}')
+        # print (f'shape = {wanted_region}')
 
         # get bounding box
         (bbox_left, bbox_bottom, bbox_right, bbox_top) = wanted_region.bounds
@@ -113,9 +113,67 @@ class Geofabrik:
         log.info('Searching for needed maps, this can take a while.')
         tiles_of_input = find_needed_countries(
             bbox_tiles, self.wanted_map, wanted_region)
-        #print (f'Country= {country}')
+        # print (f'Country= {country}')
 
         return tiles_of_input
+
+    def get_tile_by_one_xy_combination_from_geofabrik(self, xy_coordinates):
+        """
+        Get the relevant tiles for a country
+        """
+        # X/Y coding here
+        top_x = xy_coordinates["x"]
+        bot_x = xy_coordinates["x"]
+        top_y = xy_coordinates["y"]
+        bot_y = xy_coordinates["y"]
+
+        # Build list of tiles from the bounding box
+        bbox_tiles = []
+        for x_value in range(top_x, bot_x + 1):
+            for y_value in range(top_y, bot_y + 1):
+                (tile_top, tile_left) = num2deg(x_value, y_value)
+                (tile_bottom, tile_right) = num2deg(x_value+1, y_value+1)
+                if tile_left < -180:
+                    tile_left = -180
+                if tile_left > 180:
+                    tile_left = 180
+                if tile_right < -180:
+                    tile_right = -180
+                if tile_right > 180:
+                    tile_right = 180
+                if tile_top < -90:
+                    tile_top = -90
+                if tile_top > 90:
+                    tile_top = 90
+                if tile_bottom < -90:
+                    tile_bottom = -90
+                if tile_bottom > 90:
+                    tile_bottom = 90
+                bbox_tiles.append({'x': x_value, 'y': y_value, 'tile_left': tile_left,
+                                   'tile_top': tile_top, 'tile_right': tile_right,
+                                   'tile_bottom': tile_bottom})
+
+        coords = []
+        coords.append((tile_top, tile_left))
+        coords.append((tile_top, tile_right))
+        coords.append((tile_bottom, tile_right))
+        coords.append((tile_bottom, tile_left))
+        coords.append((tile_top, tile_left))
+        print(f'Coords= {coords}')
+        p = Polygon(coords)
+        print(f'p= {p}')
+        wanted_region = shape(p)
+        print(f'wanted_region= {wanted_region}')
+        (bbox_left, bbox_bottom, bbox_right, bbox_top) = wanted_region.bounds
+
+        # wanted_region = bbox_tiles
+
+        log.info('Searching for needed maps, this can take a while.')
+        tiles_of_input = find_needed_countries(
+            bbox_tiles, self.wanted_map, wanted_region, xy_mode=True)
+        # print (f'Country= {country}')
+
+        return tiles_of_input[0]
 
 
 def deg2num(lat_deg, lon_deg, zoom=8):
@@ -153,7 +211,7 @@ def geom(wanted):
         ident_no = props.get('id', '')
         if ident_no != wanted:
             continue
-        #print (props.get('urls', ''))
+        # print (props.get('urls', ''))
         wurls = props.get('urls', '')
         return (feature.geometry, wurls.get('pbf', ''))
     return None, None
@@ -181,13 +239,13 @@ def find_geofbrik_url(name):
         ident_no = props.get('id', '')
         if ident_no != name:
             continue
-        #print (props.get('urls', ''))
+        # print (props.get('urls', ''))
         wurls = props.get('urls', '')
         return wurls.get('pbf', '')
     return None
 
 
-def find_needed_countries(bbox_tiles, wanted_map, wanted_region_polygon):
+def find_needed_countries(bbox_tiles, wanted_map, wanted_region_polygon, xy_mode=False):
     """
     Find the maps to download from Geofabrik for a given range of tiles
     arguments are
@@ -231,84 +289,108 @@ def find_needed_countries(bbox_tiles, wanted_map, wanted_region_polygon):
             rgeom = regions.geometry
             rshape = shape(rgeom)
 
-            #print (f'Processing region: {regionname}')
+            if not xy_mode:
 
-            # check if the region we are processing is needed for the tile we are processing
+                # print (f'Processing region: {regionname}')
 
-            # If currently processing country/region IS the desired country/region
-            if regionname == wanted_map:
-                # Check if it is part of the tile we are processing
-                if rshape.intersects(poly):  # if so
-                    # catch special_regions like (former) colonies where the map of the region is not fysically in the map of the parent country.
-                    # example Guadeloupe, it's parent country is France but Guadeloupe is not located within the region covered by the map of France
-                    if wanted_map not in special_regions:
-                        # If we are proseccing a sub-region add the parent of this sub-region
-                        # to the must download list.
-                        # This to prevent downloading several small regions AND it's containing region
-                        # we are processing a sub-regiongo find the parent region:
-                        if parent not in geofabrik_regions and regionname not in geofabrik_regions:
-                            # we are processing a sub-regiongo find the parent region
-                            x_value = 0
-                            # handle sub-sub-regions like unterfranken->bayern->germany
-                            while parent not in geofabrik_regions:
-                                parent, child = find_geofbrik_parent(
+                # check if the region we are processing is needed for the tile we are processing
+
+                # If currently processing country/region IS the desired country/region
+                if regionname == wanted_map:
+                    # Check if it is part of the tile we are processing
+                    if rshape.intersects(poly):  # if so
+                        # catch special_regions like (former) colonies where the map of the region is not fysically in the map of the parent country.
+                        # example Guadeloupe, it's parent country is France but Guadeloupe is not located within the region covered by the map of France
+                        if wanted_map not in special_regions:
+                            # If we are proseccing a sub-region add the parent of this sub-region
+                            # to the must download list.
+                            # This to prevent downloading several small regions AND it's containing region
+                            # we are processing a sub-regiongo find the parent region:
+                            if parent not in geofabrik_regions and regionname not in geofabrik_regions:
+                                # we are processing a sub-regiongo find the parent region
+                                x_value = 0
+                                # handle sub-sub-regions like unterfranken->bayern->germany
+                                while parent not in geofabrik_regions:
+                                    parent, child = find_geofbrik_parent(
                                         parent)
-                                if parent in geofabrik_regions:
-                                    parent = child
-                                    break
-                                if x_value > 10:  # prevent endless loop
-                                    log.error(
-                                        'Can not find parent map of region: %s', regionname)
-                                    sys.exit()
-                                x_value += 1
-                            if parent not in must_download_maps:
-                                must_download_maps.append(parent)
-                                must_download_urls.append(
+                                    if parent in geofabrik_regions:
+                                        parent = child
+                                        break
+                                    if x_value > 10:  # prevent endless loop
+                                        log.error(
+                                            'Can not find parent map of region: %s', regionname)
+                                        sys.exit()
+                                    x_value += 1
+                                if parent not in must_download_maps:
+                                    must_download_maps.append(parent)
+                                    must_download_urls.append(
                                         find_geofbrik_url(parent))
-                                #parent_added = 1
+                                    # parent_added = 1
+                            else:
+                                if regionname not in must_download_maps:
+                                    must_download_maps.append(regionname)
+                                    must_download_urls.append(rurl)
                         else:
+                            # wanted_map is a special region like Guadeloupe, France
                             if regionname not in must_download_maps:
                                 must_download_maps.append(regionname)
                                 must_download_urls.append(rurl)
-                    else:
-                        # wanted_map is a special region like Guadeloupe, France
-                        if regionname not in must_download_maps:
-                            must_download_maps.append(regionname)
-                            must_download_urls.append(rurl)
-                    # if there is an intersect, force the tile to be put in the output
-                    force_added = 1
-                else:  # currently processing tile does not contain, a part of, the desired region
-                    continue
+                        # if there is an intersect, force the tile to be put in the output
+                        force_added = 1
+                    else:  # currently processing tile does not contain, a part of, the desired region
+                        continue
 
-            # currently processing country/region is NOT the desired country/region but might be
-            # in the tile (neighbouring country)
-            if regionname != wanted_map:
-                # check if we are processing a country or a sub-region.
-                # For countries only process other countries. also block special geofabrik sub regions
+                # currently processing country/region is NOT the desired country/region but might be
+                # in the tile (neighbouring country)
+                if regionname != wanted_map:
+                    # check if we are processing a country or a sub-region.
+                    # For countries only process other countries. also block special geofabrik sub regions
+                    if parent in geofabrik_regions and regionname not in block_download:
+                        # processing a country and no special sub-region
+                        # check if rshape is subset of desired region. If so discard it
+                        if wanted_region_polygon.contains(rshape):
+                            # print (f'\t{regionname} is a subset of {wanted_map}, discard it')
+                            continue
+                        # check if rshape is a superset of desired region. if so discard it
+                        if rshape.contains(wanted_region_polygon):
+                            # print (f'\t{regionname} is a superset of {wanted_map}, discard it')
+                            # if regionname not in must_download_maps:
+                            #    must_download_maps.append (regionname)
+                            #    must_download_urls.append (rurl)
+                            #    parent_added = 1
+                            continue
+                        # Check if rshape is a part of the tile
+                        if rshape.intersects(poly):
+                            # print(f'\tintersecting tile: {regionname} tile={tile}')
+                            if regionname not in must_download_maps:
+                                must_download_maps.append(regionname)
+                                must_download_urls.append(rurl)
+
+            else:  # XY
                 if parent in geofabrik_regions and regionname not in block_download:
                     # processing a country and no special sub-region
                     # check if rshape is subset of desired region. If so discard it
                     if wanted_region_polygon.contains(rshape):
-                        #print (f'\t{regionname} is a subset of {wanted_map}, discard it')
+                        # print (f'\t{regionname} is a subset of {wanted_map}, discard it')
                         continue
                     # check if rshape is a superset of desired region. if so discard it
                     if rshape.contains(wanted_region_polygon):
-                        #print (f'\t{regionname} is a superset of {wanted_map}, discard it')
+                        # print (f'\t{regionname} is a superset of {wanted_map}, discard it')
                         # if regionname not in must_download_maps:
                         #    must_download_maps.append (regionname)
                         #    must_download_urls.append (rurl)
                         #    parent_added = 1
                         continue
-                    # Check if rshape is a part of the tile
+                    # Check if rshape is a part of the tile / XY
                     if rshape.intersects(poly):
-                        #print(f'\tintersecting tile: {regionname} tile={tile}')
+                        # print(f'\tintersecting tile: {regionname} tile={tile}')
                         if regionname not in must_download_maps:
                             must_download_maps.append(regionname)
                             must_download_urls.append(rurl)
 
         # If this tile contains the desired region, add it to the output
-        #print (f'map= {wanted_map}\tmust_download= {must_download_maps}\tparent_added= {parent_added}\tforce_added= {force_added}')
-        if wanted_map in must_download_maps or parent_added == 1 or force_added == 1:
+        # print (f'map= {wanted_map}\tmust_download= {must_download_maps}\tparent_added= {parent_added}\tforce_added= {force_added}')
+        if wanted_map in must_download_maps or parent_added == 1 or force_added == 1 or xy_mode is True:
             # first replace any forward slashes with underscores (us/texas to us_texas)
             must_download_maps = [sub.replace(
                 '/', '_') for sub in must_download_maps]
