@@ -27,10 +27,8 @@ class Geofabrik:
 
     def __init__(self, country):
         # input parameters
-        self.wanted_map = country
-        # replace spaces in self.wanted_map with geofabrik minuses
-        self.wanted_map = self.wanted_map.replace(" ", "-")
-        self.wanted_map = self.wanted_map.lower()
+        self.wanted_map = o_geofabrik_json.translate_id_no_to_geofabrik(
+            country)
 
         self.tiles = []
         self.border_countries = {}
@@ -42,16 +40,8 @@ class Geofabrik:
         """
 
         # Check if wanted_map is in the json file and if so get the polygon (shape)
-        wanted_map_geom, wanted_url = geom(self.wanted_map)
-        if not wanted_map_geom:
-            # try to prepend us\ to the self.wanted_map
-            wanted_map_geom, wanted_url = geom('us/'+self.wanted_map)
-            if wanted_map_geom:
-                self.wanted_map = 'us/'+self.wanted_map
-            else:
-                log.error(
-                    'failed to find country or region %s in Geofabrik json file', self.wanted_map)
-                sys.exit()
+        wanted_map_geom = o_geofabrik_json.get_geofabrik_geometry(
+            self.wanted_map)
 
         # convert to shape (multipolygon)
         wanted_region = shape(wanted_map_geom)
@@ -196,25 +186,6 @@ def num2deg(xtile, ytile, zoom=8):
     return (lat_deg, lon_deg)
 
 
-def geom(wanted):
-    """
-    Get the Geofabrik outline of the desired country/region from the Geofabrik json file
-    and the download url of the map.
-    input parameter is the name of the desired country/region as use by Geofabric
-    in their json file.
-    """
-    # loop through all entries in the json file to find the one we want
-    for feature in o_geofabrik_json.raw_json.features:
-        props = feature.properties
-        ident_no = props.get('id', '')
-        if ident_no != wanted:
-            continue
-        # print (props.get('urls', ''))
-        wurls = props.get('urls', '')
-        return (feature.geometry, wurls.get('pbf', ''))
-    return None, None
-
-
 def find_needed_countries(bbox_tiles, wanted_map, wanted_region_polygon, xy_mode=False):
     """
     Find the maps to download from Geofabrik for a given range of tiles
@@ -252,14 +223,14 @@ def find_needed_countries(bbox_tiles, wanted_map, wanted_region_polygon, xy_mode
         must_download_urls = []
 
         # itterate through countries/regions in the geofabrik json file
-        for regions in o_geofabrik_json.raw_json.features:
-            props = regions.properties
-            parent = props.get('parent', '')
-            regionname = props.get('id', '')
-            rurls = props.get('urls', '')
-            rurl = rurls.get('pbf', '')
-            rgeom = regions.geometry
-            rshape = shape(rgeom)
+        for region, value in o_geofabrik_json.geofabrik_overview.items():
+            regionname = region
+            try:
+                parent = value['parent']
+            except KeyError:
+                pass
+            rurl = value['pbf_url']
+            rshape = shape(value['geometry'])
 
             if not xy_mode:
 
