@@ -8,7 +8,7 @@ import unittest
 from wahoomc import file_directory_functions as fd_fct
 from wahoomc.downloader import Downloader
 from wahoomc import constants
-from wahoomc.geofabrik import find_geofbrik_parent
+from wahoomc.constants_functions import GeofabrikJson
 from wahoomc.constants_functions import translate_country_input_to_geofabrik
 
 skip_countries_for_geofabrik = [
@@ -32,9 +32,7 @@ class TestConstantsGeofabrik(unittest.TestCase):
             o_downloader = Downloader(24, False)
             o_downloader.download_geofabrik_file()
 
-        with open(constants.GEOFABRIK_PATH, encoding='utf8') as file_handle:
-            self.geofabrik_json_data = geojson.load(file_handle)
-        file_handle.close()
+        self.o_geofabrik_json = GeofabrikJson()
 
     def test_if_json_countries_exist_in_geofabrik(self):
         """
@@ -48,17 +46,19 @@ class TestConstantsGeofabrik(unittest.TestCase):
                 if country in skip_countries_for_geofabrik:
                     continue
 
-                parent, child = find_geofbrik_parent(country)
+                parent, child = self.o_geofabrik_json.find_geofbrik_parent(
+                    country)
                 if not child:
-                    parent, child = find_geofbrik_parent(
+                    parent, child = self.o_geofabrik_json.find_geofbrik_parent(
                         translate_country_input_to_geofabrik(country))
 
                     if not child:
                         country = country.replace('_', '-')
-                        parent, child = find_geofbrik_parent(country)
+                        parent, child = self.o_geofabrik_json.find_geofbrik_parent(
+                            country)
 
                         if not child:
-                            parent, child = find_geofbrik_parent(
+                            parent, child = self.o_geofabrik_json.find_geofbrik_parent(
                                 'us/'+country)
 
                             if not child:
@@ -76,7 +76,7 @@ class TestConstantsGeofabrik(unittest.TestCase):
 
         id_with_no_parent_geofabrik = []
 
-        for feature in self.geofabrik_json_data.features:
+        for feature in self.o_geofabrik_json.json_data.features:
             try:
                 feature.properties['parent']
             except KeyError:

@@ -8,6 +8,7 @@ import sys
 import logging
 import os
 import struct
+import geojson
 
 # import custom python packages
 from wahoomc import constants
@@ -15,6 +16,7 @@ from wahoomc.constants import RESOURCES_DIR
 from wahoomc.constants import TOOLING_WIN_DIR
 from wahoomc.constants import USER_CONFIG_DIR
 from wahoomc.constants import USER_TOOLING_WIN_DIR
+from wahoomc.constants import GEOFABRIK_PATH
 from wahoomc.file_directory_functions import read_json_file_generic
 
 log = logging.getLogger('main-logger')
@@ -26,6 +28,44 @@ class TagWahooXmlNotFoundError(Exception):
 
 class TagsToKeepNotFoundError(Exception):
     """Raised when the specified tags to keep .json file does not exist"""
+
+
+class GeofabrikJson:
+    """
+    This is a Geofabrik .json processing class for constants in the Geofabrik .json file
+    """
+
+    def __init__(self):
+
+        with open(GEOFABRIK_PATH, encoding='utf8') as file_handle:
+            self.json_data = geojson.load(file_handle)
+        file_handle.close()
+
+    def find_geofbrik_parent(self, name):
+        """
+        Get the parent map/region of a region from the already loaded json data
+        """
+        for feature in self.json_data.features:
+            props = feature.properties
+            ident_no = props.get('id', '')
+            if ident_no != name:
+                continue
+            return (props.get('parent', ''), props.get('id', ''))
+        return None, None
+
+    def find_geofbrik_url(self, name):
+        """
+        Get the map download url from a region with the already loaded json data
+        """
+        for feature in self.json_data.features:
+            props = feature.properties
+            ident_no = props.get('id', '')
+            if ident_no != name:
+                continue
+            #print (props.get('urls', ''))
+            wurls = props.get('urls', '')
+            return wurls.get('pbf', '')
+        return None
 
 
 def get_region_of_country(county):

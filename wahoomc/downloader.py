@@ -136,6 +136,13 @@ def download_tooling():
         os.makedirs(os.path.dirname(mapwriter_plugin_path), exist_ok=True)
         download_file(mapwriter_plugin_path, mapwriter_plugin_url)
 
+    # download geofabrik json as this will be needed always
+    # because of the .json file replacement by geofabrik
+    o_downloader = Downloader(24, False)
+
+    if o_downloader.should_geofabrik_file_be_downloaded():
+        o_downloader.download_geofabrik_file()
+
 
 def get_latest_pypi_version():
     """
