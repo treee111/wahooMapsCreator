@@ -197,7 +197,7 @@ def find_needed_countries(bbox_tiles, wanted_map, wanted_region_polygon):
         must_download_urls = []
 
         # itterate through countries/regions in the geofabrik json file
-        for regions in o_geofabrik_json.json_data.features:
+        for regions in o_geofabrik_json.raw_json.features:
             props = regions.properties
             parent = props.get('parent', '')
             regionname = props.get('id', '')
@@ -226,7 +226,7 @@ def find_needed_countries(bbox_tiles, wanted_map, wanted_region_polygon):
                             x_value = 0
                             # handle sub-sub-regions like unterfranken->bayern->germany
                             while parent not in geofabrik_regions:
-                                parent, child = o_geofabrik_json.find_geofbrik_parent(
+                                parent, child = o_geofabrik_json.get_geofabrik_parent_country(
                                     parent)
                                 if parent in geofabrik_regions:
                                     parent = child
@@ -239,7 +239,7 @@ def find_needed_countries(bbox_tiles, wanted_map, wanted_region_polygon):
                             if parent not in must_download_maps:
                                 must_download_maps.append(parent)
                                 must_download_urls.append(
-                                    o_geofabrik_json.find_geofbrik_url(parent))
+                                    o_geofabrik_json.get_geofabrik_url(parent))
                                 #parent_added = 1
                         else:
                             if regionname not in must_download_maps:

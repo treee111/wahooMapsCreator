@@ -36,35 +36,58 @@ class GeofabrikJson:
     """
 
     def __init__(self):
+        self.raw_json = []
+        self.geofabrik_overview = {}
+        self.geofabrik_region_overview = {}
 
         with open(GEOFABRIK_PATH, encoding='utf8') as file_handle:
-            self.json_data = geojson.load(file_handle)
+            self.raw_json = geojson.load(file_handle)
         file_handle.close()
 
-    def find_geofbrik_parent(self, name):
+        # create a dict with information easy to access because they are often needed
+        for feature in self.raw_json.features:
+            props = feature.properties
+            id_no = props['id']
+            pbf_url = props['urls']['pbf']
+
+            try:
+                parent = props['parent']
+
+                self.geofabrik_overview[id_no] = {
+                    'parent': parent,
+                    'pbf_url': pbf_url}
+            except KeyError:
+                self.geofabrik_overview[id_no] = {
+                    'pbf_url': pbf_url}
+                self.geofabrik_region_overview[id_no] = {
+                    'pbf_url': pbf_url}
+
+        print("done")
+
+    def get_geofabrik_parent_country(self, id_no):
         """
         Get the parent map/region of a region from the already loaded json data
         """
-        for feature in self.json_data.features:
-            props = feature.properties
-            ident_no = props.get('id', '')
-            if ident_no != name:
-                continue
-            return (props.get('parent', ''), props.get('id', ''))
-        return None, None
+        try:
+            entry = self.geofabrik_overview[id_no]
+            if 'parent' in entry:
+                return (entry['parent'], id_no)
 
-    def find_geofbrik_url(self, name):
+            return ('', id_no)
+        except KeyError:
+            return None, None
+
+    def get_geofabrik_url(self, id_no):
         """
         Get the map download url from a region with the already loaded json data
         """
-        for feature in self.json_data.features:
-            props = feature.properties
-            ident_no = props.get('id', '')
-            if ident_no != name:
-                continue
-            #print (props.get('urls', ''))
-            wurls = props.get('urls', '')
-            return wurls.get('pbf', '')
+        try:
+            entry = self.geofabrik_overview[id_no]
+            if 'pbf_url' in entry:
+                return entry['pbf_url']
+        except KeyError:
+            pass
+
         return None
 
 
