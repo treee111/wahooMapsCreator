@@ -179,10 +179,27 @@ class TestConstantsGeofabrik(unittest.TestCase):
             'xy')
         self.assertTrue(parent is None and child is None)
 
+    def test_if_input_is_geofabrik_id(self):
+        """
+        check if the input is a id of the geofabrik file
+        """
+        self.assertTrue(
+            self.o_geofabrik_json.is_input_a_geofabrik_id_no('germany'))
+
+        self.assertTrue(
+            self.o_geofabrik_json.is_input_a_geofabrik_id_no('baden-wuerttemberg'))
+
+        self.assertTrue(
+            self.o_geofabrik_json.is_input_a_geofabrik_id_no('asia'))
+        self.assertFalse(
+            self.o_geofabrik_json.is_input_a_geofabrik_id_no('xy'))
+
+        self.assertFalse(self.o_geofabrik_json.is_input_a_geofabrik_id_no('*'))
+
     def get_geofabrik_id_by_json_file_country(self, country):
         """
-           get geofabrik id by country .json filename
-           """
+        get geofabrik id by country .json filename
+        """
         # get geofabrik id by country .json filename
         # 1. raw
         # parent, child = self.o_geofabrik_json.find_geofbrik_parent(

@@ -90,6 +90,15 @@ class GeofabrikJson:
 
         return None
 
+    def is_input_a_geofabrik_id_no(self, id_no):
+        """
+        check if the given input is a geofabrik id number
+        """
+        if id_no in self.geofabrik_overview:
+            return True
+
+        return False
+
 
 def get_region_of_country(county):
     """
