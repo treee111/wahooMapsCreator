@@ -15,8 +15,8 @@ import requests
 
 # import custom python packages
 from wahoomc.file_directory_functions import download_url_to_file, unzip
-from wahoomc.constants_functions import translate_country_input_to_geofabrik, \
-    get_geofabrik_region_of_country, get_tooling_win_path
+from wahoomc.constants_functions import translate_country_input_to_geofabrik, get_tooling_win_path
+from wahoomc.constants_functions import GeofabrikJson
 
 from wahoomc.constants import USER_DL_DIR
 from wahoomc.constants import USER_MAPS_DIR
@@ -75,22 +75,17 @@ def download_file(target_filepath, url, target_dir=""):
 
 def get_osm_pbf_filepath_url(country):
     """
-    build the geofabrik download url to a countries' OSM file and download filepath
+    fetch the geofabrik download url to countries' OSM file
+    and build download filepath to countries' OSM file
     """
+    o_geofabrik_json = GeofabrikJson()
 
-    transl_c = translate_country_input_to_geofabrik(country)
-    region = get_geofabrik_region_of_country(country)
-    if region != 'no':
-        url = 'https://download.geofabrik.de/' + region + \
-            '/' + transl_c + '-latest.osm.pbf'
-    else:
-        url = 'https://download.geofabrik.de/' + transl_c + '-latest.osm.pbf'
-
+    # build path to downloaded file with translated geofabrik country
     map_file_path = os.path.join(
-        USER_MAPS_DIR, f'{transl_c}' + '-latest.osm.pbf')
+        USER_MAPS_DIR, f'{o_geofabrik_json.get_geofabrik_parent(country)[1]}' + '-latest.osm.pbf')
 
     # return URL and download filepath
-    return map_file_path, url
+    return map_file_path, o_geofabrik_json.get_geofabrik_url(country)
 
 
 def download_tooling():

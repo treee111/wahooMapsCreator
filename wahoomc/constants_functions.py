@@ -30,6 +30,10 @@ class TagsToKeepNotFoundError(Exception):
     """Raised when the specified tags to keep .json file does not exist"""
 
 
+class CountyIsNoGeofabrikCountry(Exception):
+    """Raised when actual country is not a geofabrik country"""
+
+
 class GeofabrikJson:
     """
     This is a Geofabrik .json processing class for constants in the Geofabrik .json file
@@ -80,12 +84,14 @@ class GeofabrikJson:
         """
         Get the parent map/region of a region from the already loaded json data
         """
-        try:
-            entry = self.geofabrik_overview[id_no]
-            if 'parent' in entry:
-                return (entry['parent'], id_no)
+        id_no_translated = self.translate_id_no_to_geofabrik(id_no)
 
-            return ('', id_no)
+        try:
+            entry = self.geofabrik_overview[id_no_translated]
+            if 'parent' in entry:
+                return (entry['parent'], id_no_translated)
+
+            return ('', id_no_translated)
         except KeyError:
             return None, None
 
@@ -93,8 +99,9 @@ class GeofabrikJson:
         """
         Get the map download url from a region with the already loaded json data
         """
+        id_no_translated = self.translate_id_no_to_geofabrik(id_no)
         try:
-            entry = self.geofabrik_overview[id_no]
+            entry = self.geofabrik_overview[id_no_translated]
             if 'pbf_url' in entry:
                 return entry['pbf_url']
         except KeyError:
@@ -110,6 +117,23 @@ class GeofabrikJson:
             return True
 
         return False
+
+    def translate_id_no_to_geofabrik(self, country):
+        """
+        get geofabrik id by country .json filename
+        """
+
+        if country in self.geofabrik_overview:
+            return country
+
+        if country.replace('_', '-') in self.geofabrik_overview:
+            return country.replace('_', '-')
+
+        if 'us/'+country.replace('_', '-') in self.geofabrik_overview:
+            return 'us/'+country.replace('_', '-')
+
+        # if none of them got triggert --> exception
+        raise CountyIsNoGeofabrikCountry
 
 
 def get_region_of_country(county):

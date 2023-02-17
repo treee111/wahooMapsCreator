@@ -10,7 +10,7 @@ from wahoomc.downloader import Downloader
 from wahoomc.downloader import get_osm_pbf_filepath_url
 from wahoomc import constants
 from wahoomc.constants_functions import GeofabrikJson
-from wahoomc.constants_functions import get_geofabrik_region_of_country
+from wahoomc.constants_functions import get_geofabrik_region_of_country, CountyIsNoGeofabrikCountry
 
 # json countries with no geofabrik id partner
 json_file_countries_without_geofabrik_id = ['clipperton_island', 'saint_pierre_and_miquelon', 'trinidad_and_tobago',
@@ -220,9 +220,9 @@ class TestConstantsGeofabrik(unittest.TestCase):
             'asia')
         self.assertTrue(parent == '' and child == 'asia')
 
-        parent, child = self.o_geofabrik_json.get_geofabrik_parent_country(
-            'xy')
-        self.assertTrue(parent is None and child is None)
+        with self.assertRaises(CountyIsNoGeofabrikCountry):
+            parent, child = self.o_geofabrik_json.get_geofabrik_parent_country(
+                'xy')
 
     def test_if_input_is_geofabrik_id(self):
         """
