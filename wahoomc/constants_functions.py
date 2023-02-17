@@ -34,18 +34,30 @@ class GeofabrikJson:
     """
     This is a Geofabrik .json processing class for constants in the Geofabrik .json file
     """
+    raw_json = None
+    geofabrik_overview = {}
+    geofabrik_region_overview = {}
 
     def __init__(self):
-        self.raw_json = []
-        self.geofabrik_overview = {}
-        self.geofabrik_region_overview = {}
+        # read geofabrik .json file and fill class-attributes // access is only once
+        if GeofabrikJson.raw_json is None and not GeofabrikJson.geofabrik_overview \
+                and not GeofabrikJson.geofabrik_region_overview:
+            GeofabrikJson.raw_json, GeofabrikJson.geofabrik_overview, GeofabrikJson.geofabrik_region_overview = self.read_geofabrik_json_file()
+
+    def read_geofabrik_json_file(self):
+        """
+        read geofabrik .json file and fill class-attributes
+        """
+        raw_json = []
+        geofabrik_overview = {}
+        geofabrik_region_overview = {}
 
         with open(GEOFABRIK_PATH, encoding='utf8') as file_handle:
-            self.raw_json = geojson.load(file_handle)
+            raw_json = geojson.load(file_handle)
         file_handle.close()
 
         # create a dict with information easy to access because they are often needed
-        for feature in self.raw_json.features:
+        for feature in raw_json.features:
             props = feature.properties
             id_no = props['id']
             pbf_url = props['urls']['pbf']
@@ -53,16 +65,16 @@ class GeofabrikJson:
             try:
                 parent = props['parent']
 
-                self.geofabrik_overview[id_no] = {
+                geofabrik_overview[id_no] = {
                     'parent': parent,
                     'pbf_url': pbf_url}
             except KeyError:
-                self.geofabrik_overview[id_no] = {
+                geofabrik_overview[id_no] = {
                     'pbf_url': pbf_url}
-                self.geofabrik_region_overview[id_no] = {
+                geofabrik_region_overview[id_no] = {
                     'pbf_url': pbf_url}
 
-        print("done")
+        return raw_json, geofabrik_overview, geofabrik_region_overview
 
     def get_geofabrik_parent_country(self, id_no):
         """
