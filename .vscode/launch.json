@@ -212,7 +212,7 @@
             ]
         },
         {
-            "name": "american_samoa #135",
+            "name": "solomon_islands geofabrik",
             "type": "python",
             "request": "launch",
             "module": "wahoomc",
@@ -220,25 +220,11 @@
             "args": [
                 "cli",
                 "-co",
-                "american_samoa",
+                "solomon_islands",
                 "-c",
                 "-md",
                 "100",
-            ]
-        },
-        {
-            "name": "commonwealth_of_the_northern_mariana_islands #135",
-            "type": "python",
-            "request": "launch",
-            "module": "wahoomc",
-            "console": "integratedTerminal",
-            "args": [
-                "cli",
-                "-co",
-                "commonwealth_of_the_northern_mariana_islands",
-                "-c",
-                "-md",
-                "100",
+                "-gt"
             ]
         }
     ]

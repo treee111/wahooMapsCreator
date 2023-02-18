@@ -47,7 +47,7 @@ class TestConstantsGeofabrik(unittest.TestCase):
         - some countries are skipped because they do not exist in geofabrik
         """
         for country in self.relevant_countries:
-            child = self.get_geofabrik_id_by_json_file_country(country)
+            child = self.o_geofabrik_json.translate_id_no_to_geofabrik(country)
 
             self.assertIn(child, {country.replace(
                 '_', '-'), 'us/'+country.replace('_', '-')})
@@ -142,32 +142,6 @@ class TestConstantsGeofabrik(unittest.TestCase):
         transl_country = self.o_geofabrik_json.translate_id_no_to_geofabrik(
             'nebraska')
         self.assertEqual('us/nebraska', transl_country)
-
-    def get_geofabrik_id_by_json_file_country(self, country):
-        """
-        get geofabrik id by country .json filename
-        """
-        # get geofabrik id by country .json filename
-        # 1. raw
-        # parent, child = self.o_geofabrik_json.find_geofbrik_parent(
-        #     country)
-        # if not child:
-
-        # get geofabrik id by country .json filename
-        # 1. '_' replaced by '-'
-        child = self.o_geofabrik_json.get_geofabrik_parent_country(
-            country.replace('_', '-'))[1]
-        if child:
-            return child
-
-        # 2. 'us/' prefix and '_' replaced by '-'
-        child = self.o_geofabrik_json.get_geofabrik_parent_country(
-            'us/'+country.replace('_', '-'))[1]
-
-        if child:
-            return child
-
-        return None
 
 
 if __name__ == '__main__':

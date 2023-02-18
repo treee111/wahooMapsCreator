@@ -156,7 +156,7 @@ def create_checkbox(self, default_value, description, row):
 
 def get_countries_of_continent_from_geofabrik(continent):
     """
-    geofabrik_regions as i defined them are the ones without parent
+    returns all countries of a continent to be selected in UI
     """
     countries = []
     for region, value in o_geofabrik_json.geofabrik_overview.items():

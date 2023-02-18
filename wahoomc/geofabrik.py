@@ -2,7 +2,7 @@
 functions and object for managing OSM maps
 """
 #!/usr/bin/python
-#pylint: skip-file
+# pylint: skip-file
 
 # import official python packages
 import sys
@@ -54,7 +54,7 @@ class Geofabrik:
 
         # convert to shape (multipolygon)
         wanted_region = shape(wanted_map_geom)
-        #print (f'shape = {wanted_region}')
+        # print (f'shape = {wanted_region}')
 
         # get bounding box
         (bbox_left, bbox_bottom, bbox_right, bbox_top) = wanted_region.bounds
@@ -110,7 +110,7 @@ class Geofabrik:
         log.info('Searching for needed maps, this can take a while.')
         tiles_of_input = find_needed_countries(
             bbox_tiles, self.wanted_map, wanted_region)
-        #print (f'Country= {country}')
+        # print (f'Country= {country}')
 
         return tiles_of_input
 
@@ -154,7 +154,7 @@ def geom(wanted):
         ident_no = props.get('id', '')
         if ident_no != wanted:
             continue
-        #print (props.get('urls', ''))
+        # print (props.get('urls', ''))
         wurls = props.get('urls', '')
         return (feature.geometry, wurls.get('pbf', ''))
     return None, None
@@ -207,7 +207,7 @@ def find_needed_countries(bbox_tiles, wanted_map, wanted_region_polygon):
             rgeom = regions.geometry
             rshape = shape(rgeom)
 
-            #print (f'Processing region: {regionname}')
+            # print (f'Processing region: {regionname}')
 
             # check if the region we are processing is needed for the tile we are processing
 
@@ -241,7 +241,7 @@ def find_needed_countries(bbox_tiles, wanted_map, wanted_region_polygon):
                                 must_download_maps.append(parent)
                                 must_download_urls.append(
                                     o_geofabrik_json.get_geofabrik_url(parent))
-                                #parent_added = 1
+                                # parent_added = 1
                         else:
                             if regionname not in must_download_maps:
                                 must_download_maps.append(regionname)
@@ -265,11 +265,11 @@ def find_needed_countries(bbox_tiles, wanted_map, wanted_region_polygon):
                     # processing a country and no special sub-region
                     # check if rshape is subset of desired region. If so discard it
                     if wanted_region_polygon.contains(rshape):
-                        #print (f'\t{regionname} is a subset of {wanted_map}, discard it')
+                        # print (f'\t{regionname} is a subset of {wanted_map}, discard it')
                         continue
                     # check if rshape is a superset of desired region. if so discard it
                     if rshape.contains(wanted_region_polygon):
-                        #print (f'\t{regionname} is a superset of {wanted_map}, discard it')
+                        # print (f'\t{regionname} is a superset of {wanted_map}, discard it')
                         # if regionname not in must_download_maps:
                         #    must_download_maps.append (regionname)
                         #    must_download_urls.append (rurl)
@@ -277,13 +277,13 @@ def find_needed_countries(bbox_tiles, wanted_map, wanted_region_polygon):
                         continue
                     # Check if rshape is a part of the tile
                     if rshape.intersects(poly):
-                        #print(f'\tintersecting tile: {regionname} tile={tile}')
+                        # print(f'\tintersecting tile: {regionname} tile={tile}')
                         if regionname not in must_download_maps:
                             must_download_maps.append(regionname)
                             must_download_urls.append(rurl)
 
         # If this tile contains the desired region, add it to the output
-        #print (f'map= {wanted_map}\tmust_download= {must_download_maps}\tparent_added= {parent_added}\tforce_added= {force_added}')
+        # print (f'map= {wanted_map}\tmust_download= {must_download_maps}\tparent_added= {parent_added}\tforce_added= {force_added}')
         if wanted_map in must_download_maps or parent_added == 1 or force_added == 1:
             # first replace any forward slashes with underscores (us/texas to us_texas)
             must_download_maps = [sub.replace(

@@ -7,7 +7,7 @@ functions and object for constants
 import logging
 import os
 import struct
-import geojson
+import geojson  # pylint: disable=import-error
 
 # import custom python packages
 from wahoomc import constants
