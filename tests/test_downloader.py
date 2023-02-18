@@ -18,7 +18,7 @@ from wahoomc.downloader import download_tooling
 from wahoomc.downloader import Downloader
 from wahoomc import constants
 from wahoomc.constants_functions import get_tooling_win_path
-from wahoomc.constants_functions import GeofabrikJson
+from wahoomc.geofabrik_json import GeofabrikJson
 
 
 class TestDownloader(unittest.TestCase):

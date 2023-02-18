@@ -14,7 +14,7 @@ from shapely.geometry import Polygon, shape
 # import custom python packages
 from wahoomc.constants import GEOFABRIK_PATH
 from wahoomc.constants import special_regions, block_download
-from wahoomc.constants_functions import GeofabrikJson
+from wahoomc.geofabrik_json import GeofabrikJson
 
 log = logging.getLogger('main-logger')
 

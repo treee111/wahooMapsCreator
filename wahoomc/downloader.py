@@ -16,7 +16,7 @@ import requests
 # import custom python packages
 from wahoomc.file_directory_functions import download_url_to_file, unzip
 from wahoomc.constants_functions import get_tooling_win_path
-from wahoomc.constants_functions import GeofabrikJson
+from wahoomc.geofabrik_json import GeofabrikJson
 
 from wahoomc.constants import USER_DL_DIR
 from wahoomc.constants import USER_MAPS_DIR

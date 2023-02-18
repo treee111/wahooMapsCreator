@@ -13,7 +13,7 @@ import tkinter as tk
 from tkinter import ttk
 
 # import custom python packages
-from wahoomc.constants_functions import GeofabrikJson
+from wahoomc.geofabrik_json import GeofabrikJson
 
 o_geofabrik_json = GeofabrikJson()
 

@@ -8,8 +8,8 @@ import unittest
 from wahoomc import file_directory_functions as fd_fct
 from wahoomc.downloader import Downloader
 from wahoomc import constants
-from wahoomc.constants_functions import GeofabrikJson
-from wahoomc.constants_functions import CountyIsNoGeofabrikCountry
+from wahoomc.geofabrik_json import GeofabrikJson
+from wahoomc.geofabrik_json import CountyIsNoGeofabrikCountry
 
 # json countries with no geofabrik id partner
 json_file_countries_without_geofabrik_id = ['clipperton_island', 'saint_pierre_and_miquelon', 'trinidad_and_tobago',
