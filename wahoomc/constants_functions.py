@@ -40,20 +40,25 @@ class GeofabrikJson:
     raw_json = None
     geofabrik_overview = {}
     geofabrik_region_overview = {}
+    geofabrik_regions = []
 
     def __init__(self):
         # read geofabrik .json file and fill class-attributes // access is only once
         if GeofabrikJson.raw_json is None and not GeofabrikJson.geofabrik_overview \
-                and not GeofabrikJson.geofabrik_region_overview:
-            GeofabrikJson.raw_json, GeofabrikJson.geofabrik_overview, GeofabrikJson.geofabrik_region_overview = self.read_geofabrik_json_file()
+                and not GeofabrikJson.geofabrik_region_overview and not GeofabrikJson.geofabrik_regions:
+            GeofabrikJson.raw_json, GeofabrikJson.geofabrik_overview, GeofabrikJson.geofabrik_region_overview, GeofabrikJson.geofabrik_regions = self.read_geofabrik_json_file()
 
     def read_geofabrik_json_file(self):
         """
         read geofabrik .json file and fill class-attributes
+
+        geofabrik_regions as i defined them are the ones without parent
+        geofabrik_overview contain all entries, with and without parent
         """
         raw_json = []
         geofabrik_overview = {}
         geofabrik_region_overview = {}
+        geofabrik_regions = []
 
         with open(GEOFABRIK_PATH, encoding='utf8') as file_handle:
             raw_json = geojson.load(file_handle)
@@ -76,8 +81,9 @@ class GeofabrikJson:
                     'pbf_url': pbf_url}
                 geofabrik_region_overview[id_no] = {
                     'pbf_url': pbf_url}
+                geofabrik_regions.append(id_no)
 
-        return raw_json, geofabrik_overview, geofabrik_region_overview
+        return raw_json, geofabrik_overview, geofabrik_region_overview, geofabrik_regions
 
     def get_geofabrik_parent_country(self, id_no):
         """

@@ -13,7 +13,7 @@ from shapely.geometry import Polygon, shape
 
 # import custom python packages
 from wahoomc.constants import GEOFABRIK_PATH
-from wahoomc.constants import special_regions, geofabrik_regions, block_download
+from wahoomc.constants import special_regions, block_download
 from wahoomc.constants_functions import GeofabrikJson
 
 log = logging.getLogger('main-logger')
@@ -171,6 +171,7 @@ def find_needed_countries(bbox_tiles, wanted_map, wanted_region_polygon):
     output = []
 
     o_geofabrik_json = GeofabrikJson()
+    geofabrik_regions = o_geofabrik_json.geofabrik_regions
 
     # itterate through tiles and find Geofabrik regions that are in the tiles
     counter = 1

@@ -62,6 +62,9 @@ class TestConstantsGeofabrik(unittest.TestCase):
         id_with_no_parent_geofabrik = []
         regions_geofabrik = []
 
+        geofabrik_regions = ['africa', 'antarctica', 'asia', 'australia-oceania',
+                             'central-america', 'europe', 'north-america', 'south-america', 'russia']
+
         # check against (new) raw representation of geofabrik json
         for feature in self.o_geofabrik_json.raw_json.features:
             try:
@@ -69,17 +72,13 @@ class TestConstantsGeofabrik(unittest.TestCase):
             except KeyError:
                 id_with_no_parent_geofabrik.append(feature.properties['id'])
 
-        geofabrik_regions_w_russia = constants.geofabrik_regions
-        geofabrik_regions_w_russia.append(
-            'russia')
-
-        self.assertCountEqual(geofabrik_regions_w_russia,
+        self.assertCountEqual(geofabrik_regions,
                               id_with_no_parent_geofabrik)
 
         # also check against (new) created dict
         for region in self.o_geofabrik_json.geofabrik_region_overview:
             regions_geofabrik.append(region)
-        self.assertCountEqual(geofabrik_regions_w_russia,
+        self.assertCountEqual(geofabrik_regions,
                               regions_geofabrik)
 
     def test_reading_geofabrik_parent(self):

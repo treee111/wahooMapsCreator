@@ -28,9 +28,6 @@ ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
 VERSION = '3.2.0'
 
 
-continents = ['europe', 'unitedstates', 'north-america', 'south-america', 'asia', 'oceania',
-              'africa', 'antarctica']
-
 africa = ['algeria', 'angola', 'benin', 'botswana', 'burkina_faso', 'burundi',
           'cameroon', 'canary_islands', 'cape_verde', 'central_african_republic', 'chad', 'comoros',
           'cote_d_ivoire', 'democratic_republic_of_the_congo', 'djibouti', 'egypt',
@@ -95,9 +92,6 @@ unitedstates = ['alabama', 'alaska', 'american_samoa', 'arizona', 'arkansas',
                 'oregon', 'pennsylvania', 'puerto_rico', 'rhode_island', 'south_carolina',
                 'south_dakota', 'tennessee', 'texas', 'united_states_virgin_islands', 'utah',
                 'vermont', 'virginia', 'washington', 'west_virginia', 'wisconsin', 'wyoming']
-
-geofabrik_regions = ['africa', 'antarctica', 'asia', 'australia-oceania',
-                     'central-america', 'europe', 'north-america', 'south-america']
 
 block_download = ['dach', 'alps', 'britain-and-ireland', 'south-africa-and-lesotho',
                   'us-midwest', 'us-northeast', 'us-pacific', 'us-south', 'us-west']
