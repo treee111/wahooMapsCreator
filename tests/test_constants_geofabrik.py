@@ -172,6 +172,22 @@ class TestConstantsGeofabrik(unittest.TestCase):
 
         self.assertFalse(self.o_geofabrik_json.is_input_a_geofabrik_id_no('*'))
 
+    def test_tranlation_id_to_geofabrik_id(self):
+        """
+        get geofabrik id by country .json filename
+        """
+        transl_country = self.o_geofabrik_json.translate_id_no_to_geofabrik(
+            'malta')
+        self.assertEqual('malta', transl_country)
+
+        transl_country = self.o_geofabrik_json.translate_id_no_to_geofabrik(
+            'solomon_islands')
+        self.assertEqual('solomon-islands', transl_country)
+
+        transl_country = self.o_geofabrik_json.translate_id_no_to_geofabrik(
+            'nebraska')
+        self.assertEqual('us/nebraska', transl_country)
+
     def get_geofabrik_id_by_json_file_country(self, country):
         """
         get geofabrik id by country .json filename
