@@ -73,6 +73,9 @@ def run(run_level):
         # Generate sea
         o_osm_maps.generate_sea()
 
+        # Generate elevation
+        o_osm_maps.generate_elevation()
+
         # Split filtered country files to tiles
         o_osm_maps.split_filtered_country_files_to_tiles()
 
