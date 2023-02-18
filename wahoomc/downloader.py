@@ -73,19 +73,17 @@ def download_file(target_filepath, url, target_dir=""):
         log.info('+ Downloaded: %s', target_filepath)
 
 
-def get_osm_pbf_filepath_url(country):
+def build_osm_pbf_filepath(country_translated):
     """
-    fetch the geofabrik download url to countries' OSM file
-    and build download filepath to countries' OSM file
+    build download filepath to countries' OSM file
+    replace / to have no problem with directories
     """
-    o_geofabrik_json = GeofabrikJson()
-
     # build path to downloaded file with translated geofabrik country
     map_file_path = os.path.join(
-        USER_MAPS_DIR, f'{o_geofabrik_json.get_geofabrik_parent(country)[1]}' + '-latest.osm.pbf')
+        USER_MAPS_DIR, f'{country_translated.replace("/", "_")}' + '-latest.osm.pbf')
 
-    # return URL and download filepath
-    return map_file_path, o_geofabrik_json.get_geofabrik_url(country)
+    # return download filepath
+    return map_file_path
 
 
 def download_tooling():
@@ -289,10 +287,16 @@ class Downloader:
         """
         download countries' OSM files
         """
+        o_geofabrik_json = GeofabrikJson()
+
         for country, item in self.border_countries.items():
             try:
                 if item['download'] is True:
-                    map_file_path, url = get_osm_pbf_filepath_url(country)
+                    # build path to downloaded file with translated geofabrik country
+                    map_file_path = build_osm_pbf_filepath(
+                        o_geofabrik_json.translate_id_no_to_geofabrik(country))
+                    # fetch the geofabrik download url to countries' OSM file
+                    url = o_geofabrik_json.get_geofabrik_url(country)
                     download_file(map_file_path, url)
                     self.border_countries[country] = {
                         'map_file': map_file_path}

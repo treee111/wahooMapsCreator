@@ -13,11 +13,12 @@ import platform
 
 from wahoomc.downloader import older_than_x_days
 from wahoomc.downloader import download_file
-from wahoomc.downloader import get_osm_pbf_filepath_url
+from wahoomc.downloader import build_osm_pbf_filepath
 from wahoomc.downloader import download_tooling
 from wahoomc.downloader import Downloader
 from wahoomc import constants
 from wahoomc.constants_functions import get_tooling_win_path
+from wahoomc.constants_functions import GeofabrikJson
 
 
 class TestDownloader(unittest.TestCase):
@@ -116,10 +117,13 @@ class TestDownloader(unittest.TestCase):
         path = os.path.join(constants.USER_DL_DIR, 'maps',
                             f'{country}' + '-latest.osm.pbf')
 
+        o_geofabrik_json = GeofabrikJson()
+
         if os.path.exists(path):
             os.remove(path)
 
-        map_file_path, url = get_osm_pbf_filepath_url(country)
+        map_file_path = build_osm_pbf_filepath(country)
+        url = o_geofabrik_json.get_geofabrik_url(country)
         download_file(map_file_path, url, False)
 
         self.assertTrue(os.path.exists(path))
