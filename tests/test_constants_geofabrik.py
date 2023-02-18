@@ -9,7 +9,7 @@ from wahoomc import file_directory_functions as fd_fct
 from wahoomc.downloader import Downloader
 from wahoomc import constants
 from wahoomc.constants_functions import GeofabrikJson
-from wahoomc.constants_functions import get_geofabrik_region_of_country, CountyIsNoGeofabrikCountry
+from wahoomc.constants_functions import CountyIsNoGeofabrikCountry
 
 # json countries with no geofabrik id partner
 json_file_countries_without_geofabrik_id = ['clipperton_island', 'saint_pierre_and_miquelon', 'trinidad_and_tobago',
@@ -17,13 +17,6 @@ json_file_countries_without_geofabrik_id = ['clipperton_island', 'saint_pierre_a
                                             'aruba', 'united_states_minor_outlying_islands', 'french_polynesia',
                                             'norfolk_island', 'wallis_and_futuna', 'northern_mariana_islands', 'paracel_islands', 'united_arab_emirates', 'kuwait', 'qatar', 'spratly_islands', 'singapore', 'brunei', 'bahrain', 'macao', 'cocos_islands', 'christmas_island', 'palestina', 'malaysia', 'saudi_arabia', 'british_indian_ocean_territory', 'israel', 'oman', 'hong_kong', 'south_georgia_and_the_south_sandwich_islands', 'bouvet_island', 'heard_island_and_mcdonald_islands', 'guam', 'commonwealth_of_the_northern_mariana_islands',
                                             'american_samoa', 'united_states_virgin_islands', 'svalbard_and_jan_mayen', 'united_kingdom', 'åland', 'gibraltar', 'san_marino', 'vatican_city', 'ireland', 'bosnia_and_herzegovina', 'jersey', 'guernsey', 'montserrat', 'bermuda', 'virgin_islands_u.s.', 'dominica', 'saint-barthélemy', 'barbados', 'grenada', 'saint_vincent_and_the_grenadines', 'anguilla', 'saint-martin', 'cayman_islands', 'sint_maarten', 'haiti', 'saint_lucia', 'british_virgin_islands', 'saint_kitts_and_nevis', 'dominican_republic', 'turks_and_caicos_islands', 'antigua_and_barbuda', 'gambia', 'saint_helena', 'cote_d_ivoire', 'western_sahara', 'comoros', 'republic_of_congo', 'democratic_republic_of_the_congo', 'senegal', 'french_southern_territories']
-
-# json countries with no geofabrik region defined in constants.py
-no_geofabrik_region_assigned = ['guyana', 'solomon_islands', 'marshall_islands', 'pitcairn_islands', 'cook_islands', 'new_caledonia',
-                                'new_zealand', 'alaska', 'oklahoma', 'puerto_rico', 'oregon', 'panama',
-                                'martinique', 'costa_rica', 'guadeloupe', 'el_salvador', 'mayotte',
-                                'sierra_leone', 'central_african_republic', 'sao_tome_and_principe',
-                                'equatorial_guinea', 'reunion']
 
 
 class TestConstantsGeofabrik(unittest.TestCase):
@@ -88,43 +81,6 @@ class TestConstantsGeofabrik(unittest.TestCase):
             regions_geofabrik.append(region)
         self.assertCountEqual(geofabrik_regions_w_russia,
                               regions_geofabrik)
-
-    def test_geofabrik_region_against_get_region(self):
-        """
-        go through all files in the wahoo_mc/resources/json directory
-        - compare the region from get_geofabrik_region_of_country against the geofabrik json file
-        - some countries are skipped because
-            - there is no get_geofabrik_region_of_country region
-            - get_geofabrik_region_of_country returns false region
-        """
-        for country in self.relevant_countries:
-            get_region = ''
-            parent = ''
-
-            try:
-                get_region = get_geofabrik_region_of_country(country)
-            except SystemExit:
-                # if there is no get_region, everything else is better ;-)
-                self.assertIn(country, no_geofabrik_region_assigned)
-                continue
-
-            id_no = self.get_geofabrik_id_by_json_file_country(country)
-            parent, child = self.o_geofabrik_json.get_geofabrik_parent_country(
-                id_no)
-
-            # these are own continents without region/parent.
-            if country in ['antarctica', 'russia']:
-                self.assertEqual(parent, '')
-            # these get false routed via get_region. compare against correct parent
-            elif country == 'papua_new_guinea':
-                self.assertEqual(parent, 'australia-oceania')
-            elif country == 'georgia':
-                self.assertEqual(parent, 'europe')
-            else:
-                # "normal" check
-                # one geofabrik region in constsants.py has north-america/us
-                self.assertTrue(
-                    get_region in [parent, parent + '/us'], 'country: '+country)
 
     def test_reading_geofabrik_parent(self):
         """

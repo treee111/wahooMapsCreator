@@ -15,7 +15,7 @@ import requests
 
 # import custom python packages
 from wahoomc.file_directory_functions import download_url_to_file, unzip
-from wahoomc.constants_functions import translate_country_input_to_geofabrik, get_tooling_win_path
+from wahoomc.constants_functions import get_tooling_win_path
 from wahoomc.constants_functions import GeofabrikJson
 
 from wahoomc.constants import USER_DL_DIR
@@ -160,6 +160,8 @@ class Downloader:
         self.tiles_from_json = tiles_from_json
         self.border_countries = border_countries
 
+        self.o_geofabrik_json = GeofabrikJson()
+
         self.need_to_dl = []
 
     def should_geofabrik_file_be_downloaded(self):
@@ -255,7 +257,8 @@ class Downloader:
             # get translated country (geofabrik) of country
             # do not download the same file for different countries
             # --> e.g. China, Hong Kong and Macao, see Issue #11
-            transl_c = translate_country_input_to_geofabrik(country)
+            transl_c = self.o_geofabrik_json.translate_id_no_to_geofabrik(
+                country)
 
             # check for already existing .osm.pbf file
             map_file_path = glob.glob(
@@ -287,16 +290,14 @@ class Downloader:
         """
         download countries' OSM files
         """
-        o_geofabrik_json = GeofabrikJson()
-
         for country, item in self.border_countries.items():
             try:
                 if item['download'] is True:
                     # build path to downloaded file with translated geofabrik country
                     map_file_path = build_osm_pbf_filepath(
-                        o_geofabrik_json.translate_id_no_to_geofabrik(country))
+                        self.o_geofabrik_json.translate_id_no_to_geofabrik(country))
                     # fetch the geofabrik download url to countries' OSM file
-                    url = o_geofabrik_json.get_geofabrik_url(country)
+                    url = self.o_geofabrik_json.get_geofabrik_url(country)
                     download_file(map_file_path, url)
                     self.border_countries[country] = {
                         'map_file': map_file_path}
