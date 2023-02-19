@@ -154,10 +154,9 @@ class Downloader:
     This is the class to check and download maps / artifacts"
     """
 
-    def __init__(self, max_days_old, force_download, tiles_from_json=None, border_countries=None):
+    def __init__(self, max_days_old, force_download, border_countries=None):
         self.max_days_old = max_days_old
         self.force_download = force_download
-        self.tiles_from_json = tiles_from_json
         self.border_countries = border_countries
 
         self.need_to_dl = []
