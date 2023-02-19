@@ -15,5 +15,6 @@
     // "python.linting.pylintArgs": [
     //     "--disable=line-too-long"
     // ],
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "python.analysis.indexing": true
 }
