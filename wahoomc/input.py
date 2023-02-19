@@ -14,6 +14,10 @@ from tkinter import ttk
 
 # import custom python packages
 from wahoomc import constants
+from wahoomc.geofabrik_json import GeofabrikJson
+from wahoomc.geofabrik_json import CountyIsNoGeofabrikCountry
+
+o_geofabrik_json = GeofabrikJson()
 
 
 def process_call_of_the_tool():
@@ -194,6 +198,14 @@ class InputData():  # pylint: disable=too-many-instance-attributes,too-few-publi
         elif self.country and self.xy_coordinates:
             sys.exit(
                 "Country and X/Y coordinates are given. Only one of both is allowed!")
+        elif self.country:
+            try:
+                self.country = o_geofabrik_json.translate_id_no_to_geofabrik(
+                    self.country)
+            except CountyIsNoGeofabrikCountry:
+                sys.exit(
+                    f"Entered country '{self.country}' is not a geofabrik country. Please check this URL for possible countries \
+                        https://download.geofabrik.de/index.html!")
         else:
             return True
 
@@ -433,4 +445,4 @@ class CheckbuttonsTab2(tk.Frame):
         self.checkb_zip_folder_val = create_checkbox(self, oInputData.zip_folder,
                                                      "Zip folder with generated files", 3)
         self.checkb_verbose_val = create_checkbox(self, oInputData.verbose,
-                                                "output debug logger messages", 4)
+                                                  "output debug logger messages", 4)
