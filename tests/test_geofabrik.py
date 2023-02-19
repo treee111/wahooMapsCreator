@@ -7,8 +7,6 @@ import unittest
 
 # import custom python packages
 from wahoomc.geofabrik import Geofabrik
-from wahoomc import file_directory_functions as fd_fct
-from wahoomc import constants_functions as const_fct
 from wahoomc.downloader import Downloader
 from wahoomc import constants
 
@@ -22,18 +20,6 @@ def calc_tiles_via_geofabrik_json(input_argument):
     tiles_via_geofabrik_json = o_geofabrik.get_tiles_of_country()
 
     return tiles_via_geofabrik_json
-
-
-def calc_tiles_via_static_jsons(input_argument):
-    """
-    calculate tiles using the json files in the repo
-    the "old" way of doing
-    """
-    json_file_path = os.path.join(constants.RESOURCES_DIR, 'json',
-                                  const_fct.get_region_of_country(input_argument), input_argument + '.json')
-    tiles_via_static_json = fd_fct.read_json_file(json_file_path)
-
-    return tiles_via_static_json
 
 
 class TestGeofabrik(unittest.TestCase):
@@ -65,30 +51,6 @@ class TestGeofabrik(unittest.TestCase):
 
         self.assertEqual(item_0, geofabrik_tiles[0])
         self.assertEqual(item_1, geofabrik_tiles[1])
-
-    # def test_tiles_via_url_germany(self):
-    #     """
-    #     Test the retrieval of tiles via geofabrik URL against hardcoded data for germany
-    #     """
-    #     self.compare_url_and_static('germany')
-
-    # def test_tiles_via_url_ireland(self):
-    #     """
-    #     Test the retrieval of tiles via URL
-    #     """
-    #     self.compare_url_and_static('ireland-and-northern-ireland')
-
-    def compare_geofabrik_and_static(self, input_argument):
-        """
-        Compare the retrieval of tiles via URL with statis json
-        """
-        tiles_via_geofabrik_json = calc_tiles_via_geofabrik_json(
-            input_argument)
-
-        tiles_via_static_json = calc_tiles_via_static_jsons(
-            input_argument)
-
-        self.assertEqual(tiles_via_geofabrik_json, tiles_via_static_json)
 
 
 if __name__ == '__main__':

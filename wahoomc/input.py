@@ -13,7 +13,9 @@ import tkinter as tk
 from tkinter import ttk
 
 # import custom python packages
-from wahoomc import constants
+from wahoomc.geofabrik_json import GeofabrikJson
+
+o_geofabrik_json = GeofabrikJson()
 
 
 def process_call_of_the_tool():
@@ -152,6 +154,22 @@ def create_checkbox(self, default_value, description, row):
     return bool_var
 
 
+def get_countries_of_continent_from_geofabrik(continent):
+    """
+    returns all countries of a continent to be selected in UI
+    """
+    countries = []
+    for region, value in o_geofabrik_json.geofabrik_overview.items():
+        try:
+            if value['parent'] == continent:
+                countries.append(region)
+        # regions/ continents do not have a parent
+        except KeyError:
+            pass
+
+    return countries
+
+
 class InputData():  # pylint: disable=too-many-instance-attributes,too-few-public-methods
     """
     object with all parameters to process maps and default values
@@ -194,6 +212,10 @@ class InputData():  # pylint: disable=too-many-instance-attributes,too-few-publi
         elif self.country and self.xy_coordinates:
             sys.exit(
                 "Country and X/Y coordinates are given. Only one of both is allowed!")
+        elif self.country and not o_geofabrik_json.is_input_a_geofabrik_id_no(self.country):
+            sys.exit(
+                f"Entered country '{self.country}' is not a geofabrik country. Please check this URL for possible countries \
+                    https://download.geofabrik.de/index.html!")
         else:
             return True
 
@@ -315,12 +337,12 @@ class ComboboxesEntryField(tk.Frame):  # pylint: disable=too-many-instance-attri
 
         # Comboboxes
         self.cb_continent = ttk.Combobox(
-            self, values=constants.continents, state="readonly")
+            self, values=o_geofabrik_json.geofabrik_regions, state="readonly")
         self.cb_continent.current(0)  # pre-select first entry in combobox
         self.cb_continent.bind("<<ComboboxSelected>>", self.callback_continent)
 
         self.cb_country = ttk.Combobox(
-            self, values=constants.europe, state="readonly")
+            self, state="readonly")
 
         # Positioning
         self.lab_top.grid(column=0, row=0, columnspan=2, padx=5, pady=10)
@@ -349,8 +371,8 @@ class ComboboxesEntryField(tk.Frame):  # pylint: disable=too-many-instance-attri
         """
         continent = self.cb_continent.get()
         # get countries for selected region and set for combobox
-        self.cb_country["values"] = getattr(
-            constants, continent.replace("-", ""))
+        self.cb_country["values"] = get_countries_of_continent_from_geofabrik(
+            continent)
         self.cb_country.current(0)
 
 
@@ -433,4 +455,4 @@ class CheckbuttonsTab2(tk.Frame):
         self.checkb_zip_folder_val = create_checkbox(self, oInputData.zip_folder,
                                                      "Zip folder with generated files", 3)
         self.checkb_verbose_val = create_checkbox(self, oInputData.verbose,
-                                                "output debug logger messages", 4)
+                                                  "output debug logger messages", 4)
