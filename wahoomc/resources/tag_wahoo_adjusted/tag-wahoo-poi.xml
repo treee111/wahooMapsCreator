@@ -27,9 +27,9 @@
   </ways>
 
   <ways>
-    <osm-tag key="contour_ext" value="elevation_minor" zoom-appear="12" />
-    <osm-tag key="contour_ext" value="elevation_medium" zoom-appear="12" />
-    <osm-tag key="contour_ext" value="elevation_major" zoom-appear="12" />
+    <osm-tag key="contour_ext" value="elevation_minor" zoom-appear="12" force-polygon-line="true"/>
+    <osm-tag key="contour_ext" value="elevation_medium" zoom-appear="12" force-polygon-line="true"/>
+    <osm-tag key="contour_ext" value="elevation_major" zoom-appear="12" force-polygon-line="true"/>
     <osm-tag key="ele" value="100" zoom-appear="14"/>
     <osm-tag key="ele" value="200" zoom-appear="14"/>
     <osm-tag key="ele" value="300" zoom-appear="14"/>
@@ -160,6 +160,7 @@
   <!-- OTHER TAGS -->
   <ways>
     <osm-tag key="area" value="yes" zoom-appear="3" />
+    <osm-tag key="admin_level" value="2" zoom-appear="3" force-polygon-line="true"/>
   </ways>
 
   <!-- NOT TO RENDER -->
