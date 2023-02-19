@@ -4,7 +4,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-A list of unreleased changes can be found [here](https://github.com/treee111/wahooMapsCreator/compare/v3.1.1...HEAD).
+A list of unreleased changes can be found [here](https://github.com/treee111/wahooMapsCreator/compare/v3.2.0...HEAD).
+
+<a name="3.2.0"></a>
+## [3.2.0] - 2022-11-29
+### Features
+- **install:** Download Osmosis and Osmfilter on Windows during first run instead of shipping with the tool ([#167](https://github.com/treee111/wahooMapsCreator/issues/167)) [`ae4eb1f`](https://github.com/treee111/wahooMapsCreator/commit/ae4eb1f6b4ff3f75aa81da4243d4ebd16c317e01)
+- **install:** Check installed version against latest published version on PyPI ([#173](https://github.com/treee111/wahooMapsCreator/issues/173)) [`08e00c3`](https://github.com/treee111/wahooMapsCreator/commit/08e00c31f7029ee47f18eded00aec2a0b910538f)
+
+### Bug Fixes
+- Raise max. memory for Osmosis in Windows to 3GB ([#171](https://github.com/treee111/wahooMapsCreator/issues/171)) [`2be33bd`](https://github.com/treee111/wahooMapsCreator/commit/2be33bdbfa9519da0eeb7ed2b51d76b77e4b9729)
+
 
 <a name="3.1.1"></a>
 ## [3.1.1] - 2022-11-15
@@ -362,6 +372,7 @@ wahooMapsCreator can now be used much quicker and easier!
     - Windows:    `tooling_windows/Windows-Wahoo-Map-Creator-Osmosis/wahoo-map-creator-osmosis.py`
 
 
+[3.2.0]: https://github.com/treee111/wahooMapsCreator/compare/v3.1.1...v3.2.0
 [3.1.1]: https://github.com/treee111/wahooMapsCreator/compare/v3.1.0...v3.1.1
 [3.1.0]: https://github.com/treee111/wahooMapsCreator/compare/v3.0.0...v3.1.0
 [3.0.0]: https://github.com/treee111/wahooMapsCreator/compare/v2.0.2...v3.0.0

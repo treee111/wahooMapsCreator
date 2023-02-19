@@ -7,6 +7,7 @@ import os
 from pathlib import Path
 
 # User
+USER_DIR = str(Path.home())
 USER_WAHOO_MC = os.path.join(str(Path.home()), 'wahooMapsCreatorData')
 USER_DL_DIR = os.path.join(USER_WAHOO_MC, '_download')
 USER_MAPS_DIR = os.path.join(USER_DL_DIR, 'maps')
@@ -24,7 +25,7 @@ WAHOO_MC_DIR = os.path.dirname(__file__)
 RESOURCES_DIR = os.path.join(WAHOO_MC_DIR, 'resources')
 TOOLING_WIN_DIR = os.path.join(WAHOO_MC_DIR, 'tooling_win')
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
-VERSION = '3.1.1'
+VERSION = '3.2.0'
 
 Translate_Country = {
     'alaska':                           'united_states_of_america',
