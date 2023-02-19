@@ -68,13 +68,13 @@ def adjustments_due_to_breaking_changes():
             'Last run was with version %s, deleting files of %s directory due to breaking changes.', version_last_run, USER_OUTPUT_DIR)
         delete_o5m_pbf_files_in_folder(USER_OUTPUT_DIR)
 
-    # version 1.1.0 moved the directories with "processing" files out of the repo folder due to the publishing via PyPI
-    # old files are moved to the new structure. Can be deleted soon (in version 3.0.x)
+    # file-names of downloaded .osm.pbf raw mapfiles was adjusted in #182 to focus on geofabrik naming
+    # other existing files may therefor not be accessed anymore in the future and therefore deleted
     if version_last_run is None or \
-            pkg_resources.parse_version(VERSION) < pkg_resources.parse_version('1.1.0'):
+            pkg_resources.parse_version(VERSION) < pkg_resources.parse_version('4.0.0a0'):
         log.info(
-            'Last run was with version %s, moving content to new directories due to breaking changes.', version_last_run)
-        move_old_content_into_new_dirs()
+            'Last run was with version %s, deleting files of %s directory due to breaking changes.', version_last_run, USER_MAPS_DIR)
+        delete_o5m_pbf_files_in_folder(USER_MAPS_DIR)
 
 
 def check_installation_of_required_programs():

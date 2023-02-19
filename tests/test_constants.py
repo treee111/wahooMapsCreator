@@ -6,41 +6,9 @@ import unittest
 import mock
 
 
-from wahoomc.constants_functions import translate_country_input_to_geofabrik, translate_tags_to_keep, \
+from wahoomc.constants_functions import translate_tags_to_keep, \
     get_tag_wahoo_xml_path, TagWahooXmlNotFoundError
 from wahoomc.constants import RESOURCES_DIR
-
-
-class TestTranslateCountries(unittest.TestCase):
-    """
-    tests for translating country-constants between geofabrik and other formats
-    """
-
-    def test_translated_countries_to_china(self):
-        """
-        Test countries which have no own geofabrik country but are included in china
-        """
-
-        expected = 'china'
-
-        transl_c = translate_country_input_to_geofabrik('hong_kong')
-        self.assertEqual(expected, transl_c)
-
-        transl_c = translate_country_input_to_geofabrik('macao')
-        self.assertEqual(expected, transl_c)
-
-        transl_c = translate_country_input_to_geofabrik('paracel_islands')
-        self.assertEqual(expected, transl_c)
-
-    def test_translated_countries_no_mapping(self):
-        """
-        Test countries which have no own geofabrik country but are included in china
-        """
-
-        expected = 'germany'
-
-        transl_c = translate_country_input_to_geofabrik('germany')
-        self.assertEqual(expected, transl_c)
 
 
 tags_universal_simple = {"TAGS_TO_KEEP_UNIVERSAL": {

@@ -2,7 +2,7 @@
 functions and object for managing OSM maps
 """
 #!/usr/bin/python
-#pylint: skip-file
+# pylint: skip-file
 
 # import official python packages
 import sys
@@ -13,7 +13,8 @@ from shapely.geometry import Polygon, shape
 
 # import custom python packages
 from wahoomc.constants import GEOFABRIK_PATH
-from wahoomc.constants import special_regions, geofabrik_regions, block_download
+from wahoomc.constants import special_regions, block_download
+from wahoomc.geofabrik_json import GeofabrikJson
 
 log = logging.getLogger('main-logger')
 
@@ -53,7 +54,7 @@ class Geofabrik:
 
         # convert to shape (multipolygon)
         wanted_region = shape(wanted_map_geom)
-        #print (f'shape = {wanted_region}')
+        # print (f'shape = {wanted_region}')
 
         # get bounding box
         (bbox_left, bbox_bottom, bbox_right, bbox_top) = wanted_region.bounds
@@ -109,7 +110,7 @@ class Geofabrik:
         log.info('Searching for needed maps, this can take a while.')
         tiles_of_input = find_needed_countries(
             bbox_tiles, self.wanted_map, wanted_region)
-        #print (f'Country= {country}')
+        # print (f'Country= {country}')
 
         return tiles_of_input
 
@@ -153,38 +154,10 @@ def geom(wanted):
         ident_no = props.get('id', '')
         if ident_no != wanted:
             continue
-        #print (props.get('urls', ''))
+        # print (props.get('urls', ''))
         wurls = props.get('urls', '')
         return (feature.geometry, wurls.get('pbf', ''))
     return None, None
-
-
-def find_geofbrik_parent(name, geofabrik_json):
-    """
-    Get the parent map/region of a region from the already loaded json data
-    """
-    for feature in geofabrik_json.features:
-        props = feature.properties
-        ident_no = props.get('id', '')
-        if ident_no != name:
-            continue
-        return (props.get('parent', ''), props.get('id', ''))
-    return None, None
-
-
-def find_geofbrik_url(name, geofabrik_json):
-    """
-    Get the map download url from a region with the already loaded json data
-    """
-    for feature in geofabrik_json.features:
-        props = feature.properties
-        ident_no = props.get('id', '')
-        if ident_no != name:
-            continue
-        #print (props.get('urls', ''))
-        wurls = props.get('urls', '')
-        return wurls.get('pbf', '')
-    return None
 
 
 def find_needed_countries(bbox_tiles, wanted_map, wanted_region_polygon):
@@ -197,9 +170,8 @@ def find_needed_countries(bbox_tiles, wanted_map, wanted_region_polygon):
     """
     output = []
 
-    with open(GEOFABRIK_PATH, encoding='utf8') as file_handle:
-        geofabrik_json_data = geojson.load(file_handle)
-    file_handle.close()
+    o_geofabrik_json = GeofabrikJson()
+    geofabrik_regions = o_geofabrik_json.geofabrik_regions
 
     # itterate through tiles and find Geofabrik regions that are in the tiles
     counter = 1
@@ -226,7 +198,7 @@ def find_needed_countries(bbox_tiles, wanted_map, wanted_region_polygon):
         must_download_urls = []
 
         # itterate through countries/regions in the geofabrik json file
-        for regions in geofabrik_json_data.features:
+        for regions in o_geofabrik_json.raw_json.features:
             props = regions.properties
             parent = props.get('parent', '')
             regionname = props.get('id', '')
@@ -235,7 +207,7 @@ def find_needed_countries(bbox_tiles, wanted_map, wanted_region_polygon):
             rgeom = regions.geometry
             rshape = shape(rgeom)
 
-            #print (f'Processing region: {regionname}')
+            # print (f'Processing region: {regionname}')
 
             # check if the region we are processing is needed for the tile we are processing
 
@@ -255,8 +227,8 @@ def find_needed_countries(bbox_tiles, wanted_map, wanted_region_polygon):
                             x_value = 0
                             # handle sub-sub-regions like unterfranken->bayern->germany
                             while parent not in geofabrik_regions:
-                                parent, child = find_geofbrik_parent(
-                                    parent, geofabrik_json_data)
+                                parent, child = o_geofabrik_json.get_geofabrik_parent_country(
+                                    parent)
                                 if parent in geofabrik_regions:
                                     parent = child
                                     break
@@ -268,8 +240,8 @@ def find_needed_countries(bbox_tiles, wanted_map, wanted_region_polygon):
                             if parent not in must_download_maps:
                                 must_download_maps.append(parent)
                                 must_download_urls.append(
-                                    find_geofbrik_url(parent, geofabrik_json_data))
-                                #parent_added = 1
+                                    o_geofabrik_json.get_geofabrik_url(parent))
+                                # parent_added = 1
                         else:
                             if regionname not in must_download_maps:
                                 must_download_maps.append(regionname)
@@ -293,11 +265,11 @@ def find_needed_countries(bbox_tiles, wanted_map, wanted_region_polygon):
                     # processing a country and no special sub-region
                     # check if rshape is subset of desired region. If so discard it
                     if wanted_region_polygon.contains(rshape):
-                        #print (f'\t{regionname} is a subset of {wanted_map}, discard it')
+                        # print (f'\t{regionname} is a subset of {wanted_map}, discard it')
                         continue
                     # check if rshape is a superset of desired region. if so discard it
                     if rshape.contains(wanted_region_polygon):
-                        #print (f'\t{regionname} is a superset of {wanted_map}, discard it')
+                        # print (f'\t{regionname} is a superset of {wanted_map}, discard it')
                         # if regionname not in must_download_maps:
                         #    must_download_maps.append (regionname)
                         #    must_download_urls.append (rurl)
@@ -305,13 +277,13 @@ def find_needed_countries(bbox_tiles, wanted_map, wanted_region_polygon):
                         continue
                     # Check if rshape is a part of the tile
                     if rshape.intersects(poly):
-                        #print(f'\tintersecting tile: {regionname} tile={tile}')
+                        # print(f'\tintersecting tile: {regionname} tile={tile}')
                         if regionname not in must_download_maps:
                             must_download_maps.append(regionname)
                             must_download_urls.append(rurl)
 
         # If this tile contains the desired region, add it to the output
-        #print (f'map= {wanted_map}\tmust_download= {must_download_maps}\tparent_added= {parent_added}\tforce_added= {force_added}')
+        # print (f'map= {wanted_map}\tmust_download= {must_download_maps}\tparent_added= {parent_added}\tforce_added= {force_added}')
         if wanted_map in must_download_maps or parent_added == 1 or force_added == 1:
             # first replace any forward slashes with underscores (us/texas to us_texas)
             must_download_maps = [sub.replace(
