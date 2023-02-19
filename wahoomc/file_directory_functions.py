@@ -8,22 +8,12 @@ import json
 import os
 from os.path import isfile, join
 import sys
-import zipfile
 import logging
 import shutil
-import requests
 
 # import custom python packages
 
 log = logging.getLogger('main-logger')
-
-
-def unzip(source_filename, dest_dir):
-    """
-    unzip the given file into the given directory
-    """
-    with zipfile.ZipFile(source_filename, 'r') as zip_ref:
-        zip_ref.extractall(dest_dir)
 
 
 def move_content(src_folder_name, dst_path):
@@ -114,30 +104,6 @@ def write_json_file_generic(json_file_path, json_content):
     with open(json_file_path, "w", encoding="utf-8") as json_file:
         json_file.write(json_content)
         json_file.close()
-
-
-def download_url_to_file(url, map_file_path):
-    """
-    download the content of a ULR to file
-    """
-    # set timeout to 30 minutes (per file)
-    request_geofabrik = requests.get(
-        url, allow_redirects=True, stream=True, timeout=1800)
-    if request_geofabrik.status_code != 200:
-        log.error('! failed download URL: %s', url)
-        sys.exit()
-
-    # write content to file
-    write_to_file(map_file_path, request_geofabrik)
-
-
-def write_to_file(file_path, request):
-    """
-    write content of request into given file path
-    """
-    with open(file_path, mode='wb') as file_handle:
-        for chunk in request.iter_content(chunk_size=1024*100):
-            file_handle.write(chunk)
 
 
 def get_folders_in_folder(folder):

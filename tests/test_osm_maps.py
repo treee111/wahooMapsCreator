@@ -365,9 +365,14 @@ class TestConfigFile(unittest.TestCase):
 
         o_input_data = InputData()
         o_input_data.country = 'malta'
+        # prevent from downloading land_polygons each time
+        o_input_data.max_days_old = 1000
 
         o_osm_data = OsmData()
-        o_osm_data.process_input_of_the_tool(o_input_data)
+        o_downloader = o_osm_data.process_input_of_the_tool(o_input_data)
+
+        # download files marked for download to fill up map_file per country to write to config
+        o_downloader.download_files_if_needed()
 
         o_osm_maps = OsmMaps(o_osm_data)
 
