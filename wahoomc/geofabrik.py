@@ -25,10 +25,13 @@ class Geofabrik:
     This is a Geofabrik processing class
     """
 
-    def __init__(self, country):
+    def __init__(self, input, xy_mode):
         # input parameters
-        self.wanted_map = o_geofabrik_json.translate_id_no_to_geofabrik(
-            country)
+        if not xy_mode:
+            self.wanted_map = o_geofabrik_json.translate_id_no_to_geofabrik(
+                input)
+        else:
+            self.wanted_xy_coordinates = input
 
         self.tiles = []
         self.border_countries = {}
@@ -105,61 +108,63 @@ class Geofabrik:
 
         return tiles_of_input
 
-    def get_tile_by_one_xy_combination_from_geofabrik(self, xy_coordinates):
+    def get_tiles_of_xy_combination(self):
         """
         Get the relevant tiles for a country
         """
         # X/Y coding here
-        top_x = xy_coordinates["x"]
-        bot_x = xy_coordinates["x"]
-        top_y = xy_coordinates["y"]
-        bot_y = xy_coordinates["y"]
 
-        # Build list of tiles from the bounding box
-        bbox_tiles = []
-        for x_value in range(top_x, bot_x + 1):
-            for y_value in range(top_y, bot_y + 1):
-                (tile_top, tile_left) = num2deg(x_value, y_value)
-                (tile_bottom, tile_right) = num2deg(x_value+1, y_value+1)
-                if tile_left < -180:
-                    tile_left = -180
-                if tile_left > 180:
-                    tile_left = 180
-                if tile_right < -180:
-                    tile_right = -180
-                if tile_right > 180:
-                    tile_right = 180
-                if tile_top < -90:
-                    tile_top = -90
-                if tile_top > 90:
-                    tile_top = 90
-                if tile_bottom < -90:
-                    tile_bottom = -90
-                if tile_bottom > 90:
-                    tile_bottom = 90
-                bbox_tiles.append({'x': x_value, 'y': y_value, 'tile_left': tile_left,
-                                   'tile_top': tile_top, 'tile_right': tile_right,
-                                   'tile_bottom': tile_bottom})
+        for xy_combination in self.wanted_xy_coordinates:
+            top_x = xy_combination["x"]
+            bot_x = xy_combination["x"]
+            top_y = xy_combination["y"]
+            bot_y = xy_combination["y"]
 
-        coords = []
-        coords.append((tile_top, tile_left))
-        coords.append((tile_top, tile_right))
-        coords.append((tile_bottom, tile_right))
-        coords.append((tile_bottom, tile_left))
-        coords.append((tile_top, tile_left))
-        print(f'Coords= {coords}')
-        p = Polygon(coords)
-        print(f'p= {p}')
-        wanted_region = shape(p)
-        print(f'wanted_region= {wanted_region}')
-        (bbox_left, bbox_bottom, bbox_right, bbox_top) = wanted_region.bounds
+            # Build list of tiles from the bounding box
+            bbox_tiles = []
+            for x_value in range(top_x, bot_x + 1):
+                for y_value in range(top_y, bot_y + 1):
+                    (tile_top, tile_left) = num2deg(x_value, y_value)
+                    (tile_bottom, tile_right) = num2deg(x_value+1, y_value+1)
+                    if tile_left < -180:
+                        tile_left = -180
+                    if tile_left > 180:
+                        tile_left = 180
+                    if tile_right < -180:
+                        tile_right = -180
+                    if tile_right > 180:
+                        tile_right = 180
+                    if tile_top < -90:
+                        tile_top = -90
+                    if tile_top > 90:
+                        tile_top = 90
+                    if tile_bottom < -90:
+                        tile_bottom = -90
+                    if tile_bottom > 90:
+                        tile_bottom = 90
+                    bbox_tiles.append({'x': x_value, 'y': y_value, 'tile_left': tile_left,
+                                       'tile_top': tile_top, 'tile_right': tile_right,
+                                       'tile_bottom': tile_bottom})
 
-        # wanted_region = bbox_tiles
+            coords = []
+            coords.append((tile_top, tile_left))
+            coords.append((tile_top, tile_right))
+            coords.append((tile_bottom, tile_right))
+            coords.append((tile_bottom, tile_left))
+            coords.append((tile_top, tile_left))
+            print(f'Coords= {coords}')
+            p = Polygon(coords)
+            print(f'p= {p}')
+            wanted_region = shape(p)
+            print(f'wanted_region= {wanted_region}')
+            (bbox_left, bbox_bottom, bbox_right, bbox_top) = wanted_region.bounds
 
-        log.info('Searching for needed maps, this can take a while.')
-        tiles_of_input = find_needed_countries(
-            bbox_tiles, self.wanted_map, wanted_region, xy_mode=True)
-        # print (f'Country= {country}')
+            # wanted_region = bbox_tiles
+
+            log.info('Searching for needed maps, this can take a while.')
+            tiles_of_input = find_needed_countries(
+                bbox_tiles, self.wanted_xy_coordinates, wanted_region, xy_mode=True)
+            # print (f'Country= {country}')
 
         return tiles_of_input[0]
 
@@ -228,7 +233,7 @@ def find_needed_countries(bbox_tiles, wanted_map, wanted_region_polygon, xy_mode
             try:
                 parent = value['parent']
             except KeyError:
-                pass
+                parent = ''
             rurl = value['pbf_url']
             rshape = shape(value['geometry'])
 

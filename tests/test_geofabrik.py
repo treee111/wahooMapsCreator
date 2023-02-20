@@ -18,7 +18,7 @@ def calc_tiles_via_geofabrik_json(input_argument):
     calculate tiles using downloaded geofabrik file
     the "new" way of doing
     """
-    o_geofabrik = Geofabrik(input_argument)
+    o_geofabrik = Geofabrik(input_argument, xy_mode=False)
     tiles_via_geofabrik_json = o_geofabrik.get_tiles_of_country()
 
     return tiles_via_geofabrik_json
@@ -29,9 +29,8 @@ def calc_tiles_via_geofabrik_json_xy(input_argument):
     calculate tiles using downloaded geofabrik file via x/y attributes as input
     the "new" way of doing
     """
-    o_geofabrik = Geofabrik("dummy")
-    tiles_via_geofabrik_json = o_geofabrik.get_tile_by_one_xy_combination_from_geofabrik(
-        input_argument)
+    o_geofabrik = Geofabrik(input_argument, xy_mode=True)
+    tiles_via_geofabrik_json = o_geofabrik.get_tiles_of_xy_combination()
 
     return tiles_via_geofabrik_json
 
@@ -100,7 +99,7 @@ class TestGeofabrik(unittest.TestCase):
                            'https://download.geofabrik.de/europe/malta-latest.osm.pbf']}
 
         geofabrik_tiles = calc_tiles_via_geofabrik_json_xy(
-            {'x': 138, 'y': 100})
+            [{'x': 138, 'y': 100}])
 
         self.assertEqual(item_0, geofabrik_tiles)
 

@@ -201,7 +201,7 @@ class OsmData():  # pylint: disable=too-few-public-methods
 
         # option 1a: use Geofabrik-URL to calculate the relevant tiles
         if o_input_data.geofabrik_tiles:
-            o_geofabrik = Geofabrik(o_input_data.country)
+            o_geofabrik = Geofabrik(o_input_data.country, xy_mode=False)
             self.tiles = o_geofabrik.get_tiles_of_country()
 
         # option 1b: use static json files in the repo to calculate relevant tiles
@@ -219,18 +219,12 @@ class OsmData():  # pylint: disable=too-few-public-methods
 
         # option 2a: use Geofabrik-URL to get the relevant tiles
         if o_input_data.geofabrik_tiles:
-            o_geofabrik = Geofabrik("1239871230978")
-
             xy_coordinates = get_xy_coordinates_from_input(
                 o_input_data.xy_coordinates)
 
-            # loop through x/y combinations and find each tile in the json files
-            for xy_comb in xy_coordinates:
-                try:
-                    self.tiles.append(o_geofabrik.get_tile_by_one_xy_combination_from_geofabrik(
-                        xy_comb))
-                except TileNotFoundError:
-                    pass
+            o_geofabrik = Geofabrik(xy_coordinates, xy_mode=True)
+            # find the tiles for  x/y combinations in the geofabrik json files
+            self.tiles = o_geofabrik.get_tiles_of_xy_combination()
 
         # option 2b: use static json files in the repo to get relevant tiles
         else:
