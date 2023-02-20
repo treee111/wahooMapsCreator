@@ -6,7 +6,7 @@ import os
 import unittest
 
 # import custom python packages
-from wahoomc.geofabrik import Geofabrik
+from wahoomc.geofabrik import CountryGeofabrik, XYGeofabrik
 from wahoomc import file_directory_functions as fd_fct
 from wahoomc import constants_functions as const_fct
 from wahoomc.downloader import Downloader
@@ -18,8 +18,8 @@ def calc_tiles_via_geofabrik_json(input_argument):
     calculate tiles using downloaded geofabrik file
     the "new" way of doing
     """
-    o_geofabrik = Geofabrik(input_argument, xy_mode=False)
-    tiles_via_geofabrik_json = o_geofabrik.get_tiles_of_country()
+    o_geofabrik = CountryGeofabrik(input_argument)
+    tiles_via_geofabrik_json = o_geofabrik.get_tiles_of_wanted_map()
 
     return tiles_via_geofabrik_json
 
@@ -29,8 +29,8 @@ def calc_tiles_via_geofabrik_json_xy(input_argument):
     calculate tiles using downloaded geofabrik file via x/y attributes as input
     the "new" way of doing
     """
-    o_geofabrik = Geofabrik(input_argument, xy_mode=True)
-    tiles_via_geofabrik_json = o_geofabrik.get_tiles_of_xy_combination()
+    o_geofabrik = XYGeofabrik(input_argument)
+    tiles_via_geofabrik_json = o_geofabrik.get_tiles_of_wanted_map()
 
     return tiles_via_geofabrik_json
 

@@ -28,7 +28,7 @@ from wahoomc.constants import VERSION
 from wahoomc.constants import OSMOSIS_WIN_FILE_PATH
 
 from wahoomc.downloader import Downloader
-from wahoomc.geofabrik import Geofabrik
+from wahoomc.geofabrik import CountryGeofabrik, XYGeofabrik
 
 log = logging.getLogger('main-logger')
 
@@ -201,8 +201,8 @@ class OsmData():  # pylint: disable=too-few-public-methods
 
         # option 1a: use Geofabrik-URL to calculate the relevant tiles
         if o_input_data.geofabrik_tiles:
-            o_geofabrik = Geofabrik(o_input_data.country, xy_mode=False)
-            self.tiles = o_geofabrik.get_tiles_of_country()
+            o_geofabrik = CountryGeofabrik(o_input_data.country)
+            self.tiles = o_geofabrik.get_tiles_of_wanted_map()
 
         # option 1b: use static json files in the repo to calculate relevant tiles
         else:
@@ -222,9 +222,9 @@ class OsmData():  # pylint: disable=too-few-public-methods
             xy_coordinates = get_xy_coordinates_from_input(
                 o_input_data.xy_coordinates)
 
-            o_geofabrik = Geofabrik(xy_coordinates, xy_mode=True)
+            o_geofabrik = XYGeofabrik(xy_coordinates)
             # find the tiles for  x/y combinations in the geofabrik json files
-            self.tiles = o_geofabrik.get_tiles_of_xy_combination()
+            self.tiles = o_geofabrik.get_tiles_of_wanted_map()
 
         # option 2b: use static json files in the repo to get relevant tiles
         else:
