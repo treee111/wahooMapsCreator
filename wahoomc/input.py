@@ -13,7 +13,6 @@ import tkinter as tk
 from tkinter import ttk
 
 # import custom python packages
-from wahoomc import constants
 from wahoomc.geofabrik_json import GeofabrikJson
 from wahoomc.geofabrik_json import CountyIsNoGeofabrikCountry
 
@@ -154,6 +153,22 @@ def create_checkbox(self, default_value, description, row):
     self.check_button.grid(column=0, row=row, sticky=tk.W, padx=15, pady=5)
 
     return bool_var
+
+
+def get_countries_of_continent_from_geofabrik(continent):
+    """
+    returns all countries of a continent to be selected in UI
+    """
+    countries = []
+    for region, value in o_geofabrik_json.geofabrik_overview.items():
+        try:
+            if value['parent'] == continent:
+                countries.append(region)
+        # regions/ continents do not have a parent
+        except KeyError:
+            pass
+
+    return countries
 
 
 class InputData():  # pylint: disable=too-many-instance-attributes,too-few-public-methods
@@ -327,12 +342,12 @@ class ComboboxesEntryField(tk.Frame):  # pylint: disable=too-many-instance-attri
 
         # Comboboxes
         self.cb_continent = ttk.Combobox(
-            self, values=constants.continents, state="readonly")
+            self, values=o_geofabrik_json.geofabrik_regions, state="readonly")
         self.cb_continent.current(0)  # pre-select first entry in combobox
         self.cb_continent.bind("<<ComboboxSelected>>", self.callback_continent)
 
         self.cb_country = ttk.Combobox(
-            self, values=constants.europe, state="readonly")
+            self, state="readonly")
 
         # Positioning
         self.lab_top.grid(column=0, row=0, columnspan=2, padx=5, pady=10)
@@ -361,8 +376,8 @@ class ComboboxesEntryField(tk.Frame):  # pylint: disable=too-many-instance-attri
         """
         continent = self.cb_continent.get()
         # get countries for selected region and set for combobox
-        self.cb_country["values"] = getattr(
-            constants, continent.replace("-", ""))
+        self.cb_country["values"] = get_countries_of_continent_from_geofabrik(
+            continent)
         self.cb_country.current(0)
 
 

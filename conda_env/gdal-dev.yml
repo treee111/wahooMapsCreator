@@ -12,5 +12,7 @@ dependencies:
   - mock
   - twine
   - pip
+  - vulture
+  - pydeps
   - pip:
       - build

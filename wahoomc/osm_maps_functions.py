@@ -148,7 +148,7 @@ class OsmData():  # pylint: disable=too-few-public-methods
         """
 
         o_downloader = Downloader(
-            o_input_data.max_days_old, o_input_data.force_download, self.tiles, self.border_countries)
+            o_input_data.max_days_old, o_input_data.force_download, self.border_countries)
         # takeover what is given by user first for force_processing
         self.force_processing = o_input_data.force_processing
 

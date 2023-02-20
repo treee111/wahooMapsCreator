@@ -11,12 +11,12 @@ import sys
 import time
 import logging
 import platform
+import zipfile
 import requests
 
 # import custom python packages
-from wahoomc.file_directory_functions import download_url_to_file, unzip
-from wahoomc.constants_functions import translate_country_input_to_geofabrik, \
-    get_geofabrik_region_of_country, get_tooling_win_path
+from wahoomc.constants_functions import get_tooling_win_path
+from wahoomc.geofabrik_json import GeofabrikJson
 
 from wahoomc.constants import USER_DL_DIR
 from wahoomc.constants import USER_MAPS_DIR
@@ -73,24 +73,32 @@ def download_file(target_filepath, url, target_dir=""):
         log.info('+ Downloaded: %s', target_filepath)
 
 
-def get_osm_pbf_filepath_url(country):
+def build_osm_pbf_filepath(country_translated):
     """
-    build the geofabrik download url to a countries' OSM file and download filepath
+    build download filepath to countries' OSM file
+    replace / to have no problem with directories
     """
-
-    transl_c = translate_country_input_to_geofabrik(country)
-    region = get_geofabrik_region_of_country(country)
-    if region != 'no':
-        url = 'https://download.geofabrik.de/' + region + \
-            '/' + transl_c + '-latest.osm.pbf'
-    else:
-        url = 'https://download.geofabrik.de/' + transl_c + '-latest.osm.pbf'
-
+    # build path to downloaded file with translated geofabrik country
     map_file_path = os.path.join(
-        USER_MAPS_DIR, f'{transl_c}' + '-latest.osm.pbf')
+        USER_MAPS_DIR, f'{country_translated.replace("/", "_")}' + '-latest.osm.pbf')
 
-    # return URL and download filepath
-    return map_file_path, url
+    # return download filepath
+    return map_file_path
+
+
+def download_url_to_file(url, map_file_path):
+    """
+    download the content of a ULR to file
+    """
+    # set timeout to 30 minutes (per file)
+    request_geofabrik = requests.get(
+        url, allow_redirects=True, stream=True, timeout=1800)
+    if request_geofabrik.status_code != 200:
+        log.error('! failed download URL: %s', url)
+        sys.exit()
+
+    # write content to file
+    write_to_file(map_file_path, request_geofabrik)
 
 
 def download_tooling():
@@ -136,6 +144,13 @@ def download_tooling():
         os.makedirs(os.path.dirname(mapwriter_plugin_path), exist_ok=True)
         download_file(mapwriter_plugin_path, mapwriter_plugin_url)
 
+    # download geofabrik json as this will be needed always
+    # because of the .json file replacement by geofabrik
+    o_downloader = Downloader(24, False)
+
+    if o_downloader.should_geofabrik_file_be_downloaded():
+        o_downloader.download_geofabrik_file()
+
 
 def get_latest_pypi_version():
     """
@@ -149,16 +164,34 @@ def get_latest_pypi_version():
         return None
 
 
+def write_to_file(file_path, request):
+    """
+    write content of request into given file path
+    """
+    with open(file_path, mode='wb') as file_handle:
+        for chunk in request.iter_content(chunk_size=1024*100):
+            file_handle.write(chunk)
+
+
+def unzip(source_filename, dest_dir):
+    """
+    unzip the given file into the given directory
+    """
+    with zipfile.ZipFile(source_filename, 'r') as zip_ref:
+        zip_ref.extractall(dest_dir)
+
+
 class Downloader:
     """
     This is the class to check and download maps / artifacts"
     """
 
-    def __init__(self, max_days_old, force_download, tiles_from_json=None, border_countries=None):
+    def __init__(self, max_days_old, force_download, border_countries=None):
         self.max_days_old = max_days_old
         self.force_download = force_download
-        self.tiles_from_json = tiles_from_json
         self.border_countries = border_countries
+
+        self.o_geofabrik_json = GeofabrikJson()
 
         self.need_to_dl = []
 
@@ -255,7 +288,8 @@ class Downloader:
             # get translated country (geofabrik) of country
             # do not download the same file for different countries
             # --> e.g. China, Hong Kong and Macao, see Issue #11
-            transl_c = translate_country_input_to_geofabrik(country)
+            transl_c = self.o_geofabrik_json.translate_id_no_to_geofabrik(
+                country)
 
             # check for already existing .osm.pbf file
             map_file_path = glob.glob(
@@ -290,7 +324,11 @@ class Downloader:
         for country, item in self.border_countries.items():
             try:
                 if item['download'] is True:
-                    map_file_path, url = get_osm_pbf_filepath_url(country)
+                    # build path to downloaded file with translated geofabrik country
+                    map_file_path = build_osm_pbf_filepath(
+                        self.o_geofabrik_json.translate_id_no_to_geofabrik(country))
+                    # fetch the geofabrik download url to countries' OSM file
+                    url = self.o_geofabrik_json.get_geofabrik_url(country)
                     download_file(map_file_path, url)
                     self.border_countries[country] = {
                         'map_file': map_file_path}

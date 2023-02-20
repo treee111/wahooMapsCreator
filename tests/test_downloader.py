@@ -13,11 +13,12 @@ import platform
 
 from wahoomc.downloader import older_than_x_days
 from wahoomc.downloader import download_file
-from wahoomc.downloader import get_osm_pbf_filepath_url
+from wahoomc.downloader import build_osm_pbf_filepath
 from wahoomc.downloader import download_tooling
 from wahoomc.downloader import Downloader
 from wahoomc import constants
 from wahoomc.constants_functions import get_tooling_win_path
+from wahoomc.geofabrik_json import GeofabrikJson
 
 
 class TestDownloader(unittest.TestCase):
@@ -68,15 +69,6 @@ class TestDownloader(unittest.TestCase):
         result = older_than_x_days(future, self.max_days_old)
         self.assertFalse(result)
 
-    # def test_download_polygons_file(self):
-    #     """
-    #     Test the download of land poligons file via URL
-    #     """
-    #     path = os.path.join(fd_fct.COMMON_DL_DIR, 'land-polygons-split-4326',
-    #                         'land_polygons.shp')
-    #     self.o_downloader.download_file(path,
-    #                                     'https://osmdata.openstreetmap.de/download/land-polygons-split-4326.zip', True)
-
     def test_download_geofabrik_file(self):
         """
         Test the download of geofabrik file via URL
@@ -106,23 +98,38 @@ class TestDownloader(unittest.TestCase):
         self.assertFalse(
             self.o_downloader.should_geofabrik_file_be_downloaded())
 
-    def test_download_malta_osm_pbf_file(self):
+    def test_building_osm_pbf_filepaths(self):
+        """
+        Test if composing map file path on the device is correct
+        "/" to "_" is done for "us/" countries
+        """
+        self.check_exp_agains_composed_map_file_path(
+            'us/nebraska', 'us_nebraska')
+
+        self.check_exp_agains_composed_map_file_path(
+            'us/georgia', 'us_georgia')
+
+        self.check_exp_agains_composed_map_file_path(
+            'malta', 'malta')
+
+        self.check_exp_agains_composed_map_file_path(
+            'asia', 'asia')
+
+        self.check_exp_agains_composed_map_file_path(
+            'georgia', 'georgia')
+
+    def test_download_osm_pbf_file(self):
         """
         Test the download of geofabrik file via URL
         """
+        self.check_download_osm_pbf_file('malta', os.path.join(constants.USER_DL_DIR, 'maps',
+                                                               'malta' + '-latest.osm.pbf'))
 
-        country = 'malta'
+        self.check_download_osm_pbf_file('us/hawaii', os.path.join(constants.USER_DL_DIR, 'maps',
+                                                                   'us_hawaii' + '-latest.osm.pbf'))
 
-        path = os.path.join(constants.USER_DL_DIR, 'maps',
-                            f'{country}' + '-latest.osm.pbf')
-
-        if os.path.exists(path):
-            os.remove(path)
-
-        map_file_path, url = get_osm_pbf_filepath_url(country)
-        download_file(map_file_path, url, False)
-
-        self.assertTrue(os.path.exists(path))
+        self.check_download_osm_pbf_file('solomon-islands', os.path.join(constants.USER_DL_DIR, 'maps',
+                                                                         'solomon-islands' + '-latest.osm.pbf'))
 
     def test_delete_not_existing_file(self):
         """
@@ -188,6 +195,32 @@ class TestDownloader(unittest.TestCase):
             download_tooling()
 
             self.assertTrue(os.path.exists(path))
+
+    def check_exp_agains_composed_map_file_path(self, country, country_map_file_path):
+        """
+        helper function to check a given to-be-path against the composed on based on country
+        """
+        exp_path = os.path.join(constants.USER_DL_DIR, 'maps',
+                                f'{country_map_file_path}' + '-latest.osm.pbf')
+
+        composed_path = build_osm_pbf_filepath(country)
+
+        self.assertEqual(exp_path, composed_path)
+
+    def check_download_osm_pbf_file(self, country, path):
+        """
+        Test if the download of a input country created the wanted map file
+        """
+        o_geofabrik_json = GeofabrikJson()
+
+        if os.path.exists(path):
+            os.remove(path)
+
+        map_file_path = build_osm_pbf_filepath(country)
+        url = o_geofabrik_json.get_geofabrik_url(country)
+        download_file(map_file_path, url, False)
+
+        self.assertTrue(os.path.exists(path))
 
 
 if __name__ == '__main__':
