@@ -277,18 +277,6 @@ class OsmData():  # pylint: disable=too-few-public-methods
         if len(self.border_countries) > 1:
             log.info('+ Border countries will be processed')
 
-    def find_tiles_for_xy_combinations(self, xy_coordinates):
-        """
-        loop through x/y combinations and find each tile in the json files
-        """
-        for xy_comb in xy_coordinates:
-            try:
-                self.tiles.append(get_tile_by_one_xy_combination_from_jsons(
-                    xy_comb))
-
-            except TileNotFoundError:
-                pass
-
     def calc_country_name_xy(self):
         """
         country name is the X/Y combinations separated by minus

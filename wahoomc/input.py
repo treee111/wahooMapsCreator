@@ -217,6 +217,7 @@ class InputData():  # pylint: disable=too-many-instance-attributes,too-few-publi
             try:
                 self.country = o_geofabrik_json.translate_id_no_to_geofabrik(
                     self.country)
+                return True
             except CountyIsNoGeofabrikCountry:
                 sys.exit(
                     f"Entered country '{self.country}' is not a geofabrik country. Please check this URL for possible countries \
