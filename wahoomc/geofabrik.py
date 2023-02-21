@@ -32,7 +32,11 @@ class InformalGeofabrikInterface:
         pass
 
     def find_needed_countries(self, bbox_tiles, wanted_map, wanted_region_polygon) -> dict:
-        """Extract text from the currently loaded file."""
+        """find needed countries for requested country or X/Y combination"""
+        pass
+
+    def compose_bouding_box(self, input) -> dict:
+        """calculate bounding box based on geometry or X/Y combination"""
         pass
 
 
@@ -53,58 +57,13 @@ class CountryGeofabrik(InformalGeofabrikInterface):
         # convert to shape (multipolygon)
         wanted_region = shape(wanted_map_geom)
 
-        # get bounding box
-        (bbox_left, bbox_bottom, bbox_right, bbox_top) = wanted_region.bounds
+        # calc bounding box - the whole area to be created
+        bbox = self.compose_bouding_box(wanted_region.bounds)
 
-        # convert bounding box to list of tiles at zoom level 8
-        (top_x, top_y) = deg2num(bbox_top, bbox_left)
-        (bot_x, bot_y) = deg2num(bbox_bottom, bbox_right)
+        # Build bounding box list of tiles - several X/Y combinations making up the area
+        bbox_tiles = calc_bounding_box_tiles(bbox)
 
-        # and stay within the allowed tilenumber range!
-        if top_x < 0:
-            top_x = 0
-        if top_x > 255:
-            top_x = 255
-        if top_y < 0:
-            top_y = 0
-        if top_y > 255:
-            top_y = 255
-        if bot_x < 0:
-            bot_x = 0
-        if bot_x > 255:
-            bot_x = 255
-        if bot_y < 0:
-            bot_y = 0
-        if bot_y > 255:
-            bot_y = 255
-
-        # Build list of tiles from the bounding box
-        bbox_tiles = []
-        for x_value in range(top_x, bot_x + 1):
-            for y_value in range(top_y, bot_y + 1):
-                (tile_top, tile_left) = num2deg(x_value, y_value)
-                (tile_bottom, tile_right) = num2deg(x_value+1, y_value+1)
-                if tile_left < -180:
-                    tile_left = -180
-                if tile_left > 180:
-                    tile_left = 180
-                if tile_right < -180:
-                    tile_right = -180
-                if tile_right > 180:
-                    tile_right = 180
-                if tile_top < -90:
-                    tile_top = -90
-                if tile_top > 90:
-                    tile_top = 90
-                if tile_bottom < -90:
-                    tile_bottom = -90
-                if tile_bottom > 90:
-                    tile_bottom = 90
-                bbox_tiles.append({'x': x_value, 'y': y_value, 'tile_left': tile_left,
-                                   'tile_top': tile_top, 'tile_right': tile_right,
-                                   'tile_bottom': tile_bottom})
-
-        log.info('Searching for needed maps, this can take a while.')
+        # get all infos of these bounding box tiles
         tiles_of_input = self.find_needed_countries(
             bbox_tiles, self.wanted_map, wanted_region)
 
@@ -238,6 +197,35 @@ class CountryGeofabrik(InformalGeofabrikInterface):
 
         return output
 
+    def compose_bouding_box(self, bounds):
+        """Overrides InformalGeofabrikInterface.calc_bouding_box()"""
+        # get bounding box
+        (bbox_left, bbox_bottom, bbox_right, bbox_top) = bounds
+
+        # convert bounding box to list of tiles at zoom level 8
+        (top_x, top_y) = deg2num(bbox_top, bbox_left)
+        (bot_x, bot_y) = deg2num(bbox_bottom, bbox_right)
+
+        # and stay within the allowed tilenumber range!
+        if top_x < 0:
+            top_x = 0
+        if top_x > 255:
+            top_x = 255
+        if top_y < 0:
+            top_y = 0
+        if top_y > 255:
+            top_y = 255
+        if bot_x < 0:
+            bot_x = 0
+        if bot_x > 255:
+            bot_x = 255
+        if bot_y < 0:
+            bot_y = 0
+        if bot_y > 255:
+            bot_y = 255
+
+        return {'top_x': top_x, 'top_y': top_y, 'bot_x': bot_x, 'bot_y': bot_y}
+
 
 class XYGeofabrik(InformalGeofabrikInterface):
     """Geofabrik processing for X/Y coordinates"""
@@ -248,62 +236,31 @@ class XYGeofabrik(InformalGeofabrikInterface):
 
     def get_tiles_of_wanted_map(self) -> str:
         """Overrides InformalGeofabrikInterface.get_tiles_of_wanted_map()"""
+        tiles_of_input = []
         for xy_combination in self.wanted_map:
-            top_x = xy_combination["x"]
-            bot_x = xy_combination["x"]
-            top_y = xy_combination["y"]
-            bot_y = xy_combination["y"]
 
-            # Build list of tiles from the bounding box
-            bbox_tiles = []
-            for x_value in range(top_x, bot_x + 1):
-                for y_value in range(top_y, bot_y + 1):
-                    (tile_top, tile_left) = num2deg(x_value, y_value)
-                    (tile_bottom, tile_right) = num2deg(x_value+1, y_value+1)
-                    if tile_left < -180:
-                        tile_left = -180
-                    if tile_left > 180:
-                        tile_left = 180
-                    if tile_right < -180:
-                        tile_right = -180
-                    if tile_right > 180:
-                        tile_right = 180
-                    if tile_top < -90:
-                        tile_top = -90
-                    if tile_top > 90:
-                        tile_top = 90
-                    if tile_bottom < -90:
-                        tile_bottom = -90
-                    if tile_bottom > 90:
-                        tile_bottom = 90
-                    bbox_tiles.append({'x': x_value, 'y': y_value, 'tile_left': tile_left,
-                                       'tile_top': tile_top, 'tile_right': tile_right,
-                                       'tile_bottom': tile_bottom})
+            # calc bounding box - the whole area to be created
+            bbox = self.compose_bouding_box(xy_combination)
 
-            coords = []
-            coords.append((tile_top, tile_left))
-            coords.append((tile_top, tile_right))
-            coords.append((tile_bottom, tile_right))
-            coords.append((tile_bottom, tile_left))
-            coords.append((tile_top, tile_left))
-            # print(f'Coords= {coords}')
-            p = Polygon(coords)
-            # print(f'p= {p}')
-            wanted_region = shape(p)
-            # print(f'wanted_region= {wanted_region}')
-            (bbox_left, bbox_bottom, bbox_right, bbox_top) = wanted_region.bounds
+            # Build bounding box list of tiles - several X/Y combinations making up the area
+            bbox_tiles = calc_bounding_box_tiles(bbox)
 
-            log.info('Searching for needed maps, this can take a while.')
-            tiles_of_input = self.find_needed_countries(
-                bbox_tiles, self.wanted_map, wanted_region)
+            # convert X/Y combination to shape (multipolygon)
+            wanted_region = self.compose_shape(bbox_tiles)
 
-        return tiles_of_input[0]
+            # get all infos of these bounding box tiles
+            tiles_of_input.extend(self.find_needed_countries(
+                bbox_tiles, self.wanted_map, wanted_region))
+
+        return tiles_of_input
 
     def find_needed_countries(self, bbox_tiles, wanted_map, wanted_region_polygon) -> dict:
         """Overrides InformalGeofabrikInterface.find_needed_countries()"""
         output = []
 
         geofabrik_regions = self.o_geofabrik_json.geofabrik_regions
+
+        log.info('Searching for needed maps, this can take a while.')
 
         # itterate through tiles and find Geofabrik regions that are in the tiles
         counter = 1
@@ -366,6 +323,48 @@ class XYGeofabrik(InformalGeofabrikInterface):
                        'right': tile['tile_right'], 'bottom': tile['tile_bottom'], 'countries': must_download_maps, 'urls': must_download_urls})
 
         return output
+
+    def compose_bouding_box(self, xy_combination):
+        """Overrides InformalGeofabrikInterface.calc_bouding_box()"""
+
+        return {'top_x': xy_combination["x"], 'bot_x': xy_combination["x"],
+                'top_y': xy_combination["y"], 'bot_y': xy_combination["y"]}
+
+    def compose_shape(self, bbox_tiles):
+        coords = [(bbox_tiles[0]["tile_top"], bbox_tiles[0]["tile_left"]), (bbox_tiles[0]["tile_top"], bbox_tiles[0]["tile_right"]),
+                  (bbox_tiles[0]["tile_bottom"], bbox_tiles[0]["tile_right"]), (bbox_tiles[0]["tile_bottom"], bbox_tiles[0]["tile_left"])]
+        p = Polygon(coords)
+        wanted_region = shape(p)
+        return wanted_region
+
+
+def calc_bounding_box_tiles(bbox):
+    bbox_tiles = []
+    for x_value in range(bbox['top_x'], bbox['bot_x'] + 1):
+        for y_value in range(bbox['top_y'], bbox['bot_y'] + 1):
+            (tile_top, tile_left) = num2deg(x_value, y_value)
+            (tile_bottom, tile_right) = num2deg(x_value+1, y_value+1)
+            if tile_left < -180:
+                tile_left = -180
+            if tile_left > 180:
+                tile_left = 180
+            if tile_right < -180:
+                tile_right = -180
+            if tile_right > 180:
+                tile_right = 180
+            if tile_top < -90:
+                tile_top = -90
+            if tile_top > 90:
+                tile_top = 90
+            if tile_bottom < -90:
+                tile_bottom = -90
+            if tile_bottom > 90:
+                tile_bottom = 90
+            bbox_tiles.append({'x': x_value, 'y': y_value, 'tile_left': tile_left,
+                               'tile_top': tile_top, 'tile_right': tile_right,
+                               'tile_bottom': tile_bottom})
+
+    return bbox_tiles
 
 
 def deg2num(lat_deg, lon_deg, zoom=8):
