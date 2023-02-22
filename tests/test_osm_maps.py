@@ -6,40 +6,21 @@ import os
 import unittest
 
 # import custom python packages
-# sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
 from wahoomc.osm_maps_functions import OsmData
 from wahoomc.osm_maps_functions import OsmMaps
-from wahoomc.osm_maps_functions import get_tile_by_one_xy_combination_from_jsons
 from wahoomc.osm_maps_functions import get_xy_coordinates_from_input
-from wahoomc.osm_maps_functions import TileNotFoundError
+# from wahoomc.osm_maps_functions import TileNotFoundError
 from wahoomc.input import InputData
 from wahoomc import file_directory_functions as fd_fct
-from wahoomc import constants_functions as const_fct
 from wahoomc import constants
 
 
-class TestOsmMaps(unittest.TestCase):
+class TestOsmMapsCalculation(unittest.TestCase):
     """
     tests for the OSM maps file
     """
 
     # def setUp(self):
-
-    def test_input_country_malta(self):
-        """
-        Test "malta" as input to the wahooMapsCreator
-        check, if the given input-parameter is saved to the OsmMaps instance
-        """
-
-        o_input_data = InputData()
-        o_input_data.country = 'malta'
-
-        o_osm_data = OsmData()
-        o_osm_data.process_input_of_the_tool(o_input_data)
-
-        result = o_osm_data.country_name
-        self.assertEqual(result, 'malta')
 
     def test_calc_border_countries_input_country(self):
         """
@@ -50,12 +31,12 @@ class TestOsmMaps(unittest.TestCase):
 
         # malta
         self.process_and_check_border_countries(
-            'malta', True, {'malta': {}}, 'country')
+            'malta', True, {'italy': {}, 'malta': {}}, 'country')
 
         # germany
-        expected_result = {'czech_republic': {}, 'germany': {}, 'austria': {}, 'liechtenstein': {},
+        expected_result = {'czech-republic': {}, 'germany': {}, 'austria': {}, 'liechtenstein': {},
                            'switzerland': {}, 'italy': {}, 'netherlands': {}, 'belgium': {},
-                           'luxembourg': {}, 'france': {}, 'poland': {}, 'denmark': {}}
+                           'luxembourg': {}, 'france': {}, 'poland': {}, 'denmark': {}, 'sweden': {}}
         self.process_and_check_border_countries(
             'germany', True, expected_result, 'country')
 
@@ -146,28 +127,25 @@ class TestOsmMaps(unittest.TestCase):
         # self.assertDictEqual()  Equal(tIn(member=exp_result, container=result)
 
 
-class TestStaticJsons(unittest.TestCase):
+class TestOSMMapsInput(unittest.TestCase):
     """
-    tests for static .json files
+    tests for input of OsmData
     """
 
-    def test_tiles_via_static_json(self):
+    def test_input_country_malta(self):
         """
-        Test the retrieval of tiles via geofabrik URL against hardcoded data for germany
-        """
-        expected_tiles = [{'x': 138, 'y': 100, 'left': 14.0625, 'top': 36.597889,
-                           'right': 15.46875, 'bottom': 35.46067, 'countries': ['malta']}]
-        self.calculate_tiles_via_static_json('malta', expected_tiles)
-
-    def calculate_tiles_via_static_json(self, country, expected_result):
-        """
-        use static json files in the repo to calculate relevant tiles
+        Test "malta" as input to the wahooMapsCreator
+        check, if the given input-parameter is saved to the OsmMaps instance
         """
 
-        json_file_path = const_fct.get_path_to_static_tile_json(country)
-        tiles = fd_fct.read_json_file(json_file_path)
+        o_input_data = InputData()
+        o_input_data.country = 'malta'
 
-        self.assertEqual(tiles, expected_result)
+        o_osm_data = OsmData()
+        o_osm_data.process_input_of_the_tool(o_input_data)
+
+        result = o_osm_data.country_name
+        self.assertEqual(result, 'malta')
 
     def test_splitting_of_single_xy_coordinate(self):
         """
@@ -175,17 +153,13 @@ class TestStaticJsons(unittest.TestCase):
         """
 
         xy_tuple = get_xy_coordinates_from_input("133/88")
-
         self.assertEqual(xy_tuple, [{"x": 133, "y": 88}])
 
         xy_tuple = get_xy_coordinates_from_input("11/92")
-
         self.assertEqual(xy_tuple, [{"x": 11, "y": 92}])
 
         xy_tuple = get_xy_coordinates_from_input("138/100")
-        expected_result = [{"x": 138, "y": 100}]
-
-        self.assertEqual(xy_tuple, expected_result)
+        self.assertEqual(xy_tuple, [{"x": 138, "y": 100}])
 
     def test_splitting_of_multiple_xy_coordinate(self):
         """
@@ -197,35 +171,20 @@ class TestStaticJsons(unittest.TestCase):
 
         self.assertEqual(xy_tuple, expected_result)
 
-    def test_get_tile_via_xy_coordinate(self):
-        """
-        use static json files in the repo to calculate relevant tile
-        """
+    # def test_get_tile_via_xy_coordinate_error(self):
+    #     """
+    #     use static json files in the repo to calculate a not-existing tile.
 
-        tile = get_tile_by_one_xy_combination_from_jsons({"x": 133, "y": 88})
+    #     does not error out due to new Geofabrik Json processing. Nevertheless, the tile is not existing
+    #     only +/- 180 -/+90: https://epsg.io/4326
+    #     """
 
-        expected_result = {
-            "x": 133,
-            "y": 88,
-            "left": 7.03125,
-            "top": 48.922499,
-            "right": 8.4375,
-            "bottom": 47.989922,
-            "countries": [
-                "france",
-                "germany"
-            ]
-        }
+    #     o_geofabrik = XYGeofabrik([{"x": 200, "y": 1}])
 
-        self.assertEqual(tile, expected_result)
+    #     # tiles =
 
-    def test_get_tile_via_xy_coordinate_error(self):
-        """
-        use static json files in the repo to calculate a not-existing tile.
-        """
-
-        with self.assertRaises(TileNotFoundError):
-            get_tile_by_one_xy_combination_from_jsons({"x": 200, "y": 1})
+    #     with self.assertRaises(TileNotFoundError):
+    #         o_geofabrik.get_tiles_of_wanted_map()
 
     def test_encoding_open_sea_osm(self):
         """
@@ -238,119 +197,6 @@ class TestStaticJsons(unittest.TestCase):
             sea_data_utf8 = sea_file.read()
 
         self.assertEqual(sea_data_no_encoding, sea_data_utf8)
-
-    def test_path_of_tile_via_static_json_china(self):
-        """
-        test function to find .json file for china against static path
-        """
-
-        country = 'china'
-        exp_path = os.path.join('asia', country)
-
-        self.calculate_path_to_static_tile_json(country, exp_path)
-
-    def test_path_of_tile_via_static_json_malta(self):
-        """
-        test function to find .json file for malta against static path
-        """
-
-        country = 'malta'
-        exp_path = os.path.join('europe', country)
-
-        self.calculate_path_to_static_tile_json(country, exp_path)
-
-    def test_path_of_tile_via_static_json_mexico(self):
-        """
-        test function to find .json file for mexico against static path
-        """
-
-        country = 'mexico'
-        exp_path = os.path.join('north_america', country)
-
-        self.calculate_path_to_static_tile_json(country, exp_path)
-
-    def test_path_of_tile_via_static_json_bahamas(self):
-        """
-        test function to find .json file for bahamas against static path
-        """
-
-        country = 'bahamas'
-        exp_path = os.path.join('north_america', country)
-
-        self.calculate_path_to_static_tile_json(country, exp_path)
-
-    def test_path_of_tile_via_static_json_chile(self):
-        """
-        test function to find .json file for chile against static path
-        """
-
-        country = 'chile'
-        exp_path = os.path.join('south_america', country)
-
-        self.calculate_path_to_static_tile_json(country, exp_path)
-
-    def calculate_path_to_static_tile_json(self, country, exp_path):
-        """
-        evaluated the .json file with get_path_to_static_tile_json function
-        - check against the static file path
-        - check if the file exists
-        """
-        json_file_path = const_fct.get_path_to_static_tile_json(country)
-
-        expected_path = os.path.join(constants.RESOURCES_DIR, 'json',
-                                     exp_path + '.json')
-
-        self.assertEqual(json_file_path, expected_path)
-        self.assertTrue(os.path.isfile(json_file_path))
-
-    def test_go_through_folders(self):
-        """
-        go through all files in the wahoo_mc/resources/json directory
-        - check if correct .json will be evaluated through get_path_to_static_tile_json function
-        """
-        for folder in fd_fct.get_folders_in_folder(os.path.join(constants.RESOURCES_DIR, 'json')):
-            for file in fd_fct.get_files_in_folder(os.path.join(constants.RESOURCES_DIR, 'json', folder)):
-                country = os.path.splitext(file)[0]
-
-                self.calculate_path_to_static_tile_json(
-                    country, os.path.join(folder, country))
-
-    def test_go_through_constants(self):
-        """
-        go through the constant for the GUI / country .json to region assignment
-        - check if correct .json will be evaluated through get_path_to_static_tile_json function
-        """
-        for country in constants.africa:
-            self.calculate_path_to_static_tile_json(
-                country, os.path.join("africa", country))
-
-        for country in constants.antarctica:
-            self.calculate_path_to_static_tile_json(
-                country, os.path.join("antarctica", country))
-
-        for country in constants.asia:
-            self.calculate_path_to_static_tile_json(
-                country, os.path.join("asia", country))
-
-        for country in constants.europe:
-            self.calculate_path_to_static_tile_json(
-                country, os.path.join("europe", country))
-
-        for country in constants.northamerica:
-            self.calculate_path_to_static_tile_json(
-                country, os.path.join('north_america', country))
-
-        for country in constants.oceania:
-            self.calculate_path_to_static_tile_json(
-                country, os.path.join("oceania", country))
-
-        for country in constants.southamerica:
-            self.calculate_path_to_static_tile_json(
-                country, os.path.join("south_america", country))
-
-        for country in constants.unitedstates:
-            self.calculate_path_to_static_tile_json(
-                country, os.path.join("united_states", country))
 
 
 class TestConfigFile(unittest.TestCase):

@@ -15,9 +15,8 @@ import shutil
 import logging
 
 # import custom python packages
-from wahoomc.file_directory_functions import read_json_file, \
-    get_folders_in_folder, get_filenames_of_jsons_in_folder, create_empty_directories, write_json_file_generic
-from wahoomc.constants_functions import get_path_to_static_tile_json, translate_tags_to_keep, \
+from wahoomc.file_directory_functions import read_json_file, create_empty_directories, write_json_file_generic
+from wahoomc.constants_functions import translate_tags_to_keep, \
     get_tooling_win_path, get_tag_wahoo_xml_path, TagWahooXmlNotFoundError
 
 from wahoomc.constants import USER_WAHOO_MC
@@ -55,29 +54,6 @@ def get_xy_coordinates_from_input(input_xy_coordinates):
                 {"x": int(splitted[0]), "y": int(splitted[1])})
 
     return xy_combinations
-
-
-def get_tile_by_one_xy_combination_from_jsons(xy_combination):
-    """
-    get tile from json files by given X/Y coordinate combination
-    """
-    # go through all files in all folders of the "json" directory
-    file_path_jsons = os.path.join(RESOURCES_DIR, 'json')
-
-    for folder in get_folders_in_folder(file_path_jsons):
-        for file in get_filenames_of_jsons_in_folder(os.path.join(file_path_jsons, folder)):
-
-            # get content of json in folder
-            content = read_json_file(
-                os.path.join(file_path_jsons, folder, file + '.json'))
-
-            # check tiles values against input x/y combination
-            for tile in content:
-                if tile['x'] == xy_combination['x'] and tile['y'] == xy_combination['y']:
-                    return tile
-
-    # if function is processed until here, there is no tile found for the x/y combination --> Exception
-    raise TileNotFoundError
 
 
 def run_subprocess_and_log_output(cmd, error_message, cwd=""):
@@ -201,14 +177,8 @@ class OsmData():  # pylint: disable=too-few-public-methods
 
         # option 1a: use Geofabrik-URL to calculate the relevant tiles
         if o_input_data.geofabrik_tiles:
-            o_geofabrik = CountryGeofabrik(o_input_data.country)
-            self.tiles = o_geofabrik.get_tiles_of_wanted_map()
-
-        # option 1b: use static json files in the repo to calculate relevant tiles
-        else:
-            json_file_path = get_path_to_static_tile_json(
-                o_input_data.country)
-            self.tiles = read_json_file(json_file_path)
+        o_geofabrik = CountryGeofabrik(o_input_data.country)
+        self.tiles = o_geofabrik.get_tiles_of_wanted_map()
 
     def calc_tiles_xy(self, o_input_data):
         """
@@ -219,26 +189,12 @@ class OsmData():  # pylint: disable=too-few-public-methods
 
         # option 2a: use Geofabrik-URL to get the relevant tiles
         if o_input_data.geofabrik_tiles:
-            xy_coordinates = get_xy_coordinates_from_input(
-                o_input_data.xy_coordinates)
+        xy_coordinates = get_xy_coordinates_from_input(
+            o_input_data.xy_coordinates)
 
-            o_geofabrik = XYGeofabrik(xy_coordinates)
-            # find the tiles for  x/y combinations in the geofabrik json files
-            self.tiles = o_geofabrik.get_tiles_of_wanted_map()
-
-        # option 2b: use static json files in the repo to get relevant tiles
-        else:
-            xy_coordinates = get_xy_coordinates_from_input(
-                o_input_data.xy_coordinates)
-
-            # loop through x/y combinations and find each tile in the json files
-            for xy_comb in xy_coordinates:
-                try:
-                    self.tiles.append(get_tile_by_one_xy_combination_from_jsons(
-                        xy_comb))
-
-                except TileNotFoundError:
-                    pass
+        o_geofabrik = XYGeofabrik(xy_coordinates)
+        # find the tiles for  x/y combinations in the geofabrik json files
+        self.tiles = o_geofabrik.get_tiles_of_wanted_map()
 
     def calc_border_countries_country(self, o_input_data):
         """

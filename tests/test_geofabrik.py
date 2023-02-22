@@ -9,8 +9,6 @@ from shapely.geometry import shape
 # import custom python packages
 from wahoomc.geofabrik import CountryGeofabrik, XYGeofabrik
 from wahoomc.geofabrik import calc_bounding_box_tiles
-from wahoomc import file_directory_functions as fd_fct
-from wahoomc import constants_functions as const_fct
 from wahoomc.downloader import Downloader
 from wahoomc import constants
 from wahoomc.geofabrik_json import GeofabrikJson
@@ -36,18 +34,6 @@ def calc_tiles_via_geofabrik_json_xy(input_argument):
     tiles_via_geofabrik_json = o_geofabrik.get_tiles_of_wanted_map()
 
     return tiles_via_geofabrik_json
-
-
-def calc_tiles_via_static_jsons(input_argument):
-    """
-    calculate tiles using the json files in the repo
-    the "old" way of doing
-    """
-    json_file_path = os.path.join(constants.RESOURCES_DIR, 'json',
-                                  const_fct.get_region_of_country(input_argument), input_argument + '.json')
-    tiles_via_static_json = fd_fct.read_json_file(json_file_path)
-
-    return tiles_via_static_json
 
 
 class TestGeofabrik(unittest.TestCase):
@@ -96,13 +82,37 @@ class TestGeofabrik(unittest.TestCase):
         """
         Test the retrieval of tiles via geofabrik URL against hardcoded data
         """
-        item_0 = [[{'x': 138, 'y': 100, 'left': 14.0625, 'top': 36.59788913307021, 'right': 15.46875, 'bottom': 35.4606699514953, 'countries': [
-            'italy', 'malta'], 'urls': ['https://download.geofabrik.de/europe/italy-latest.osm.pbf', 'https://download.geofabrik.de/europe/malta-latest.osm.pbf']}]]
+        item_0 = [{'x': 138, 'y': 100, 'left': 14.0625, 'top': 36.59788913307021, 'right': 15.46875, 'bottom': 35.4606699514953, 'countries': [
+            'italy', 'malta'], 'urls': ['https://download.geofabrik.de/europe/italy-latest.osm.pbf', 'https://download.geofabrik.de/europe/malta-latest.osm.pbf']}]
 
         geofabrik_tiles = calc_tiles_via_geofabrik_json_xy(
             [{'x': 138, 'y': 100}])
-        print(geofabrik_tiles)
+
         self.assertEqual(item_0, geofabrik_tiles)
+
+    def test_tiles_via_geofabrik_xy(self):
+        """
+        Test the retrieval of tiles via geofabrik URL against hardcoded data
+        """
+        geofabrik_tiles_exp = [{
+            "x": 133,
+            "y": 88,
+            "left": 7.03125,
+            "top": 48.92249926375824,
+            "right": 8.4375,
+            "bottom": 47.98992166741417,
+            "countries": [
+                "france",
+                "germany"
+            ],
+            'urls': ['https://download.geofabrik.de/europe/france-latest.osm.pbf',
+                     'https://download.geofabrik.de/europe/germany-latest.osm.pbf']
+        }]
+
+        geofabrik_tiles = calc_tiles_via_geofabrik_json_xy(
+            [{"x": 133, "y": 88}])
+
+        self.assertEqual(geofabrik_tiles_exp, geofabrik_tiles)
 
     def test_bbox_and_shape_malta(self):
         """
@@ -158,18 +168,6 @@ class TestGeofabrik(unittest.TestCase):
         wanted_region_string = str(o_geofabrik.compose_shape(bbox_tiles))
 
         self.assertEqual(wanted_region_exp, wanted_region_string)
-
-    def compare_geofabrik_and_static(self, input_argument):
-        """
-        Compare the retrieval of tiles via URL with statis json
-        """
-        tiles_via_geofabrik_json = calc_tiles_via_geofabrik_json(
-            input_argument)
-
-        tiles_via_static_json = calc_tiles_via_static_jsons(
-            input_argument)
-
-        self.assertEqual(tiles_via_geofabrik_json, tiles_via_static_json)
 
 
 if __name__ == '__main__':
