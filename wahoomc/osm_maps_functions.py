@@ -131,8 +131,7 @@ class OsmData():  # pylint: disable=too-few-public-methods
         log.info('-' * 80)
 
         # geofabrik file
-        if o_input_data.geofabrik_tiles and \
-                o_downloader.should_geofabrik_file_be_downloaded():
+        if o_downloader.should_geofabrik_file_be_downloaded():
             self.force_processing = True
             o_downloader.download_geofabrik_file()
 
@@ -175,8 +174,7 @@ class OsmData():  # pylint: disable=too-few-public-methods
         """
         log.info('# Input country: %s.', o_input_data.country)
 
-        # option 1a: use Geofabrik-URL to calculate the relevant tiles
-        if o_input_data.geofabrik_tiles:
+        # use Geofabrik-URL to calculate the relevant tiles
         o_geofabrik = CountryGeofabrik(o_input_data.country)
         self.tiles = o_geofabrik.get_tiles_of_wanted_map()
 
@@ -187,8 +185,7 @@ class OsmData():  # pylint: disable=too-few-public-methods
         log.info(
             '# Input X/Y coordinates: %s.', o_input_data.xy_coordinates)
 
-        # option 2a: use Geofabrik-URL to get the relevant tiles
-        if o_input_data.geofabrik_tiles:
+        # use Geofabrik-URL to get the relevant tiles
         xy_coordinates = get_xy_coordinates_from_input(
             o_input_data.xy_coordinates)
 
