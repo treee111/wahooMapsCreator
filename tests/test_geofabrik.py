@@ -4,7 +4,7 @@ tests for the downloader file
 import os
 # import sys
 import unittest
-from shapely.geometry import shape
+from shapely.geometry import shape # pylint: disable=import-error
 
 # import custom python packages
 from wahoomc.geofabrik import CountryGeofabrik, XYGeofabrik
