@@ -121,10 +121,7 @@ class TestOsmMapsCalculation(unittest.TestCase):
         for res in result:
             result[res] = {}
 
-        # self.assertEqual(result, exp_result)
         self.assertEqual(result, exp_result)
-
-        # self.assertDictEqual()  Equal(tIn(member=exp_result, container=result)
 
 
 class TestOSMMapsInput(unittest.TestCase):

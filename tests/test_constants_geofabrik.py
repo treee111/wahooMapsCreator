@@ -139,29 +139,6 @@ class TestConstantsGeofabrik(unittest.TestCase):
             'nebraska')
         self.assertEqual('us/nebraska', transl_country)
 
-    # def test_number_of_tiles_geofabric_vs_static(self):
-    #     llist = []
-    #     counter = 0
-    #     for entry in self.relevant_countries:
-    #         parent = self.o_geofabrik_json.get_geofabrik_parent_country(entry)[
-    #             0]
-    #         if parent != 'europe':
-    #             continue
-    #         if counter >= 50:
-    #             break
-    #         counter = counter + 1
-    #         tiles_via_geofabrik_json = calc_tiles_via_geofabrik_json(
-    #             entry)
-
-    #         tiles_via_static_json = calc_tiles_via_static_jsons(
-    #             entry)
-
-    #         llist.append({'country': entry, 'static': len(
-    #             tiles_via_static_json), 'geof': len(tiles_via_geofabrik_json), '+-%': len(tiles_via_geofabrik_json)/len(
-    #             tiles_via_static_json)})
-
-    #     print(llist)
-
 
 if __name__ == '__main__':
     unittest.main()
