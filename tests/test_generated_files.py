@@ -180,8 +180,8 @@ class TestGeneratedFiles(unittest.TestCase):
         no_osmosis_file_extensions = ['shx', 'shp', 'prj']
 
         # some file extensions can not be comapared using osmium
-        if given_file.split('.')[-1] in no_osmosis_file_extensions or \
-                platform.system() == "Windows":
+        if given_file.split('.')[-1] in no_osmosis_file_extensions:
+            # platform.system() == "Windows":
             self.assertTrue(filecmp.cmp(given_file, calculated_file,
                                         shallow=False), f'not equal: {calculated_file}. Using filecmp.cmp.')
         # compare map files using osmium
