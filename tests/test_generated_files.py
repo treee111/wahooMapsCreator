@@ -83,6 +83,7 @@ class TestGeneratedFiles(unittest.TestCase):
 
         # compare generated given merged.osm.pbf-file with reference-file
         self.compare_dir_sub_test_resource_and_output('138', 'malta')
+        self.compare_dir_sub_test_resource_and_output('137', 'malta')
 
     def test_calc_output_liechtenstein_and_compare(self):
         """
@@ -114,6 +115,7 @@ class TestGeneratedFiles(unittest.TestCase):
         """
         # compare generated X/Y files with reference-file
         self.compare_dir_sub_test_resource_and_output('138', 'malta')
+        self.compare_dir_sub_test_resource_and_output('137', 'malta')
 
     def test_liechtenstein_compare(self):
         """
