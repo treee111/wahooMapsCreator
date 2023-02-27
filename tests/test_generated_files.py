@@ -16,38 +16,91 @@ from wahoomc import constants
 from wahoomc.file_directory_functions import get_files_in_folder
 
 dirname_of_file = os.path.dirname(__file__)
+unittest_files_root = os.path.join(constants.USER_WAHOO_MC, '_unittest')
+unittest_files_parking = os.path.join(unittest_files_root, 'parking_lot')
 
 
-def copy_static_maps_input_file(country, given_osm_pbf):
+def copy_static_maps_input_file(mode, country, given_osm_pbf=''):
     """
     copy given file to download-directory
     """
-    given_osm_pbf_file = os.path.join(
+    static_file_path = os.path.join(
         dirname_of_file, 'resources', given_osm_pbf)
-    copy_to_path = os.path.join(
+    prod_path = os.path.join(
         constants.USER_MAPS_DIR, country + '-latest.osm.pbf')
+    parking_path = os.path.join(
+        unittest_files_parking, country + '-latest.osm.pbf')
 
-    # copy file (new file takes creationdate as of now)
-    shutil.copy2(given_osm_pbf_file, copy_to_path)
+    # do mode 0 and 1 in a while loop. Makes mostly sense together
+    while True:
+        if mode == 1 and given_osm_pbf == '':
+            raise SystemError
+
+        copy_from_path, copy_to_path = eval_from_to_paths(
+            mode, static_file_path, prod_path, parking_path)
+
+        # copy file
+        shutil.copy2(copy_from_path, copy_to_path)
+
+        if mode in (1, 2):
+            break
+        if mode == 0:
+            mode = 1
 
 
-def copy_static_land_polygon_input_folder(given_osm_pbf):
+def copy_static_land_polygon_input_folder(mode):
     """
     copy given folder to download-directory
+    - mode 0: parking
+    - mode 1: normal
+    - mode 2: restore
     """
-    # get parent folder of repo
-    root_dir_parent = os.path.abspath(
-        os.path.join(constants.ROOT_DIR, os.pardir))
-
     static_file_path = os.path.join(
-        root_dir_parent, 'unittest-files', given_osm_pbf)
-    copy_to_path = os.path.dirname(constants.LAND_POLYGONS_PATH)
+        unittest_files_root, 'land-polygons-split-4326_2021-10-31')
+    prod_path = os.path.dirname(constants.LAND_POLYGONS_PATH)
+    parking_path = os.path.join(
+        unittest_files_parking, 'land-polygons-split-4326')
+
+    # do mode 0 and 1 in a while loop. Makes mostly sense together
+    while True:
+        copy_from_path, copy_to_path = eval_from_to_paths(
+            mode, static_file_path, prod_path, parking_path)
+
+        # delete directory if exists. copytree fails if dir exists already
+        if os.path.exists(copy_to_path):
+            shutil.rmtree(copy_to_path)
+
+        # copy folder
+        shutil.copytree(copy_from_path, copy_to_path)
+
+        if mode in (1, 2):
+            break
+        if mode == 0:
+            mode = 1
 
     # delete directory if exists. copytree fails if dir exists already
     if os.path.exists(copy_to_path):
         shutil.rmtree(copy_to_path)
     # copy folder (new file takes creationdate as of now)
     shutil.copytree(static_file_path, copy_to_path)
+
+def eval_from_to_paths(mode, static_file_path, prod_path, parking_path):
+    """
+    evaluate from and to path for copying by given mode
+    """
+    if mode == 0:  # parking
+        copy_from_path = prod_path
+        copy_to_path = parking_path
+    elif mode == 1:  # normal
+        copy_from_path = static_file_path
+        copy_to_path = prod_path
+    elif mode == 2:  # restore
+        copy_from_path = parking_path
+        copy_to_path = prod_path
+    else:
+        raise SystemError
+
+    return copy_from_path, copy_to_path
 
 
 class TestGeneratedFiles(unittest.TestCase):
@@ -65,13 +118,22 @@ class TestGeneratedFiles(unittest.TestCase):
     """
 
     def setUp(self):
-        copy_static_land_polygon_input_folder(
-            'land-polygons-split-4326_2021-10-31')
+        os.makedirs(unittest_files_parking, exist_ok=True)
 
+        # copy actual productive files to parking lot
+        # and copy static files as productive ones to have equal results each run
+        copy_static_land_polygon_input_folder(mode=0)
         copy_static_maps_input_file(
-            'malta', 'malta-latest_2021-10-31.osm.pbf')
+            mode=0, country='malta', given_osm_pbf='malta-latest_2021-10-31.osm.pbf')
         copy_static_maps_input_file(
+            mode=0, country='liechtenstein', given_osm_pbf='liechtenstein-latest_2021-10-31.osm.pbf')
+
+    def tearDown(self):
+        # copy files from parking lot back as productive
+        copy_static_land_polygon_input_folder(mode=2)
             'liechtenstein', 'liechtenstein-latest_2021-10-31.osm.pbf')
+        copy_static_maps_input_file(mode=2, country='malta')
+        copy_static_maps_input_file(mode=2, country='liechtenstein')
 
     def test_calc_output_malta_and_compare(self):
         """
