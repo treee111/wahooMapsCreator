@@ -31,21 +31,11 @@ def copy_static_maps_input_file(mode, country, given_osm_pbf=''):
     parking_path = os.path.join(
         unittest_files_parking, country + '-latest.osm.pbf')
 
-    # do mode 0 and 1 in a while loop. Makes mostly sense together
-    while True:
-        if mode == 1 and given_osm_pbf == '':
-            raise SystemError
+    # these modes need the static filename to copy
+    if mode in [0, 1] and given_osm_pbf == '':
+        raise SystemError
 
-        copy_from_path, copy_to_path = eval_from_to_paths(
-            mode, static_file_path, prod_path, parking_path)
-
-        # copy file
-        shutil.copy2(copy_from_path, copy_to_path)
-
-        if mode in (1, 2):
-            break
-        if mode == 0:
-            mode = 1
+    move_file_dir(mode, static_file_path, prod_path, parking_path)
 
 
 def copy_static_land_polygon_input_folder(mode):
@@ -61,22 +51,7 @@ def copy_static_land_polygon_input_folder(mode):
     parking_path = os.path.join(
         unittest_files_parking, 'land-polygons-split-4326')
 
-    # do mode 0 and 1 in a while loop. Makes mostly sense together
-    while True:
-        copy_from_path, copy_to_path = eval_from_to_paths(
-            mode, static_file_path, prod_path, parking_path)
-
-        # delete directory if exists. copytree fails if dir exists already
-        if os.path.exists(copy_to_path):
-            shutil.rmtree(copy_to_path)
-
-        # copy folder
-        shutil.copytree(copy_from_path, copy_to_path)
-
-        if mode in (1, 2):
-            break
-        if mode == 0:
-            mode = 1
+    move_file_dir(mode, static_file_path, prod_path, parking_path)
 
 
 def copy_static_geofabrik_file(mode):
@@ -88,19 +63,45 @@ def copy_static_geofabrik_file(mode):
     """
     static_file_path = os.path.join(
         dirname_of_file, 'resources', 'geofabrik-2023-02-26.json')
-    prod_path = os.path.join(
-        constants.GEOFABRIK_PATH)
+    prod_path = os.path.join(constants.GEOFABRIK_PATH)
     parking_path = os.path.join(
         unittest_files_parking, 'geofabrik.json')
 
-    # do mode 0 and 1 in a while loop. Makes mostly sense together
+    move_file_dir(mode, static_file_path, prod_path, parking_path)
+
+
+def move_file_dir(mode, static_file_path, prod_path, parking_path):
+    """
+    this function does the real file movements
+    doing mode 0 and 1 in a while loop. Makes mostly sense together
+    """
     while True:
         copy_from_path, copy_to_path = eval_from_to_paths(
             mode, static_file_path, prod_path, parking_path)
 
-        # copy file
-        shutil.copy2(copy_from_path, copy_to_path)
+        # delete file or dir
+        if os.path.isfile(copy_to_path):
+            os.remove(copy_to_path)
+        elif os.path.isdir(copy_to_path):
+            # delete directory if exists. copytree fails if dir exists already
+            shutil.rmtree(copy_to_path)
+        else:  # not existing
+            pass
 
+        # copy from- to to- path file/dir
+        try:
+            if os.path.isfile(copy_from_path):
+                # copy file
+                shutil.copy2(copy_from_path, copy_to_path)
+            elif os.path.isdir(copy_from_path):
+                # copy folder
+                shutil.copytree(copy_from_path, copy_to_path)
+            else:  # not existing
+                pass
+        except FileNotFoundError:
+            pass
+
+        # either go another round or go out
         if mode in (1, 2):
             break
         if mode == 0:
