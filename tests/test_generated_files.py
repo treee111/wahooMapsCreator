@@ -78,11 +78,34 @@ def copy_static_land_polygon_input_folder(mode):
         if mode == 0:
             mode = 1
 
-    # delete directory if exists. copytree fails if dir exists already
-    if os.path.exists(copy_to_path):
-        shutil.rmtree(copy_to_path)
-    # copy folder (new file takes creationdate as of now)
-    shutil.copytree(static_file_path, copy_to_path)
+
+def copy_static_geofabrik_file(mode):
+    """
+    copy given file to download-directory
+    - mode 0: parking
+    - mode 1: normal
+    - mode 2: restore
+    """
+    static_file_path = os.path.join(
+        dirname_of_file, 'resources', 'geofabrik-2023-02-26.json')
+    prod_path = os.path.join(
+        constants.GEOFABRIK_PATH)
+    parking_path = os.path.join(
+        unittest_files_parking, 'geofabrik.json')
+
+    # do mode 0 and 1 in a while loop. Makes mostly sense together
+    while True:
+        copy_from_path, copy_to_path = eval_from_to_paths(
+            mode, static_file_path, prod_path, parking_path)
+
+        # copy file
+        shutil.copy2(copy_from_path, copy_to_path)
+
+        if mode in (1, 2):
+            break
+        if mode == 0:
+            mode = 1
+
 
 def eval_from_to_paths(mode, static_file_path, prod_path, parking_path):
     """
@@ -123,6 +146,7 @@ class TestGeneratedFiles(unittest.TestCase):
         # copy actual productive files to parking lot
         # and copy static files as productive ones to have equal results each run
         copy_static_land_polygon_input_folder(mode=0)
+        copy_static_geofabrik_file(mode=0)
         copy_static_maps_input_file(
             mode=0, country='malta', given_osm_pbf='malta-latest_2021-10-31.osm.pbf')
         copy_static_maps_input_file(
@@ -131,7 +155,7 @@ class TestGeneratedFiles(unittest.TestCase):
     def tearDown(self):
         # copy files from parking lot back as productive
         copy_static_land_polygon_input_folder(mode=2)
-            'liechtenstein', 'liechtenstein-latest_2021-10-31.osm.pbf')
+        copy_static_geofabrik_file(mode=2)
         copy_static_maps_input_file(mode=2, country='malta')
         copy_static_maps_input_file(mode=2, country='liechtenstein')
 
