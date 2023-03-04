@@ -1,0 +1,863 @@
+[
+    {
+        "x": 136,
+        "y": 110,
+        "left": 11.25,
+        "top": 24.527135,
+        "right": 12.65625,
+        "bottom": 23.241346,
+        "countries": [
+            "libya",
+            "algeria",
+            "niger"
+        ]
+    },
+    {
+        "x": 134,
+        "y": 111,
+        "left": 8.4375,
+        "top": 23.241346,
+        "right": 9.84375,
+        "bottom": 21.943046,
+        "countries": [
+            "algeria",
+            "niger"
+        ]
+    },
+    {
+        "x": 135,
+        "y": 111,
+        "left": 9.84375,
+        "top": 23.241346,
+        "right": 11.25,
+        "bottom": 21.943046,
+        "countries": [
+            "algeria",
+            "niger"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 111,
+        "left": 11.25,
+        "top": 23.241346,
+        "right": 12.65625,
+        "bottom": 21.943046,
+        "countries": [
+            "algeria",
+            "niger"
+        ]
+    },
+    {
+        "x": 133,
+        "y": 112,
+        "left": 7.03125,
+        "top": 21.943046,
+        "right": 8.4375,
+        "bottom": 20.632784,
+        "countries": [
+            "algeria",
+            "niger"
+        ]
+    },
+    {
+        "x": 134,
+        "y": 112,
+        "left": 8.4375,
+        "top": 21.943046,
+        "right": 9.84375,
+        "bottom": 20.632784,
+        "countries": [
+            "algeria",
+            "niger"
+        ]
+    },
+    {
+        "x": 131,
+        "y": 113,
+        "left": 4.21875,
+        "top": 20.632784,
+        "right": 5.625,
+        "bottom": 19.311143,
+        "countries": [
+            "algeria",
+            "niger"
+        ]
+    },
+    {
+        "x": 132,
+        "y": 113,
+        "left": 5.625,
+        "top": 20.632784,
+        "right": 7.03125,
+        "bottom": 19.311143,
+        "countries": [
+            "algeria",
+            "niger"
+        ]
+    },
+    {
+        "x": 133,
+        "y": 113,
+        "left": 7.03125,
+        "top": 20.632784,
+        "right": 8.4375,
+        "bottom": 19.311143,
+        "countries": [
+            "algeria",
+            "niger"
+        ]
+    },
+    {
+        "x": 131,
+        "y": 114,
+        "left": 4.21875,
+        "top": 19.311143,
+        "right": 5.625,
+        "bottom": 17.978733,
+        "countries": [
+            "algeria",
+            "niger",
+            "mali"
+        ]
+    },
+    {
+        "x": 129,
+        "y": 119,
+        "left": 1.40625,
+        "top": 12.554564,
+        "right": 2.8125,
+        "bottom": 11.178402,
+        "countries": [
+            "benin",
+            "burkina_faso",
+            "niger"
+        ]
+    },
+    {
+        "x": 130,
+        "y": 119,
+        "left": 2.8125,
+        "top": 12.554564,
+        "right": 4.21875,
+        "bottom": 11.178402,
+        "countries": [
+            "benin",
+            "nigeria",
+            "niger"
+        ]
+    },
+    {
+        "x": 128,
+        "y": 117,
+        "left": 0.0,
+        "top": 15.284185,
+        "right": 1.40625,
+        "bottom": 13.923404,
+        "countries": [
+            "burkina_faso",
+            "niger",
+            "mali"
+        ]
+    },
+    {
+        "x": 128,
+        "y": 118,
+        "left": 0.0,
+        "top": 13.923404,
+        "right": 1.40625,
+        "bottom": 12.554564,
+        "countries": [
+            "burkina_faso",
+            "niger"
+        ]
+    },
+    {
+        "x": 129,
+        "y": 118,
+        "left": 1.40625,
+        "top": 13.923404,
+        "right": 2.8125,
+        "bottom": 12.554564,
+        "countries": [
+            "burkina_faso",
+            "niger"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 111,
+        "left": 14.0625,
+        "top": 23.241346,
+        "right": 15.46875,
+        "bottom": 21.943046,
+        "countries": [
+            "libya",
+            "chad",
+            "niger"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 112,
+        "left": 14.0625,
+        "top": 21.943046,
+        "right": 15.46875,
+        "bottom": 20.632784,
+        "countries": [
+            "chad",
+            "niger"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 112,
+        "left": 15.46875,
+        "top": 21.943046,
+        "right": 16.875,
+        "bottom": 20.632784,
+        "countries": [
+            "chad",
+            "niger"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 113,
+        "left": 15.46875,
+        "top": 20.632784,
+        "right": 16.875,
+        "bottom": 19.311143,
+        "countries": [
+            "chad",
+            "niger"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 114,
+        "left": 15.46875,
+        "top": 19.311143,
+        "right": 16.875,
+        "bottom": 17.978733,
+        "countries": [
+            "chad",
+            "niger"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 115,
+        "left": 14.0625,
+        "top": 17.978733,
+        "right": 15.46875,
+        "bottom": 16.636192,
+        "countries": [
+            "chad",
+            "niger"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 115,
+        "left": 15.46875,
+        "top": 17.978733,
+        "right": 16.875,
+        "bottom": 16.636192,
+        "countries": [
+            "chad",
+            "niger"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 116,
+        "left": 12.65625,
+        "top": 16.636192,
+        "right": 14.0625,
+        "bottom": 15.284185,
+        "countries": [
+            "chad",
+            "niger"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 116,
+        "left": 14.0625,
+        "top": 16.636192,
+        "right": 15.46875,
+        "bottom": 15.284185,
+        "countries": [
+            "chad",
+            "niger"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 117,
+        "left": 12.65625,
+        "top": 15.284185,
+        "right": 14.0625,
+        "bottom": 13.923404,
+        "countries": [
+            "chad",
+            "niger"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 118,
+        "left": 12.65625,
+        "top": 13.923404,
+        "right": 14.0625,
+        "bottom": 12.554564,
+        "countries": [
+            "chad",
+            "nigeria",
+            "niger"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 110,
+        "left": 12.65625,
+        "top": 24.527135,
+        "right": 14.0625,
+        "bottom": 23.241346,
+        "countries": [
+            "libya",
+            "niger"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 111,
+        "left": 12.65625,
+        "top": 23.241346,
+        "right": 14.0625,
+        "bottom": 21.943046,
+        "countries": [
+            "libya",
+            "niger"
+        ]
+    },
+    {
+        "x": 130,
+        "y": 115,
+        "left": 2.8125,
+        "top": 17.978733,
+        "right": 4.21875,
+        "bottom": 16.636192,
+        "countries": [
+            "niger",
+            "mali"
+        ]
+    },
+    {
+        "x": 131,
+        "y": 115,
+        "left": 4.21875,
+        "top": 17.978733,
+        "right": 5.625,
+        "bottom": 16.636192,
+        "countries": [
+            "niger",
+            "mali"
+        ]
+    },
+    {
+        "x": 129,
+        "y": 116,
+        "left": 1.40625,
+        "top": 16.636192,
+        "right": 2.8125,
+        "bottom": 15.284185,
+        "countries": [
+            "niger",
+            "mali"
+        ]
+    },
+    {
+        "x": 130,
+        "y": 116,
+        "left": 2.8125,
+        "top": 16.636192,
+        "right": 4.21875,
+        "bottom": 15.284185,
+        "countries": [
+            "niger",
+            "mali"
+        ]
+    },
+    {
+        "x": 129,
+        "y": 117,
+        "left": 1.40625,
+        "top": 15.284185,
+        "right": 2.8125,
+        "bottom": 13.923404,
+        "countries": [
+            "niger",
+            "mali"
+        ]
+    },
+    {
+        "x": 135,
+        "y": 112,
+        "left": 9.84375,
+        "top": 21.943046,
+        "right": 11.25,
+        "bottom": 20.632784,
+        "countries": [
+            "niger"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 112,
+        "left": 11.25,
+        "top": 21.943046,
+        "right": 12.65625,
+        "bottom": 20.632784,
+        "countries": [
+            "niger"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 112,
+        "left": 12.65625,
+        "top": 21.943046,
+        "right": 14.0625,
+        "bottom": 20.632784,
+        "countries": [
+            "niger"
+        ]
+    },
+    {
+        "x": 134,
+        "y": 113,
+        "left": 8.4375,
+        "top": 20.632784,
+        "right": 9.84375,
+        "bottom": 19.311143,
+        "countries": [
+            "niger"
+        ]
+    },
+    {
+        "x": 135,
+        "y": 113,
+        "left": 9.84375,
+        "top": 20.632784,
+        "right": 11.25,
+        "bottom": 19.311143,
+        "countries": [
+            "niger"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 113,
+        "left": 11.25,
+        "top": 20.632784,
+        "right": 12.65625,
+        "bottom": 19.311143,
+        "countries": [
+            "niger"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 113,
+        "left": 12.65625,
+        "top": 20.632784,
+        "right": 14.0625,
+        "bottom": 19.311143,
+        "countries": [
+            "niger"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 113,
+        "left": 14.0625,
+        "top": 20.632784,
+        "right": 15.46875,
+        "bottom": 19.311143,
+        "countries": [
+            "niger"
+        ]
+    },
+    {
+        "x": 132,
+        "y": 114,
+        "left": 5.625,
+        "top": 19.311143,
+        "right": 7.03125,
+        "bottom": 17.978733,
+        "countries": [
+            "niger"
+        ]
+    },
+    {
+        "x": 133,
+        "y": 114,
+        "left": 7.03125,
+        "top": 19.311143,
+        "right": 8.4375,
+        "bottom": 17.978733,
+        "countries": [
+            "niger"
+        ]
+    },
+    {
+        "x": 134,
+        "y": 114,
+        "left": 8.4375,
+        "top": 19.311143,
+        "right": 9.84375,
+        "bottom": 17.978733,
+        "countries": [
+            "niger"
+        ]
+    },
+    {
+        "x": 135,
+        "y": 114,
+        "left": 9.84375,
+        "top": 19.311143,
+        "right": 11.25,
+        "bottom": 17.978733,
+        "countries": [
+            "niger"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 114,
+        "left": 11.25,
+        "top": 19.311143,
+        "right": 12.65625,
+        "bottom": 17.978733,
+        "countries": [
+            "niger"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 114,
+        "left": 12.65625,
+        "top": 19.311143,
+        "right": 14.0625,
+        "bottom": 17.978733,
+        "countries": [
+            "niger"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 114,
+        "left": 14.0625,
+        "top": 19.311143,
+        "right": 15.46875,
+        "bottom": 17.978733,
+        "countries": [
+            "niger"
+        ]
+    },
+    {
+        "x": 132,
+        "y": 115,
+        "left": 5.625,
+        "top": 17.978733,
+        "right": 7.03125,
+        "bottom": 16.636192,
+        "countries": [
+            "niger"
+        ]
+    },
+    {
+        "x": 133,
+        "y": 115,
+        "left": 7.03125,
+        "top": 17.978733,
+        "right": 8.4375,
+        "bottom": 16.636192,
+        "countries": [
+            "niger"
+        ]
+    },
+    {
+        "x": 134,
+        "y": 115,
+        "left": 8.4375,
+        "top": 17.978733,
+        "right": 9.84375,
+        "bottom": 16.636192,
+        "countries": [
+            "niger"
+        ]
+    },
+    {
+        "x": 135,
+        "y": 115,
+        "left": 9.84375,
+        "top": 17.978733,
+        "right": 11.25,
+        "bottom": 16.636192,
+        "countries": [
+            "niger"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 115,
+        "left": 11.25,
+        "top": 17.978733,
+        "right": 12.65625,
+        "bottom": 16.636192,
+        "countries": [
+            "niger"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 115,
+        "left": 12.65625,
+        "top": 17.978733,
+        "right": 14.0625,
+        "bottom": 16.636192,
+        "countries": [
+            "niger"
+        ]
+    },
+    {
+        "x": 131,
+        "y": 116,
+        "left": 4.21875,
+        "top": 16.636192,
+        "right": 5.625,
+        "bottom": 15.284185,
+        "countries": [
+            "niger"
+        ]
+    },
+    {
+        "x": 132,
+        "y": 116,
+        "left": 5.625,
+        "top": 16.636192,
+        "right": 7.03125,
+        "bottom": 15.284185,
+        "countries": [
+            "niger"
+        ]
+    },
+    {
+        "x": 133,
+        "y": 116,
+        "left": 7.03125,
+        "top": 16.636192,
+        "right": 8.4375,
+        "bottom": 15.284185,
+        "countries": [
+            "niger"
+        ]
+    },
+    {
+        "x": 134,
+        "y": 116,
+        "left": 8.4375,
+        "top": 16.636192,
+        "right": 9.84375,
+        "bottom": 15.284185,
+        "countries": [
+            "niger"
+        ]
+    },
+    {
+        "x": 135,
+        "y": 116,
+        "left": 9.84375,
+        "top": 16.636192,
+        "right": 11.25,
+        "bottom": 15.284185,
+        "countries": [
+            "niger"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 116,
+        "left": 11.25,
+        "top": 16.636192,
+        "right": 12.65625,
+        "bottom": 15.284185,
+        "countries": [
+            "niger"
+        ]
+    },
+    {
+        "x": 130,
+        "y": 117,
+        "left": 2.8125,
+        "top": 15.284185,
+        "right": 4.21875,
+        "bottom": 13.923404,
+        "countries": [
+            "niger"
+        ]
+    },
+    {
+        "x": 131,
+        "y": 117,
+        "left": 4.21875,
+        "top": 15.284185,
+        "right": 5.625,
+        "bottom": 13.923404,
+        "countries": [
+            "niger"
+        ]
+    },
+    {
+        "x": 132,
+        "y": 117,
+        "left": 5.625,
+        "top": 15.284185,
+        "right": 7.03125,
+        "bottom": 13.923404,
+        "countries": [
+            "niger"
+        ]
+    },
+    {
+        "x": 133,
+        "y": 117,
+        "left": 7.03125,
+        "top": 15.284185,
+        "right": 8.4375,
+        "bottom": 13.923404,
+        "countries": [
+            "niger"
+        ]
+    },
+    {
+        "x": 134,
+        "y": 117,
+        "left": 8.4375,
+        "top": 15.284185,
+        "right": 9.84375,
+        "bottom": 13.923404,
+        "countries": [
+            "niger"
+        ]
+    },
+    {
+        "x": 135,
+        "y": 117,
+        "left": 9.84375,
+        "top": 15.284185,
+        "right": 11.25,
+        "bottom": 13.923404,
+        "countries": [
+            "niger"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 117,
+        "left": 11.25,
+        "top": 15.284185,
+        "right": 12.65625,
+        "bottom": 13.923404,
+        "countries": [
+            "niger"
+        ]
+    },
+    {
+        "x": 130,
+        "y": 118,
+        "left": 2.8125,
+        "top": 13.923404,
+        "right": 4.21875,
+        "bottom": 12.554564,
+        "countries": [
+            "nigeria",
+            "niger"
+        ]
+    },
+    {
+        "x": 131,
+        "y": 118,
+        "left": 4.21875,
+        "top": 13.923404,
+        "right": 5.625,
+        "bottom": 12.554564,
+        "countries": [
+            "nigeria",
+            "niger"
+        ]
+    },
+    {
+        "x": 132,
+        "y": 118,
+        "left": 5.625,
+        "top": 13.923404,
+        "right": 7.03125,
+        "bottom": 12.554564,
+        "countries": [
+            "nigeria",
+            "niger"
+        ]
+    },
+    {
+        "x": 133,
+        "y": 118,
+        "left": 7.03125,
+        "top": 13.923404,
+        "right": 8.4375,
+        "bottom": 12.554564,
+        "countries": [
+            "nigeria",
+            "niger"
+        ]
+    },
+    {
+        "x": 134,
+        "y": 118,
+        "left": 8.4375,
+        "top": 13.923404,
+        "right": 9.84375,
+        "bottom": 12.554564,
+        "countries": [
+            "nigeria",
+            "niger"
+        ]
+    },
+    {
+        "x": 135,
+        "y": 118,
+        "left": 9.84375,
+        "top": 13.923404,
+        "right": 11.25,
+        "bottom": 12.554564,
+        "countries": [
+            "nigeria",
+            "niger"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 118,
+        "left": 11.25,
+        "top": 13.923404,
+        "right": 12.65625,
+        "bottom": 12.554564,
+        "countries": [
+            "nigeria",
+            "niger"
+        ]
+    }
+]

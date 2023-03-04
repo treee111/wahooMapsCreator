@@ -1,0 +1,634 @@
+[
+    {
+        "x": 173,
+        "y": 99,
+        "left": 63.28125,
+        "top": 37.71859,
+        "right": 64.6875,
+        "bottom": 36.597889,
+        "countries": [
+            "afghanistan",
+            "turkmenistan"
+        ]
+    },
+    {
+        "x": 174,
+        "y": 99,
+        "left": 64.6875,
+        "top": 37.71859,
+        "right": 66.09375,
+        "bottom": 36.597889,
+        "countries": [
+            "afghanistan",
+            "turkmenistan"
+        ]
+    },
+    {
+        "x": 175,
+        "y": 99,
+        "left": 66.09375,
+        "top": 37.71859,
+        "right": 67.5,
+        "bottom": 36.597889,
+        "countries": [
+            "afghanistan",
+            "turkmenistan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 171,
+        "y": 100,
+        "left": 60.46875,
+        "top": 36.597889,
+        "right": 61.875,
+        "bottom": 35.46067,
+        "countries": [
+            "iran",
+            "afghanistan",
+            "turkmenistan"
+        ]
+    },
+    {
+        "x": 172,
+        "y": 100,
+        "left": 61.875,
+        "top": 36.597889,
+        "right": 63.28125,
+        "bottom": 35.46067,
+        "countries": [
+            "afghanistan",
+            "turkmenistan"
+        ]
+    },
+    {
+        "x": 173,
+        "y": 100,
+        "left": 63.28125,
+        "top": 36.597889,
+        "right": 64.6875,
+        "bottom": 35.46067,
+        "countries": [
+            "afghanistan",
+            "turkmenistan"
+        ]
+    },
+    {
+        "x": 171,
+        "y": 101,
+        "left": 60.46875,
+        "top": 35.46067,
+        "right": 61.875,
+        "bottom": 34.307144,
+        "countries": [
+            "iran",
+            "afghanistan",
+            "turkmenistan"
+        ]
+    },
+    {
+        "x": 172,
+        "y": 101,
+        "left": 61.875,
+        "top": 35.46067,
+        "right": 63.28125,
+        "bottom": 34.307144,
+        "countries": [
+            "afghanistan",
+            "turkmenistan"
+        ]
+    },
+    {
+        "x": 166,
+        "y": 98,
+        "left": 53.4375,
+        "top": 38.822591,
+        "right": 54.84375,
+        "bottom": 37.71859,
+        "countries": [
+            "iran",
+            "turkmenistan"
+        ]
+    },
+    {
+        "x": 167,
+        "y": 98,
+        "left": 54.84375,
+        "top": 38.822591,
+        "right": 56.25,
+        "bottom": 37.71859,
+        "countries": [
+            "iran",
+            "turkmenistan"
+        ]
+    },
+    {
+        "x": 168,
+        "y": 98,
+        "left": 56.25,
+        "top": 38.822591,
+        "right": 57.65625,
+        "bottom": 37.71859,
+        "countries": [
+            "iran",
+            "turkmenistan"
+        ]
+    },
+    {
+        "x": 169,
+        "y": 98,
+        "left": 57.65625,
+        "top": 38.822591,
+        "right": 59.0625,
+        "bottom": 37.71859,
+        "countries": [
+            "iran",
+            "turkmenistan"
+        ]
+    },
+    {
+        "x": 166,
+        "y": 99,
+        "left": 53.4375,
+        "top": 37.71859,
+        "right": 54.84375,
+        "bottom": 36.597889,
+        "countries": [
+            "iran",
+            "turkmenistan"
+        ]
+    },
+    {
+        "x": 169,
+        "y": 99,
+        "left": 57.65625,
+        "top": 37.71859,
+        "right": 59.0625,
+        "bottom": 36.597889,
+        "countries": [
+            "iran",
+            "turkmenistan"
+        ]
+    },
+    {
+        "x": 170,
+        "y": 99,
+        "left": 59.0625,
+        "top": 37.71859,
+        "right": 60.46875,
+        "bottom": 36.597889,
+        "countries": [
+            "iran",
+            "turkmenistan"
+        ]
+    },
+    {
+        "x": 171,
+        "y": 99,
+        "left": 60.46875,
+        "top": 37.71859,
+        "right": 61.875,
+        "bottom": 36.597889,
+        "countries": [
+            "iran",
+            "turkmenistan"
+        ]
+    },
+    {
+        "x": 165,
+        "y": 94,
+        "left": 52.03125,
+        "top": 43.068888,
+        "right": 53.4375,
+        "bottom": 42.032974,
+        "countries": [
+            "turkmenistan",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 166,
+        "y": 94,
+        "left": 53.4375,
+        "top": 43.068888,
+        "right": 54.84375,
+        "bottom": 42.032974,
+        "countries": [
+            "turkmenistan",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 165,
+        "y": 95,
+        "left": 52.03125,
+        "top": 42.032974,
+        "right": 53.4375,
+        "bottom": 40.979898,
+        "countries": [
+            "turkmenistan",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 166,
+        "y": 95,
+        "left": 53.4375,
+        "top": 42.032974,
+        "right": 54.84375,
+        "bottom": 40.979898,
+        "countries": [
+            "turkmenistan",
+            "kazakhstan"
+        ]
+    },
+    {
+        "x": 167,
+        "y": 95,
+        "left": 54.84375,
+        "top": 42.032974,
+        "right": 56.25,
+        "bottom": 40.979898,
+        "countries": [
+            "turkmenistan",
+            "kazakhstan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 168,
+        "y": 94,
+        "left": 56.25,
+        "top": 43.068888,
+        "right": 57.65625,
+        "bottom": 42.032974,
+        "countries": [
+            "turkmenistan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 169,
+        "y": 94,
+        "left": 57.65625,
+        "top": 43.068888,
+        "right": 59.0625,
+        "bottom": 42.032974,
+        "countries": [
+            "turkmenistan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 170,
+        "y": 94,
+        "left": 59.0625,
+        "top": 43.068888,
+        "right": 60.46875,
+        "bottom": 42.032974,
+        "countries": [
+            "turkmenistan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 168,
+        "y": 95,
+        "left": 56.25,
+        "top": 42.032974,
+        "right": 57.65625,
+        "bottom": 40.979898,
+        "countries": [
+            "turkmenistan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 169,
+        "y": 95,
+        "left": 57.65625,
+        "top": 42.032974,
+        "right": 59.0625,
+        "bottom": 40.979898,
+        "countries": [
+            "turkmenistan"
+        ]
+    },
+    {
+        "x": 170,
+        "y": 95,
+        "left": 59.0625,
+        "top": 42.032974,
+        "right": 60.46875,
+        "bottom": 40.979898,
+        "countries": [
+            "turkmenistan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 171,
+        "y": 95,
+        "left": 60.46875,
+        "top": 42.032974,
+        "right": 61.875,
+        "bottom": 40.979898,
+        "countries": [
+            "turkmenistan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 172,
+        "y": 95,
+        "left": 61.875,
+        "top": 42.032974,
+        "right": 63.28125,
+        "bottom": 40.979898,
+        "countries": [
+            "turkmenistan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 165,
+        "y": 96,
+        "left": 52.03125,
+        "top": 40.979898,
+        "right": 53.4375,
+        "bottom": 39.909736,
+        "countries": [
+            "turkmenistan"
+        ]
+    },
+    {
+        "x": 166,
+        "y": 96,
+        "left": 53.4375,
+        "top": 40.979898,
+        "right": 54.84375,
+        "bottom": 39.909736,
+        "countries": [
+            "turkmenistan"
+        ]
+    },
+    {
+        "x": 167,
+        "y": 96,
+        "left": 54.84375,
+        "top": 40.979898,
+        "right": 56.25,
+        "bottom": 39.909736,
+        "countries": [
+            "turkmenistan"
+        ]
+    },
+    {
+        "x": 168,
+        "y": 96,
+        "left": 56.25,
+        "top": 40.979898,
+        "right": 57.65625,
+        "bottom": 39.909736,
+        "countries": [
+            "turkmenistan"
+        ]
+    },
+    {
+        "x": 169,
+        "y": 96,
+        "left": 57.65625,
+        "top": 40.979898,
+        "right": 59.0625,
+        "bottom": 39.909736,
+        "countries": [
+            "turkmenistan"
+        ]
+    },
+    {
+        "x": 170,
+        "y": 96,
+        "left": 59.0625,
+        "top": 40.979898,
+        "right": 60.46875,
+        "bottom": 39.909736,
+        "countries": [
+            "turkmenistan"
+        ]
+    },
+    {
+        "x": 171,
+        "y": 96,
+        "left": 60.46875,
+        "top": 40.979898,
+        "right": 61.875,
+        "bottom": 39.909736,
+        "countries": [
+            "turkmenistan"
+        ]
+    },
+    {
+        "x": 172,
+        "y": 96,
+        "left": 61.875,
+        "top": 40.979898,
+        "right": 63.28125,
+        "bottom": 39.909736,
+        "countries": [
+            "turkmenistan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 165,
+        "y": 97,
+        "left": 52.03125,
+        "top": 39.909736,
+        "right": 53.4375,
+        "bottom": 38.822591,
+        "countries": [
+            "turkmenistan"
+        ]
+    },
+    {
+        "x": 166,
+        "y": 97,
+        "left": 53.4375,
+        "top": 39.909736,
+        "right": 54.84375,
+        "bottom": 38.822591,
+        "countries": [
+            "turkmenistan"
+        ]
+    },
+    {
+        "x": 167,
+        "y": 97,
+        "left": 54.84375,
+        "top": 39.909736,
+        "right": 56.25,
+        "bottom": 38.822591,
+        "countries": [
+            "turkmenistan"
+        ]
+    },
+    {
+        "x": 168,
+        "y": 97,
+        "left": 56.25,
+        "top": 39.909736,
+        "right": 57.65625,
+        "bottom": 38.822591,
+        "countries": [
+            "turkmenistan"
+        ]
+    },
+    {
+        "x": 169,
+        "y": 97,
+        "left": 57.65625,
+        "top": 39.909736,
+        "right": 59.0625,
+        "bottom": 38.822591,
+        "countries": [
+            "turkmenistan"
+        ]
+    },
+    {
+        "x": 170,
+        "y": 97,
+        "left": 59.0625,
+        "top": 39.909736,
+        "right": 60.46875,
+        "bottom": 38.822591,
+        "countries": [
+            "turkmenistan"
+        ]
+    },
+    {
+        "x": 171,
+        "y": 97,
+        "left": 60.46875,
+        "top": 39.909736,
+        "right": 61.875,
+        "bottom": 38.822591,
+        "countries": [
+            "turkmenistan"
+        ]
+    },
+    {
+        "x": 172,
+        "y": 97,
+        "left": 61.875,
+        "top": 39.909736,
+        "right": 63.28125,
+        "bottom": 38.822591,
+        "countries": [
+            "turkmenistan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 173,
+        "y": 97,
+        "left": 63.28125,
+        "top": 39.909736,
+        "right": 64.6875,
+        "bottom": 38.822591,
+        "countries": [
+            "turkmenistan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 165,
+        "y": 98,
+        "left": 52.03125,
+        "top": 38.822591,
+        "right": 53.4375,
+        "bottom": 37.71859,
+        "countries": [
+            "turkmenistan"
+        ]
+    },
+    {
+        "x": 170,
+        "y": 98,
+        "left": 59.0625,
+        "top": 38.822591,
+        "right": 60.46875,
+        "bottom": 37.71859,
+        "countries": [
+            "turkmenistan"
+        ]
+    },
+    {
+        "x": 171,
+        "y": 98,
+        "left": 60.46875,
+        "top": 38.822591,
+        "right": 61.875,
+        "bottom": 37.71859,
+        "countries": [
+            "turkmenistan"
+        ]
+    },
+    {
+        "x": 172,
+        "y": 98,
+        "left": 61.875,
+        "top": 38.822591,
+        "right": 63.28125,
+        "bottom": 37.71859,
+        "countries": [
+            "turkmenistan"
+        ]
+    },
+    {
+        "x": 173,
+        "y": 98,
+        "left": 63.28125,
+        "top": 38.822591,
+        "right": 64.6875,
+        "bottom": 37.71859,
+        "countries": [
+            "turkmenistan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 174,
+        "y": 98,
+        "left": 64.6875,
+        "top": 38.822591,
+        "right": 66.09375,
+        "bottom": 37.71859,
+        "countries": [
+            "turkmenistan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 175,
+        "y": 98,
+        "left": 66.09375,
+        "top": 38.822591,
+        "right": 67.5,
+        "bottom": 37.71859,
+        "countries": [
+            "turkmenistan",
+            "uzbekistan"
+        ]
+    },
+    {
+        "x": 172,
+        "y": 99,
+        "left": 61.875,
+        "top": 37.71859,
+        "right": 63.28125,
+        "bottom": 36.597889,
+        "countries": [
+            "turkmenistan"
+        ]
+    }
+]

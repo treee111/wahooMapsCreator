@@ -1,0 +1,101 @@
+[
+    {
+        "x": 2,
+        "y": 127,
+        "left": -177.1875,
+        "top": 1.406109,
+        "right": -175.78125,
+        "bottom": 0.0,
+        "countries": [
+            "united_states_minor_outlying_islands"
+        ]
+    },
+    {
+        "x": 14,
+        "y": 128,
+        "left": -160.3125,
+        "top": 0.0,
+        "right": -158.90625,
+        "bottom": -1.406109,
+        "countries": [
+            "united_states_minor_outlying_islands"
+        ]
+    },
+    {
+        "x": 7,
+        "y": 115,
+        "left": -170.15625,
+        "top": 17.978733,
+        "right": -168.75,
+        "bottom": 16.636192,
+        "countries": [
+            "united_states_minor_outlying_islands"
+        ]
+    },
+    {
+        "x": 12,
+        "y": 123,
+        "left": -163.125,
+        "top": 7.013668,
+        "right": -161.71875,
+        "bottom": 5.615986,
+        "countries": [
+            "united_states_minor_outlying_islands"
+        ]
+    },
+    {
+        "x": 1,
+        "y": 106,
+        "left": -178.59375,
+        "top": 29.53523,
+        "right": -177.1875,
+        "bottom": 28.304381,
+        "countries": [
+            "united_states_minor_outlying_islands"
+        ]
+    },
+    {
+        "x": 1,
+        "y": 107,
+        "left": -178.59375,
+        "top": 28.304381,
+        "right": -177.1875,
+        "bottom": 27.059126,
+        "countries": [
+            "united_states_minor_outlying_islands"
+        ]
+    },
+    {
+        "x": 74,
+        "y": 114,
+        "left": -75.9375,
+        "top": 19.311143,
+        "right": -74.53125,
+        "bottom": 17.978733,
+        "countries": [
+            "united_states_minor_outlying_islands"
+        ]
+    },
+    {
+        "x": 246,
+        "y": 113,
+        "left": 165.9375,
+        "top": 20.632784,
+        "right": 167.34375,
+        "bottom": 19.311143,
+        "countries": [
+            "united_states_minor_outlying_islands"
+        ]
+    },
+    {
+        "x": 246,
+        "y": 114,
+        "left": 165.9375,
+        "top": 19.311143,
+        "right": 167.34375,
+        "bottom": 17.978733,
+        "countries": [
+            "united_states_minor_outlying_islands"
+        ]
+    }
+]

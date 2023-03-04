@@ -1,0 +1,279 @@
+[
+    {
+        "x": 60,
+        "y": 100,
+        "left": -95.625,
+        "top": 36.597889,
+        "right": -94.21875,
+        "bottom": 35.46067,
+        "countries": [
+            "oklahoma",
+            "arkansas",
+            "missouri"
+        ]
+    },
+    {
+        "x": 60,
+        "y": 101,
+        "left": -95.625,
+        "top": 35.46067,
+        "right": -94.21875,
+        "bottom": 34.307144,
+        "countries": [
+            "oklahoma",
+            "arkansas"
+        ]
+    },
+    {
+        "x": 60,
+        "y": 102,
+        "left": -95.625,
+        "top": 34.307144,
+        "right": -94.21875,
+        "bottom": 33.137551,
+        "countries": [
+            "texas",
+            "oklahoma",
+            "arkansas"
+        ]
+    },
+    {
+        "x": 54,
+        "y": 99,
+        "left": -104.0625,
+        "top": 37.71859,
+        "right": -102.65625,
+        "bottom": 36.597889,
+        "countries": [
+            "new_mexico",
+            "oklahoma",
+            "colorado"
+        ]
+    },
+    {
+        "x": 55,
+        "y": 99,
+        "left": -102.65625,
+        "top": 37.71859,
+        "right": -101.25,
+        "bottom": 36.597889,
+        "countries": [
+            "oklahoma",
+            "kansas",
+            "colorado"
+        ]
+    },
+    {
+        "x": 56,
+        "y": 99,
+        "left": -101.25,
+        "top": 37.71859,
+        "right": -99.84375,
+        "bottom": 36.597889,
+        "countries": [
+            "oklahoma",
+            "kansas"
+        ]
+    },
+    {
+        "x": 57,
+        "y": 99,
+        "left": -99.84375,
+        "top": 37.71859,
+        "right": -98.4375,
+        "bottom": 36.597889,
+        "countries": [
+            "oklahoma",
+            "kansas"
+        ]
+    },
+    {
+        "x": 58,
+        "y": 99,
+        "left": -98.4375,
+        "top": 37.71859,
+        "right": -97.03125,
+        "bottom": 36.597889,
+        "countries": [
+            "oklahoma",
+            "kansas"
+        ]
+    },
+    {
+        "x": 59,
+        "y": 99,
+        "left": -97.03125,
+        "top": 37.71859,
+        "right": -95.625,
+        "bottom": 36.597889,
+        "countries": [
+            "oklahoma",
+            "kansas"
+        ]
+    },
+    {
+        "x": 60,
+        "y": 99,
+        "left": -95.625,
+        "top": 37.71859,
+        "right": -94.21875,
+        "bottom": 36.597889,
+        "countries": [
+            "oklahoma",
+            "kansas",
+            "missouri"
+        ]
+    },
+    {
+        "x": 54,
+        "y": 100,
+        "left": -104.0625,
+        "top": 36.597889,
+        "right": -102.65625,
+        "bottom": 35.46067,
+        "countries": [
+            "new_mexico",
+            "oklahoma",
+            "texas"
+        ]
+    },
+    {
+        "x": 55,
+        "y": 100,
+        "left": -102.65625,
+        "top": 36.597889,
+        "right": -101.25,
+        "bottom": 35.46067,
+        "countries": [
+            "texas",
+            "oklahoma"
+        ]
+    },
+    {
+        "x": 56,
+        "y": 100,
+        "left": -101.25,
+        "top": 36.597889,
+        "right": -99.84375,
+        "bottom": 35.46067,
+        "countries": [
+            "texas",
+            "oklahoma"
+        ]
+    },
+    {
+        "x": 57,
+        "y": 100,
+        "left": -99.84375,
+        "top": 36.597889,
+        "right": -98.4375,
+        "bottom": 35.46067,
+        "countries": [
+            "oklahoma"
+        ]
+    },
+    {
+        "x": 58,
+        "y": 100,
+        "left": -98.4375,
+        "top": 36.597889,
+        "right": -97.03125,
+        "bottom": 35.46067,
+        "countries": [
+            "oklahoma"
+        ]
+    },
+    {
+        "x": 59,
+        "y": 100,
+        "left": -97.03125,
+        "top": 36.597889,
+        "right": -95.625,
+        "bottom": 35.46067,
+        "countries": [
+            "oklahoma"
+        ]
+    },
+    {
+        "x": 56,
+        "y": 101,
+        "left": -101.25,
+        "top": 35.46067,
+        "right": -99.84375,
+        "bottom": 34.307144,
+        "countries": [
+            "texas",
+            "oklahoma"
+        ]
+    },
+    {
+        "x": 57,
+        "y": 101,
+        "left": -99.84375,
+        "top": 35.46067,
+        "right": -98.4375,
+        "bottom": 34.307144,
+        "countries": [
+            "texas",
+            "oklahoma"
+        ]
+    },
+    {
+        "x": 58,
+        "y": 101,
+        "left": -98.4375,
+        "top": 35.46067,
+        "right": -97.03125,
+        "bottom": 34.307144,
+        "countries": [
+            "oklahoma"
+        ]
+    },
+    {
+        "x": 59,
+        "y": 101,
+        "left": -97.03125,
+        "top": 35.46067,
+        "right": -95.625,
+        "bottom": 34.307144,
+        "countries": [
+            "oklahoma"
+        ]
+    },
+    {
+        "x": 57,
+        "y": 102,
+        "left": -99.84375,
+        "top": 34.307144,
+        "right": -98.4375,
+        "bottom": 33.137551,
+        "countries": [
+            "texas",
+            "oklahoma"
+        ]
+    },
+    {
+        "x": 58,
+        "y": 102,
+        "left": -98.4375,
+        "top": 34.307144,
+        "right": -97.03125,
+        "bottom": 33.137551,
+        "countries": [
+            "texas",
+            "oklahoma"
+        ]
+    },
+    {
+        "x": 59,
+        "y": 102,
+        "left": -97.03125,
+        "top": 34.307144,
+        "right": -95.625,
+        "bottom": 33.137551,
+        "countries": [
+            "texas",
+            "oklahoma"
+        ]
+    }
+]

@@ -1,0 +1,324 @@
+[
+    {
+        "x": 46,
+        "y": 99,
+        "left": -115.3125,
+        "top": 37.71859,
+        "right": -113.90625,
+        "bottom": 36.597889,
+        "countries": [
+            "utah",
+            "nevada",
+            "arizona"
+        ]
+    },
+    {
+        "x": 46,
+        "y": 100,
+        "left": -115.3125,
+        "top": 36.597889,
+        "right": -113.90625,
+        "bottom": 35.46067,
+        "countries": [
+            "nevada",
+            "california",
+            "arizona"
+        ]
+    },
+    {
+        "x": 46,
+        "y": 101,
+        "left": -115.3125,
+        "top": 35.46067,
+        "right": -113.90625,
+        "bottom": 34.307144,
+        "countries": [
+            "nevada",
+            "california",
+            "arizona"
+        ]
+    },
+    {
+        "x": 42,
+        "y": 95,
+        "left": -120.9375,
+        "top": 42.032974,
+        "right": -119.53125,
+        "bottom": 40.979898,
+        "countries": [
+            "nevada",
+            "california",
+            "oregon"
+        ]
+    },
+    {
+        "x": 42,
+        "y": 96,
+        "left": -120.9375,
+        "top": 40.979898,
+        "right": -119.53125,
+        "bottom": 39.909736,
+        "countries": [
+            "nevada",
+            "california"
+        ]
+    },
+    {
+        "x": 42,
+        "y": 97,
+        "left": -120.9375,
+        "top": 39.909736,
+        "right": -119.53125,
+        "bottom": 38.822591,
+        "countries": [
+            "nevada",
+            "california"
+        ]
+    },
+    {
+        "x": 42,
+        "y": 98,
+        "left": -120.9375,
+        "top": 38.822591,
+        "right": -119.53125,
+        "bottom": 37.71859,
+        "countries": [
+            "nevada",
+            "california"
+        ]
+    },
+    {
+        "x": 43,
+        "y": 98,
+        "left": -119.53125,
+        "top": 38.822591,
+        "right": -118.125,
+        "bottom": 37.71859,
+        "countries": [
+            "nevada",
+            "california"
+        ]
+    },
+    {
+        "x": 43,
+        "y": 99,
+        "left": -119.53125,
+        "top": 37.71859,
+        "right": -118.125,
+        "bottom": 36.597889,
+        "countries": [
+            "nevada",
+            "california"
+        ]
+    },
+    {
+        "x": 44,
+        "y": 99,
+        "left": -118.125,
+        "top": 37.71859,
+        "right": -116.71875,
+        "bottom": 36.597889,
+        "countries": [
+            "nevada",
+            "california"
+        ]
+    },
+    {
+        "x": 45,
+        "y": 99,
+        "left": -116.71875,
+        "top": 37.71859,
+        "right": -115.3125,
+        "bottom": 36.597889,
+        "countries": [
+            "nevada",
+            "california"
+        ]
+    },
+    {
+        "x": 45,
+        "y": 100,
+        "left": -116.71875,
+        "top": 36.597889,
+        "right": -115.3125,
+        "bottom": 35.46067,
+        "countries": [
+            "nevada",
+            "california"
+        ]
+    },
+    {
+        "x": 44,
+        "y": 95,
+        "left": -118.125,
+        "top": 42.032974,
+        "right": -116.71875,
+        "bottom": 40.979898,
+        "countries": [
+            "idaho",
+            "oregon",
+            "nevada"
+        ]
+    },
+    {
+        "x": 45,
+        "y": 95,
+        "left": -116.71875,
+        "top": 42.032974,
+        "right": -115.3125,
+        "bottom": 40.979898,
+        "countries": [
+            "idaho",
+            "nevada"
+        ]
+    },
+    {
+        "x": 46,
+        "y": 95,
+        "left": -115.3125,
+        "top": 42.032974,
+        "right": -113.90625,
+        "bottom": 40.979898,
+        "countries": [
+            "idaho",
+            "nevada",
+            "utah"
+        ]
+    },
+    {
+        "x": 43,
+        "y": 95,
+        "left": -119.53125,
+        "top": 42.032974,
+        "right": -118.125,
+        "bottom": 40.979898,
+        "countries": [
+            "oregon",
+            "nevada"
+        ]
+    },
+    {
+        "x": 43,
+        "y": 96,
+        "left": -119.53125,
+        "top": 40.979898,
+        "right": -118.125,
+        "bottom": 39.909736,
+        "countries": [
+            "nevada"
+        ]
+    },
+    {
+        "x": 44,
+        "y": 96,
+        "left": -118.125,
+        "top": 40.979898,
+        "right": -116.71875,
+        "bottom": 39.909736,
+        "countries": [
+            "nevada"
+        ]
+    },
+    {
+        "x": 45,
+        "y": 96,
+        "left": -116.71875,
+        "top": 40.979898,
+        "right": -115.3125,
+        "bottom": 39.909736,
+        "countries": [
+            "nevada"
+        ]
+    },
+    {
+        "x": 46,
+        "y": 96,
+        "left": -115.3125,
+        "top": 40.979898,
+        "right": -113.90625,
+        "bottom": 39.909736,
+        "countries": [
+            "nevada",
+            "utah"
+        ]
+    },
+    {
+        "x": 43,
+        "y": 97,
+        "left": -119.53125,
+        "top": 39.909736,
+        "right": -118.125,
+        "bottom": 38.822591,
+        "countries": [
+            "nevada"
+        ]
+    },
+    {
+        "x": 44,
+        "y": 97,
+        "left": -118.125,
+        "top": 39.909736,
+        "right": -116.71875,
+        "bottom": 38.822591,
+        "countries": [
+            "nevada"
+        ]
+    },
+    {
+        "x": 45,
+        "y": 97,
+        "left": -116.71875,
+        "top": 39.909736,
+        "right": -115.3125,
+        "bottom": 38.822591,
+        "countries": [
+            "nevada"
+        ]
+    },
+    {
+        "x": 46,
+        "y": 97,
+        "left": -115.3125,
+        "top": 39.909736,
+        "right": -113.90625,
+        "bottom": 38.822591,
+        "countries": [
+            "nevada",
+            "utah"
+        ]
+    },
+    {
+        "x": 44,
+        "y": 98,
+        "left": -118.125,
+        "top": 38.822591,
+        "right": -116.71875,
+        "bottom": 37.71859,
+        "countries": [
+            "nevada"
+        ]
+    },
+    {
+        "x": 45,
+        "y": 98,
+        "left": -116.71875,
+        "top": 38.822591,
+        "right": -115.3125,
+        "bottom": 37.71859,
+        "countries": [
+            "nevada"
+        ]
+    },
+    {
+        "x": 46,
+        "y": 98,
+        "left": -115.3125,
+        "top": 38.822591,
+        "right": -113.90625,
+        "bottom": 37.71859,
+        "countries": [
+            "nevada",
+            "utah"
+        ]
+    }
+]

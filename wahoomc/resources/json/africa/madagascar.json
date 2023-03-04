@@ -1,0 +1,475 @@
+[
+    {
+        "x": 162,
+        "y": 136,
+        "left": 47.8125,
+        "top": -11.178402,
+        "right": 49.21875,
+        "bottom": -12.554564,
+        "countries": [
+            "madagascar"
+        ]
+    },
+    {
+        "x": 163,
+        "y": 136,
+        "left": 49.21875,
+        "top": -11.178402,
+        "right": 50.625,
+        "bottom": -12.554564,
+        "countries": [
+            "madagascar"
+        ]
+    },
+    {
+        "x": 161,
+        "y": 137,
+        "left": 46.40625,
+        "top": -12.554564,
+        "right": 47.8125,
+        "bottom": -13.923404,
+        "countries": [
+            "madagascar"
+        ]
+    },
+    {
+        "x": 162,
+        "y": 137,
+        "left": 47.8125,
+        "top": -12.554564,
+        "right": 49.21875,
+        "bottom": -13.923404,
+        "countries": [
+            "madagascar"
+        ]
+    },
+    {
+        "x": 163,
+        "y": 137,
+        "left": 49.21875,
+        "top": -12.554564,
+        "right": 50.625,
+        "bottom": -13.923404,
+        "countries": [
+            "madagascar"
+        ]
+    },
+    {
+        "x": 161,
+        "y": 138,
+        "left": 46.40625,
+        "top": -13.923404,
+        "right": 47.8125,
+        "bottom": -15.284185,
+        "countries": [
+            "madagascar"
+        ]
+    },
+    {
+        "x": 162,
+        "y": 138,
+        "left": 47.8125,
+        "top": -13.923404,
+        "right": 49.21875,
+        "bottom": -15.284185,
+        "countries": [
+            "madagascar"
+        ]
+    },
+    {
+        "x": 163,
+        "y": 138,
+        "left": 49.21875,
+        "top": -13.923404,
+        "right": 50.625,
+        "bottom": -15.284185,
+        "countries": [
+            "madagascar"
+        ]
+    },
+    {
+        "x": 159,
+        "y": 139,
+        "left": 43.59375,
+        "top": -15.284185,
+        "right": 45.0,
+        "bottom": -16.636192,
+        "countries": [
+            "madagascar"
+        ]
+    },
+    {
+        "x": 160,
+        "y": 139,
+        "left": 45.0,
+        "top": -15.284185,
+        "right": 46.40625,
+        "bottom": -16.636192,
+        "countries": [
+            "madagascar"
+        ]
+    },
+    {
+        "x": 161,
+        "y": 139,
+        "left": 46.40625,
+        "top": -15.284185,
+        "right": 47.8125,
+        "bottom": -16.636192,
+        "countries": [
+            "madagascar"
+        ]
+    },
+    {
+        "x": 162,
+        "y": 139,
+        "left": 47.8125,
+        "top": -15.284185,
+        "right": 49.21875,
+        "bottom": -16.636192,
+        "countries": [
+            "madagascar"
+        ]
+    },
+    {
+        "x": 163,
+        "y": 139,
+        "left": 49.21875,
+        "top": -15.284185,
+        "right": 50.625,
+        "bottom": -16.636192,
+        "countries": [
+            "madagascar"
+        ]
+    },
+    {
+        "x": 159,
+        "y": 140,
+        "left": 43.59375,
+        "top": -16.636192,
+        "right": 45.0,
+        "bottom": -17.978733,
+        "countries": [
+            "madagascar"
+        ]
+    },
+    {
+        "x": 160,
+        "y": 140,
+        "left": 45.0,
+        "top": -16.636192,
+        "right": 46.40625,
+        "bottom": -17.978733,
+        "countries": [
+            "madagascar"
+        ]
+    },
+    {
+        "x": 161,
+        "y": 140,
+        "left": 46.40625,
+        "top": -16.636192,
+        "right": 47.8125,
+        "bottom": -17.978733,
+        "countries": [
+            "madagascar"
+        ]
+    },
+    {
+        "x": 162,
+        "y": 140,
+        "left": 47.8125,
+        "top": -16.636192,
+        "right": 49.21875,
+        "bottom": -17.978733,
+        "countries": [
+            "madagascar"
+        ]
+    },
+    {
+        "x": 163,
+        "y": 140,
+        "left": 49.21875,
+        "top": -16.636192,
+        "right": 50.625,
+        "bottom": -17.978733,
+        "countries": [
+            "madagascar"
+        ]
+    },
+    {
+        "x": 159,
+        "y": 141,
+        "left": 43.59375,
+        "top": -17.978733,
+        "right": 45.0,
+        "bottom": -19.311143,
+        "countries": [
+            "madagascar"
+        ]
+    },
+    {
+        "x": 160,
+        "y": 141,
+        "left": 45.0,
+        "top": -17.978733,
+        "right": 46.40625,
+        "bottom": -19.311143,
+        "countries": [
+            "madagascar"
+        ]
+    },
+    {
+        "x": 161,
+        "y": 141,
+        "left": 46.40625,
+        "top": -17.978733,
+        "right": 47.8125,
+        "bottom": -19.311143,
+        "countries": [
+            "madagascar"
+        ]
+    },
+    {
+        "x": 162,
+        "y": 141,
+        "left": 47.8125,
+        "top": -17.978733,
+        "right": 49.21875,
+        "bottom": -19.311143,
+        "countries": [
+            "madagascar"
+        ]
+    },
+    {
+        "x": 163,
+        "y": 141,
+        "left": 49.21875,
+        "top": -17.978733,
+        "right": 50.625,
+        "bottom": -19.311143,
+        "countries": [
+            "madagascar"
+        ]
+    },
+    {
+        "x": 159,
+        "y": 142,
+        "left": 43.59375,
+        "top": -19.311143,
+        "right": 45.0,
+        "bottom": -20.632784,
+        "countries": [
+            "madagascar"
+        ]
+    },
+    {
+        "x": 160,
+        "y": 142,
+        "left": 45.0,
+        "top": -19.311143,
+        "right": 46.40625,
+        "bottom": -20.632784,
+        "countries": [
+            "madagascar"
+        ]
+    },
+    {
+        "x": 161,
+        "y": 142,
+        "left": 46.40625,
+        "top": -19.311143,
+        "right": 47.8125,
+        "bottom": -20.632784,
+        "countries": [
+            "madagascar"
+        ]
+    },
+    {
+        "x": 162,
+        "y": 142,
+        "left": 47.8125,
+        "top": -19.311143,
+        "right": 49.21875,
+        "bottom": -20.632784,
+        "countries": [
+            "madagascar"
+        ]
+    },
+    {
+        "x": 158,
+        "y": 143,
+        "left": 42.1875,
+        "top": -20.632784,
+        "right": 43.59375,
+        "bottom": -21.943046,
+        "countries": [
+            "madagascar"
+        ]
+    },
+    {
+        "x": 159,
+        "y": 143,
+        "left": 43.59375,
+        "top": -20.632784,
+        "right": 45.0,
+        "bottom": -21.943046,
+        "countries": [
+            "madagascar"
+        ]
+    },
+    {
+        "x": 160,
+        "y": 143,
+        "left": 45.0,
+        "top": -20.632784,
+        "right": 46.40625,
+        "bottom": -21.943046,
+        "countries": [
+            "madagascar"
+        ]
+    },
+    {
+        "x": 161,
+        "y": 143,
+        "left": 46.40625,
+        "top": -20.632784,
+        "right": 47.8125,
+        "bottom": -21.943046,
+        "countries": [
+            "madagascar"
+        ]
+    },
+    {
+        "x": 162,
+        "y": 143,
+        "left": 47.8125,
+        "top": -20.632784,
+        "right": 49.21875,
+        "bottom": -21.943046,
+        "countries": [
+            "madagascar"
+        ]
+    },
+    {
+        "x": 158,
+        "y": 144,
+        "left": 42.1875,
+        "top": -21.943046,
+        "right": 43.59375,
+        "bottom": -23.241346,
+        "countries": [
+            "madagascar"
+        ]
+    },
+    {
+        "x": 159,
+        "y": 144,
+        "left": 43.59375,
+        "top": -21.943046,
+        "right": 45.0,
+        "bottom": -23.241346,
+        "countries": [
+            "madagascar"
+        ]
+    },
+    {
+        "x": 160,
+        "y": 144,
+        "left": 45.0,
+        "top": -21.943046,
+        "right": 46.40625,
+        "bottom": -23.241346,
+        "countries": [
+            "madagascar"
+        ]
+    },
+    {
+        "x": 161,
+        "y": 144,
+        "left": 46.40625,
+        "top": -21.943046,
+        "right": 47.8125,
+        "bottom": -23.241346,
+        "countries": [
+            "madagascar"
+        ]
+    },
+    {
+        "x": 162,
+        "y": 144,
+        "left": 47.8125,
+        "top": -21.943046,
+        "right": 49.21875,
+        "bottom": -23.241346,
+        "countries": [
+            "madagascar"
+        ]
+    },
+    {
+        "x": 159,
+        "y": 145,
+        "left": 43.59375,
+        "top": -23.241346,
+        "right": 45.0,
+        "bottom": -24.527135,
+        "countries": [
+            "madagascar"
+        ]
+    },
+    {
+        "x": 160,
+        "y": 145,
+        "left": 45.0,
+        "top": -23.241346,
+        "right": 46.40625,
+        "bottom": -24.527135,
+        "countries": [
+            "madagascar"
+        ]
+    },
+    {
+        "x": 161,
+        "y": 145,
+        "left": 46.40625,
+        "top": -23.241346,
+        "right": 47.8125,
+        "bottom": -24.527135,
+        "countries": [
+            "madagascar"
+        ]
+    },
+    {
+        "x": 159,
+        "y": 146,
+        "left": 43.59375,
+        "top": -24.527135,
+        "right": 45.0,
+        "bottom": -25.799891,
+        "countries": [
+            "madagascar"
+        ]
+    },
+    {
+        "x": 160,
+        "y": 146,
+        "left": 45.0,
+        "top": -24.527135,
+        "right": 46.40625,
+        "bottom": -25.799891,
+        "countries": [
+            "madagascar"
+        ]
+    },
+    {
+        "x": 161,
+        "y": 146,
+        "left": 46.40625,
+        "top": -24.527135,
+        "right": 47.8125,
+        "bottom": -25.799891,
+        "countries": [
+            "madagascar"
+        ]
+    }
+]

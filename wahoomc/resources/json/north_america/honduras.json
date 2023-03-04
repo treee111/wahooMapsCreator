@@ -1,0 +1,170 @@
+[
+    {
+        "x": 64,
+        "y": 116,
+        "left": -90.0,
+        "top": 16.636192,
+        "right": -88.59375,
+        "bottom": 15.284185,
+        "countries": [
+            "belize",
+            "guatemala",
+            "honduras"
+        ]
+    },
+    {
+        "x": 65,
+        "y": 116,
+        "left": -88.59375,
+        "top": 16.636192,
+        "right": -87.1875,
+        "bottom": 15.284185,
+        "countries": [
+            "belize",
+            "guatemala",
+            "honduras"
+        ]
+    },
+    {
+        "x": 64,
+        "y": 117,
+        "left": -90.0,
+        "top": 15.284185,
+        "right": -88.59375,
+        "bottom": 13.923404,
+        "countries": [
+            "el_salvador",
+            "guatemala",
+            "honduras"
+        ]
+    },
+    {
+        "x": 65,
+        "y": 117,
+        "left": -88.59375,
+        "top": 15.284185,
+        "right": -87.1875,
+        "bottom": 13.923404,
+        "countries": [
+            "el_salvador",
+            "honduras"
+        ]
+    },
+    {
+        "x": 65,
+        "y": 118,
+        "left": -88.59375,
+        "top": 13.923404,
+        "right": -87.1875,
+        "bottom": 12.554564,
+        "countries": [
+            "el_salvador",
+            "honduras",
+            "nicaragua"
+        ]
+    },
+    {
+        "x": 68,
+        "y": 115,
+        "left": -84.375,
+        "top": 17.978733,
+        "right": -82.96875,
+        "bottom": 16.636192,
+        "countries": [
+            "honduras"
+        ]
+    },
+    {
+        "x": 66,
+        "y": 116,
+        "left": -87.1875,
+        "top": 16.636192,
+        "right": -85.78125,
+        "bottom": 15.284185,
+        "countries": [
+            "honduras"
+        ]
+    },
+    {
+        "x": 67,
+        "y": 116,
+        "left": -85.78125,
+        "top": 16.636192,
+        "right": -84.375,
+        "bottom": 15.284185,
+        "countries": [
+            "honduras"
+        ]
+    },
+    {
+        "x": 68,
+        "y": 116,
+        "left": -84.375,
+        "top": 16.636192,
+        "right": -82.96875,
+        "bottom": 15.284185,
+        "countries": [
+            "honduras"
+        ]
+    },
+    {
+        "x": 66,
+        "y": 117,
+        "left": -87.1875,
+        "top": 15.284185,
+        "right": -85.78125,
+        "bottom": 13.923404,
+        "countries": [
+            "honduras",
+            "nicaragua"
+        ]
+    },
+    {
+        "x": 67,
+        "y": 117,
+        "left": -85.78125,
+        "top": 15.284185,
+        "right": -84.375,
+        "bottom": 13.923404,
+        "countries": [
+            "honduras",
+            "nicaragua"
+        ]
+    },
+    {
+        "x": 68,
+        "y": 117,
+        "left": -84.375,
+        "top": 15.284185,
+        "right": -82.96875,
+        "bottom": 13.923404,
+        "countries": [
+            "honduras",
+            "nicaragua"
+        ]
+    },
+    {
+        "x": 66,
+        "y": 118,
+        "left": -87.1875,
+        "top": 13.923404,
+        "right": -85.78125,
+        "bottom": 12.554564,
+        "countries": [
+            "honduras",
+            "nicaragua"
+        ]
+    },
+    {
+        "x": 67,
+        "y": 118,
+        "left": -85.78125,
+        "top": 13.923404,
+        "right": -84.375,
+        "bottom": 12.554564,
+        "countries": [
+            "honduras",
+            "nicaragua"
+        ]
+    }
+]

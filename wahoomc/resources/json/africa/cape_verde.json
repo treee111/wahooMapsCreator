@@ -1,0 +1,79 @@
+[
+    {
+        "x": 109,
+        "y": 115,
+        "left": -26.71875,
+        "top": 17.978733,
+        "right": -25.3125,
+        "bottom": 16.636192,
+        "countries": [
+            "cape_verde"
+        ]
+    },
+    {
+        "x": 110,
+        "y": 115,
+        "left": -25.3125,
+        "top": 17.978733,
+        "right": -23.90625,
+        "bottom": 16.636192,
+        "countries": [
+            "cape_verde"
+        ]
+    },
+    {
+        "x": 111,
+        "y": 115,
+        "left": -23.90625,
+        "top": 17.978733,
+        "right": -22.5,
+        "bottom": 16.636192,
+        "countries": [
+            "cape_verde"
+        ]
+    },
+    {
+        "x": 110,
+        "y": 116,
+        "left": -25.3125,
+        "top": 16.636192,
+        "right": -23.90625,
+        "bottom": 15.284185,
+        "countries": [
+            "cape_verde"
+        ]
+    },
+    {
+        "x": 111,
+        "y": 116,
+        "left": -23.90625,
+        "top": 16.636192,
+        "right": -22.5,
+        "bottom": 15.284185,
+        "countries": [
+            "cape_verde"
+        ]
+    },
+    {
+        "x": 110,
+        "y": 117,
+        "left": -25.3125,
+        "top": 15.284185,
+        "right": -23.90625,
+        "bottom": 13.923404,
+        "countries": [
+            "cape_verde"
+        ]
+    },
+    {
+        "x": 111,
+        "y": 117,
+        "left": -23.90625,
+        "top": 15.284185,
+        "right": -22.5,
+        "bottom": 13.923404,
+        "countries": [
+            "cape_verde"
+        ]
+    }
+]

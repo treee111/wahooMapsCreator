@@ -1,0 +1,29 @@
+[
+    {
+        "x": 74,
+        "y": 97,
+        "left": -75.9375,
+        "top": 39.909736,
+        "right": -74.53125,
+        "bottom": 38.822591,
+        "countries": [
+            "maryland",
+            "pennsylvania",
+            "new_jersey",
+            "delaware"
+        ]
+    },
+    {
+        "x": 74,
+        "y": 98,
+        "left": -75.9375,
+        "top": 38.822591,
+        "right": -74.53125,
+        "bottom": 37.71859,
+        "countries": [
+            "maryland",
+            "virginia",
+            "delaware"
+        ]
+    }
+]

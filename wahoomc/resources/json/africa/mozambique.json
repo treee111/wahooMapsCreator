@@ -1,0 +1,698 @@
+[
+    {
+        "x": 152,
+        "y": 136,
+        "left": 33.75,
+        "top": -11.178402,
+        "right": 35.15625,
+        "bottom": -12.554564,
+        "countries": [
+            "mozambique",
+            "tanzania",
+            "malawi"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 137,
+        "left": 33.75,
+        "top": -12.554564,
+        "right": 35.15625,
+        "bottom": -13.923404,
+        "countries": [
+            "mozambique",
+            "malawi"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 137,
+        "left": 35.15625,
+        "top": -12.554564,
+        "right": 36.5625,
+        "bottom": -13.923404,
+        "countries": [
+            "mozambique",
+            "malawi"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 138,
+        "left": 32.34375,
+        "top": -13.923404,
+        "right": 33.75,
+        "bottom": -15.284185,
+        "countries": [
+            "zambia",
+            "mozambique",
+            "malawi"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 138,
+        "left": 33.75,
+        "top": -13.923404,
+        "right": 35.15625,
+        "bottom": -15.284185,
+        "countries": [
+            "mozambique",
+            "malawi"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 138,
+        "left": 35.15625,
+        "top": -13.923404,
+        "right": 36.5625,
+        "bottom": -15.284185,
+        "countries": [
+            "mozambique",
+            "malawi"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 139,
+        "left": 33.75,
+        "top": -15.284185,
+        "right": 35.15625,
+        "bottom": -16.636192,
+        "countries": [
+            "mozambique",
+            "malawi"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 139,
+        "left": 35.15625,
+        "top": -15.284185,
+        "right": 36.5625,
+        "bottom": -16.636192,
+        "countries": [
+            "mozambique",
+            "malawi"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 140,
+        "left": 33.75,
+        "top": -16.636192,
+        "right": 35.15625,
+        "bottom": -17.978733,
+        "countries": [
+            "mozambique",
+            "malawi"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 140,
+        "left": 35.15625,
+        "top": -16.636192,
+        "right": 36.5625,
+        "bottom": -17.978733,
+        "countries": [
+            "mozambique",
+            "malawi"
+        ]
+    },
+    {
+        "x": 155,
+        "y": 135,
+        "left": 37.96875,
+        "top": -9.795678,
+        "right": 39.375,
+        "bottom": -11.178402,
+        "countries": [
+            "mozambique",
+            "tanzania"
+        ]
+    },
+    {
+        "x": 156,
+        "y": 135,
+        "left": 39.375,
+        "top": -9.795678,
+        "right": 40.78125,
+        "bottom": -11.178402,
+        "countries": [
+            "mozambique",
+            "tanzania"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 136,
+        "left": 35.15625,
+        "top": -11.178402,
+        "right": 36.5625,
+        "bottom": -12.554564,
+        "countries": [
+            "mozambique",
+            "tanzania"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 136,
+        "left": 36.5625,
+        "top": -11.178402,
+        "right": 37.96875,
+        "bottom": -12.554564,
+        "countries": [
+            "mozambique",
+            "tanzania"
+        ]
+    },
+    {
+        "x": 155,
+        "y": 136,
+        "left": 37.96875,
+        "top": -11.178402,
+        "right": 39.375,
+        "bottom": -12.554564,
+        "countries": [
+            "mozambique",
+            "tanzania"
+        ]
+    },
+    {
+        "x": 156,
+        "y": 136,
+        "left": 39.375,
+        "top": -11.178402,
+        "right": 40.78125,
+        "bottom": -12.554564,
+        "countries": [
+            "mozambique"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 137,
+        "left": 36.5625,
+        "top": -12.554564,
+        "right": 37.96875,
+        "bottom": -13.923404,
+        "countries": [
+            "mozambique"
+        ]
+    },
+    {
+        "x": 155,
+        "y": 137,
+        "left": 37.96875,
+        "top": -12.554564,
+        "right": 39.375,
+        "bottom": -13.923404,
+        "countries": [
+            "mozambique"
+        ]
+    },
+    {
+        "x": 156,
+        "y": 137,
+        "left": 39.375,
+        "top": -12.554564,
+        "right": 40.78125,
+        "bottom": -13.923404,
+        "countries": [
+            "mozambique"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 138,
+        "left": 29.53125,
+        "top": -13.923404,
+        "right": 30.9375,
+        "bottom": -15.284185,
+        "countries": [
+            "zambia",
+            "mozambique"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 138,
+        "left": 30.9375,
+        "top": -13.923404,
+        "right": 32.34375,
+        "bottom": -15.284185,
+        "countries": [
+            "zambia",
+            "mozambique"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 138,
+        "left": 36.5625,
+        "top": -13.923404,
+        "right": 37.96875,
+        "bottom": -15.284185,
+        "countries": [
+            "mozambique"
+        ]
+    },
+    {
+        "x": 155,
+        "y": 138,
+        "left": 37.96875,
+        "top": -13.923404,
+        "right": 39.375,
+        "bottom": -15.284185,
+        "countries": [
+            "mozambique"
+        ]
+    },
+    {
+        "x": 156,
+        "y": 138,
+        "left": 39.375,
+        "top": -13.923404,
+        "right": 40.78125,
+        "bottom": -15.284185,
+        "countries": [
+            "mozambique"
+        ]
+    },
+    {
+        "x": 157,
+        "y": 138,
+        "left": 40.78125,
+        "top": -13.923404,
+        "right": 42.1875,
+        "bottom": -15.284185,
+        "countries": [
+            "mozambique"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 139,
+        "left": 29.53125,
+        "top": -15.284185,
+        "right": 30.9375,
+        "bottom": -16.636192,
+        "countries": [
+            "zambia",
+            "mozambique",
+            "zimbabwe"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 139,
+        "left": 30.9375,
+        "top": -15.284185,
+        "right": 32.34375,
+        "bottom": -16.636192,
+        "countries": [
+            "mozambique",
+            "zimbabwe"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 139,
+        "left": 32.34375,
+        "top": -15.284185,
+        "right": 33.75,
+        "bottom": -16.636192,
+        "countries": [
+            "mozambique",
+            "zimbabwe"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 139,
+        "left": 36.5625,
+        "top": -15.284185,
+        "right": 37.96875,
+        "bottom": -16.636192,
+        "countries": [
+            "mozambique"
+        ]
+    },
+    {
+        "x": 155,
+        "y": 139,
+        "left": 37.96875,
+        "top": -15.284185,
+        "right": 39.375,
+        "bottom": -16.636192,
+        "countries": [
+            "mozambique"
+        ]
+    },
+    {
+        "x": 156,
+        "y": 139,
+        "left": 39.375,
+        "top": -15.284185,
+        "right": 40.78125,
+        "bottom": -16.636192,
+        "countries": [
+            "mozambique"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 140,
+        "left": 32.34375,
+        "top": -16.636192,
+        "right": 33.75,
+        "bottom": -17.978733,
+        "countries": [
+            "mozambique",
+            "zimbabwe"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 140,
+        "left": 36.5625,
+        "top": -16.636192,
+        "right": 37.96875,
+        "bottom": -17.978733,
+        "countries": [
+            "mozambique"
+        ]
+    },
+    {
+        "x": 155,
+        "y": 140,
+        "left": 37.96875,
+        "top": -16.636192,
+        "right": 39.375,
+        "bottom": -17.978733,
+        "countries": [
+            "mozambique"
+        ]
+    },
+    {
+        "x": 156,
+        "y": 140,
+        "left": 39.375,
+        "top": -16.636192,
+        "right": 40.78125,
+        "bottom": -17.978733,
+        "countries": [
+            "mozambique"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 141,
+        "left": 32.34375,
+        "top": -17.978733,
+        "right": 33.75,
+        "bottom": -19.311143,
+        "countries": [
+            "mozambique",
+            "zimbabwe"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 141,
+        "left": 33.75,
+        "top": -17.978733,
+        "right": 35.15625,
+        "bottom": -19.311143,
+        "countries": [
+            "mozambique"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 141,
+        "left": 35.15625,
+        "top": -17.978733,
+        "right": 36.5625,
+        "bottom": -19.311143,
+        "countries": [
+            "mozambique"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 141,
+        "left": 36.5625,
+        "top": -17.978733,
+        "right": 37.96875,
+        "bottom": -19.311143,
+        "countries": [
+            "mozambique"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 142,
+        "left": 32.34375,
+        "top": -19.311143,
+        "right": 33.75,
+        "bottom": -20.632784,
+        "countries": [
+            "mozambique",
+            "zimbabwe"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 142,
+        "left": 33.75,
+        "top": -19.311143,
+        "right": 35.15625,
+        "bottom": -20.632784,
+        "countries": [
+            "mozambique"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 142,
+        "left": 35.15625,
+        "top": -19.311143,
+        "right": 36.5625,
+        "bottom": -20.632784,
+        "countries": [
+            "mozambique"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 143,
+        "left": 30.9375,
+        "top": -20.632784,
+        "right": 32.34375,
+        "bottom": -21.943046,
+        "countries": [
+            "mozambique",
+            "zimbabwe"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 143,
+        "left": 32.34375,
+        "top": -20.632784,
+        "right": 33.75,
+        "bottom": -21.943046,
+        "countries": [
+            "mozambique",
+            "zimbabwe"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 143,
+        "left": 33.75,
+        "top": -20.632784,
+        "right": 35.15625,
+        "bottom": -21.943046,
+        "countries": [
+            "mozambique"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 143,
+        "left": 35.15625,
+        "top": -20.632784,
+        "right": 36.5625,
+        "bottom": -21.943046,
+        "countries": [
+            "mozambique"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 144,
+        "left": 30.9375,
+        "top": -21.943046,
+        "right": 32.34375,
+        "bottom": -23.241346,
+        "countries": [
+            "mozambique",
+            "south_africa",
+            "zimbabwe"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 144,
+        "left": 32.34375,
+        "top": -21.943046,
+        "right": 33.75,
+        "bottom": -23.241346,
+        "countries": [
+            "mozambique"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 144,
+        "left": 33.75,
+        "top": -21.943046,
+        "right": 35.15625,
+        "bottom": -23.241346,
+        "countries": [
+            "mozambique"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 144,
+        "left": 35.15625,
+        "top": -21.943046,
+        "right": 36.5625,
+        "bottom": -23.241346,
+        "countries": [
+            "mozambique"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 145,
+        "left": 30.9375,
+        "top": -23.241346,
+        "right": 32.34375,
+        "bottom": -24.527135,
+        "countries": [
+            "mozambique",
+            "south_africa"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 145,
+        "left": 32.34375,
+        "top": -23.241346,
+        "right": 33.75,
+        "bottom": -24.527135,
+        "countries": [
+            "mozambique"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 145,
+        "left": 33.75,
+        "top": -23.241346,
+        "right": 35.15625,
+        "bottom": -24.527135,
+        "countries": [
+            "mozambique"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 145,
+        "left": 35.15625,
+        "top": -23.241346,
+        "right": 36.5625,
+        "bottom": -24.527135,
+        "countries": [
+            "mozambique"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 146,
+        "left": 30.9375,
+        "top": -24.527135,
+        "right": 32.34375,
+        "bottom": -25.799891,
+        "countries": [
+            "mozambique",
+            "south_africa",
+            "swaziland"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 146,
+        "left": 32.34375,
+        "top": -24.527135,
+        "right": 33.75,
+        "bottom": -25.799891,
+        "countries": [
+            "mozambique"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 146,
+        "left": 33.75,
+        "top": -24.527135,
+        "right": 35.15625,
+        "bottom": -25.799891,
+        "countries": [
+            "mozambique"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 146,
+        "left": 35.15625,
+        "top": -24.527135,
+        "right": 36.5625,
+        "bottom": -25.799891,
+        "countries": [
+            "mozambique"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 147,
+        "left": 30.9375,
+        "top": -25.799891,
+        "right": 32.34375,
+        "bottom": -27.059126,
+        "countries": [
+            "mozambique",
+            "south_africa",
+            "swaziland"
+        ]
+    },
+    {
+        "x": 151,
+        "y": 147,
+        "left": 32.34375,
+        "top": -25.799891,
+        "right": 33.75,
+        "bottom": -27.059126,
+        "countries": [
+            "mozambique",
+            "south_africa"
+        ]
+    }
+]

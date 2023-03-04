@@ -1,0 +1,275 @@
+[
+    {
+        "x": 74,
+        "y": 98,
+        "left": -75.9375,
+        "top": 38.822591,
+        "right": -74.53125,
+        "bottom": 37.71859,
+        "countries": [
+            "maryland",
+            "virginia",
+            "delaware"
+        ]
+    },
+    {
+        "x": 73,
+        "y": 97,
+        "left": -77.34375,
+        "top": 39.909736,
+        "right": -75.9375,
+        "bottom": 38.822591,
+        "countries": [
+            "maryland",
+            "district_of_columbia",
+            "pennsylvania",
+            "virginia"
+        ]
+    },
+    {
+        "x": 73,
+        "y": 98,
+        "left": -77.34375,
+        "top": 38.822591,
+        "right": -75.9375,
+        "bottom": 37.71859,
+        "countries": [
+            "maryland",
+            "district_of_columbia",
+            "virginia"
+        ]
+    },
+    {
+        "x": 68,
+        "y": 99,
+        "left": -84.375,
+        "top": 37.71859,
+        "right": -82.96875,
+        "bottom": 36.597889,
+        "countries": [
+            "tennessee",
+            "virginia",
+            "kentucky"
+        ]
+    },
+    {
+        "x": 69,
+        "y": 99,
+        "left": -82.96875,
+        "top": 37.71859,
+        "right": -81.5625,
+        "bottom": 36.597889,
+        "countries": [
+            "tennessee",
+            "west_virginia",
+            "virginia",
+            "kentucky"
+        ]
+    },
+    {
+        "x": 68,
+        "y": 100,
+        "left": -84.375,
+        "top": 36.597889,
+        "right": -82.96875,
+        "bottom": 35.46067,
+        "countries": [
+            "north_carolina",
+            "tennessee",
+            "virginia",
+            "kentucky"
+        ]
+    },
+    {
+        "x": 71,
+        "y": 97,
+        "left": -80.15625,
+        "top": 39.909736,
+        "right": -78.75,
+        "bottom": 38.822591,
+        "countries": [
+            "maryland",
+            "pennsylvania",
+            "west_virginia",
+            "virginia"
+        ]
+    },
+    {
+        "x": 72,
+        "y": 97,
+        "left": -78.75,
+        "top": 39.909736,
+        "right": -77.34375,
+        "bottom": 38.822591,
+        "countries": [
+            "maryland",
+            "pennsylvania",
+            "west_virginia",
+            "virginia"
+        ]
+    },
+    {
+        "x": 69,
+        "y": 100,
+        "left": -82.96875,
+        "top": 36.597889,
+        "right": -81.5625,
+        "bottom": 35.46067,
+        "countries": [
+            "north_carolina",
+            "tennessee",
+            "virginia"
+        ]
+    },
+    {
+        "x": 70,
+        "y": 100,
+        "left": -81.5625,
+        "top": 36.597889,
+        "right": -80.15625,
+        "bottom": 35.46067,
+        "countries": [
+            "north_carolina",
+            "virginia"
+        ]
+    },
+    {
+        "x": 71,
+        "y": 100,
+        "left": -80.15625,
+        "top": 36.597889,
+        "right": -78.75,
+        "bottom": 35.46067,
+        "countries": [
+            "north_carolina",
+            "virginia"
+        ]
+    },
+    {
+        "x": 72,
+        "y": 100,
+        "left": -78.75,
+        "top": 36.597889,
+        "right": -77.34375,
+        "bottom": 35.46067,
+        "countries": [
+            "north_carolina",
+            "virginia"
+        ]
+    },
+    {
+        "x": 73,
+        "y": 100,
+        "left": -77.34375,
+        "top": 36.597889,
+        "right": -75.9375,
+        "bottom": 35.46067,
+        "countries": [
+            "north_carolina",
+            "virginia"
+        ]
+    },
+    {
+        "x": 74,
+        "y": 100,
+        "left": -75.9375,
+        "top": 36.597889,
+        "right": -74.53125,
+        "bottom": 35.46067,
+        "countries": [
+            "north_carolina",
+            "virginia"
+        ]
+    },
+    {
+        "x": 70,
+        "y": 98,
+        "left": -81.5625,
+        "top": 38.822591,
+        "right": -80.15625,
+        "bottom": 37.71859,
+        "countries": [
+            "west_virginia",
+            "virginia"
+        ]
+    },
+    {
+        "x": 71,
+        "y": 98,
+        "left": -80.15625,
+        "top": 38.822591,
+        "right": -78.75,
+        "bottom": 37.71859,
+        "countries": [
+            "west_virginia",
+            "virginia"
+        ]
+    },
+    {
+        "x": 72,
+        "y": 98,
+        "left": -78.75,
+        "top": 38.822591,
+        "right": -77.34375,
+        "bottom": 37.71859,
+        "countries": [
+            "virginia"
+        ]
+    },
+    {
+        "x": 70,
+        "y": 99,
+        "left": -81.5625,
+        "top": 37.71859,
+        "right": -80.15625,
+        "bottom": 36.597889,
+        "countries": [
+            "west_virginia",
+            "virginia"
+        ]
+    },
+    {
+        "x": 71,
+        "y": 99,
+        "left": -80.15625,
+        "top": 37.71859,
+        "right": -78.75,
+        "bottom": 36.597889,
+        "countries": [
+            "virginia"
+        ]
+    },
+    {
+        "x": 72,
+        "y": 99,
+        "left": -78.75,
+        "top": 37.71859,
+        "right": -77.34375,
+        "bottom": 36.597889,
+        "countries": [
+            "virginia"
+        ]
+    },
+    {
+        "x": 73,
+        "y": 99,
+        "left": -77.34375,
+        "top": 37.71859,
+        "right": -75.9375,
+        "bottom": 36.597889,
+        "countries": [
+            "virginia"
+        ]
+    },
+    {
+        "x": 74,
+        "y": 99,
+        "left": -75.9375,
+        "top": 37.71859,
+        "right": -74.53125,
+        "bottom": 36.597889,
+        "countries": [
+            "virginia"
+        ]
+    }
+]

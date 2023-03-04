@@ -1,0 +1,324 @@
+[
+    {
+        "x": 202,
+        "y": 117,
+        "left": 104.0625,
+        "top": 15.284185,
+        "right": 105.46875,
+        "bottom": 13.923404,
+        "countries": [
+            "cambodia",
+            "thailand",
+            "laos"
+        ]
+    },
+    {
+        "x": 203,
+        "y": 117,
+        "left": 105.46875,
+        "top": 15.284185,
+        "right": 106.875,
+        "bottom": 13.923404,
+        "countries": [
+            "cambodia",
+            "thailand",
+            "laos"
+        ]
+    },
+    {
+        "x": 204,
+        "y": 117,
+        "left": 106.875,
+        "top": 15.284185,
+        "right": 108.28125,
+        "bottom": 13.923404,
+        "countries": [
+            "cambodia",
+            "vietnam",
+            "laos"
+        ]
+    },
+    {
+        "x": 203,
+        "y": 118,
+        "left": 105.46875,
+        "top": 13.923404,
+        "right": 106.875,
+        "bottom": 12.554564,
+        "countries": [
+            "cambodia",
+            "laos"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 111,
+        "left": 101.25,
+        "top": 23.241346,
+        "right": 102.65625,
+        "bottom": 21.943046,
+        "countries": [
+            "vietnam",
+            "laos",
+            "china"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 112,
+        "left": 99.84375,
+        "top": 21.943046,
+        "right": 101.25,
+        "bottom": 20.632784,
+        "countries": [
+            "myanmar",
+            "laos",
+            "china"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 112,
+        "left": 101.25,
+        "top": 21.943046,
+        "right": 102.65625,
+        "bottom": 20.632784,
+        "countries": [
+            "vietnam",
+            "laos",
+            "china"
+        ]
+    },
+    {
+        "x": 201,
+        "y": 112,
+        "left": 102.65625,
+        "top": 21.943046,
+        "right": 104.0625,
+        "bottom": 20.632784,
+        "countries": [
+            "vietnam",
+            "laos"
+        ]
+    },
+    {
+        "x": 202,
+        "y": 112,
+        "left": 104.0625,
+        "top": 21.943046,
+        "right": 105.46875,
+        "bottom": 20.632784,
+        "countries": [
+            "vietnam",
+            "laos"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 113,
+        "left": 99.84375,
+        "top": 20.632784,
+        "right": 101.25,
+        "bottom": 19.311143,
+        "countries": [
+            "thailand",
+            "laos",
+            "myanmar"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 113,
+        "left": 101.25,
+        "top": 20.632784,
+        "right": 102.65625,
+        "bottom": 19.311143,
+        "countries": [
+            "thailand",
+            "laos"
+        ]
+    },
+    {
+        "x": 201,
+        "y": 113,
+        "left": 102.65625,
+        "top": 20.632784,
+        "right": 104.0625,
+        "bottom": 19.311143,
+        "countries": [
+            "vietnam",
+            "laos"
+        ]
+    },
+    {
+        "x": 202,
+        "y": 113,
+        "left": 104.0625,
+        "top": 20.632784,
+        "right": 105.46875,
+        "bottom": 19.311143,
+        "countries": [
+            "vietnam",
+            "laos"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 114,
+        "left": 99.84375,
+        "top": 19.311143,
+        "right": 101.25,
+        "bottom": 17.978733,
+        "countries": [
+            "thailand",
+            "laos"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 114,
+        "left": 101.25,
+        "top": 19.311143,
+        "right": 102.65625,
+        "bottom": 17.978733,
+        "countries": [
+            "thailand",
+            "laos"
+        ]
+    },
+    {
+        "x": 201,
+        "y": 114,
+        "left": 102.65625,
+        "top": 19.311143,
+        "right": 104.0625,
+        "bottom": 17.978733,
+        "countries": [
+            "vietnam",
+            "thailand",
+            "laos"
+        ]
+    },
+    {
+        "x": 202,
+        "y": 114,
+        "left": 104.0625,
+        "top": 19.311143,
+        "right": 105.46875,
+        "bottom": 17.978733,
+        "countries": [
+            "vietnam",
+            "thailand",
+            "laos"
+        ]
+    },
+    {
+        "x": 203,
+        "y": 114,
+        "left": 105.46875,
+        "top": 19.311143,
+        "right": 106.875,
+        "bottom": 17.978733,
+        "countries": [
+            "vietnam",
+            "laos"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 115,
+        "left": 99.84375,
+        "top": 17.978733,
+        "right": 101.25,
+        "bottom": 16.636192,
+        "countries": [
+            "thailand",
+            "laos"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 115,
+        "left": 101.25,
+        "top": 17.978733,
+        "right": 102.65625,
+        "bottom": 16.636192,
+        "countries": [
+            "thailand",
+            "laos"
+        ]
+    },
+    {
+        "x": 201,
+        "y": 115,
+        "left": 102.65625,
+        "top": 17.978733,
+        "right": 104.0625,
+        "bottom": 16.636192,
+        "countries": [
+            "thailand",
+            "laos"
+        ]
+    },
+    {
+        "x": 202,
+        "y": 115,
+        "left": 104.0625,
+        "top": 17.978733,
+        "right": 105.46875,
+        "bottom": 16.636192,
+        "countries": [
+            "thailand",
+            "laos"
+        ]
+    },
+    {
+        "x": 203,
+        "y": 115,
+        "left": 105.46875,
+        "top": 17.978733,
+        "right": 106.875,
+        "bottom": 16.636192,
+        "countries": [
+            "vietnam",
+            "laos"
+        ]
+    },
+    {
+        "x": 202,
+        "y": 116,
+        "left": 104.0625,
+        "top": 16.636192,
+        "right": 105.46875,
+        "bottom": 15.284185,
+        "countries": [
+            "thailand",
+            "laos"
+        ]
+    },
+    {
+        "x": 203,
+        "y": 116,
+        "left": 105.46875,
+        "top": 16.636192,
+        "right": 106.875,
+        "bottom": 15.284185,
+        "countries": [
+            "vietnam",
+            "thailand",
+            "laos"
+        ]
+    },
+    {
+        "x": 204,
+        "y": 116,
+        "left": 106.875,
+        "top": 16.636192,
+        "right": 108.28125,
+        "bottom": 15.284185,
+        "countries": [
+            "vietnam",
+            "laos"
+        ]
+    }
+]

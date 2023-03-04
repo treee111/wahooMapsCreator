@@ -109,9 +109,6 @@ class CountryGeofabrik(InformalGeofabrikInterface):
                 rurl = value['pbf_url']
                 rshape = shape(value['geometry'])
 
-                # for debugging
-                # if tile["x"] == 137 and (region == "denmark" or region == "germany" or region == "sweden"):
-                #     print("stop for debugging")
                 # if not xy_mode:
 
                 # print (f'Processing region: {regionname}')

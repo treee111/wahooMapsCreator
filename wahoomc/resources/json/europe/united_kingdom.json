@@ -1,0 +1,806 @@
+[
+    {
+        "x": 129,
+        "y": 85,
+        "left": 1.40625,
+        "top": 51.618017,
+        "right": 2.8125,
+        "bottom": 50.736455,
+        "countries": [
+            "united_kingdom",
+            "france",
+            "belgium"
+        ]
+    },
+    {
+        "x": 128,
+        "y": 86,
+        "left": 0.0,
+        "top": 50.736455,
+        "right": 1.40625,
+        "bottom": 49.837982,
+        "countries": [
+            "united_kingdom",
+            "france"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 80,
+        "left": -8.4375,
+        "top": 55.776573,
+        "right": -7.03125,
+        "bottom": 54.977614,
+        "countries": [
+            "united_kingdom",
+            "ireland"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 80,
+        "left": -7.03125,
+        "top": 55.776573,
+        "right": -5.625,
+        "bottom": 54.977614,
+        "countries": [
+            "united_kingdom",
+            "ireland"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 81,
+        "left": -8.4375,
+        "top": 54.977614,
+        "right": -7.03125,
+        "bottom": 54.162434,
+        "countries": [
+            "united_kingdom",
+            "ireland"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 81,
+        "left": -7.03125,
+        "top": 54.977614,
+        "right": -5.625,
+        "bottom": 54.162434,
+        "countries": [
+            "united_kingdom",
+            "ireland"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 82,
+        "left": -8.4375,
+        "top": 54.162434,
+        "right": -7.03125,
+        "bottom": 53.330873,
+        "countries": [
+            "united_kingdom",
+            "ireland"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 82,
+        "left": -7.03125,
+        "top": 54.162434,
+        "right": -5.625,
+        "bottom": 53.330873,
+        "countries": [
+            "united_kingdom",
+            "ireland"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 84,
+        "left": -7.03125,
+        "top": 52.48278,
+        "right": -5.625,
+        "bottom": 51.618017,
+        "countries": [
+            "united_kingdom",
+            "ireland"
+        ]
+    },
+    {
+        "x": 124,
+        "y": 81,
+        "left": -5.625,
+        "top": 54.977614,
+        "right": -4.21875,
+        "bottom": 54.162434,
+        "countries": [
+            "isle_of_man",
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 124,
+        "y": 82,
+        "left": -5.625,
+        "top": 54.162434,
+        "right": -4.21875,
+        "bottom": 53.330873,
+        "countries": [
+            "isle_of_man",
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 126,
+        "y": 79,
+        "left": -2.8125,
+        "top": 56.559482,
+        "right": -1.40625,
+        "bottom": 55.776573,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 125,
+        "y": 80,
+        "left": -4.21875,
+        "top": 55.776573,
+        "right": -2.8125,
+        "bottom": 54.977614,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 126,
+        "y": 80,
+        "left": -2.8125,
+        "top": 55.776573,
+        "right": -1.40625,
+        "bottom": 54.977614,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 127,
+        "y": 80,
+        "left": -1.40625,
+        "top": 55.776573,
+        "right": 0.0,
+        "bottom": 54.977614,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 125,
+        "y": 81,
+        "left": -4.21875,
+        "top": 54.977614,
+        "right": -2.8125,
+        "bottom": 54.162434,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 126,
+        "y": 81,
+        "left": -2.8125,
+        "top": 54.977614,
+        "right": -1.40625,
+        "bottom": 54.162434,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 127,
+        "y": 81,
+        "left": -1.40625,
+        "top": 54.977614,
+        "right": 0.0,
+        "bottom": 54.162434,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 125,
+        "y": 82,
+        "left": -4.21875,
+        "top": 54.162434,
+        "right": -2.8125,
+        "bottom": 53.330873,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 126,
+        "y": 82,
+        "left": -2.8125,
+        "top": 54.162434,
+        "right": -1.40625,
+        "bottom": 53.330873,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 127,
+        "y": 82,
+        "left": -1.40625,
+        "top": 54.162434,
+        "right": 0.0,
+        "bottom": 53.330873,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 128,
+        "y": 82,
+        "left": 0.0,
+        "top": 54.162434,
+        "right": 1.40625,
+        "bottom": 53.330873,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 125,
+        "y": 83,
+        "left": -4.21875,
+        "top": 53.330873,
+        "right": -2.8125,
+        "bottom": 52.48278,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 126,
+        "y": 83,
+        "left": -2.8125,
+        "top": 53.330873,
+        "right": -1.40625,
+        "bottom": 52.48278,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 127,
+        "y": 83,
+        "left": -1.40625,
+        "top": 53.330873,
+        "right": 0.0,
+        "bottom": 52.48278,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 128,
+        "y": 83,
+        "left": 0.0,
+        "top": 53.330873,
+        "right": 1.40625,
+        "bottom": 52.48278,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 129,
+        "y": 83,
+        "left": 1.40625,
+        "top": 53.330873,
+        "right": 2.8125,
+        "bottom": 52.48278,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 125,
+        "y": 84,
+        "left": -4.21875,
+        "top": 52.48278,
+        "right": -2.8125,
+        "bottom": 51.618017,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 126,
+        "y": 84,
+        "left": -2.8125,
+        "top": 52.48278,
+        "right": -1.40625,
+        "bottom": 51.618017,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 127,
+        "y": 84,
+        "left": -1.40625,
+        "top": 52.48278,
+        "right": 0.0,
+        "bottom": 51.618017,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 128,
+        "y": 84,
+        "left": 0.0,
+        "top": 52.48278,
+        "right": 1.40625,
+        "bottom": 51.618017,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 129,
+        "y": 84,
+        "left": 1.40625,
+        "top": 52.48278,
+        "right": 2.8125,
+        "bottom": 51.618017,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 124,
+        "y": 85,
+        "left": -5.625,
+        "top": 51.618017,
+        "right": -4.21875,
+        "bottom": 50.736455,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 125,
+        "y": 85,
+        "left": -4.21875,
+        "top": 51.618017,
+        "right": -2.8125,
+        "bottom": 50.736455,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 126,
+        "y": 85,
+        "left": -2.8125,
+        "top": 51.618017,
+        "right": -1.40625,
+        "bottom": 50.736455,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 127,
+        "y": 85,
+        "left": -1.40625,
+        "top": 51.618017,
+        "right": 0.0,
+        "bottom": 50.736455,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 128,
+        "y": 85,
+        "left": 0.0,
+        "top": 51.618017,
+        "right": 1.40625,
+        "bottom": 50.736455,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 86,
+        "left": -7.03125,
+        "top": 50.736455,
+        "right": -5.625,
+        "bottom": 49.837982,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 124,
+        "y": 86,
+        "left": -5.625,
+        "top": 50.736455,
+        "right": -4.21875,
+        "bottom": 49.837982,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 125,
+        "y": 86,
+        "left": -4.21875,
+        "top": 50.736455,
+        "right": -2.8125,
+        "bottom": 49.837982,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 126,
+        "y": 86,
+        "left": -2.8125,
+        "top": 50.736455,
+        "right": -1.40625,
+        "bottom": 49.837982,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 127,
+        "y": 86,
+        "left": -1.40625,
+        "top": 50.736455,
+        "right": 0.0,
+        "bottom": 49.837982,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 126,
+        "y": 73,
+        "left": -2.8125,
+        "top": 60.930432,
+        "right": -1.40625,
+        "bottom": 60.239811,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 127,
+        "y": 73,
+        "left": -1.40625,
+        "top": 60.930432,
+        "right": 0.0,
+        "bottom": 60.239811,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 126,
+        "y": 74,
+        "left": -2.8125,
+        "top": 60.239811,
+        "right": -1.40625,
+        "bottom": 59.534318,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 127,
+        "y": 74,
+        "left": -1.40625,
+        "top": 60.239811,
+        "right": 0.0,
+        "bottom": 59.534318,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 75,
+        "left": -7.03125,
+        "top": 59.534318,
+        "right": -5.625,
+        "bottom": 58.813742,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 124,
+        "y": 75,
+        "left": -5.625,
+        "top": 59.534318,
+        "right": -4.21875,
+        "bottom": 58.813742,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 125,
+        "y": 75,
+        "left": -4.21875,
+        "top": 59.534318,
+        "right": -2.8125,
+        "bottom": 58.813742,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 126,
+        "y": 75,
+        "left": -2.8125,
+        "top": 59.534318,
+        "right": -1.40625,
+        "bottom": 58.813742,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 76,
+        "left": -8.4375,
+        "top": 58.813742,
+        "right": -7.03125,
+        "bottom": 58.077876,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 76,
+        "left": -7.03125,
+        "top": 58.813742,
+        "right": -5.625,
+        "bottom": 58.077876,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 124,
+        "y": 76,
+        "left": -5.625,
+        "top": 58.813742,
+        "right": -4.21875,
+        "bottom": 58.077876,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 125,
+        "y": 76,
+        "left": -4.21875,
+        "top": 58.813742,
+        "right": -2.8125,
+        "bottom": 58.077876,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 121,
+        "y": 77,
+        "left": -9.84375,
+        "top": 58.077876,
+        "right": -8.4375,
+        "bottom": 57.326521,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 77,
+        "left": -8.4375,
+        "top": 58.077876,
+        "right": -7.03125,
+        "bottom": 57.326521,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 77,
+        "left": -7.03125,
+        "top": 58.077876,
+        "right": -5.625,
+        "bottom": 57.326521,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 124,
+        "y": 77,
+        "left": -5.625,
+        "top": 58.077876,
+        "right": -4.21875,
+        "bottom": 57.326521,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 125,
+        "y": 77,
+        "left": -4.21875,
+        "top": 58.077876,
+        "right": -2.8125,
+        "bottom": 57.326521,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 126,
+        "y": 77,
+        "left": -2.8125,
+        "top": 58.077876,
+        "right": -1.40625,
+        "bottom": 57.326521,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 78,
+        "left": -8.4375,
+        "top": 57.326521,
+        "right": -7.03125,
+        "bottom": 56.559482,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 78,
+        "left": -7.03125,
+        "top": 57.326521,
+        "right": -5.625,
+        "bottom": 56.559482,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 124,
+        "y": 78,
+        "left": -5.625,
+        "top": 57.326521,
+        "right": -4.21875,
+        "bottom": 56.559482,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 125,
+        "y": 78,
+        "left": -4.21875,
+        "top": 57.326521,
+        "right": -2.8125,
+        "bottom": 56.559482,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 126,
+        "y": 78,
+        "left": -2.8125,
+        "top": 57.326521,
+        "right": -1.40625,
+        "bottom": 56.559482,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 79,
+        "left": -8.4375,
+        "top": 56.559482,
+        "right": -7.03125,
+        "bottom": 55.776573,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 79,
+        "left": -7.03125,
+        "top": 56.559482,
+        "right": -5.625,
+        "bottom": 55.776573,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 124,
+        "y": 79,
+        "left": -5.625,
+        "top": 56.559482,
+        "right": -4.21875,
+        "bottom": 55.776573,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 125,
+        "y": 79,
+        "left": -4.21875,
+        "top": 56.559482,
+        "right": -2.8125,
+        "bottom": 55.776573,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 124,
+        "y": 80,
+        "left": -5.625,
+        "top": 55.776573,
+        "right": -4.21875,
+        "bottom": 54.977614,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 124,
+        "y": 83,
+        "left": -5.625,
+        "top": 53.330873,
+        "right": -4.21875,
+        "bottom": 52.48278,
+        "countries": [
+            "united_kingdom"
+        ]
+    },
+    {
+        "x": 124,
+        "y": 84,
+        "left": -5.625,
+        "top": 52.48278,
+        "right": -4.21875,
+        "bottom": 51.618017,
+        "countries": [
+            "united_kingdom"
+        ]
+    }
+]

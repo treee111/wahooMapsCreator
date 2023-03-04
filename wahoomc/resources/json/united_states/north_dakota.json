@@ -1,0 +1,332 @@
+[
+    {
+        "x": 54,
+        "y": 87,
+        "left": -104.0625,
+        "top": 49.837982,
+        "right": -102.65625,
+        "bottom": 48.922499,
+        "countries": [
+            "montana",
+            "north_dakota",
+            "canada"
+        ]
+    },
+    {
+        "x": 55,
+        "y": 87,
+        "left": -102.65625,
+        "top": 49.837982,
+        "right": -101.25,
+        "bottom": 48.922499,
+        "countries": [
+            "north_dakota",
+            "canada"
+        ]
+    },
+    {
+        "x": 56,
+        "y": 87,
+        "left": -101.25,
+        "top": 49.837982,
+        "right": -99.84375,
+        "bottom": 48.922499,
+        "countries": [
+            "north_dakota",
+            "canada"
+        ]
+    },
+    {
+        "x": 57,
+        "y": 87,
+        "left": -99.84375,
+        "top": 49.837982,
+        "right": -98.4375,
+        "bottom": 48.922499,
+        "countries": [
+            "north_dakota",
+            "canada"
+        ]
+    },
+    {
+        "x": 58,
+        "y": 87,
+        "left": -98.4375,
+        "top": 49.837982,
+        "right": -97.03125,
+        "bottom": 48.922499,
+        "countries": [
+            "north_dakota",
+            "minnesota",
+            "canada"
+        ]
+    },
+    {
+        "x": 58,
+        "y": 88,
+        "left": -98.4375,
+        "top": 48.922499,
+        "right": -97.03125,
+        "bottom": 47.989922,
+        "countries": [
+            "north_dakota",
+            "minnesota"
+        ]
+    },
+    {
+        "x": 58,
+        "y": 89,
+        "left": -98.4375,
+        "top": 47.989922,
+        "right": -97.03125,
+        "bottom": 47.040182,
+        "countries": [
+            "north_dakota",
+            "minnesota"
+        ]
+    },
+    {
+        "x": 59,
+        "y": 89,
+        "left": -97.03125,
+        "top": 47.989922,
+        "right": -95.625,
+        "bottom": 47.040182,
+        "countries": [
+            "north_dakota",
+            "minnesota"
+        ]
+    },
+    {
+        "x": 59,
+        "y": 90,
+        "left": -97.03125,
+        "top": 47.040182,
+        "right": -95.625,
+        "bottom": 46.073231,
+        "countries": [
+            "north_dakota",
+            "minnesota"
+        ]
+    },
+    {
+        "x": 59,
+        "y": 91,
+        "left": -97.03125,
+        "top": 46.073231,
+        "right": -95.625,
+        "bottom": 45.089036,
+        "countries": [
+            "north_dakota",
+            "minnesota",
+            "south_dakota"
+        ]
+    },
+    {
+        "x": 54,
+        "y": 88,
+        "left": -104.0625,
+        "top": 48.922499,
+        "right": -102.65625,
+        "bottom": 47.989922,
+        "countries": [
+            "montana",
+            "north_dakota"
+        ]
+    },
+    {
+        "x": 54,
+        "y": 89,
+        "left": -104.0625,
+        "top": 47.989922,
+        "right": -102.65625,
+        "bottom": 47.040182,
+        "countries": [
+            "montana",
+            "north_dakota"
+        ]
+    },
+    {
+        "x": 54,
+        "y": 90,
+        "left": -104.0625,
+        "top": 47.040182,
+        "right": -102.65625,
+        "bottom": 46.073231,
+        "countries": [
+            "montana",
+            "north_dakota"
+        ]
+    },
+    {
+        "x": 54,
+        "y": 91,
+        "left": -104.0625,
+        "top": 46.073231,
+        "right": -102.65625,
+        "bottom": 45.089036,
+        "countries": [
+            "montana",
+            "north_dakota",
+            "south_dakota"
+        ]
+    },
+    {
+        "x": 55,
+        "y": 88,
+        "left": -102.65625,
+        "top": 48.922499,
+        "right": -101.25,
+        "bottom": 47.989922,
+        "countries": [
+            "north_dakota"
+        ]
+    },
+    {
+        "x": 56,
+        "y": 88,
+        "left": -101.25,
+        "top": 48.922499,
+        "right": -99.84375,
+        "bottom": 47.989922,
+        "countries": [
+            "north_dakota"
+        ]
+    },
+    {
+        "x": 57,
+        "y": 88,
+        "left": -99.84375,
+        "top": 48.922499,
+        "right": -98.4375,
+        "bottom": 47.989922,
+        "countries": [
+            "north_dakota"
+        ]
+    },
+    {
+        "x": 55,
+        "y": 89,
+        "left": -102.65625,
+        "top": 47.989922,
+        "right": -101.25,
+        "bottom": 47.040182,
+        "countries": [
+            "north_dakota"
+        ]
+    },
+    {
+        "x": 56,
+        "y": 89,
+        "left": -101.25,
+        "top": 47.989922,
+        "right": -99.84375,
+        "bottom": 47.040182,
+        "countries": [
+            "north_dakota"
+        ]
+    },
+    {
+        "x": 57,
+        "y": 89,
+        "left": -99.84375,
+        "top": 47.989922,
+        "right": -98.4375,
+        "bottom": 47.040182,
+        "countries": [
+            "north_dakota"
+        ]
+    },
+    {
+        "x": 55,
+        "y": 90,
+        "left": -102.65625,
+        "top": 47.040182,
+        "right": -101.25,
+        "bottom": 46.073231,
+        "countries": [
+            "north_dakota"
+        ]
+    },
+    {
+        "x": 56,
+        "y": 90,
+        "left": -101.25,
+        "top": 47.040182,
+        "right": -99.84375,
+        "bottom": 46.073231,
+        "countries": [
+            "north_dakota"
+        ]
+    },
+    {
+        "x": 57,
+        "y": 90,
+        "left": -99.84375,
+        "top": 47.040182,
+        "right": -98.4375,
+        "bottom": 46.073231,
+        "countries": [
+            "north_dakota"
+        ]
+    },
+    {
+        "x": 58,
+        "y": 90,
+        "left": -98.4375,
+        "top": 47.040182,
+        "right": -97.03125,
+        "bottom": 46.073231,
+        "countries": [
+            "north_dakota"
+        ]
+    },
+    {
+        "x": 55,
+        "y": 91,
+        "left": -102.65625,
+        "top": 46.073231,
+        "right": -101.25,
+        "bottom": 45.089036,
+        "countries": [
+            "north_dakota",
+            "south_dakota"
+        ]
+    },
+    {
+        "x": 56,
+        "y": 91,
+        "left": -101.25,
+        "top": 46.073231,
+        "right": -99.84375,
+        "bottom": 45.089036,
+        "countries": [
+            "north_dakota",
+            "south_dakota"
+        ]
+    },
+    {
+        "x": 57,
+        "y": 91,
+        "left": -99.84375,
+        "top": 46.073231,
+        "right": -98.4375,
+        "bottom": 45.089036,
+        "countries": [
+            "north_dakota",
+            "south_dakota"
+        ]
+    },
+    {
+        "x": 58,
+        "y": 91,
+        "left": -98.4375,
+        "top": 46.073231,
+        "right": -97.03125,
+        "bottom": 45.089036,
+        "countries": [
+            "north_dakota",
+            "south_dakota"
+        ]
+    }
+]

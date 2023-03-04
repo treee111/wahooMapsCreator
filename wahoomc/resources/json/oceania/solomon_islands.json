@@ -1,0 +1,257 @@
+[
+    {
+        "x": 241,
+        "y": 131,
+        "left": 158.90625,
+        "top": -4.214943,
+        "right": 160.3125,
+        "bottom": -5.615986,
+        "countries": [
+            "solomon_islands",
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 238,
+        "y": 132,
+        "left": 154.6875,
+        "top": -5.615986,
+        "right": 156.09375,
+        "bottom": -7.013668,
+        "countries": [
+            "solomon_islands",
+            "papua_new_guinea"
+        ]
+    },
+    {
+        "x": 239,
+        "y": 132,
+        "left": 156.09375,
+        "top": -5.615986,
+        "right": 157.5,
+        "bottom": -7.013668,
+        "countries": [
+            "solomon_islands"
+        ]
+    },
+    {
+        "x": 238,
+        "y": 133,
+        "left": 154.6875,
+        "top": -7.013668,
+        "right": 156.09375,
+        "bottom": -8.407168,
+        "countries": [
+            "solomon_islands"
+        ]
+    },
+    {
+        "x": 239,
+        "y": 133,
+        "left": 156.09375,
+        "top": -7.013668,
+        "right": 157.5,
+        "bottom": -8.407168,
+        "countries": [
+            "solomon_islands"
+        ]
+    },
+    {
+        "x": 240,
+        "y": 133,
+        "left": 157.5,
+        "top": -7.013668,
+        "right": 158.90625,
+        "bottom": -8.407168,
+        "countries": [
+            "solomon_islands"
+        ]
+    },
+    {
+        "x": 241,
+        "y": 133,
+        "left": 158.90625,
+        "top": -7.013668,
+        "right": 160.3125,
+        "bottom": -8.407168,
+        "countries": [
+            "solomon_islands"
+        ]
+    },
+    {
+        "x": 242,
+        "y": 133,
+        "left": 160.3125,
+        "top": -7.013668,
+        "right": 161.71875,
+        "bottom": -8.407168,
+        "countries": [
+            "solomon_islands"
+        ]
+    },
+    {
+        "x": 243,
+        "y": 133,
+        "left": 161.71875,
+        "top": -7.013668,
+        "right": 163.125,
+        "bottom": -8.407168,
+        "countries": [
+            "solomon_islands"
+        ]
+    },
+    {
+        "x": 239,
+        "y": 134,
+        "left": 156.09375,
+        "top": -8.407168,
+        "right": 157.5,
+        "bottom": -9.795678,
+        "countries": [
+            "solomon_islands"
+        ]
+    },
+    {
+        "x": 240,
+        "y": 134,
+        "left": 157.5,
+        "top": -8.407168,
+        "right": 158.90625,
+        "bottom": -9.795678,
+        "countries": [
+            "solomon_islands"
+        ]
+    },
+    {
+        "x": 241,
+        "y": 134,
+        "left": 158.90625,
+        "top": -8.407168,
+        "right": 160.3125,
+        "bottom": -9.795678,
+        "countries": [
+            "solomon_islands"
+        ]
+    },
+    {
+        "x": 242,
+        "y": 134,
+        "left": 160.3125,
+        "top": -8.407168,
+        "right": 161.71875,
+        "bottom": -9.795678,
+        "countries": [
+            "solomon_islands"
+        ]
+    },
+    {
+        "x": 243,
+        "y": 134,
+        "left": 161.71875,
+        "top": -8.407168,
+        "right": 163.125,
+        "bottom": -9.795678,
+        "countries": [
+            "solomon_islands"
+        ]
+    },
+    {
+        "x": 241,
+        "y": 135,
+        "left": 158.90625,
+        "top": -9.795678,
+        "right": 160.3125,
+        "bottom": -11.178402,
+        "countries": [
+            "solomon_islands"
+        ]
+    },
+    {
+        "x": 242,
+        "y": 135,
+        "left": 160.3125,
+        "top": -9.795678,
+        "right": 161.71875,
+        "bottom": -11.178402,
+        "countries": [
+            "solomon_islands"
+        ]
+    },
+    {
+        "x": 243,
+        "y": 135,
+        "left": 161.71875,
+        "top": -9.795678,
+        "right": 163.125,
+        "bottom": -11.178402,
+        "countries": [
+            "solomon_islands"
+        ]
+    },
+    {
+        "x": 245,
+        "y": 135,
+        "left": 164.53125,
+        "top": -9.795678,
+        "right": 165.9375,
+        "bottom": -11.178402,
+        "countries": [
+            "solomon_islands"
+        ]
+    },
+    {
+        "x": 246,
+        "y": 135,
+        "left": 165.9375,
+        "top": -9.795678,
+        "right": 167.34375,
+        "bottom": -11.178402,
+        "countries": [
+            "solomon_islands"
+        ]
+    },
+    {
+        "x": 241,
+        "y": 136,
+        "left": 158.90625,
+        "top": -11.178402,
+        "right": 160.3125,
+        "bottom": -12.554564,
+        "countries": [
+            "solomon_islands"
+        ]
+    },
+    {
+        "x": 242,
+        "y": 136,
+        "left": 160.3125,
+        "top": -11.178402,
+        "right": 161.71875,
+        "bottom": -12.554564,
+        "countries": [
+            "solomon_islands"
+        ]
+    },
+    {
+        "x": 246,
+        "y": 136,
+        "left": 165.9375,
+        "top": -11.178402,
+        "right": 167.34375,
+        "bottom": -12.554564,
+        "countries": [
+            "solomon_islands"
+        ]
+    },
+    {
+        "x": 248,
+        "y": 136,
+        "left": 168.75,
+        "top": -11.178402,
+        "right": 170.15625,
+        "bottom": -12.554564,
+        "countries": [
+            "solomon_islands"
+        ]
+    }
+]

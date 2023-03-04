@@ -1,0 +1,28 @@
+[
+    {
+        "x": 76,
+        "y": 95,
+        "left": -73.125,
+        "top": 42.032974,
+        "right": -71.71875,
+        "bottom": 40.979898,
+        "countries": [
+            "connecticut",
+            "new_york",
+            "rhode_island",
+            "massachusetts"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 95,
+        "left": -71.71875,
+        "top": 42.032974,
+        "right": -70.3125,
+        "bottom": 40.979898,
+        "countries": [
+            "rhode_island",
+            "massachusetts"
+        ]
+    }
+]

@@ -1,0 +1,454 @@
+[
+    {
+        "x": 44,
+        "y": 87,
+        "left": -118.125,
+        "top": 49.837982,
+        "right": -116.71875,
+        "bottom": 48.922499,
+        "countries": [
+            "idaho",
+            "washington",
+            "canada"
+        ]
+    },
+    {
+        "x": 45,
+        "y": 87,
+        "left": -116.71875,
+        "top": 49.837982,
+        "right": -115.3125,
+        "bottom": 48.922499,
+        "countries": [
+            "idaho",
+            "montana",
+            "canada"
+        ]
+    },
+    {
+        "x": 44,
+        "y": 88,
+        "left": -118.125,
+        "top": 48.922499,
+        "right": -116.71875,
+        "bottom": 47.989922,
+        "countries": [
+            "idaho",
+            "washington"
+        ]
+    },
+    {
+        "x": 45,
+        "y": 88,
+        "left": -116.71875,
+        "top": 48.922499,
+        "right": -115.3125,
+        "bottom": 47.989922,
+        "countries": [
+            "idaho",
+            "montana"
+        ]
+    },
+    {
+        "x": 44,
+        "y": 89,
+        "left": -118.125,
+        "top": 47.989922,
+        "right": -116.71875,
+        "bottom": 47.040182,
+        "countries": [
+            "idaho",
+            "washington"
+        ]
+    },
+    {
+        "x": 45,
+        "y": 89,
+        "left": -116.71875,
+        "top": 47.989922,
+        "right": -115.3125,
+        "bottom": 47.040182,
+        "countries": [
+            "idaho",
+            "montana"
+        ]
+    },
+    {
+        "x": 46,
+        "y": 89,
+        "left": -115.3125,
+        "top": 47.989922,
+        "right": -113.90625,
+        "bottom": 47.040182,
+        "countries": [
+            "idaho",
+            "montana"
+        ]
+    },
+    {
+        "x": 44,
+        "y": 90,
+        "left": -118.125,
+        "top": 47.040182,
+        "right": -116.71875,
+        "bottom": 46.073231,
+        "countries": [
+            "idaho",
+            "washington"
+        ]
+    },
+    {
+        "x": 45,
+        "y": 90,
+        "left": -116.71875,
+        "top": 47.040182,
+        "right": -115.3125,
+        "bottom": 46.073231,
+        "countries": [
+            "idaho"
+        ]
+    },
+    {
+        "x": 46,
+        "y": 90,
+        "left": -115.3125,
+        "top": 47.040182,
+        "right": -113.90625,
+        "bottom": 46.073231,
+        "countries": [
+            "idaho",
+            "montana"
+        ]
+    },
+    {
+        "x": 44,
+        "y": 91,
+        "left": -118.125,
+        "top": 46.073231,
+        "right": -116.71875,
+        "bottom": 45.089036,
+        "countries": [
+            "idaho",
+            "oregon",
+            "washington"
+        ]
+    },
+    {
+        "x": 45,
+        "y": 91,
+        "left": -116.71875,
+        "top": 46.073231,
+        "right": -115.3125,
+        "bottom": 45.089036,
+        "countries": [
+            "idaho",
+            "oregon"
+        ]
+    },
+    {
+        "x": 46,
+        "y": 91,
+        "left": -115.3125,
+        "top": 46.073231,
+        "right": -113.90625,
+        "bottom": 45.089036,
+        "countries": [
+            "idaho",
+            "montana"
+        ]
+    },
+    {
+        "x": 47,
+        "y": 91,
+        "left": -113.90625,
+        "top": 46.073231,
+        "right": -112.5,
+        "bottom": 45.089036,
+        "countries": [
+            "idaho",
+            "montana"
+        ]
+    },
+    {
+        "x": 44,
+        "y": 92,
+        "left": -118.125,
+        "top": 45.089036,
+        "right": -116.71875,
+        "bottom": 44.087585,
+        "countries": [
+            "idaho",
+            "oregon"
+        ]
+    },
+    {
+        "x": 45,
+        "y": 92,
+        "left": -116.71875,
+        "top": 45.089036,
+        "right": -115.3125,
+        "bottom": 44.087585,
+        "countries": [
+            "idaho"
+        ]
+    },
+    {
+        "x": 46,
+        "y": 92,
+        "left": -115.3125,
+        "top": 45.089036,
+        "right": -113.90625,
+        "bottom": 44.087585,
+        "countries": [
+            "idaho"
+        ]
+    },
+    {
+        "x": 47,
+        "y": 92,
+        "left": -113.90625,
+        "top": 45.089036,
+        "right": -112.5,
+        "bottom": 44.087585,
+        "countries": [
+            "idaho",
+            "montana"
+        ]
+    },
+    {
+        "x": 48,
+        "y": 92,
+        "left": -112.5,
+        "top": 45.089036,
+        "right": -111.09375,
+        "bottom": 44.087585,
+        "countries": [
+            "idaho",
+            "montana"
+        ]
+    },
+    {
+        "x": 49,
+        "y": 92,
+        "left": -111.09375,
+        "top": 45.089036,
+        "right": -109.6875,
+        "bottom": 44.087585,
+        "countries": [
+            "idaho",
+            "montana",
+            "wyoming"
+        ]
+    },
+    {
+        "x": 44,
+        "y": 93,
+        "left": -118.125,
+        "top": 44.087585,
+        "right": -116.71875,
+        "bottom": 43.068888,
+        "countries": [
+            "idaho",
+            "oregon"
+        ]
+    },
+    {
+        "x": 45,
+        "y": 93,
+        "left": -116.71875,
+        "top": 44.087585,
+        "right": -115.3125,
+        "bottom": 43.068888,
+        "countries": [
+            "idaho"
+        ]
+    },
+    {
+        "x": 46,
+        "y": 93,
+        "left": -115.3125,
+        "top": 44.087585,
+        "right": -113.90625,
+        "bottom": 43.068888,
+        "countries": [
+            "idaho"
+        ]
+    },
+    {
+        "x": 47,
+        "y": 93,
+        "left": -113.90625,
+        "top": 44.087585,
+        "right": -112.5,
+        "bottom": 43.068888,
+        "countries": [
+            "idaho"
+        ]
+    },
+    {
+        "x": 48,
+        "y": 93,
+        "left": -112.5,
+        "top": 44.087585,
+        "right": -111.09375,
+        "bottom": 43.068888,
+        "countries": [
+            "idaho"
+        ]
+    },
+    {
+        "x": 49,
+        "y": 93,
+        "left": -111.09375,
+        "top": 44.087585,
+        "right": -109.6875,
+        "bottom": 43.068888,
+        "countries": [
+            "idaho",
+            "wyoming"
+        ]
+    },
+    {
+        "x": 44,
+        "y": 94,
+        "left": -118.125,
+        "top": 43.068888,
+        "right": -116.71875,
+        "bottom": 42.032974,
+        "countries": [
+            "idaho",
+            "oregon"
+        ]
+    },
+    {
+        "x": 45,
+        "y": 94,
+        "left": -116.71875,
+        "top": 43.068888,
+        "right": -115.3125,
+        "bottom": 42.032974,
+        "countries": [
+            "idaho"
+        ]
+    },
+    {
+        "x": 46,
+        "y": 94,
+        "left": -115.3125,
+        "top": 43.068888,
+        "right": -113.90625,
+        "bottom": 42.032974,
+        "countries": [
+            "idaho"
+        ]
+    },
+    {
+        "x": 47,
+        "y": 94,
+        "left": -113.90625,
+        "top": 43.068888,
+        "right": -112.5,
+        "bottom": 42.032974,
+        "countries": [
+            "idaho"
+        ]
+    },
+    {
+        "x": 48,
+        "y": 94,
+        "left": -112.5,
+        "top": 43.068888,
+        "right": -111.09375,
+        "bottom": 42.032974,
+        "countries": [
+            "idaho"
+        ]
+    },
+    {
+        "x": 49,
+        "y": 94,
+        "left": -111.09375,
+        "top": 43.068888,
+        "right": -109.6875,
+        "bottom": 42.032974,
+        "countries": [
+            "idaho",
+            "wyoming"
+        ]
+    },
+    {
+        "x": 44,
+        "y": 95,
+        "left": -118.125,
+        "top": 42.032974,
+        "right": -116.71875,
+        "bottom": 40.979898,
+        "countries": [
+            "idaho",
+            "oregon",
+            "nevada"
+        ]
+    },
+    {
+        "x": 45,
+        "y": 95,
+        "left": -116.71875,
+        "top": 42.032974,
+        "right": -115.3125,
+        "bottom": 40.979898,
+        "countries": [
+            "idaho",
+            "nevada"
+        ]
+    },
+    {
+        "x": 46,
+        "y": 95,
+        "left": -115.3125,
+        "top": 42.032974,
+        "right": -113.90625,
+        "bottom": 40.979898,
+        "countries": [
+            "idaho",
+            "nevada",
+            "utah"
+        ]
+    },
+    {
+        "x": 47,
+        "y": 95,
+        "left": -113.90625,
+        "top": 42.032974,
+        "right": -112.5,
+        "bottom": 40.979898,
+        "countries": [
+            "idaho",
+            "utah"
+        ]
+    },
+    {
+        "x": 48,
+        "y": 95,
+        "left": -112.5,
+        "top": 42.032974,
+        "right": -111.09375,
+        "bottom": 40.979898,
+        "countries": [
+            "idaho",
+            "utah"
+        ]
+    },
+    {
+        "x": 49,
+        "y": 95,
+        "left": -111.09375,
+        "top": 42.032974,
+        "right": -109.6875,
+        "bottom": 40.979898,
+        "countries": [
+            "idaho",
+            "wyoming",
+            "utah"
+        ]
+    }
+]

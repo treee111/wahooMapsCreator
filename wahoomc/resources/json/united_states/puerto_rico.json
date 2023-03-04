@@ -1,0 +1,63 @@
+[
+    {
+        "x": 81,
+        "y": 114,
+        "left": -66.09375,
+        "top": 19.311143,
+        "right": -64.6875,
+        "bottom": 17.978733,
+        "countries": [
+            "british_virgin_islands",
+            "puerto_rico",
+            "united_states_virgin_islands",
+            "virgin_islands_u.s."
+        ]
+    },
+    {
+        "x": 79,
+        "y": 114,
+        "left": -68.90625,
+        "top": 19.311143,
+        "right": -67.5,
+        "bottom": 17.978733,
+        "countries": [
+            "dominican_republic",
+            "puerto_rico"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 114,
+        "left": -67.5,
+        "top": 19.311143,
+        "right": -66.09375,
+        "bottom": 17.978733,
+        "countries": [
+            "puerto_rico"
+        ]
+    },
+    {
+        "x": 80,
+        "y": 115,
+        "left": -67.5,
+        "top": 17.978733,
+        "right": -66.09375,
+        "bottom": 16.636192,
+        "countries": [
+            "puerto_rico"
+        ]
+    },
+    {
+        "x": 81,
+        "y": 115,
+        "left": -66.09375,
+        "top": 17.978733,
+        "right": -64.6875,
+        "bottom": 16.636192,
+        "countries": [
+            "puerto_rico",
+            "virgin_islands_u.s.",
+            "united_states_virgin_islands"
+        ]
+    }
+]

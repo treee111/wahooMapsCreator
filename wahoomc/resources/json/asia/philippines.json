@@ -1,0 +1,635 @@
+[
+    {
+        "x": 217,
+        "y": 124,
+        "left": 125.15625,
+        "top": 5.615986,
+        "right": 126.5625,
+        "bottom": 4.214943,
+        "countries": [
+            "indonesia",
+            "philippines"
+        ]
+    },
+    {
+        "x": 218,
+        "y": 124,
+        "left": 126.5625,
+        "top": 5.615986,
+        "right": 127.96875,
+        "bottom": 4.214943,
+        "countries": [
+            "indonesia",
+            "philippines"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 122,
+        "left": 116.71875,
+        "top": 8.407168,
+        "right": 118.125,
+        "bottom": 7.013668,
+        "countries": [
+            "philippines",
+            "malaysia"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 123,
+        "left": 116.71875,
+        "top": 7.013668,
+        "right": 118.125,
+        "bottom": 5.615986,
+        "countries": [
+            "philippines",
+            "malaysia"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 123,
+        "left": 118.125,
+        "top": 7.013668,
+        "right": 119.53125,
+        "bottom": 5.615986,
+        "countries": [
+            "philippines",
+            "malaysia"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 124,
+        "left": 118.125,
+        "top": 5.615986,
+        "right": 119.53125,
+        "bottom": 4.214943,
+        "countries": [
+            "philippines",
+            "malaysia"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 112,
+        "left": 120.9375,
+        "top": 21.943046,
+        "right": 122.34375,
+        "bottom": 20.632784,
+        "countries": [
+            "philippines"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 113,
+        "left": 120.9375,
+        "top": 20.632784,
+        "right": 122.34375,
+        "bottom": 19.311143,
+        "countries": [
+            "philippines"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 114,
+        "left": 119.53125,
+        "top": 19.311143,
+        "right": 120.9375,
+        "bottom": 17.978733,
+        "countries": [
+            "philippines"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 114,
+        "left": 120.9375,
+        "top": 19.311143,
+        "right": 122.34375,
+        "bottom": 17.978733,
+        "countries": [
+            "philippines"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 115,
+        "left": 119.53125,
+        "top": 17.978733,
+        "right": 120.9375,
+        "bottom": 16.636192,
+        "countries": [
+            "philippines"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 115,
+        "left": 120.9375,
+        "top": 17.978733,
+        "right": 122.34375,
+        "bottom": 16.636192,
+        "countries": [
+            "philippines"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 115,
+        "left": 122.34375,
+        "top": 17.978733,
+        "right": 123.75,
+        "bottom": 16.636192,
+        "countries": [
+            "philippines"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 116,
+        "left": 119.53125,
+        "top": 16.636192,
+        "right": 120.9375,
+        "bottom": 15.284185,
+        "countries": [
+            "philippines"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 116,
+        "left": 120.9375,
+        "top": 16.636192,
+        "right": 122.34375,
+        "bottom": 15.284185,
+        "countries": [
+            "philippines"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 117,
+        "left": 116.71875,
+        "top": 15.284185,
+        "right": 118.125,
+        "bottom": 13.923404,
+        "countries": [
+            "philippines"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 117,
+        "left": 119.53125,
+        "top": 15.284185,
+        "right": 120.9375,
+        "bottom": 13.923404,
+        "countries": [
+            "philippines"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 117,
+        "left": 120.9375,
+        "top": 15.284185,
+        "right": 122.34375,
+        "bottom": 13.923404,
+        "countries": [
+            "philippines"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 117,
+        "left": 122.34375,
+        "top": 15.284185,
+        "right": 123.75,
+        "bottom": 13.923404,
+        "countries": [
+            "philippines"
+        ]
+    },
+    {
+        "x": 216,
+        "y": 117,
+        "left": 123.75,
+        "top": 15.284185,
+        "right": 125.15625,
+        "bottom": 13.923404,
+        "countries": [
+            "philippines"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 118,
+        "left": 119.53125,
+        "top": 13.923404,
+        "right": 120.9375,
+        "bottom": 12.554564,
+        "countries": [
+            "philippines"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 118,
+        "left": 120.9375,
+        "top": 13.923404,
+        "right": 122.34375,
+        "bottom": 12.554564,
+        "countries": [
+            "philippines"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 118,
+        "left": 122.34375,
+        "top": 13.923404,
+        "right": 123.75,
+        "bottom": 12.554564,
+        "countries": [
+            "philippines"
+        ]
+    },
+    {
+        "x": 216,
+        "y": 118,
+        "left": 123.75,
+        "top": 13.923404,
+        "right": 125.15625,
+        "bottom": 12.554564,
+        "countries": [
+            "philippines"
+        ]
+    },
+    {
+        "x": 217,
+        "y": 118,
+        "left": 125.15625,
+        "top": 13.923404,
+        "right": 126.5625,
+        "bottom": 12.554564,
+        "countries": [
+            "philippines"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 119,
+        "left": 118.125,
+        "top": 12.554564,
+        "right": 119.53125,
+        "bottom": 11.178402,
+        "countries": [
+            "philippines"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 119,
+        "left": 119.53125,
+        "top": 12.554564,
+        "right": 120.9375,
+        "bottom": 11.178402,
+        "countries": [
+            "philippines"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 119,
+        "left": 120.9375,
+        "top": 12.554564,
+        "right": 122.34375,
+        "bottom": 11.178402,
+        "countries": [
+            "philippines"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 119,
+        "left": 122.34375,
+        "top": 12.554564,
+        "right": 123.75,
+        "bottom": 11.178402,
+        "countries": [
+            "philippines"
+        ]
+    },
+    {
+        "x": 216,
+        "y": 119,
+        "left": 123.75,
+        "top": 12.554564,
+        "right": 125.15625,
+        "bottom": 11.178402,
+        "countries": [
+            "philippines"
+        ]
+    },
+    {
+        "x": 217,
+        "y": 119,
+        "left": 125.15625,
+        "top": 12.554564,
+        "right": 126.5625,
+        "bottom": 11.178402,
+        "countries": [
+            "philippines"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 120,
+        "left": 118.125,
+        "top": 11.178402,
+        "right": 119.53125,
+        "bottom": 9.795678,
+        "countries": [
+            "philippines"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 120,
+        "left": 119.53125,
+        "top": 11.178402,
+        "right": 120.9375,
+        "bottom": 9.795678,
+        "countries": [
+            "philippines"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 120,
+        "left": 120.9375,
+        "top": 11.178402,
+        "right": 122.34375,
+        "bottom": 9.795678,
+        "countries": [
+            "philippines"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 120,
+        "left": 122.34375,
+        "top": 11.178402,
+        "right": 123.75,
+        "bottom": 9.795678,
+        "countries": [
+            "philippines"
+        ]
+    },
+    {
+        "x": 216,
+        "y": 120,
+        "left": 123.75,
+        "top": 11.178402,
+        "right": 125.15625,
+        "bottom": 9.795678,
+        "countries": [
+            "philippines"
+        ]
+    },
+    {
+        "x": 217,
+        "y": 120,
+        "left": 125.15625,
+        "top": 11.178402,
+        "right": 126.5625,
+        "bottom": 9.795678,
+        "countries": [
+            "philippines"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 121,
+        "left": 116.71875,
+        "top": 9.795678,
+        "right": 118.125,
+        "bottom": 8.407168,
+        "countries": [
+            "philippines"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 121,
+        "left": 118.125,
+        "top": 9.795678,
+        "right": 119.53125,
+        "bottom": 8.407168,
+        "countries": [
+            "philippines"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 121,
+        "left": 119.53125,
+        "top": 9.795678,
+        "right": 120.9375,
+        "bottom": 8.407168,
+        "countries": [
+            "philippines"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 121,
+        "left": 120.9375,
+        "top": 9.795678,
+        "right": 122.34375,
+        "bottom": 8.407168,
+        "countries": [
+            "philippines"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 121,
+        "left": 122.34375,
+        "top": 9.795678,
+        "right": 123.75,
+        "bottom": 8.407168,
+        "countries": [
+            "philippines"
+        ]
+    },
+    {
+        "x": 216,
+        "y": 121,
+        "left": 123.75,
+        "top": 9.795678,
+        "right": 125.15625,
+        "bottom": 8.407168,
+        "countries": [
+            "philippines"
+        ]
+    },
+    {
+        "x": 217,
+        "y": 121,
+        "left": 125.15625,
+        "top": 9.795678,
+        "right": 126.5625,
+        "bottom": 8.407168,
+        "countries": [
+            "philippines"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 122,
+        "left": 118.125,
+        "top": 8.407168,
+        "right": 119.53125,
+        "bottom": 7.013668,
+        "countries": [
+            "philippines"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 122,
+        "left": 120.9375,
+        "top": 8.407168,
+        "right": 122.34375,
+        "bottom": 7.013668,
+        "countries": [
+            "philippines"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 122,
+        "left": 122.34375,
+        "top": 8.407168,
+        "right": 123.75,
+        "bottom": 7.013668,
+        "countries": [
+            "philippines"
+        ]
+    },
+    {
+        "x": 216,
+        "y": 122,
+        "left": 123.75,
+        "top": 8.407168,
+        "right": 125.15625,
+        "bottom": 7.013668,
+        "countries": [
+            "philippines"
+        ]
+    },
+    {
+        "x": 217,
+        "y": 122,
+        "left": 125.15625,
+        "top": 8.407168,
+        "right": 126.5625,
+        "bottom": 7.013668,
+        "countries": [
+            "philippines"
+        ]
+    },
+    {
+        "x": 218,
+        "y": 122,
+        "left": 126.5625,
+        "top": 8.407168,
+        "right": 127.96875,
+        "bottom": 7.013668,
+        "countries": [
+            "philippines"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 123,
+        "left": 119.53125,
+        "top": 7.013668,
+        "right": 120.9375,
+        "bottom": 5.615986,
+        "countries": [
+            "philippines"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 123,
+        "left": 120.9375,
+        "top": 7.013668,
+        "right": 122.34375,
+        "bottom": 5.615986,
+        "countries": [
+            "philippines"
+        ]
+    },
+    {
+        "x": 215,
+        "y": 123,
+        "left": 122.34375,
+        "top": 7.013668,
+        "right": 123.75,
+        "bottom": 5.615986,
+        "countries": [
+            "philippines"
+        ]
+    },
+    {
+        "x": 216,
+        "y": 123,
+        "left": 123.75,
+        "top": 7.013668,
+        "right": 125.15625,
+        "bottom": 5.615986,
+        "countries": [
+            "philippines"
+        ]
+    },
+    {
+        "x": 217,
+        "y": 123,
+        "left": 125.15625,
+        "top": 7.013668,
+        "right": 126.5625,
+        "bottom": 5.615986,
+        "countries": [
+            "philippines"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 124,
+        "left": 119.53125,
+        "top": 5.615986,
+        "right": 120.9375,
+        "bottom": 4.214943,
+        "countries": [
+            "philippines"
+        ]
+    },
+    {
+        "x": 214,
+        "y": 124,
+        "left": 120.9375,
+        "top": 5.615986,
+        "right": 122.34375,
+        "bottom": 4.214943,
+        "countries": [
+            "philippines"
+        ]
+    }
+]

@@ -1,0 +1,825 @@
+[
+    {
+        "x": 121,
+        "y": 107,
+        "left": -9.84375,
+        "top": 28.304381,
+        "right": -8.4375,
+        "bottom": 27.059126,
+        "countries": [
+            "morocco",
+            "algeria",
+            "western_sahara",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 107,
+        "left": -8.4375,
+        "top": 28.304381,
+        "right": -7.03125,
+        "bottom": 27.059126,
+        "countries": [
+            "algeria",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 108,
+        "left": -8.4375,
+        "top": 27.059126,
+        "right": -7.03125,
+        "bottom": 25.799891,
+        "countries": [
+            "algeria",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 108,
+        "left": -7.03125,
+        "top": 27.059126,
+        "right": -5.625,
+        "bottom": 25.799891,
+        "countries": [
+            "algeria",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 109,
+        "left": -7.03125,
+        "top": 25.799891,
+        "right": -5.625,
+        "bottom": 24.527135,
+        "countries": [
+            "algeria",
+            "mali",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 124,
+        "y": 109,
+        "left": -5.625,
+        "top": 25.799891,
+        "right": -4.21875,
+        "bottom": 24.527135,
+        "countries": [
+            "algeria",
+            "mali",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 110,
+        "left": -7.03125,
+        "top": 24.527135,
+        "right": -5.625,
+        "bottom": 23.241346,
+        "countries": [
+            "mali",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 111,
+        "left": -7.03125,
+        "top": 23.241346,
+        "right": -5.625,
+        "bottom": 21.943046,
+        "countries": [
+            "mali",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 112,
+        "left": -7.03125,
+        "top": 21.943046,
+        "right": -5.625,
+        "bottom": 20.632784,
+        "countries": [
+            "mali",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 113,
+        "left": -7.03125,
+        "top": 20.632784,
+        "right": -5.625,
+        "bottom": 19.311143,
+        "countries": [
+            "mali",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 114,
+        "left": -7.03125,
+        "top": 19.311143,
+        "right": -5.625,
+        "bottom": 17.978733,
+        "countries": [
+            "mali",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 115,
+        "left": -7.03125,
+        "top": 17.978733,
+        "right": -5.625,
+        "bottom": 16.636192,
+        "countries": [
+            "mali",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 124,
+        "y": 115,
+        "left": -5.625,
+        "top": 17.978733,
+        "right": -4.21875,
+        "bottom": 16.636192,
+        "countries": [
+            "mali",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 119,
+        "y": 116,
+        "left": -12.65625,
+        "top": 16.636192,
+        "right": -11.25,
+        "bottom": 15.284185,
+        "countries": [
+            "mali",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 120,
+        "y": 116,
+        "left": -11.25,
+        "top": 16.636192,
+        "right": -9.84375,
+        "bottom": 15.284185,
+        "countries": [
+            "mali",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 121,
+        "y": 116,
+        "left": -9.84375,
+        "top": 16.636192,
+        "right": -8.4375,
+        "bottom": 15.284185,
+        "countries": [
+            "mali",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 116,
+        "left": -8.4375,
+        "top": 16.636192,
+        "right": -7.03125,
+        "bottom": 15.284185,
+        "countries": [
+            "mali",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 116,
+        "left": -7.03125,
+        "top": 16.636192,
+        "right": -5.625,
+        "bottom": 15.284185,
+        "countries": [
+            "mali",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 124,
+        "y": 116,
+        "left": -5.625,
+        "top": 16.636192,
+        "right": -4.21875,
+        "bottom": 15.284185,
+        "countries": [
+            "mali",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 119,
+        "y": 117,
+        "left": -12.65625,
+        "top": 15.284185,
+        "right": -11.25,
+        "bottom": 13.923404,
+        "countries": [
+            "senegal",
+            "mali",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 120,
+        "y": 117,
+        "left": -11.25,
+        "top": 15.284185,
+        "right": -9.84375,
+        "bottom": 13.923404,
+        "countries": [
+            "mali",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 119,
+        "y": 108,
+        "left": -12.65625,
+        "top": 27.059126,
+        "right": -11.25,
+        "bottom": 25.799891,
+        "countries": [
+            "western_sahara",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 120,
+        "y": 108,
+        "left": -11.25,
+        "top": 27.059126,
+        "right": -9.84375,
+        "bottom": 25.799891,
+        "countries": [
+            "western_sahara",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 121,
+        "y": 108,
+        "left": -9.84375,
+        "top": 27.059126,
+        "right": -8.4375,
+        "bottom": 25.799891,
+        "countries": [
+            "western_sahara",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 119,
+        "y": 109,
+        "left": -12.65625,
+        "top": 25.799891,
+        "right": -11.25,
+        "bottom": 24.527135,
+        "countries": [
+            "western_sahara",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 120,
+        "y": 109,
+        "left": -11.25,
+        "top": 25.799891,
+        "right": -9.84375,
+        "bottom": 24.527135,
+        "countries": [
+            "mauritania"
+        ]
+    },
+    {
+        "x": 121,
+        "y": 109,
+        "left": -9.84375,
+        "top": 25.799891,
+        "right": -8.4375,
+        "bottom": 24.527135,
+        "countries": [
+            "mauritania"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 109,
+        "left": -8.4375,
+        "top": 25.799891,
+        "right": -7.03125,
+        "bottom": 24.527135,
+        "countries": [
+            "mauritania"
+        ]
+    },
+    {
+        "x": 118,
+        "y": 110,
+        "left": -14.0625,
+        "top": 24.527135,
+        "right": -12.65625,
+        "bottom": 23.241346,
+        "countries": [
+            "western_sahara",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 119,
+        "y": 110,
+        "left": -12.65625,
+        "top": 24.527135,
+        "right": -11.25,
+        "bottom": 23.241346,
+        "countries": [
+            "western_sahara",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 120,
+        "y": 110,
+        "left": -11.25,
+        "top": 24.527135,
+        "right": -9.84375,
+        "bottom": 23.241346,
+        "countries": [
+            "mauritania"
+        ]
+    },
+    {
+        "x": 121,
+        "y": 110,
+        "left": -9.84375,
+        "top": 24.527135,
+        "right": -8.4375,
+        "bottom": 23.241346,
+        "countries": [
+            "mauritania"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 110,
+        "left": -8.4375,
+        "top": 24.527135,
+        "right": -7.03125,
+        "bottom": 23.241346,
+        "countries": [
+            "mauritania"
+        ]
+    },
+    {
+        "x": 118,
+        "y": 111,
+        "left": -14.0625,
+        "top": 23.241346,
+        "right": -12.65625,
+        "bottom": 21.943046,
+        "countries": [
+            "western_sahara",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 119,
+        "y": 111,
+        "left": -12.65625,
+        "top": 23.241346,
+        "right": -11.25,
+        "bottom": 21.943046,
+        "countries": [
+            "mauritania"
+        ]
+    },
+    {
+        "x": 120,
+        "y": 111,
+        "left": -11.25,
+        "top": 23.241346,
+        "right": -9.84375,
+        "bottom": 21.943046,
+        "countries": [
+            "mauritania"
+        ]
+    },
+    {
+        "x": 121,
+        "y": 111,
+        "left": -9.84375,
+        "top": 23.241346,
+        "right": -8.4375,
+        "bottom": 21.943046,
+        "countries": [
+            "mauritania"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 111,
+        "left": -8.4375,
+        "top": 23.241346,
+        "right": -7.03125,
+        "bottom": 21.943046,
+        "countries": [
+            "mauritania"
+        ]
+    },
+    {
+        "x": 115,
+        "y": 112,
+        "left": -18.28125,
+        "top": 21.943046,
+        "right": -16.875,
+        "bottom": 20.632784,
+        "countries": [
+            "western_sahara",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 116,
+        "y": 112,
+        "left": -16.875,
+        "top": 21.943046,
+        "right": -15.46875,
+        "bottom": 20.632784,
+        "countries": [
+            "western_sahara",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 117,
+        "y": 112,
+        "left": -15.46875,
+        "top": 21.943046,
+        "right": -14.0625,
+        "bottom": 20.632784,
+        "countries": [
+            "western_sahara",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 118,
+        "y": 112,
+        "left": -14.0625,
+        "top": 21.943046,
+        "right": -12.65625,
+        "bottom": 20.632784,
+        "countries": [
+            "western_sahara",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 119,
+        "y": 112,
+        "left": -12.65625,
+        "top": 21.943046,
+        "right": -11.25,
+        "bottom": 20.632784,
+        "countries": [
+            "mauritania"
+        ]
+    },
+    {
+        "x": 120,
+        "y": 112,
+        "left": -11.25,
+        "top": 21.943046,
+        "right": -9.84375,
+        "bottom": 20.632784,
+        "countries": [
+            "mauritania"
+        ]
+    },
+    {
+        "x": 121,
+        "y": 112,
+        "left": -9.84375,
+        "top": 21.943046,
+        "right": -8.4375,
+        "bottom": 20.632784,
+        "countries": [
+            "mauritania"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 112,
+        "left": -8.4375,
+        "top": 21.943046,
+        "right": -7.03125,
+        "bottom": 20.632784,
+        "countries": [
+            "mauritania"
+        ]
+    },
+    {
+        "x": 116,
+        "y": 113,
+        "left": -16.875,
+        "top": 20.632784,
+        "right": -15.46875,
+        "bottom": 19.311143,
+        "countries": [
+            "mauritania"
+        ]
+    },
+    {
+        "x": 117,
+        "y": 113,
+        "left": -15.46875,
+        "top": 20.632784,
+        "right": -14.0625,
+        "bottom": 19.311143,
+        "countries": [
+            "mauritania"
+        ]
+    },
+    {
+        "x": 118,
+        "y": 113,
+        "left": -14.0625,
+        "top": 20.632784,
+        "right": -12.65625,
+        "bottom": 19.311143,
+        "countries": [
+            "mauritania"
+        ]
+    },
+    {
+        "x": 119,
+        "y": 113,
+        "left": -12.65625,
+        "top": 20.632784,
+        "right": -11.25,
+        "bottom": 19.311143,
+        "countries": [
+            "mauritania"
+        ]
+    },
+    {
+        "x": 120,
+        "y": 113,
+        "left": -11.25,
+        "top": 20.632784,
+        "right": -9.84375,
+        "bottom": 19.311143,
+        "countries": [
+            "mauritania"
+        ]
+    },
+    {
+        "x": 121,
+        "y": 113,
+        "left": -9.84375,
+        "top": 20.632784,
+        "right": -8.4375,
+        "bottom": 19.311143,
+        "countries": [
+            "mauritania"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 113,
+        "left": -8.4375,
+        "top": 20.632784,
+        "right": -7.03125,
+        "bottom": 19.311143,
+        "countries": [
+            "mauritania"
+        ]
+    },
+    {
+        "x": 116,
+        "y": 114,
+        "left": -16.875,
+        "top": 19.311143,
+        "right": -15.46875,
+        "bottom": 17.978733,
+        "countries": [
+            "mauritania"
+        ]
+    },
+    {
+        "x": 117,
+        "y": 114,
+        "left": -15.46875,
+        "top": 19.311143,
+        "right": -14.0625,
+        "bottom": 17.978733,
+        "countries": [
+            "mauritania"
+        ]
+    },
+    {
+        "x": 118,
+        "y": 114,
+        "left": -14.0625,
+        "top": 19.311143,
+        "right": -12.65625,
+        "bottom": 17.978733,
+        "countries": [
+            "mauritania"
+        ]
+    },
+    {
+        "x": 119,
+        "y": 114,
+        "left": -12.65625,
+        "top": 19.311143,
+        "right": -11.25,
+        "bottom": 17.978733,
+        "countries": [
+            "mauritania"
+        ]
+    },
+    {
+        "x": 120,
+        "y": 114,
+        "left": -11.25,
+        "top": 19.311143,
+        "right": -9.84375,
+        "bottom": 17.978733,
+        "countries": [
+            "mauritania"
+        ]
+    },
+    {
+        "x": 121,
+        "y": 114,
+        "left": -9.84375,
+        "top": 19.311143,
+        "right": -8.4375,
+        "bottom": 17.978733,
+        "countries": [
+            "mauritania"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 114,
+        "left": -8.4375,
+        "top": 19.311143,
+        "right": -7.03125,
+        "bottom": 17.978733,
+        "countries": [
+            "mauritania"
+        ]
+    },
+    {
+        "x": 116,
+        "y": 115,
+        "left": -16.875,
+        "top": 17.978733,
+        "right": -15.46875,
+        "bottom": 16.636192,
+        "countries": [
+            "mauritania"
+        ]
+    },
+    {
+        "x": 117,
+        "y": 115,
+        "left": -15.46875,
+        "top": 17.978733,
+        "right": -14.0625,
+        "bottom": 16.636192,
+        "countries": [
+            "senegal",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 118,
+        "y": 115,
+        "left": -14.0625,
+        "top": 17.978733,
+        "right": -12.65625,
+        "bottom": 16.636192,
+        "countries": [
+            "mauritania"
+        ]
+    },
+    {
+        "x": 119,
+        "y": 115,
+        "left": -12.65625,
+        "top": 17.978733,
+        "right": -11.25,
+        "bottom": 16.636192,
+        "countries": [
+            "mauritania"
+        ]
+    },
+    {
+        "x": 120,
+        "y": 115,
+        "left": -11.25,
+        "top": 17.978733,
+        "right": -9.84375,
+        "bottom": 16.636192,
+        "countries": [
+            "mauritania"
+        ]
+    },
+    {
+        "x": 121,
+        "y": 115,
+        "left": -9.84375,
+        "top": 17.978733,
+        "right": -8.4375,
+        "bottom": 16.636192,
+        "countries": [
+            "mauritania"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 115,
+        "left": -8.4375,
+        "top": 17.978733,
+        "right": -7.03125,
+        "bottom": 16.636192,
+        "countries": [
+            "mauritania"
+        ]
+    },
+    {
+        "x": 116,
+        "y": 116,
+        "left": -16.875,
+        "top": 16.636192,
+        "right": -15.46875,
+        "bottom": 15.284185,
+        "countries": [
+            "senegal",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 117,
+        "y": 116,
+        "left": -15.46875,
+        "top": 16.636192,
+        "right": -14.0625,
+        "bottom": 15.284185,
+        "countries": [
+            "senegal",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 118,
+        "y": 116,
+        "left": -14.0625,
+        "top": 16.636192,
+        "right": -12.65625,
+        "bottom": 15.284185,
+        "countries": [
+            "senegal",
+            "mauritania"
+        ]
+    },
+    {
+        "x": 118,
+        "y": 117,
+        "left": -14.0625,
+        "top": 15.284185,
+        "right": -12.65625,
+        "bottom": 13.923404,
+        "countries": [
+            "senegal",
+            "mauritania"
+        ]
+    }
+]

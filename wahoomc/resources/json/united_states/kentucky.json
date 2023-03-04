@@ -1,0 +1,218 @@
+[
+    {
+        "x": 64,
+        "y": 100,
+        "left": -90.0,
+        "top": 36.597889,
+        "right": -88.59375,
+        "bottom": 35.46067,
+        "countries": [
+            "tennessee",
+            "arkansas",
+            "missouri",
+            "kentucky"
+        ]
+    },
+    {
+        "x": 65,
+        "y": 98,
+        "left": -88.59375,
+        "top": 38.822591,
+        "right": -87.1875,
+        "bottom": 37.71859,
+        "countries": [
+            "kentucky",
+            "illinois",
+            "indiana"
+        ]
+    },
+    {
+        "x": 64,
+        "y": 99,
+        "left": -90.0,
+        "top": 37.71859,
+        "right": -88.59375,
+        "bottom": 36.597889,
+        "countries": [
+            "illinois",
+            "missouri",
+            "kentucky"
+        ]
+    },
+    {
+        "x": 65,
+        "y": 99,
+        "left": -88.59375,
+        "top": 37.71859,
+        "right": -87.1875,
+        "bottom": 36.597889,
+        "countries": [
+            "tennessee",
+            "illinois",
+            "kentucky"
+        ]
+    },
+    {
+        "x": 67,
+        "y": 97,
+        "left": -85.78125,
+        "top": 39.909736,
+        "right": -84.375,
+        "bottom": 38.822591,
+        "countries": [
+            "indiana",
+            "ohio",
+            "kentucky"
+        ]
+    },
+    {
+        "x": 66,
+        "y": 98,
+        "left": -87.1875,
+        "top": 38.822591,
+        "right": -85.78125,
+        "bottom": 37.71859,
+        "countries": [
+            "indiana",
+            "kentucky"
+        ]
+    },
+    {
+        "x": 67,
+        "y": 98,
+        "left": -85.78125,
+        "top": 38.822591,
+        "right": -84.375,
+        "bottom": 37.71859,
+        "countries": [
+            "indiana",
+            "kentucky"
+        ]
+    },
+    {
+        "x": 68,
+        "y": 97,
+        "left": -84.375,
+        "top": 39.909736,
+        "right": -82.96875,
+        "bottom": 38.822591,
+        "countries": [
+            "ohio",
+            "kentucky"
+        ]
+    },
+    {
+        "x": 68,
+        "y": 98,
+        "left": -84.375,
+        "top": 38.822591,
+        "right": -82.96875,
+        "bottom": 37.71859,
+        "countries": [
+            "ohio",
+            "kentucky"
+        ]
+    },
+    {
+        "x": 69,
+        "y": 98,
+        "left": -82.96875,
+        "top": 38.822591,
+        "right": -81.5625,
+        "bottom": 37.71859,
+        "countries": [
+            "west_virginia",
+            "ohio",
+            "kentucky"
+        ]
+    },
+    {
+        "x": 66,
+        "y": 99,
+        "left": -87.1875,
+        "top": 37.71859,
+        "right": -85.78125,
+        "bottom": 36.597889,
+        "countries": [
+            "tennessee",
+            "kentucky"
+        ]
+    },
+    {
+        "x": 67,
+        "y": 99,
+        "left": -85.78125,
+        "top": 37.71859,
+        "right": -84.375,
+        "bottom": 36.597889,
+        "countries": [
+            "tennessee",
+            "kentucky"
+        ]
+    },
+    {
+        "x": 68,
+        "y": 99,
+        "left": -84.375,
+        "top": 37.71859,
+        "right": -82.96875,
+        "bottom": 36.597889,
+        "countries": [
+            "tennessee",
+            "virginia",
+            "kentucky"
+        ]
+    },
+    {
+        "x": 69,
+        "y": 99,
+        "left": -82.96875,
+        "top": 37.71859,
+        "right": -81.5625,
+        "bottom": 36.597889,
+        "countries": [
+            "tennessee",
+            "west_virginia",
+            "virginia",
+            "kentucky"
+        ]
+    },
+    {
+        "x": 65,
+        "y": 100,
+        "left": -88.59375,
+        "top": 36.597889,
+        "right": -87.1875,
+        "bottom": 35.46067,
+        "countries": [
+            "tennessee",
+            "kentucky"
+        ]
+    },
+    {
+        "x": 67,
+        "y": 100,
+        "left": -85.78125,
+        "top": 36.597889,
+        "right": -84.375,
+        "bottom": 35.46067,
+        "countries": [
+            "tennessee",
+            "kentucky"
+        ]
+    },
+    {
+        "x": 68,
+        "y": 100,
+        "left": -84.375,
+        "top": 36.597889,
+        "right": -82.96875,
+        "bottom": 35.46067,
+        "countries": [
+            "north_carolina",
+            "tennessee",
+            "virginia",
+            "kentucky"
+        ]
+    }
+]

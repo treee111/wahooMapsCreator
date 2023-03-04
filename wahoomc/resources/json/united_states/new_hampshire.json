@@ -1,0 +1,93 @@
+[
+    {
+        "x": 77,
+        "y": 91,
+        "left": -71.71875,
+        "top": 46.073231,
+        "right": -70.3125,
+        "bottom": 45.089036,
+        "countries": [
+            "maine",
+            "new_hampshire",
+            "canada"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 92,
+        "left": -73.125,
+        "top": 45.089036,
+        "right": -71.71875,
+        "bottom": 44.087585,
+        "countries": [
+            "vermont",
+            "new_hampshire",
+            "canada"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 92,
+        "left": -71.71875,
+        "top": 45.089036,
+        "right": -70.3125,
+        "bottom": 44.087585,
+        "countries": [
+            "maine",
+            "vermont",
+            "new_hampshire",
+            "canada"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 94,
+        "left": -73.125,
+        "top": 43.068888,
+        "right": -71.71875,
+        "bottom": 42.032974,
+        "countries": [
+            "connecticut",
+            "vermont",
+            "massachusetts",
+            "new_hampshire"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 93,
+        "left": -71.71875,
+        "top": 44.087585,
+        "right": -70.3125,
+        "bottom": 43.068888,
+        "countries": [
+            "maine",
+            "new_hampshire"
+        ]
+    },
+    {
+        "x": 77,
+        "y": 94,
+        "left": -71.71875,
+        "top": 43.068888,
+        "right": -70.3125,
+        "bottom": 42.032974,
+        "countries": [
+            "maine",
+            "massachusetts",
+            "new_hampshire"
+        ]
+    },
+    {
+        "x": 76,
+        "y": 93,
+        "left": -73.125,
+        "top": 44.087585,
+        "right": -71.71875,
+        "bottom": 43.068888,
+        "countries": [
+            "vermont",
+            "new_hampshire"
+        ]
+    }
+]

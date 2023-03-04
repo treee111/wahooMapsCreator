@@ -1,0 +1,684 @@
+[
+    {
+        "x": 1,
+        "y": 149,
+        "left": -178.59375,
+        "top": -28.304381,
+        "right": -177.1875,
+        "bottom": -29.53523,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 0,
+        "y": 150,
+        "left": -180.0,
+        "top": -29.53523,
+        "right": -178.59375,
+        "bottom": -30.751278,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 1,
+        "y": 150,
+        "left": -178.59375,
+        "top": -29.53523,
+        "right": -177.1875,
+        "bottom": -30.751278,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 250,
+        "y": 153,
+        "left": 171.5625,
+        "top": -33.137551,
+        "right": 172.96875,
+        "bottom": -34.307144,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 250,
+        "y": 154,
+        "left": 171.5625,
+        "top": -34.307144,
+        "right": 172.96875,
+        "bottom": -35.46067,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 251,
+        "y": 154,
+        "left": 172.96875,
+        "top": -34.307144,
+        "right": 174.375,
+        "bottom": -35.46067,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 252,
+        "y": 154,
+        "left": 174.375,
+        "top": -34.307144,
+        "right": 175.78125,
+        "bottom": -35.46067,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 251,
+        "y": 155,
+        "left": 172.96875,
+        "top": -35.46067,
+        "right": 174.375,
+        "bottom": -36.597889,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 252,
+        "y": 155,
+        "left": 174.375,
+        "top": -35.46067,
+        "right": 175.78125,
+        "bottom": -36.597889,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 253,
+        "y": 155,
+        "left": 175.78125,
+        "top": -35.46067,
+        "right": 177.1875,
+        "bottom": -36.597889,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 251,
+        "y": 156,
+        "left": 172.96875,
+        "top": -36.597889,
+        "right": 174.375,
+        "bottom": -37.71859,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 252,
+        "y": 156,
+        "left": 174.375,
+        "top": -36.597889,
+        "right": 175.78125,
+        "bottom": -37.71859,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 253,
+        "y": 156,
+        "left": 175.78125,
+        "top": -36.597889,
+        "right": 177.1875,
+        "bottom": -37.71859,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 254,
+        "y": 156,
+        "left": 177.1875,
+        "top": -36.597889,
+        "right": 178.59375,
+        "bottom": -37.71859,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 252,
+        "y": 157,
+        "left": 174.375,
+        "top": -37.71859,
+        "right": 175.78125,
+        "bottom": -38.822591,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 253,
+        "y": 157,
+        "left": 175.78125,
+        "top": -37.71859,
+        "right": 177.1875,
+        "bottom": -38.822591,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 254,
+        "y": 157,
+        "left": 177.1875,
+        "top": -37.71859,
+        "right": 178.59375,
+        "bottom": -38.822591,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 251,
+        "y": 158,
+        "left": 172.96875,
+        "top": -38.822591,
+        "right": 174.375,
+        "bottom": -39.909736,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 252,
+        "y": 158,
+        "left": 174.375,
+        "top": -38.822591,
+        "right": 175.78125,
+        "bottom": -39.909736,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 253,
+        "y": 158,
+        "left": 175.78125,
+        "top": -38.822591,
+        "right": 177.1875,
+        "bottom": -39.909736,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 254,
+        "y": 158,
+        "left": 177.1875,
+        "top": -38.822591,
+        "right": 178.59375,
+        "bottom": -39.909736,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 250,
+        "y": 159,
+        "left": 171.5625,
+        "top": -39.909736,
+        "right": 172.96875,
+        "bottom": -40.979898,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 251,
+        "y": 159,
+        "left": 172.96875,
+        "top": -39.909736,
+        "right": 174.375,
+        "bottom": -40.979898,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 252,
+        "y": 159,
+        "left": 174.375,
+        "top": -39.909736,
+        "right": 175.78125,
+        "bottom": -40.979898,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 253,
+        "y": 159,
+        "left": 175.78125,
+        "top": -39.909736,
+        "right": 177.1875,
+        "bottom": -40.979898,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 249,
+        "y": 160,
+        "left": 170.15625,
+        "top": -40.979898,
+        "right": 171.5625,
+        "bottom": -42.032974,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 250,
+        "y": 160,
+        "left": 171.5625,
+        "top": -40.979898,
+        "right": 172.96875,
+        "bottom": -42.032974,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 251,
+        "y": 160,
+        "left": 172.96875,
+        "top": -40.979898,
+        "right": 174.375,
+        "bottom": -42.032974,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 252,
+        "y": 160,
+        "left": 174.375,
+        "top": -40.979898,
+        "right": 175.78125,
+        "bottom": -42.032974,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 253,
+        "y": 160,
+        "left": 175.78125,
+        "top": -40.979898,
+        "right": 177.1875,
+        "bottom": -42.032974,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 249,
+        "y": 161,
+        "left": 170.15625,
+        "top": -42.032974,
+        "right": 171.5625,
+        "bottom": -43.068888,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 250,
+        "y": 161,
+        "left": 171.5625,
+        "top": -42.032974,
+        "right": 172.96875,
+        "bottom": -43.068888,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 251,
+        "y": 161,
+        "left": 172.96875,
+        "top": -42.032974,
+        "right": 174.375,
+        "bottom": -43.068888,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 2,
+        "y": 162,
+        "left": -177.1875,
+        "top": -43.068888,
+        "right": -175.78125,
+        "bottom": -44.087585,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 247,
+        "y": 162,
+        "left": 167.34375,
+        "top": -43.068888,
+        "right": 168.75,
+        "bottom": -44.087585,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 248,
+        "y": 162,
+        "left": 168.75,
+        "top": -43.068888,
+        "right": 170.15625,
+        "bottom": -44.087585,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 249,
+        "y": 162,
+        "left": 170.15625,
+        "top": -43.068888,
+        "right": 171.5625,
+        "bottom": -44.087585,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 250,
+        "y": 162,
+        "left": 171.5625,
+        "top": -43.068888,
+        "right": 172.96875,
+        "bottom": -44.087585,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 251,
+        "y": 162,
+        "left": 172.96875,
+        "top": -43.068888,
+        "right": 174.375,
+        "bottom": -44.087585,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 2,
+        "y": 163,
+        "left": -177.1875,
+        "top": -44.087585,
+        "right": -175.78125,
+        "bottom": -45.089036,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 246,
+        "y": 163,
+        "left": 165.9375,
+        "top": -44.087585,
+        "right": 167.34375,
+        "bottom": -45.089036,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 247,
+        "y": 163,
+        "left": 167.34375,
+        "top": -44.087585,
+        "right": 168.75,
+        "bottom": -45.089036,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 248,
+        "y": 163,
+        "left": 168.75,
+        "top": -44.087585,
+        "right": 170.15625,
+        "bottom": -45.089036,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 249,
+        "y": 163,
+        "left": 170.15625,
+        "top": -44.087585,
+        "right": 171.5625,
+        "bottom": -45.089036,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 250,
+        "y": 163,
+        "left": 171.5625,
+        "top": -44.087585,
+        "right": 172.96875,
+        "bottom": -45.089036,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 246,
+        "y": 164,
+        "left": 165.9375,
+        "top": -45.089036,
+        "right": 167.34375,
+        "bottom": -46.073231,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 247,
+        "y": 164,
+        "left": 167.34375,
+        "top": -45.089036,
+        "right": 168.75,
+        "bottom": -46.073231,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 248,
+        "y": 164,
+        "left": 168.75,
+        "top": -45.089036,
+        "right": 170.15625,
+        "bottom": -46.073231,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 249,
+        "y": 164,
+        "left": 170.15625,
+        "top": -45.089036,
+        "right": 171.5625,
+        "bottom": -46.073231,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 246,
+        "y": 165,
+        "left": 165.9375,
+        "top": -46.073231,
+        "right": 167.34375,
+        "bottom": -47.040182,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 247,
+        "y": 165,
+        "left": 167.34375,
+        "top": -46.073231,
+        "right": 168.75,
+        "bottom": -47.040182,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 248,
+        "y": 165,
+        "left": 168.75,
+        "top": -46.073231,
+        "right": 170.15625,
+        "bottom": -47.040182,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 249,
+        "y": 165,
+        "left": 170.15625,
+        "top": -46.073231,
+        "right": 171.5625,
+        "bottom": -47.040182,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 247,
+        "y": 166,
+        "left": 167.34375,
+        "top": -47.040182,
+        "right": 168.75,
+        "bottom": -47.989922,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 255,
+        "y": 166,
+        "left": 178.59375,
+        "top": -47.040182,
+        "right": 180.0,
+        "bottom": -47.989922,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 246,
+        "y": 167,
+        "left": 165.9375,
+        "top": -47.989922,
+        "right": 167.34375,
+        "bottom": -48.922499,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 255,
+        "y": 168,
+        "left": 178.59375,
+        "top": -48.922499,
+        "right": 180.0,
+        "bottom": -49.837982,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 246,
+        "y": 169,
+        "left": 165.9375,
+        "top": -49.837982,
+        "right": 167.34375,
+        "bottom": -50.736455,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 245,
+        "y": 170,
+        "left": 164.53125,
+        "top": -50.736455,
+        "right": 165.9375,
+        "bottom": -51.618017,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 246,
+        "y": 170,
+        "left": 165.9375,
+        "top": -50.736455,
+        "right": 167.34375,
+        "bottom": -51.618017,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 248,
+        "y": 171,
+        "left": 168.75,
+        "top": -51.618017,
+        "right": 170.15625,
+        "bottom": -52.48278,
+        "countries": [
+            "new_zealand"
+        ]
+    },
+    {
+        "x": 248,
+        "y": 172,
+        "left": 168.75,
+        "top": -52.48278,
+        "right": 170.15625,
+        "bottom": -53.330873,
+        "countries": [
+            "new_zealand"
+        ]
+    }
+]

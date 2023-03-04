@@ -1,0 +1,260 @@
+[
+    {
+        "x": 133,
+        "y": 99,
+        "left": 7.03125,
+        "top": 37.71859,
+        "right": 8.4375,
+        "bottom": 36.597889,
+        "countries": [
+            "tunisia",
+            "algeria"
+        ]
+    },
+    {
+        "x": 134,
+        "y": 99,
+        "left": 8.4375,
+        "top": 37.71859,
+        "right": 9.84375,
+        "bottom": 36.597889,
+        "countries": [
+            "tunisia",
+            "algeria"
+        ]
+    },
+    {
+        "x": 133,
+        "y": 100,
+        "left": 7.03125,
+        "top": 36.597889,
+        "right": 8.4375,
+        "bottom": 35.46067,
+        "countries": [
+            "tunisia",
+            "algeria"
+        ]
+    },
+    {
+        "x": 133,
+        "y": 101,
+        "left": 7.03125,
+        "top": 35.46067,
+        "right": 8.4375,
+        "bottom": 34.307144,
+        "countries": [
+            "tunisia",
+            "algeria"
+        ]
+    },
+    {
+        "x": 134,
+        "y": 101,
+        "left": 8.4375,
+        "top": 35.46067,
+        "right": 9.84375,
+        "bottom": 34.307144,
+        "countries": [
+            "tunisia",
+            "algeria"
+        ]
+    },
+    {
+        "x": 133,
+        "y": 102,
+        "left": 7.03125,
+        "top": 34.307144,
+        "right": 8.4375,
+        "bottom": 33.137551,
+        "countries": [
+            "tunisia",
+            "algeria"
+        ]
+    },
+    {
+        "x": 133,
+        "y": 103,
+        "left": 7.03125,
+        "top": 33.137551,
+        "right": 8.4375,
+        "bottom": 31.952162,
+        "countries": [
+            "tunisia",
+            "algeria"
+        ]
+    },
+    {
+        "x": 134,
+        "y": 103,
+        "left": 8.4375,
+        "top": 33.137551,
+        "right": 9.84375,
+        "bottom": 31.952162,
+        "countries": [
+            "tunisia",
+            "algeria"
+        ]
+    },
+    {
+        "x": 134,
+        "y": 104,
+        "left": 8.4375,
+        "top": 31.952162,
+        "right": 9.84375,
+        "bottom": 30.751278,
+        "countries": [
+            "tunisia",
+            "algeria"
+        ]
+    },
+    {
+        "x": 134,
+        "y": 105,
+        "left": 8.4375,
+        "top": 30.751278,
+        "right": 9.84375,
+        "bottom": 29.53523,
+        "countries": [
+            "libya",
+            "tunisia",
+            "algeria"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 102,
+        "left": 11.25,
+        "top": 34.307144,
+        "right": 12.65625,
+        "bottom": 33.137551,
+        "countries": [
+            "libya",
+            "tunisia"
+        ]
+    },
+    {
+        "x": 135,
+        "y": 103,
+        "left": 9.84375,
+        "top": 33.137551,
+        "right": 11.25,
+        "bottom": 31.952162,
+        "countries": [
+            "libya",
+            "tunisia"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 103,
+        "left": 11.25,
+        "top": 33.137551,
+        "right": 12.65625,
+        "bottom": 31.952162,
+        "countries": [
+            "libya",
+            "tunisia"
+        ]
+    },
+    {
+        "x": 135,
+        "y": 104,
+        "left": 9.84375,
+        "top": 31.952162,
+        "right": 11.25,
+        "bottom": 30.751278,
+        "countries": [
+            "libya",
+            "tunisia"
+        ]
+    },
+    {
+        "x": 135,
+        "y": 105,
+        "left": 9.84375,
+        "top": 30.751278,
+        "right": 11.25,
+        "bottom": 29.53523,
+        "countries": [
+            "libya",
+            "tunisia"
+        ]
+    },
+    {
+        "x": 135,
+        "y": 99,
+        "left": 9.84375,
+        "top": 37.71859,
+        "right": 11.25,
+        "bottom": 36.597889,
+        "countries": [
+            "tunisia"
+        ]
+    },
+    {
+        "x": 134,
+        "y": 100,
+        "left": 8.4375,
+        "top": 36.597889,
+        "right": 9.84375,
+        "bottom": 35.46067,
+        "countries": [
+            "tunisia"
+        ]
+    },
+    {
+        "x": 135,
+        "y": 100,
+        "left": 9.84375,
+        "top": 36.597889,
+        "right": 11.25,
+        "bottom": 35.46067,
+        "countries": [
+            "tunisia"
+        ]
+    },
+    {
+        "x": 135,
+        "y": 101,
+        "left": 9.84375,
+        "top": 35.46067,
+        "right": 11.25,
+        "bottom": 34.307144,
+        "countries": [
+            "tunisia"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 101,
+        "left": 11.25,
+        "top": 35.46067,
+        "right": 12.65625,
+        "bottom": 34.307144,
+        "countries": [
+            "tunisia"
+        ]
+    },
+    {
+        "x": 134,
+        "y": 102,
+        "left": 8.4375,
+        "top": 34.307144,
+        "right": 9.84375,
+        "bottom": 33.137551,
+        "countries": [
+            "tunisia"
+        ]
+    },
+    {
+        "x": 135,
+        "y": 102,
+        "left": 9.84375,
+        "top": 34.307144,
+        "right": 11.25,
+        "bottom": 33.137551,
+        "countries": [
+            "tunisia"
+        ]
+    }
+]

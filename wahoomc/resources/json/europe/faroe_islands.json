@@ -1,0 +1,57 @@
+[
+    {
+        "x": 122,
+        "y": 70,
+        "left": -8.4375,
+        "top": 62.915233,
+        "right": -7.03125,
+        "bottom": 62.267923,
+        "countries": [
+            "faroe_islands"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 70,
+        "left": -7.03125,
+        "top": 62.915233,
+        "right": -5.625,
+        "bottom": 62.267923,
+        "countries": [
+            "faroe_islands"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 71,
+        "left": -8.4375,
+        "top": 62.267923,
+        "right": -7.03125,
+        "bottom": 61.606396,
+        "countries": [
+            "faroe_islands"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 71,
+        "left": -7.03125,
+        "top": 62.267923,
+        "right": -5.625,
+        "bottom": 61.606396,
+        "countries": [
+            "faroe_islands"
+        ]
+    },
+    {
+        "x": 123,
+        "y": 72,
+        "left": -7.03125,
+        "top": 61.606396,
+        "right": -5.625,
+        "bottom": 60.930432,
+        "countries": [
+            "faroe_islands"
+        ]
+    }
+]

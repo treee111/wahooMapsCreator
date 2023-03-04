@@ -1,0 +1,189 @@
+[
+    {
+        "x": 240,
+        "y": 141,
+        "left": 157.5,
+        "top": -17.978733,
+        "right": 158.90625,
+        "bottom": -19.311143,
+        "countries": [
+            "new_caledonia"
+        ]
+    },
+    {
+        "x": 241,
+        "y": 141,
+        "left": 158.90625,
+        "top": -17.978733,
+        "right": 160.3125,
+        "bottom": -19.311143,
+        "countries": [
+            "new_caledonia"
+        ]
+    },
+    {
+        "x": 240,
+        "y": 142,
+        "left": 157.5,
+        "top": -19.311143,
+        "right": 158.90625,
+        "bottom": -20.632784,
+        "countries": [
+            "new_caledonia"
+        ]
+    },
+    {
+        "x": 241,
+        "y": 142,
+        "left": 158.90625,
+        "top": -19.311143,
+        "right": 160.3125,
+        "bottom": -20.632784,
+        "countries": [
+            "new_caledonia"
+        ]
+    },
+    {
+        "x": 244,
+        "y": 142,
+        "left": 163.125,
+        "top": -19.311143,
+        "right": 164.53125,
+        "bottom": -20.632784,
+        "countries": [
+            "new_caledonia"
+        ]
+    },
+    {
+        "x": 245,
+        "y": 142,
+        "left": 164.53125,
+        "top": -19.311143,
+        "right": 165.9375,
+        "bottom": -20.632784,
+        "countries": [
+            "new_caledonia"
+        ]
+    },
+    {
+        "x": 246,
+        "y": 142,
+        "left": 165.9375,
+        "top": -19.311143,
+        "right": 167.34375,
+        "bottom": -20.632784,
+        "countries": [
+            "new_caledonia"
+        ]
+    },
+    {
+        "x": 244,
+        "y": 143,
+        "left": 163.125,
+        "top": -20.632784,
+        "right": 164.53125,
+        "bottom": -21.943046,
+        "countries": [
+            "new_caledonia"
+        ]
+    },
+    {
+        "x": 245,
+        "y": 143,
+        "left": 164.53125,
+        "top": -20.632784,
+        "right": 165.9375,
+        "bottom": -21.943046,
+        "countries": [
+            "new_caledonia"
+        ]
+    },
+    {
+        "x": 246,
+        "y": 143,
+        "left": 165.9375,
+        "top": -20.632784,
+        "right": 167.34375,
+        "bottom": -21.943046,
+        "countries": [
+            "new_caledonia"
+        ]
+    },
+    {
+        "x": 247,
+        "y": 143,
+        "left": 167.34375,
+        "top": -20.632784,
+        "right": 168.75,
+        "bottom": -21.943046,
+        "countries": [
+            "new_caledonia"
+        ]
+    },
+    {
+        "x": 245,
+        "y": 144,
+        "left": 164.53125,
+        "top": -21.943046,
+        "right": 165.9375,
+        "bottom": -23.241346,
+        "countries": [
+            "new_caledonia"
+        ]
+    },
+    {
+        "x": 246,
+        "y": 144,
+        "left": 165.9375,
+        "top": -21.943046,
+        "right": 167.34375,
+        "bottom": -23.241346,
+        "countries": [
+            "new_caledonia"
+        ]
+    },
+    {
+        "x": 247,
+        "y": 144,
+        "left": 167.34375,
+        "top": -21.943046,
+        "right": 168.75,
+        "bottom": -23.241346,
+        "countries": [
+            "new_caledonia"
+        ]
+    },
+    {
+        "x": 248,
+        "y": 144,
+        "left": 168.75,
+        "top": -21.943046,
+        "right": 170.15625,
+        "bottom": -23.241346,
+        "countries": [
+            "new_caledonia"
+        ]
+    },
+    {
+        "x": 249,
+        "y": 144,
+        "left": 170.15625,
+        "top": -21.943046,
+        "right": 171.5625,
+        "bottom": -23.241346,
+        "countries": [
+            "new_caledonia"
+        ]
+    },
+    {
+        "x": 250,
+        "y": 144,
+        "left": 171.5625,
+        "top": -21.943046,
+        "right": 172.96875,
+        "bottom": -23.241346,
+        "countries": [
+            "new_caledonia"
+        ]
+    }
+]

@@ -1,0 +1,235 @@
+[
+    {
+        "x": 138,
+        "y": 87,
+        "left": 14.0625,
+        "top": 49.837982,
+        "right": 15.46875,
+        "bottom": 48.922499,
+        "countries": [
+            "czech_republic",
+            "austria"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 87,
+        "left": 15.46875,
+        "top": 49.837982,
+        "right": 16.875,
+        "bottom": 48.922499,
+        "countries": [
+            "czech_republic",
+            "austria"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 88,
+        "left": 12.65625,
+        "top": 48.922499,
+        "right": 14.0625,
+        "bottom": 47.989922,
+        "countries": [
+            "czech_republic",
+            "germany",
+            "austria"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 88,
+        "left": 14.0625,
+        "top": 48.922499,
+        "right": 15.46875,
+        "bottom": 47.989922,
+        "countries": [
+            "czech_republic",
+            "austria"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 88,
+        "left": 15.46875,
+        "top": 48.922499,
+        "right": 16.875,
+        "bottom": 47.989922,
+        "countries": [
+            "slovakia",
+            "czech_republic",
+            "austria"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 88,
+        "left": 16.875,
+        "top": 48.922499,
+        "right": 18.28125,
+        "bottom": 47.989922,
+        "countries": [
+            "slovakia",
+            "hungary",
+            "czech_republic",
+            "austria"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 85,
+        "left": 12.65625,
+        "top": 51.618017,
+        "right": 14.0625,
+        "bottom": 50.736455,
+        "countries": [
+            "czech_republic",
+            "germany"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 85,
+        "left": 14.0625,
+        "top": 51.618017,
+        "right": 15.46875,
+        "bottom": 50.736455,
+        "countries": [
+            "poland",
+            "czech_republic",
+            "germany"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 85,
+        "left": 15.46875,
+        "top": 51.618017,
+        "right": 16.875,
+        "bottom": 50.736455,
+        "countries": [
+            "poland",
+            "czech_republic"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 86,
+        "left": 11.25,
+        "top": 50.736455,
+        "right": 12.65625,
+        "bottom": 49.837982,
+        "countries": [
+            "czech_republic",
+            "germany"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 86,
+        "left": 12.65625,
+        "top": 50.736455,
+        "right": 14.0625,
+        "bottom": 49.837982,
+        "countries": [
+            "czech_republic",
+            "germany"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 86,
+        "left": 14.0625,
+        "top": 50.736455,
+        "right": 15.46875,
+        "bottom": 49.837982,
+        "countries": [
+            "czech_republic"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 86,
+        "left": 15.46875,
+        "top": 50.736455,
+        "right": 16.875,
+        "bottom": 49.837982,
+        "countries": [
+            "poland",
+            "czech_republic"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 86,
+        "left": 16.875,
+        "top": 50.736455,
+        "right": 18.28125,
+        "bottom": 49.837982,
+        "countries": [
+            "poland",
+            "czech_republic"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 86,
+        "left": 18.28125,
+        "top": 50.736455,
+        "right": 19.6875,
+        "bottom": 49.837982,
+        "countries": [
+            "poland",
+            "czech_republic"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 87,
+        "left": 11.25,
+        "top": 49.837982,
+        "right": 12.65625,
+        "bottom": 48.922499,
+        "countries": [
+            "czech_republic",
+            "germany"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 87,
+        "left": 12.65625,
+        "top": 49.837982,
+        "right": 14.0625,
+        "bottom": 48.922499,
+        "countries": [
+            "czech_republic",
+            "germany"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 87,
+        "left": 16.875,
+        "top": 49.837982,
+        "right": 18.28125,
+        "bottom": 48.922499,
+        "countries": [
+            "czech_republic",
+            "slovakia"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 87,
+        "left": 18.28125,
+        "top": 49.837982,
+        "right": 19.6875,
+        "bottom": 48.922499,
+        "countries": [
+            "poland",
+            "czech_republic",
+            "slovakia"
+        ]
+    }
+]

@@ -1,0 +1,62 @@
+[
+    {
+        "x": 231,
+        "y": 113,
+        "left": 144.84375,
+        "top": 20.632784,
+        "right": 146.25,
+        "bottom": 19.311143,
+        "countries": [
+            "commonwealth_of_the_northern_mariana_islands",
+            "northern_mariana_islands"
+        ]
+    },
+    {
+        "x": 231,
+        "y": 114,
+        "left": 144.84375,
+        "top": 19.311143,
+        "right": 146.25,
+        "bottom": 17.978733,
+        "countries": [
+            "commonwealth_of_the_northern_mariana_islands",
+            "northern_mariana_islands"
+        ]
+    },
+    {
+        "x": 231,
+        "y": 115,
+        "left": 144.84375,
+        "top": 17.978733,
+        "right": 146.25,
+        "bottom": 16.636192,
+        "countries": [
+            "commonwealth_of_the_northern_mariana_islands",
+            "northern_mariana_islands"
+        ]
+    },
+    {
+        "x": 231,
+        "y": 116,
+        "left": 144.84375,
+        "top": 16.636192,
+        "right": 146.25,
+        "bottom": 15.284185,
+        "countries": [
+            "commonwealth_of_the_northern_mariana_islands",
+            "northern_mariana_islands"
+        ]
+    },
+    {
+        "x": 231,
+        "y": 117,
+        "left": 144.84375,
+        "top": 15.284185,
+        "right": 146.25,
+        "bottom": 13.923404,
+        "countries": [
+            "commonwealth_of_the_northern_mariana_islands",
+            "northern_mariana_islands"
+        ]
+    }
+]

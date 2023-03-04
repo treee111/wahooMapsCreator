@@ -1,0 +1,209 @@
+[
+    {
+        "x": 190,
+        "y": 108,
+        "left": 87.1875,
+        "top": 27.059126,
+        "right": 88.59375,
+        "bottom": 25.799891,
+        "countries": [
+            "nepal",
+            "bangladesh",
+            "india"
+        ]
+    },
+    {
+        "x": 185,
+        "y": 105,
+        "left": 80.15625,
+        "top": 30.751278,
+        "right": 81.5625,
+        "bottom": 29.53523,
+        "countries": [
+            "nepal",
+            "china",
+            "india"
+        ]
+    },
+    {
+        "x": 186,
+        "y": 105,
+        "left": 81.5625,
+        "top": 30.751278,
+        "right": 82.96875,
+        "bottom": 29.53523,
+        "countries": [
+            "nepal",
+            "china"
+        ]
+    },
+    {
+        "x": 187,
+        "y": 105,
+        "left": 82.96875,
+        "top": 30.751278,
+        "right": 84.375,
+        "bottom": 29.53523,
+        "countries": [
+            "nepal",
+            "china"
+        ]
+    },
+    {
+        "x": 187,
+        "y": 106,
+        "left": 82.96875,
+        "top": 29.53523,
+        "right": 84.375,
+        "bottom": 28.304381,
+        "countries": [
+            "nepal",
+            "china"
+        ]
+    },
+    {
+        "x": 188,
+        "y": 106,
+        "left": 84.375,
+        "top": 29.53523,
+        "right": 85.78125,
+        "bottom": 28.304381,
+        "countries": [
+            "nepal",
+            "china"
+        ]
+    },
+    {
+        "x": 188,
+        "y": 107,
+        "left": 84.375,
+        "top": 28.304381,
+        "right": 85.78125,
+        "bottom": 27.059126,
+        "countries": [
+            "nepal",
+            "china",
+            "india"
+        ]
+    },
+    {
+        "x": 189,
+        "y": 107,
+        "left": 85.78125,
+        "top": 28.304381,
+        "right": 87.1875,
+        "bottom": 27.059126,
+        "countries": [
+            "nepal",
+            "china"
+        ]
+    },
+    {
+        "x": 190,
+        "y": 107,
+        "left": 87.1875,
+        "top": 28.304381,
+        "right": 88.59375,
+        "bottom": 27.059126,
+        "countries": [
+            "nepal",
+            "china",
+            "india"
+        ]
+    },
+    {
+        "x": 184,
+        "y": 106,
+        "left": 78.75,
+        "top": 29.53523,
+        "right": 80.15625,
+        "bottom": 28.304381,
+        "countries": [
+            "nepal",
+            "india"
+        ]
+    },
+    {
+        "x": 185,
+        "y": 106,
+        "left": 80.15625,
+        "top": 29.53523,
+        "right": 81.5625,
+        "bottom": 28.304381,
+        "countries": [
+            "nepal",
+            "india"
+        ]
+    },
+    {
+        "x": 185,
+        "y": 107,
+        "left": 80.15625,
+        "top": 28.304381,
+        "right": 81.5625,
+        "bottom": 27.059126,
+        "countries": [
+            "nepal",
+            "india"
+        ]
+    },
+    {
+        "x": 186,
+        "y": 107,
+        "left": 81.5625,
+        "top": 28.304381,
+        "right": 82.96875,
+        "bottom": 27.059126,
+        "countries": [
+            "nepal",
+            "india"
+        ]
+    },
+    {
+        "x": 187,
+        "y": 107,
+        "left": 82.96875,
+        "top": 28.304381,
+        "right": 84.375,
+        "bottom": 27.059126,
+        "countries": [
+            "nepal",
+            "india"
+        ]
+    },
+    {
+        "x": 188,
+        "y": 108,
+        "left": 84.375,
+        "top": 27.059126,
+        "right": 85.78125,
+        "bottom": 25.799891,
+        "countries": [
+            "nepal",
+            "india"
+        ]
+    },
+    {
+        "x": 189,
+        "y": 108,
+        "left": 85.78125,
+        "top": 27.059126,
+        "right": 87.1875,
+        "bottom": 25.799891,
+        "countries": [
+            "nepal",
+            "india"
+        ]
+    },
+    {
+        "x": 186,
+        "y": 106,
+        "left": 81.5625,
+        "top": 29.53523,
+        "right": 82.96875,
+        "bottom": 28.304381,
+        "countries": [
+            "nepal"
+        ]
+    }
+]

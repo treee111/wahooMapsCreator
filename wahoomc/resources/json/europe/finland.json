@@ -1,0 +1,1267 @@
+[
+    {
+        "x": 145,
+        "y": 74,
+        "left": 23.90625,
+        "top": 60.239811,
+        "right": 25.3125,
+        "bottom": 59.534318,
+        "countries": [
+            "estonia",
+            "finland"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 74,
+        "left": 25.3125,
+        "top": 60.239811,
+        "right": 26.71875,
+        "bottom": 59.534318,
+        "countries": [
+            "estonia",
+            "finland"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 57,
+        "left": 25.3125,
+        "top": 70.140364,
+        "right": 26.71875,
+        "bottom": 69.657086,
+        "countries": [
+            "norway",
+            "finland"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 57,
+        "left": 26.71875,
+        "top": 70.140364,
+        "right": 28.125,
+        "bottom": 69.657086,
+        "countries": [
+            "norway",
+            "finland"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 57,
+        "left": 28.125,
+        "top": 70.140364,
+        "right": 29.53125,
+        "bottom": 69.657086,
+        "countries": [
+            "norway",
+            "finland"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 58,
+        "left": 19.6875,
+        "top": 69.657086,
+        "right": 21.09375,
+        "bottom": 69.162558,
+        "countries": [
+            "norway",
+            "finland"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 58,
+        "left": 21.09375,
+        "top": 69.657086,
+        "right": 22.5,
+        "bottom": 69.162558,
+        "countries": [
+            "norway",
+            "finland"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 58,
+        "left": 25.3125,
+        "top": 69.657086,
+        "right": 26.71875,
+        "bottom": 69.162558,
+        "countries": [
+            "norway",
+            "finland"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 58,
+        "left": 26.71875,
+        "top": 69.657086,
+        "right": 28.125,
+        "bottom": 69.162558,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 58,
+        "left": 28.125,
+        "top": 69.657086,
+        "right": 29.53125,
+        "bottom": 69.162558,
+        "countries": [
+            "russia",
+            "norway",
+            "finland"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 59,
+        "left": 19.6875,
+        "top": 69.162558,
+        "right": 21.09375,
+        "bottom": 68.656555,
+        "countries": [
+            "norway",
+            "sweden",
+            "finland"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 59,
+        "left": 21.09375,
+        "top": 69.162558,
+        "right": 22.5,
+        "bottom": 68.656555,
+        "countries": [
+            "norway",
+            "sweden",
+            "finland"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 59,
+        "left": 22.5,
+        "top": 69.162558,
+        "right": 23.90625,
+        "bottom": 68.656555,
+        "countries": [
+            "norway",
+            "finland"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 59,
+        "left": 23.90625,
+        "top": 69.162558,
+        "right": 25.3125,
+        "bottom": 68.656555,
+        "countries": [
+            "norway",
+            "finland"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 59,
+        "left": 25.3125,
+        "top": 69.162558,
+        "right": 26.71875,
+        "bottom": 68.656555,
+        "countries": [
+            "norway",
+            "finland"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 59,
+        "left": 26.71875,
+        "top": 69.162558,
+        "right": 28.125,
+        "bottom": 68.656555,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 59,
+        "left": 28.125,
+        "top": 69.162558,
+        "right": 29.53125,
+        "bottom": 68.656555,
+        "countries": [
+            "russia",
+            "norway",
+            "finland"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 60,
+        "left": 21.09375,
+        "top": 68.656555,
+        "right": 22.5,
+        "bottom": 68.138852,
+        "countries": [
+            "sweden",
+            "finland"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 60,
+        "left": 22.5,
+        "top": 68.656555,
+        "right": 23.90625,
+        "bottom": 68.138852,
+        "countries": [
+            "norway",
+            "sweden",
+            "finland"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 60,
+        "left": 23.90625,
+        "top": 68.656555,
+        "right": 25.3125,
+        "bottom": 68.138852,
+        "countries": [
+            "norway",
+            "finland"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 60,
+        "left": 25.3125,
+        "top": 68.656555,
+        "right": 26.71875,
+        "bottom": 68.138852,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 60,
+        "left": 26.71875,
+        "top": 68.656555,
+        "right": 28.125,
+        "bottom": 68.138852,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 60,
+        "left": 28.125,
+        "top": 68.656555,
+        "right": 29.53125,
+        "bottom": 68.138852,
+        "countries": [
+            "russia",
+            "finland"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 61,
+        "left": 22.5,
+        "top": 68.138852,
+        "right": 23.90625,
+        "bottom": 67.609221,
+        "countries": [
+            "sweden",
+            "finland"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 61,
+        "left": 23.90625,
+        "top": 68.138852,
+        "right": 25.3125,
+        "bottom": 67.609221,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 61,
+        "left": 25.3125,
+        "top": 68.138852,
+        "right": 26.71875,
+        "bottom": 67.609221,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 61,
+        "left": 26.71875,
+        "top": 68.138852,
+        "right": 28.125,
+        "bottom": 67.609221,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 61,
+        "left": 28.125,
+        "top": 68.138852,
+        "right": 29.53125,
+        "bottom": 67.609221,
+        "countries": [
+            "russia",
+            "finland"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 61,
+        "left": 29.53125,
+        "top": 68.138852,
+        "right": 30.9375,
+        "bottom": 67.609221,
+        "countries": [
+            "russia",
+            "finland"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 62,
+        "left": 22.5,
+        "top": 67.609221,
+        "right": 23.90625,
+        "bottom": 67.067433,
+        "countries": [
+            "sweden",
+            "finland"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 62,
+        "left": 23.90625,
+        "top": 67.609221,
+        "right": 25.3125,
+        "bottom": 67.067433,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 62,
+        "left": 25.3125,
+        "top": 67.609221,
+        "right": 26.71875,
+        "bottom": 67.067433,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 62,
+        "left": 26.71875,
+        "top": 67.609221,
+        "right": 28.125,
+        "bottom": 67.067433,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 62,
+        "left": 28.125,
+        "top": 67.609221,
+        "right": 29.53125,
+        "bottom": 67.067433,
+        "countries": [
+            "russia",
+            "finland"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 62,
+        "left": 29.53125,
+        "top": 67.609221,
+        "right": 30.9375,
+        "bottom": 67.067433,
+        "countries": [
+            "russia",
+            "finland"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 63,
+        "left": 22.5,
+        "top": 67.067433,
+        "right": 23.90625,
+        "bottom": 66.51326,
+        "countries": [
+            "sweden",
+            "finland"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 63,
+        "left": 23.90625,
+        "top": 67.067433,
+        "right": 25.3125,
+        "bottom": 66.51326,
+        "countries": [
+            "sweden",
+            "finland"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 63,
+        "left": 25.3125,
+        "top": 67.067433,
+        "right": 26.71875,
+        "bottom": 66.51326,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 63,
+        "left": 26.71875,
+        "top": 67.067433,
+        "right": 28.125,
+        "bottom": 66.51326,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 63,
+        "left": 28.125,
+        "top": 67.067433,
+        "right": 29.53125,
+        "bottom": 66.51326,
+        "countries": [
+            "russia",
+            "finland"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 64,
+        "left": 22.5,
+        "top": 66.51326,
+        "right": 23.90625,
+        "bottom": 65.946472,
+        "countries": [
+            "sweden",
+            "finland"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 64,
+        "left": 23.90625,
+        "top": 66.51326,
+        "right": 25.3125,
+        "bottom": 65.946472,
+        "countries": [
+            "sweden",
+            "finland"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 64,
+        "left": 25.3125,
+        "top": 66.51326,
+        "right": 26.71875,
+        "bottom": 65.946472,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 64,
+        "left": 26.71875,
+        "top": 66.51326,
+        "right": 28.125,
+        "bottom": 65.946472,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 64,
+        "left": 28.125,
+        "top": 66.51326,
+        "right": 29.53125,
+        "bottom": 65.946472,
+        "countries": [
+            "russia",
+            "finland"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 64,
+        "left": 29.53125,
+        "top": 66.51326,
+        "right": 30.9375,
+        "bottom": 65.946472,
+        "countries": [
+            "russia",
+            "finland"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 65,
+        "left": 23.90625,
+        "top": 65.946472,
+        "right": 25.3125,
+        "bottom": 65.366837,
+        "countries": [
+            "sweden",
+            "finland"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 65,
+        "left": 25.3125,
+        "top": 65.946472,
+        "right": 26.71875,
+        "bottom": 65.366837,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 65,
+        "left": 26.71875,
+        "top": 65.946472,
+        "right": 28.125,
+        "bottom": 65.366837,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 65,
+        "left": 28.125,
+        "top": 65.946472,
+        "right": 29.53125,
+        "bottom": 65.366837,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 65,
+        "left": 29.53125,
+        "top": 65.946472,
+        "right": 30.9375,
+        "bottom": 65.366837,
+        "countries": [
+            "russia",
+            "finland"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 66,
+        "left": 23.90625,
+        "top": 65.366837,
+        "right": 25.3125,
+        "bottom": 64.774125,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 66,
+        "left": 25.3125,
+        "top": 65.366837,
+        "right": 26.71875,
+        "bottom": 64.774125,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 66,
+        "left": 26.71875,
+        "top": 65.366837,
+        "right": 28.125,
+        "bottom": 64.774125,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 66,
+        "left": 28.125,
+        "top": 65.366837,
+        "right": 29.53125,
+        "bottom": 64.774125,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 66,
+        "left": 29.53125,
+        "top": 65.366837,
+        "right": 30.9375,
+        "bottom": 64.774125,
+        "countries": [
+            "russia",
+            "finland"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 67,
+        "left": 22.5,
+        "top": 64.774125,
+        "right": 23.90625,
+        "bottom": 64.168107,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 67,
+        "left": 23.90625,
+        "top": 64.774125,
+        "right": 25.3125,
+        "bottom": 64.168107,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 67,
+        "left": 25.3125,
+        "top": 64.774125,
+        "right": 26.71875,
+        "bottom": 64.168107,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 67,
+        "left": 26.71875,
+        "top": 64.774125,
+        "right": 28.125,
+        "bottom": 64.168107,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 67,
+        "left": 28.125,
+        "top": 64.774125,
+        "right": 29.53125,
+        "bottom": 64.168107,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 67,
+        "left": 29.53125,
+        "top": 64.774125,
+        "right": 30.9375,
+        "bottom": 64.168107,
+        "countries": [
+            "russia",
+            "finland"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 68,
+        "left": 21.09375,
+        "top": 64.168107,
+        "right": 22.5,
+        "bottom": 63.548552,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 68,
+        "left": 22.5,
+        "top": 64.168107,
+        "right": 23.90625,
+        "bottom": 63.548552,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 68,
+        "left": 23.90625,
+        "top": 64.168107,
+        "right": 25.3125,
+        "bottom": 63.548552,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 68,
+        "left": 25.3125,
+        "top": 64.168107,
+        "right": 26.71875,
+        "bottom": 63.548552,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 68,
+        "left": 26.71875,
+        "top": 64.168107,
+        "right": 28.125,
+        "bottom": 63.548552,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 68,
+        "left": 28.125,
+        "top": 64.168107,
+        "right": 29.53125,
+        "bottom": 63.548552,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 68,
+        "left": 29.53125,
+        "top": 64.168107,
+        "right": 30.9375,
+        "bottom": 63.548552,
+        "countries": [
+            "russia",
+            "finland"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 69,
+        "left": 19.6875,
+        "top": 63.548552,
+        "right": 21.09375,
+        "bottom": 62.915233,
+        "countries": [
+            "sweden",
+            "finland"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 69,
+        "left": 21.09375,
+        "top": 63.548552,
+        "right": 22.5,
+        "bottom": 62.915233,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 69,
+        "left": 22.5,
+        "top": 63.548552,
+        "right": 23.90625,
+        "bottom": 62.915233,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 69,
+        "left": 23.90625,
+        "top": 63.548552,
+        "right": 25.3125,
+        "bottom": 62.915233,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 69,
+        "left": 25.3125,
+        "top": 63.548552,
+        "right": 26.71875,
+        "bottom": 62.915233,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 69,
+        "left": 26.71875,
+        "top": 63.548552,
+        "right": 28.125,
+        "bottom": 62.915233,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 69,
+        "left": 28.125,
+        "top": 63.548552,
+        "right": 29.53125,
+        "bottom": 62.915233,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 69,
+        "left": 29.53125,
+        "top": 63.548552,
+        "right": 30.9375,
+        "bottom": 62.915233,
+        "countries": [
+            "russia",
+            "finland"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 69,
+        "left": 30.9375,
+        "top": 63.548552,
+        "right": 32.34375,
+        "bottom": 62.915233,
+        "countries": [
+            "russia",
+            "finland"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 70,
+        "left": 19.6875,
+        "top": 62.915233,
+        "right": 21.09375,
+        "bottom": 62.267923,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 70,
+        "left": 21.09375,
+        "top": 62.915233,
+        "right": 22.5,
+        "bottom": 62.267923,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 70,
+        "left": 22.5,
+        "top": 62.915233,
+        "right": 23.90625,
+        "bottom": 62.267923,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 70,
+        "left": 23.90625,
+        "top": 62.915233,
+        "right": 25.3125,
+        "bottom": 62.267923,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 70,
+        "left": 25.3125,
+        "top": 62.915233,
+        "right": 26.71875,
+        "bottom": 62.267923,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 70,
+        "left": 26.71875,
+        "top": 62.915233,
+        "right": 28.125,
+        "bottom": 62.267923,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 70,
+        "left": 28.125,
+        "top": 62.915233,
+        "right": 29.53125,
+        "bottom": 62.267923,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 70,
+        "left": 29.53125,
+        "top": 62.915233,
+        "right": 30.9375,
+        "bottom": 62.267923,
+        "countries": [
+            "russia",
+            "finland"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 70,
+        "left": 30.9375,
+        "top": 62.915233,
+        "right": 32.34375,
+        "bottom": 62.267923,
+        "countries": [
+            "russia",
+            "finland"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 71,
+        "left": 21.09375,
+        "top": 62.267923,
+        "right": 22.5,
+        "bottom": 61.606396,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 71,
+        "left": 22.5,
+        "top": 62.267923,
+        "right": 23.90625,
+        "bottom": 61.606396,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 71,
+        "left": 23.90625,
+        "top": 62.267923,
+        "right": 25.3125,
+        "bottom": 61.606396,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 71,
+        "left": 25.3125,
+        "top": 62.267923,
+        "right": 26.71875,
+        "bottom": 61.606396,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 71,
+        "left": 26.71875,
+        "top": 62.267923,
+        "right": 28.125,
+        "bottom": 61.606396,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 71,
+        "left": 28.125,
+        "top": 62.267923,
+        "right": 29.53125,
+        "bottom": 61.606396,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 71,
+        "left": 29.53125,
+        "top": 62.267923,
+        "right": 30.9375,
+        "bottom": 61.606396,
+        "countries": [
+            "russia",
+            "finland"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 72,
+        "left": 21.09375,
+        "top": 61.606396,
+        "right": 22.5,
+        "bottom": 60.930432,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 72,
+        "left": 22.5,
+        "top": 61.606396,
+        "right": 23.90625,
+        "bottom": 60.930432,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 72,
+        "left": 23.90625,
+        "top": 61.606396,
+        "right": 25.3125,
+        "bottom": 60.930432,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 72,
+        "left": 25.3125,
+        "top": 61.606396,
+        "right": 26.71875,
+        "bottom": 60.930432,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 72,
+        "left": 26.71875,
+        "top": 61.606396,
+        "right": 28.125,
+        "bottom": 60.930432,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 72,
+        "left": 28.125,
+        "top": 61.606396,
+        "right": 29.53125,
+        "bottom": 60.930432,
+        "countries": [
+            "russia",
+            "finland"
+        ]
+    },
+    {
+        "x": 149,
+        "y": 72,
+        "left": 29.53125,
+        "top": 61.606396,
+        "right": 30.9375,
+        "bottom": 60.930432,
+        "countries": [
+            "russia",
+            "finland"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 73,
+        "left": 19.6875,
+        "top": 60.930432,
+        "right": 21.09375,
+        "bottom": 60.239811,
+        "countries": [
+            "\u00e5land",
+            "finland"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 73,
+        "left": 21.09375,
+        "top": 60.930432,
+        "right": 22.5,
+        "bottom": 60.239811,
+        "countries": [
+            "\u00e5land",
+            "finland"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 73,
+        "left": 22.5,
+        "top": 60.930432,
+        "right": 23.90625,
+        "bottom": 60.239811,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 145,
+        "y": 73,
+        "left": 23.90625,
+        "top": 60.930432,
+        "right": 25.3125,
+        "bottom": 60.239811,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 146,
+        "y": 73,
+        "left": 25.3125,
+        "top": 60.930432,
+        "right": 26.71875,
+        "bottom": 60.239811,
+        "countries": [
+            "finland"
+        ]
+    },
+    {
+        "x": 147,
+        "y": 73,
+        "left": 26.71875,
+        "top": 60.930432,
+        "right": 28.125,
+        "bottom": 60.239811,
+        "countries": [
+            "russia",
+            "finland"
+        ]
+    },
+    {
+        "x": 148,
+        "y": 73,
+        "left": 28.125,
+        "top": 60.930432,
+        "right": 29.53125,
+        "bottom": 60.239811,
+        "countries": [
+            "russia",
+            "finland"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 74,
+        "left": 21.09375,
+        "top": 60.239811,
+        "right": 22.5,
+        "bottom": 59.534318,
+        "countries": [
+            "\u00e5land",
+            "finland"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 74,
+        "left": 22.5,
+        "top": 60.239811,
+        "right": 23.90625,
+        "bottom": 59.534318,
+        "countries": [
+            "finland"
+        ]
+    }
+]

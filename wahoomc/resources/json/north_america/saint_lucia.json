@@ -1,0 +1,27 @@
+[
+    {
+        "x": 84,
+        "y": 117,
+        "left": -61.875,
+        "top": 15.284185,
+        "right": -60.46875,
+        "bottom": 13.923404,
+        "countries": [
+            "martinique",
+            "dominica",
+            "saint_lucia"
+        ]
+    },
+    {
+        "x": 84,
+        "y": 118,
+        "left": -61.875,
+        "top": 13.923404,
+        "right": -60.46875,
+        "bottom": 12.554564,
+        "countries": [
+            "saint_vincent_and_the_grenadines",
+            "saint_lucia"
+        ]
+    }
+]

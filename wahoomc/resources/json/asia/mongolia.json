@@ -1,0 +1,2040 @@
+[
+    {
+        "x": 210,
+        "y": 86,
+        "left": 115.3125,
+        "top": 50.736455,
+        "right": 116.71875,
+        "bottom": 49.837982,
+        "countries": [
+            "russia",
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 190,
+        "y": 87,
+        "left": 87.1875,
+        "top": 49.837982,
+        "right": 88.59375,
+        "bottom": 48.922499,
+        "countries": [
+            "russia",
+            "mongolia",
+            "kazakhstan",
+            "china"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 87,
+        "left": 115.3125,
+        "top": 49.837982,
+        "right": 116.71875,
+        "bottom": 48.922499,
+        "countries": [
+            "russia",
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 190,
+        "y": 88,
+        "left": 87.1875,
+        "top": 48.922499,
+        "right": 88.59375,
+        "bottom": 47.989922,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 191,
+        "y": 88,
+        "left": 88.59375,
+        "top": 48.922499,
+        "right": 90.0,
+        "bottom": 47.989922,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 88,
+        "left": 115.3125,
+        "top": 48.922499,
+        "right": 116.71875,
+        "bottom": 47.989922,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 88,
+        "left": 116.71875,
+        "top": 48.922499,
+        "right": 118.125,
+        "bottom": 47.989922,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 88,
+        "left": 118.125,
+        "top": 48.922499,
+        "right": 119.53125,
+        "bottom": 47.989922,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 191,
+        "y": 89,
+        "left": 88.59375,
+        "top": 47.989922,
+        "right": 90.0,
+        "bottom": 47.040182,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 192,
+        "y": 89,
+        "left": 90.0,
+        "top": 47.989922,
+        "right": 91.40625,
+        "bottom": 47.040182,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 89,
+        "left": 115.3125,
+        "top": 47.989922,
+        "right": 116.71875,
+        "bottom": 47.040182,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 89,
+        "left": 116.71875,
+        "top": 47.989922,
+        "right": 118.125,
+        "bottom": 47.040182,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 89,
+        "left": 118.125,
+        "top": 47.989922,
+        "right": 119.53125,
+        "bottom": 47.040182,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 89,
+        "left": 119.53125,
+        "top": 47.989922,
+        "right": 120.9375,
+        "bottom": 47.040182,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 192,
+        "y": 90,
+        "left": 90.0,
+        "top": 47.040182,
+        "right": 91.40625,
+        "bottom": 46.073231,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 90,
+        "left": 115.3125,
+        "top": 47.040182,
+        "right": 116.71875,
+        "bottom": 46.073231,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 211,
+        "y": 90,
+        "left": 116.71875,
+        "top": 47.040182,
+        "right": 118.125,
+        "bottom": 46.073231,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 212,
+        "y": 90,
+        "left": 118.125,
+        "top": 47.040182,
+        "right": 119.53125,
+        "bottom": 46.073231,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 213,
+        "y": 90,
+        "left": 119.53125,
+        "top": 47.040182,
+        "right": 120.9375,
+        "bottom": 46.073231,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 192,
+        "y": 91,
+        "left": 90.0,
+        "top": 46.073231,
+        "right": 91.40625,
+        "bottom": 45.089036,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 193,
+        "y": 91,
+        "left": 91.40625,
+        "top": 46.073231,
+        "right": 92.8125,
+        "bottom": 45.089036,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 207,
+        "y": 91,
+        "left": 111.09375,
+        "top": 46.073231,
+        "right": 112.5,
+        "bottom": 45.089036,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 91,
+        "left": 113.90625,
+        "top": 46.073231,
+        "right": 115.3125,
+        "bottom": 45.089036,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 210,
+        "y": 91,
+        "left": 115.3125,
+        "top": 46.073231,
+        "right": 116.71875,
+        "bottom": 45.089036,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 193,
+        "y": 92,
+        "left": 91.40625,
+        "top": 45.089036,
+        "right": 92.8125,
+        "bottom": 44.087585,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 194,
+        "y": 92,
+        "left": 92.8125,
+        "top": 45.089036,
+        "right": 94.21875,
+        "bottom": 44.087585,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 195,
+        "y": 92,
+        "left": 94.21875,
+        "top": 45.089036,
+        "right": 95.625,
+        "bottom": 44.087585,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 207,
+        "y": 92,
+        "left": 111.09375,
+        "top": 45.089036,
+        "right": 112.5,
+        "bottom": 44.087585,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 208,
+        "y": 92,
+        "left": 112.5,
+        "top": 45.089036,
+        "right": 113.90625,
+        "bottom": 44.087585,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 92,
+        "left": 113.90625,
+        "top": 45.089036,
+        "right": 115.3125,
+        "bottom": 44.087585,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 195,
+        "y": 93,
+        "left": 94.21875,
+        "top": 44.087585,
+        "right": 95.625,
+        "bottom": 43.068888,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 196,
+        "y": 93,
+        "left": 95.625,
+        "top": 44.087585,
+        "right": 97.03125,
+        "bottom": 43.068888,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 206,
+        "y": 93,
+        "left": 109.6875,
+        "top": 44.087585,
+        "right": 111.09375,
+        "bottom": 43.068888,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 207,
+        "y": 93,
+        "left": 111.09375,
+        "top": 44.087585,
+        "right": 112.5,
+        "bottom": 43.068888,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 196,
+        "y": 94,
+        "left": 95.625,
+        "top": 43.068888,
+        "right": 97.03125,
+        "bottom": 42.032974,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 197,
+        "y": 94,
+        "left": 97.03125,
+        "top": 43.068888,
+        "right": 98.4375,
+        "bottom": 42.032974,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 198,
+        "y": 94,
+        "left": 98.4375,
+        "top": 43.068888,
+        "right": 99.84375,
+        "bottom": 42.032974,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 94,
+        "left": 99.84375,
+        "top": 43.068888,
+        "right": 101.25,
+        "bottom": 42.032974,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 94,
+        "left": 101.25,
+        "top": 43.068888,
+        "right": 102.65625,
+        "bottom": 42.032974,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 201,
+        "y": 94,
+        "left": 102.65625,
+        "top": 43.068888,
+        "right": 104.0625,
+        "bottom": 42.032974,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 203,
+        "y": 94,
+        "left": 105.46875,
+        "top": 43.068888,
+        "right": 106.875,
+        "bottom": 42.032974,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 204,
+        "y": 94,
+        "left": 106.875,
+        "top": 43.068888,
+        "right": 108.28125,
+        "bottom": 42.032974,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 205,
+        "y": 94,
+        "left": 108.28125,
+        "top": 43.068888,
+        "right": 109.6875,
+        "bottom": 42.032974,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 206,
+        "y": 94,
+        "left": 109.6875,
+        "top": 43.068888,
+        "right": 111.09375,
+        "bottom": 42.032974,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 201,
+        "y": 95,
+        "left": 102.65625,
+        "top": 42.032974,
+        "right": 104.0625,
+        "bottom": 40.979898,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 202,
+        "y": 95,
+        "left": 104.0625,
+        "top": 42.032974,
+        "right": 105.46875,
+        "bottom": 40.979898,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 203,
+        "y": 95,
+        "left": 105.46875,
+        "top": 42.032974,
+        "right": 106.875,
+        "bottom": 40.979898,
+        "countries": [
+            "mongolia",
+            "china"
+        ]
+    },
+    {
+        "x": 197,
+        "y": 84,
+        "left": 97.03125,
+        "top": 52.48278,
+        "right": 98.4375,
+        "bottom": 51.618017,
+        "countries": [
+            "russia",
+            "mongolia"
+        ]
+    },
+    {
+        "x": 198,
+        "y": 84,
+        "left": 98.4375,
+        "top": 52.48278,
+        "right": 99.84375,
+        "bottom": 51.618017,
+        "countries": [
+            "russia",
+            "mongolia"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 84,
+        "left": 99.84375,
+        "top": 52.48278,
+        "right": 101.25,
+        "bottom": 51.618017,
+        "countries": [
+            "russia",
+            "mongolia"
+        ]
+    },
+    {
+        "x": 193,
+        "y": 85,
+        "left": 91.40625,
+        "top": 51.618017,
+        "right": 92.8125,
+        "bottom": 50.736455,
+        "countries": [
+            "russia",
+            "mongolia"
+        ]
+    },
+    {
+        "x": 194,
+        "y": 85,
+        "left": 92.8125,
+        "top": 51.618017,
+        "right": 94.21875,
+        "bottom": 50.736455,
+        "countries": [
+            "russia",
+            "mongolia"
+        ]
+    },
+    {
+        "x": 197,
+        "y": 85,
+        "left": 97.03125,
+        "top": 51.618017,
+        "right": 98.4375,
+        "bottom": 50.736455,
+        "countries": [
+            "russia",
+            "mongolia"
+        ]
+    },
+    {
+        "x": 198,
+        "y": 85,
+        "left": 98.4375,
+        "top": 51.618017,
+        "right": 99.84375,
+        "bottom": 50.736455,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 85,
+        "left": 99.84375,
+        "top": 51.618017,
+        "right": 101.25,
+        "bottom": 50.736455,
+        "countries": [
+            "russia",
+            "mongolia"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 85,
+        "left": 101.25,
+        "top": 51.618017,
+        "right": 102.65625,
+        "bottom": 50.736455,
+        "countries": [
+            "russia",
+            "mongolia"
+        ]
+    },
+    {
+        "x": 191,
+        "y": 86,
+        "left": 88.59375,
+        "top": 50.736455,
+        "right": 90.0,
+        "bottom": 49.837982,
+        "countries": [
+            "russia",
+            "mongolia"
+        ]
+    },
+    {
+        "x": 192,
+        "y": 86,
+        "left": 90.0,
+        "top": 50.736455,
+        "right": 91.40625,
+        "bottom": 49.837982,
+        "countries": [
+            "russia",
+            "mongolia"
+        ]
+    },
+    {
+        "x": 193,
+        "y": 86,
+        "left": 91.40625,
+        "top": 50.736455,
+        "right": 92.8125,
+        "bottom": 49.837982,
+        "countries": [
+            "russia",
+            "mongolia"
+        ]
+    },
+    {
+        "x": 194,
+        "y": 86,
+        "left": 92.8125,
+        "top": 50.736455,
+        "right": 94.21875,
+        "bottom": 49.837982,
+        "countries": [
+            "russia",
+            "mongolia"
+        ]
+    },
+    {
+        "x": 195,
+        "y": 86,
+        "left": 94.21875,
+        "top": 50.736455,
+        "right": 95.625,
+        "bottom": 49.837982,
+        "countries": [
+            "russia",
+            "mongolia"
+        ]
+    },
+    {
+        "x": 196,
+        "y": 86,
+        "left": 95.625,
+        "top": 50.736455,
+        "right": 97.03125,
+        "bottom": 49.837982,
+        "countries": [
+            "russia",
+            "mongolia"
+        ]
+    },
+    {
+        "x": 197,
+        "y": 86,
+        "left": 97.03125,
+        "top": 50.736455,
+        "right": 98.4375,
+        "bottom": 49.837982,
+        "countries": [
+            "russia",
+            "mongolia"
+        ]
+    },
+    {
+        "x": 198,
+        "y": 86,
+        "left": 98.4375,
+        "top": 50.736455,
+        "right": 99.84375,
+        "bottom": 49.837982,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 86,
+        "left": 99.84375,
+        "top": 50.736455,
+        "right": 101.25,
+        "bottom": 49.837982,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 86,
+        "left": 101.25,
+        "top": 50.736455,
+        "right": 102.65625,
+        "bottom": 49.837982,
+        "countries": [
+            "russia",
+            "mongolia"
+        ]
+    },
+    {
+        "x": 201,
+        "y": 86,
+        "left": 102.65625,
+        "top": 50.736455,
+        "right": 104.0625,
+        "bottom": 49.837982,
+        "countries": [
+            "russia",
+            "mongolia"
+        ]
+    },
+    {
+        "x": 202,
+        "y": 86,
+        "left": 104.0625,
+        "top": 50.736455,
+        "right": 105.46875,
+        "bottom": 49.837982,
+        "countries": [
+            "russia",
+            "mongolia"
+        ]
+    },
+    {
+        "x": 203,
+        "y": 86,
+        "left": 105.46875,
+        "top": 50.736455,
+        "right": 106.875,
+        "bottom": 49.837982,
+        "countries": [
+            "russia",
+            "mongolia"
+        ]
+    },
+    {
+        "x": 204,
+        "y": 86,
+        "left": 106.875,
+        "top": 50.736455,
+        "right": 108.28125,
+        "bottom": 49.837982,
+        "countries": [
+            "russia",
+            "mongolia"
+        ]
+    },
+    {
+        "x": 208,
+        "y": 86,
+        "left": 112.5,
+        "top": 50.736455,
+        "right": 113.90625,
+        "bottom": 49.837982,
+        "countries": [
+            "russia",
+            "mongolia"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 86,
+        "left": 113.90625,
+        "top": 50.736455,
+        "right": 115.3125,
+        "bottom": 49.837982,
+        "countries": [
+            "russia",
+            "mongolia"
+        ]
+    },
+    {
+        "x": 191,
+        "y": 87,
+        "left": 88.59375,
+        "top": 49.837982,
+        "right": 90.0,
+        "bottom": 48.922499,
+        "countries": [
+            "russia",
+            "mongolia"
+        ]
+    },
+    {
+        "x": 192,
+        "y": 87,
+        "left": 90.0,
+        "top": 49.837982,
+        "right": 91.40625,
+        "bottom": 48.922499,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 193,
+        "y": 87,
+        "left": 91.40625,
+        "top": 49.837982,
+        "right": 92.8125,
+        "bottom": 48.922499,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 194,
+        "y": 87,
+        "left": 92.8125,
+        "top": 49.837982,
+        "right": 94.21875,
+        "bottom": 48.922499,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 195,
+        "y": 87,
+        "left": 94.21875,
+        "top": 49.837982,
+        "right": 95.625,
+        "bottom": 48.922499,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 196,
+        "y": 87,
+        "left": 95.625,
+        "top": 49.837982,
+        "right": 97.03125,
+        "bottom": 48.922499,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 197,
+        "y": 87,
+        "left": 97.03125,
+        "top": 49.837982,
+        "right": 98.4375,
+        "bottom": 48.922499,
+        "countries": [
+            "russia",
+            "mongolia"
+        ]
+    },
+    {
+        "x": 198,
+        "y": 87,
+        "left": 98.4375,
+        "top": 49.837982,
+        "right": 99.84375,
+        "bottom": 48.922499,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 87,
+        "left": 99.84375,
+        "top": 49.837982,
+        "right": 101.25,
+        "bottom": 48.922499,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 87,
+        "left": 101.25,
+        "top": 49.837982,
+        "right": 102.65625,
+        "bottom": 48.922499,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 201,
+        "y": 87,
+        "left": 102.65625,
+        "top": 49.837982,
+        "right": 104.0625,
+        "bottom": 48.922499,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 202,
+        "y": 87,
+        "left": 104.0625,
+        "top": 49.837982,
+        "right": 105.46875,
+        "bottom": 48.922499,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 203,
+        "y": 87,
+        "left": 105.46875,
+        "top": 49.837982,
+        "right": 106.875,
+        "bottom": 48.922499,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 204,
+        "y": 87,
+        "left": 106.875,
+        "top": 49.837982,
+        "right": 108.28125,
+        "bottom": 48.922499,
+        "countries": [
+            "russia",
+            "mongolia"
+        ]
+    },
+    {
+        "x": 205,
+        "y": 87,
+        "left": 108.28125,
+        "top": 49.837982,
+        "right": 109.6875,
+        "bottom": 48.922499,
+        "countries": [
+            "russia",
+            "mongolia"
+        ]
+    },
+    {
+        "x": 206,
+        "y": 87,
+        "left": 109.6875,
+        "top": 49.837982,
+        "right": 111.09375,
+        "bottom": 48.922499,
+        "countries": [
+            "russia",
+            "mongolia"
+        ]
+    },
+    {
+        "x": 207,
+        "y": 87,
+        "left": 111.09375,
+        "top": 49.837982,
+        "right": 112.5,
+        "bottom": 48.922499,
+        "countries": [
+            "russia",
+            "mongolia"
+        ]
+    },
+    {
+        "x": 208,
+        "y": 87,
+        "left": 112.5,
+        "top": 49.837982,
+        "right": 113.90625,
+        "bottom": 48.922499,
+        "countries": [
+            "russia",
+            "mongolia"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 87,
+        "left": 113.90625,
+        "top": 49.837982,
+        "right": 115.3125,
+        "bottom": 48.922499,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 192,
+        "y": 88,
+        "left": 90.0,
+        "top": 48.922499,
+        "right": 91.40625,
+        "bottom": 47.989922,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 193,
+        "y": 88,
+        "left": 91.40625,
+        "top": 48.922499,
+        "right": 92.8125,
+        "bottom": 47.989922,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 194,
+        "y": 88,
+        "left": 92.8125,
+        "top": 48.922499,
+        "right": 94.21875,
+        "bottom": 47.989922,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 195,
+        "y": 88,
+        "left": 94.21875,
+        "top": 48.922499,
+        "right": 95.625,
+        "bottom": 47.989922,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 196,
+        "y": 88,
+        "left": 95.625,
+        "top": 48.922499,
+        "right": 97.03125,
+        "bottom": 47.989922,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 197,
+        "y": 88,
+        "left": 97.03125,
+        "top": 48.922499,
+        "right": 98.4375,
+        "bottom": 47.989922,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 198,
+        "y": 88,
+        "left": 98.4375,
+        "top": 48.922499,
+        "right": 99.84375,
+        "bottom": 47.989922,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 88,
+        "left": 99.84375,
+        "top": 48.922499,
+        "right": 101.25,
+        "bottom": 47.989922,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 88,
+        "left": 101.25,
+        "top": 48.922499,
+        "right": 102.65625,
+        "bottom": 47.989922,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 201,
+        "y": 88,
+        "left": 102.65625,
+        "top": 48.922499,
+        "right": 104.0625,
+        "bottom": 47.989922,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 202,
+        "y": 88,
+        "left": 104.0625,
+        "top": 48.922499,
+        "right": 105.46875,
+        "bottom": 47.989922,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 203,
+        "y": 88,
+        "left": 105.46875,
+        "top": 48.922499,
+        "right": 106.875,
+        "bottom": 47.989922,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 204,
+        "y": 88,
+        "left": 106.875,
+        "top": 48.922499,
+        "right": 108.28125,
+        "bottom": 47.989922,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 205,
+        "y": 88,
+        "left": 108.28125,
+        "top": 48.922499,
+        "right": 109.6875,
+        "bottom": 47.989922,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 206,
+        "y": 88,
+        "left": 109.6875,
+        "top": 48.922499,
+        "right": 111.09375,
+        "bottom": 47.989922,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 207,
+        "y": 88,
+        "left": 111.09375,
+        "top": 48.922499,
+        "right": 112.5,
+        "bottom": 47.989922,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 208,
+        "y": 88,
+        "left": 112.5,
+        "top": 48.922499,
+        "right": 113.90625,
+        "bottom": 47.989922,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 88,
+        "left": 113.90625,
+        "top": 48.922499,
+        "right": 115.3125,
+        "bottom": 47.989922,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 193,
+        "y": 89,
+        "left": 91.40625,
+        "top": 47.989922,
+        "right": 92.8125,
+        "bottom": 47.040182,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 194,
+        "y": 89,
+        "left": 92.8125,
+        "top": 47.989922,
+        "right": 94.21875,
+        "bottom": 47.040182,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 195,
+        "y": 89,
+        "left": 94.21875,
+        "top": 47.989922,
+        "right": 95.625,
+        "bottom": 47.040182,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 196,
+        "y": 89,
+        "left": 95.625,
+        "top": 47.989922,
+        "right": 97.03125,
+        "bottom": 47.040182,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 197,
+        "y": 89,
+        "left": 97.03125,
+        "top": 47.989922,
+        "right": 98.4375,
+        "bottom": 47.040182,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 198,
+        "y": 89,
+        "left": 98.4375,
+        "top": 47.989922,
+        "right": 99.84375,
+        "bottom": 47.040182,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 89,
+        "left": 99.84375,
+        "top": 47.989922,
+        "right": 101.25,
+        "bottom": 47.040182,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 89,
+        "left": 101.25,
+        "top": 47.989922,
+        "right": 102.65625,
+        "bottom": 47.040182,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 201,
+        "y": 89,
+        "left": 102.65625,
+        "top": 47.989922,
+        "right": 104.0625,
+        "bottom": 47.040182,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 202,
+        "y": 89,
+        "left": 104.0625,
+        "top": 47.989922,
+        "right": 105.46875,
+        "bottom": 47.040182,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 203,
+        "y": 89,
+        "left": 105.46875,
+        "top": 47.989922,
+        "right": 106.875,
+        "bottom": 47.040182,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 204,
+        "y": 89,
+        "left": 106.875,
+        "top": 47.989922,
+        "right": 108.28125,
+        "bottom": 47.040182,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 205,
+        "y": 89,
+        "left": 108.28125,
+        "top": 47.989922,
+        "right": 109.6875,
+        "bottom": 47.040182,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 206,
+        "y": 89,
+        "left": 109.6875,
+        "top": 47.989922,
+        "right": 111.09375,
+        "bottom": 47.040182,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 207,
+        "y": 89,
+        "left": 111.09375,
+        "top": 47.989922,
+        "right": 112.5,
+        "bottom": 47.040182,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 208,
+        "y": 89,
+        "left": 112.5,
+        "top": 47.989922,
+        "right": 113.90625,
+        "bottom": 47.040182,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 89,
+        "left": 113.90625,
+        "top": 47.989922,
+        "right": 115.3125,
+        "bottom": 47.040182,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 193,
+        "y": 90,
+        "left": 91.40625,
+        "top": 47.040182,
+        "right": 92.8125,
+        "bottom": 46.073231,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 194,
+        "y": 90,
+        "left": 92.8125,
+        "top": 47.040182,
+        "right": 94.21875,
+        "bottom": 46.073231,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 195,
+        "y": 90,
+        "left": 94.21875,
+        "top": 47.040182,
+        "right": 95.625,
+        "bottom": 46.073231,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 196,
+        "y": 90,
+        "left": 95.625,
+        "top": 47.040182,
+        "right": 97.03125,
+        "bottom": 46.073231,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 197,
+        "y": 90,
+        "left": 97.03125,
+        "top": 47.040182,
+        "right": 98.4375,
+        "bottom": 46.073231,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 198,
+        "y": 90,
+        "left": 98.4375,
+        "top": 47.040182,
+        "right": 99.84375,
+        "bottom": 46.073231,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 90,
+        "left": 99.84375,
+        "top": 47.040182,
+        "right": 101.25,
+        "bottom": 46.073231,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 90,
+        "left": 101.25,
+        "top": 47.040182,
+        "right": 102.65625,
+        "bottom": 46.073231,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 201,
+        "y": 90,
+        "left": 102.65625,
+        "top": 47.040182,
+        "right": 104.0625,
+        "bottom": 46.073231,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 202,
+        "y": 90,
+        "left": 104.0625,
+        "top": 47.040182,
+        "right": 105.46875,
+        "bottom": 46.073231,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 203,
+        "y": 90,
+        "left": 105.46875,
+        "top": 47.040182,
+        "right": 106.875,
+        "bottom": 46.073231,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 204,
+        "y": 90,
+        "left": 106.875,
+        "top": 47.040182,
+        "right": 108.28125,
+        "bottom": 46.073231,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 205,
+        "y": 90,
+        "left": 108.28125,
+        "top": 47.040182,
+        "right": 109.6875,
+        "bottom": 46.073231,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 206,
+        "y": 90,
+        "left": 109.6875,
+        "top": 47.040182,
+        "right": 111.09375,
+        "bottom": 46.073231,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 207,
+        "y": 90,
+        "left": 111.09375,
+        "top": 47.040182,
+        "right": 112.5,
+        "bottom": 46.073231,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 208,
+        "y": 90,
+        "left": 112.5,
+        "top": 47.040182,
+        "right": 113.90625,
+        "bottom": 46.073231,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 209,
+        "y": 90,
+        "left": 113.90625,
+        "top": 47.040182,
+        "right": 115.3125,
+        "bottom": 46.073231,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 194,
+        "y": 91,
+        "left": 92.8125,
+        "top": 46.073231,
+        "right": 94.21875,
+        "bottom": 45.089036,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 195,
+        "y": 91,
+        "left": 94.21875,
+        "top": 46.073231,
+        "right": 95.625,
+        "bottom": 45.089036,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 196,
+        "y": 91,
+        "left": 95.625,
+        "top": 46.073231,
+        "right": 97.03125,
+        "bottom": 45.089036,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 197,
+        "y": 91,
+        "left": 97.03125,
+        "top": 46.073231,
+        "right": 98.4375,
+        "bottom": 45.089036,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 198,
+        "y": 91,
+        "left": 98.4375,
+        "top": 46.073231,
+        "right": 99.84375,
+        "bottom": 45.089036,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 91,
+        "left": 99.84375,
+        "top": 46.073231,
+        "right": 101.25,
+        "bottom": 45.089036,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 91,
+        "left": 101.25,
+        "top": 46.073231,
+        "right": 102.65625,
+        "bottom": 45.089036,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 201,
+        "y": 91,
+        "left": 102.65625,
+        "top": 46.073231,
+        "right": 104.0625,
+        "bottom": 45.089036,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 202,
+        "y": 91,
+        "left": 104.0625,
+        "top": 46.073231,
+        "right": 105.46875,
+        "bottom": 45.089036,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 203,
+        "y": 91,
+        "left": 105.46875,
+        "top": 46.073231,
+        "right": 106.875,
+        "bottom": 45.089036,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 204,
+        "y": 91,
+        "left": 106.875,
+        "top": 46.073231,
+        "right": 108.28125,
+        "bottom": 45.089036,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 205,
+        "y": 91,
+        "left": 108.28125,
+        "top": 46.073231,
+        "right": 109.6875,
+        "bottom": 45.089036,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 206,
+        "y": 91,
+        "left": 109.6875,
+        "top": 46.073231,
+        "right": 111.09375,
+        "bottom": 45.089036,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 208,
+        "y": 91,
+        "left": 112.5,
+        "top": 46.073231,
+        "right": 113.90625,
+        "bottom": 45.089036,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 196,
+        "y": 92,
+        "left": 95.625,
+        "top": 45.089036,
+        "right": 97.03125,
+        "bottom": 44.087585,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 197,
+        "y": 92,
+        "left": 97.03125,
+        "top": 45.089036,
+        "right": 98.4375,
+        "bottom": 44.087585,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 198,
+        "y": 92,
+        "left": 98.4375,
+        "top": 45.089036,
+        "right": 99.84375,
+        "bottom": 44.087585,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 92,
+        "left": 99.84375,
+        "top": 45.089036,
+        "right": 101.25,
+        "bottom": 44.087585,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 92,
+        "left": 101.25,
+        "top": 45.089036,
+        "right": 102.65625,
+        "bottom": 44.087585,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 201,
+        "y": 92,
+        "left": 102.65625,
+        "top": 45.089036,
+        "right": 104.0625,
+        "bottom": 44.087585,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 202,
+        "y": 92,
+        "left": 104.0625,
+        "top": 45.089036,
+        "right": 105.46875,
+        "bottom": 44.087585,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 203,
+        "y": 92,
+        "left": 105.46875,
+        "top": 45.089036,
+        "right": 106.875,
+        "bottom": 44.087585,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 204,
+        "y": 92,
+        "left": 106.875,
+        "top": 45.089036,
+        "right": 108.28125,
+        "bottom": 44.087585,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 205,
+        "y": 92,
+        "left": 108.28125,
+        "top": 45.089036,
+        "right": 109.6875,
+        "bottom": 44.087585,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 206,
+        "y": 92,
+        "left": 109.6875,
+        "top": 45.089036,
+        "right": 111.09375,
+        "bottom": 44.087585,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 197,
+        "y": 93,
+        "left": 97.03125,
+        "top": 44.087585,
+        "right": 98.4375,
+        "bottom": 43.068888,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 198,
+        "y": 93,
+        "left": 98.4375,
+        "top": 44.087585,
+        "right": 99.84375,
+        "bottom": 43.068888,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 199,
+        "y": 93,
+        "left": 99.84375,
+        "top": 44.087585,
+        "right": 101.25,
+        "bottom": 43.068888,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 200,
+        "y": 93,
+        "left": 101.25,
+        "top": 44.087585,
+        "right": 102.65625,
+        "bottom": 43.068888,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 201,
+        "y": 93,
+        "left": 102.65625,
+        "top": 44.087585,
+        "right": 104.0625,
+        "bottom": 43.068888,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 202,
+        "y": 93,
+        "left": 104.0625,
+        "top": 44.087585,
+        "right": 105.46875,
+        "bottom": 43.068888,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 203,
+        "y": 93,
+        "left": 105.46875,
+        "top": 44.087585,
+        "right": 106.875,
+        "bottom": 43.068888,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 204,
+        "y": 93,
+        "left": 106.875,
+        "top": 44.087585,
+        "right": 108.28125,
+        "bottom": 43.068888,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 205,
+        "y": 93,
+        "left": 108.28125,
+        "top": 44.087585,
+        "right": 109.6875,
+        "bottom": 43.068888,
+        "countries": [
+            "mongolia"
+        ]
+    },
+    {
+        "x": 202,
+        "y": 94,
+        "left": 104.0625,
+        "top": 43.068888,
+        "right": 105.46875,
+        "bottom": 42.032974,
+        "countries": [
+            "mongolia"
+        ]
+    }
+]

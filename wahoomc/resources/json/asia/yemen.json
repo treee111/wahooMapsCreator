@@ -1,0 +1,432 @@
+[
+    {
+        "x": 158,
+        "y": 118,
+        "left": 42.1875,
+        "top": 13.923404,
+        "right": 43.59375,
+        "bottom": 12.554564,
+        "countries": [
+            "yemen",
+            "ethiopia",
+            "djibouti",
+            "eritrea"
+        ]
+    },
+    {
+        "x": 157,
+        "y": 116,
+        "left": 40.78125,
+        "top": 16.636192,
+        "right": 42.1875,
+        "bottom": 15.284185,
+        "countries": [
+            "saudi_arabia",
+            "yemen",
+            "eritrea"
+        ]
+    },
+    {
+        "x": 157,
+        "y": 117,
+        "left": 40.78125,
+        "top": 15.284185,
+        "right": 42.1875,
+        "bottom": 13.923404,
+        "countries": [
+            "yemen",
+            "ethiopia",
+            "eritrea"
+        ]
+    },
+    {
+        "x": 158,
+        "y": 115,
+        "left": 42.1875,
+        "top": 17.978733,
+        "right": 43.59375,
+        "bottom": 16.636192,
+        "countries": [
+            "saudi_arabia",
+            "israel",
+            "yemen"
+        ]
+    },
+    {
+        "x": 164,
+        "y": 114,
+        "left": 50.625,
+        "top": 19.311143,
+        "right": 52.03125,
+        "bottom": 17.978733,
+        "countries": [
+            "saudi_arabia",
+            "oman",
+            "yemen"
+        ]
+    },
+    {
+        "x": 165,
+        "y": 114,
+        "left": 52.03125,
+        "top": 19.311143,
+        "right": 53.4375,
+        "bottom": 17.978733,
+        "countries": [
+            "saudi_arabia",
+            "oman",
+            "yemen"
+        ]
+    },
+    {
+        "x": 165,
+        "y": 115,
+        "left": 52.03125,
+        "top": 17.978733,
+        "right": 53.4375,
+        "bottom": 16.636192,
+        "countries": [
+            "yemen",
+            "oman"
+        ]
+    },
+    {
+        "x": 162,
+        "y": 114,
+        "left": 47.8125,
+        "top": 19.311143,
+        "right": 49.21875,
+        "bottom": 17.978733,
+        "countries": [
+            "saudi_arabia",
+            "yemen"
+        ]
+    },
+    {
+        "x": 163,
+        "y": 114,
+        "left": 49.21875,
+        "top": 19.311143,
+        "right": 50.625,
+        "bottom": 17.978733,
+        "countries": [
+            "saudi_arabia",
+            "yemen"
+        ]
+    },
+    {
+        "x": 159,
+        "y": 115,
+        "left": 43.59375,
+        "top": 17.978733,
+        "right": 45.0,
+        "bottom": 16.636192,
+        "countries": [
+            "saudi_arabia",
+            "yemen"
+        ]
+    },
+    {
+        "x": 160,
+        "y": 115,
+        "left": 45.0,
+        "top": 17.978733,
+        "right": 46.40625,
+        "bottom": 16.636192,
+        "countries": [
+            "saudi_arabia",
+            "yemen"
+        ]
+    },
+    {
+        "x": 161,
+        "y": 115,
+        "left": 46.40625,
+        "top": 17.978733,
+        "right": 47.8125,
+        "bottom": 16.636192,
+        "countries": [
+            "saudi_arabia",
+            "yemen"
+        ]
+    },
+    {
+        "x": 162,
+        "y": 115,
+        "left": 47.8125,
+        "top": 17.978733,
+        "right": 49.21875,
+        "bottom": 16.636192,
+        "countries": [
+            "saudi_arabia",
+            "yemen"
+        ]
+    },
+    {
+        "x": 158,
+        "y": 116,
+        "left": 42.1875,
+        "top": 16.636192,
+        "right": 43.59375,
+        "bottom": 15.284185,
+        "countries": [
+            "saudi_arabia",
+            "yemen"
+        ]
+    },
+    {
+        "x": 160,
+        "y": 116,
+        "left": 45.0,
+        "top": 16.636192,
+        "right": 46.40625,
+        "bottom": 15.284185,
+        "countries": [
+            "saudi_arabia",
+            "yemen"
+        ]
+    },
+    {
+        "x": 161,
+        "y": 116,
+        "left": 46.40625,
+        "top": 16.636192,
+        "right": 47.8125,
+        "bottom": 15.284185,
+        "countries": [
+            "saudi_arabia",
+            "yemen"
+        ]
+    },
+    {
+        "x": 163,
+        "y": 115,
+        "left": 49.21875,
+        "top": 17.978733,
+        "right": 50.625,
+        "bottom": 16.636192,
+        "countries": [
+            "yemen"
+        ]
+    },
+    {
+        "x": 164,
+        "y": 115,
+        "left": 50.625,
+        "top": 17.978733,
+        "right": 52.03125,
+        "bottom": 16.636192,
+        "countries": [
+            "yemen"
+        ]
+    },
+    {
+        "x": 159,
+        "y": 116,
+        "left": 43.59375,
+        "top": 16.636192,
+        "right": 45.0,
+        "bottom": 15.284185,
+        "countries": [
+            "yemen"
+        ]
+    },
+    {
+        "x": 162,
+        "y": 116,
+        "left": 47.8125,
+        "top": 16.636192,
+        "right": 49.21875,
+        "bottom": 15.284185,
+        "countries": [
+            "yemen"
+        ]
+    },
+    {
+        "x": 163,
+        "y": 116,
+        "left": 49.21875,
+        "top": 16.636192,
+        "right": 50.625,
+        "bottom": 15.284185,
+        "countries": [
+            "yemen"
+        ]
+    },
+    {
+        "x": 164,
+        "y": 116,
+        "left": 50.625,
+        "top": 16.636192,
+        "right": 52.03125,
+        "bottom": 15.284185,
+        "countries": [
+            "yemen"
+        ]
+    },
+    {
+        "x": 165,
+        "y": 116,
+        "left": 52.03125,
+        "top": 16.636192,
+        "right": 53.4375,
+        "bottom": 15.284185,
+        "countries": [
+            "yemen"
+        ]
+    },
+    {
+        "x": 158,
+        "y": 117,
+        "left": 42.1875,
+        "top": 15.284185,
+        "right": 43.59375,
+        "bottom": 13.923404,
+        "countries": [
+            "yemen"
+        ]
+    },
+    {
+        "x": 159,
+        "y": 117,
+        "left": 43.59375,
+        "top": 15.284185,
+        "right": 45.0,
+        "bottom": 13.923404,
+        "countries": [
+            "yemen"
+        ]
+    },
+    {
+        "x": 160,
+        "y": 117,
+        "left": 45.0,
+        "top": 15.284185,
+        "right": 46.40625,
+        "bottom": 13.923404,
+        "countries": [
+            "yemen"
+        ]
+    },
+    {
+        "x": 161,
+        "y": 117,
+        "left": 46.40625,
+        "top": 15.284185,
+        "right": 47.8125,
+        "bottom": 13.923404,
+        "countries": [
+            "yemen"
+        ]
+    },
+    {
+        "x": 162,
+        "y": 117,
+        "left": 47.8125,
+        "top": 15.284185,
+        "right": 49.21875,
+        "bottom": 13.923404,
+        "countries": [
+            "yemen"
+        ]
+    },
+    {
+        "x": 163,
+        "y": 117,
+        "left": 49.21875,
+        "top": 15.284185,
+        "right": 50.625,
+        "bottom": 13.923404,
+        "countries": [
+            "yemen"
+        ]
+    },
+    {
+        "x": 164,
+        "y": 117,
+        "left": 50.625,
+        "top": 15.284185,
+        "right": 52.03125,
+        "bottom": 13.923404,
+        "countries": [
+            "yemen"
+        ]
+    },
+    {
+        "x": 159,
+        "y": 118,
+        "left": 43.59375,
+        "top": 13.923404,
+        "right": 45.0,
+        "bottom": 12.554564,
+        "countries": [
+            "yemen"
+        ]
+    },
+    {
+        "x": 160,
+        "y": 118,
+        "left": 45.0,
+        "top": 13.923404,
+        "right": 46.40625,
+        "bottom": 12.554564,
+        "countries": [
+            "yemen"
+        ]
+    },
+    {
+        "x": 161,
+        "y": 118,
+        "left": 46.40625,
+        "top": 13.923404,
+        "right": 47.8125,
+        "bottom": 12.554564,
+        "countries": [
+            "yemen"
+        ]
+    },
+    {
+        "x": 165,
+        "y": 118,
+        "left": 52.03125,
+        "top": 13.923404,
+        "right": 53.4375,
+        "bottom": 12.554564,
+        "countries": [
+            "yemen"
+        ]
+    },
+    {
+        "x": 166,
+        "y": 118,
+        "left": 53.4375,
+        "top": 13.923404,
+        "right": 54.84375,
+        "bottom": 12.554564,
+        "countries": [
+            "yemen"
+        ]
+    },
+    {
+        "x": 165,
+        "y": 119,
+        "left": 52.03125,
+        "top": 12.554564,
+        "right": 53.4375,
+        "bottom": 11.178402,
+        "countries": [
+            "yemen"
+        ]
+    },
+    {
+        "x": 166,
+        "y": 119,
+        "left": 53.4375,
+        "top": 12.554564,
+        "right": 54.84375,
+        "bottom": 11.178402,
+        "countries": [
+            "yemen"
+        ]
+    }
+]

@@ -1,0 +1,646 @@
+[
+    {
+        "x": 141,
+        "y": 96,
+        "left": 18.28125,
+        "top": 40.979898,
+        "right": 19.6875,
+        "bottom": 39.909736,
+        "countries": [
+            "albania",
+            "italy"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 89,
+        "left": 11.25,
+        "top": 47.989922,
+        "right": 12.65625,
+        "bottom": 47.040182,
+        "countries": [
+            "italy",
+            "germany",
+            "austria"
+        ]
+    },
+    {
+        "x": 134,
+        "y": 90,
+        "left": 8.4375,
+        "top": 47.040182,
+        "right": 9.84375,
+        "bottom": 46.073231,
+        "countries": [
+            "italy",
+            "switzerland",
+            "austria"
+        ]
+    },
+    {
+        "x": 135,
+        "y": 90,
+        "left": 9.84375,
+        "top": 47.040182,
+        "right": 11.25,
+        "bottom": 46.073231,
+        "countries": [
+            "italy",
+            "switzerland",
+            "austria"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 90,
+        "left": 11.25,
+        "top": 47.040182,
+        "right": 12.65625,
+        "bottom": 46.073231,
+        "countries": [
+            "italy",
+            "austria"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 90,
+        "left": 12.65625,
+        "top": 47.040182,
+        "right": 14.0625,
+        "bottom": 46.073231,
+        "countries": [
+            "italy",
+            "slovenia",
+            "austria"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 91,
+        "left": 12.65625,
+        "top": 46.073231,
+        "right": 14.0625,
+        "bottom": 45.089036,
+        "countries": [
+            "slovenia",
+            "croatia",
+            "italy"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 94,
+        "left": 15.46875,
+        "top": 43.068888,
+        "right": 16.875,
+        "bottom": 42.032974,
+        "countries": [
+            "croatia",
+            "italy"
+        ]
+    },
+    {
+        "x": 132,
+        "y": 91,
+        "left": 5.625,
+        "top": 46.073231,
+        "right": 7.03125,
+        "bottom": 45.089036,
+        "countries": [
+            "france",
+            "switzerland",
+            "italy"
+        ]
+    },
+    {
+        "x": 133,
+        "y": 91,
+        "left": 7.03125,
+        "top": 46.073231,
+        "right": 8.4375,
+        "bottom": 45.089036,
+        "countries": [
+            "france",
+            "switzerland",
+            "italy"
+        ]
+    },
+    {
+        "x": 132,
+        "y": 92,
+        "left": 5.625,
+        "top": 45.089036,
+        "right": 7.03125,
+        "bottom": 44.087585,
+        "countries": [
+            "france",
+            "italy"
+        ]
+    },
+    {
+        "x": 134,
+        "y": 94,
+        "left": 8.4375,
+        "top": 43.068888,
+        "right": 9.84375,
+        "bottom": 42.032974,
+        "countries": [
+            "france",
+            "italy"
+        ]
+    },
+    {
+        "x": 134,
+        "y": 95,
+        "left": 8.4375,
+        "top": 42.032974,
+        "right": 9.84375,
+        "bottom": 40.979898,
+        "countries": [
+            "france",
+            "italy"
+        ]
+    },
+    {
+        "x": 133,
+        "y": 92,
+        "left": 7.03125,
+        "top": 45.089036,
+        "right": 8.4375,
+        "bottom": 44.087585,
+        "countries": [
+            "france",
+            "italy"
+        ]
+    },
+    {
+        "x": 133,
+        "y": 93,
+        "left": 7.03125,
+        "top": 44.087585,
+        "right": 8.4375,
+        "bottom": 43.068888,
+        "countries": [
+            "france",
+            "monaco",
+            "italy"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 97,
+        "left": 18.28125,
+        "top": 39.909736,
+        "right": 19.6875,
+        "bottom": 38.822591,
+        "countries": [
+            "greece",
+            "italy"
+        ]
+    },
+    {
+        "x": 133,
+        "y": 90,
+        "left": 7.03125,
+        "top": 47.040182,
+        "right": 8.4375,
+        "bottom": 46.073231,
+        "countries": [
+            "switzerland",
+            "italy"
+        ]
+    },
+    {
+        "x": 134,
+        "y": 91,
+        "left": 8.4375,
+        "top": 46.073231,
+        "right": 9.84375,
+        "bottom": 45.089036,
+        "countries": [
+            "switzerland",
+            "italy"
+        ]
+    },
+    {
+        "x": 135,
+        "y": 91,
+        "left": 9.84375,
+        "top": 46.073231,
+        "right": 11.25,
+        "bottom": 45.089036,
+        "countries": [
+            "italy"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 91,
+        "left": 11.25,
+        "top": 46.073231,
+        "right": 12.65625,
+        "bottom": 45.089036,
+        "countries": [
+            "italy"
+        ]
+    },
+    {
+        "x": 134,
+        "y": 92,
+        "left": 8.4375,
+        "top": 45.089036,
+        "right": 9.84375,
+        "bottom": 44.087585,
+        "countries": [
+            "italy"
+        ]
+    },
+    {
+        "x": 135,
+        "y": 92,
+        "left": 9.84375,
+        "top": 45.089036,
+        "right": 11.25,
+        "bottom": 44.087585,
+        "countries": [
+            "italy"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 92,
+        "left": 11.25,
+        "top": 45.089036,
+        "right": 12.65625,
+        "bottom": 44.087585,
+        "countries": [
+            "italy"
+        ]
+    },
+    {
+        "x": 134,
+        "y": 93,
+        "left": 8.4375,
+        "top": 44.087585,
+        "right": 9.84375,
+        "bottom": 43.068888,
+        "countries": [
+            "italy"
+        ]
+    },
+    {
+        "x": 135,
+        "y": 93,
+        "left": 9.84375,
+        "top": 44.087585,
+        "right": 11.25,
+        "bottom": 43.068888,
+        "countries": [
+            "italy"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 93,
+        "left": 11.25,
+        "top": 44.087585,
+        "right": 12.65625,
+        "bottom": 43.068888,
+        "countries": [
+            "san_marino",
+            "italy"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 93,
+        "left": 12.65625,
+        "top": 44.087585,
+        "right": 14.0625,
+        "bottom": 43.068888,
+        "countries": [
+            "italy"
+        ]
+    },
+    {
+        "x": 135,
+        "y": 94,
+        "left": 9.84375,
+        "top": 43.068888,
+        "right": 11.25,
+        "bottom": 42.032974,
+        "countries": [
+            "italy"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 94,
+        "left": 11.25,
+        "top": 43.068888,
+        "right": 12.65625,
+        "bottom": 42.032974,
+        "countries": [
+            "italy"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 94,
+        "left": 12.65625,
+        "top": 43.068888,
+        "right": 14.0625,
+        "bottom": 42.032974,
+        "countries": [
+            "italy"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 94,
+        "left": 14.0625,
+        "top": 43.068888,
+        "right": 15.46875,
+        "bottom": 42.032974,
+        "countries": [
+            "italy"
+        ]
+    },
+    {
+        "x": 133,
+        "y": 95,
+        "left": 7.03125,
+        "top": 42.032974,
+        "right": 8.4375,
+        "bottom": 40.979898,
+        "countries": [
+            "italy"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 95,
+        "left": 11.25,
+        "top": 42.032974,
+        "right": 12.65625,
+        "bottom": 40.979898,
+        "countries": [
+            "vatican_city",
+            "italy"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 95,
+        "left": 12.65625,
+        "top": 42.032974,
+        "right": 14.0625,
+        "bottom": 40.979898,
+        "countries": [
+            "italy"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 95,
+        "left": 14.0625,
+        "top": 42.032974,
+        "right": 15.46875,
+        "bottom": 40.979898,
+        "countries": [
+            "italy"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 95,
+        "left": 15.46875,
+        "top": 42.032974,
+        "right": 16.875,
+        "bottom": 40.979898,
+        "countries": [
+            "italy"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 95,
+        "left": 16.875,
+        "top": 42.032974,
+        "right": 18.28125,
+        "bottom": 40.979898,
+        "countries": [
+            "italy"
+        ]
+    },
+    {
+        "x": 133,
+        "y": 96,
+        "left": 7.03125,
+        "top": 40.979898,
+        "right": 8.4375,
+        "bottom": 39.909736,
+        "countries": [
+            "italy"
+        ]
+    },
+    {
+        "x": 134,
+        "y": 96,
+        "left": 8.4375,
+        "top": 40.979898,
+        "right": 9.84375,
+        "bottom": 39.909736,
+        "countries": [
+            "italy"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 96,
+        "left": 12.65625,
+        "top": 40.979898,
+        "right": 14.0625,
+        "bottom": 39.909736,
+        "countries": [
+            "italy"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 96,
+        "left": 14.0625,
+        "top": 40.979898,
+        "right": 15.46875,
+        "bottom": 39.909736,
+        "countries": [
+            "italy"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 96,
+        "left": 15.46875,
+        "top": 40.979898,
+        "right": 16.875,
+        "bottom": 39.909736,
+        "countries": [
+            "italy"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 96,
+        "left": 16.875,
+        "top": 40.979898,
+        "right": 18.28125,
+        "bottom": 39.909736,
+        "countries": [
+            "italy"
+        ]
+    },
+    {
+        "x": 133,
+        "y": 97,
+        "left": 7.03125,
+        "top": 39.909736,
+        "right": 8.4375,
+        "bottom": 38.822591,
+        "countries": [
+            "italy"
+        ]
+    },
+    {
+        "x": 134,
+        "y": 97,
+        "left": 8.4375,
+        "top": 39.909736,
+        "right": 9.84375,
+        "bottom": 38.822591,
+        "countries": [
+            "italy"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 97,
+        "left": 15.46875,
+        "top": 39.909736,
+        "right": 16.875,
+        "bottom": 38.822591,
+        "countries": [
+            "italy"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 97,
+        "left": 16.875,
+        "top": 39.909736,
+        "right": 18.28125,
+        "bottom": 38.822591,
+        "countries": [
+            "italy"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 98,
+        "left": 11.25,
+        "top": 38.822591,
+        "right": 12.65625,
+        "bottom": 37.71859,
+        "countries": [
+            "italy"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 98,
+        "left": 12.65625,
+        "top": 38.822591,
+        "right": 14.0625,
+        "bottom": 37.71859,
+        "countries": [
+            "italy"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 98,
+        "left": 14.0625,
+        "top": 38.822591,
+        "right": 15.46875,
+        "bottom": 37.71859,
+        "countries": [
+            "italy"
+        ]
+    },
+    {
+        "x": 139,
+        "y": 98,
+        "left": 15.46875,
+        "top": 38.822591,
+        "right": 16.875,
+        "bottom": 37.71859,
+        "countries": [
+            "italy"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 99,
+        "left": 11.25,
+        "top": 37.71859,
+        "right": 12.65625,
+        "bottom": 36.597889,
+        "countries": [
+            "italy"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 99,
+        "left": 12.65625,
+        "top": 37.71859,
+        "right": 14.0625,
+        "bottom": 36.597889,
+        "countries": [
+            "italy"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 99,
+        "left": 14.0625,
+        "top": 37.71859,
+        "right": 15.46875,
+        "bottom": 36.597889,
+        "countries": [
+            "italy"
+        ]
+    },
+    {
+        "x": 136,
+        "y": 100,
+        "left": 11.25,
+        "top": 36.597889,
+        "right": 12.65625,
+        "bottom": 35.46067,
+        "countries": [
+            "italy"
+        ]
+    },
+    {
+        "x": 137,
+        "y": 100,
+        "left": 12.65625,
+        "top": 36.597889,
+        "right": 14.0625,
+        "bottom": 35.46067,
+        "countries": [
+            "italy"
+        ]
+    }
+]

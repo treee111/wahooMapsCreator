@@ -1,0 +1,242 @@
+[
+    {
+        "x": 84,
+        "y": 124,
+        "left": -61.875,
+        "top": 5.615986,
+        "right": -60.46875,
+        "bottom": 4.214943,
+        "countries": [
+            "brazil",
+            "venezuela",
+            "guyana"
+        ]
+    },
+    {
+        "x": 85,
+        "y": 124,
+        "left": -60.46875,
+        "top": 5.615986,
+        "right": -59.0625,
+        "bottom": 4.214943,
+        "countries": [
+            "brazil",
+            "guyana"
+        ]
+    },
+    {
+        "x": 85,
+        "y": 125,
+        "left": -60.46875,
+        "top": 4.214943,
+        "right": -59.0625,
+        "bottom": 2.811371,
+        "countries": [
+            "brazil",
+            "guyana"
+        ]
+    },
+    {
+        "x": 85,
+        "y": 126,
+        "left": -60.46875,
+        "top": 2.811371,
+        "right": -59.0625,
+        "bottom": 1.406109,
+        "countries": [
+            "brazil",
+            "guyana"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 126,
+        "left": -59.0625,
+        "top": 2.811371,
+        "right": -57.65625,
+        "bottom": 1.406109,
+        "countries": [
+            "brazil",
+            "guyana"
+        ]
+    },
+    {
+        "x": 87,
+        "y": 126,
+        "left": -57.65625,
+        "top": 2.811371,
+        "right": -56.25,
+        "bottom": 1.406109,
+        "countries": [
+            "brazil",
+            "guyana",
+            "suriname"
+        ]
+    },
+    {
+        "x": 85,
+        "y": 127,
+        "left": -60.46875,
+        "top": 1.406109,
+        "right": -59.0625,
+        "bottom": 0.0,
+        "countries": [
+            "brazil",
+            "guyana"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 127,
+        "left": -59.0625,
+        "top": 1.406109,
+        "right": -57.65625,
+        "bottom": 0.0,
+        "countries": [
+            "brazil",
+            "guyana"
+        ]
+    },
+    {
+        "x": 85,
+        "y": 121,
+        "left": -60.46875,
+        "top": 9.795678,
+        "right": -59.0625,
+        "bottom": 8.407168,
+        "countries": [
+            "venezuela",
+            "guyana"
+        ]
+    },
+    {
+        "x": 84,
+        "y": 122,
+        "left": -61.875,
+        "top": 8.407168,
+        "right": -60.46875,
+        "bottom": 7.013668,
+        "countries": [
+            "venezuela",
+            "guyana"
+        ]
+    },
+    {
+        "x": 85,
+        "y": 122,
+        "left": -60.46875,
+        "top": 8.407168,
+        "right": -59.0625,
+        "bottom": 7.013668,
+        "countries": [
+            "venezuela",
+            "guyana"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 122,
+        "left": -59.0625,
+        "top": 8.407168,
+        "right": -57.65625,
+        "bottom": 7.013668,
+        "countries": [
+            "guyana"
+        ]
+    },
+    {
+        "x": 84,
+        "y": 123,
+        "left": -61.875,
+        "top": 7.013668,
+        "right": -60.46875,
+        "bottom": 5.615986,
+        "countries": [
+            "venezuela",
+            "guyana"
+        ]
+    },
+    {
+        "x": 85,
+        "y": 123,
+        "left": -60.46875,
+        "top": 7.013668,
+        "right": -59.0625,
+        "bottom": 5.615986,
+        "countries": [
+            "venezuela",
+            "guyana"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 123,
+        "left": -59.0625,
+        "top": 7.013668,
+        "right": -57.65625,
+        "bottom": 5.615986,
+        "countries": [
+            "guyana"
+        ]
+    },
+    {
+        "x": 87,
+        "y": 123,
+        "left": -57.65625,
+        "top": 7.013668,
+        "right": -56.25,
+        "bottom": 5.615986,
+        "countries": [
+            "guyana",
+            "suriname"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 124,
+        "left": -59.0625,
+        "top": 5.615986,
+        "right": -57.65625,
+        "bottom": 4.214943,
+        "countries": [
+            "guyana",
+            "suriname"
+        ]
+    },
+    {
+        "x": 87,
+        "y": 124,
+        "left": -57.65625,
+        "top": 5.615986,
+        "right": -56.25,
+        "bottom": 4.214943,
+        "countries": [
+            "guyana",
+            "suriname"
+        ]
+    },
+    {
+        "x": 86,
+        "y": 125,
+        "left": -59.0625,
+        "top": 4.214943,
+        "right": -57.65625,
+        "bottom": 2.811371,
+        "countries": [
+            "guyana",
+            "suriname"
+        ]
+    },
+    {
+        "x": 87,
+        "y": 125,
+        "left": -57.65625,
+        "top": 4.214943,
+        "right": -56.25,
+        "bottom": 2.811371,
+        "countries": [
+            "guyana",
+            "suriname"
+        ]
+    }
+]

@@ -1,0 +1,272 @@
+[
+    {
+        "x": 157,
+        "y": 99,
+        "left": 40.78125,
+        "top": 37.71859,
+        "right": 42.1875,
+        "bottom": 36.597889,
+        "countries": [
+            "turkey",
+            "syria",
+            "iraq"
+        ]
+    },
+    {
+        "x": 158,
+        "y": 99,
+        "left": 42.1875,
+        "top": 37.71859,
+        "right": 43.59375,
+        "bottom": 36.597889,
+        "countries": [
+            "turkey",
+            "syria",
+            "iraq"
+        ]
+    },
+    {
+        "x": 157,
+        "y": 100,
+        "left": 40.78125,
+        "top": 36.597889,
+        "right": 42.1875,
+        "bottom": 35.46067,
+        "countries": [
+            "syria",
+            "iraq"
+        ]
+    },
+    {
+        "x": 156,
+        "y": 101,
+        "left": 39.375,
+        "top": 35.46067,
+        "right": 40.78125,
+        "bottom": 34.307144,
+        "countries": [
+            "syria",
+            "iraq"
+        ]
+    },
+    {
+        "x": 157,
+        "y": 101,
+        "left": 40.78125,
+        "top": 35.46067,
+        "right": 42.1875,
+        "bottom": 34.307144,
+        "countries": [
+            "syria",
+            "iraq"
+        ]
+    },
+    {
+        "x": 155,
+        "y": 102,
+        "left": 37.96875,
+        "top": 34.307144,
+        "right": 39.375,
+        "bottom": 33.137551,
+        "countries": [
+            "jordan",
+            "syria",
+            "iraq"
+        ]
+    },
+    {
+        "x": 156,
+        "y": 102,
+        "left": 39.375,
+        "top": 34.307144,
+        "right": 40.78125,
+        "bottom": 33.137551,
+        "countries": [
+            "syria",
+            "iraq"
+        ]
+    },
+    {
+        "x": 155,
+        "y": 103,
+        "left": 37.96875,
+        "top": 33.137551,
+        "right": 39.375,
+        "bottom": 31.952162,
+        "countries": [
+            "saudi_arabia",
+            "jordan",
+            "syria",
+            "iraq"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 102,
+        "left": 35.15625,
+        "top": 34.307144,
+        "right": 36.5625,
+        "bottom": 33.137551,
+        "countries": [
+            "lebanon",
+            "syria",
+            "israel"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 103,
+        "left": 35.15625,
+        "top": 33.137551,
+        "right": 36.5625,
+        "bottom": 31.952162,
+        "countries": [
+            "lebanon",
+            "syria",
+            "jordan",
+            "israel",
+            "palestina"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 103,
+        "left": 36.5625,
+        "top": 33.137551,
+        "right": 37.96875,
+        "bottom": 31.952162,
+        "countries": [
+            "jordan",
+            "syria"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 101,
+        "left": 35.15625,
+        "top": 35.46067,
+        "right": 36.5625,
+        "bottom": 34.307144,
+        "countries": [
+            "lebanon",
+            "syria"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 101,
+        "left": 36.5625,
+        "top": 35.46067,
+        "right": 37.96875,
+        "bottom": 34.307144,
+        "countries": [
+            "lebanon",
+            "syria"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 102,
+        "left": 36.5625,
+        "top": 34.307144,
+        "right": 37.96875,
+        "bottom": 33.137551,
+        "countries": [
+            "lebanon",
+            "syria"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 99,
+        "left": 36.5625,
+        "top": 37.71859,
+        "right": 37.96875,
+        "bottom": 36.597889,
+        "countries": [
+            "syria",
+            "turkey"
+        ]
+    },
+    {
+        "x": 155,
+        "y": 99,
+        "left": 37.96875,
+        "top": 37.71859,
+        "right": 39.375,
+        "bottom": 36.597889,
+        "countries": [
+            "syria",
+            "turkey"
+        ]
+    },
+    {
+        "x": 156,
+        "y": 99,
+        "left": 39.375,
+        "top": 37.71859,
+        "right": 40.78125,
+        "bottom": 36.597889,
+        "countries": [
+            "syria",
+            "turkey"
+        ]
+    },
+    {
+        "x": 153,
+        "y": 100,
+        "left": 35.15625,
+        "top": 36.597889,
+        "right": 36.5625,
+        "bottom": 35.46067,
+        "countries": [
+            "syria",
+            "turkey"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 100,
+        "left": 36.5625,
+        "top": 36.597889,
+        "right": 37.96875,
+        "bottom": 35.46067,
+        "countries": [
+            "syria",
+            "turkey"
+        ]
+    },
+    {
+        "x": 155,
+        "y": 100,
+        "left": 37.96875,
+        "top": 36.597889,
+        "right": 39.375,
+        "bottom": 35.46067,
+        "countries": [
+            "syria"
+        ]
+    },
+    {
+        "x": 156,
+        "y": 100,
+        "left": 39.375,
+        "top": 36.597889,
+        "right": 40.78125,
+        "bottom": 35.46067,
+        "countries": [
+            "syria"
+        ]
+    },
+    {
+        "x": 155,
+        "y": 101,
+        "left": 37.96875,
+        "top": 35.46067,
+        "right": 39.375,
+        "bottom": 34.307144,
+        "countries": [
+            "syria"
+        ]
+    }
+]

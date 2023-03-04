@@ -1,0 +1,246 @@
+[
+    {
+        "x": 63,
+        "y": 94,
+        "left": -91.40625,
+        "top": 43.068888,
+        "right": -90.0,
+        "bottom": 42.032974,
+        "countries": [
+            "wisconsin",
+            "iowa",
+            "illinois"
+        ]
+    },
+    {
+        "x": 63,
+        "y": 95,
+        "left": -91.40625,
+        "top": 42.032974,
+        "right": -90.0,
+        "bottom": 40.979898,
+        "countries": [
+            "iowa",
+            "illinois"
+        ]
+    },
+    {
+        "x": 62,
+        "y": 96,
+        "left": -92.8125,
+        "top": 40.979898,
+        "right": -91.40625,
+        "bottom": 39.909736,
+        "countries": [
+            "iowa",
+            "illinois",
+            "missouri"
+        ]
+    },
+    {
+        "x": 63,
+        "y": 96,
+        "left": -91.40625,
+        "top": 40.979898,
+        "right": -90.0,
+        "bottom": 39.909736,
+        "countries": [
+            "iowa",
+            "illinois"
+        ]
+    },
+    {
+        "x": 59,
+        "y": 93,
+        "left": -97.03125,
+        "top": 44.087585,
+        "right": -95.625,
+        "bottom": 43.068888,
+        "countries": [
+            "iowa",
+            "south_dakota",
+            "minnesota"
+        ]
+    },
+    {
+        "x": 60,
+        "y": 93,
+        "left": -95.625,
+        "top": 44.087585,
+        "right": -94.21875,
+        "bottom": 43.068888,
+        "countries": [
+            "iowa",
+            "minnesota"
+        ]
+    },
+    {
+        "x": 61,
+        "y": 93,
+        "left": -94.21875,
+        "top": 44.087585,
+        "right": -92.8125,
+        "bottom": 43.068888,
+        "countries": [
+            "iowa",
+            "minnesota"
+        ]
+    },
+    {
+        "x": 62,
+        "y": 93,
+        "left": -92.8125,
+        "top": 44.087585,
+        "right": -91.40625,
+        "bottom": 43.068888,
+        "countries": [
+            "wisconsin",
+            "iowa",
+            "minnesota"
+        ]
+    },
+    {
+        "x": 63,
+        "y": 93,
+        "left": -91.40625,
+        "top": 44.087585,
+        "right": -90.0,
+        "bottom": 43.068888,
+        "countries": [
+            "wisconsin",
+            "iowa",
+            "minnesota"
+        ]
+    },
+    {
+        "x": 59,
+        "y": 94,
+        "left": -97.03125,
+        "top": 43.068888,
+        "right": -95.625,
+        "bottom": 42.032974,
+        "countries": [
+            "iowa",
+            "south_dakota",
+            "nebraska"
+        ]
+    },
+    {
+        "x": 60,
+        "y": 94,
+        "left": -95.625,
+        "top": 43.068888,
+        "right": -94.21875,
+        "bottom": 42.032974,
+        "countries": [
+            "iowa"
+        ]
+    },
+    {
+        "x": 61,
+        "y": 94,
+        "left": -94.21875,
+        "top": 43.068888,
+        "right": -92.8125,
+        "bottom": 42.032974,
+        "countries": [
+            "iowa"
+        ]
+    },
+    {
+        "x": 62,
+        "y": 94,
+        "left": -92.8125,
+        "top": 43.068888,
+        "right": -91.40625,
+        "bottom": 42.032974,
+        "countries": [
+            "iowa"
+        ]
+    },
+    {
+        "x": 59,
+        "y": 95,
+        "left": -97.03125,
+        "top": 42.032974,
+        "right": -95.625,
+        "bottom": 40.979898,
+        "countries": [
+            "iowa",
+            "nebraska"
+        ]
+    },
+    {
+        "x": 60,
+        "y": 95,
+        "left": -95.625,
+        "top": 42.032974,
+        "right": -94.21875,
+        "bottom": 40.979898,
+        "countries": [
+            "iowa"
+        ]
+    },
+    {
+        "x": 61,
+        "y": 95,
+        "left": -94.21875,
+        "top": 42.032974,
+        "right": -92.8125,
+        "bottom": 40.979898,
+        "countries": [
+            "iowa"
+        ]
+    },
+    {
+        "x": 62,
+        "y": 95,
+        "left": -92.8125,
+        "top": 42.032974,
+        "right": -91.40625,
+        "bottom": 40.979898,
+        "countries": [
+            "iowa"
+        ]
+    },
+    {
+        "x": 59,
+        "y": 96,
+        "left": -97.03125,
+        "top": 40.979898,
+        "right": -95.625,
+        "bottom": 39.909736,
+        "countries": [
+            "iowa",
+            "nebraska",
+            "missouri",
+            "kansas"
+        ]
+    },
+    {
+        "x": 60,
+        "y": 96,
+        "left": -95.625,
+        "top": 40.979898,
+        "right": -94.21875,
+        "bottom": 39.909736,
+        "countries": [
+            "iowa",
+            "nebraska",
+            "missouri",
+            "kansas"
+        ]
+    },
+    {
+        "x": 61,
+        "y": 96,
+        "left": -94.21875,
+        "top": 40.979898,
+        "right": -92.8125,
+        "bottom": 39.909736,
+        "countries": [
+            "iowa",
+            "missouri"
+        ]
+    }
+]

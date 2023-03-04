@@ -1,0 +1,154 @@
+[
+    {
+        "x": 139,
+        "y": 88,
+        "left": 15.46875,
+        "top": 48.922499,
+        "right": 16.875,
+        "bottom": 47.989922,
+        "countries": [
+            "slovakia",
+            "czech_republic",
+            "austria"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 88,
+        "left": 16.875,
+        "top": 48.922499,
+        "right": 18.28125,
+        "bottom": 47.989922,
+        "countries": [
+            "slovakia",
+            "hungary",
+            "czech_republic",
+            "austria"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 89,
+        "left": 16.875,
+        "top": 47.989922,
+        "right": 18.28125,
+        "bottom": 47.040182,
+        "countries": [
+            "slovakia",
+            "hungary",
+            "austria"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 87,
+        "left": 16.875,
+        "top": 49.837982,
+        "right": 18.28125,
+        "bottom": 48.922499,
+        "countries": [
+            "czech_republic",
+            "slovakia"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 87,
+        "left": 18.28125,
+        "top": 49.837982,
+        "right": 19.6875,
+        "bottom": 48.922499,
+        "countries": [
+            "poland",
+            "czech_republic",
+            "slovakia"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 88,
+        "left": 18.28125,
+        "top": 48.922499,
+        "right": 19.6875,
+        "bottom": 47.989922,
+        "countries": [
+            "slovakia",
+            "hungary"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 88,
+        "left": 19.6875,
+        "top": 48.922499,
+        "right": 21.09375,
+        "bottom": 47.989922,
+        "countries": [
+            "slovakia",
+            "hungary"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 88,
+        "left": 21.09375,
+        "top": 48.922499,
+        "right": 22.5,
+        "bottom": 47.989922,
+        "countries": [
+            "slovakia",
+            "ukraine",
+            "hungary"
+        ]
+    },
+    {
+        "x": 141,
+        "y": 89,
+        "left": 18.28125,
+        "top": 47.989922,
+        "right": 19.6875,
+        "bottom": 47.040182,
+        "countries": [
+            "slovakia",
+            "hungary"
+        ]
+    },
+    {
+        "x": 142,
+        "y": 87,
+        "left": 19.6875,
+        "top": 49.837982,
+        "right": 21.09375,
+        "bottom": 48.922499,
+        "countries": [
+            "poland",
+            "slovakia"
+        ]
+    },
+    {
+        "x": 143,
+        "y": 87,
+        "left": 21.09375,
+        "top": 49.837982,
+        "right": 22.5,
+        "bottom": 48.922499,
+        "countries": [
+            "poland",
+            "ukraine",
+            "slovakia"
+        ]
+    },
+    {
+        "x": 144,
+        "y": 87,
+        "left": 22.5,
+        "top": 49.837982,
+        "right": 23.90625,
+        "bottom": 48.922499,
+        "countries": [
+            "poland",
+            "ukraine",
+            "slovakia"
+        ]
+    }
+]
