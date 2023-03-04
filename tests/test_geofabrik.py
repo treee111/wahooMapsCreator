@@ -80,6 +80,18 @@ class TestGeofabrik(unittest.TestCase):
         self.assertEqual(item_0, geofabrik_tiles[0])
         self.assertEqual(item_1, geofabrik_tiles[1])
 
+    # def test_tiles_via_url_germany(self):
+    #     """
+    #     Test the retrieval of tiles via geofabrik URL against hardcoded data for germany
+    #     """
+    #     self.compare_url_and_static('germany')
+
+    # def test_tiles_via_url_ireland(self):
+    #     """
+    #     Test the retrieval of tiles via URL
+    #     """
+    #     self.compare_url_and_static('ireland-and-northern-ireland')
+
     def test_tiles_via_geofabrik_malta_xy(self):
         """
         Test the retrieval of tiles via geofabrik URL against hardcoded data
