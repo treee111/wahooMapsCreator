@@ -155,7 +155,8 @@ class OsmData():  # pylint: disable=too-few-public-methods
         log.info('-' * 80)
 
         # geofabrik file
-        if o_downloader.should_geofabrik_file_be_downloaded():
+        if o_input_data.geofabrik_tiles and \
+                o_downloader.should_geofabrik_file_be_downloaded():
             self.force_processing = True
             o_downloader.download_geofabrik_file()
 
