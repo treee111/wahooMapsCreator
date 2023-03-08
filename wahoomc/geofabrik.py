@@ -248,17 +248,23 @@ class XYGeofabrik(InformalGeofabrikInterface):
             # convert X/Y combination to shape (multipolygon)
             wanted_region = self.compose_shape(bbox_tiles)
 
-            # get all infos of these bounding box tiles
-            tiles_of_input.extend(self.find_needed_countries(
-                bbox_tiles, self.wanted_map, wanted_region))
+            retuned, one, two, three = self.find_needed_countries(
+                bbox_tiles, self.wanted_map, wanted_region)
 
-        return tiles_of_input
+            # get all infos of these bounding box tiles
+            tiles_of_input.extend(retuned)
+
+        return tiles_of_input, one, two, three
 
     def find_needed_countries(self, bbox_tiles, wanted_map, wanted_region_polygon) -> dict:
         """Overrides InformalGeofabrikInterface.find_needed_countries()"""
         output = []
 
         geofabrik_regions = self.o_geofabrik_json.geofabrik_regions
+
+        wanted_region_contains = False
+        rhape_contains = False
+        rhape_intersects = False
 
         log.info('Searching for needed maps, this can take a while.')
 
@@ -301,13 +307,16 @@ class XYGeofabrik(InformalGeofabrikInterface):
                     # check if rshape is subset of desired region. If so discard it
                     if wanted_region_polygon.contains(rshape):
                         # print (f'\t{regionname} is a subset of {wanted_map}, discard it')
+                        wanted_region_contains = True
                         continue
                     # check if rshape is a superset of desired region. if so discard it
                     if rshape.contains(wanted_region_polygon):
                         # print (f'\t{regionname} is a superset of {wanted_map}, discard it')
+                        rhape_contains = True
                         continue
                     # Check if rshape is a part of the tile / XY
                     if rshape.intersects(poly):
+                        rhape_intersects = True
                         # print(f'\tintersecting tile: {regionname} tile={tile}')
                         if regionname not in must_download_maps:
                             must_download_maps.append(regionname)
@@ -322,7 +331,7 @@ class XYGeofabrik(InformalGeofabrikInterface):
         output.append({'x': tile['x'], 'y': tile['y'], 'left': tile['tile_left'], 'top': tile['tile_top'],
                        'right': tile['tile_right'], 'bottom': tile['tile_bottom'], 'countries': must_download_maps, 'urls': must_download_urls})
 
-        return output
+        return output, wanted_region_contains, rhape_contains, rhape_intersects
 
     def compose_bouding_box(self, xy_combination):
         """Overrides InformalGeofabrikInterface.calc_bouding_box()"""

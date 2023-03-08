@@ -1,15 +1,20 @@
 """
 tests for the constants geofabrik & geofabrik file
 """
+import multiprocessing
 import os
 import unittest
+import csv
 
 # import custom python packages
 from wahoomc import file_directory_functions as fd_fct
 from wahoomc.downloader import Downloader
 from wahoomc import constants
+from wahoomc.geofabrik import XYGeofabrik
 from wahoomc.geofabrik_json import GeofabrikJson
 from wahoomc.geofabrik_json import CountyIsNoGeofabrikCountry
+from wahoomc.osm_maps_functions import TileNotFoundError
+from wahoomc.osm_maps_functions import get_tile_by_one_xy_combination_from_jsons
 
 # json countries with no geofabrik id partner
 json_file_countries_without_geofabrik_id = ['clipperton_island', 'saint_pierre_and_miquelon', 'trinidad_and_tobago',
@@ -165,6 +170,101 @@ class TestConstantsGeofabrik(unittest.TestCase):
     #             tiles_via_static_json)})
 
     #     print(llist)
+
+    def test_tile_of_all_geofabric_xy_coordinates(self):
+        """
+        go throught all xy-combinations: x 0-255 and y 0-255 in PARALLEL
+        do stuff mentioned in calc_all_xy_combination_tiles_to_x_value for all xy-combinations
+        write result in .csv output file
+        """
+        result_list = []
+
+        # create a process pool that uses all cpus
+        with multiprocessing.Pool() as pool:
+            # call the function for each item in parallel
+            # from 0 to 255, because max is (with zoom = 8): pow(2, 8) - 1
+            for result in pool.map(calc_all_xy_combination_tiles_to_x_value, range(255)):
+                result_list.extend(result)
+                print(result)
+
+        csv_output_path = os.path.join(constants.USER_WAHOO_MC,
+                                       'all_x_y_tiles_calculated_using_geofabrik.csv')
+
+        # write content of list with dicts into .csv file
+        with open(csv_output_path, 'w', newline='', encoding='utf-8') as csvfile:
+            dict_writer = csv.DictWriter(csvfile, result_list[0].keys())
+            dict_writer.writeheader()
+            dict_writer.writerows(result_list)
+
+    def test_tile_of_one_geofabric_xy_coordinate(self):
+        """
+        go throught xy-combinations beginning with the given num_y value: x given and y beginning with given
+        do stuff mentioned in calc_all_xy_combination_tiles_to_x_value for all xy-combinations
+        write result in .csv output file
+        """
+        num_x = 89
+        num_y = 17
+
+        result_list = calc_all_xy_combination_tiles_to_x_value(num_x, num_y)
+
+        csv_output_path = os.path.join(constants.USER_WAHOO_MC,
+                                       'x_y_tiles_calculated_using_geofabrik.csv')
+
+        # write content of list with dicts into .csv file
+        with open(csv_output_path, 'w', newline='', encoding='utf-8') as csvfile:
+            dict_writer = csv.DictWriter(csvfile, result_list[0].keys())
+            dict_writer.writeheader()
+            dict_writer.writerows(result_list)
+
+
+def calc_all_xy_combination_tiles_to_x_value(num_x, num_y=0):
+    """
+    go throught all y-combinations: 0-255 of a given x value
+    evaluate the geofabric information about the tile,
+    compare about static .json information
+    remember which statement was used in find_needed_countries
+    """
+    max_y = pow(2, 8) - 1
+    result_list = []
+    while num_y <= max_y:
+        a_list = {'x': num_x, 'y': num_y}
+        one_geofabrik_tile = False
+        lat_len_ok = False
+        no_countries = False
+
+        o_geofabrik = XYGeofabrik([a_list])
+        tiles_via_geofabrik_json, wanted_region_contains, rhape_contains, rhape_intersects = o_geofabrik.get_tiles_of_wanted_map()
+
+        if len(tiles_via_geofabrik_json) == 1:
+            one_geofabrik_tile = True
+
+        tile_via_geofabrik_json = tiles_via_geofabrik_json[0]
+
+        if not tile_via_geofabrik_json['countries']:
+            no_countries = True
+
+        try:
+            tile_via_static_json = get_tile_by_one_xy_combination_from_jsons(
+                a_list)
+        except TileNotFoundError:
+            num_y = num_y + 1
+            continue
+
+        if tile_via_geofabrik_json and tile_via_static_json:
+            if tile_via_geofabrik_json['x'] == tile_via_static_json['x'] \
+                    and tile_via_geofabrik_json['y'] == tile_via_static_json['y'] \
+                    and tile_via_geofabrik_json['left'] == tile_via_static_json['left'] \
+                    and round(tile_via_geofabrik_json['top'], 6) == tile_via_static_json['top'] \
+                    and tile_via_geofabrik_json['right'] == tile_via_static_json['right'] \
+                    and round(tile_via_geofabrik_json['bottom'], 6) == tile_via_static_json['bottom']:
+                lat_len_ok = True
+
+        result_list.append(
+            {'x': num_x, 'y': num_y, 'lat_len_ok': lat_len_ok, 'one': wanted_region_contains, 'two': rhape_contains, 'three': rhape_intersects, 'no_countries': no_countries, 'one_geofabrik_tile': one_geofabrik_tile})
+
+        num_y = num_y + 1
+
+    return result_list
 
 
 if __name__ == '__main__':
