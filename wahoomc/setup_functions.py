@@ -75,6 +75,9 @@ def adjustments_due_to_breaking_changes():
         log.info(
             'Last run was with version %s, deleting files of %s directory due to breaking changes.', version_last_run, USER_MAPS_DIR)
         delete_o5m_pbf_files_in_folder(USER_MAPS_DIR)
+        log.info(
+            'Last run was with version %s, deleting files of %s directory due to breaking changes.', version_last_run, USER_OUTPUT_DIR)
+        delete_o5m_pbf_files_in_folder(USER_OUTPUT_DIR)
 
 
 def check_installation_of_required_programs():

@@ -14,6 +14,7 @@ from tkinter import ttk
 
 # import custom python packages
 from wahoomc.geofabrik_json import GeofabrikJson
+from wahoomc.geofabrik_json import CountyIsNoGeofabrikCountry
 
 o_geofabrik_json = GeofabrikJson()
 
@@ -75,9 +76,6 @@ def process_call_of_the_tool():
     # specify the file with tags to keep in the output // file needs to be in wahoo_mc/resources/tag_wahoo_adjusted
     options_args.add_argument('-tag', '--tag_wahoo_xml', default=InputData().tag_wahoo_xml,
                               help="file with tags to keep in the output")
-    # option to calculate tiles to process based on Geofabrik index-v1.json file
-    options_args.add_argument('-gt', '--geofabrik_tiles', action='store_true',
-                              help="calculate tiles based on geofabrik index-v1.json file")
     # zip the country (and country-maps) folder
     options_args.add_argument('-z', '--zip', action='store_true',
                               help="zip the country (and country-maps) folder")
@@ -105,7 +103,6 @@ def process_call_of_the_tool():
     o_input_data.process_border_countries = args.bordercountries
     o_input_data.force_download = args.forcedownload
     o_input_data.force_processing = args.forceprocessing
-    o_input_data.geofabrik_tiles = args.geofabrik_tiles
 
     o_input_data.tag_wahoo_xml = args.tag_wahoo_xml
     o_input_data.save_cruiser = args.cruiser
@@ -187,11 +184,6 @@ class InputData():  # pylint: disable=too-many-instance-attributes,too-few-publi
 
         self.tag_wahoo_xml = "tag-wahoo-poi.xml"
 
-        # Way of calculating the relevant tiles for given input (country)
-        # True - Use geofabrik index-v1.json file
-        # False - Use .json files from folder wahoo_mc/resources/json
-        self.geofabrik_tiles = False
-
         self.zip_folder = False
         self.verbose = False
 
@@ -212,10 +204,15 @@ class InputData():  # pylint: disable=too-many-instance-attributes,too-few-publi
         elif self.country and self.xy_coordinates:
             sys.exit(
                 "Country and X/Y coordinates are given. Only one of both is allowed!")
-        elif self.country and not o_geofabrik_json.is_input_a_geofabrik_id_no(self.country):
-            sys.exit(
-                f"Entered country '{self.country}' is not a geofabrik country. Please check this URL for possible countries \
-                    https://download.geofabrik.de/index.html!")
+        elif self.country:
+            try:
+                self.country = o_geofabrik_json.translate_id_no_to_geofabrik(
+                    self.country)
+                return True
+            except CountyIsNoGeofabrikCountry:
+                sys.exit(
+                    f"Entered country '{self.country}' is not a geofabrik country. Please check this URL for possible countries \
+                        https://download.geofabrik.de/index.html!")
         else:
             return True
 
@@ -298,7 +295,6 @@ class GuiInput(tk.Tk):
         self.o_input_data.force_download = tab1.third.checkb_download.get()
         self.o_input_data.force_processing = tab1.third.checkb_processing_val.get()
         self.o_input_data.process_border_countries = tab1.third.checkb_border_countries_val.get()
-        self.o_input_data.geofabrik_tiles = tab1.third.checkb_geofabrik_tiles_val.get()
 
         self.o_input_data.save_cruiser = tab2.first.checkb_save_cruiser_val.get()
         self.o_input_data.zip_folder = tab2.first.checkb_zip_folder_val.get()
@@ -399,8 +395,6 @@ class CheckbuttonsTab1(tk.Frame):
             column=0, row=1, sticky=tk.W, padx=15, pady=5)
         self.checkb_processing_val = create_checkbox(self, oInputData.force_processing,
                                                      "Force processing", 2)
-        self.checkb_geofabrik_tiles_val = create_checkbox(self, oInputData.geofabrik_tiles,
-                                                          "Use Geofabrik file for tiles", 3)
 
 
 class Buttons(tk.Frame):
