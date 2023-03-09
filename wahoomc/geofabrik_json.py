@@ -56,10 +56,12 @@ class GeofabrikJson:
 
                 geofabrik_overview[id_no] = {
                     'parent': parent,
-                    'pbf_url': pbf_url}
+                    'pbf_url': pbf_url,
+                    'geometry': feature.geometry}
             except KeyError:
                 geofabrik_overview[id_no] = {
-                    'pbf_url': pbf_url}
+                    'pbf_url': pbf_url,
+                    'geometry': feature.geometry}
                 geofabrik_region_overview[id_no] = {
                     'pbf_url': pbf_url}
                 geofabrik_regions.append(id_no)
@@ -90,6 +92,20 @@ class GeofabrikJson:
             entry = self.geofabrik_overview[id_no_translated]
             if 'pbf_url' in entry:
                 return entry['pbf_url']
+        except KeyError:
+            pass
+
+        return None
+
+    def get_geofabrik_geometry(self, id_no):
+        """
+        Get the geometry from a region with the already loaded json data
+        """
+        id_no_translated = self.translate_id_no_to_geofabrik(id_no)
+        try:
+            entry = self.geofabrik_overview[id_no_translated]
+            if 'geometry' in entry:
+                return entry['geometry']
         except KeyError:
             pass
 

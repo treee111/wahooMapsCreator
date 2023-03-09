@@ -2,7 +2,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "x/y: 134/88 (STG)",
+            "name": "x/y: 134/88 (stuttgart)",
             "type": "python",
             "request": "launch",
             "module": "wahoomc",
@@ -34,7 +34,7 @@
             ]
         },
         {
-            "name": "germany",
+            "name": "co: germany",
             "type": "python",
             "request": "launch",
             "module": "wahoomc",
@@ -46,7 +46,7 @@
             ]
         },
         {
-            "name": "malta (no POI)",
+            "name": "co: malta (no POI)",
             "type": "python",
             "request": "launch",
             "module": "wahoomc",
@@ -64,26 +64,7 @@
             ]
         },
         {
-            "name": "malta-geofabrik (no POI)",
-            "type": "python",
-            "request": "launch",
-            "module": "wahoomc",
-            "console": "integratedTerminal",
-            "args": [
-                "cli",
-                "-co",
-                "malta",
-                "-tag",
-                "tag-wahoo.xml",
-                "-fp",
-                "-c",
-                "-md",
-                "100",
-                "-gt"
-            ]
-        },
-        {
-            "name": "malta -c NO -fp",
+            "name": "co: malta NO -fp",
             "type": "python",
             "request": "launch",
             "module": "wahoomc",
@@ -98,15 +79,15 @@
             ]
         },
         {
-            "name": "malta",
+            "name": "x/y: 138/100 (malta)",
             "type": "python",
             "request": "launch",
             "module": "wahoomc",
             "console": "integratedTerminal",
             "args": [
                 "cli",
-                "-co",
-                "malta",
+                "-xy",
+                "138/100",
                 "-fp",
                 "-c",
                 "-md",
@@ -114,7 +95,7 @@
             ]
         },
         {
-            "name": "x/y: 135/91 (Garda) #160",
+            "name": "x/y: 135/91 (gardasee) #160",
             "type": "python",
             "request": "launch",
             "module": "wahoomc",
@@ -166,11 +147,12 @@
             "args": [
                 "cli",
                 "-xy",
-                "133/88"
+                "133/88",
+                "-c"
             ]
         },
         {
-            "name": "x/y: 138/100 (malta) -c",
+            "name": "x/y: 134/89 (bodensee 4 countries)",
             "type": "python",
             "request": "launch",
             "module": "wahoomc",
@@ -178,11 +160,41 @@
             "args": [
                 "cli",
                 "-xy",
-                "138/100",
+                "134/89",
+                "-c"
+            ]
+        },
+        {
+            "name": "x/y: 72/98 (virginia)",
+            "type": "python",
+            "request": "launch",
+            "module": "wahoomc",
+            "console": "integratedTerminal",
+            "args": [
+                "cli",
+                "-xy",
+                "72/98",
                 "-fp",
                 "-c",
                 "-md",
                 "100"
+            ]
+        },
+        {
+            "name": "co: virginia -nbc",
+            "type": "python",
+            "request": "launch",
+            "module": "wahoomc",
+            "console": "integratedTerminal",
+            "args": [
+                "cli",
+                "-co",
+                "virginia",
+                "-fp",
+                "-c",
+                "-md",
+                "100",
+                "-nbc"
             ]
         },
         {
@@ -198,7 +210,7 @@
             ]
         },
         {
-            "name": "mexico #113",
+            "name": "co: mexico #113",
             "type": "python",
             "request": "launch",
             "module": "wahoomc",
@@ -212,7 +224,7 @@
             ]
         },
         {
-            "name": "solomon_islands geofabrik",
+            "name": "co: solomon_islands",
             "type": "python",
             "request": "launch",
             "module": "wahoomc",
@@ -223,8 +235,7 @@
                 "solomon_islands",
                 "-c",
                 "-md",
-                "100",
-                "-gt"
+                "100"
             ]
         }
     ]
