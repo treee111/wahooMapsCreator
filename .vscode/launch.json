@@ -95,6 +95,23 @@
             ]
         },
         {
+            "name": "x/y: 138/100 (malta) - contour",
+            "type": "python",
+            "request": "launch",
+            "module": "wahoomc",
+            "console": "integratedTerminal",
+            "args": [
+                "cli",
+                "-xy",
+                "138/100",
+                "-fp",
+                "-c",
+                "-md",
+                "100",
+                "-con"
+            ]
+        },
+        {
             "name": "x/y: 135/91 (gardasee) #160",
             "type": "python",
             "request": "launch",
