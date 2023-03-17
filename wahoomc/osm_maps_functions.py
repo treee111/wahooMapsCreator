@@ -27,6 +27,7 @@ from wahoomc.constants import RESOURCES_DIR
 from wahoomc.constants import LAND_POLYGONS_PATH
 from wahoomc.constants import VERSION
 from wahoomc.constants import OSMOSIS_WIN_FILE_PATH
+from wahoomc.constants import USER_DL_DIR
 
 from wahoomc.downloader import Downloader
 from wahoomc.geofabrik import CountryGeofabrik, XYGeofabrik
@@ -490,6 +491,8 @@ class OsmMaps:
             log.info('-' * 80)
             log.info('# Generate contour lines for each coordinate')
 
+            hgt_path = os.path.join(USER_DL_DIR, 'hgt')
+
             tile_count = 1
             for tile in self.o_osm_data.tiles:
                 out_file_elevation = os.path.join(
@@ -509,7 +512,7 @@ class OsmMaps:
                     cmd.extend(['-o', f'{out_file_elevation}', '-s 10', '-c 100,50', '--source=view1,view3,srtm3',
                                 '--jobs=8', '--viewfinder-mask=1', '--start-node-id=20000000000',
                                 '--max-nodes-per-tile=0', '--start-way-id=2000000000', '--write-timestamp',
-                                '--no-zero-contour'])
+                                '--no-zero-contour', '--hgtdir=' + hgt_path])
                     cmd.append('--earthexplorer-user=' + username)
                     cmd.append('--earthexplorer-password=' + password)
 
