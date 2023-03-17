@@ -60,6 +60,9 @@ def process_call_of_the_tool():
     # Do not calculate border countries of input country
     options_args.add_argument('-nbc', '--bordercountries', action='store_false',
                               help="do not process border countries of tiles involving more than one country")
+    # calculate contour lines
+    options_args.add_argument('-con', '--contour', action='store_true',
+                              help="process contour lines (elevation data)")
     # Force download of source maps and the land shape file
     # If False use Max_Days_Old to check for expired maps
     # If True force redownloading of maps and landshape
@@ -101,6 +104,8 @@ def process_call_of_the_tool():
     o_input_data.max_days_old = args.maxdays
 
     o_input_data.process_border_countries = args.bordercountries
+    o_input_data.contour = args.contour
+
     o_input_data.force_download = args.forcedownload
     o_input_data.force_processing = args.forceprocessing
 
@@ -180,6 +185,7 @@ class InputData():  # pylint: disable=too-many-instance-attributes,too-few-publi
         self.force_download = False
         self.force_processing = False
         self.process_border_countries = True
+        self.contour = False
         self.save_cruiser = False
 
         self.tag_wahoo_xml = "tag-wahoo-poi.xml"
