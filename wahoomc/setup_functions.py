@@ -176,7 +176,7 @@ def read_version_last_run():
     try:
         version_last_run = read_json_file_generic(config_file_path)[
             "version_last_run"]
-    except (FileNotFoundError, KeyError):
+    except KeyError:
         version_last_run = None
 
     return version_last_run

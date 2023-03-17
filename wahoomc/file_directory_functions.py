@@ -86,11 +86,15 @@ def read_json_file_generic(json_file_path):
     """
     reads content of given .json file
     """
-    with open(json_file_path, encoding="utf-8") as json_file:
-        json_content = json.load(json_file)
-        json_file.close()
+    try:
+        with open(json_file_path, encoding="utf-8") as json_file:
+            json_content = json.load(json_file)
+            json_file.close()
 
-    return json_content
+        return json_content
+
+    except FileNotFoundError:
+        return {}
 
 
 def write_json_file_generic(json_file_path, json_content):
