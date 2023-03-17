@@ -486,7 +486,13 @@ class OsmMaps:
         for tile in self.o_osm_data.tiles:
             out_file_elevation = os.path.join(
                 USER_OUTPUT_DIR, f'{tile["x"]}', f'{tile["y"]}', 'elevation')
-            if not os.path.isfile(out_file_elevation) or self.o_osm_data.force_processing is True:
+            # as the elevation file has a suffix, they need to be searched with glob.glob
+            # example elevation filename: elevation_lon14.06_15.47lat35.46_36.60_view1,view3.osm
+            out_file_elevation_existing = glob.glob(os.path.join(
+                USER_OUTPUT_DIR, str(tile["x"]), str(tile["y"]), 'elevation*.osm'))
+            # check for already existing .osm file
+            if not (len(out_file_elevation_existing) == 1 and os.path.isfile(out_file_elevation_existing[0])) \
+                    or self.o_osm_data.force_processing is True:
                 print(
                     f'# Generate elevation {tile_count} for coordinates: {tile["x"]} {tile["y"]}')
                 cmd = ['phyghtmap']
