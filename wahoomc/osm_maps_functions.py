@@ -501,12 +501,14 @@ class OsmMaps:
                 cmd.extend(['-o', f'{out_file_elevation}', '-s 10', '-c 100,50', '--source=view1,view3,srtm3',
                             '--jobs=8', '--viewfinder-mask=1', '--start-node-id=20000000000',
                             '--max-nodes-per-tile=0', '--start-way-id=2000000000', '--write-timestamp',
-                            '--no-zero-contour', '--earthexplorer-user=', '--earthexplorer-password='])
+                            '--no-zero-contour'])
+                cmd.append('--earthexplorer-user=' + username)
+                cmd.append('--earthexplorer-password=' + password)
 
                 run_subprocess_and_log_output(
                     cmd, f'! Error in phyghtmap with tile: {tile["x"]},{tile["y"]}. Win/out_file')
 
-        log.info('+ Generate sea for each coordinate: OK')
+        log.info('+ Generate contour lines for each coordinate: OK')
 
     def split_filtered_country_files_to_tiles(self):
         """
