@@ -124,7 +124,7 @@
     <!-- region not a tunnel -->
     <m e="way" k="tunnel" v="~|no|false" zoom-min="8">
         <!-- highway outlines -->
-        <outline-layer cat="bolt" id="highway-bolt" stroke="#000000" width="0.5"/>
+        <outline-layer cat="bolt" id="highway-bolt" stroke="#000000" width="1.2"/>
         <!-- the outline of bridges -->
         <outline-layer id="bridge" stroke="#000000" width="1"/>
         <outline-layer id="bridge_small" stroke="#666666" width="0.6"/>
