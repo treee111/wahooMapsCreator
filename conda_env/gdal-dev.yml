@@ -2,8 +2,8 @@ name: gdal-dev
 channels:
   - conda-forge
 dependencies:
-  - python=3.11
-  - gdal=3.6.*
+  - python=3.10
+  - gdal=3.4.*
   - requests=2.28.*
   - pylint=2.15.*
   - geojson=2.5.*

@@ -2,9 +2,9 @@ name: gdal-user
 channels:
   - conda-forge
 dependencies:
-  - python=3.11
+  - python=3.10
   - geojson=2.5.*
-  - gdal=3.6.*
+  - gdal=3.4.*
   - pip
   - pip:
       - wahoomc==3.2.0
