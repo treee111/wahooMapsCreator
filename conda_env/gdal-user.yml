@@ -5,6 +5,9 @@ dependencies:
   - python=3.10
   - geojson=2.5.*
   - gdal=3.4.*
+  - bs4=4.11.*
+  - lxml=4.9.*
+  - matplotlib=3.4.3
   - pip
   - pip:
       - wahoomc==3.2.0
