@@ -102,7 +102,7 @@ For a squash commit to appear in the CHANGELOG.md later on, it has to follow a c
 ```
 ## Release
 Coding is updated in the develop-branch mainly via pull requests.  
-After testing carefully, a Release will be created based on branch devlop or a hotfix branc.
+After testing carefully, a Release will be created based on branch develop or a hotfix branch.
 
 ### Automatic CHANGELOG creation 
 After installing [git-chglog](https://github.com/git-chglog/git-chglog) locally, the CHANGELOG.md can be generated with this command:  
