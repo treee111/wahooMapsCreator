@@ -8,6 +8,7 @@
     - [Main arguments](#main-arguments)
     - [Examples](#examples)
   - [POIs - Points of Interest](#pois---points-of-interest)
+  - [Contour lines](#contour-lines)
   - [User specific configuration](#user-specific-configuration)
 
 # Usage of wahooMapsCreator
@@ -99,6 +100,12 @@ Actually, wahooMapsCreator includes fuel stations, backeries, cafes and railway 
 3. Activate VTM rendering if needed
 - [see here](COPY_TO_WAHOO.md#activate-vtm-rendering)
 - see also: https://github.com/treee111/wahooMapsCreator/wiki/Enable-hidden-features
+
+## Contour lines
+For creating maps which include contour lines and have them displayed on your Wahoo device, these steps need to be done:
+1. Enhance your Anaconda environment using [these steps](./QUICKSTART_ANACONDA.md#additions-for--generating-contour-lines)
+2. Create custom maps with the argument `-con` like [normally](#run-wahoomapscreator-for-your-country). You will be asked for username/password on first run generating contour lines.
+3. Use a theme that renders contour lines
 
 ## User specific configuration
 You can control popular configuration with your own files in the home directory `wahooMapsCreatorData/_config`.

@@ -13,6 +13,9 @@
   - [Create Anaconda Environment](#create-anaconda-environment)
   - [Install wahooMapsCreator into Anaconda environment](#install-wahoomapscreator-into-anaconda-environment)
     - [Update wahooMapsCreator](#update-wahoomapscreator)
+  - [Additions for  generating contour lines](#additions-for--generating-contour-lines)
+    - [Install phyghtmap](#install-phyghtmap)
+    - [Free account for USGS](#free-account-for-usgs)
 - [Run wahooMapsCreator](#run-wahoomapscreator)
 - [Additional information](#additional-information)
 
@@ -98,6 +101,22 @@ If you want to upgrade to a version other than the release actual one, use this 
 ```
 pip install wahoomc==2.0.0a5 --upgrade 
 ```
+
+## Additions for  generating contour lines
+For integrating contour lines into the generated maps, some additional steps need to be taken.
+An additional Python packages has to be installed and you need an free account for USGS to query contour lines from.
+
+### Install phyghtmap
+1. Download and unpack http://katze.tfiu.de/projects/phyghtmap/phyghtmap_2.23.orig.tar.gz
+2. Enter your Anaconda environment and go to the unpacked folder
+3. Install phyghtmap into your Anaconda environment with
+```
+sudo python3 setup.py install
+```
+
+### Free account for USGS
+1. Enter https://ers.cr.usgs.gov/ and create a free account. It's straight forward.
+2. Remember your username and password.
 
 # Run wahooMapsCreator
 Run wahooMapsCreater as described in the [README](../README.md/#Run-wahooMapsCreator)
