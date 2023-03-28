@@ -20,15 +20,19 @@ log = logging.getLogger('main-logger')
 
 
 class InformalGeofabrikInterface:
-    wanted_map = ''
+    wanted_maps = []
     tiles = []
     border_countries = {}
     output = {}
 
     o_geofabrik_json = GeofabrikJson()
 
+    def get_tiles_of_wanted_map_single(self, wanted_map) -> str:
+        """Get the relevant tiles for ONE wanted country or X/Y coordinate"""
+        pass
+
     def get_tiles_of_wanted_map(self) -> str:
-        """Get the relevant tiles for the wanted country or X/Y coordinate"""
+        """Get the relevant tiles for the countries or X/Y coordinates"""
         pass
 
     def find_needed_countries(self, bbox_tiles, wanted_map, wanted_region_polygon) -> dict:
@@ -44,15 +48,30 @@ class CountryGeofabrik(InformalGeofabrikInterface):
     """Geofabrik processing for countries"""
 
     def __init__(self, input):
+        self.wanted_maps = []
+
         # input parameters
-        self.wanted_map = self.o_geofabrik_json.translate_id_no_to_geofabrik(
-            input)
+        countries = get_countries_from_input(input)
+
+        for country in countries:
+            self.wanted_maps.append(self.o_geofabrik_json.translate_id_no_to_geofabrik(
+                country))
 
     def get_tiles_of_wanted_map(self):
         """Overrides InformalGeofabrikInterface.get_tiles_of_wanted_map()"""
+
+        tiles_of_input = []
+
+        for country in self.wanted_maps:
+            tiles_of_input.extend(self.get_tiles_of_wanted_map_single(country))
+
+        return tiles_of_input
+
+    def get_tiles_of_wanted_map_single(self, wanted_map):
+        """Overrides InformalGeofabrikInterface.get_tiles_of_wanted_map_single()"""
         # Check if wanted_map is in the json file and if so get the polygon (shape)
         wanted_map_geom = self.o_geofabrik_json.get_geofabrik_geometry(
-            self.wanted_map)
+            wanted_map)
 
         # convert to shape (multipolygon)
         wanted_region = shape(wanted_map_geom)
@@ -65,7 +84,7 @@ class CountryGeofabrik(InformalGeofabrikInterface):
 
         # get all infos of these bounding box tiles
         tiles_of_input = self.find_needed_countries(
-            bbox_tiles, self.wanted_map, wanted_region)
+            bbox_tiles, wanted_map, wanted_region)
 
         return tiles_of_input
 
@@ -390,3 +409,19 @@ def num2deg(xtile, ytile, zoom=8):
     lat_rad = math.atan(math.sinh(math.pi * (1 - 2 * ytile / n)))
     lat_deg = math.degrees(lat_rad)
     return (lat_deg, lon_deg)
+
+
+def get_countries_from_input(input_countries):
+    """
+    extract/split x/y combinations by given X/Y coordinates.
+    input should be "188/88" or for multiple values "188/88,100/10,109/99".
+    returns a list of x/y combinations as integers
+    """
+
+    countries = []
+
+    # split by "," first for multiple x/y combinations, then by "/" for x and y value
+    for country in input_countries.split(","):
+        countries.append(country)
+
+    return countries

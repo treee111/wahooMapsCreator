@@ -15,6 +15,7 @@ from tkinter import ttk
 # import custom python packages
 from wahoomc.geofabrik_json import GeofabrikJson
 from wahoomc.geofabrik_json import CountyIsNoGeofabrikCountry
+from wahoomc.geofabrik import get_countries_from_input
 
 o_geofabrik_json = GeofabrikJson()
 
@@ -205,14 +206,18 @@ class InputData():  # pylint: disable=too-many-instance-attributes,too-few-publi
             sys.exit(
                 "Country and X/Y coordinates are given. Only one of both is allowed!")
         elif self.country:
-            try:
-                self.country = o_geofabrik_json.translate_id_no_to_geofabrik(
-                    self.country)
-                return True
-            except CountyIsNoGeofabrikCountry:
-                sys.exit(
-                    f"Entered country '{self.country}' is not a geofabrik country. Please check this URL for possible countries \
-                        https://download.geofabrik.de/index.html!")
+            # countries =
+            for country in get_countries_from_input(self.country):
+                try:
+                    country = o_geofabrik_json.translate_id_no_to_geofabrik(
+                        country)
+                except CountyIsNoGeofabrikCountry:
+                    sys.exit(
+                        f"Entered country '{country}' is not a geofabrik country. Please check this URL for possible countries \
+                            https://download.geofabrik.de/index.html!")
+
+            # if we made it until here, sys.exit() was not called and therefore all countries OK ;-)
+            return True
         else:
             return True
 
