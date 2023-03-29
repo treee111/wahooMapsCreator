@@ -8,11 +8,9 @@ functions and object for managing OSM maps
 import sys
 import math
 import logging
-import geojson
 from shapely.geometry import Polygon, shape
 
 # import custom python packages
-from wahoomc.constants import GEOFABRIK_PATH
 from wahoomc.constants import special_regions, block_download
 from wahoomc.geofabrik_json import GeofabrikJson
 
@@ -20,6 +18,7 @@ log = logging.getLogger('main-logger')
 
 
 class InformalGeofabrikInterface:
+    """Informal class for Geofabrik processing"""
     wanted_maps = []
     tiles = []
     border_countries = {}
@@ -48,7 +47,7 @@ class InformalGeofabrikInterface:
         """find needed countries for requested country or X/Y combination"""
         pass
 
-    def compose_bouding_box(self, input) -> dict:
+    def compose_bouding_box(self, bounds) -> dict:
         """calculate bounding box based on geometry or X/Y combination"""
         pass
 
@@ -56,7 +55,7 @@ class InformalGeofabrikInterface:
 class CountryGeofabrik(InformalGeofabrikInterface):
     """Geofabrik processing for countries"""
 
-    def __init__(self, input):
+    def __init__(self, input_countries):
         """
         :param input: string with countries: 'malta' or 'malta, switzerland'
         :returns: object for country geofabrik processing
@@ -64,9 +63,9 @@ class CountryGeofabrik(InformalGeofabrikInterface):
         self.wanted_maps = []
 
         # input parameters
-        countries = get_countries_from_input(input)
+        input_countries = get_countries_from_input(input_countries)
 
-        for country in countries:
+        for country in input_countries:
             self.wanted_maps.append(self.o_geofabrik_json.translate_id_no_to_geofabrik(
                 country))
 
@@ -255,7 +254,7 @@ class CountryGeofabrik(InformalGeofabrikInterface):
 class XYGeofabrik(InformalGeofabrikInterface):
     """Geofabrik processing for X/Y coordinates"""
 
-    def __init__(self, input):
+    def __init__(self, input_xy_coordinates):
         """
         :param input: string with xy-coordinates: 133/88 or 133/88,134/88
         :returns: object for xy geofabrik processing
@@ -263,7 +262,7 @@ class XYGeofabrik(InformalGeofabrikInterface):
         # input parameters
 
         # use Geofabrik-URL to get the relevant tiles
-        self.wanted_maps = get_xy_coordinates_from_input(input)
+        self.wanted_maps = get_xy_coordinates_from_input(input_xy_coordinates)
 
     def get_tiles_of_wanted_map_single(self, wanted_map):
         """Overrides InformalGeofabrikInterface.get_tiles_of_wanted_map_single()"""
@@ -361,8 +360,8 @@ class XYGeofabrik(InformalGeofabrikInterface):
     def compose_shape(self, bbox_tiles):
         coords = [(bbox_tiles[0]["tile_top"], bbox_tiles[0]["tile_left"]), (bbox_tiles[0]["tile_top"], bbox_tiles[0]["tile_right"]),
                   (bbox_tiles[0]["tile_bottom"], bbox_tiles[0]["tile_right"]), (bbox_tiles[0]["tile_bottom"], bbox_tiles[0]["tile_left"])]
-        p = Polygon(coords)
-        wanted_region = shape(p)
+        coords_polygon = Polygon(coords)
+        wanted_region = shape(coords_polygon)
         return wanted_region
 
 
