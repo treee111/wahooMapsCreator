@@ -31,8 +31,11 @@ class InformalGeofabrikInterface:
         """Get the relevant tiles for ONE wanted country or X/Y coordinate"""
         pass
 
-    def get_tiles_of_wanted_map(self):
-        """Overrides InformalGeofabrikInterface.get_tiles_of_wanted_map()"""
+    def get_tiles_of_wanted_map(self) -> list:
+        """
+        calculates tiles of all input wanted-maps
+        :returns: list of tiles
+        """
 
         tiles_of_input = []
 
@@ -54,6 +57,10 @@ class CountryGeofabrik(InformalGeofabrikInterface):
     """Geofabrik processing for countries"""
 
     def __init__(self, input):
+        """
+        :param input: string with countries: 'malta' or 'malta, switzerland'
+        :returns: object for country geofabrik processing
+        """
         self.wanted_maps = []
 
         # input parameters
@@ -249,26 +256,29 @@ class XYGeofabrik(InformalGeofabrikInterface):
     """Geofabrik processing for X/Y coordinates"""
 
     def __init__(self, input):
+        """
+        :param input: string with xy-coordinates: 133/88 or 133/88,134/88
+        :returns: object for xy geofabrik processing
+        """
         # input parameters
-        self.wanted_map = input
 
-    def get_tiles_of_wanted_map(self) -> str:
-        """Overrides InformalGeofabrikInterface.get_tiles_of_wanted_map()"""
-        tiles_of_input = []
-        for xy_combination in self.wanted_map:
+        # use Geofabrik-URL to get the relevant tiles
+        self.wanted_maps = get_xy_coordinates_from_input(input)
 
-            # calc bounding box - the whole area to be created
-            bbox = self.compose_bouding_box(xy_combination)
+    def get_tiles_of_wanted_map_single(self, wanted_map):
+        """Overrides InformalGeofabrikInterface.get_tiles_of_wanted_map_single()"""
+        # calc bounding box - the whole area to be created
+        bbox = self.compose_bouding_box(wanted_map)
 
-            # Build bounding box list of tiles - several X/Y combinations making up the area
-            bbox_tiles = calc_bounding_box_tiles(bbox)
+        # Build bounding box list of tiles - several X/Y combinations making up the area
+        bbox_tiles = calc_bounding_box_tiles(bbox)
 
-            # convert X/Y combination to shape (multipolygon)
-            wanted_region = self.compose_shape(bbox_tiles)
+        # convert X/Y combination to shape (multipolygon)
+        wanted_region = self.compose_shape(bbox_tiles)
 
-            # get all infos of these bounding box tiles
-            tiles_of_input.extend(self.find_needed_countries(
-                bbox_tiles, self.wanted_map, wanted_region))
+        # get all infos of these bounding box tiles
+        tiles_of_input = self.find_needed_countries(
+            bbox_tiles, wanted_map, wanted_region)
 
         return tiles_of_input
 
@@ -421,3 +431,23 @@ def get_countries_from_input(input_countries):
         countries.append(country)
 
     return countries
+
+
+def get_xy_coordinates_from_input(input_xy_coordinates):
+    """
+    extract/split x/y combinations by given X/Y coordinates.
+    input should be "188/88" or for multiple values "188/88,100/10,109/99".
+    returns a list of x/y combinations as integers
+    """
+
+    xy_combinations = []
+
+    # split by "," first for multiple x/y combinations, then by "/" for x and y value
+    for xy_coordinate in input_xy_coordinates.split(","):
+        splitted = xy_coordinate.split("/")
+
+        if len(splitted) == 2:
+            xy_combinations.append(
+                {"x": int(splitted[0]), "y": int(splitted[1])})
+
+    return xy_combinations

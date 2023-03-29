@@ -36,26 +36,6 @@ class TileNotFoundError(Exception):
     """Raised when no tile is found for x/y combination"""
 
 
-def get_xy_coordinates_from_input(input_xy_coordinates):
-    """
-    extract/split x/y combinations by given X/Y coordinates.
-    input should be "188/88" or for multiple values "188/88,100/10,109/99".
-    returns a list of x/y combinations as integers
-    """
-
-    xy_combinations = []
-
-    # split by "," first for multiple x/y combinations, then by "/" for x and y value
-    for xy_coordinate in input_xy_coordinates.split(","):
-        splitted = xy_coordinate.split("/")
-
-        if len(splitted) == 2:
-            xy_combinations.append(
-                {"x": int(splitted[0]), "y": int(splitted[1])})
-
-    return xy_combinations
-
-
 def run_subprocess_and_log_output(cmd, error_message, cwd=""):
     """
     run given cmd-subprocess and issue error message if wished
@@ -185,11 +165,7 @@ class OsmData():  # pylint: disable=too-few-public-methods
         log.info(
             '# Input X/Y coordinates: %s.', o_input_data.xy_coordinates)
 
-        # use Geofabrik-URL to get the relevant tiles
-        xy_coordinates = get_xy_coordinates_from_input(
-            o_input_data.xy_coordinates)
-
-        o_geofabrik = XYGeofabrik(xy_coordinates)
+        o_geofabrik = XYGeofabrik(o_input_data.xy_coordinates)
         # find the tiles for  x/y combinations in the geofabrik json files
         self.tiles = o_geofabrik.get_tiles_of_wanted_map()
 

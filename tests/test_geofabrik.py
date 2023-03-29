@@ -4,11 +4,11 @@ tests for the downloader file
 import os
 # import sys
 import unittest
-from shapely.geometry import shape # pylint: disable=import-error
+from shapely.geometry import shape  # pylint: disable=import-error
 
 # import custom python packages
 from wahoomc.geofabrik import CountryGeofabrik, XYGeofabrik
-from wahoomc.geofabrik import calc_bounding_box_tiles
+from wahoomc.geofabrik import calc_bounding_box_tiles, get_xy_coordinates_from_input
 from wahoomc.downloader import Downloader
 from wahoomc import constants
 from wahoomc.geofabrik_json import GeofabrikJson
@@ -73,8 +73,7 @@ class TestGeofabrik(unittest.TestCase):
         item_0 = [{'x': 138, 'y': 100, 'left': 14.0625, 'top': 36.59788913307021, 'right': 15.46875, 'bottom': 35.4606699514953, 'countries': [
             'italy', 'malta'], 'urls': ['https://download.geofabrik.de/europe/italy-latest.osm.pbf', 'https://download.geofabrik.de/europe/malta-latest.osm.pbf']}]
 
-        geofabrik_tiles = calc_tiles_via_geofabrik_json_xy(
-            [{'x': 138, 'y': 100}])
+        geofabrik_tiles = calc_tiles_via_geofabrik_json_xy('138/100')
 
         self.assertEqual(item_0, geofabrik_tiles)
 
@@ -97,8 +96,7 @@ class TestGeofabrik(unittest.TestCase):
                      'https://download.geofabrik.de/europe/germany-latest.osm.pbf']
         }]
 
-        geofabrik_tiles = calc_tiles_via_geofabrik_json_xy(
-            [{"x": 133, "y": 88}])
+        geofabrik_tiles = calc_tiles_via_geofabrik_json_xy('133/88')
 
         self.assertEqual(geofabrik_tiles_exp, geofabrik_tiles)
 
@@ -152,10 +150,49 @@ class TestGeofabrik(unittest.TestCase):
         bbox_tiles = calc_bounding_box_tiles(bbox)
         self.assertEqual(bbox_tiles_exp, bbox_tiles)
 
-        o_geofabrik = XYGeofabrik([{'x': 138, 'y': 100}])
+        o_geofabrik = XYGeofabrik('138/100')
         wanted_region_string = str(o_geofabrik.compose_shape(bbox_tiles))
 
         self.assertEqual(wanted_region_exp, wanted_region_string)
+
+    def test_splitting_of_single_xy_coordinate(self):
+        """
+        use static json files in the repo to calculate relevant tiles
+        """
+
+        xy_tuple = get_xy_coordinates_from_input("133/88")
+        self.assertEqual(xy_tuple, [{"x": 133, "y": 88}])
+
+        xy_tuple = get_xy_coordinates_from_input("11/92")
+        self.assertEqual(xy_tuple, [{"x": 11, "y": 92}])
+
+        xy_tuple = get_xy_coordinates_from_input("138/100")
+        self.assertEqual(xy_tuple, [{"x": 138, "y": 100}])
+
+    def test_splitting_of_multiple_xy_coordinate(self):
+        """
+        use static json files in the repo to calculate relevant tiles
+        """
+
+        xy_tuple = get_xy_coordinates_from_input("133/88,138/100")
+        expected_result = [{"x": 133, "y": 88}, {"x": 138, "y": 100}]
+
+        self.assertEqual(xy_tuple, expected_result)
+
+    # def test_get_tile_via_xy_coordinate_error(self):
+    #     """
+    #     use static json files in the repo to calculate a not-existing tile.
+
+    #     does not error out due to new Geofabrik Json processing. Nevertheless, the tile is not existing
+    #     only +/- 180 -/+90: https://epsg.io/4326
+    #     """
+
+    #     o_geofabrik = XYGeofabrik([{"x": 200, "y": 1}])
+
+    #     # tiles =
+
+    #     with self.assertRaises(TileNotFoundError):
+    #         o_geofabrik.get_tiles_of_wanted_map()
 
 
 if __name__ == '__main__':
