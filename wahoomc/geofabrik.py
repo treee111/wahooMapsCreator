@@ -31,9 +31,15 @@ class InformalGeofabrikInterface:
         """Get the relevant tiles for ONE wanted country or X/Y coordinate"""
         pass
 
-    def get_tiles_of_wanted_map(self) -> str:
-        """Get the relevant tiles for the countries or X/Y coordinates"""
-        pass
+    def get_tiles_of_wanted_map(self):
+        """Overrides InformalGeofabrikInterface.get_tiles_of_wanted_map()"""
+
+        tiles_of_input = []
+
+        for country in self.wanted_maps:
+            tiles_of_input.extend(self.get_tiles_of_wanted_map_single(country))
+
+        return tiles_of_input
 
     def find_needed_countries(self, bbox_tiles, wanted_map, wanted_region_polygon) -> dict:
         """find needed countries for requested country or X/Y combination"""
@@ -56,16 +62,6 @@ class CountryGeofabrik(InformalGeofabrikInterface):
         for country in countries:
             self.wanted_maps.append(self.o_geofabrik_json.translate_id_no_to_geofabrik(
                 country))
-
-    def get_tiles_of_wanted_map(self):
-        """Overrides InformalGeofabrikInterface.get_tiles_of_wanted_map()"""
-
-        tiles_of_input = []
-
-        for country in self.wanted_maps:
-            tiles_of_input.extend(self.get_tiles_of_wanted_map_single(country))
-
-        return tiles_of_input
 
     def get_tiles_of_wanted_map_single(self, wanted_map):
         """Overrides InformalGeofabrikInterface.get_tiles_of_wanted_map_single()"""
