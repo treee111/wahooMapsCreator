@@ -38,7 +38,7 @@ def process_call_of_the_tool():
 
     # create the parser for the "cli" command
     parser_cli = subparsers.add_parser(
-        'cli', help='Run the tool via command line interface')
+        'cli', help='Run the tool via command line interface', formatter_class=argparse.RawTextHelpFormatter)
 
     # group: primary input parameters to create map for. One needs to be given
     primary_args = parser_cli.add_argument_group(
@@ -47,10 +47,10 @@ def process_call_of_the_tool():
         required=True)
     # country to create maps for
     primary_args_excl.add_argument(
-        "-co", "--country", help="country to generate maps for")
+        "-co", "--country", help="country to generate maps for.\nExample: -co malta, multiple countries separated by comma: -co malta,italy")
     # X/Y coordinates to create maps for
     primary_args_excl.add_argument(
-        "-xy", "--xy_coordinates", help="x/y coordinates to generate maps for. Example: 133/88")
+        "-xy", "--xy_coordinates", help="x/y coordinates to generate maps for.\nExample: -xy 133/88, multiple xy coordinates separated by comma: -xy 133/88,134/89")
 
     # group: options for map generation
     options_args = parser_cli.add_argument_group(
