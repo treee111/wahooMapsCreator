@@ -5,6 +5,8 @@
   - [GUI (Graphical User Interface)](#gui-graphical-user-interface)
   - [CLI (Command Line Interface)](#cli-command-line-interface)
   - [Advanced CLI-Usage](#advanced-cli-usage)
+    - [Mandatory CLI arguments](#mandatory-cli-arguments)
+    - [Optional arguments](#optional-arguments)
     - [Main arguments](#main-arguments)
     - [Examples](#examples)
   - [POIs - Points of Interest](#pois---points-of-interest)
@@ -51,21 +53,31 @@ For a list of all supported arguments, run:
 - `python -m wahoomc cli -h`
 
 
-wahooMapsCreator provides following arguments.
+wahooMapsCreator provides following arguments, later on, there are some example calls
 
-| Option    | Description                                                                                                     | Mandatory | Default Value       |
-| :-------- | :-------------------------------------------------------------------------------------------------------------- | :-------- | :------------------ |
-| gui / cli | Start graphical user interface to select options or run the tool via command line interface.                    | X         | -                   |
-| -co / -xy | Country to create maps or X/Y coordinates to create maps for. X/Y as `133/35`.                                  | X         | -                   |
-| -md       | Maximum age of source maps and other files in days.                                                             | -         | 24                  |
-| -nbc      | Do not process border countries of tiles involving more than one country. Only useful when processing a country | -         | false               |
-| -fd       | Force download of files. Download all files new.                                                                | -         | false               |
-| -fp       | Force processing of files. Create all files new.                                                                | -         | false               |
-| -c        | Save uncompressed maps for Cruiser.                                                                             | -         | false               |
-| -tag      | File with tags to keep in the output.                                                                           | -         | `tag-wahoo-poi.xml` |
-| -gt       | Calculate tiles based on geofabrik index-v1.json file.                                                          | -         | false               |
-| -z        | Zip the country (and country-maps) folder.                                                                      | -         | false               |
-| -v        | Output debug logger messages.                                                                                   | -         | false               |
+### Mandatory CLI arguments
+One of them is mandatory for running in CLI mode.
+
+| Option | Description                                                                           | Default Value |
+| :----- | :------------------------------------------------------------------------------------ | :------------ |
+| -co    | One or more Country to create maps or to create maps for. `malta` or `malta,germany`. | -             |
+| -xy    | One or more X/Y coordinates to create maps for. `133/35` or `133/35,133/66`.          | -             |
+
+
+### Optional arguments
+If you like to run wahooMapsCreator with another value than the default, use the following arguments.
+
+| Option | Description                                                                                                      | Default Value       |
+| :----- | :--------------------------------------------------------------------------------------------------------------- | :------------------ |
+| -md    | Maximum age of source maps and other files in days.                                                              | 24                  |
+| -nbc   | Do not process border countries of tiles involving more than one country. Only useful when processing a country. | false               |
+| -con   | Calculate contour lines (elevation) and integrate into generated maps.                                           | false               |
+| -fd    | Force download of files. Download all files new.                                                                 | false               |
+| -fp    | Force processing of files. Create all files new.                                                                 | false               |
+| -c     | Save uncompressed maps for Cruiser.                                                                              | false               |
+| -tag   | File with tags to keep in the output.                                                                            | `tag-wahoo-poi.xml` |
+| -z     | Zip the country (and country-maps) folder.                                                                       | false               |
+| -v     | Output debug logger messages.                                                                                    | false               |
 
 ### Main arguments
 **Create maps for a country**
