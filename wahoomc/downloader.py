@@ -146,10 +146,18 @@ def download_tooling():
 
     # download geofabrik json as this will be needed always
     # because of the .json file replacement by geofabrik
-    o_downloader = Downloader(24, False)
+    download_geofabrik_file_if_not_existing()
 
-    if o_downloader.should_geofabrik_file_be_downloaded():
-        o_downloader.download_geofabrik_file()
+
+def download_geofabrik_file_if_not_existing():
+    """
+    check geofabrik file if not existing
+    if the file does not exist, download geofabrik file
+    """
+    if not os.path.isfile(GEOFABRIK_PATH):
+        log.info('# Need to download geofabrik file')
+        download_file(GEOFABRIK_PATH,
+                      'https://download.geofabrik.de/index-v1.json')
 
 
 def get_latest_pypi_version():
@@ -190,6 +198,10 @@ class Downloader:
         self.max_days_old = max_days_old
         self.force_download = force_download
         self.border_countries = border_countries
+
+        # safety net if geofabrik file is not there
+        # OsmData=>process_input_of_the_tool does it "correctly"
+        download_geofabrik_file_if_not_existing()
 
         self.o_geofabrik_json = GeofabrikJson()
 
