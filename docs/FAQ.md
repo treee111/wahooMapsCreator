@@ -7,6 +7,7 @@
   - [Where on my Wahoo device do I have to copy the maps?](#where-on-my-wahoo-device-do-i-have-to-copy-the-maps)
   - [How can I restore original maps?](#how-can-i-restore-original-maps)
   - [Can I preview my generated maps before putting them onto the Wahoo device?](#can-i-preview-my-generated-maps-before-putting-them-onto-the-wahoo-device)
+  - [Does device/offline routing functionality use the new roads?](#does-deviceoffline-routing-functionality-use-the-new-roads)
 - [Device theme](#device-theme)
   - [How can I restore original rendering layout?](#how-can-i-restore-original-rendering-layout)
 - [Connection from Wahoo device to computer](#connection-from-wahoo-device-to-computer)
@@ -45,6 +46,15 @@ Delete all content from `maps/tiles/8` on your Wahoo device. After that, you can
 
 ### Can I preview my generated maps before putting them onto the Wahoo device?
 Read [usage of cruiser](USAGE_CRUISER.md#usage-of-cruiser)
+
+### Does device/offline routing functionality use the new roads?
+The device routing (synonym: offline routing) functionality is provided through routing tiles and available on newer models e.g. BOLTv2/ROAMv2. The routing tiles are stored in the directory `maps/routing` and contain all know roads which can be used to route over. This is something different then routes synced from Komoot, Stava, ... or planned via the ELEMNT Companion mobile app. In this case you follow a track, but on device routing will be used when you wonder off that track.
+
+Without updating the routing tiles in addition to updating the generated map files, device routing of your device will not route you over the newly added roads in the maps. The reason is: The old routing tiles simply do not know about there existence.
+
+Routing tiles are not covered in this repo for self generation but can be downloaded from https://my.hidrive.com/share/1t65k1b0lb#$/Windows-Wahoo-Map-Creator-Osmosis-v2-Maps. Download the <country>-routing.zip file for the countries of your choice and copy the content under the `maps/routing` directory on your wahoo device.
+
+Examplary the germany routing tiles would be stored in `maps/routing/2/000/...` .
 
 ## Device theme
 ### How can I restore original rendering layout?
