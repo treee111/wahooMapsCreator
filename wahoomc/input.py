@@ -205,14 +205,10 @@ class InputData():  # pylint: disable=too-many-instance-attributes,too-few-publi
                 "Country and X/Y coordinates are given. Only one of both is allowed!")
         elif self.country:
             # countries =
-            for country in CountryGeofabrik.split_input_to_list(self.country):
-                try:
-                    country = GeofabrikJson().translate_id_no_to_geofabrik(
-                        country)
-                except CountyIsNoGeofabrikCountry:
-                    sys.exit(
-                        f"Entered country '{country}' is not a geofabrik country. Please check this URL for possible countries \
-                            https://download.geofabrik.de/index.html!")
+            try:
+                CountryGeofabrik.split_input_to_list(self.country)
+            except CountyIsNoGeofabrikCountry as exception:
+                sys.exit(exception)
 
             # if we made it until here, sys.exit() was not called and therefore all countries OK ;-)
             return True

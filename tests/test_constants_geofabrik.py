@@ -4,7 +4,7 @@ tests for the constants geofabrik & geofabrik file
 import os
 import unittest
 
-import geojson # pylint: disable=import-error
+import geojson  # pylint: disable=import-error
 
 # import custom python packages
 from wahoomc.downloader import Downloader

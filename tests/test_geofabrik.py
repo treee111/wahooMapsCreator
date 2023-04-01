@@ -11,7 +11,7 @@ from wahoomc.geofabrik import CountryGeofabrik, XYGeofabrik
 from wahoomc.geofabrik import calc_bounding_box_tiles
 from wahoomc.downloader import Downloader
 from wahoomc import constants
-from wahoomc.geofabrik_json import GeofabrikJson
+from wahoomc.geofabrik_json import CountyIsNoGeofabrikCountry, GeofabrikJson
 
 
 def calc_tiles_via_geofabrik_json(input_argument):
@@ -179,6 +179,24 @@ class TestGeofabrik(unittest.TestCase):
 
         self.assertEqual(xy_tuple, expected_result)
 
+    def test_if_countrygeofabrik_raises_exception(self):
+        """
+        initialize CountryGeofabrik class and let the class check if the country is OK
+        in other words: if the exception raised by translate_id_no_to_geofabrik
+        is transported all up
+        """
+        CountryGeofabrik('germany')
+        CountryGeofabrik('malta')
+        CountryGeofabrik('malta,germany')
+
+        with self.assertRaises(CountyIsNoGeofabrikCountry):
+            CountryGeofabrik('germanyd')
+        with self.assertRaises(CountyIsNoGeofabrikCountry):
+            CountryGeofabrik('xy')
+        with self.assertRaises(CountyIsNoGeofabrikCountry):
+            CountryGeofabrik('maltad,germany')
+        with self.assertRaises(CountyIsNoGeofabrikCountry):
+            CountryGeofabrik('malta,tekke')
     # def test_get_tile_via_xy_coordinate_error(self):
     #     """
     #     use static json files in the repo to calculate a not-existing tile.

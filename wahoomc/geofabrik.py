@@ -12,7 +12,7 @@ from shapely.geometry import Polygon, shape
 
 # import custom python packages
 from wahoomc.constants import special_regions, block_download
-from wahoomc.geofabrik_json import GeofabrikJson
+from wahoomc.geofabrik_json import CountyIsNoGeofabrikCountry, GeofabrikJson
 
 log = logging.getLogger('main-logger')
 
@@ -75,11 +75,7 @@ class CountryGeofabrik(InformalGeofabrikInterface):
         self.wanted_maps = []
 
         # input parameters
-        input_countries = self.split_input_to_list(input_countries)
-
-        for country in input_countries:
-            self.wanted_maps.append(self.o_geofabrik_json.translate_id_no_to_geofabrik(
-                country))
+        self.wanted_maps = self.split_input_to_list(input_countries)
 
     def get_tiles_of_wanted_map_single(self, wanted_map):
         """Overrides InformalGeofabrikInterface.get_tiles_of_wanted_map_single()"""
@@ -269,10 +265,15 @@ class CountryGeofabrik(InformalGeofabrikInterface):
         returns a list of x/y combinations as integers
         """
         countries = []
+        o_geofabrik_json = GeofabrikJson()
 
-        # split by "," first for multiple x/y combinations, then by "/" for x and y value
-        for country in input_value.split(","):
-            countries.append(country)
+        try:
+            # split by "," first for multiple x/y combinations, then by "/" for x and y value
+            for country in input_value.split(","):
+                countries.append(o_geofabrik_json.translate_id_no_to_geofabrik(
+                    country))
+        except CountyIsNoGeofabrikCountry as exception:
+            raise exception
 
         return countries
 

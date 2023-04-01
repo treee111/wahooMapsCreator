@@ -13,6 +13,11 @@ from wahoomc.constants import GEOFABRIK_PATH
 class CountyIsNoGeofabrikCountry(Exception):
     """Raised when actual country is not a geofabrik country"""
 
+    def __init__(self, country):
+        message = f"Entered country '{country}' is not a geofabrik country. \
+                \nPlease check this URL for possible countries: https://download.geofabrik.de/index.html"
+        super().__init__(message)
+
 
 class GeofabrikJson:
     """
@@ -135,4 +140,4 @@ class GeofabrikJson:
             return 'us/'+country.replace('_', '-')
 
         # if none of them got triggert --> exception
-        raise CountyIsNoGeofabrikCountry
+        raise CountyIsNoGeofabrikCountry(country)
