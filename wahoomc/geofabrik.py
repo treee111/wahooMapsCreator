@@ -25,7 +25,7 @@ class InformalGeofabrikInterface:
     border_countries = {}
     output = {}
 
-    o_geofabrik_json = GeofabrikJson()
+    o_geofabrik_json = None
 
     def get_tiles_of_wanted_map(self) -> str:
         """Get the relevant tiles for the wanted country or X/Y coordinate"""
@@ -44,6 +44,8 @@ class CountryGeofabrik(InformalGeofabrikInterface):
     """Geofabrik processing for countries"""
 
     def __init__(self, input):
+        self.o_geofabrik_json = GeofabrikJson()
+
         # input parameters
         self.wanted_map = self.o_geofabrik_json.translate_id_no_to_geofabrik(
             input)
@@ -236,6 +238,7 @@ class XYGeofabrik(InformalGeofabrikInterface):
     def __init__(self, input):
         # input parameters
         self.wanted_map = input
+        self.o_geofabrik_json = GeofabrikJson()
 
     def get_tiles_of_wanted_map(self) -> str:
         """Overrides InformalGeofabrikInterface.get_tiles_of_wanted_map()"""

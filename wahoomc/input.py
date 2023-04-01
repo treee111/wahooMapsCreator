@@ -16,8 +16,6 @@ from tkinter import ttk
 from wahoomc.geofabrik_json import GeofabrikJson
 from wahoomc.geofabrik_json import CountyIsNoGeofabrikCountry
 
-o_geofabrik_json = GeofabrikJson()
-
 
 def process_call_of_the_tool():
     """
@@ -156,7 +154,7 @@ def get_countries_of_continent_from_geofabrik(continent):
     returns all countries of a continent to be selected in UI
     """
     countries = []
-    for region, value in o_geofabrik_json.geofabrik_overview.items():
+    for region, value in GeofabrikJson().geofabrik_overview.items():
         try:
             if value['parent'] == continent:
                 countries.append(region)
@@ -206,7 +204,7 @@ class InputData():  # pylint: disable=too-many-instance-attributes,too-few-publi
                 "Country and X/Y coordinates are given. Only one of both is allowed!")
         elif self.country:
             try:
-                self.country = o_geofabrik_json.translate_id_no_to_geofabrik(
+                self.country = GeofabrikJson().translate_id_no_to_geofabrik(
                     self.country)
                 return True
             except CountyIsNoGeofabrikCountry:
@@ -333,7 +331,7 @@ class ComboboxesEntryField(tk.Frame):  # pylint: disable=too-many-instance-attri
 
         # Comboboxes
         self.cb_continent = ttk.Combobox(
-            self, values=o_geofabrik_json.geofabrik_regions, state="readonly")
+            self, values=GeofabrikJson().geofabrik_regions, state="readonly")
         self.cb_continent.current(0)  # pre-select first entry in combobox
         self.cb_continent.bind("<<ComboboxSelected>>", self.callback_continent)
 
