@@ -8,7 +8,7 @@ from shapely.geometry import shape  # pylint: disable=import-error
 
 # import custom python packages
 from wahoomc.geofabrik import CountryGeofabrik, XYGeofabrik
-from wahoomc.geofabrik import calc_bounding_box_tiles, get_xy_coordinates_from_input
+from wahoomc.geofabrik import calc_bounding_box_tiles
 from wahoomc.downloader import Downloader
 from wahoomc import constants
 from wahoomc.geofabrik_json import GeofabrikJson
@@ -160,13 +160,13 @@ class TestGeofabrik(unittest.TestCase):
         use static json files in the repo to calculate relevant tiles
         """
 
-        xy_tuple = get_xy_coordinates_from_input("133/88")
+        xy_tuple = XYGeofabrik.split_input_to_list("133/88")
         self.assertEqual(xy_tuple, [{"x": 133, "y": 88}])
 
-        xy_tuple = get_xy_coordinates_from_input("11/92")
+        xy_tuple = XYGeofabrik.split_input_to_list("11/92")
         self.assertEqual(xy_tuple, [{"x": 11, "y": 92}])
 
-        xy_tuple = get_xy_coordinates_from_input("138/100")
+        xy_tuple = XYGeofabrik.split_input_to_list("138/100")
         self.assertEqual(xy_tuple, [{"x": 138, "y": 100}])
 
     def test_splitting_of_multiple_xy_coordinate(self):
@@ -174,7 +174,7 @@ class TestGeofabrik(unittest.TestCase):
         use static json files in the repo to calculate relevant tiles
         """
 
-        xy_tuple = get_xy_coordinates_from_input("133/88,138/100")
+        xy_tuple = XYGeofabrik.split_input_to_list("133/88,138/100")
         expected_result = [{"x": 133, "y": 88}, {"x": 138, "y": 100}]
 
         self.assertEqual(xy_tuple, expected_result)
