@@ -24,7 +24,7 @@ class InformalGeofabrikInterface:
     border_countries = {}
     output = {}
 
-    o_geofabrik_json = GeofabrikJson()
+    o_geofabrik_json = None
 
     def get_tiles_of_wanted_map_single(self, wanted_map) -> str:
         """Get the relevant tiles for ONE wanted country or X/Y coordinate"""
@@ -60,6 +60,7 @@ class CountryGeofabrik(InformalGeofabrikInterface):
         :param input: string with countries: 'malta' or 'malta, switzerland'
         :returns: object for country geofabrik processing
         """
+        self.o_geofabrik_json = GeofabrikJson()
         self.wanted_maps = []
 
         # input parameters
@@ -259,7 +260,7 @@ class XYGeofabrik(InformalGeofabrikInterface):
         :param input: string with xy-coordinates: 133/88 or 133/88,134/88
         :returns: object for xy geofabrik processing
         """
-        # input parameters
+        self.o_geofabrik_json = GeofabrikJson()
 
         # use Geofabrik-URL to get the relevant tiles
         self.wanted_maps = get_xy_coordinates_from_input(input_xy_coordinates)
