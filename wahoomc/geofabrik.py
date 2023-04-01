@@ -46,7 +46,7 @@ class CountryGeofabrik(InformalGeofabrikInterface):
     def __init__(self, input):
         self.o_geofabrik_json = GeofabrikJson()
 
-        # input parameters
+        # get geofabrik country
         self.wanted_map = self.o_geofabrik_json.translate_id_no_to_geofabrik(
             input)
 
@@ -236,9 +236,10 @@ class XYGeofabrik(InformalGeofabrikInterface):
     """Geofabrik processing for X/Y coordinates"""
 
     def __init__(self, input):
-        # input parameters
-        self.wanted_map = input
         self.o_geofabrik_json = GeofabrikJson()
+
+        # already splitted pairs of xy-coordinates
+        self.wanted_map = input
 
     def get_tiles_of_wanted_map(self) -> str:
         """Overrides InformalGeofabrikInterface.get_tiles_of_wanted_map()"""
