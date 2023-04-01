@@ -17,6 +17,14 @@ from wahoomc.geofabrik_json import CountyIsNoGeofabrikCountry, GeofabrikJson
 log = logging.getLogger('main-logger')
 
 
+class XYCombinationHasNoCountries(Exception):
+    """Raised when no tile is found for x/y combination"""
+
+    def __init__(self, xy_coordinate):
+        message = f"Given XY coordinate '{xy_coordinate}' consists of no countries. Please check if your input is valid."
+        super().__init__(message)
+
+
 class InformalGeofabrikInterface:
     """Informal class for Geofabrik processing"""
     wanted_maps = []
@@ -38,8 +46,13 @@ class InformalGeofabrikInterface:
 
         tiles_of_input = []
 
-        for country in self.wanted_maps:
-            tiles_of_input.extend(self.get_tiles_of_wanted_map_single(country))
+        for wanted_map in self.wanted_maps:
+            try:
+                tiles_of_input.extend(
+                    self.get_tiles_of_wanted_map_single(wanted_map))
+            except XYCombinationHasNoCountries as exception:
+                # this exception is actually only raised in class XYGeofabrik
+                raise exception
 
         return tiles_of_input
 
@@ -305,6 +318,10 @@ class XYGeofabrik(InformalGeofabrikInterface):
         # get all infos of these bounding box tiles
         tiles_of_input = self.find_needed_countries(
             bbox_tiles, wanted_map, wanted_region)
+
+        if len(tiles_of_input[0]['countries']) == 0:
+            raise XYCombinationHasNoCountries(
+                f'{wanted_map["x"]}/{wanted_map["y"]}')
 
         return tiles_of_input
 

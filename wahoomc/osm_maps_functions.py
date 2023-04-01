@@ -27,13 +27,9 @@ from wahoomc.constants import VERSION
 from wahoomc.constants import OSMOSIS_WIN_FILE_PATH
 
 from wahoomc.downloader import Downloader
-from wahoomc.geofabrik import CountryGeofabrik, XYGeofabrik
+from wahoomc.geofabrik import CountryGeofabrik, XYCombinationHasNoCountries, XYGeofabrik
 
 log = logging.getLogger('main-logger')
-
-
-class TileNotFoundError(Exception):
-    """Raised when no tile is found for x/y combination"""
 
 
 def run_subprocess_and_log_output(cmd, error_message, cwd=""):
@@ -275,7 +271,11 @@ class XYOsmData(InformalOsmDataInterface):
 
         o_geofabrik = XYGeofabrik(self.input_xy_coordinates)
         # find the tiles for  x/y combinations in the geofabrik json files
-        self.tiles = o_geofabrik.get_tiles_of_wanted_map()
+        try:
+            self.tiles = o_geofabrik.get_tiles_of_wanted_map()
+        except XYCombinationHasNoCountries as exception:
+            # this exception is actually only raised in class XYGeofabrik
+            sys.exit(exception)
 
     def calc_country_name(self):
         """

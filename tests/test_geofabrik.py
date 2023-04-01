@@ -7,7 +7,7 @@ import unittest
 from shapely.geometry import shape  # pylint: disable=import-error
 
 # import custom python packages
-from wahoomc.geofabrik import CountryGeofabrik, XYGeofabrik
+from wahoomc.geofabrik import CountryGeofabrik, XYCombinationHasNoCountries, XYGeofabrik
 from wahoomc.geofabrik import calc_bounding_box_tiles
 from wahoomc.downloader import Downloader
 from wahoomc import constants
@@ -197,6 +197,24 @@ class TestGeofabrik(unittest.TestCase):
             CountryGeofabrik('maltad,germany')
         with self.assertRaises(CountyIsNoGeofabrikCountry):
             CountryGeofabrik('malta,tekke')
+
+    def test_if_xy_geofabrik_raises_exception(self):
+        """
+        initialize XYGeofabrik class + check if xy coordinate has countries
+        """
+        o_geofabrik = XYGeofabrik('133/87')
+        o_geofabrik.get_tiles_of_wanted_map()
+
+        o_geofabrik = XYGeofabrik('100/138')
+        o_geofabrik.get_tiles_of_wanted_map()
+
+        o_geofabrik = XYGeofabrik('138/100')
+        o_geofabrik.get_tiles_of_wanted_map()
+
+        with self.assertRaises(XYCombinationHasNoCountries):
+            o_geofabrik = XYGeofabrik('200/1')
+            o_geofabrik.get_tiles_of_wanted_map()
+
     # def test_get_tile_via_xy_coordinate_error(self):
     #     """
     #     use static json files in the repo to calculate a not-existing tile.
