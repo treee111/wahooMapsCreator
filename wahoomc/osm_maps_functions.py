@@ -477,49 +477,47 @@ class OsmMaps:
 
         log.info('+ Generate sea for each coordinate: OK')
 
-    def generate_elevation(self, o_input_data):
+    def generate_elevation(self):
         """
         Generate contour lines for all tiles
         """
-        if o_input_data.contour:
+        username, password = read_earthexplorer_credentials()
 
-            username, password = read_earthexplorer_credentials()
+        if not username or not password:
+            username, password = ask_for_and_write_earthexplorer_credentials()
 
-            if not username or not password:
-                username, password = ask_for_and_write_earthexplorer_credentials()
+        log.info('-' * 80)
+        log.info('# Generate contour lines for each coordinate')
 
-            log.info('-' * 80)
-            log.info('# Generate contour lines for each coordinate')
+        hgt_path = os.path.join(USER_DL_DIR, 'hgt')
 
-            hgt_path = os.path.join(USER_DL_DIR, 'hgt')
+        tile_count = 1
+        for tile in self.o_osm_data.tiles:
+            out_file_elevation = os.path.join(
+                USER_OUTPUT_DIR, f'{tile["x"]}', f'{tile["y"]}', 'elevation')
+            # as the elevation file has a suffix, they need to be searched with glob.glob
+            # example elevation filename: elevation_lon14.06_15.47lat35.46_36.60_view1,view3.osm
+            out_file_elevation_existing = glob.glob(os.path.join(
+                USER_OUTPUT_DIR, str(tile["x"]), str(tile["y"]), 'elevation*.osm'))
+            # check for already existing .osm file
+            if not (len(out_file_elevation_existing) == 1 and os.path.isfile(out_file_elevation_existing[0])) \
+                    or self.o_osm_data.force_processing is True:
+                print(
+                    f'# Generate elevation {tile_count} for coordinates: {tile["x"]} {tile["y"]}')
+                cmd = ['phyghtmap']
+                cmd.append('-a ' + f'{tile["left"]}' + ':' + f'{tile["bottom"]}' +
+                            ':' + f'{tile["right"]}' + ':' + f'{tile["top"]}')
+                cmd.extend(['-o', f'{out_file_elevation}', '-s 10', '-c 100,50', '--source=view1,view3,srtm3',
+                            '--jobs=8', '--viewfinder-mask=1', '--start-node-id=20000000000',
+                            '--max-nodes-per-tile=0', '--start-way-id=2000000000', '--write-timestamp',
+                            '--no-zero-contour', '--hgtdir=' + hgt_path])
+                cmd.append('--earthexplorer-user=' + username)
+                cmd.append('--earthexplorer-password=' + password)
 
-            tile_count = 1
-            for tile in self.o_osm_data.tiles:
-                out_file_elevation = os.path.join(
-                    USER_OUTPUT_DIR, f'{tile["x"]}', f'{tile["y"]}', 'elevation')
-                # as the elevation file has a suffix, they need to be searched with glob.glob
-                # example elevation filename: elevation_lon14.06_15.47lat35.46_36.60_view1,view3.osm
-                out_file_elevation_existing = glob.glob(os.path.join(
-                    USER_OUTPUT_DIR, str(tile["x"]), str(tile["y"]), 'elevation*.osm'))
-                # check for already existing .osm file
-                if not (len(out_file_elevation_existing) == 1 and os.path.isfile(out_file_elevation_existing[0])) \
-                        or self.o_osm_data.force_processing is True:
-                    print(
-                        f'# Generate elevation {tile_count} for coordinates: {tile["x"]} {tile["y"]}')
-                    cmd = ['phyghtmap']
-                    cmd.append('-a ' + f'{tile["left"]}' + ':' + f'{tile["bottom"]}' +
-                               ':' + f'{tile["right"]}' + ':' + f'{tile["top"]}')
-                    cmd.extend(['-o', f'{out_file_elevation}', '-s 10', '-c 100,50', '--source=view1,view3,srtm3',
-                                '--jobs=8', '--viewfinder-mask=1', '--start-node-id=20000000000',
-                                '--max-nodes-per-tile=0', '--start-way-id=2000000000', '--write-timestamp',
-                                '--no-zero-contour', '--hgtdir=' + hgt_path])
-                    cmd.append('--earthexplorer-user=' + username)
-                    cmd.append('--earthexplorer-password=' + password)
+                run_subprocess_and_log_output(
+                    cmd, f'! Error in phyghtmap with tile: {tile["x"]},{tile["y"]}. Win/out_file')
 
-                    run_subprocess_and_log_output(
-                        cmd, f'! Error in phyghtmap with tile: {tile["x"]},{tile["y"]}. Win/out_file')
-
-            log.info('+ Generate contour lines for each coordinate: OK')
+        log.info('+ Generate contour lines for each coordinate: OK')
 
     def split_filtered_country_files_to_tiles(self):
         """
