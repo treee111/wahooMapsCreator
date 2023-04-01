@@ -18,7 +18,7 @@ from wahoomc.file_directory_functions import move_content, write_json_file_gener
 from wahoomc.constants_functions import get_tooling_win_path, get_absolute_dir_user_or_repo
 from wahoomc.downloader import get_latest_pypi_version
 
-from wahoomc.constants import USER_WAHOO_MC
+from wahoomc.constants import GEOFABRIK_PATH, USER_WAHOO_MC
 from wahoomc.constants import USER_DL_DIR
 from wahoomc.constants import USER_MAPS_DIR
 from wahoomc.constants import USER_OUTPUT_DIR
@@ -90,6 +90,9 @@ def check_installation_of_required_programs():
     if not is_program_installed("java"):
         sys.exit(
             f"Java is not installed. {text_to_docu}")
+
+    if not os.path.isfile(GEOFABRIK_PATH):
+        sys.exit('Geofabrik file is not downloaded. Please create an issue:\n- https://github.com/treee111/wahooMapsCreator/issues"')
 
     if platform.system() == "Windows":
         if not os.path.exists(get_tooling_win_path(
