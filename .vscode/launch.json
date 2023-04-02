@@ -237,6 +237,23 @@
                 "-md",
                 "100"
             ]
+        },
+        {
+            "name": "co: france",
+            "type": "python",
+            "request": "launch",
+            "module": "wahoomc",
+            "console": "integratedTerminal",
+            "args": [
+                "cli",
+                "-co",
+                "france",
+                "--bordercountries",
+                "--maxdays",
+                "30",
+                "--verbose"
+            ],
+            "justMyCode": false
         }
     ]
 }
