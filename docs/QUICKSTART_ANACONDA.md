@@ -10,7 +10,7 @@
     - [homebrew](#homebrew)
     - [OSM-tools](#osm-tools)
 - [wahooMapsCreator](#wahoomapscreator)
-  - [Create Anaconda Environment](#create-anaconda-environment)
+  - [Create Anaconda environment](#create-anaconda-environment)
   - [Install wahooMapsCreator into Anaconda environment](#install-wahoomapscreator-into-anaconda-environment)
     - [Update wahooMapsCreator](#update-wahoomapscreator)
 - [Run wahooMapsCreator](#run-wahoomapscreator)
@@ -72,7 +72,7 @@ brew install osmosis
 ```
 
 # wahooMapsCreator
-## Create Anaconda Environment
+## Create Anaconda environment
 1. Open terminal (macOS/Linux) or **Anaconda Prompt** (Windows, via Startmenu)
 2. Create a new Anaconda environment with needed packages
 ```
