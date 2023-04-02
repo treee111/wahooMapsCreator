@@ -117,14 +117,14 @@ class OsmData():  # pylint: disable=too-few-public-methods
 
         # calc tiles
         if o_input_data.country:
-            self.calc_tiles_country(o_input_data)
+            o_geofabrik = self.calc_tiles_country(o_input_data)
         elif o_input_data.xy_coordinates:
             self.calc_tiles_xy(o_input_data)
 
         # calc border countries
         log.info('-' * 80)
         if o_input_data.country:
-            self.calc_border_countries_country(o_input_data)
+            self.calc_border_countries_country(o_input_data, o_geofabrik)
         elif o_input_data.xy_coordinates:
             self.calc_border_countries()
         # log border countries when and when not calculated to output the processed country(s)
@@ -158,6 +158,8 @@ class OsmData():  # pylint: disable=too-few-public-methods
         o_geofabrik = CountryGeofabrik(o_input_data.country)
         self.tiles = o_geofabrik.get_tiles_of_wanted_map()
 
+        return o_geofabrik
+
     def calc_tiles_xy(self, o_input_data):
         """
         option 2: input a x/y combinations as parameter, e.g. 134/88  or 133/88,130/100
@@ -169,7 +171,7 @@ class OsmData():  # pylint: disable=too-few-public-methods
         # find the tiles for  x/y combinations in the geofabrik json files
         self.tiles = o_geofabrik.get_tiles_of_wanted_map()
 
-    def calc_border_countries_country(self, o_input_data):
+    def calc_border_countries_country(self, o_input_data, o_geofabrik):
         """
         calculate the border countries for the given tiles when input is a country
         - if CLI/GUI input by user
@@ -178,7 +180,8 @@ class OsmData():  # pylint: disable=too-few-public-methods
             self.calc_border_countries()
         # set the to-be-processed country as border country
         else:
-            self.border_countries[o_input_data.country] = {}
+            for country in o_geofabrik.wanted_maps:
+                self.border_countries[country] = {}
 
     def calc_border_countries(self):
         """

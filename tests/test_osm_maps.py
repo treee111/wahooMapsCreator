@@ -39,6 +39,13 @@ class TestOsmMapsCalculation(unittest.TestCase):
         self.process_and_check_border_countries(
             'germany', True, expected_result, 'country')
 
+        # germany,malta
+        expected_result = {'czech-republic': {}, 'germany': {}, 'austria': {}, 'liechtenstein': {},
+                           'switzerland': {}, 'italy': {}, 'netherlands': {}, 'belgium': {},
+                           'luxembourg': {}, 'france': {}, 'poland': {}, 'denmark': {}, 'sweden': {}, 'malta': {}}
+        self.process_and_check_border_countries(
+            'germany,malta', True, expected_result, 'country')
+
     def test_calc_border_countries_input_xy_coordinates_1tile(self):
         """
         Test initialized border countries
@@ -77,7 +84,15 @@ class TestOsmMapsCalculation(unittest.TestCase):
         self.process_and_check_border_countries(
             'china', False, {'china': {}}, 'country')
 
-    def test_calc_without_border_countries__xy_coordinates_1tile(self):
+        # malta,liechtenstein
+        self.process_and_check_border_countries(
+            'malta,liechtenstein', False, {'malta': {}, 'liechtenstein': {}}, 'country')
+
+        # malta,tunisia
+        self.process_and_check_border_countries(
+            'malta,tunisia', False, {'malta': {}, 'tunisia': {}}, 'country')
+
+    def test_calc_without_border_countries_xy_coordinates_1tile(self):
         """
         Test initialized countries without border countries
         - of one tile
@@ -88,7 +103,7 @@ class TestOsmMapsCalculation(unittest.TestCase):
         self.process_and_check_border_countries(
             "133/88", False, expected_result, 'xy_coordinate')
 
-    def test_calc_without_border_countries__xy_coordinates_2tiles(self):
+    def test_calc_without_border_countries_xy_coordinates_2tiles(self):
         """
         Test initialized countries without border countries
         - of two tiles
