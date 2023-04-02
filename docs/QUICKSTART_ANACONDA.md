@@ -79,7 +79,7 @@ brew install osmosis
 1. Open terminal (macOS/Linux) or **Anaconda Prompt** (Windows, via Startmenu)
 2. Create a new Anaconda environment with needed packages
 ```
-conda create -n gdal-user python=3.10 geojson=2.5 gdal=3.4 requests=2.28 shapely=1.8 pip --channel conda-forge --override-channels
+conda create -n gdal-user python=3.10 geojson=2.5 gdal=3.4 requests=2.28 shapely=1.8 bs4=4.11 lxml=4.9 matplotlib=3.4.3 pip --channel conda-forge --override-channels
 ```
 3. activate Anaconda environment with the command printed out (this needs to be done each time you want to use wahooMapsCreator maps)
 ```
@@ -109,9 +109,16 @@ An additional Python packages has to be installed and you need an free account f
 ### Install phyghtmap
 1. Download and unpack http://katze.tfiu.de/projects/phyghtmap/phyghtmap_2.23.orig.tar.gz
 2. Enter your Anaconda environment and go to the unpacked folder
-3. Install phyghtmap into your Anaconda environment with
+3. Install phyghtmap into your Anaconda environment
+
+macOS / Linux
 ```
-sudo python3 setup.py install
+sudo python setup.py install
+```
+
+Windows
+```
+python setup.py install
 ```
 
 ### Free account for USGS
