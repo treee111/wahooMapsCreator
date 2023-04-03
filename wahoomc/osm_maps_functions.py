@@ -499,11 +499,11 @@ class OsmMaps:
             # example elevation filename: elevation_lon14.06_15.47lat35.46_36.60_view1,view3.osm
             out_file_elevation_existing = glob.glob(os.path.join(
                 USER_OUTPUT_DIR, str(tile["x"]), str(tile["y"]), 'elevation*.osm'))
-            # check for already existing .osm file
+            # check for already existing elevation .osm file (the ones matched via glob)
             if not (len(out_file_elevation_existing) == 1 and os.path.isfile(out_file_elevation_existing[0])) \
                     or self.o_osm_data.force_processing is True:
-                print(
-                    f'# Generate elevation {tile_count} for coordinates: {tile["x"]} {tile["y"]}')
+                log.info(
+                    '+ Coordinates: %s,%s. (%s of %s)', tile["x"], tile["y"], tile_count, len(self.o_osm_data.tiles))
                 cmd = ['phyghtmap']
                 cmd.append('-a ' + f'{tile["left"]}' + ':' + f'{tile["bottom"]}' +
                             ':' + f'{tile["right"]}' + ':' + f'{tile["top"]}')
@@ -515,7 +515,9 @@ class OsmMaps:
                 cmd.append('--earthexplorer-password=' + password)
 
                 run_subprocess_and_log_output(
-                    cmd, f'! Error in phyghtmap with tile: {tile["x"]},{tile["y"]}. Win/out_file')
+                    cmd, f'! Error in phyghtmap with tile: {tile["x"]},{tile["y"]}. Win_macOS/elevation')
+                
+            tile_count += 1
 
         log.info('+ Generate contour lines for each coordinate: OK')
 
