@@ -15,6 +15,7 @@ from tkinter import ttk
 # import custom python packages
 from wahoomc.geofabrik_json import GeofabrikJson
 from wahoomc.geofabrik_json import CountyIsNoGeofabrikCountry
+from wahoomc.geofabrik import get_countries_from_input
 
 
 def process_call_of_the_tool():
@@ -35,7 +36,7 @@ def process_call_of_the_tool():
 
     # create the parser for the "cli" command
     parser_cli = subparsers.add_parser(
-        'cli', help='Run the tool via command line interface')
+        'cli', help='Run the tool via command line interface', formatter_class=argparse.RawTextHelpFormatter)
 
     # group: primary input parameters to create map for. One needs to be given
     primary_args = parser_cli.add_argument_group(
@@ -44,10 +45,10 @@ def process_call_of_the_tool():
         required=True)
     # country to create maps for
     primary_args_excl.add_argument(
-        "-co", "--country", help="country to generate maps for")
+        "-co", "--country", help="country to generate maps for.\nExample: -co malta, multiple countries separated by comma: -co malta,italy")
     # X/Y coordinates to create maps for
     primary_args_excl.add_argument(
-        "-xy", "--xy_coordinates", help="x/y coordinates to generate maps for. Example: 133/88")
+        "-xy", "--xy_coordinates", help="x/y coordinates to generate maps for.\nExample: -xy 133/88, multiple xy coordinates separated by comma: -xy 133/88,134/89")
 
     # group: options for map generation
     options_args = parser_cli.add_argument_group(
@@ -203,14 +204,18 @@ class InputData():  # pylint: disable=too-many-instance-attributes,too-few-publi
             sys.exit(
                 "Country and X/Y coordinates are given. Only one of both is allowed!")
         elif self.country:
-            try:
-                self.country = GeofabrikJson().translate_id_no_to_geofabrik(
-                    self.country)
-                return True
-            except CountyIsNoGeofabrikCountry:
-                sys.exit(
-                    f"Entered country '{self.country}' is not a geofabrik country. Please check this URL for possible countries \
-                        https://download.geofabrik.de/index.html!")
+            # countries =
+            for country in get_countries_from_input(self.country):
+                try:
+                    country = GeofabrikJson().translate_id_no_to_geofabrik(
+                        country)
+                except CountyIsNoGeofabrikCountry:
+                    sys.exit(
+                        f"Entered country '{country}' is not a geofabrik country. Please check this URL for possible countries \
+                            https://download.geofabrik.de/index.html!")
+
+            # if we made it until here, sys.exit() was not called and therefore all countries OK ;-)
+            return True
         else:
             return True
 

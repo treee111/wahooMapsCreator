@@ -36,26 +36,6 @@ class TileNotFoundError(Exception):
     """Raised when no tile is found for x/y combination"""
 
 
-def get_xy_coordinates_from_input(input_xy_coordinates):
-    """
-    extract/split x/y combinations by given X/Y coordinates.
-    input should be "188/88" or for multiple values "188/88,100/10,109/99".
-    returns a list of x/y combinations as integers
-    """
-
-    xy_combinations = []
-
-    # split by "," first for multiple x/y combinations, then by "/" for x and y value
-    for xy_coordinate in input_xy_coordinates.split(","):
-        splitted = xy_coordinate.split("/")
-
-        if len(splitted) == 2:
-            xy_combinations.append(
-                {"x": int(splitted[0]), "y": int(splitted[1])})
-
-    return xy_combinations
-
-
 def run_subprocess_and_log_output(cmd, error_message, cwd=""):
     """
     run given cmd-subprocess and issue error message if wished
@@ -233,14 +213,19 @@ class CountryOsmData(InformalOsmDataInterface):
             super().calc_border_countries()
         # set the to-be-processed country as border country
         else:
-            self.border_countries[self.input_country] = {}
+            for country in self.o_geofabrik.wanted_maps:
+                self.border_countries[country] = {}
 
     def calc_country_name(self):
         """
         country name is the country
         >1 countries are separated by underscore
         """
-        self.country_name = self.input_country
+        for country in self.o_geofabrik.wanted_maps:
+            if not self.country_name:
+                self.country_name = country
+            else:
+                self.country_name = f'{self.country_name}_{country}'
 
 
 class XYOsmData(InformalOsmDataInterface):
@@ -285,13 +270,10 @@ class XYOsmData(InformalOsmDataInterface):
         """
         option 2: input a x/y combinations as parameter, e.g. 134/88  or 133/88,130/100
         """
-        log.info('# Input X/Y coordinates: %s.', self.input_xy_coordinates)
+        log.info(
+            '# Input X/Y coordinates: %s.', self.input_xy_coordinates)
 
-        # use Geofabrik-URL to get the relevant tiles
-        xy_coordinates = get_xy_coordinates_from_input(
-            self.input_xy_coordinates)
-
-        o_geofabrik = XYGeofabrik(xy_coordinates)
+        o_geofabrik = XYGeofabrik(self.input_xy_coordinates)
         # find the tiles for  x/y combinations in the geofabrik json files
         self.tiles = o_geofabrik.get_tiles_of_wanted_map()
 

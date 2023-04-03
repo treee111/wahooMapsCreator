@@ -8,11 +8,9 @@ functions and object for managing OSM maps
 import sys
 import math
 import logging
-import geojson
 from shapely.geometry import Polygon, shape
 
 # import custom python packages
-from wahoomc.constants import GEOFABRIK_PATH
 from wahoomc.constants import special_regions, block_download
 from wahoomc.geofabrik_json import GeofabrikJson
 
@@ -20,22 +18,36 @@ log = logging.getLogger('main-logger')
 
 
 class InformalGeofabrikInterface:
-    wanted_map = ''
+    """Informal class for Geofabrik processing"""
+    wanted_maps = []
     tiles = []
     border_countries = {}
     output = {}
 
     o_geofabrik_json = None
 
-    def get_tiles_of_wanted_map(self) -> str:
-        """Get the relevant tiles for the wanted country or X/Y coordinate"""
+    def get_tiles_of_wanted_map_single(self, wanted_map) -> str:
+        """Get the relevant tiles for ONE wanted country or X/Y coordinate"""
         pass
+
+    def get_tiles_of_wanted_map(self) -> list:
+        """
+        calculates tiles of all input wanted-maps
+        :returns: list of tiles
+        """
+
+        tiles_of_input = []
+
+        for country in self.wanted_maps:
+            tiles_of_input.extend(self.get_tiles_of_wanted_map_single(country))
+
+        return tiles_of_input
 
     def find_needed_countries(self, bbox_tiles, wanted_map, wanted_region_polygon) -> dict:
         """find needed countries for requested country or X/Y combination"""
         pass
 
-    def compose_bouding_box(self, input) -> dict:
+    def compose_bouding_box(self, bounds) -> dict:
         """calculate bounding box based on geometry or X/Y combination"""
         pass
 
@@ -50,18 +62,26 @@ class InformalGeofabrikInterface:
 class CountryGeofabrik(InformalGeofabrikInterface):
     """Geofabrik processing for countries"""
 
-    def __init__(self, input):
+    def __init__(self, input_countries):
+        """
+        :param input: string with countries: 'malta' or 'malta, switzerland'
+        :returns: object for country geofabrik processing
+        """
         self.o_geofabrik_json = GeofabrikJson()
+        self.wanted_maps = []
 
-        # get geofabrik country
-        self.wanted_map = self.o_geofabrik_json.translate_id_no_to_geofabrik(
-            input)
+        # input parameters
+        input_countries = get_countries_from_input(input_countries)
 
-    def get_tiles_of_wanted_map(self):
-        """Overrides InformalGeofabrikInterface.get_tiles_of_wanted_map()"""
+        for country in input_countries:
+            self.wanted_maps.append(self.o_geofabrik_json.translate_id_no_to_geofabrik(
+                country))
+
+    def get_tiles_of_wanted_map_single(self, wanted_map):
+        """Overrides InformalGeofabrikInterface.get_tiles_of_wanted_map_single()"""
         # Check if wanted_map is in the json file and if so get the polygon (shape)
         wanted_map_geom = self.o_geofabrik_json.get_geofabrik_geometry(
-            self.wanted_map)
+            wanted_map)
 
         # convert to shape (multipolygon)
         wanted_region = shape(wanted_map_geom)
@@ -74,7 +94,7 @@ class CountryGeofabrik(InformalGeofabrikInterface):
 
         # get all infos of these bounding box tiles
         tiles_of_input = self.find_needed_countries(
-            bbox_tiles, self.wanted_map, wanted_region)
+            bbox_tiles, wanted_map, wanted_region)
 
         return tiles_of_input
 
@@ -241,29 +261,30 @@ class CountryGeofabrik(InformalGeofabrikInterface):
 class XYGeofabrik(InformalGeofabrikInterface):
     """Geofabrik processing for X/Y coordinates"""
 
-    def __init__(self, input):
+    def __init__(self, input_xy_coordinates):
+        """
+        :param input: string with xy-coordinates: 133/88 or 133/88,134/88
+        :returns: object for xy geofabrik processing
+        """
         self.o_geofabrik_json = GeofabrikJson()
 
-        # already splitted pairs of xy-coordinates
-        self.wanted_map = input
+        # use Geofabrik-URL to get the relevant tiles
+        self.wanted_maps = get_xy_coordinates_from_input(input_xy_coordinates)
 
-    def get_tiles_of_wanted_map(self) -> str:
-        """Overrides InformalGeofabrikInterface.get_tiles_of_wanted_map()"""
-        tiles_of_input = []
-        for xy_combination in self.wanted_map:
+    def get_tiles_of_wanted_map_single(self, wanted_map):
+        """Overrides InformalGeofabrikInterface.get_tiles_of_wanted_map_single()"""
+        # calc bounding box - the whole area to be created
+        bbox = self.compose_bouding_box(wanted_map)
 
-            # calc bounding box - the whole area to be created
-            bbox = self.compose_bouding_box(xy_combination)
+        # Build bounding box list of tiles - several X/Y combinations making up the area
+        bbox_tiles = calc_bounding_box_tiles(bbox)
 
-            # Build bounding box list of tiles - several X/Y combinations making up the area
-            bbox_tiles = calc_bounding_box_tiles(bbox)
+        # convert X/Y combination to shape (multipolygon)
+        wanted_region = self.compose_shape(bbox_tiles)
 
-            # convert X/Y combination to shape (multipolygon)
-            wanted_region = self.compose_shape(bbox_tiles)
-
-            # get all infos of these bounding box tiles
-            tiles_of_input.extend(self.find_needed_countries(
-                bbox_tiles, self.wanted_map, wanted_region))
+        # get all infos of these bounding box tiles
+        tiles_of_input = self.find_needed_countries(
+            bbox_tiles, wanted_map, wanted_region)
 
         return tiles_of_input
 
@@ -345,8 +366,8 @@ class XYGeofabrik(InformalGeofabrikInterface):
     def compose_shape(self, bbox_tiles):
         coords = [(bbox_tiles[0]["tile_top"], bbox_tiles[0]["tile_left"]), (bbox_tiles[0]["tile_top"], bbox_tiles[0]["tile_right"]),
                   (bbox_tiles[0]["tile_bottom"], bbox_tiles[0]["tile_right"]), (bbox_tiles[0]["tile_bottom"], bbox_tiles[0]["tile_left"])]
-        p = Polygon(coords)
-        wanted_region = shape(p)
+        coords_polygon = Polygon(coords)
+        wanted_region = shape(coords_polygon)
         return wanted_region
 
 
@@ -399,3 +420,39 @@ def num2deg(xtile, ytile, zoom=8):
     lat_rad = math.atan(math.sinh(math.pi * (1 - 2 * ytile / n)))
     lat_deg = math.degrees(lat_rad)
     return (lat_deg, lon_deg)
+
+
+def get_countries_from_input(input_countries):
+    """
+    extract/split x/y combinations by given X/Y coordinates.
+    input should be "188/88" or for multiple values "188/88,100/10,109/99".
+    returns a list of x/y combinations as integers
+    """
+
+    countries = []
+
+    # split by "," first for multiple x/y combinations, then by "/" for x and y value
+    for country in input_countries.split(","):
+        countries.append(country)
+
+    return countries
+
+
+def get_xy_coordinates_from_input(input_xy_coordinates):
+    """
+    extract/split x/y combinations by given X/Y coordinates.
+    input should be "188/88" or for multiple values "188/88,100/10,109/99".
+    returns a list of x/y combinations as integers
+    """
+
+    xy_combinations = []
+
+    # split by "," first for multiple x/y combinations, then by "/" for x and y value
+    for xy_coordinate in input_xy_coordinates.split(","):
+        splitted = xy_coordinate.split("/")
+
+        if len(splitted) == 2:
+            xy_combinations.append(
+                {"x": int(splitted[0]), "y": int(splitted[1])})
+
+    return xy_combinations
