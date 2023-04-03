@@ -6,7 +6,7 @@ import os
 import unittest
 
 # import custom python packages
-from wahoomc.osm_maps_functions import OsmData
+from wahoomc.osm_maps_functions import CountryOsmData, XYOsmData
 from wahoomc.osm_maps_functions import OsmMaps
 from wahoomc.osm_maps_functions import get_xy_coordinates_from_input
 # from wahoomc.osm_maps_functions import TileNotFoundError
@@ -106,14 +106,16 @@ class TestOsmMapsCalculation(unittest.TestCase):
         """
 
         o_input_data = InputData()
-        if inp_mode == 'country':
-            o_input_data.country = inp_val
-        elif inp_mode == 'xy_coordinate':
-            o_input_data.xy_coordinates = inp_val
         o_input_data.process_border_countries = calc_border_c
 
-        o_osm_data = OsmData()
-        o_osm_data.process_input_of_the_tool(o_input_data)
+        if inp_mode == 'country':
+            o_input_data.country = inp_val
+            o_osm_data = CountryOsmData(o_input_data)
+        elif inp_mode == 'xy_coordinate':
+            o_input_data.xy_coordinates = inp_val
+            o_osm_data = XYOsmData(o_input_data)
+
+        o_osm_data.process_input_of_the_tool()
 
         result = o_osm_data.border_countries
 
@@ -138,8 +140,8 @@ class TestOSMMapsInput(unittest.TestCase):
         o_input_data = InputData()
         o_input_data.country = 'malta'
 
-        o_osm_data = OsmData()
-        o_osm_data.process_input_of_the_tool(o_input_data)
+        o_osm_data = CountryOsmData(o_input_data)
+        o_osm_data.process_input_of_the_tool()
 
         result = o_osm_data.country_name
         self.assertEqual(result, 'malta')
@@ -211,8 +213,10 @@ class TestConfigFile(unittest.TestCase):
         # prevent from downloading land_polygons each time
         o_input_data.max_days_old = 1000
 
-        o_osm_data = OsmData()
-        o_downloader = o_osm_data.process_input_of_the_tool(o_input_data)
+        o_osm_data = CountryOsmData(o_input_data)
+        o_osm_data.process_input_of_the_tool()
+
+        o_downloader = o_osm_data.get_downloader()
 
         # download files marked for download to fill up map_file per country to write to config
         o_downloader.download_files_if_needed()
