@@ -8,7 +8,6 @@ import unittest
 # import custom python packages
 from wahoomc.osm_maps_functions import CountryOsmData, XYOsmData
 from wahoomc.osm_maps_functions import OsmMaps
-from wahoomc.osm_maps_functions import get_xy_coordinates_from_input
 # from wahoomc.osm_maps_functions import TileNotFoundError
 from wahoomc.input import InputData
 from wahoomc import file_directory_functions as fd_fct
@@ -39,6 +38,13 @@ class TestOsmMapsCalculation(unittest.TestCase):
                            'luxembourg': {}, 'france': {}, 'poland': {}, 'denmark': {}, 'sweden': {}}
         self.process_and_check_border_countries(
             'germany', True, expected_result, 'country')
+
+        # germany,malta
+        expected_result = {'czech-republic': {}, 'germany': {}, 'austria': {}, 'liechtenstein': {},
+                           'switzerland': {}, 'italy': {}, 'netherlands': {}, 'belgium': {},
+                           'luxembourg': {}, 'france': {}, 'poland': {}, 'denmark': {}, 'sweden': {}, 'malta': {}}
+        self.process_and_check_border_countries(
+            'germany,malta', True, expected_result, 'country')
 
     def test_calc_border_countries_input_xy_coordinates_1tile(self):
         """
@@ -78,7 +84,15 @@ class TestOsmMapsCalculation(unittest.TestCase):
         self.process_and_check_border_countries(
             'china', False, {'china': {}}, 'country')
 
-    def test_calc_without_border_countries__xy_coordinates_1tile(self):
+        # malta,liechtenstein
+        self.process_and_check_border_countries(
+            'malta,liechtenstein', False, {'malta': {}, 'liechtenstein': {}}, 'country')
+
+        # malta,tunisia
+        self.process_and_check_border_countries(
+            'malta,tunisia', False, {'malta': {}, 'tunisia': {}}, 'country')
+
+    def test_calc_without_border_countries_xy_coordinates_1tile(self):
         """
         Test initialized countries without border countries
         - of one tile
@@ -89,7 +103,7 @@ class TestOsmMapsCalculation(unittest.TestCase):
         self.process_and_check_border_countries(
             "133/88", False, expected_result, 'xy_coordinate')
 
-    def test_calc_without_border_countries__xy_coordinates_2tiles(self):
+    def test_calc_without_border_countries_xy_coordinates_2tiles(self):
         """
         Test initialized countries without border countries
         - of two tiles
@@ -145,45 +159,6 @@ class TestOSMMapsInput(unittest.TestCase):
 
         result = o_osm_data.country_name
         self.assertEqual(result, 'malta')
-
-    def test_splitting_of_single_xy_coordinate(self):
-        """
-        use static json files in the repo to calculate relevant tiles
-        """
-
-        xy_tuple = get_xy_coordinates_from_input("133/88")
-        self.assertEqual(xy_tuple, [{"x": 133, "y": 88}])
-
-        xy_tuple = get_xy_coordinates_from_input("11/92")
-        self.assertEqual(xy_tuple, [{"x": 11, "y": 92}])
-
-        xy_tuple = get_xy_coordinates_from_input("138/100")
-        self.assertEqual(xy_tuple, [{"x": 138, "y": 100}])
-
-    def test_splitting_of_multiple_xy_coordinate(self):
-        """
-        use static json files in the repo to calculate relevant tiles
-        """
-
-        xy_tuple = get_xy_coordinates_from_input("133/88,138/100")
-        expected_result = [{"x": 133, "y": 88}, {"x": 138, "y": 100}]
-
-        self.assertEqual(xy_tuple, expected_result)
-
-    # def test_get_tile_via_xy_coordinate_error(self):
-    #     """
-    #     use static json files in the repo to calculate a not-existing tile.
-
-    #     does not error out due to new Geofabrik Json processing. Nevertheless, the tile is not existing
-    #     only +/- 180 -/+90: https://epsg.io/4326
-    #     """
-
-    #     o_geofabrik = XYGeofabrik([{"x": 200, "y": 1}])
-
-    #     # tiles =
-
-    #     with self.assertRaises(TileNotFoundError):
-    #         o_geofabrik.get_tiles_of_wanted_map()
 
     def test_encoding_open_sea_osm(self):
         """
