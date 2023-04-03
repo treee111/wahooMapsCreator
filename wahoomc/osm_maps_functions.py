@@ -64,7 +64,7 @@ def run_subprocess_and_log_output(cmd, error_message, cwd=""):
         process = subprocess.Popen(
             cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
     else:
-        process = subprocess.Popen(
+        process = subprocess.Popen(  # pylint: disable=consider-using-with
             cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, cwd=cwd)
 
     if error_message and process.wait() != 0:  # 0 means success
