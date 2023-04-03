@@ -257,6 +257,36 @@
             ]
         },
         {
+            "name": "country: liechtenstein & suisse",
+            "type": "python",
+            "request": "launch",
+            "module": "wahoomc",
+            "console": "integratedTerminal",
+            "args": [
+                "cli",
+                "-co",
+                "liechtenstein,switzerland",
+                "-c",
+                "-md",
+                "100"
+            ]
+        },
+        {
+            "name": "country: malta & liechtenstein",
+            "type": "python",
+            "request": "launch",
+            "module": "wahoomc",
+            "console": "integratedTerminal",
+            "args": [
+                "cli",
+                "-co",
+                "malta,liechtenstein",
+                "-c",
+                "-md",
+                "100"
+            ]
+        },
+        {
             "name": "co: france",
             "type": "python",
             "request": "launch",
