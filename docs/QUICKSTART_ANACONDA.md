@@ -15,6 +15,7 @@
     - [Update wahooMapsCreator](#update-wahoomapscreator)
   - [Additional programs for generating contour lines](#additional-programs-for-generating-contour-lines)
     - [Install phyghtmap](#install-phyghtmap)
+    - [Verify phyghtmap](#verify-phyghtmap)
     - [Free account for USGS](#free-account-for-usgs)
 - [Run wahooMapsCreator](#run-wahoomapscreator)
 - [Additional information](#additional-information)
@@ -120,6 +121,14 @@ Windows
 ```
 python setup.py install
 ```
+
+### Verify phyghtmap
+You can verify the installation of phyghtmap and dependant python packages if you enter the following into your Anaconda shell.
+```
+phyghtmap
+```
+
+If there is a output, phyghtmap was installed and recognized successfully
 
 ### Free account for USGS
 1. Enter https://ers.cr.usgs.gov/ and create a free account. It's straight forward.

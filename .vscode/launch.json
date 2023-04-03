@@ -95,20 +95,21 @@
             ]
         },
         {
-            "name": "x/y: 138/100 (malta) - contour",
+            "name": "co: malta - contour",
             "type": "python",
             "request": "launch",
             "module": "wahoomc",
             "console": "integratedTerminal",
             "args": [
                 "cli",
-                "-xy",
-                "138/100",
+                "-co",
+                "malta",
                 "-fp",
                 "-c",
                 "-md",
                 "100",
-                "-con"
+                "-con",
+                "-nbc"
             ]
         },
         {
