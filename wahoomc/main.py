@@ -15,7 +15,7 @@ from wahoomc.setup_functions import initialize_work_directories, \
 from wahoomc.downloader import download_tooling
 
 from wahoomc.osm_maps_functions import OsmMaps
-from wahoomc.osm_maps_functions import OsmData
+from wahoomc.osm_maps_functions import CountryOsmData, XYOsmData
 
 # logging used in the terminal output:
 # # means top-level command
@@ -55,9 +55,14 @@ def run(run_level):
         # Is there something to do?
         o_input_data.is_required_input_given_or_exit(issue_message=True)
 
-        o_osm_data = OsmData()
+        if o_input_data.country:
+            o_osm_data = CountryOsmData(o_input_data)
+        elif o_input_data.xy_coordinates:
+            o_osm_data = XYOsmData(o_input_data)
+
         # Check for not existing or expired files. Mark for download, if dl is needed
-        o_downloader = o_osm_data.process_input_of_the_tool(o_input_data)
+        o_osm_data.process_input_of_the_tool()
+        o_downloader = o_osm_data.get_downloader()
 
         # Download files marked for download
         o_downloader.download_files_if_needed()
