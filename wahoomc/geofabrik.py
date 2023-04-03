@@ -51,6 +51,13 @@ class InformalGeofabrikInterface:
         """calculate bounding box based on geometry or X/Y combination"""
         pass
 
+    def log_tile(self, counter, all):
+        """
+        unified status logging for this class
+        """
+        log.info(
+            '(+ tile %s of %s) Find needed countries ', counter, all)
+
 
 class CountryGeofabrik(InformalGeofabrikInterface):
     """Geofabrik processing for countries"""
@@ -102,8 +109,7 @@ class CountryGeofabrik(InformalGeofabrikInterface):
         for tile in bbox_tiles:
             # Do progress indicator every 50 tiles
             if counter % 50 == 0:
-                log.info(
-                    'Processing tile %s of %s', counter, len(bbox_tiles)+1)
+                self.log_tile(counter, len(bbox_tiles)+1)
             counter += 1
 
             parent_added = 0
@@ -295,8 +301,7 @@ class XYGeofabrik(InformalGeofabrikInterface):
         for tile in bbox_tiles:
             # Do progress indicator every 50 tiles
             if counter % 50 == 0:
-                log.info(
-                    'Processing tile %s of %s', counter, len(bbox_tiles)+1)
+                self.log_tile(counter, len(bbox_tiles)+1)
             counter += 1
 
             parent_added = 0
