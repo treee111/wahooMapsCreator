@@ -221,7 +221,11 @@ class CountryOsmData(InformalOsmDataInterface):
         country name is the country
         >1 countries are separated by underscore
         """
-        self.country_name = self.input_country
+        for country in self.o_geofabrik.wanted_maps:
+            if not self.country_name:
+                self.country_name = country
+            else:
+                self.country_name = f'{self.country_name}_{country}'
 
 
 class XYOsmData(InformalOsmDataInterface):
