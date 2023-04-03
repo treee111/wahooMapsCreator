@@ -15,7 +15,7 @@ import shutil
 import logging
 
 # import custom python packages
-from wahoomc.file_directory_functions import read_json_file, create_empty_directories, write_json_file_generic
+from wahoomc.file_directory_functions import read_json_file_country_config, create_empty_directories, write_json_file_generic
 from wahoomc.constants_functions import translate_tags_to_keep, \
     get_tooling_win_path, get_tag_wahoo_xml_path, TagWahooXmlNotFoundError
 
@@ -826,7 +826,7 @@ class OsmMaps:
         tags_are_identical = True
 
         try:
-            country_config = read_json_file(os.path.join(
+            country_config = read_json_file_country_config(os.path.join(
                 USER_OUTPUT_DIR, country, ".config.json"))
             if not country_config["tags_last_run"] == translate_tags_to_keep(sys_platform=platform.system()) \
                     or not country_config["name_tags_last_run"] == translate_tags_to_keep(name_tags=True, sys_platform=platform.system()):
@@ -843,7 +843,7 @@ class OsmMaps:
         last_changed_is_identical = True
 
         try:
-            country_config = read_json_file(os.path.join(
+            country_config = read_json_file_country_config(os.path.join(
                 USER_OUTPUT_DIR, country, ".config.json"))
             if not country_config["changed_ts_map_last_run"] == get_timestamp_last_changed(self.o_osm_data.border_countries[country]['map_file']):
                 last_changed_is_identical = False

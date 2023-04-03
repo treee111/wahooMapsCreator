@@ -224,7 +224,7 @@ class TestConfigFile(unittest.TestCase):
         self.assertTrue(
             o_osm_maps.tags_are_identical_to_last_run(o_input_data.country))
 
-        country_config = fd_fct.read_json_file(os.path.join(
+        country_config = fd_fct.read_json_file_country_config(os.path.join(
             constants.USER_OUTPUT_DIR, o_input_data.country, ".config.json"))
 
         self.assertEqual(constants.VERSION, country_config["version_last_run"])
