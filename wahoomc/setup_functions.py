@@ -134,12 +134,9 @@ def check_installation_of_additional_programs():
                     \nPlease refer to the Quickstart Guide of wahooMapsCreator for instructions:\n- https://github.com/treee111/wahooMapsCreator/blob/develop/docs/QUICKSTART_ANACONDA.md#additinoal-programs-for-generating-contour-lines \
                     \nor create an issue:\n- https://github.com/treee111/wahooMapsCreator/issues"
 
-    if platform.system() == "Windows":
-        pass
-    else:
-        if not is_program_installed("phyghtmap"):
-            sys.exit(
-                f"phyghtmap is not installed. {text_to_docu}")
+    if not is_program_installed("phyghtmap"):
+        sys.exit(
+            f"phyghtmap is not installed. {text_to_docu}")
 
 
 def is_program_installed(program):
