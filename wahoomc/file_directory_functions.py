@@ -60,26 +60,24 @@ def create_empty_directories(parent_dir, tiles_from_json, border_countries):
         os.makedirs(outdir, exist_ok=True)
 
 
-def read_json_file(json_file_path):
+def read_json_file_country_config(json_file_path):
     """
-    read the tiles from the given json file
+    read the country config (of last run) from the given json file
     """
 
     log.debug('-' * 80)
-    log.debug('# Read json file')
+    log.debug('# Read country config json file')
 
-    with open(json_file_path, encoding="utf-8") as json_file:
-        tiles_from_json = json.load(json_file)
-        json_file.close()
-    if tiles_from_json == '':
+    country_config = read_json_file_generic(json_file_path)
+    if country_config == '':
         log.error('! Json file could not be opened.')
         sys.exit()
 
     log.debug(
-        '+ Use json file %s with %s tiles', json_file.name, len(tiles_from_json))
-    log.debug('+ Read json file: OK')
+        '+ Use country config file %s', json_file_path)
+    log.debug('+ Read country config json file: OK')
 
-    return tiles_from_json
+    return country_config
 
 
 def read_json_file_generic(json_file_path):
