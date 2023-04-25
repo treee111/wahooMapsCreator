@@ -11,7 +11,7 @@ from wahoomc.input import process_call_of_the_tool, cli_init
 from wahoomc.setup_functions import initialize_work_directories, \
     check_installation_of_required_programs, write_config_file, \
     adjustments_due_to_breaking_changes, copy_jsons_from_repo_to_user, \
-    check_installed_version_against_latest_pypi
+    check_installed_version_against_latest_pypi, check_installation_of_programs_credentials_for_contour_lines
 from wahoomc.downloader import download_tooling
 
 from wahoomc.osm_maps_functions import OsmMaps
@@ -55,6 +55,9 @@ def run(run_level):
         # Is there something to do?
         o_input_data.is_required_input_given_or_exit(issue_message=True)
 
+        if o_input_data.contour:
+            check_installation_of_programs_credentials_for_contour_lines()
+
         if o_input_data.country:
             o_osm_data = CountryOsmData(o_input_data)
         elif o_input_data.xy_coordinates:
@@ -77,6 +80,10 @@ def run(run_level):
 
         # Generate sea
         o_osm_maps.generate_sea()
+
+        # Generate elevation
+        if o_input_data.contour:
+            o_osm_maps.generate_elevation()
 
         # Split filtered country files to tiles
         o_osm_maps.split_filtered_country_files_to_tiles()
