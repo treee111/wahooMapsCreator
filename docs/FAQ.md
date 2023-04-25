@@ -8,6 +8,7 @@
   - [How can I restore original maps?](#how-can-i-restore-original-maps)
   - [Can I preview my generated maps before putting them onto the Wahoo device?](#can-i-preview-my-generated-maps-before-putting-them-onto-the-wahoo-device)
   - [Does device/offline routing functionality use the new roads?](#does-deviceoffline-routing-functionality-use-the-new-roads)
+  - [Are there already generated maps available for download?](#are-there-already-generated-maps-available-for-download)
 - [Device theme](#device-theme)
   - [How can I restore original rendering layout?](#how-can-i-restore-original-rendering-layout)
 - [Connection from Wahoo device to computer](#connection-from-wahoo-device-to-computer)
@@ -52,9 +53,14 @@ The device routing (synonym: offline routing) functionality is provided through 
 
 Without updating the routing tiles in addition to updating the generated map files, device routing of your device will not route you over the newly added roads in the maps. The reason is: The old routing tiles simply do not know about there existence.
 
-Routing tiles are not covered in this repo for self generation but can be downloaded from https://my.hidrive.com/share/1t65k1b0lb#$/Windows-Wahoo-Map-Creator-Osmosis-v2-Maps. Download the <country>-routing.zip file for the countries of your choice and copy the content under the `maps/routing` directory on your wahoo device.
+Routing tiles are not covered in this repo for self generation but can be downloaded from https://1drv.ms/f/s!AgQ5_SDAjeL0eM8e4ViJIHdmOyU?e=wOQSQE. Download the <country>-routing.zip file for the countries of your choice and copy the content under the `maps/routing` directory on your wahoo device.
 
 Examplary the germany routing tiles would be stored in `maps/routing/2/000/...` .
+
+### Are there already generated maps available for download?
+On this OneDrive, you'll find already generated maps for download: https://1drv.ms/f/s!AgQ5_SDAjeL0eM8e4ViJIHdmOyU?e=wOQSQE.
+
+The content of these maps are slightly different from what you create with the default settings of wahooMapsCreator. Other than that this might be a good starting point to tryout and get them on your device. By customizing the settings you can then create your individual maps with wahooMapsCreator. 
 
 ## Device theme
 ### How can I restore original rendering layout?
