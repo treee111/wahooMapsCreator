@@ -26,6 +26,61 @@
     <osm-tag key="railway" label-position="true" value="stop" zoom-appear="13" />
   </ways>
 
+  <ways>
+    <osm-tag key="contour_ext" value="elevation_minor" zoom-appear="12" force-polygon-line="true"/>
+    <osm-tag key="contour_ext" value="elevation_medium" zoom-appear="12" force-polygon-line="true"/>
+    <osm-tag key="contour_ext" value="elevation_major" zoom-appear="12" force-polygon-line="true"/>
+    <osm-tag key="ele" value="100" zoom-appear="14"/>
+    <osm-tag key="ele" value="200" zoom-appear="14"/>
+    <osm-tag key="ele" value="300" zoom-appear="14"/>
+    <osm-tag key="ele" value="400" zoom-appear="14"/>
+    <osm-tag key="ele" value="500" zoom-appear="14"/>
+    <osm-tag key="ele" value="600" zoom-appear="14"/>
+    <osm-tag key="ele" value="700" zoom-appear="14"/>
+    <osm-tag key="ele" value="800" zoom-appear="14"/>
+    <osm-tag key="ele" value="900" zoom-appear="14"/>
+    <osm-tag key="ele" value="1000" zoom-appear="14"/>
+    <osm-tag key="ele" value="1100" zoom-appear="14"/>
+    <osm-tag key="ele" value="1200" zoom-appear="14"/>
+    <osm-tag key="ele" value="1300" zoom-appear="14"/>
+    <osm-tag key="ele" value="1400" zoom-appear="14"/>
+    <osm-tag key="ele" value="1500" zoom-appear="14"/>
+    <osm-tag key="ele" value="1600" zoom-appear="14"/>
+    <osm-tag key="ele" value="1700" zoom-appear="14"/>
+    <osm-tag key="ele" value="1800" zoom-appear="14"/>
+    <osm-tag key="ele" value="1900" zoom-appear="14"/>
+    <osm-tag key="ele" value="2000" zoom-appear="14"/>
+    <osm-tag key="ele" value="2100" zoom-appear="14"/>
+    <osm-tag key="ele" value="2200" zoom-appear="14"/>
+    <osm-tag key="ele" value="2300" zoom-appear="14"/>
+    <osm-tag key="ele" value="2400" zoom-appear="14"/>
+    <osm-tag key="ele" value="2500" zoom-appear="14"/>
+    <osm-tag key="ele" value="2600" zoom-appear="14"/>
+    <osm-tag key="ele" value="2700" zoom-appear="14"/>
+    <osm-tag key="ele" value="2800" zoom-appear="14"/>
+    <osm-tag key="ele" value="2900" zoom-appear="14"/>
+    <osm-tag key="ele" value="3000" zoom-appear="14"/>
+    <osm-tag key="ele" value="3100" zoom-appear="14"/>
+    <osm-tag key="ele" value="3200" zoom-appear="14"/>
+    <osm-tag key="ele" value="3300" zoom-appear="14"/>
+    <osm-tag key="ele" value="3400" zoom-appear="14"/>
+    <osm-tag key="ele" value="3500" zoom-appear="14"/>
+    <osm-tag key="ele" value="3600" zoom-appear="14"/>
+    <osm-tag key="ele" value="3700" zoom-appear="14"/>
+    <osm-tag key="ele" value="3800" zoom-appear="14"/>
+    <osm-tag key="ele" value="3900" zoom-appear="14"/>
+    <osm-tag key="ele" value="4000" zoom-appear="14"/>
+    <osm-tag key="ele" value="4100" zoom-appear="14"/>
+    <osm-tag key="ele" value="4200" zoom-appear="14"/>
+    <osm-tag key="ele" value="4300" zoom-appear="14"/>
+    <osm-tag key="ele" value="4400" zoom-appear="14"/>
+    <osm-tag key="ele" value="4500" zoom-appear="14"/>
+    <osm-tag key="ele" value="4600" zoom-appear="14"/>
+    <osm-tag key="ele" value="4700" zoom-appear="14"/>
+    <osm-tag key="ele" value="4800" zoom-appear="14"/>
+    <osm-tag key="ele" value="4900" zoom-appear="14"/>
+    <osm-tag key="ele" value="5000" zoom-appear="14"/>
+  </ways>
   <!-- PLACES TAGS -->
   <pois>
     <osm-tag key="place" value="city" zoom-appear="6" />
@@ -106,6 +161,7 @@
   <!-- OTHER TAGS -->
   <ways>
     <osm-tag key="area" value="yes" zoom-appear="3" />
+    <osm-tag key="admin_level" value="2" zoom-appear="3" force-polygon-line="true"/>
   </ways>
 
   <!-- NOT TO RENDER -->

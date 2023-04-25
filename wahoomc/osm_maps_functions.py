@@ -19,12 +19,15 @@ from wahoomc.file_directory_functions import read_json_file_country_config, crea
 from wahoomc.constants_functions import translate_tags_to_keep, \
     get_tooling_win_path, get_tag_wahoo_xml_path, TagWahooXmlNotFoundError
 
+from wahoomc.setup_functions import read_earthexplorer_credentials
+
 from wahoomc.constants import USER_WAHOO_MC
 from wahoomc.constants import USER_OUTPUT_DIR
 from wahoomc.constants import RESOURCES_DIR
 from wahoomc.constants import LAND_POLYGONS_PATH
 from wahoomc.constants import VERSION
 from wahoomc.constants import OSMOSIS_WIN_FILE_PATH
+from wahoomc.constants import USER_DL_DIR
 
 from wahoomc.downloader import Downloader
 from wahoomc.geofabrik import CountryGeofabrik, XYGeofabrik
@@ -519,6 +522,47 @@ class OsmMaps:
 
         log.info('+ Generate sea for each coordinate: OK')
 
+    def generate_elevation(self):
+        """
+        Generate contour lines for all tiles
+        """
+        username, password = read_earthexplorer_credentials()
+
+        log.info('-' * 80)
+        log.info('# Generate contour lines for each coordinate')
+
+        hgt_path = os.path.join(USER_DL_DIR, 'hgt')
+
+        tile_count = 1
+        for tile in self.o_osm_data.tiles:
+            out_file_elevation = os.path.join(
+                USER_OUTPUT_DIR, f'{tile["x"]}', f'{tile["y"]}', 'elevation')
+            # as the elevation file has a suffix, they need to be searched with glob.glob
+            # example elevation filename: elevation_lon14.06_15.47lat35.46_36.60_view1,view3.osm
+            out_file_elevation_existing = glob.glob(os.path.join(
+                USER_OUTPUT_DIR, str(tile["x"]), str(tile["y"]), 'elevation*.osm'))
+            # check for already existing elevation .osm file (the ones matched via glob)
+            if not (len(out_file_elevation_existing) == 1 and os.path.isfile(out_file_elevation_existing[0])) \
+                    or self.o_osm_data.force_processing is True:
+                log.info(
+                    '+ Coordinates: %s,%s. (%s of %s)', tile["x"], tile["y"], tile_count, len(self.o_osm_data.tiles))
+                cmd = ['phyghtmap']
+                cmd.append('-a ' + f'{tile["left"]}' + ':' + f'{tile["bottom"]}' +
+                           ':' + f'{tile["right"]}' + ':' + f'{tile["top"]}')
+                cmd.extend(['-o', f'{out_file_elevation}', '-s 10', '-c 100,50', '--source=view1,view3,srtm3',
+                            '--jobs=8', '--viewfinder-mask=1', '--start-node-id=20000000000',
+                            '--max-nodes-per-tile=0', '--start-way-id=2000000000', '--write-timestamp',
+                            '--no-zero-contour', '--hgtdir=' + hgt_path])
+                cmd.append('--earthexplorer-user=' + username)
+                cmd.append('--earthexplorer-password=' + password)
+
+                run_subprocess_and_log_output(
+                    cmd, f'! Error in phyghtmap with tile: {tile["x"]},{tile["y"]}. Win_macOS/elevation')
+
+            tile_count += 1
+
+        log.info('+ Generate contour lines for each coordinate: OK')
+
     def split_filtered_country_files_to_tiles(self):
         """
         Split filtered country files to tiles
@@ -595,11 +639,11 @@ class OsmMaps:
 
     def merge_splitted_tiles_with_land_and_sea(self, process_border_countries):
         """
-        Merge splitted tiles with land an sea
+        Merge splitted tiles with land elevation and sea
         """
 
         log.info('-' * 80)
-        log.info('# Merge splitted tiles with land an sea')
+        log.info('# Merge splitted tiles with land, elevation and sea')
         tile_count = 1
         for tile in self.o_osm_data.tiles:  # pylint: disable=too-many-nested-blocks
             self.log_tile(tile["x"], tile["y"], tile_count)
@@ -609,6 +653,9 @@ class OsmMaps:
             out_file_merged = os.path.join(out_tile_dir, 'merged.osm.pbf')
 
             land_files = glob.glob(os.path.join(out_tile_dir, 'land*.osm'))
+
+            elevation_files = glob.glob(
+                os.path.join(out_tile_dir, 'elevation*.osm'))
 
             # merge splitted tiles with land and sea every time because the result is different per constants (user input)
             # sort land* osm files
@@ -645,6 +692,10 @@ class OsmMaps:
                 cmd.extend(
                     ['--rx', 'file='+land, '--s', '--m'])
 
+            for elevation in elevation_files:
+                cmd.extend(
+                    ['--rx', 'file='+elevation, '--s', '--m'])
+
             cmd.extend(
                 ['--rx', 'file='+os.path.join(out_tile_dir, 'sea.osm'), '--s', '--m'])
             cmd.extend(['--tag-transform', 'file=' + os.path.join(RESOURCES_DIR,
@@ -655,7 +706,7 @@ class OsmMaps:
 
             tile_count += 1
 
-        log.info('+ Merge splitted tiles with land an sea: OK')
+        log.info('+ Merge splitted tiles with land, elevation and sea: OK')
 
     def sort_osm_files(self, tile):
         """

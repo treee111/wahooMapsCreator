@@ -126,6 +126,24 @@ def check_installation_of_required_programs():
                 f"mapsforge-map-writer plugin is not installed. {text_to_docu}")
 
 
+def check_installation_of_programs_credentials_for_contour_lines():
+    """
+    check if additionals programs are installed
+    """
+    text_to_docu = "\nYou have choosen to process contour lines. That needs additional programs. \
+                    \nPlease refer to the Quickstart Guide of wahooMapsCreator for instructions:\n- https://github.com/treee111/wahooMapsCreator/blob/develop/docs/QUICKSTART_ANACONDA.md#additinoal-programs-for-generating-contour-lines \
+                    \nor create an issue:\n- https://github.com/treee111/wahooMapsCreator/issues"
+
+    if not is_program_installed("phyghtmap"):
+        sys.exit(
+            f"phyghtmap is not installed. {text_to_docu}")
+
+    username, password = read_earthexplorer_credentials()
+
+    if not username or not password:
+        username, password = ask_for_and_write_earthexplorer_credentials()
+
+
 def is_program_installed(program):
     """
     check if a given program is installed
@@ -159,16 +177,28 @@ def is_map_writer_plugin_installed():
     return False
 
 
-def write_config_file():
+def write_config_file(config_to_write=''):
     """
     Write config file of wahoomc to root directory
+    incorporate given content to existing file
     """
     # Data to be written
-    configuration = {
+    default_config = {
         "version_last_run": VERSION
     }
 
-    write_json_file_generic(config_file_path, configuration)
+    # if no config to write is given, write default config - normally at the end of main()
+    if not config_to_write:
+        config_to_write = default_config
+
+    actual_content = read_json_file_generic(config_file_path)
+
+    for key, value in config_to_write.items():
+        # overwrite value or insert new item
+        actual_content[key] = value
+
+    # write changed content to disc
+    write_json_file_generic(config_file_path, actual_content)
 
 
 def read_version_last_run():
@@ -179,10 +209,44 @@ def read_version_last_run():
     try:
         version_last_run = read_json_file_generic(config_file_path)[
             "version_last_run"]
-    except (FileNotFoundError, KeyError):
+    except KeyError:
         version_last_run = None
 
     return version_last_run
+
+
+def ask_for_and_write_earthexplorer_credentials():
+    """
+    Ask user for credentials for https://ers.cr.usgs.gov and save in the config file
+    """
+    log.warning(
+        'No saved credentials found for https://ers.cr.usgs.gov. Please register and enter your credentials.')
+    username = input('https://ers.cr.usgs.gov username:')
+    password = input('https://ers.cr.usgs.gov password:')
+
+    credentials_to_write = {
+        'earthexplorer-user': username, 'earthexplorer-password': password}
+
+    write_config_file(credentials_to_write)
+
+    return username, password
+
+
+def read_earthexplorer_credentials():
+    """
+    Read the version of wahoomc's last run
+    by reading json and access version attribute, if not set, give None
+    """
+    try:
+        username = read_json_file_generic(config_file_path)[
+            "earthexplorer-user"]
+        password = read_json_file_generic(config_file_path)[
+            "earthexplorer-password"]
+    except KeyError:
+        username = None
+        password = None
+
+    return username, password
 
 
 def copy_jsons_from_repo_to_user(folder, file=''):
