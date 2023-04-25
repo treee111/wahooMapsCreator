@@ -12,9 +12,17 @@ from shapely.geometry import Polygon, shape
 
 # import custom python packages
 from wahoomc.constants import special_regions, block_download
-from wahoomc.geofabrik_json import GeofabrikJson
+from wahoomc.geofabrik_json import CountyIsNoGeofabrikCountry, GeofabrikJson
 
 log = logging.getLogger('main-logger')
+
+
+class XYCombinationHasNoCountries(Exception):
+    """Raised when no tile is found for x/y combination"""
+
+    def __init__(self, xy_coordinate):
+        message = f"Given XY coordinate '{xy_coordinate}' consists of no countries. Please check if your input is valid."
+        super().__init__(message)
 
 
 class InformalGeofabrikInterface:
@@ -38,8 +46,13 @@ class InformalGeofabrikInterface:
 
         tiles_of_input = []
 
-        for country in self.wanted_maps:
-            tiles_of_input.extend(self.get_tiles_of_wanted_map_single(country))
+        for wanted_map in self.wanted_maps:
+            try:
+                tiles_of_input.extend(
+                    self.get_tiles_of_wanted_map_single(wanted_map))
+            except XYCombinationHasNoCountries as exception:
+                # this exception is actually only raised in class XYGeofabrik
+                raise exception
 
         return tiles_of_input
 
@@ -58,6 +71,10 @@ class InformalGeofabrikInterface:
         log.info(
             '(+ tile %s of %s) Find needed countries ', counter, all)
 
+    def split_input_to_list(input_value) -> list:
+        """split the input to single values in a list"""
+        pass
+
 
 class CountryGeofabrik(InformalGeofabrikInterface):
     """Geofabrik processing for countries"""
@@ -71,11 +88,7 @@ class CountryGeofabrik(InformalGeofabrikInterface):
         self.wanted_maps = []
 
         # input parameters
-        input_countries = get_countries_from_input(input_countries)
-
-        for country in input_countries:
-            self.wanted_maps.append(self.o_geofabrik_json.translate_id_no_to_geofabrik(
-                country))
+        self.wanted_maps = self.split_input_to_list(input_countries)
 
     def get_tiles_of_wanted_map_single(self, wanted_map):
         """Overrides InformalGeofabrikInterface.get_tiles_of_wanted_map_single()"""
@@ -257,6 +270,26 @@ class CountryGeofabrik(InformalGeofabrikInterface):
 
         return {'top_x': top_x, 'top_y': top_y, 'bot_x': bot_x, 'bot_y': bot_y}
 
+    @staticmethod
+    def split_input_to_list(input_value) -> list:
+        """
+        extract/split x/y combinations by given X/Y coordinates.
+        input should be "188/88" or for multiple values "188/88,100/10,109/99".
+        returns a list of x/y combinations as integers
+        """
+        countries = []
+        o_geofabrik_json = GeofabrikJson()
+
+        try:
+            # split by "," first for multiple x/y combinations, then by "/" for x and y value
+            for country in input_value.split(","):
+                countries.append(o_geofabrik_json.translate_id_no_to_geofabrik(
+                    country))
+        except CountyIsNoGeofabrikCountry as exception:
+            raise exception
+
+        return countries
+
 
 class XYGeofabrik(InformalGeofabrikInterface):
     """Geofabrik processing for X/Y coordinates"""
@@ -269,7 +302,7 @@ class XYGeofabrik(InformalGeofabrikInterface):
         self.o_geofabrik_json = GeofabrikJson()
 
         # use Geofabrik-URL to get the relevant tiles
-        self.wanted_maps = get_xy_coordinates_from_input(input_xy_coordinates)
+        self.wanted_maps = self.split_input_to_list(input_xy_coordinates)
 
     def get_tiles_of_wanted_map_single(self, wanted_map):
         """Overrides InformalGeofabrikInterface.get_tiles_of_wanted_map_single()"""
@@ -285,6 +318,10 @@ class XYGeofabrik(InformalGeofabrikInterface):
         # get all infos of these bounding box tiles
         tiles_of_input = self.find_needed_countries(
             bbox_tiles, wanted_map, wanted_region)
+
+        if len(tiles_of_input[0]['countries']) == 0:
+            raise XYCombinationHasNoCountries(
+                f'{wanted_map["x"]}/{wanted_map["y"]}')
 
         return tiles_of_input
 
@@ -370,6 +407,25 @@ class XYGeofabrik(InformalGeofabrikInterface):
         wanted_region = shape(coords_polygon)
         return wanted_region
 
+    @staticmethod
+    def split_input_to_list(input_value) -> list:
+        """
+        extract/split x/y combinations by given X/Y coordinates.
+        input should be "188/88" or for multiple values "188/88,100/10,109/99".
+        returns a list of x/y combinations as integers
+        """
+        xy_combinations = []
+
+        # split by "," first for multiple x/y combinations, then by "/" for x and y value
+        for xy_coordinate in input_value.split(","):
+            splitted = xy_coordinate.split("/")
+
+            if len(splitted) == 2:
+                xy_combinations.append(
+                    {"x": int(splitted[0]), "y": int(splitted[1])})
+
+        return xy_combinations
+
 
 def calc_bounding_box_tiles(bbox):
     bbox_tiles = []
@@ -420,39 +476,3 @@ def num2deg(xtile, ytile, zoom=8):
     lat_rad = math.atan(math.sinh(math.pi * (1 - 2 * ytile / n)))
     lat_deg = math.degrees(lat_rad)
     return (lat_deg, lon_deg)
-
-
-def get_countries_from_input(input_countries):
-    """
-    extract/split x/y combinations by given X/Y coordinates.
-    input should be "188/88" or for multiple values "188/88,100/10,109/99".
-    returns a list of x/y combinations as integers
-    """
-
-    countries = []
-
-    # split by "," first for multiple x/y combinations, then by "/" for x and y value
-    for country in input_countries.split(","):
-        countries.append(country)
-
-    return countries
-
-
-def get_xy_coordinates_from_input(input_xy_coordinates):
-    """
-    extract/split x/y combinations by given X/Y coordinates.
-    input should be "188/88" or for multiple values "188/88,100/10,109/99".
-    returns a list of x/y combinations as integers
-    """
-
-    xy_combinations = []
-
-    # split by "," first for multiple x/y combinations, then by "/" for x and y value
-    for xy_coordinate in input_xy_coordinates.split(","):
-        splitted = xy_coordinate.split("/")
-
-        if len(splitted) == 2:
-            xy_combinations.append(
-                {"x": int(splitted[0]), "y": int(splitted[1])})
-
-    return xy_combinations
