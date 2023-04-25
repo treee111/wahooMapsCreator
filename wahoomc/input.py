@@ -304,6 +304,7 @@ class GuiInput(tk.Tk):
         self.o_input_data.force_download = tab1.third.checkb_download.get()
         self.o_input_data.force_processing = tab1.third.checkb_processing_val.get()
         self.o_input_data.process_border_countries = tab1.third.checkb_border_countries_val.get()
+        self.o_input_data.contour = tab1.third.checkb_contour_val.get()
 
         self.o_input_data.save_cruiser = tab2.first.checkb_save_cruiser_val.get()
         self.o_input_data.zip_folder = tab2.first.checkb_zip_folder_val.get()
@@ -400,10 +401,13 @@ class CheckbuttonsTab1(tk.Frame):
 
         self.checkb_border_countries_val = create_checkbox(self, oInputData.process_border_countries,
                                                            "Process border countries", 0)
+        self.checkb_contour_val = create_checkbox(self, oInputData.verbose,
+                                                  "process contour lines (elevation data)", 1)
+
         self.chk_force_download.grid(
-            column=0, row=1, sticky=tk.W, padx=15, pady=5)
+            column=0, row=2, sticky=tk.W, padx=15, pady=5)
         self.checkb_processing_val = create_checkbox(self, oInputData.force_processing,
-                                                     "Force processing", 2)
+                                                     "Force processing", 3)
 
 
 class Buttons(tk.Frame):
