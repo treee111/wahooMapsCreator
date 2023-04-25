@@ -3,7 +3,7 @@
 - [Usage of wahooMapsCreator](#usage-of-wahoomapscreator)
   - [The tool stops but does not output an error](#the-tool-stops-but-does-not-output-an-error)
   - [I have a Java error. "Java heap space - out of memory"](#i-have-a-java-error-java-heap-space---out-of-memory)
-  - [how can I migrate from v3.x.x to v4.x.x?](#how-can-i-migrate-from-v3xx-to-v4xx)
+  - [How can I migrate from v3.x.x to v4.x.x?](#how-can-i-migrate-from-v3xx-to-v4xx)
 - [Generated maps](#generated-maps)
   - [Where on my Wahoo device do I have to copy the maps?](#where-on-my-wahoo-device-do-i-have-to-copy-the-maps)
   - [How can I restore original maps?](#how-can-i-restore-original-maps)
@@ -24,7 +24,7 @@ If you are on Windows and running out of memory, it can be that you just don't h
 
 You can try to deinstall Java 32 and install the 64 bit version. Other than that you can make changes from this PR https://github.com/treee111/wahooMapsCreator/pull/171/files in the osmosis.bat file on your computer. This file located here: `wahooMapsCreatorData\_download\tooling_win\Osmosis\bin\osmosis.bat`.
 
-### how can I migrate from v3.x.x to v4.x.x?
+### How can I migrate from v3.x.x to v4.x.x?
 You have to remove your existing environment:
 ```
 conda env remove -n gdal-user

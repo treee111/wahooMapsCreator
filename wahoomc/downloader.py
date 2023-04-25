@@ -297,31 +297,25 @@ class Downloader:
         log.info('+ Checking for old maps and remove them')
 
         for country in self.border_countries:
-            # get translated country (geofabrik) of country
-            # do not download the same file for different countries
-            # --> e.g. China, Hong Kong and Macao, see Issue #11
-            transl_c = self.o_geofabrik_json.translate_id_no_to_geofabrik(
-                country)
-
             # check for already existing .osm.pbf file
             map_file_path = glob.glob(
-                f'{USER_MAPS_DIR}/{transl_c}-latest.osm.pbf')
+                f'{USER_MAPS_DIR}/{country}-latest.osm.pbf')
             if len(map_file_path) != 1:
                 map_file_path = glob.glob(
-                    f'{USER_MAPS_DIR}/**/{transl_c}-latest.osm.pbf')
+                    f'{USER_MAPS_DIR}/**/{country}-latest.osm.pbf')
 
             # delete .osm.pbf file if out of date
             if len(map_file_path) == 1 and os.path.isfile(map_file_path[0]):
                 if self.should_file_be_downloaded(map_file_path[0]):
                     log.info(
-                        '+ mapfile for %s: deleted. Input: %s.', transl_c, country)
+                        '+ mapfile for %s: deleted.', country)
                     os.remove(map_file_path[0])
                     self.need_to_dl.append('osm_pbf')
                 else:
                     self.border_countries[country] = {
                         'map_file': map_file_path[0]}
                     log.info(
-                        '+ mapfile for %s: up-to-date. Input: %s.', transl_c, country)
+                        '+ mapfile for %s: up-to-date.', country)
 
             # mark country .osm.pbf file for download if there exists no file or it is no file
             map_file_path = self.border_countries[country].get('map_file')
@@ -337,8 +331,7 @@ class Downloader:
             try:
                 if item['download'] is True:
                     # build path to downloaded file with translated geofabrik country
-                    map_file_path = build_osm_pbf_filepath(
-                        self.o_geofabrik_json.translate_id_no_to_geofabrik(country))
+                    map_file_path = build_osm_pbf_filepath(country)
                     # fetch the geofabrik download url to countries' OSM file
                     url = self.o_geofabrik_json.get_geofabrik_url(country)
                     download_file(map_file_path, url)

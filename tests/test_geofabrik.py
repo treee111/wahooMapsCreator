@@ -7,11 +7,11 @@ import unittest
 from shapely.geometry import shape  # pylint: disable=import-error
 
 # import custom python packages
-from wahoomc.geofabrik import CountryGeofabrik, XYGeofabrik
-from wahoomc.geofabrik import calc_bounding_box_tiles, get_xy_coordinates_from_input
+from wahoomc.geofabrik import CountryGeofabrik, XYCombinationHasNoCountries, XYGeofabrik
+from wahoomc.geofabrik import calc_bounding_box_tiles
 from wahoomc.downloader import Downloader
 from wahoomc import constants
-from wahoomc.geofabrik_json import GeofabrikJson
+from wahoomc.geofabrik_json import CountyIsNoGeofabrikCountry, GeofabrikJson
 
 
 def calc_tiles_via_geofabrik_json(input_argument):
@@ -160,13 +160,13 @@ class TestGeofabrik(unittest.TestCase):
         use static json files in the repo to calculate relevant tiles
         """
 
-        xy_tuple = get_xy_coordinates_from_input("133/88")
+        xy_tuple = XYGeofabrik.split_input_to_list("133/88")
         self.assertEqual(xy_tuple, [{"x": 133, "y": 88}])
 
-        xy_tuple = get_xy_coordinates_from_input("11/92")
+        xy_tuple = XYGeofabrik.split_input_to_list("11/92")
         self.assertEqual(xy_tuple, [{"x": 11, "y": 92}])
 
-        xy_tuple = get_xy_coordinates_from_input("138/100")
+        xy_tuple = XYGeofabrik.split_input_to_list("138/100")
         self.assertEqual(xy_tuple, [{"x": 138, "y": 100}])
 
     def test_splitting_of_multiple_xy_coordinate(self):
@@ -174,10 +174,46 @@ class TestGeofabrik(unittest.TestCase):
         use static json files in the repo to calculate relevant tiles
         """
 
-        xy_tuple = get_xy_coordinates_from_input("133/88,138/100")
+        xy_tuple = XYGeofabrik.split_input_to_list("133/88,138/100")
         expected_result = [{"x": 133, "y": 88}, {"x": 138, "y": 100}]
 
         self.assertEqual(xy_tuple, expected_result)
+
+    def test_if_countrygeofabrik_raises_exception(self):
+        """
+        initialize CountryGeofabrik class and let the class check if the country is OK
+        in other words: if the exception raised by translate_id_no_to_geofabrik
+        is transported all up
+        """
+        CountryGeofabrik('germany')
+        CountryGeofabrik('malta')
+        CountryGeofabrik('malta,germany')
+
+        with self.assertRaises(CountyIsNoGeofabrikCountry):
+            CountryGeofabrik('germanyd')
+        with self.assertRaises(CountyIsNoGeofabrikCountry):
+            CountryGeofabrik('xy')
+        with self.assertRaises(CountyIsNoGeofabrikCountry):
+            CountryGeofabrik('maltad,germany')
+        with self.assertRaises(CountyIsNoGeofabrikCountry):
+            CountryGeofabrik('malta,tekke')
+
+    def test_if_xy_geofabrik_raises_exception(self):
+        """
+        initialize XYGeofabrik class + check if xy coordinate has countries
+        """
+        o_geofabrik = XYGeofabrik('133/87')
+        o_geofabrik.get_tiles_of_wanted_map()
+
+        o_geofabrik = XYGeofabrik('100/138')
+        o_geofabrik.get_tiles_of_wanted_map()
+
+        o_geofabrik = XYGeofabrik('138/100')
+        o_geofabrik.get_tiles_of_wanted_map()
+
+        with self.assertRaises(XYCombinationHasNoCountries):
+            o_geofabrik = XYGeofabrik('200/1')
+            o_geofabrik.get_tiles_of_wanted_map()
 
     # def test_get_tile_via_xy_coordinate_error(self):
     #     """

@@ -13,6 +13,11 @@ from wahoomc.constants import GEOFABRIK_PATH
 class CountyIsNoGeofabrikCountry(Exception):
     """Raised when actual country is not a geofabrik country"""
 
+    def __init__(self, country):
+        message = f"Entered country '{country}' is not a geofabrik country. \
+                \nPlease check this URL for possible countries: https://download.geofabrik.de/index.html"
+        super().__init__(message)
+
 
 class GeofabrikJson:
     """
@@ -70,26 +75,23 @@ class GeofabrikJson:
 
     def get_geofabrik_parent_country(self, id_no):
         """
-        Get the parent map/region of a region from the already loaded json data
+        Get the parent map/region of a country from the already loaded json data
         """
-        id_no_translated = self.translate_id_no_to_geofabrik(id_no)
-
         try:
-            entry = self.geofabrik_overview[id_no_translated]
+            entry = self.geofabrik_overview[id_no]
             if 'parent' in entry:
-                return (entry['parent'], id_no_translated)
+                return (entry['parent'], id_no)
 
-            return ('', id_no_translated)
-        except KeyError:
-            return None, None
+            return ('', id_no)
+        except KeyError as exception:
+            raise CountyIsNoGeofabrikCountry(id_no) from exception
 
     def get_geofabrik_url(self, id_no):
         """
-        Get the map download url from a region with the already loaded json data
+        Get the map download url from a country/region with the already loaded json data
         """
-        id_no_translated = self.translate_id_no_to_geofabrik(id_no)
         try:
-            entry = self.geofabrik_overview[id_no_translated]
+            entry = self.geofabrik_overview[id_no]
             if 'pbf_url' in entry:
                 return entry['pbf_url']
         except KeyError:
@@ -99,11 +101,10 @@ class GeofabrikJson:
 
     def get_geofabrik_geometry(self, id_no):
         """
-        Get the geometry from a region with the already loaded json data
+        Get the geometry from a country/region with the already loaded json data
         """
-        id_no_translated = self.translate_id_no_to_geofabrik(id_no)
         try:
-            entry = self.geofabrik_overview[id_no_translated]
+            entry = self.geofabrik_overview[id_no]
             if 'geometry' in entry:
                 return entry['geometry']
         except KeyError:
@@ -135,4 +136,4 @@ class GeofabrikJson:
             return 'us/'+country.replace('_', '-')
 
         # if none of them got triggert --> exception
-        raise CountyIsNoGeofabrikCountry
+        raise CountyIsNoGeofabrikCountry(country)

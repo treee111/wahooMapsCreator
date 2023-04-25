@@ -108,16 +108,6 @@ def write_json_file_generic(json_file_path, json_content):
         json_file.close()
 
 
-def get_folders_in_folder(folder):
-    """
-    return foldernames of given folder without path as list
-    """
-    onlyfolders = [f for f in os.listdir(
-        folder) if not isfile(join(folder, f))]
-
-    return onlyfolders
-
-
 def get_files_in_folder(folder):
     """
     return filenames of given folder without path as list
@@ -125,21 +115,6 @@ def get_files_in_folder(folder):
     onlyfiles = [f for f in os.listdir(folder) if isfile(join(folder, f))]
 
     return onlyfiles
-
-
-def get_filenames_of_jsons_in_folder(folder):
-    """
-    return json-file filenames of given folder without path as list
-    """
-    json_files = []
-
-    for file in get_files_in_folder(folder):
-        if file.endswith('.json'):
-            # filename = file.split('.')[0]
-            filename = os.path.splitext(file)[0]
-            json_files.extend([filename])
-
-    return json_files
 
 
 def delete_o5m_pbf_files_in_folder(folder):
