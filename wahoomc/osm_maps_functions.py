@@ -19,7 +19,7 @@ from wahoomc.file_directory_functions import read_json_file_country_config, crea
 from wahoomc.constants_functions import translate_tags_to_keep, \
     get_tooling_win_path, get_tag_wahoo_xml_path, TagWahooXmlNotFoundError
 
-from wahoomc.setup_functions import read_earthexplorer_credentials, ask_for_and_write_earthexplorer_credentials
+from wahoomc.setup_functions import read_earthexplorer_credentials
 
 from wahoomc.constants import USER_WAHOO_MC
 from wahoomc.constants import USER_OUTPUT_DIR
@@ -527,9 +527,6 @@ class OsmMaps:
         Generate contour lines for all tiles
         """
         username, password = read_earthexplorer_credentials()
-
-        if not username or not password:
-            username, password = ask_for_and_write_earthexplorer_credentials()
 
         log.info('-' * 80)
         log.info('# Generate contour lines for each coordinate')
