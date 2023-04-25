@@ -11,6 +11,7 @@
   - [Does device/offline routing functionality use the new roads?](#does-deviceoffline-routing-functionality-use-the-new-roads)
   - [Are there already generated maps available for download?](#are-there-already-generated-maps-available-for-download)
 - [Device theme](#device-theme)
+  - [Where are the device themes?](#where-are-the-device-themes)
   - [How can I restore original rendering layout?](#how-can-i-restore-original-rendering-layout)
 - [Connection from Wahoo device to computer](#connection-from-wahoo-device-to-computer)
   - [I can't see my Wahoo device on my computer](#i-cant-see-my-wahoo-device-on-my-computer)
@@ -84,6 +85,10 @@ On this OneDrive, you'll find already generated maps for download: https://1drv.
 The content of these maps are slightly different from what you create with the default settings of wahooMapsCreator. Other than that this might be a good starting point to tryout and get them on your device. By customizing the settings you can then create your individual maps with wahooMapsCreator. 
 
 ## Device theme
+
+### Where are the device themes?
+Device themes can be found in repo [wahooDeviceThemes](https://github.com/treee111/wahooDeviceThemes). With v4.0.0 they were moved over there to have a better overview and handle them better.
+
 ### How can I restore original rendering layout?
 If you render using VTM, delete this folder on your Wahoo device:  `maps/vtm-elemnt/vtm-elemnt.xml`.
 

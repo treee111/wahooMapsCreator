@@ -64,7 +64,8 @@ After copying, it should look like that:
 For another way of explanation, see [here](FAQ.md#where-on-my-wahoo-do-i-have-to-copy-the-maps)
 
 ## Copy device theme
-In this repo, device themes are stored in folder `device_themes`. There are initial versions and adjusted versions. Both can be further changed to your requirements!
+Device themes can be found in repo [wahooDeviceThemes](https://github.com/treee111/wahooDeviceThemes).
+Device themes can be further changed to your requirements!
 
 The following table shows the file per device and the location where the device theme needs to be copied to.
 

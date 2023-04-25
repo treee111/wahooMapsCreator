@@ -15,11 +15,6 @@ jobs:
       - name: Set output
         id: vars
         run: echo ::set-output name=tag::${GITHUB_REF#refs/*/}
-      - name: Moving build to dist-directory
-        run: ./copyFilesToDist.sh
-        shell: bash
-        env:
-          GITHUB_REF_VARIABLE: ${{ steps.vars.outputs.tag }}
       - name: Release
         uses: docker://antonyurchenko/git-release:latest
         env:

@@ -21,11 +21,6 @@ jobs:
         run: |
           echo $RELEASE_VERSION
           echo ${{ steps.vars.outputs.tag }}
-      - name: Moving build to dist-directory
-        run: ./copyFilesToDist.sh
-        shell: bash
-        env:
-          GITHUB_REF_VARIABLE: ${{ steps.vars.outputs.tag }}
       - name: Release
         uses: docker://antonyurchenko/git-release:latest
         env:
