@@ -23,7 +23,15 @@ Add the `-v` argument if running via CLI or set the checkbox on `Advanced settin
 ### I have a Java error. "Java heap space - out of memory" 
 If you are on Windows and running out of memory, it can be that you just don't have enough memory OR that the memory limit of java 32 is the cause.
 
-You can try to deinstall Java 32 and install the 64 bit version. Other than that you can make changes from this PR https://github.com/treee111/wahooMapsCreator/pull/171/files in the osmosis.bat file on your computer. This file located here: `wahooMapsCreatorData\_download\tooling_win\Osmosis\bin\osmosis.bat`.
+You identify a Java error when the console outputs `java.lang.OutOfMemoryError`.
+
+There are some possible workarounds:
+1. You can try to deinstall Java 32 and install the 64 bit version
+2. Launch this command before running wahooMapsCreator helped here: https://github.com/treee111/wahooMapsCreator/issues/198
+```
+set JAVACMD_OPTIONS=-server -Xmx3G
+```
+3. A permanent workaround (in opposite to 2.) is making changes from this PR https://github.com/treee111/wahooMapsCreator/pull/171/files in the osmosis.bat file on your computer. This file located here: `wahooMapsCreatorData\_download\tooling_win\Osmosis\bin\osmosis.bat`.
 
 ## Generated maps
 ### Where on my Wahoo device do I have to copy the maps?
