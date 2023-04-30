@@ -80,6 +80,7 @@
 
     <osm-tag key="landuse" value="forest" zoom-appear="8" />
 
+    <osm-tag key="waterway" value="canal" zoom-appear="8"/>
     <osm-tag key="waterway" value="stream" zoom-appear="8"/>
     <osm-tag key="waterway" value="river" zoom-appear="8"/>
     <osm-tag key="waterway" value="riverbank" zoom-appear="8"/>
