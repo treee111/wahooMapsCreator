@@ -654,7 +654,7 @@ class OsmMaps:
         """
 
         log.info('-' * 80)
-        log.info('# Merge splitted tiles with land, elevation and sea')
+        log.info('# Merge splitted tiles with land, elevation, and sea')
         tile_count = 1
         for tile in self.o_osm_data.tiles:  # pylint: disable=too-many-nested-blocks
             self.log_tile(tile["x"], tile["y"], tile_count)
@@ -718,7 +718,7 @@ class OsmMaps:
 
             tile_count += 1
 
-        log.info('+ Merge splitted tiles with land, elevation and sea: OK')
+        log.info('+ Merge splitted tiles with land, elevation, and sea: OK')
 
     def sort_osm_files(self, tile):
         """
