@@ -4,7 +4,57 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-A list of unreleased changes can be found [here](https://github.com/treee111/wahooMapsCreator/compare/v3.2.0...HEAD).
+A list of unreleased changes can be found [here](https://github.com/treee111/wahooMapsCreator/compare/v4.0.0...HEAD).
+
+<a name="4.0.0"></a>
+## [4.0.0] - 2023-05-05
+### Breaking Changes
+- Upgrade required Python version to 3.11, upgrade packages GDAL to 3.6 and autopep8 to 2.0 ([#166](https://github.com/treee111/wahooMapsCreator/issues/166)) [`afb3d1e`](https://github.com/treee111/wahooMapsCreator/commit/afb3d1e6f01f351bbe2eca532b6942ee447610ee)
+- X/Y input via geofabrik .json + only support processing maps via geofabrik .json, delete `wahoomc/resources/json/` files, constants and related coding ([#183](https://github.com/treee111/wahooMapsCreator/issues/183)) [`0d62840`](https://github.com/treee111/wahooMapsCreator/commit/0d62840aacdadb99e99355738b89d47e84c551e0)
+- Downgrade required Python version to 3.10 ([#187](https://github.com/treee111/wahooMapsCreator/issues/187)) [`70c0395`](https://github.com/treee111/wahooMapsCreator/commit/70c0395fe1dfa60c5d336359a0903b5e84110e4e)
+
+### Features
+- update documentation ([#175](https://github.com/treee111/wahooMapsCreator/issues/175)) [`008e0b5`](https://github.com/treee111/wahooMapsCreator/commit/008e0b574db0d60b81fe470bdb5a503eda73ec84)
+- **macOS:** Download mapwriter plugin during usage instead of manually copying during setup ([#177](https://github.com/treee111/wahooMapsCreator/issues/177)) [`1119db5`](https://github.com/treee111/wahooMapsCreator/commit/1119db59110a2866f387d0b664ce57ba13f4fd1a)
+- Add a FAQ entry about routing tiles for device routing ([#191](https://github.com/treee111/wahooMapsCreator/issues/191)) [`ca0261a`](https://github.com/treee111/wahooMapsCreator/commit/ca0261a400461e1d11850bddac51743675308659)
+- Allow processing of multiple countries via CLI ([#190](https://github.com/treee111/wahooMapsCreator/issues/190)) [`ddbe61e`](https://github.com/treee111/wahooMapsCreator/commit/ddbe61e6ed3028bd82102848d49e4a60bac67759)
+- Integrate contour lines (elevation) into generated maps with argument `-con` ([#188](https://github.com/treee111/wahooMapsCreator/issues/188)) [`0078845`](https://github.com/treee111/wahooMapsCreator/commit/0078845990584a4d43a283be6e66ac3745b8a7df)
+- Include waterway/canal in tag-wahoo-poi.xml ([#199](https://github.com/treee111/wahooMapsCreator/issues/199)) [`d7b771b`](https://github.com/treee111/wahooMapsCreator/commit/d7b771b503fc7ecf0ddc8192049bb29a247180aa)
+- Include waterway/stream in tags-to-keep.json ([#201](https://github.com/treee111/wahooMapsCreator/issues/201)) [`f6a4b99`](https://github.com/treee111/wahooMapsCreator/commit/f6a4b997f44c075d56e42525a635a12fdb55ed04)
+
+### Bug Fixes
+- default to BOLT_2 in VTM theme. With new firmware-releases BOLTv1 act asl BOLT_2 [`16a1586`](https://github.com/treee111/wahooMapsCreator/commit/16a1586e4328c35f4c8fd46c095a06643d302e1e)
+- Do not use geofabrik .json file before geofabrik .json file has been downloaded ([#192](https://github.com/treee111/wahooMapsCreator/issues/192)) [`badef50`](https://github.com/treee111/wahooMapsCreator/commit/badef5096643c566c624c325a8ba4aee2ff9084c)
+- install shapely and requests via conda instead of pip. For processing geofabrik.json with shapely on Windows ([#193](https://github.com/treee111/wahooMapsCreator/issues/193)) [`c84c3e0`](https://github.com/treee111/wahooMapsCreator/commit/c84c3e011717308803ebaa52c360bd8fb5c19fc8)
+
+### Development/Infrastructure/Test/CI
+- **macOS:** Check .osm.pbf files in unittests with `osmium diff` (due to osmium-tool upgrade) ([#176](https://github.com/treee111/wahooMapsCreator/issues/176)) [`2906a56`](https://github.com/treee111/wahooMapsCreator/commit/2906a567c7084a6b604efd4c56efc4459fdd69c5)
+- enable Github action to update `latest` release ([#178](https://github.com/treee111/wahooMapsCreator/issues/178)) [`f4143fc`](https://github.com/treee111/wahooMapsCreator/commit/f4143fc7bff030be48d85794f0bb7f0c1dcf8831)
+- Fix unittest, add v3 to v4 migration to FAQ, delete unused class attribute (seen during implementation of release v4.0.0) ([#180](https://github.com/treee111/wahooMapsCreator/issues/180)) [`99ed025`](https://github.com/treee111/wahooMapsCreator/commit/99ed025ad50fd3a627bf5fc232139bbc0150d6e9)
+- adjust dependencies by implementing pydeps adjustments ([#184](https://github.com/treee111/wahooMapsCreator/issues/184)) [`2e66c50`](https://github.com/treee111/wahooMapsCreator/commit/2e66c50f705cfcc4471d47af5aaa6170707a9fc7)
+- Use geofabrik .json for countries and regions for internal processing (from former `constants.py` and `wahoomc/resources/json`) ([#182](https://github.com/treee111/wahooMapsCreator/issues/182)) [`8632fbf`](https://github.com/treee111/wahooMapsCreator/commit/8632fbf1373ff586bc66c085cc4d226c6866e4d7)
+- **unittests:** compare map files with osmium in Windows, park static files, have static geofabrik .json ([#186](https://github.com/treee111/wahooMapsCreator/issues/186)) [`f400f89`](https://github.com/treee111/wahooMapsCreator/commit/f400f89df0dfa3935af64cbb1a658aa07bef6c8f)
+- refactor osm_maps_functions.py like geofabrik.py - using a interface and two implementing classes ([#194](https://github.com/treee111/wahooMapsCreator/issues/194)) [`aa5b541`](https://github.com/treee111/wahooMapsCreator/commit/aa5b5416bb4503b15041075ff89d2f09943da63c)
+- detail logging of subsprocesses, unify logging (tile progress, country config file) ([#195](https://github.com/treee111/wahooMapsCreator/issues/195)) [`97b4da6`](https://github.com/treee111/wahooMapsCreator/commit/97b4da6777072b643cb10dca79025b3bb6230995)
+- **refactor coding:** do/remove checks, adjust exceptions, cleanup coding ([#196](https://github.com/treee111/wahooMapsCreator/issues/196)) [`0474978`](https://github.com/treee111/wahooMapsCreator/commit/04749789d68d3ce4751b78fe507f3e2eb0ef1361)
+
+### BREAKING CHANGE
+
+Processing is now only based on Geofabrik .json file which is downloaded both for country and X/Y input. The static country .json files and the whole implementation has been removed.
+`-gt` input argument was also removed because there is only one processing method implemented.
+Input should now be in Geofabrik style. The hardcoded translation to geofabrik countries has been removed.
+The size of generated maps for X/Y coordinates should remain exactly the same as before. The size of generated maps for countries should roughly be the same as before.
+
+You need to create a new Anaconda environment with Python v3.10 for this version. These are the steps: 
+1. Remove existing environment:
+`conda env remove -n gdal-user`
+2. Create new environment and install wahoomc:
+```
+conda create -n gdal-user python=3.10 geojson=2.5 gdal=3.4 requests=2.28 shapely=1.8 bs4=4.11 lxml=4.9 matplotlib=3.4.3 pip --channel conda-forge --override-channels
+conda activate gdal-user
+pip install wahoomc
+```
+
 
 <a name="3.2.0"></a>
 ## [3.2.0] - 2022-11-29
@@ -372,6 +422,7 @@ wahooMapsCreator can now be used much quicker and easier!
     - Windows:    `tooling_windows/Windows-Wahoo-Map-Creator-Osmosis/wahoo-map-creator-osmosis.py`
 
 
+[4.0.0]: https://github.com/treee111/wahooMapsCreator/compare/v3.2.0...v4.0.0
 [3.2.0]: https://github.com/treee111/wahooMapsCreator/compare/v3.1.1...v3.2.0
 [3.1.1]: https://github.com/treee111/wahooMapsCreator/compare/v3.1.0...v3.1.1
 [3.1.0]: https://github.com/treee111/wahooMapsCreator/compare/v3.0.0...v3.1.0
