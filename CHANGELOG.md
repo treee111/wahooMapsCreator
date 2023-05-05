@@ -4,7 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-A list of unreleased changes can be found [here](https://github.com/treee111/wahooMapsCreator/compare/v4.0.0...HEAD).
+A list of unreleased changes can be found [here](https://github.com/treee111/wahooMapsCreator/compare/v4.0.1...HEAD).
+
+<a name="4.0.1"></a>
+## [4.0.1] - 2023-05-05
+### Bug Fixes
+- use srtm1 data to see even more contour lines + upgrade GDAL from 3.4 to 3.6 ([#203](https://github.com/treee111/wahooMapsCreator/issues/203)) [`5eec788`](https://github.com/treee111/wahooMapsCreator/commit/5eec7889d73219b128fffdf61a72a863885ef1b6)
+
 
 <a name="4.0.0"></a>
 ## [4.0.0] - 2023-05-05
@@ -50,7 +56,7 @@ You need to create a new Anaconda environment with Python v3.10 for this version
 `conda env remove -n gdal-user`
 2. Create new environment and install wahoomc:
 ```
-conda create -n gdal-user python=3.10 geojson=2.5 gdal=3.4 requests=2.28 shapely=1.8 bs4=4.11 lxml=4.9 matplotlib=3.4.3 pip --channel conda-forge --override-channels
+conda create -n gdal-user python=3.10 geojson=2.5 gdal=3.6 requests=2.28 shapely=1.8 bs4=4.11 lxml=4.9 matplotlib=3.4.3 pip --channel conda-forge --override-channels
 conda activate gdal-user
 pip install wahoomc
 ```
@@ -422,6 +428,7 @@ wahooMapsCreator can now be used much quicker and easier!
     - Windows:    `tooling_windows/Windows-Wahoo-Map-Creator-Osmosis/wahoo-map-creator-osmosis.py`
 
 
+[4.0.1]: https://github.com/treee111/wahooMapsCreator/compare/v4.0.0...v4.0.1
 [4.0.0]: https://github.com/treee111/wahooMapsCreator/compare/v3.2.0...v4.0.0
 [3.2.0]: https://github.com/treee111/wahooMapsCreator/compare/v3.1.1...v3.2.0
 [3.1.1]: https://github.com/treee111/wahooMapsCreator/compare/v3.1.0...v3.1.1
