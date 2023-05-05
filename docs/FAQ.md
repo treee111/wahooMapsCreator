@@ -3,6 +3,7 @@
 - [Usage of wahooMapsCreator](#usage-of-wahoomapscreator)
   - [The tool stops but does not output an error](#the-tool-stops-but-does-not-output-an-error)
   - [I have a Java error. "Java heap space - out of memory"](#i-have-a-java-error-java-heap-space---out-of-memory)
+  - [How can I migrate from v3.x.x to v4.x.x?](#how-can-i-migrate-from-v3xx-to-v4xx)
 - [Generated maps](#generated-maps)
   - [Where on my Wahoo device do I have to copy the maps?](#where-on-my-wahoo-device-do-i-have-to-copy-the-maps)
   - [How can I restore original maps?](#how-can-i-restore-original-maps)
@@ -32,6 +33,18 @@ There are some possible workarounds:
 set JAVACMD_OPTIONS=-server -Xmx3G
 ```
 3. A permanent workaround (in opposite to 2.) is making changes from this PR https://github.com/treee111/wahooMapsCreator/pull/171/files in the osmosis.bat file on your computer. This file located here: `wahooMapsCreatorData\_download\tooling_win\Osmosis\bin\osmosis.bat`.
+
+### How can I migrate from v3.x.x to v4.x.x?
+You have to remove your existing environment:
+```
+conda env remove -n gdal-user
+```
+followed by creating a new environment and install wahoomc into:
+```
+conda create -n gdal-user python=3.10 geojson=2.5 gdal=3.4 requests=2.28 shapely=1.8 bs4=4.11 lxml=4.9 matplotlib=3.4.3 pip --channel conda-forge --override-channels
+conda activate gdal-user
+pip install wahoomc
+```
 
 ## Generated maps
 ### Where on my Wahoo device do I have to copy the maps?

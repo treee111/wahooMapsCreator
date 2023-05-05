@@ -11,11 +11,11 @@ from wahoomc.input import process_call_of_the_tool, cli_init
 from wahoomc.setup_functions import initialize_work_directories, \
     check_installation_of_required_programs, write_config_file, \
     adjustments_due_to_breaking_changes, copy_jsons_from_repo_to_user, \
-    check_installed_version_against_latest_pypi
-from wahoomc.downloader import download_tooling_win
+    check_installed_version_against_latest_pypi, check_installation_of_programs_credentials_for_contour_lines
+from wahoomc.downloader import download_tooling
 
 from wahoomc.osm_maps_functions import OsmMaps
-from wahoomc.osm_maps_functions import OsmData
+from wahoomc.osm_maps_functions import CountryOsmData, XYOsmData
 
 # logging used in the terminal output:
 # # means top-level command
@@ -36,7 +36,7 @@ def run(run_level):
     check_installed_version_against_latest_pypi()
     initialize_work_directories()
     adjustments_due_to_breaking_changes()
-    download_tooling_win()
+    download_tooling()
     check_installation_of_required_programs()
 
     if run_level == 'init':
@@ -55,9 +55,17 @@ def run(run_level):
         # Is there something to do?
         o_input_data.is_required_input_given_or_exit(issue_message=True)
 
-        o_osm_data = OsmData()
+        if o_input_data.contour:
+            check_installation_of_programs_credentials_for_contour_lines()
+
+        if o_input_data.country:
+            o_osm_data = CountryOsmData(o_input_data)
+        elif o_input_data.xy_coordinates:
+            o_osm_data = XYOsmData(o_input_data)
+
         # Check for not existing or expired files. Mark for download, if dl is needed
-        o_downloader = o_osm_data.process_input_of_the_tool(o_input_data)
+        o_osm_data.process_input_of_the_tool()
+        o_downloader = o_osm_data.get_downloader()
 
         # Download files marked for download
         o_downloader.download_files_if_needed()
@@ -72,6 +80,10 @@ def run(run_level):
 
         # Generate sea
         o_osm_maps.generate_sea()
+
+        # Generate elevation
+        if o_input_data.contour:
+            o_osm_maps.generate_elevation()
 
         # Split filtered country files to tiles
         o_osm_maps.split_filtered_country_files_to_tiles()

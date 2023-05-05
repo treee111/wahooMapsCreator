@@ -11,12 +11,12 @@ import sys
 import time
 import logging
 import platform
+import zipfile
 import requests
 
 # import custom python packages
-from wahoomc.file_directory_functions import download_url_to_file, unzip
-from wahoomc.constants_functions import translate_country_input_to_geofabrik, \
-    get_geofabrik_region_of_country, get_tooling_win_path
+from wahoomc.constants_functions import get_tooling_win_path
+from wahoomc.geofabrik_json import GeofabrikJson
 
 from wahoomc.constants import USER_DL_DIR
 from wahoomc.constants import USER_MAPS_DIR
@@ -24,6 +24,7 @@ from wahoomc.constants import LAND_POLYGONS_PATH
 from wahoomc.constants import GEOFABRIK_PATH
 from wahoomc.constants import OSMOSIS_WIN_FILE_PATH
 from wahoomc.constants import USER_TOOLING_WIN_DIR
+from wahoomc.constants import USER_DIR
 
 log = logging.getLogger('main-logger')
 
@@ -72,51 +73,91 @@ def download_file(target_filepath, url, target_dir=""):
         log.info('+ Downloaded: %s', target_filepath)
 
 
-def get_osm_pbf_filepath_url(country):
+def build_osm_pbf_filepath(country_translated):
     """
-    build the geofabrik download url to a countries' OSM file and download filepath
+    build download filepath to countries' OSM file
+    replace / to have no problem with directories
     """
-
-    transl_c = translate_country_input_to_geofabrik(country)
-    region = get_geofabrik_region_of_country(country)
-    if region != 'no':
-        url = 'https://download.geofabrik.de/' + region + \
-            '/' + transl_c + '-latest.osm.pbf'
-    else:
-        url = 'https://download.geofabrik.de/' + transl_c + '-latest.osm.pbf'
-
+    # build path to downloaded file with translated geofabrik country
     map_file_path = os.path.join(
-        USER_MAPS_DIR, f'{transl_c}' + '-latest.osm.pbf')
+        USER_MAPS_DIR, f'{country_translated.replace("/", "_")}' + '-latest.osm.pbf')
 
-    # return URL and download filepath
-    return map_file_path, url
+    # return download filepath
+    return map_file_path
 
 
-def download_tooling_win():
+def download_url_to_file(url, map_file_path):
     """
-    check for Windows tooling and download if not here already
-    this is done to bring down the filesize of the python module
+    download the content of a ULR to file
     """
+    # set timeout to 30 minutes (per file)
+    request_geofabrik = requests.get(
+        url, allow_redirects=True, stream=True, timeout=1800)
+    if request_geofabrik.status_code != 200:
+        log.error('! failed download URL: %s', url)
+        sys.exit()
+
+    # write content to file
+    write_to_file(map_file_path, request_geofabrik)
+
+
+def download_tooling():
+    """
+    Windows
+    - check for Windows tooling
+    - download if Windows tooling is not available
+    --> this is done to bring down the filesize of the python module
+
+    macOS
+    - check for mapwriter plugin and download if not existing
+    """
+
+    mapwriter_plugin_url = 'https://search.maven.org/remotecontent?filepath=org/mapsforge/mapsforge-map-writer/0.18.0/mapsforge-map-writer-0.18.0-jar-with-dependencies.jar'
+
     # Windows
     if platform.system() == "Windows":
+        os.makedirs(USER_TOOLING_WIN_DIR, exist_ok=True)
+
         if not os.path.isfile(OSMOSIS_WIN_FILE_PATH):
             log.info('# Need to download Osmosis application for Windows')
             download_file(OSMOSIS_WIN_FILE_PATH,
                           'https://github.com/openstreetmap/osmosis/releases/download/0.48.3/osmosis-0.48.3.zip',
                           get_tooling_win_path('Osmosis', in_user_dir=True))
 
-        mapwriter_plugin_path = os.path.join(USER_TOOLING_WIN_DIR,
-                                             'Osmosis', 'lib', 'default', 'mapsforge-map-writer-0.18.0-jar-with-dependencies.jar')
-        if not os.path.isfile(mapwriter_plugin_path):
-            log.info('# Need to download Osmosis mapwriter plugin for Windows')
-            download_file(mapwriter_plugin_path,
-                          'https://search.maven.org/remotecontent?filepath=org/mapsforge/mapsforge-map-writer/0.18.0/mapsforge-map-writer-0.18.0-jar-with-dependencies.jar')
-
         if not os.path.isfile(get_tooling_win_path('osmfilter.exe', in_user_dir=True)):
             log.info('# Need to download osmfilter application for Windows')
 
             download_file(get_tooling_win_path('osmfilter.exe', in_user_dir=True),
                           'http://m.m.i24.cc/osmfilter.exe')
+
+        mapwriter_plugin_path = os.path.join(USER_TOOLING_WIN_DIR,
+                                             'Osmosis', 'lib', 'default', 'mapsforge-map-writer-0.18.0-jar-with-dependencies.jar')
+
+    # Non-Windows
+    else:
+        mapwriter_plugin_path = os.path.join(
+            str(USER_DIR), '.openstreetmap', 'osmosis', 'plugins', 'mapsforge-map-writer-0.18.0-jar-with-dependencies.jar')
+
+    if not os.path.isfile(mapwriter_plugin_path):
+        log.info('# Need to download Osmosis mapwriter plugin')
+        # create plugins directory
+        os.makedirs(os.path.dirname(mapwriter_plugin_path), exist_ok=True)
+        download_file(mapwriter_plugin_path, mapwriter_plugin_url)
+
+    # download geofabrik json as this will be needed always
+    # because of the .json file replacement by geofabrik
+    download_geofabrik_file_if_not_existing()
+
+
+def download_geofabrik_file_if_not_existing():
+    """
+    check geofabrik file if not existing
+    if the file does not exist, download geofabrik file
+    """
+    if not os.path.isfile(GEOFABRIK_PATH):
+        log.info('# Need to download geofabrik file')
+        download_file(GEOFABRIK_PATH,
+                      'https://download.geofabrik.de/index-v1.json')
 
 
 def get_latest_pypi_version():
@@ -131,16 +172,38 @@ def get_latest_pypi_version():
         return None
 
 
+def write_to_file(file_path, request):
+    """
+    write content of request into given file path
+    """
+    with open(file_path, mode='wb') as file_handle:
+        for chunk in request.iter_content(chunk_size=1024*100):
+            file_handle.write(chunk)
+
+
+def unzip(source_filename, dest_dir):
+    """
+    unzip the given file into the given directory
+    """
+    with zipfile.ZipFile(source_filename, 'r') as zip_ref:
+        zip_ref.extractall(dest_dir)
+
+
 class Downloader:
     """
     This is the class to check and download maps / artifacts"
     """
 
-    def __init__(self, max_days_old, force_download, tiles_from_json=None, border_countries=None):
+    def __init__(self, max_days_old, force_download, border_countries=None):
         self.max_days_old = max_days_old
         self.force_download = force_download
-        self.tiles_from_json = tiles_from_json
         self.border_countries = border_countries
+
+        # safety net if geofabrik file is not there
+        # OsmData=>process_input_of_the_tool does it "correctly"
+        download_geofabrik_file_if_not_existing()
+
+        self.o_geofabrik_json = GeofabrikJson()
 
         self.need_to_dl = []
 
@@ -234,30 +297,25 @@ class Downloader:
         log.info('+ Checking for old maps and remove them')
 
         for country in self.border_countries:
-            # get translated country (geofabrik) of country
-            # do not download the same file for different countries
-            # --> e.g. China, Hong Kong and Macao, see Issue #11
-            transl_c = translate_country_input_to_geofabrik(country)
-
             # check for already existing .osm.pbf file
             map_file_path = glob.glob(
-                f'{USER_MAPS_DIR}/{transl_c}-latest.osm.pbf')
+                f'{USER_MAPS_DIR}/{country}-latest.osm.pbf')
             if len(map_file_path) != 1:
                 map_file_path = glob.glob(
-                    f'{USER_MAPS_DIR}/**/{transl_c}-latest.osm.pbf')
+                    f'{USER_MAPS_DIR}/**/{country}-latest.osm.pbf')
 
             # delete .osm.pbf file if out of date
             if len(map_file_path) == 1 and os.path.isfile(map_file_path[0]):
                 if self.should_file_be_downloaded(map_file_path[0]):
                     log.info(
-                        '+ mapfile for %s: deleted. Input: %s.', transl_c, country)
+                        '+ mapfile for %s: deleted.', country)
                     os.remove(map_file_path[0])
                     self.need_to_dl.append('osm_pbf')
                 else:
                     self.border_countries[country] = {
                         'map_file': map_file_path[0]}
                     log.info(
-                        '+ mapfile for %s: up-to-date. Input: %s.', transl_c, country)
+                        '+ mapfile for %s: up-to-date.', country)
 
             # mark country .osm.pbf file for download if there exists no file or it is no file
             map_file_path = self.border_countries[country].get('map_file')
@@ -272,7 +330,10 @@ class Downloader:
         for country, item in self.border_countries.items():
             try:
                 if item['download'] is True:
-                    map_file_path, url = get_osm_pbf_filepath_url(country)
+                    # build path to downloaded file with translated geofabrik country
+                    map_file_path = build_osm_pbf_filepath(country)
+                    # fetch the geofabrik download url to countries' OSM file
+                    url = self.o_geofabrik_json.get_geofabrik_url(country)
                     download_file(map_file_path, url)
                     self.border_countries[country] = {
                         'map_file': map_file_path}

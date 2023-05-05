@@ -43,6 +43,8 @@ python -m wahoomc gui
 ## To further adjust...
 * [:cookie: Get POIs displayed on your Wahoo](docs/USAGE.md#pois---points-of-interest)
 
+* [:mount_fuji: Integrate contour lines into the generated maps](docs/USAGE.md#pois---points-of-interest)
+
 * [:wrench: Control OSM tags to be included in your maps ](docs/USAGE.md#user-specific-configuration)
 
 * [:computer: Preview your generated maps with cruiser ](docs/USAGE_CRUISER.md#usage-of-cruiser)

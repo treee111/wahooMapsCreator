@@ -13,7 +13,9 @@ import tkinter as tk
 from tkinter import ttk
 
 # import custom python packages
-from wahoomc import constants
+from wahoomc.geofabrik_json import GeofabrikJson
+from wahoomc.geofabrik_json import CountyIsNoGeofabrikCountry
+from wahoomc.geofabrik import CountryGeofabrik
 
 
 def process_call_of_the_tool():
@@ -34,7 +36,7 @@ def process_call_of_the_tool():
 
     # create the parser for the "cli" command
     parser_cli = subparsers.add_parser(
-        'cli', help='Run the tool via command line interface')
+        'cli', help='Run the tool via command line interface', formatter_class=argparse.RawTextHelpFormatter)
 
     # group: primary input parameters to create map for. One needs to be given
     primary_args = parser_cli.add_argument_group(
@@ -43,10 +45,10 @@ def process_call_of_the_tool():
         required=True)
     # country to create maps for
     primary_args_excl.add_argument(
-        "-co", "--country", help="country to generate maps for")
+        "-co", "--country", help="country to generate maps for.\nExample: -co malta, multiple countries separated by comma: -co malta,italy")
     # X/Y coordinates to create maps for
     primary_args_excl.add_argument(
-        "-xy", "--xy_coordinates", help="x/y coordinates to generate maps for. Example: 133/88")
+        "-xy", "--xy_coordinates", help="x/y coordinates to generate maps for.\nExample: -xy 133/88, multiple xy coordinates separated by comma: -xy 133/88,134/89")
 
     # group: options for map generation
     options_args = parser_cli.add_argument_group(
@@ -57,6 +59,9 @@ def process_call_of_the_tool():
     # Do not calculate border countries of input country
     options_args.add_argument('-nbc', '--bordercountries', action='store_false',
                               help="do not process border countries of tiles involving more than one country")
+    # calculate contour lines
+    options_args.add_argument('-con', '--contour', action='store_true',
+                              help="process contour lines (elevation data)")
     # Force download of source maps and the land shape file
     # If False use Max_Days_Old to check for expired maps
     # If True force redownloading of maps and landshape
@@ -73,9 +78,6 @@ def process_call_of_the_tool():
     # specify the file with tags to keep in the output // file needs to be in wahoo_mc/resources/tag_wahoo_adjusted
     options_args.add_argument('-tag', '--tag_wahoo_xml', default=InputData().tag_wahoo_xml,
                               help="file with tags to keep in the output")
-    # option to calculate tiles to process based on Geofabrik index-v1.json file
-    options_args.add_argument('-gt', '--geofabrik_tiles', action='store_true',
-                              help="calculate tiles based on geofabrik index-v1.json file")
     # zip the country (and country-maps) folder
     options_args.add_argument('-z', '--zip', action='store_true',
                               help="zip the country (and country-maps) folder")
@@ -101,9 +103,10 @@ def process_call_of_the_tool():
     o_input_data.max_days_old = args.maxdays
 
     o_input_data.process_border_countries = args.bordercountries
+    o_input_data.contour = args.contour
+
     o_input_data.force_download = args.forcedownload
     o_input_data.force_processing = args.forceprocessing
-    o_input_data.geofabrik_tiles = args.geofabrik_tiles
 
     o_input_data.tag_wahoo_xml = args.tag_wahoo_xml
     o_input_data.save_cruiser = args.cruiser
@@ -152,6 +155,22 @@ def create_checkbox(self, default_value, description, row):
     return bool_var
 
 
+def get_countries_of_continent_from_geofabrik(continent):
+    """
+    returns all countries of a continent to be selected in UI
+    """
+    countries = []
+    for region, value in GeofabrikJson().geofabrik_overview.items():
+        try:
+            if value['parent'] == continent:
+                countries.append(region)
+        # regions/ continents do not have a parent
+        except KeyError:
+            pass
+
+    return countries
+
+
 class InputData():  # pylint: disable=too-many-instance-attributes,too-few-public-methods
     """
     object with all parameters to process maps and default values
@@ -165,14 +184,10 @@ class InputData():  # pylint: disable=too-many-instance-attributes,too-few-publi
         self.force_download = False
         self.force_processing = False
         self.process_border_countries = True
+        self.contour = False
         self.save_cruiser = False
 
         self.tag_wahoo_xml = "tag-wahoo-poi.xml"
-
-        # Way of calculating the relevant tiles for given input (country)
-        # True - Use geofabrik index-v1.json file
-        # False - Use .json files from folder wahoo_mc/resources/json
-        self.geofabrik_tiles = False
 
         self.zip_folder = False
         self.verbose = False
@@ -194,6 +209,15 @@ class InputData():  # pylint: disable=too-many-instance-attributes,too-few-publi
         elif self.country and self.xy_coordinates:
             sys.exit(
                 "Country and X/Y coordinates are given. Only one of both is allowed!")
+        elif self.country:
+            # countries =
+            try:
+                CountryGeofabrik.split_input_to_list(self.country)
+            except CountyIsNoGeofabrikCountry as exception:
+                sys.exit(exception)
+
+            # if we made it until here, sys.exit() was not called and therefore all countries OK ;-)
+            return True
         else:
             return True
 
@@ -276,7 +300,7 @@ class GuiInput(tk.Tk):
         self.o_input_data.force_download = tab1.third.checkb_download.get()
         self.o_input_data.force_processing = tab1.third.checkb_processing_val.get()
         self.o_input_data.process_border_countries = tab1.third.checkb_border_countries_val.get()
-        self.o_input_data.geofabrik_tiles = tab1.third.checkb_geofabrik_tiles_val.get()
+        self.o_input_data.contour = tab1.third.checkb_contour_val.get()
 
         self.o_input_data.save_cruiser = tab2.first.checkb_save_cruiser_val.get()
         self.o_input_data.zip_folder = tab2.first.checkb_zip_folder_val.get()
@@ -315,12 +339,12 @@ class ComboboxesEntryField(tk.Frame):  # pylint: disable=too-many-instance-attri
 
         # Comboboxes
         self.cb_continent = ttk.Combobox(
-            self, values=constants.continents, state="readonly")
+            self, values=GeofabrikJson().geofabrik_regions, state="readonly")
         self.cb_continent.current(0)  # pre-select first entry in combobox
         self.cb_continent.bind("<<ComboboxSelected>>", self.callback_continent)
 
         self.cb_country = ttk.Combobox(
-            self, values=constants.europe, state="readonly")
+            self, state="readonly")
 
         # Positioning
         self.lab_top.grid(column=0, row=0, columnspan=2, padx=5, pady=10)
@@ -349,8 +373,8 @@ class ComboboxesEntryField(tk.Frame):  # pylint: disable=too-many-instance-attri
         """
         continent = self.cb_continent.get()
         # get countries for selected region and set for combobox
-        self.cb_country["values"] = getattr(
-            constants, continent.replace("-", ""))
+        self.cb_country["values"] = get_countries_of_continent_from_geofabrik(
+            continent)
         self.cb_country.current(0)
 
 
@@ -373,12 +397,13 @@ class CheckbuttonsTab1(tk.Frame):
 
         self.checkb_border_countries_val = create_checkbox(self, oInputData.process_border_countries,
                                                            "Process border countries", 0)
+        self.checkb_contour_val = create_checkbox(self, oInputData.verbose,
+                                                  "process contour lines (elevation data)", 1)
+
         self.chk_force_download.grid(
-            column=0, row=1, sticky=tk.W, padx=15, pady=5)
+            column=0, row=2, sticky=tk.W, padx=15, pady=5)
         self.checkb_processing_val = create_checkbox(self, oInputData.force_processing,
-                                                     "Force processing", 2)
-        self.checkb_geofabrik_tiles_val = create_checkbox(self, oInputData.geofabrik_tiles,
-                                                          "Use Geofabrik file for tiles", 3)
+                                                     "Force processing", 3)
 
 
 class Buttons(tk.Frame):
@@ -433,4 +458,4 @@ class CheckbuttonsTab2(tk.Frame):
         self.checkb_zip_folder_val = create_checkbox(self, oInputData.zip_folder,
                                                      "Zip folder with generated files", 3)
         self.checkb_verbose_val = create_checkbox(self, oInputData.verbose,
-                                                "output debug logger messages", 4)
+                                                  "output debug logger messages", 4)

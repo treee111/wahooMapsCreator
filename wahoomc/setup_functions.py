@@ -18,13 +18,12 @@ from wahoomc.file_directory_functions import move_content, write_json_file_gener
 from wahoomc.constants_functions import get_tooling_win_path, get_absolute_dir_user_or_repo
 from wahoomc.downloader import get_latest_pypi_version
 
-from wahoomc.constants import USER_WAHOO_MC
+from wahoomc.constants import GEOFABRIK_PATH, USER_WAHOO_MC
 from wahoomc.constants import USER_DL_DIR
 from wahoomc.constants import USER_MAPS_DIR
 from wahoomc.constants import USER_OUTPUT_DIR
 from wahoomc.constants import USER_CONFIG_DIR
 from wahoomc.constants import VERSION
-from wahoomc.constants import USER_TOOLING_WIN_DIR
 
 log = logging.getLogger('main-logger')
 
@@ -40,9 +39,6 @@ def initialize_work_directories():
     os.makedirs(USER_MAPS_DIR, exist_ok=True)
     os.makedirs(USER_OUTPUT_DIR, exist_ok=True)
     os.makedirs(USER_CONFIG_DIR, exist_ok=True)
-
-    if platform.system() == "Windows":
-        os.makedirs(USER_TOOLING_WIN_DIR, exist_ok=True)
 
 
 def move_old_content_into_new_dirs():
@@ -72,13 +68,16 @@ def adjustments_due_to_breaking_changes():
             'Last run was with version %s, deleting files of %s directory due to breaking changes.', version_last_run, USER_OUTPUT_DIR)
         delete_o5m_pbf_files_in_folder(USER_OUTPUT_DIR)
 
-    # version 1.1.0 moved the directories with "processing" files out of the repo folder due to the publishing via PyPI
-    # old files are moved to the new structure. Can be deleted soon (in version 3.0.x)
+    # file-names of downloaded .osm.pbf raw mapfiles was adjusted in #182 to focus on geofabrik naming
+    # other existing files may therefor not be accessed anymore in the future and therefore deleted
     if version_last_run is None or \
-            pkg_resources.parse_version(VERSION) < pkg_resources.parse_version('1.1.0'):
+            pkg_resources.parse_version(VERSION) < pkg_resources.parse_version('4.0.0a0'):
         log.info(
-            'Last run was with version %s, moving content to new directories due to breaking changes.', version_last_run)
-        move_old_content_into_new_dirs()
+            'Last run was with version %s, deleting files of %s directory due to breaking changes.', version_last_run, USER_MAPS_DIR)
+        delete_o5m_pbf_files_in_folder(USER_MAPS_DIR)
+        log.info(
+            'Last run was with version %s, deleting files of %s directory due to breaking changes.', version_last_run, USER_OUTPUT_DIR)
+        delete_o5m_pbf_files_in_folder(USER_OUTPUT_DIR)
 
 
 def check_installation_of_required_programs():
@@ -91,6 +90,9 @@ def check_installation_of_required_programs():
     if not is_program_installed("java"):
         sys.exit(
             f"Java is not installed. {text_to_docu}")
+
+    if not os.path.isfile(GEOFABRIK_PATH):
+        sys.exit('Geofabrik file is not downloaded. Please create an issue:\n- https://github.com/treee111/wahooMapsCreator/issues"')
 
     if platform.system() == "Windows":
         if not os.path.exists(get_tooling_win_path(
@@ -122,6 +124,24 @@ def check_installation_of_required_programs():
         if not is_map_writer_plugin_installed():
             sys.exit(
                 f"mapsforge-map-writer plugin is not installed. {text_to_docu}")
+
+
+def check_installation_of_programs_credentials_for_contour_lines():
+    """
+    check if additionals programs are installed
+    """
+    text_to_docu = "\nYou have choosen to process contour lines. That needs additional programs. \
+                    \nPlease refer to the Quickstart Guide of wahooMapsCreator for instructions:\n- https://github.com/treee111/wahooMapsCreator/blob/develop/docs/QUICKSTART_ANACONDA.md#additinoal-programs-for-generating-contour-lines \
+                    \nor create an issue:\n- https://github.com/treee111/wahooMapsCreator/issues"
+
+    if not is_program_installed("phyghtmap"):
+        sys.exit(
+            f"phyghtmap is not installed. {text_to_docu}")
+
+    username, password = read_earthexplorer_credentials()
+
+    if not username or not password:
+        username, password = ask_for_and_write_earthexplorer_credentials()
 
 
 def is_program_installed(program):
@@ -157,16 +177,28 @@ def is_map_writer_plugin_installed():
     return False
 
 
-def write_config_file():
+def write_config_file(config_to_write=''):
     """
     Write config file of wahoomc to root directory
+    incorporate given content to existing file
     """
     # Data to be written
-    configuration = {
+    default_config = {
         "version_last_run": VERSION
     }
 
-    write_json_file_generic(config_file_path, configuration)
+    # if no config to write is given, write default config - normally at the end of main()
+    if not config_to_write:
+        config_to_write = default_config
+
+    actual_content = read_json_file_generic(config_file_path)
+
+    for key, value in config_to_write.items():
+        # overwrite value or insert new item
+        actual_content[key] = value
+
+    # write changed content to disc
+    write_json_file_generic(config_file_path, actual_content)
 
 
 def read_version_last_run():
@@ -177,10 +209,44 @@ def read_version_last_run():
     try:
         version_last_run = read_json_file_generic(config_file_path)[
             "version_last_run"]
-    except (FileNotFoundError, KeyError):
+    except KeyError:
         version_last_run = None
 
     return version_last_run
+
+
+def ask_for_and_write_earthexplorer_credentials():
+    """
+    Ask user for credentials for https://ers.cr.usgs.gov and save in the config file
+    """
+    log.warning(
+        'No saved credentials found for https://ers.cr.usgs.gov. Please register and enter your credentials.')
+    username = input('https://ers.cr.usgs.gov username:')
+    password = input('https://ers.cr.usgs.gov password:')
+
+    credentials_to_write = {
+        'earthexplorer-user': username, 'earthexplorer-password': password}
+
+    write_config_file(credentials_to_write)
+
+    return username, password
+
+
+def read_earthexplorer_credentials():
+    """
+    Read the version of wahoomc's last run
+    by reading json and access version attribute, if not set, give None
+    """
+    try:
+        username = read_json_file_generic(config_file_path)[
+            "earthexplorer-user"]
+        password = read_json_file_generic(config_file_path)[
+            "earthexplorer-password"]
+    except KeyError:
+        username = None
+        password = None
+
+    return username, password
 
 
 def copy_jsons_from_repo_to_user(folder, file=''):
