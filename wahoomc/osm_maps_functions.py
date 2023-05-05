@@ -549,7 +549,7 @@ class OsmMaps:
                 cmd = ['phyghtmap']
                 cmd.append('-a ' + f'{tile["left"]}' + ':' + f'{tile["bottom"]}' +
                            ':' + f'{tile["right"]}' + ':' + f'{tile["top"]}')
-                cmd.extend(['-o', f'{out_file_elevation}', '-s 10', '-c 100,50', '--source=view1,view3,srtm3',
+                cmd.extend(['-o', f'{out_file_elevation}', '-s 10', '-c 100,50', '--source=srtm1,view1,view3,srtm3',
                             '--jobs=8', '--viewfinder-mask=1', '--start-node-id=20000000000',
                             '--max-nodes-per-tile=0', '--start-way-id=2000000000', '--write-timestamp',
                             '--no-zero-contour', '--hgtdir=' + hgt_path])

@@ -41,7 +41,7 @@ conda env remove -n gdal-user
 ```
 followed by creating a new environment and install wahoomc into:
 ```
-conda create -n gdal-user python=3.10 geojson=2.5 gdal=3.4 requests=2.28 shapely=1.8 bs4=4.11 lxml=4.9 matplotlib=3.4.3 pip --channel conda-forge --override-channels
+conda create -n gdal-user python=3.10 geojson=2.5 gdal=3.6 requests=2.28 shapely=1.8 bs4=4.11 lxml=4.9 matplotlib=3.4.3 pip --channel conda-forge --override-channels
 conda activate gdal-user
 pip install wahoomc
 ```
