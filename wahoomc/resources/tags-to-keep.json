@@ -81,7 +81,8 @@
             "canal",
             "drain",
             "river",
-            "riverbank"
+            "riverbank",
+            "stream"
         ],
         "wood": "deciduous"
     },

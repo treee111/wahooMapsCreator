@@ -9,6 +9,7 @@
     - [Attribute "zoom-appear"](#attribute-zoom-appear)
     - [Combination of tags-to-keep.json and tag-wahoo.xml](#combination-of-tags-to-keepjson-and-tag-wahooxml)
 - [Device-Theme](#device-theme)
+  - [Activate VTM Rendering](#activate-vtm-rendering)
   - [Preview maps and device themes using cruiser](#preview-maps-and-device-themes-using-cruiser)
   - [Attribute "zoom-min"](#attribute-zoom-min)
   - [Copy the theme to the device](#copy-the-theme-to-the-device)
@@ -71,9 +72,10 @@ There are two types of rendering methods: VTM and non-VTM rendering. This table 
 | BOLTv1 |      non-VTM      |
 | ELEMNT |      non-VTM      |
 
-You can enable the VTM rendering method on Wahoo devices which do not have VTOM rendering as default by creating a empty file on the device with the name "cfg_BHomeActivity_VtmMaps" in the root folder.
-
 The VTM rendering device theme is called `vtm-elemnt.xml` and for the non-VTM devices the themes are named like the device, e.g. `mapsforge-bolt.xml` or `mapsforge-roam.xml`. Content wise it is more or less equal to the `tag-wahoo.xml` files.
+
+## Activate VTM Rendering
+You can enable the VTM rendering method on Wahoo devices which do not have VTM rendering as default by creating a empty file on the device with the name "cfg_BHomeActivity_VtmMaps" in the root folder.
 
 ## Preview maps and device themes using cruiser
 cruiser is named throughout this file. See the documentation of using cruiser [here](USAGE_CRUISER.md#usage-of-cruiser) to know how to use it.
