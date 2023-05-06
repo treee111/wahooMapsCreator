@@ -522,7 +522,7 @@ class OsmMaps:
 
         log.info('+ Generate sea for each coordinate: OK')
 
-    def generate_elevation(self):
+    def generate_elevation(self, use_srtm1):
         """
         Generate contour lines for all tiles
         """
@@ -541,6 +541,15 @@ class OsmMaps:
             # example elevation filename: elevation_lon14.06_15.47lat35.46_36.60_view1,view3.osm
             out_file_elevation_existing = glob.glob(os.path.join(
                 USER_OUTPUT_DIR, str(tile["x"]), str(tile["y"]), 'elevation*.osm'))
+
+            # use view1 as default source and srtm1 if wished by the user
+            # view1 offers better quality in general apart fro some places
+            # where srtm1 is the better choice
+            if use_srtm1:
+                elevation_source = '--source=srtm1,view1,view3,srtm3'
+            else:
+                elevation_source = '--source=view1,view3,srtm3'
+
             # check for already existing elevation .osm file (the ones matched via glob)
             if not (len(out_file_elevation_existing) == 1 and os.path.isfile(out_file_elevation_existing[0])) \
                     or self.o_osm_data.force_processing is True:
@@ -549,7 +558,7 @@ class OsmMaps:
                 cmd = ['phyghtmap']
                 cmd.append('-a ' + f'{tile["left"]}' + ':' + f'{tile["bottom"]}' +
                            ':' + f'{tile["right"]}' + ':' + f'{tile["top"]}')
-                cmd.extend(['-o', f'{out_file_elevation}', '-s 10', '-c 100,50', '--source=srtm1,view1,view3,srtm3',
+                cmd.extend(['-o', f'{out_file_elevation}', '-s 10', '-c 100,50', elevation_source,
                             '--jobs=8', '--viewfinder-mask=1', '--start-node-id=20000000000',
                             '--max-nodes-per-tile=0', '--start-way-id=2000000000', '--write-timestamp',
                             '--no-zero-contour', '--hgtdir=' + hgt_path])
