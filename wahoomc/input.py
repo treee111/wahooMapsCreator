@@ -62,6 +62,9 @@ def process_call_of_the_tool():
     # calculate contour lines
     options_args.add_argument('-con', '--contour', action='store_true',
                               help="process contour lines (elevation data)")
+    # use srtm1 for contour lines
+    options_args.add_argument('-srtm1', '--use_srtm1', action='store_true',
+                              help="use srtm1 as source for contour lines (elevation data)")
     # Force download of source maps and the land shape file
     # If False use Max_Days_Old to check for expired maps
     # If True force redownloading of maps and landshape
@@ -104,6 +107,7 @@ def process_call_of_the_tool():
 
     o_input_data.process_border_countries = args.bordercountries
     o_input_data.contour = args.contour
+    o_input_data.use_srtm1 = args.use_srtm1
 
     o_input_data.force_download = args.forcedownload
     o_input_data.force_processing = args.forceprocessing
@@ -185,11 +189,12 @@ class InputData():  # pylint: disable=too-many-instance-attributes,too-few-publi
         self.force_processing = False
         self.process_border_countries = True
         self.contour = False
-        self.save_cruiser = False
+        self.use_srtm1 = False
 
         self.tag_wahoo_xml = "tag-wahoo-poi.xml"
-
         self.zip_folder = False
+        self.save_cruiser = False
+
         self.verbose = False
 
     def is_required_input_given_or_exit(self, issue_message):
@@ -301,6 +306,7 @@ class GuiInput(tk.Tk):
         self.o_input_data.force_processing = tab1.third.checkb_processing_val.get()
         self.o_input_data.process_border_countries = tab1.third.checkb_border_countries_val.get()
         self.o_input_data.contour = tab1.third.checkb_contour_val.get()
+        self.o_input_data.use_srtm1 = tab1.third.checkb_srtm1_val.get()
 
         self.o_input_data.save_cruiser = tab2.first.checkb_save_cruiser_val.get()
         self.o_input_data.zip_folder = tab2.first.checkb_zip_folder_val.get()
@@ -397,13 +403,15 @@ class CheckbuttonsTab1(tk.Frame):
 
         self.checkb_border_countries_val = create_checkbox(self, oInputData.process_border_countries,
                                                            "Process border countries", 0)
-        self.checkb_contour_val = create_checkbox(self, oInputData.verbose,
+        self.checkb_contour_val = create_checkbox(self, oInputData.contour,
                                                   "process contour lines (elevation data)", 1)
+        self.checkb_srtm1_val = create_checkbox(self, oInputData.use_srtm1,
+                                                "use srtm1 as source for contour lines (elevation data)", 2)
 
         self.chk_force_download.grid(
-            column=0, row=2, sticky=tk.W, padx=15, pady=5)
+            column=0, row=3, sticky=tk.W, padx=15, pady=5)
         self.checkb_processing_val = create_checkbox(self, oInputData.force_processing,
-                                                     "Force processing", 3)
+                                                     "Force processing", 4)
 
 
 class Buttons(tk.Frame):
