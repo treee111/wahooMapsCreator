@@ -4,7 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-A list of unreleased changes can be found [here](https://github.com/treee111/wahooMapsCreator/compare/v4.0.1...HEAD).
+A list of unreleased changes can be found [here](https://github.com/treee111/wahooMapsCreator/compare/v4.0.2...HEAD).
+
+<a name="4.0.2"></a>
+## [4.0.2] - 2023-05-06
+### Features
+- **option to choose source for contour lines:** view1 (standard) and srtm1 ([#204](https://github.com/treee111/wahooMapsCreator/issues/204)) [`400dfc4`](https://github.com/treee111/wahooMapsCreator/commit/400dfc4ebf29dfe86508bcaf12961863154ac555)
+
 
 <a name="4.0.1"></a>
 ## [4.0.1] - 2023-05-05
@@ -428,6 +434,7 @@ wahooMapsCreator can now be used much quicker and easier!
     - Windows:    `tooling_windows/Windows-Wahoo-Map-Creator-Osmosis/wahoo-map-creator-osmosis.py`
 
 
+[4.0.2]: https://github.com/treee111/wahooMapsCreator/compare/v4.0.1...v4.0.2
 [4.0.1]: https://github.com/treee111/wahooMapsCreator/compare/v4.0.0...v4.0.1
 [4.0.0]: https://github.com/treee111/wahooMapsCreator/compare/v3.2.0...v4.0.0
 [3.2.0]: https://github.com/treee111/wahooMapsCreator/compare/v3.1.1...v3.2.0
