@@ -71,7 +71,8 @@ If you like to run wahooMapsCreator with another value than the default, use the
 | :----- | :--------------------------------------------------------------------------------------------------------------- | :------------------ |
 | -md    | Maximum age of source maps and other files in days.                                                              | 24                  |
 | -nbc   | Do not process border countries of tiles involving more than one country. Only useful when processing a country. | false               |
-| -con   | Calculate contour lines (elevation) and integrate into generated maps.                                           | false               |
+| -con   | Calculate contour lines (elevation) and integrate into generated maps (using view1 as data source).              | false               |
+| -srtm1 | Use SRTM1 data as source for calculating contour lines (elevation) maps. Has only affect togester with -con.     | false               |
 | -fd    | Force download of files. Download all files new.                                                                 | false               |
 | -fp    | Force processing of files. Create all files new.                                                                 | false               |
 | -c     | Save uncompressed maps for Cruiser.                                                                              | false               |
