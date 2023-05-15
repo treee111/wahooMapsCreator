@@ -13,6 +13,7 @@ import sys
 import platform
 import shutil
 import logging
+import time
 
 # import custom python packages
 from wahoomc.file_directory_functions import read_json_file_country_config, create_empty_directories, write_json_file_generic
@@ -315,6 +316,9 @@ class OsmMaps:
         log.info('-' * 80)
         log.info('# Filter tags from country osm.pbf files')
 
+
+        process_time = time.process_time();
+        wall_clock = time.perf_counter();
         for key, val in self.o_osm_data.border_countries.items():
             # evaluate contry directory, create if not exists
             country_dir = os.path.join(USER_OUTPUT_DIR, key)
@@ -423,7 +427,7 @@ class OsmMaps:
             # write config file for country
             self.write_country_config_file(key)
 
-        log.info('+ Filter tags from country osm.pbf files: OK')
+        log.info('+ Filter tags from country osm.pbf files: OK, took ' + '%.5f' % (time.process_time() - process_time) + ', %.5f' % (time.perf_counter()-wall_clock))
 
     def generate_land(self):
         """
@@ -579,6 +583,8 @@ class OsmMaps:
 
         log.info('-' * 80)
         log.info('# Split filtered country files to tiles')
+        process_time = time.process_time();
+        wall_clock = time.perf_counter();
         tile_count = 1
         for tile in self.o_osm_data.tiles:
 
@@ -586,6 +592,8 @@ class OsmMaps:
                 if country not in tile['countries']:
                     continue
                 self.log_tile(tile["x"], tile["y"], tile_count, country)
+                tile_process_time = time.process_time()
+                tile_wall_clock = time.perf_counter()
                 out_file = os.path.join(USER_OUTPUT_DIR,
                                         f'{tile["x"]}', f'{tile["y"]}', f'split-{country}.osm.pbf')
                 out_file_names = os.path.join(USER_OUTPUT_DIR,
@@ -642,9 +650,13 @@ class OsmMaps:
                     run_subprocess_and_log_output(
                         cmd, '! Error in Osmosis with country: {country}. macOS/out_file_names')
 
+                # Need to figure out how to do the logging via the log_tile method, and how to pass clock sources
+                #log.info('Took %.5f ' % (time.perf_counter() - tile_wall_clock))
+                log.info('+ Coordinates: %s,%s / %s (%s of %s), took %.5f', tile["x"], tile["y"], country, tile_count, len(self.o_osm_data.tiles), (time.perf_counter() - tile_wall_clock))
+
             tile_count += 1
 
-        log.info('+ Split filtered country files to tiles: OK')
+        log.info('+ Split filtered country files to tiles: OK, took ' + '%.5f' % (time.process_time()-process_time) + ', %.5f' % (time.perf_counter()-wall_clock))
 
     def merge_splitted_tiles_with_land_and_sea(self, process_border_countries):
         """
