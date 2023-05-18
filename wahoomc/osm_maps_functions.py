@@ -437,12 +437,16 @@ class OsmMaps:
         log.info('-' * 80)
         log.info('# Generate land for each coordinate')
 
+        process_time = time.process_time();
+        wall_clock = time.perf_counter();
         tile_count = 1
         for tile in self.o_osm_data.tiles:
             land_file = os.path.join(USER_OUTPUT_DIR,
                                      f'{tile["x"]}', f'{tile["y"]}', 'land.shp')
             out_file_land1 = os.path.join(USER_OUTPUT_DIR,
                                           f'{tile["x"]}', f'{tile["y"]}', 'land')
+            tile_process_time = time.process_time()
+            tile_wall_clock = time.perf_counter()
 
             # create land.dbf, land.prj, land.shp, land.shx
             if not os.path.isfile(land_file) or self.o_osm_data.force_processing is True:
@@ -479,9 +483,10 @@ class OsmMaps:
 
                 run_subprocess_and_log_output(
                     cmd, f'! Error creating land.osm for tile: {tile["x"]},{tile["y"]}')
+            self.log_tile(tile["x"], tile["y"], tile_count, 'took %.5f' % (time.perf_counter() - tile_wall_clock))
             tile_count += 1
 
-        log.info('+ Generate land for each coordinate: OK')
+        log.info('+ Generate land for each coordinate: OK, took ' + '%.5f' % (time.process_time() - process_time) + ', %.5f' % (time.perf_counter()-wall_clock))
 
     def generate_sea(self):
         """
@@ -491,10 +496,15 @@ class OsmMaps:
         log.info('-' * 80)
         log.info('# Generate sea for each coordinate')
 
+        process_time = time.process_time();
+        wall_clock = time.perf_counter();
         tile_count = 1
         for tile in self.o_osm_data.tiles:
             out_file_sea = os.path.join(USER_OUTPUT_DIR,
                                         f'{tile["x"]}', f'{tile["y"]}', 'sea.osm')
+            tile_process_time = time.process_time()
+            tile_wall_clock = time.perf_counter()
+
             if not os.path.isfile(out_file_sea) or self.o_osm_data.force_processing is True:
                 self.log_tile(tile["x"], tile["y"], tile_count)
                 with open(os.path.join(RESOURCES_DIR, 'sea.osm'), encoding="utf-8") as sea_file:
@@ -522,9 +532,10 @@ class OsmMaps:
 
                     with open(out_file_sea, mode='w', encoding="utf-8") as output_file:
                         output_file.write(sea_data)
+            self.log_tile(tile["x"], tile["y"], tile_count, 'took %.5f' % (time.perf_counter() - tile_wall_clock))
             tile_count += 1
 
-        log.info('+ Generate sea for each coordinate: OK')
+        log.info('+ Generate sea for each coordinate: OK, took ' + '%.5f' % (time.process_time() - process_time) + ', %.5f' % (time.perf_counter()-wall_clock))
 
     def generate_elevation(self, use_srtm1):
         """
@@ -650,9 +661,7 @@ class OsmMaps:
                     run_subprocess_and_log_output(
                         cmd, '! Error in Osmosis with country: {country}. macOS/out_file_names')
 
-                # Need to figure out how to do the logging via the log_tile method, and how to pass clock sources
-                #log.info('Took %.5f ' % (time.perf_counter() - tile_wall_clock))
-                log.info('+ Coordinates: %s,%s / %s (%s of %s), took %.5f', tile["x"], tile["y"], country, tile_count, len(self.o_osm_data.tiles), (time.perf_counter() - tile_wall_clock))
+                self.log_tile(tile["x"], tile["y"], tile_count, country + ' done, took %.5f' % (time.perf_counter() - tile_wall_clock))
 
             tile_count += 1
 
