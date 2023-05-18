@@ -674,9 +674,13 @@ class OsmMaps:
 
         log.info('-' * 80)
         log.info('# Merge splitted tiles with land, elevation, and sea')
+        process_time = time.process_time();
+        wall_clock = time.perf_counter();
         tile_count = 1
         for tile in self.o_osm_data.tiles:  # pylint: disable=too-many-nested-blocks
             self.log_tile(tile["x"], tile["y"], tile_count)
+            tile_process_time = time.process_time()
+            tile_wall_clock = time.perf_counter()
 
             out_tile_dir = os.path.join(USER_OUTPUT_DIR,
                                         f'{tile["x"]}', f'{tile["y"]}')
@@ -734,9 +738,10 @@ class OsmMaps:
             run_subprocess_and_log_output(
                 cmd, f'! Error in Osmosis with tile: {tile["x"]},{tile["y"]}')
 
+            self.log_tile(tile["x"], tile["y"], tile_count, ' took %.5f' % (time.perf_counter() - tile_wall_clock))
             tile_count += 1
 
-        log.info('+ Merge splitted tiles with land, elevation, and sea: OK')
+        log.info('+ Merge splitted tiles with land, elevation, and sea: OK, took ' + '%.5f' % (time.process_time()-process_time) + ', %.5f' % (time.perf_counter()-wall_clock))
 
     def sort_osm_files(self, tile):
         """
@@ -780,9 +785,13 @@ class OsmMaps:
         if int(threads) < 1:
             threads = 1
 
+        process_time = time.process_time();
+        wall_clock = time.perf_counter();
         tile_count = 1
         for tile in self.o_osm_data.tiles:
             self.log_tile(tile["x"], tile["y"], tile_count)
+            tile_process_time = time.process_time()
+            tile_wall_clock = time.perf_counter()
 
             out_file_map = os.path.join(USER_OUTPUT_DIR,
                                         f'{tile["x"]}', f'{tile["y"]}.map')
@@ -836,9 +845,10 @@ class OsmMaps:
             with open(out_file_map + '.lzma.17', mode='wb') as tile_present_file:
                 tile_present_file.close()
 
+            self.log_tile(tile["x"], tile["y"], tile_count, ' took %.5f' % (time.perf_counter() - tile_wall_clock))
             tile_count += 1
 
-        log.info('+ Creating .map files for tiles: OK')
+        log.info('+ Creating .map files for tiles: OK, took ' + '%.5f' % (time.process_time()-process_time) + ', %.5f' % (time.perf_counter()-wall_clock))
 
     def make_and_zip_files(self, extension, zip_folder):
         """
@@ -855,6 +865,8 @@ class OsmMaps:
         log.info('-' * 80)
         log.info('# Create: %s files', extension)
         log.info('+ Country: %s', self.o_osm_data.country_name)
+        process_time = time.process_time();
+        wall_clock = time.perf_counter();
 
         # Check for us/utah etc names
         try:
@@ -905,7 +917,7 @@ class OsmMaps:
 
             log.info('+ Zip %s files: OK', extension)
 
-        log.info('+ Create %s files: OK', extension)
+        log.info('+ Create %s files: OK, took %.5f, %.5f', extension, time.process_time()-process_time, time.perf_counter()-wall_clock)
 
     def copy_to_dst(self, extension, src, dst):
         """
