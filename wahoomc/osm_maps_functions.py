@@ -317,8 +317,8 @@ class OsmMaps:
         log.info('# Filter tags from country osm.pbf files')
 
 
-        process_time = time.process_time();
-        wall_clock = time.perf_counter();
+        process_time = time.process_time()
+        wall_clock = time.perf_counter()
         for key, val in self.o_osm_data.border_countries.items():
             # evaluate contry directory, create if not exists
             country_dir = os.path.join(USER_OUTPUT_DIR, key)
@@ -437,8 +437,8 @@ class OsmMaps:
         log.info('-' * 80)
         log.info('# Generate land for each coordinate')
 
-        process_time = time.process_time();
-        wall_clock = time.perf_counter();
+        process_time = time.process_time()
+        wall_clock = time.perf_counter()
         tile_count = 1
         for tile in self.o_osm_data.tiles:
             land_file = os.path.join(USER_OUTPUT_DIR,
@@ -496,8 +496,8 @@ class OsmMaps:
         log.info('-' * 80)
         log.info('# Generate sea for each coordinate')
 
-        process_time = time.process_time();
-        wall_clock = time.perf_counter();
+        process_time = time.process_time()
+        wall_clock = time.perf_counter()
         tile_count = 1
         for tile in self.o_osm_data.tiles:
             out_file_sea = os.path.join(USER_OUTPUT_DIR,
@@ -594,8 +594,8 @@ class OsmMaps:
 
         log.info('-' * 80)
         log.info('# Split filtered country files to tiles')
-        process_time = time.process_time();
-        wall_clock = time.perf_counter();
+        process_time = time.process_time()
+        wall_clock = time.perf_counter()
         tile_count = 1
         for tile in self.o_osm_data.tiles:
 
@@ -674,8 +674,8 @@ class OsmMaps:
 
         log.info('-' * 80)
         log.info('# Merge splitted tiles with land, elevation, and sea')
-        process_time = time.process_time();
-        wall_clock = time.perf_counter();
+        process_time = time.process_time()
+        wall_clock = time.perf_counter()
         tile_count = 1
         for tile in self.o_osm_data.tiles:  # pylint: disable=too-many-nested-blocks
             self.log_tile(tile["x"], tile["y"], tile_count)
@@ -785,8 +785,8 @@ class OsmMaps:
         if int(threads) < 1:
             threads = 1
 
-        process_time = time.process_time();
-        wall_clock = time.perf_counter();
+        process_time = time.process_time()
+        wall_clock = time.perf_counter()
         tile_count = 1
         for tile in self.o_osm_data.tiles:
             self.log_tile(tile["x"], tile["y"], tile_count)
@@ -865,8 +865,8 @@ class OsmMaps:
         log.info('-' * 80)
         log.info('# Create: %s files', extension)
         log.info('+ Country: %s', self.o_osm_data.country_name)
-        process_time = time.process_time();
-        wall_clock = time.perf_counter();
+        process_time = time.process_time()
+        wall_clock = time.perf_counter()
 
         # Check for us/utah etc names
         try:
