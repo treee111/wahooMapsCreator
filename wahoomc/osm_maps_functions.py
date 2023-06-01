@@ -40,30 +40,24 @@ def run_subprocess_and_log_output(cmd, error_message, cwd=""):
     run given cmd-subprocess and issue error message if wished
     """
     if not cwd:
-        process = subprocess.Popen(
-            cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-    else:
-        process = subprocess.Popen(  # pylint: disable=consider-using-with
-            cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, cwd=cwd)
+        process = subprocess.run(
+            cmd, capture_output=True, text=True, encoding="utf-8")
 
-    if error_message and process.wait() != 0:  # 0 means success
-        for line in iter(process.stdout.readline, b''):  # b'\n'-separated lines
-            # print(line.rstrip())
-            try:
-                log.error('subprocess:%r', line.decode("utf-8").strip())
-            except UnicodeDecodeError:
-                log.error('subprocess:%r', line.decode("latin-1").strip())
+    else:
+        process = subprocess.run(  # pylint: disable=consider-using-with
+            cmd, capture_output=True, cwd=cwd, text=True, encoding="utf-8")
+
+
+    if error_message and process.returncode != 0:  # 0 means success
+        line = process.stderr
+        log.error('subprocess:%s', line)
 
         log.error(error_message)
         sys.exit()
 
     else:
-        for line in iter(process.stdout.readline, b''):  # b'\n'-separated lines
-            # print(line.rstrip())
-            try:
-                log.debug('subprocess:%r', line.decode("utf-8").strip())
-            except UnicodeDecodeError:
-                log.debug('subprocess:%r', line.decode("latin-1").strip())
+        line = process.stdout  # b'\n'-separated lines
+        log.debug('subprocess:%s', line)
 
 
 def get_timestamp_last_changed(file_path):
