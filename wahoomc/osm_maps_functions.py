@@ -548,6 +548,8 @@ class OsmMaps:
 
         hgt_path = os.path.join(USER_DL_DIR, 'hgt')
 
+        process_time = time.process_time()
+        wall_clock = time.perf_counter()
         tile_count = 1
         for tile in self.o_osm_data.tiles:
             out_file_elevation = os.path.join(
@@ -568,8 +570,9 @@ class OsmMaps:
             # check for already existing elevation .osm file (the ones matched via glob)
             if not (len(out_file_elevation_existing) == 1 and os.path.isfile(out_file_elevation_existing[0])) \
                     or self.o_osm_data.force_processing is True:
-                log.info(
-                    '+ Coordinates: %s,%s. (%s of %s)', tile["x"], tile["y"], tile_count, len(self.o_osm_data.tiles))
+                self.log_tile(tile["x"], tile["y"], tile_count)
+                tile_process_time = time.process_time()
+                tile_wall_clock = time.perf_counter()
                 cmd = ['phyghtmap']
                 cmd.append('-a ' + f'{tile["left"]}' + ':' + f'{tile["bottom"]}' +
                            ':' + f'{tile["right"]}' + ':' + f'{tile["top"]}')
@@ -582,10 +585,11 @@ class OsmMaps:
 
                 run_subprocess_and_log_output(
                     cmd, f'! Error in phyghtmap with tile: {tile["x"]},{tile["y"]}. Win_macOS/elevation')
+                self.log_tile(tile["x"], tile["y"], tile_count, 'done, took %.5f ' % (time.perf_counter()-tile_wall_clock))
 
             tile_count += 1
 
-        log.info('+ Generate contour lines for each coordinate: OK')
+        log.info('+ Generate contour lines for each coordinate: OK, took ' + '%.5f' % (time.process_time()-process_time) + ', %.5f' % (time.perf_counter()-wall_clock))
 
     def split_filtered_country_files_to_tiles(self):
         """
