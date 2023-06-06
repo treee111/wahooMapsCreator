@@ -131,7 +131,7 @@ def check_installation_of_programs_credentials_for_contour_lines():
     check if additionals programs are installed
     """
     text_to_docu = "\nYou have choosen to process contour lines. That needs additional programs. \
-                    \nPlease refer to the Quickstart Guide of wahooMapsCreator for instructions:\n- https://github.com/treee111/wahooMapsCreator/blob/develop/docs/QUICKSTART_ANACONDA.md#additinoal-programs-for-generating-contour-lines \
+                    \nPlease refer to the Quickstart Guide of wahooMapsCreator for instructions:\n- https://github.com/treee111/wahooMapsCreator/blob/develop/docs/QUICKSTART_ANACONDA.md#additional-programs-for-generating-contour-lines \
                     \nor create an issue:\n- https://github.com/treee111/wahooMapsCreator/issues"
 
     if not is_program_installed("phyghtmap"):
