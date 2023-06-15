@@ -41,23 +41,24 @@ def run_subprocess_and_log_output(cmd, error_message, cwd=""):
     """
     if not cwd:
         process = subprocess.run(
-            cmd, capture_output=True, text=True, encoding="utf-8")
+            cmd, capture_output=True, text=True, encoding="utf-8", check=False)
 
     else:
         process = subprocess.run(  # pylint: disable=consider-using-with
-            cmd, capture_output=True, cwd=cwd, text=True, encoding="utf-8")
+            cmd, capture_output=True, cwd=cwd, text=True, encoding="utf-8", check=False)
 
 
     if error_message and process.returncode != 0:  # 0 means success
-        line = process.stderr
-        log.error('subprocess:%s', line)
+        log.error('subprocess error output:')
+        if process.stderr:
+            log.error(process.stderr)
 
         log.error(error_message)
         sys.exit()
 
-    else:
-        line = process.stdout  # b'\n'-separated lines
-        log.debug('subprocess:%s', line)
+    elif process.stdout:
+        log.debug('subprocess debug output:')
+        log.debug(process.stdout)
 
 
 def get_timestamp_last_changed(file_path):
