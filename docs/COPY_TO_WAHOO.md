@@ -93,6 +93,6 @@ For e.g. a BOLTv1, you need to activete VTM rendering first.
 
 # Delete temp-files and Clear Cache
 - delete all files from \ELEMNT-BOLT\USB storage\maps\temp\
-- to clear the cache and load the new maps on the Bolt:
+- to clear the cache and load the new maps on your Wahooo device:
 1. `adb shell am broadcast -a com.wahoofitness.bolt.service.BMapManager.PURGE`
 2. `adb shell am broadcast -a com.wahoofitness.bolt.service.BMapManager.RELOAD_MAP`
