@@ -302,6 +302,22 @@
                 "--verbose"
             ],
             "justMyCode": false
+        },
+        {
+            "name": "xy: Plauen - contour #145",
+            "type": "python",
+            "request": "launch",
+            "module": "wahoomc",
+            "console": "integratedTerminal",
+            "args": [
+                "cli",
+                "-xy",
+                "136/86",
+                "-fp",
+                "-c",
+                "-con"
+                // "-srtm1"
+            ]
         }
     ]
 }

@@ -531,17 +531,24 @@ class OsmMaps:
         for tile in self.o_osm_data.tiles:
             out_file_elevation = os.path.join(
                 USER_OUTPUT_DIR, f'{tile["x"]}', f'{tile["y"]}', 'elevation')
-            # as the elevation file has a suffix, they need to be searched with glob.glob
-            # example elevation filename: elevation_lon14.06_15.47lat35.46_36.60_view1,view3.osm
-            out_file_elevation_existing = glob.glob(os.path.join(
-                USER_OUTPUT_DIR, str(tile["x"]), str(tile["y"]), 'elevation*.osm'))
 
-            # use view1 as default source and srtm1 if wished by the user
+            # 1) as the elevation file has a suffix, they need to be searched with glob.glob
+            # example elevation filename: elevation_lon14.06_15.47lat35.46_36.60_view1,view3.osm
+
+            # 2) use view1 as default source and srtm1 if wished by the user
             # view1 offers better quality in general apart fro some places
             # where srtm1 is the better choice
             if use_srtm1:
+                # 1) search for srtm1 elevation files
+                out_file_elevation_existing = glob.glob(os.path.join(
+                    USER_OUTPUT_DIR, str(tile["x"]), str(tile["y"]), 'elevation*srtm1*.osm'))
+                # 2) set source
                 elevation_source = '--source=srtm1,view1,view3,srtm3'
             else:
+                # 1) search vor view1 elevation files
+                out_file_elevation_existing = glob.glob(os.path.join(
+                    USER_OUTPUT_DIR, str(tile["x"]), str(tile["y"]), 'elevation*view1*.osm'))
+                # 2) set source
                 elevation_source = '--source=view1,view3,srtm3'
 
             # check for already existing elevation .osm file (the ones matched via glob)
