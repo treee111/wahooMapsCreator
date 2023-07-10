@@ -4,7 +4,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-A list of unreleased changes can be found [here](https://github.com/treee111/wahooMapsCreator/compare/v4.0.2...HEAD).
+A list of unreleased changes can be found [here](https://github.com/treee111/wahooMapsCreator/compare/v4.1.0...HEAD).
+
+<a name="4.1.0"></a>
+## [4.1.0] - 2023-07-11
+### Features
+- Include amenity/shelter and tourism/alpine_hut ([#206](https://github.com/treee111/wahooMapsCreator/issues/206)) [`b8f4d16`](https://github.com/treee111/wahooMapsCreator/commit/b8f4d1635175f680aa16044088568ca3efb6aada)
+
+### Bug Fixes
+- Use process.run instead of process.Popen to avoid deadlock ([#208](https://github.com/treee111/wahooMapsCreator/issues/208)) [`5e29dc1`](https://github.com/treee111/wahooMapsCreator/commit/5e29dc1ede9138c7b4976507977b41c5a9a83d89)
+- Search for existing elevation data based on requested type [`b49330a`](https://github.com/treee111/wahooMapsCreator/commit/b49330a78acb80b9d0534a9db2fcdb4ddcfdad21)
+- Log calculation of border countries based on argument [`b6fd62d`](https://github.com/treee111/wahooMapsCreator/commit/b6fd62d5414b154527b14a25796e94d0b9be1de2)
+
 
 <a name="4.0.2"></a>
 ## [4.0.2] - 2023-05-06
@@ -57,12 +68,12 @@ Processing is now only based on Geofabrik .json file which is downloaded both fo
 Input should now be in Geofabrik style. The hardcoded translation to geofabrik countries has been removed.
 The size of generated maps for X/Y coordinates should remain exactly the same as before. The size of generated maps for countries should roughly be the same as before.
 
-You need to create a new Anaconda environment with Python v3.10 for this version. These are the steps: 
+You need to create a new Anaconda environment with Python v3.11 for this versino. These are the steps: 
 1. Remove existing environment:
 `conda env remove -n gdal-user`
 2. Create new environment and install wahoomc:
 ```
-conda create -n gdal-user python=3.10 geojson=2.5 gdal=3.6 requests=2.28 shapely=1.8 bs4=4.11 lxml=4.9 matplotlib=3.4.3 pip --channel conda-forge --override-channels
+conda create -n gdal-user python=3.11 geojson=2.5 gdal=3.6 pip --channel conda-forge --override-channels
 conda activate gdal-user
 pip install wahoomc
 ```
@@ -434,6 +445,7 @@ wahooMapsCreator can now be used much quicker and easier!
     - Windows:    `tooling_windows/Windows-Wahoo-Map-Creator-Osmosis/wahoo-map-creator-osmosis.py`
 
 
+[4.1.0]: https://github.com/treee111/wahooMapsCreator/compare/v4.0.2...v4.1.0
 [4.0.2]: https://github.com/treee111/wahooMapsCreator/compare/v4.0.1...v4.0.2
 [4.0.1]: https://github.com/treee111/wahooMapsCreator/compare/v4.0.0...v4.0.1
 [4.0.0]: https://github.com/treee111/wahooMapsCreator/compare/v3.2.0...v4.0.0
