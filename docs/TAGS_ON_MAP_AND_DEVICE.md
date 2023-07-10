@@ -32,15 +32,15 @@ For a OSM tag in the map to be displayed on your Wahoo device, it needs to be re
 # Zoom levels and scale
 | Zoom level | Scale |
 | ---------- | :---: |
-| 9          | 10km  |
-| 10         |  5km  |
-| 11         |  2km  |
-| 12         |  1km  |
-| 13         | 500m  |
-| 14         | 200m  |
-| 15         | 100m  |
+| 10         | 10km  |
+| 11         |  5km  |
+| 12         |  2km  |
+| 13         |  1km  |
+| 14         | 500m  |
+| 15         | 200m  |
+| 16         | 100m  |
 
-That information were derived from cruiser on macOS. It needs to be checked if the zoom level and scale on cruiser and Wahoo device is exactly the same or if there is a difference.
+That information was derived from Wahoo BOLTv1. It might be different on different Wahoo devices.
 
 # Files used in map processing
 ## File tags-to-keep.json
