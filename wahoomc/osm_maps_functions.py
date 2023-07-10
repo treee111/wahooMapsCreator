@@ -133,9 +133,8 @@ class InformalOsmDataInterface:
         for country in self.border_countries:
             log.info('+ Involved country: %s', country)
 
-        # input can be only one country, if there are more than one,
-        # border countries must be selected
-        if len(self.border_countries) > 1:
+        # border countries should be processed. Log it.
+        if self.process_border_countries:
             log.info('+ Border countries will be processed')
 
     def get_downloader(self):
