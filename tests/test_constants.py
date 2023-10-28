@@ -84,12 +84,12 @@ class TestTranslateTags(unittest.TestCase):
         Test translating tags to keep from universal format to macOS // all "tags to keep"
         """
         tags = ['access', 'area=yes', 'bicycle', 'bridge', 'foot=ft_yes, foot_designated',
-                'amenity=fuel, cafe, drinking_water', 'shop=bakery, bicycle',
+                'amenity=fuel, cafe, drinking_water, shelter', 'shop=bakery, bicycle',
                 'highway=abandoned, bus_guideway, disused, bridleway, byway, construction, cycleway, footway, living_street, motorway, motorway_link, path, pedestrian, primary, primary_link, residential, road, secondary, secondary_link, service, steps, tertiary, tertiary_link, track, trunk, trunk_link, unclassified',
                 'natural=coastline, nosea, sea, beach, land, scrub, water, wetland, wood',
                 'landuse=forest, commercial, industrial, residential, retail',
                 'leisure=park, nature_reserve', 'railway=rail, tram, station, stop',
-                'surface', 'tracktype', 'tunnel', 'waterway=canal, drain, river, riverbank', 'wood=deciduous']
+                'surface', 'tracktype', 'tunnel', 'waterway=canal, drain, river, riverbank, stream', 'wood=deciduous', 'tourism=alpine_hut']
 
         transl_tags = translate_tags_to_keep(use_repo=True)
         self.assertEqual(tags, transl_tags)
@@ -98,7 +98,7 @@ class TestTranslateTags(unittest.TestCase):
         """
         Test translating tags to keep from universal format to Windows // all "tags to keep"
         """
-        tags_win = 'access= area=yes bicycle= bridge= foot=ft_yes =foot_designated amenity=fuel =cafe =drinking_water shop=bakery =bicycle highway=abandoned =bus_guideway =disused =bridleway =byway =construction =cycleway =footway =living_street =motorway =motorway_link =path =pedestrian =primary =primary_link =residential =road =secondary =secondary_link =service =steps =tertiary =tertiary_link =track =trunk =trunk_link =unclassified natural=coastline =nosea =sea =beach =land =scrub =water =wetland =wood landuse=forest =commercial =industrial =residential =retail leisure=park =nature_reserve railway=rail =tram =station =stop surface= tracktype= tunnel= waterway=canal =drain =river =riverbank wood=deciduous'
+        tags_win = 'access= area=yes bicycle= bridge= foot=ft_yes =foot_designated amenity=fuel =cafe =drinking_water =shelter shop=bakery =bicycle highway=abandoned =bus_guideway =disused =bridleway =byway =construction =cycleway =footway =living_street =motorway =motorway_link =path =pedestrian =primary =primary_link =residential =road =secondary =secondary_link =service =steps =tertiary =tertiary_link =track =trunk =trunk_link =unclassified natural=coastline =nosea =sea =beach =land =scrub =water =wetland =wood landuse=forest =commercial =industrial =residential =retail leisure=park =nature_reserve railway=rail =tram =station =stop surface= tracktype= tunnel= waterway=canal =drain =river =riverbank =stream wood=deciduous tourism=alpine_hut'
 
         transl_tags = translate_tags_to_keep(
             sys_platform='Windows', use_repo=True)
