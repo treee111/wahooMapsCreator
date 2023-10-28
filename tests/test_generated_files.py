@@ -46,7 +46,7 @@ def copy_static_land_polygon_input_folder(mode):
     - mode 2: restore
     """
     static_file_path = os.path.join(
-        unittest_files_root, 'land-polygons-split-4326_2021-10-31')
+        dirname_of_file, 'resources', 'land-polygons-split-4326_2021-10-31')
     prod_path = os.path.dirname(constants.LAND_POLYGONS_PATH)
     parking_path = os.path.join(
         unittest_files_parking, 'land-polygons-split-4326')
