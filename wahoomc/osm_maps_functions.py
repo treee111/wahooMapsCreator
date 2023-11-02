@@ -647,9 +647,10 @@ class OsmMaps:
 
         log.info('+ Split filtered country files to tiles: OK')
 
-    def merge_splitted_tiles_with_land_and_sea(self, process_border_countries):
+    def merge_splitted_tiles_with_land_and_sea(self, process_border_countries, contour):
         """
         Merge splitted tiles with land elevation and sea
+        - elevation data only if requested
         """
 
         log.info('-' * 80)
@@ -702,9 +703,10 @@ class OsmMaps:
                 cmd.extend(
                     ['--rx', 'file='+land, '--s', '--m'])
 
-            for elevation in elevation_files:
-                cmd.extend(
-                    ['--rx', 'file='+elevation, '--s', '--m'])
+            if contour:
+                for elevation in elevation_files:
+                    cmd.extend(
+                        ['--rx', 'file='+elevation, '--s', '--m'])
 
             cmd.extend(
                 ['--rx', 'file='+os.path.join(out_tile_dir, 'sea.osm'), '--s', '--m'])

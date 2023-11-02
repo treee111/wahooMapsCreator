@@ -90,7 +90,7 @@ def run(run_level):
 
         # Merge splitted tiles with land an sea
         o_osm_maps.merge_splitted_tiles_with_land_and_sea(
-            o_input_data.process_border_countries)
+            o_input_data.process_border_countries, o_input_data.contour)
 
         # Creating .map files
         o_osm_maps.create_map_files(o_input_data.save_cruiser,
