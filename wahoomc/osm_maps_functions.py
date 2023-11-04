@@ -13,6 +13,7 @@ import sys
 import platform
 import shutil
 import logging
+import time
 
 # import custom python packages
 from wahoomc.file_directory_functions import read_json_file_country_config, create_empty_directories, write_json_file_generic
@@ -309,6 +310,8 @@ class OsmMaps:
         log.info('-' * 80)
         log.info('# Filter tags from country osm.pbf files')
 
+        process_time = time.process_time()
+        wall_clock = time.perf_counter()
         for key, val in self.o_osm_data.border_countries.items():
             # evaluate contry directory, create if not exists
             country_dir = os.path.join(USER_OUTPUT_DIR, key)
@@ -417,7 +420,7 @@ class OsmMaps:
             # write config file for country
             self.write_country_config_file(key)
 
-        log.info('+ Filter tags from country osm.pbf files: OK')
+        log.info('+ Filter tags from country osm.pbf files: OK, took %.5f, %.5f', time.process_time()-process_time, time.perf_counter()-wall_clock)
 
     def generate_land(self):
         """
@@ -426,6 +429,8 @@ class OsmMaps:
 
         log.info('-' * 80)
         log.info('# Generate land for each coordinate')
+        process_time = time.process_time()
+        wall_clock = time.perf_counter()
 
         tile_count = 1
         for tile in self.o_osm_data.tiles:
@@ -471,7 +476,7 @@ class OsmMaps:
                     cmd, f'! Error creating land.osm for tile: {tile["x"]},{tile["y"]}')
             tile_count += 1
 
-        log.info('+ Generate land for each coordinate: OK')
+        log.info('+ Generate land for each coordinate: OK, took %.5f, %.5f', time.process_time()-process_time, time.perf_counter()-wall_clock)
 
     def generate_sea(self):
         """
@@ -480,6 +485,8 @@ class OsmMaps:
 
         log.info('-' * 80)
         log.info('# Generate sea for each coordinate')
+        process_time = time.process_time()
+        wall_clock = time.perf_counter()
 
         tile_count = 1
         for tile in self.o_osm_data.tiles:
@@ -514,7 +521,7 @@ class OsmMaps:
                         output_file.write(sea_data)
             tile_count += 1
 
-        log.info('+ Generate sea for each coordinate: OK')
+        log.info('+ Generate sea for each coordinate: OK, took %.5f, %.5f', time.process_time()-process_time, time.perf_counter()-wall_clock)
 
     def generate_elevation(self, use_srtm1):
         """
@@ -524,9 +531,13 @@ class OsmMaps:
 
         log.info('-' * 80)
         log.info('# Generate contour lines for each coordinate')
+        process_time = time.process_time()
+        wall_clock = time.perf_counter()
 
         hgt_path = os.path.join(USER_DL_DIR, 'hgt')
 
+        process_time = time.process_time()
+        wall_clock = time.perf_counter()
         tile_count = 1
         for tile in self.o_osm_data.tiles:
             out_file_elevation = os.path.join(
@@ -570,7 +581,7 @@ class OsmMaps:
 
             tile_count += 1
 
-        log.info('+ Generate contour lines for each coordinate: OK')
+        log.info('+ Generate contour lines for each coordinate: OK, took %.5f, %.5f', time.process_time()-process_time, time.perf_counter()-wall_clock)
 
     def split_filtered_country_files_to_tiles(self):
         """
@@ -579,6 +590,8 @@ class OsmMaps:
 
         log.info('-' * 80)
         log.info('# Split filtered country files to tiles')
+        process_time = time.process_time()
+        wall_clock = time.perf_counter()
         tile_count = 1
         for tile in self.o_osm_data.tiles:
 
@@ -644,7 +657,7 @@ class OsmMaps:
 
             tile_count += 1
 
-        log.info('+ Split filtered country files to tiles: OK')
+        log.info('+ Split filtered country files to tiles: OK, took %.5f, %.5f', time.process_time()-process_time, time.perf_counter()-wall_clock)
 
     def merge_splitted_tiles_with_land_and_sea(self, process_border_countries):
         """
@@ -653,6 +666,8 @@ class OsmMaps:
 
         log.info('-' * 80)
         log.info('# Merge splitted tiles with land, elevation, and sea')
+        process_time = time.process_time()
+        wall_clock = time.perf_counter()
         tile_count = 1
         for tile in self.o_osm_data.tiles:  # pylint: disable=too-many-nested-blocks
             self.log_tile(tile["x"], tile["y"], tile_count)
@@ -715,7 +730,7 @@ class OsmMaps:
 
             tile_count += 1
 
-        log.info('+ Merge splitted tiles with land, elevation, and sea: OK')
+        log.info('+ Merge splitted tiles with land, elevation, and sea: OK, took %.5f, %.5f', time.process_time()-process_time, time.perf_counter()-wall_clock)
 
     def sort_osm_files(self, tile):
         """
@@ -759,6 +774,8 @@ class OsmMaps:
         if int(threads) < 1:
             threads = 1
 
+        process_time = time.process_time()
+        wall_clock = time.perf_counter()
         tile_count = 1
         for tile in self.o_osm_data.tiles:
             self.log_tile(tile["x"], tile["y"], tile_count)
@@ -817,7 +834,7 @@ class OsmMaps:
 
             tile_count += 1
 
-        log.info('+ Creating .map files for tiles: OK')
+        log.info('+ Creating .map files for tiles: OK, took %.5f, %.5f', time.process_time()-process_time, time.perf_counter()-wall_clock)
 
     def make_and_zip_files(self, extension, zip_folder):
         """
@@ -834,6 +851,8 @@ class OsmMaps:
         log.info('-' * 80)
         log.info('# Create: %s files', extension)
         log.info('+ Country: %s', self.o_osm_data.country_name)
+        process_time = time.process_time()
+        wall_clock = time.perf_counter()
 
         # Check for us/utah etc names
         try:
@@ -884,7 +903,7 @@ class OsmMaps:
 
             log.info('+ Zip %s files: OK', extension)
 
-        log.info('+ Create %s files: OK', extension)
+        log.info('+ Create %s files: OK, took %.5f, %.5f', extension, time.process_time()-process_time, time.perf_counter()-wall_clock)
 
     def copy_to_dst(self, extension, src, dst):
         """
