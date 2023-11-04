@@ -554,8 +554,7 @@ class OsmMaps:
             # check for already existing elevation .osm file (the ones matched via glob)
             if not (len(out_file_elevation_existing) == 1 and os.path.isfile(out_file_elevation_existing[0])) \
                     or self.o_osm_data.force_processing is True:
-                log.info(
-                    '+ Coordinates: %s,%s. (%s of %s)', tile["x"], tile["y"], tile_count, len(self.o_osm_data.tiles))
+                self.log_tile(tile["x"], tile["y"], tile_count)
                 cmd = ['phyghtmap']
                 cmd.append('-a ' + f'{tile["left"]}' + ':' + f'{tile["bottom"]}' +
                            ':' + f'{tile["right"]}' + ':' + f'{tile["top"]}')
