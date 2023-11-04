@@ -436,6 +436,7 @@ class OsmMaps:
                                      f'{tile["x"]}', f'{tile["y"]}', 'land.shp')
             out_file_land1 = os.path.join(USER_OUTPUT_DIR,
                                           f'{tile["x"]}', f'{tile["y"]}', 'land')
+            tile_wall_clock = time.perf_counter()
 
             # create land.dbf, land.prj, land.shp, land.shx
             if not os.path.isfile(land_file) or self.o_osm_data.force_processing is True:
@@ -472,6 +473,7 @@ class OsmMaps:
 
                 run_subprocess_and_log_output(
                     cmd, f'! Error creating land.osm for tile: {tile["x"]},{tile["y"]}')
+            self.log_tile(tile["x"], tile["y"], tile_count, f'took {time.perf_counter()-tile_wall_clock:.2f} s')
             tile_count += 1
 
         log.info('+ Generate land for each coordinate: OK, took %.2f s', time.perf_counter()-wall_clock)
@@ -483,12 +485,13 @@ class OsmMaps:
 
         log.info('-' * 80)
         log.info('# Generate sea for each coordinate')
-        wall_clock = time.perf_counter()
 
+        wall_clock = time.perf_counter()
         tile_count = 1
         for tile in self.o_osm_data.tiles:
             out_file_sea = os.path.join(USER_OUTPUT_DIR,
                                         f'{tile["x"]}', f'{tile["y"]}', 'sea.osm')
+            tile_wall_clock = time.perf_counter()
             if not os.path.isfile(out_file_sea) or self.o_osm_data.force_processing is True:
                 self.log_tile(tile["x"], tile["y"], tile_count)
                 with open(os.path.join(RESOURCES_DIR, 'sea.osm'), encoding="utf-8") as sea_file:
@@ -516,6 +519,7 @@ class OsmMaps:
 
                     with open(out_file_sea, mode='w', encoding="utf-8") as output_file:
                         output_file.write(sea_data)
+            self.log_tile(tile["x"], tile["y"], tile_count, f'took {time.perf_counter()-tile_wall_clock:.2f} s')
             tile_count += 1
 
         log.info('+ Generate sea for each coordinate: OK, took %.2f s', time.perf_counter()-wall_clock)
@@ -560,6 +564,7 @@ class OsmMaps:
             if not (len(out_file_elevation_existing) == 1 and os.path.isfile(out_file_elevation_existing[0])) \
                     or self.o_osm_data.force_processing is True:
                 self.log_tile(tile["x"], tile["y"], tile_count)
+                tile_wall_clock = time.perf_counter()
                 cmd = ['phyghtmap']
                 cmd.append('-a ' + f'{tile["left"]}' + ':' + f'{tile["bottom"]}' +
                            ':' + f'{tile["right"]}' + ':' + f'{tile["top"]}')
@@ -572,6 +577,7 @@ class OsmMaps:
 
                 run_subprocess_and_log_output(
                     cmd, f'! Error in phyghtmap with tile: {tile["x"]},{tile["y"]}. Win_macOS/elevation')
+                self.log_tile(tile["x"], tile["y"], tile_count, f'took {time.perf_counter()-tile_wall_clock:.2f} s')
 
             tile_count += 1
 
@@ -592,6 +598,7 @@ class OsmMaps:
                 if country not in tile['countries']:
                     continue
                 self.log_tile(tile["x"], tile["y"], tile_count, country)
+                tile_wall_clock = time.perf_counter()
                 out_file = os.path.join(USER_OUTPUT_DIR,
                                         f'{tile["x"]}', f'{tile["y"]}', f'split-{country}.osm.pbf')
                 out_file_names = os.path.join(USER_OUTPUT_DIR,
@@ -648,6 +655,8 @@ class OsmMaps:
                     run_subprocess_and_log_output(
                         cmd, '! Error in Osmosis with country: {country}. macOS/out_file_names')
 
+                self.log_tile(tile["x"], tile["y"], tile_count, f'{country} took {time.perf_counter()-tile_wall_clock:.2f} s')
+
             tile_count += 1
 
         log.info('+ Split filtered country files to tiles: OK, took %.2f s', time.perf_counter()-wall_clock)
@@ -664,6 +673,7 @@ class OsmMaps:
         tile_count = 1
         for tile in self.o_osm_data.tiles:  # pylint: disable=too-many-nested-blocks
             self.log_tile(tile["x"], tile["y"], tile_count)
+            tile_wall_clock = time.perf_counter()
 
             out_tile_dir = os.path.join(USER_OUTPUT_DIR,
                                         f'{tile["x"]}', f'{tile["y"]}')
@@ -722,6 +732,7 @@ class OsmMaps:
             run_subprocess_and_log_output(
                 cmd, f'! Error in Osmosis with tile: {tile["x"]},{tile["y"]}')
 
+            self.log_tile(tile["x"], tile["y"], tile_count, f'took {time.perf_counter()-tile_wall_clock:.2f} s')
             tile_count += 1
 
         log.info('+ Merge splitted tiles with land, elevation, and sea: OK, took %.2f s', time.perf_counter()-wall_clock)
@@ -772,6 +783,7 @@ class OsmMaps:
         tile_count = 1
         for tile in self.o_osm_data.tiles:
             self.log_tile(tile["x"], tile["y"], tile_count)
+            tile_wall_clock = time.perf_counter()
 
             out_file_map = os.path.join(USER_OUTPUT_DIR,
                                         f'{tile["x"]}', f'{tile["y"]}.map')
@@ -825,6 +837,7 @@ class OsmMaps:
             with open(out_file_map + '.lzma.17', mode='wb') as tile_present_file:
                 tile_present_file.close()
 
+            self.log_tile(tile["x"], tile["y"], tile_count, f'took {time.perf_counter()-tile_wall_clock:.2f} s')
             tile_count += 1
 
         log.info('+ Creating .map files for tiles: OK, took %.2f s', time.perf_counter()-wall_clock)
