@@ -45,6 +45,7 @@ def download_file(target_filepath, url, target_dir=""):
     logging_filename = target_filepath.split(os.sep)[-1]
     log.info('-' * 80)
     log.info('# Downloading %s file', logging_filename)
+    wall_clock = time.perf_counter()
     if url.split('.')[-1] == 'zip':
         # build target-filepath based on last element of URL
         last_part = url.rsplit('/', 1)[-1]
@@ -70,7 +71,7 @@ def download_file(target_filepath, url, target_dir=""):
         log.error('! failed to find %s', target_filepath)
         sys.exit()
     else:
-        log.info('+ Downloaded: %s', target_filepath)
+        log.info('+ Downloaded: %s, took %.2f s', target_filepath, time.perf_counter()-wall_clock)
 
 
 def build_osm_pbf_filepath(country_translated):
