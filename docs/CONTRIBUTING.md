@@ -2,7 +2,9 @@
 
 #### Table of contents <!-- omit in toc --> 
 - [How to Contribute](#how-to-contribute)
-- [Developer Anaconda environment](#developer-anaconda-environment)
+  - [Developer Anaconda environment](#developer-anaconda-environment)
+  - [Pylint](#pylint)
+  - [Unittests](#unittests)
 - [Structure of the repository](#structure-of-the-repository)
 - [User directory](#user-directory)
 - [Git Guidelines](#git-guidelines)
@@ -15,20 +17,22 @@
 - [Release](#release)
   - [Automatic CHANGELOG creation](#automatic-changelog-creation)
   - [PyPI commands](#pypi-commands)
-- [Other command](#other-command)
 
 ## How to Contribute
 1. Create a Anaconda environment for developers
+    - 👉 [Developer Anaconda environment](#developer-anaconda-environment)
 2. Create a branch by forking the repository and apply your change.
 3. Commit and push your change on that branch.
-4. Create a pull request.
+4. Run Pylint with 10.00/10
+5. Run unittests successfully
+6. Create a pull request.
     - 👉 **Please follow the [Git Guidlines](#Git-Guidelines).**
-5. Wait for our code review and approval, possibly enhancing your change on request.
+7. Wait for our code review and approval, possibly enhancing your change on request.
     - Note that the wahooMapsCreator maintainers have many duties. So, depending on the required effort for reviewing, testing, and clarification, this may take a while.
-6. Once the change has been approved and merged, we will inform you in a comment.
-7. Celebrate! 🎉
+8. Once the change has been approved and merged, we will inform you in a comment.
+9. Celebrate! 🎉
 
-## Developer Anaconda environment 
+### Developer Anaconda environment 
 - /conda_env/gdal-user.yml is for creating Anaconda environment for users
 - /conda_env/gdal-dev.yml is for creating Anaconda environment for developers
 
@@ -49,6 +53,24 @@ The .yml files with only the installed packages were created via
 ```
 conda env export > environment.yml --from-history
 ```
+
+### Pylint
+Run pylint for all relevant directories/files
+```
+pylint -j 0 ./wahoomc ./tests
+```
+
+### Unittests
+Python unittests are defined in the directory `tests`.
+They can be started via "Testing" pane from VSCode or via terminal in the root of the repo with
+```
+python -m unittest
+```
+
+For the `test_generated_files.py` unittests to run successful, static land-poligons-file and static country files are needed to ensure equal results. The country files are included in the repo in `tests/resources`, the land-poligons-file needs to be downloaded from https://1drv.ms/u/s!AnpNcYd7Zz7TnXorg_zZuvsbMGsJ?e=fL6zvM and extracted to `~/wahooMapsCreatorData/_unittest/` like this:
+<img src="./pictures/unittest-land-poligons.png" alt="land-poligons extracted for unittests" width=50%>
+
+More information about Python unittest can be read here: https://docs.python.org/3/library/unittest.html.
 
 ## Structure of the repository
 There is one python coding base for both Windows and for macOS.
@@ -124,10 +146,4 @@ py -m build
 3. Publish these files to PyPI:  
 ```
 twine upload dist\*
-```
-
-## Other command
-Run pylint for all relevant directories/files
-```
-pylint -j 0 ./wahoomc ./tests
 ```
