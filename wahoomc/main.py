@@ -5,6 +5,7 @@ executable file to create up-to-date map-files for the Wahoo ELEMNT and Wahoo EL
 
 # import official python packages
 import logging
+import time
 
 # import custom python packages
 from wahoomc.input import process_call_of_the_tool, cli_init
@@ -63,6 +64,9 @@ def run(run_level):
         elif o_input_data.xy_coordinates:
             o_osm_data = XYOsmData(o_input_data)
 
+        log = logging.getLogger('main-logger')
+        process_time = time.process_time()
+        wall_clock = time.perf_counter()
         # Check for not existing or expired files. Mark for download, if dl is needed
         o_osm_data.process_input_of_the_tool()
         o_downloader = o_osm_data.get_downloader()
@@ -102,6 +106,8 @@ def run(run_level):
         # Make Cruiser map files zip file
         if o_input_data.save_cruiser is True:
             o_osm_maps.make_and_zip_files('.map', o_input_data.zip_folder)
+
+        log.info('Total time %.5f, %.5f', time.process_time()-process_time, time.perf_counter()-wall_clock)
 
     # run was successful --> write config file
     write_config_file()
