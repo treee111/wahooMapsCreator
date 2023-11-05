@@ -661,7 +661,7 @@ class OsmMaps:
 
         log.info('+ Split filtered country files to tiles: OK, took %.2f s', time.perf_counter()-wall_clock)
 
-    def merge_splitted_tiles_with_land_and_sea(self, process_border_countries, contour):
+    def merge_splitted_tiles_with_land_and_sea(self, process_border_countries, contour): # pylint: disable=too-many-locals
         """
         Merge splitted tiles with land elevation and sea
         - elevation data only if requested
