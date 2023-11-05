@@ -105,7 +105,7 @@ def run(run_level):
         if o_input_data.save_cruiser is True:
             o_osm_maps.make_and_zip_files('.map', o_input_data.zip_folder)
 
-        log.info('Total time %.2f s', time.perf_counter()-wall_clock)
+        log.info('# Total time %.2f s', time.perf_counter()-wall_clock)
 
     # run was successful --> write config file
     write_config_file()
