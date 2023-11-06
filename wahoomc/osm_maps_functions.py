@@ -989,10 +989,9 @@ class OsmMaps:
         """
         unified status logging for this class
         """
+        msg = f'+ (tile {tile_count} of {len(self.o_osm_data.tiles)}) Coordinates: {tile_x},{tile_y}'
         if additional_info:
-            msg = f'+ (tile {tile_count} of {len(self.o_osm_data.tiles)}) Coordinates: {tile_x},{tile_y} / {additional_info}'
-        else:
-            msg = f'+ (tile {tile_count} of {len(self.o_osm_data.tiles)}) Coordinates: {tile_x},{tile_y}'
+            msg = f'{msg} / {additional_info}'
         if log_level_debug:
             log.debug(msg)
         else:
