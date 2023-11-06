@@ -438,7 +438,7 @@ class OsmMaps:
 
             # create land.dbf, land.prj, land.shp, land.shx
             if not os.path.isfile(land_file) or self.o_osm_data.force_processing is True:
-                self.log_tile(tile["x"], tile["y"], tile_count)
+                self.log_tile_info(tile["x"], tile["y"], tile_count)
                 cmd = ['ogr2ogr', '-overwrite', '-skipfailures']
                 # Try to prevent getting outside of the +/-180 and +/- 90 degrees borders. Normally the +/- 0.1 are there to prevent white lines at border borders.
                 if tile["x"] == 255 or tile["y"] == 255 or tile["x"] == 0 or tile["y"] == 0:
@@ -471,7 +471,7 @@ class OsmMaps:
 
                 run_subprocess_and_log_output(
                     cmd, f'! Error creating land.osm for tile: {tile["x"]},{tile["y"]}')
-            self.log_tile(tile["x"], tile["y"], tile_count, timings_tile.stop_and_return())
+            self.log_tile_debug(tile["x"], tile["y"], tile_count, timings_tile.stop_and_return())
             tile_count += 1
 
         log.info('+ Generate land for each coordinate: OK, %s', timings.stop_and_return())
@@ -490,7 +490,7 @@ class OsmMaps:
                                         f'{tile["x"]}', f'{tile["y"]}', 'sea.osm')
             timings_tile = Timings()
             if not os.path.isfile(out_file_sea) or self.o_osm_data.force_processing is True:
-                self.log_tile(tile["x"], tile["y"], tile_count)
+                self.log_tile_info(tile["x"], tile["y"], tile_count)
                 with open(os.path.join(RESOURCES_DIR, 'sea.osm'), encoding="utf-8") as sea_file:
                     sea_data = sea_file.read()
 
@@ -516,7 +516,7 @@ class OsmMaps:
 
                     with open(out_file_sea, mode='w', encoding="utf-8") as output_file:
                         output_file.write(sea_data)
-            self.log_tile(tile["x"], tile["y"], tile_count, timings_tile.stop_and_return())
+            self.log_tile_debug(tile["x"], tile["y"], tile_count, timings_tile.stop_and_return())
             tile_count += 1
 
         log.info('+ Generate sea for each coordinate: OK, %s', timings.stop_and_return())
@@ -560,7 +560,7 @@ class OsmMaps:
             # check for already existing elevation .osm file (the ones matched via glob)
             if not (len(out_file_elevation_existing) == 1 and os.path.isfile(out_file_elevation_existing[0])) \
                     or self.o_osm_data.force_processing is True:
-                self.log_tile(tile["x"], tile["y"], tile_count)
+                self.log_tile_info(tile["x"], tile["y"], tile_count)
                 timings_tile = Timings()
                 cmd = ['phyghtmap']
                 cmd.append('-a ' + f'{tile["left"]}' + ':' + f'{tile["bottom"]}' +
@@ -574,7 +574,7 @@ class OsmMaps:
 
                 run_subprocess_and_log_output(
                     cmd, f'! Error in phyghtmap with tile: {tile["x"]},{tile["y"]}. Win_macOS/elevation')
-                self.log_tile(tile["x"], tile["y"], tile_count, timings_tile.stop_and_return())
+                self.log_tile_debug(tile["x"], tile["y"], tile_count, timings_tile.stop_and_return())
 
             tile_count += 1
 
@@ -594,7 +594,7 @@ class OsmMaps:
             for country, val in self.o_osm_data.border_countries.items():
                 if country not in tile['countries']:
                     continue
-                self.log_tile(tile["x"], tile["y"], tile_count, country)
+                self.log_tile_info(tile["x"], tile["y"], tile_count, country)
                 timings_tile = Timings()
                 out_file = os.path.join(USER_OUTPUT_DIR,
                                         f'{tile["x"]}', f'{tile["y"]}', f'split-{country}.osm.pbf')
@@ -652,7 +652,7 @@ class OsmMaps:
                     run_subprocess_and_log_output(
                         cmd, '! Error in Osmosis with country: {country}. macOS/out_file_names')
 
-                self.log_tile(tile["x"], tile["y"], tile_count, f'{country} {timings_tile.stop_and_return()}')
+                self.log_tile_debug(tile["x"], tile["y"], tile_count, f'{country} {timings_tile.stop_and_return()}')
 
             tile_count += 1
 
@@ -669,7 +669,7 @@ class OsmMaps:
         timings = Timings()
         tile_count = 1
         for tile in self.o_osm_data.tiles:  # pylint: disable=too-many-nested-blocks
-            self.log_tile(tile["x"], tile["y"], tile_count)
+            self.log_tile_info(tile["x"], tile["y"], tile_count)
             timings_tile = Timings()
 
             out_tile_dir = os.path.join(USER_OUTPUT_DIR,
@@ -729,7 +729,7 @@ class OsmMaps:
             run_subprocess_and_log_output(
                 cmd, f'! Error in Osmosis with tile: {tile["x"]},{tile["y"]}')
 
-            self.log_tile(tile["x"], tile["y"], tile_count, timings_tile.stop_and_return())
+            self.log_tile_debug(tile["x"], tile["y"], tile_count, timings_tile.stop_and_return())
             tile_count += 1
 
         log.info('+ Merge splitted tiles with land, elevation, and sea: OK, %s', timings.stop_and_return())
@@ -779,7 +779,7 @@ class OsmMaps:
         timings = Timings()
         tile_count = 1
         for tile in self.o_osm_data.tiles:
-            self.log_tile(tile["x"], tile["y"], tile_count)
+            self.log_tile_info(tile["x"], tile["y"], tile_count)
             timings_tile = Timings()
 
             out_file_map = os.path.join(USER_OUTPUT_DIR,
@@ -834,7 +834,7 @@ class OsmMaps:
             with open(out_file_map + '.lzma.17', mode='wb') as tile_present_file:
                 tile_present_file.close()
 
-            self.log_tile(tile["x"], tile["y"], tile_count, timings_tile.stop_and_return())
+            self.log_tile_debug(tile["x"], tile["y"], tile_count, timings_tile.stop_and_return())
             tile_count += 1
 
         log.info('+ Creating .map files for tiles: OK, %s', timings.stop_and_return())
@@ -973,13 +973,27 @@ class OsmMaps:
 
         return last_changed_is_identical
 
-    def log_tile(self, tile_x, tile_y, tile_count, additional_info=''):
+    def log_tile_info(self, tile_x, tile_y, tile_count, additional_info=''):
+        """
+        log tile information at info log level
+        """
+        self.log_tile(tile_x, tile_y, tile_count, False, additional_info)
+
+    def log_tile_debug(self, tile_x, tile_y, tile_count, additional_info=''):
+        """
+        log tile information at debug log level
+        """
+        self.log_tile(tile_x, tile_y, tile_count, True, additional_info)
+
+    def log_tile(self, tile_x, tile_y, tile_count, log_level_debug, additional_info=''):  # pylint: disable=too-many-arguments
         """
         unified status logging for this class
         """
         if additional_info:
-            log.info('+ (tile %s of %s) Coordinates: %s,%s / %s', tile_count, len(self.o_osm_data.tiles), tile_x,
-                     tile_y, additional_info)
+            msg = f'+ (tile {tile_count} of {len(self.o_osm_data.tiles)}) Coordinates: {tile_x},{tile_y} / {additional_info}'
         else:
-            log.info('+ (tile %s of %s) Coordinates: %s,%s',
-                     tile_count, len(self.o_osm_data.tiles), tile_x, tile_y)
+            msg = f'+ (tile {tile_count} of {len(self.o_osm_data.tiles)}) Coordinates: {tile_x},{tile_y}'
+        if log_level_debug:
+            log.debug(msg)
+        else:
+            log.info(msg)
