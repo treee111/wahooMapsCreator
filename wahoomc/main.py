@@ -13,6 +13,7 @@ from wahoomc.setup_functions import initialize_work_directories, \
     adjustments_due_to_breaking_changes, copy_jsons_from_repo_to_user, \
     check_installed_version_against_latest_pypi, check_installation_of_programs_credentials_for_contour_lines
 from wahoomc.downloader import download_tooling
+from wahoomc.timings import Timings
 
 from wahoomc.osm_maps_functions import OsmMaps
 from wahoomc.osm_maps_functions import CountryOsmData, XYOsmData
@@ -63,8 +64,7 @@ def run(run_level):
         elif o_input_data.xy_coordinates:
             o_osm_data = XYOsmData(o_input_data)
 
-        log = logging.getLogger('main-logger')
-        wall_clock = time.perf_counter()
+        timings = Timings()
         # Check for not existing or expired files. Mark for download, if dl is needed
         o_osm_data.process_input_of_the_tool()
         o_downloader = o_osm_data.get_downloader()
@@ -105,7 +105,7 @@ def run(run_level):
         if o_input_data.save_cruiser is True:
             o_osm_maps.make_and_zip_files('.map', o_input_data.zip_folder)
 
-        log.info('# Total time %.2f s', time.perf_counter()-wall_clock)
+        timings.stop_and_log('# Total time')
 
     # run was successful --> write config file
     write_config_file()
