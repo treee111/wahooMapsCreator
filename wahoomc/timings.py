@@ -15,7 +15,7 @@ class Timings:
     wall_time_start = None
     wall_time_end = None
 
-    def start_wall_time(self):
+    def __init__(self):
         """Start the wall time"""
         self.wall_time_start = time.perf_counter()
 
@@ -31,10 +31,7 @@ class Timings:
     def stop_and_log(self, additional_info=''):
         """Log the time taken"""
         self.stop_wall_time()
-        self.log_duration(additional_info)
-
-    def log_duration(self,additional_info=''):
-        """Log the time taken"""
+        log.info('-' * 80)
         log.info(self.get_text_summary(additional_info))
 
     def get_text_summary(self, additional_info='') -> str:
