@@ -36,6 +36,7 @@ class Timings:
 
     def get_text_summary(self, additional_info='') -> str:
         """Get text summarizing the timings"""
+        time_taken_msg = f'{self.wall_time_end - self.wall_time_start:.3f} s'
         if additional_info:
-            return f'{additional_info} {self.wall_time_end - self.wall_time_start:.3f} s'
-        return f'took {self.wall_time_end - self.wall_time_start:.3f} s'
+            return f'{additional_info} {time_taken_msg}'
+        return f'took {time_taken_msg}'
