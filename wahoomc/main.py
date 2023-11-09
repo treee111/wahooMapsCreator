@@ -13,6 +13,7 @@ from wahoomc.setup_functions import initialize_work_directories, \
     adjustments_due_to_breaking_changes, copy_jsons_from_repo_to_user, \
     check_installed_version_against_latest_pypi, check_installation_of_programs_credentials_for_contour_lines
 from wahoomc.downloader import download_tooling
+from wahoomc.timings import Timings
 
 from wahoomc.osm_maps_functions import OsmMaps
 from wahoomc.osm_maps_functions import CountryOsmData, XYOsmData
@@ -63,6 +64,7 @@ def run(run_level):
         elif o_input_data.xy_coordinates:
             o_osm_data = XYOsmData(o_input_data)
 
+        timings = Timings()
         # Check for not existing or expired files. Mark for download, if dl is needed
         o_osm_data.process_input_of_the_tool()
         o_downloader = o_osm_data.get_downloader()
@@ -88,7 +90,7 @@ def run(run_level):
         # Split filtered country files to tiles
         o_osm_maps.split_filtered_country_files_to_tiles()
 
-        # Merge splitted tiles with land an sea
+        # Merge splitted tiles with land and sea
         o_osm_maps.merge_splitted_tiles_with_land_and_sea(
             o_input_data.process_border_countries, o_input_data.contour)
 
@@ -102,6 +104,8 @@ def run(run_level):
         # Make Cruiser map files zip file
         if o_input_data.save_cruiser is True:
             o_osm_maps.make_and_zip_files('.map', o_input_data.zip_folder)
+
+        timings.stop_and_log('# Total time')
 
     # run was successful --> write config file
     write_config_file()

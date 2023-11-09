@@ -17,6 +17,7 @@ import requests
 # import custom python packages
 from wahoomc.constants_functions import get_tooling_win_path
 from wahoomc.geofabrik_json import GeofabrikJson
+from wahoomc.timings import Timings
 
 from wahoomc.constants import USER_DL_DIR
 from wahoomc.constants import USER_MAPS_DIR
@@ -45,6 +46,7 @@ def download_file(target_filepath, url, target_dir=""):
     logging_filename = target_filepath.split(os.sep)[-1]
     log.info('-' * 80)
     log.info('# Downloading %s file', logging_filename)
+    timings = Timings()
     if url.split('.')[-1] == 'zip':
         # build target-filepath based on last element of URL
         last_part = url.rsplit('/', 1)[-1]
@@ -70,7 +72,7 @@ def download_file(target_filepath, url, target_dir=""):
         log.error('! failed to find %s', target_filepath)
         sys.exit()
     else:
-        log.info('+ Downloaded: %s', target_filepath)
+        log.info('+ Downloaded: %s, %s', target_filepath, timings.stop_and_return())
 
 
 def build_osm_pbf_filepath(country_translated):
