@@ -165,8 +165,8 @@ class TestOSMMapsInput(unittest.TestCase):
         folder_name = o_osm_maps.calculate_folder_name('.map.lzma')
         folder_name_maps = o_osm_maps.calculate_folder_name('.map')
 
-        self.assertEqual(folder_name, 'albania_alps_andorra_austria_azores_belarus_belgiu')
-        self.assertEqual(folder_name_maps, 'albania_alps_andorra_austria_azores_belarus_belgiu-maps')
+        self.assertEqual(folder_name, 'albania_alps_andorra_austria_azores_belar_and_more')
+        self.assertEqual(folder_name_maps, 'albania_alps_andorra_austria_azores_belar_and_more-maps')
 
     def test_encoding_open_sea_osm(self):
         """

@@ -891,7 +891,10 @@ class OsmMaps:
         that preserves crashing later on when creating the output folder
         """
         # cut down to 100 (relevant if country_name is longer than 100 characters)
-        country_name_50_chars = self.o_osm_data.country_name[:50]
+        if len(self.o_osm_data.country_name) > 50:
+            country_name_50_chars = self.o_osm_data.country_name[:41] + '_and_more'
+        else:
+            country_name_50_chars = self.o_osm_data.country_name
 
         if extension == '.map.lzma':
             folder_name = country_name_50_chars
