@@ -29,6 +29,12 @@ def copy_static_maps_input_file(mode, country, given_osm_pbf=''):
     """
     static_file_path = os.path.join(
         dirname_of_file, 'resources', given_osm_pbf)
+
+    # if the static maps file does not exist in the repo - copy from _unittest/maps
+    if not os.path.isfile(static_file_path):
+        static_file_path = os.path.join(
+            unittest_files_root, 'maps', given_osm_pbf)
+
     prod_path = os.path.join(
         constants.USER_MAPS_DIR, country + '-latest.osm.pbf')
     parking_path = os.path.join(
@@ -169,6 +175,8 @@ class TestGeneratedFiles(unittest.TestCase):
             mode=0, country='malta', given_osm_pbf='malta-latest_2021-10-31.osm.pbf')
         copy_static_maps_input_file(
             mode=0, country='liechtenstein', given_osm_pbf='liechtenstein-latest_2021-10-31.osm.pbf')
+        copy_static_maps_input_file(
+            mode=0, country='denmark', given_osm_pbf='denmark-latest_2023-06-12.osm.pbf')
 
     def tearDown(self):
         # copy files from parking lot back as productive
@@ -176,6 +184,7 @@ class TestGeneratedFiles(unittest.TestCase):
         copy_static_geofabrik_file(mode=2)
         copy_static_maps_input_file(mode=2, country='malta')
         copy_static_maps_input_file(mode=2, country='liechtenstein')
+        copy_static_maps_input_file(mode=2, country='denmark')
 
     def test_calc_output_malta_and_compare(self):
         """
