@@ -23,6 +23,9 @@ unittest_files_parking = os.path.join(unittest_files_root, 'parking_lot')
 def copy_static_maps_input_file(mode, country, given_osm_pbf=''):
     """
     copy given file to download-directory
+    - mode 0: parking
+    - mode 1: normal
+    - mode 2: restore
     """
     static_file_path = os.path.join(
         dirname_of_file, 'resources', given_osm_pbf)
@@ -74,6 +77,9 @@ def move_file_dir(mode, static_file_path, prod_path, parking_path):
     """
     this function does the real file movements
     doing mode 0 and 1 in a while loop. Makes mostly sense together
+    - mode 0: parking
+    - mode 1: normal
+    - mode 2: restore
     """
     while True:
         copy_from_path, copy_to_path = eval_from_to_paths(
@@ -100,6 +106,17 @@ def move_file_dir(mode, static_file_path, prod_path, parking_path):
                 pass
         except FileNotFoundError:
             pass
+
+        # when restoring, delete source files/dirs. That are the parked one's
+        if mode == 2:
+            # delete file or dir
+            if os.path.isfile(copy_from_path):
+                os.remove(copy_from_path)
+            elif os.path.isdir(copy_from_path):
+                # delete directory if exists. copytree fails if dir exists already
+                shutil.rmtree(copy_from_path)
+            else:  # not existing
+                pass
 
         # either go another round or go out
         if mode in (1, 2):
