@@ -10,4 +10,4 @@ dependencies:
   - matplotlib=3.4.3
   - pip
   - pip:
-      - wahoomc==4.1.0
+      - wahoomc==4.1.1a1

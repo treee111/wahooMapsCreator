@@ -845,11 +845,9 @@ class OsmMaps:
         extension: '.map.lzma' for Wahoo tiles
         extension: '.map' for Cruiser map files
         """
-
-        if extension == '.map.lzma':
-            folder_name = self.o_osm_data.country_name
-        else:
-            folder_name = self.o_osm_data.country_name + '-maps'
+        # if country_name is longer than 50 characters, cut down to 50 for the folder name
+        # that preserves crashing later on when creating the output folder
+        folder_name = self.calculate_folder_name(extension)
 
         log.info('-' * 80)
         log.info('# Create: %s files', extension)
@@ -906,6 +904,24 @@ class OsmMaps:
             log.info('+ Zip %s files: OK', extension)
 
         log.info('+ Create %s files: OK, %s', extension, timings.stop_and_return())
+
+    def calculate_folder_name(self, extension):
+        """
+        if country_name is longer than 50 characters, cut down to 50 for the folder name
+        that preserves crashing later on when creating the output folder
+        """
+        # cut down to 100 (relevant if country_name is longer than 100 characters)
+        if len(self.o_osm_data.country_name) > 50:
+            country_name_50_chars = self.o_osm_data.country_name[:41] + '_and_more'
+        else:
+            country_name_50_chars = self.o_osm_data.country_name
+
+        if extension == '.map.lzma':
+            folder_name = country_name_50_chars
+        else:
+            folder_name = country_name_50_chars + '-maps'
+
+        return folder_name
 
     def copy_to_dst(self, extension, src, dst):
         """
