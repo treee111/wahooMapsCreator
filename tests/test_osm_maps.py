@@ -150,15 +150,23 @@ class TestOSMMapsInput(unittest.TestCase):
         Test "malta" as input to the wahooMapsCreator
         check, if the given input-parameter is saved to the OsmMaps instance
         """
+        o_osm_data = self.get_osm_data_instance('malta')
 
-        o_input_data = InputData()
-        o_input_data.country = 'malta'
+        self.assertEqual(o_osm_data.country_name, 'malta')
 
-        o_osm_data = CountryOsmData(o_input_data)
-        o_osm_data.process_input_of_the_tool()
+    def test_folder_name_many_countries(self):
+        """
+        Test a very long list of countries as input to the wahooMapsCreator
+        check, if the list of countries is cutted down to 100 chars and that is saved to the OsmMaps instance
+        """
+        o_osm_data = self.get_osm_data_instance('albania,alps,andorra,austria,azores,belarus,belgium,bosnia-herzegovina,britain-and-ireland,bulgaria,croatia,cyprus,czech-republic,dach,denmark,estonia,faroe-islands,finland,france,georgia,germany,great-britain,greece,guernsey-jersey,hungary,iceland,ireland-and-northern-ireland,isle-of-man,italy,kosovo,latvia,liechtenstein,lithuania,luxembourg,macedonia,malta,moldova,monaco,montenegro,netherlands,norway,poland,portugal,romania,serbia,slovakia,slovenia,spain,sweden,switzerland,turkey,ukraine')
 
-        result = o_osm_data.country_name
-        self.assertEqual(result, 'malta')
+        o_osm_maps = OsmMaps(o_osm_data)
+        folder_name = o_osm_maps.calculate_folder_name('.map.lzma')
+        folder_name_maps = o_osm_maps.calculate_folder_name('.map')
+
+        self.assertEqual(folder_name, 'albania_alps_andorra_austria_azores_belar_and_more')
+        self.assertEqual(folder_name_maps, 'albania_alps_andorra_austria_azores_belar_and_more-maps')
 
     def test_encoding_open_sea_osm(self):
         """
@@ -172,6 +180,17 @@ class TestOSMMapsInput(unittest.TestCase):
 
         self.assertEqual(sea_data_no_encoding, sea_data_utf8)
 
+    def get_osm_data_instance(self, country_input):
+        """
+        takes given input creates OsmData instance
+        """
+        o_input_data = InputData()
+        o_input_data.country = country_input
+
+        o_osm_data = CountryOsmData(o_input_data)
+        o_osm_data.process_input_of_the_tool()
+
+        return o_osm_data
 
 class TestConfigFile(unittest.TestCase):
     """
