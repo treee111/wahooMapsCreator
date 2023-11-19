@@ -16,7 +16,7 @@ from wahoomc.downloader import download_tooling
 from wahoomc.timings import Timings
 
 from wahoomc.osm_maps_functions import OsmMaps
-from wahoomc.osm_maps_functions import CountryOsmData, XYOsmData
+from wahoomc.osm_data import CountryOsmData, XYOsmData
 
 # logging used in the terminal output:
 # # means top-level command
