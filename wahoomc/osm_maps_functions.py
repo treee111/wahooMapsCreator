@@ -614,7 +614,7 @@ class OsmMaps:
                     cmd.append('-o='+out_file)
 
                     run_subprocess_and_log_output(
-                        cmd, f'! Error in Osmosis with country: {country}. Win/out_file')
+                        cmd, f'! Error in osmconvert with country: {country}. Win/out_file')
 
                     cmd = [self.osmconvert_path,
                            '-v', '--hash-memory=2500']
@@ -626,7 +626,7 @@ class OsmMaps:
                     cmd.append('-o='+out_file_names)
 
                     run_subprocess_and_log_output(
-                        cmd, '! Error in Osmosis with country: {country}. Win/out_file_names')
+                        cmd, '! Error in osmconvert with country: {country}. Win/out_file_names')
 
                 # Non-Windows
                 else:
@@ -639,7 +639,7 @@ class OsmMaps:
                     cmd.extend(['--overwrite'])
 
                     run_subprocess_and_log_output(
-                        cmd, '! Error in Osmosis with country: {country}. macOS/out_file')
+                        cmd, '! Error in Osmium with country: {country}. macOS/out_file')
 
                     cmd = ['osmium', 'extract']
                     cmd.extend(
@@ -650,7 +650,7 @@ class OsmMaps:
                     cmd.extend(['--overwrite'])
 
                     run_subprocess_and_log_output(
-                        cmd, '! Error in Osmosis with country: {country}. macOS/out_file_names')
+                        cmd, '! Error in Osmium with country: {country}. macOS/out_file_names')
 
                 self.log_tile_debug(tile["x"], tile["y"], tile_count, f'{country} {timings_tile.stop_and_return()}')
 
