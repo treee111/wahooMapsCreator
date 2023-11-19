@@ -6,7 +6,7 @@ import os
 import unittest
 
 # import custom python packages
-from wahoomc.osm_maps_functions import CountryOsmData, XYOsmData
+from wahoomc.osm_data import CountryOsmData, XYOsmData
 from wahoomc.osm_maps_functions import OsmMaps
 # from wahoomc.osm_maps_functions import TileNotFoundError
 from wahoomc.input import InputData
