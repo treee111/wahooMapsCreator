@@ -5,6 +5,7 @@ functions and object for managing OSM maps
 
 # import official python packages
 from datetime import datetime
+import asyncio
 import glob
 import multiprocessing
 import os
@@ -59,6 +60,40 @@ def run_subprocess_and_log_output(cmd, error_message, cwd=""):
         log.debug('subprocess debug output:')
         log.debug(process.stdout)
 
+async def run_async_subprocess_and_log_output(cmd, args, error_message, cwd=""):
+    """
+    run given cmd-subprocess and issue error message if wished
+    """
+    process = await asyncio.create_subprocess_exec(
+#        create_subprocess_shell,
+        cmd,
+        *args,
+        stdout=asyncio.subprocess.PIPE,
+        stderr=asyncio.subprocess.PIPE)
+
+    stdout, stderr = await process.communicate()
+
+#    if not cwd:
+#        process = subprocess.run(
+#            cmd, capture_output=True, text=True, encoding="utf-8", check=False)
+#
+#    else:
+#        process = subprocess.run(  # pylint: disable=consider-using-with
+#            cmd, capture_output=True, cwd=cwd, text=True, encoding="utf-8", check=False)
+
+
+    if error_message and process.returncode != 0:  # 0 means success
+        log.error('subprocess error output:')
+        if process.stderr:
+            log.error(process.stderr)
+
+        log.error(error_message)
+        sys.exit()
+
+    elif process.stdout:
+        log.debug('subprocess debug output:')
+        log.debug(process.stdout)
+
 
 def get_timestamp_last_changed(file_path):
     """
@@ -84,7 +119,7 @@ class OsmMaps:
         create_empty_directories(
             USER_OUTPUT_DIR, self.o_osm_data.tiles, self.o_osm_data.border_countries)
 
-    def filter_tags_from_country_osm_pbf_files(self):  # pylint: disable=too-many-statements
+    async def filter_tags_from_country_osm_pbf_files(self):  # pylint: disable=too-many-statements
         """
         Filter tags from country osm.pbf files
         """
@@ -174,11 +209,14 @@ class OsmMaps:
                         '+ Filtering unwanted map objects out of map of %s', key)
                         
                     tags_to_keep = translate_tags_to_keep(sys_platform=platform.system())
-                    self.invoke_filter_tags_osmium_linux(key, val['map_file'], tags_to_keep, out_file_pbf_filtered_mac)
+                    tags_to_keep_names = translate_tags_to_keep(name_tags=True, sys_platform=platform.system())
 
-                    tags_to_keep = translate_tags_to_keep(name_tags=True, sys_platform=platform.system())
-                    self.invoke_filter_tags_osmium_linux(key, val['map_file'], tags_to_keep, out_file_pbf_filtered_names_mac)
+                    log.debug('start run filtered')
+                    task1 = asyncio.create_task(self.invoke_filter_tags_osmium_linux(key, val['map_file'], tags_to_keep, out_file_pbf_filtered_mac))
 
+                    log.debug('start run filtered names')
+                    task2 = asyncio.create_task(self.invoke_filter_tags_osmium_linux(key, val['map_file'], tags_to_keep_names, out_file_pbf_filtered_names_mac))
+                    await asyncio.gather(task1, task2)
 
                 val['filtered_file'] = out_file_pbf_filtered_mac
                 val['filtered_file_names'] = out_file_pbf_filtered_names_mac
@@ -188,15 +226,16 @@ class OsmMaps:
 
         log.info('+ Filter tags from country osm.pbf files: OK, %s', timings.stop_and_return())
 
-    def invoke_filter_tags_osmium_linux(self, country, map_file, tags_to_keep, out_filename):
+    async def invoke_filter_tags_osmium_linux(self, country, map_file, tags_to_keep, out_filename):
         # https://docs.osmcode.org/osmium/latest/osmium-tags-filter.html
-        cmd = ['osmium', 'tags-filter', '--remove-tags']
-        cmd.append(map_file)
-        cmd.extend(tags_to_keep)
-        cmd.extend(['-o', out_filename])
-        cmd.append('--overwrite')
+        cmd = 'osmium'
+        args = ['tags-filter', '--remove-tags']
+        args.append(map_file)
+        args.extend(tags_to_keep)
+        args.extend(['-o', out_filename])
+        args.append('--overwrite')
 
-        run_subprocess_and_log_output(cmd, f'! Error in Osmium with country: {country}')
+        await run_async_subprocess_and_log_output(cmd, args, f'! Error in Osmium with country: {country}')
 
     def generate_land(self):
         """
