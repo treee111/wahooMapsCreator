@@ -4,6 +4,7 @@ executable file to create up-to-date map-files for the Wahoo ELEMNT and Wahoo EL
 #!/usr/bin/python
 
 # import official python packages
+import asyncio
 import logging
 
 # import custom python packages
@@ -75,7 +76,7 @@ def run(run_level):
         o_osm_maps = OsmMaps(o_osm_data)
 
         # Filter tags from country osm.pbf files'
-        o_osm_maps.filter_tags_from_country_osm_pbf_files()
+        asyncio.run(o_osm_maps.filter_tags_from_country_osm_pbf_files())
 
         # Generate land
         o_osm_maps.generate_land()
