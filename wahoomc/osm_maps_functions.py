@@ -172,27 +172,13 @@ class OsmMaps:
                         or self.last_changed_is_identical_to_last_run(key) is False:
                     log.info(
                         '+ Filtering unwanted map objects out of map of %s', key)
+                        
+                    tags_to_keep = translate_tags_to_keep(sys_platform=platform.system())
+                    self.invoke_filter_tags_osmium_linux(key, val['map_file'], tags_to_keep, out_file_pbf_filtered_mac)
 
-                    # https://docs.osmcode.org/osmium/latest/osmium-tags-filter.html
-                    cmd = ['osmium', 'tags-filter', '--remove-tags']
-                    cmd.append(val['map_file'])
-                    cmd.extend(translate_tags_to_keep(
-                        sys_platform=platform.system()))
-                    cmd.extend(['-o', out_file_pbf_filtered_mac])
-                    cmd.append('--overwrite')
+                    tags_to_keep = translate_tags_to_keep(name_tags=True, sys_platform=platform.system())
+                    self.invoke_filter_tags_osmium_linux(key, val['map_file'], tags_to_keep, out_file_pbf_filtered_names_mac)
 
-                    run_subprocess_and_log_output(
-                        cmd, f'! Error in Osmium with country: {key}')
-
-                    cmd = ['osmium', 'tags-filter', '--remove-tags']
-                    cmd.append(val['map_file'])
-                    cmd.extend(translate_tags_to_keep(
-                        name_tags=True, sys_platform=platform.system()))
-                    cmd.extend(['-o', out_file_pbf_filtered_names_mac])
-                    cmd.append('--overwrite')
-
-                    run_subprocess_and_log_output(
-                        cmd, f'! Error in Osmium with country: {key}')
 
                 val['filtered_file'] = out_file_pbf_filtered_mac
                 val['filtered_file_names'] = out_file_pbf_filtered_names_mac
@@ -201,6 +187,16 @@ class OsmMaps:
             self.write_country_config_file(key)
 
         log.info('+ Filter tags from country osm.pbf files: OK, %s', timings.stop_and_return())
+
+    def invoke_filter_tags_osmium_linux(self, country, map_file, tags_to_keep, out_filename):
+        # https://docs.osmcode.org/osmium/latest/osmium-tags-filter.html
+        cmd = ['osmium', 'tags-filter', '--remove-tags']
+        cmd.append(map_file)
+        cmd.extend(tags_to_keep)
+        cmd.extend(['-o', out_filename])
+        cmd.append('--overwrite')
+
+        run_subprocess_and_log_output(cmd, f'! Error in Osmium with country: {country}')
 
     def generate_land(self):
         """
