@@ -164,7 +164,7 @@ class TestGeneratedFiles(unittest.TestCase):
     - 100.map.lzma
     """
 
-    def setUp(self):
+    def setUpClass():
         os.makedirs(unittest_files_parking, exist_ok=True)
 
         # copy actual productive files to parking lot
@@ -178,7 +178,7 @@ class TestGeneratedFiles(unittest.TestCase):
         copy_static_maps_input_file(
             mode=0, country='denmark', given_osm_pbf='denmark-latest_2023-06-12.osm.pbf')
 
-    def tearDown(self):
+    def tearDownClass():
         # copy files from parking lot back as productive
         copy_static_land_polygon_input_folder(mode=2)
         copy_static_geofabrik_file(mode=2)
