@@ -344,7 +344,9 @@ class OsmMaps:
                     or self.o_osm_data.force_processing is True:
                 self.log_tile_info(tile["x"], tile["y"], tile_count)
                 timings_tile = Timings()
-                cmd = ['phyghtmap']
+                # TODO: remove chapter wahooMapsCreator/docs/QUICKSTART_ANACONDA.md#additional-programs-for-generating-contour-lines
+                # when switching to pyhgtmap
+                cmd = ['pyhgtmap']
                 cmd.append('-a ' + f'{tile["left"]}' + ':' + f'{tile["bottom"]}' +
                            ':' + f'{tile["right"]}' + ':' + f'{tile["top"]}')
                 cmd.extend(['-o', f'{out_file_elevation}', '-s 10', '-c 100,50', elevation_source,
@@ -355,7 +357,7 @@ class OsmMaps:
                 cmd.append('--earthexplorer-password=' + password)
 
                 run_subprocess_and_log_output(
-                    cmd, f'! Error in phyghtmap with tile: {tile["x"]},{tile["y"]}. Win_macOS/elevation')
+                    cmd, f'! Error in pyhgtmap with tile: {tile["x"]},{tile["y"]}. Win_macOS/elevation')
                 self.log_tile_debug(tile["x"], tile["y"], tile_count, timings_tile.stop_and_return())
 
             tile_count += 1
