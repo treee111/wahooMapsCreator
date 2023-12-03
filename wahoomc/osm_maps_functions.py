@@ -386,7 +386,7 @@ class OsmMaps:
 
         log.info('-' * 80)
         log.info('# Split filtered country files to tiles')
-        semaphore = asyncio.Semaphore(20)
+        semaphore = asyncio.Semaphore(6)
         tasks = set()
         timings = Timings()
         tile_count = 1

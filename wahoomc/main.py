@@ -76,14 +76,11 @@ def run(run_level):
         o_osm_maps = OsmMaps(o_osm_data)
 
         # Filter tags from country osm.pbf files'
-#        with asyncio.Runner(true) as runner:
-#            runner.run(o_osm_maps.filter_tags_from_country_osm_pbf_files())
         asyncio.run(o_osm_maps.filter_tags_from_country_osm_pbf_files())
         
 
         # Generate land
         asyncio.run(o_osm_maps.generate_land())
-#        o_osm_maps.generate_land()
 
 
         # Generate sea
@@ -95,7 +92,6 @@ def run(run_level):
 
         # Split filtered country files to tiles
         asyncio.run(o_osm_maps.split_filtered_country_files_to_tiles())
-
 
         # Merge splitted tiles with land and sea
         asyncio.run(o_osm_maps.merge_splitted_tiles_with_land_and_sea(o_input_data.process_border_countries, o_input_data.contour))
