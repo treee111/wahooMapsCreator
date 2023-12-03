@@ -454,7 +454,7 @@ class OsmMaps:
 
         await run_async_subprocess_and_log_output(semaphore, cmd, args, f'! Error in Osmium with country: {country}. {out_file}')
 
-    def merge_splitted_tiles_with_land_and_sea(self, process_border_countries, contour): # pylint: disable=too-many-locals
+    async def merge_splitted_tiles_with_land_and_sea(self, process_border_countries, contour): # pylint: disable=too-many-locals
         """
         Merge splitted tiles with land elevation and sea
         - elevation data only if requested
@@ -462,11 +462,12 @@ class OsmMaps:
 
         log.info('-' * 80)
         log.info('# Merge splitted tiles with land, elevation, and sea')
+        semaphore = asyncio.Semaphore(30)
         tasks = set()
         timings = Timings()
         tile_count = 1
         for tile in self.o_osm_data.tiles:  # pylint: disable=too-many-nested-blocks
-            self.log_tile_info(tile["x"], tile["y"], tile_count)
+ #           self.log_tile_info(tile["x"], tile["y"], tile_count)
             timings_tile = Timings()
 
             out_tile_dir = os.path.join(USER_OUTPUT_DIR,
@@ -482,54 +483,54 @@ class OsmMaps:
             # sort land* osm files
             self.sort_osm_files(tile)
 
-            # Windows
-            if platform.system() == "Windows":
-                cmd = [OSMOSIS_WIN_FILE_PATH]
-            # Non-Windows
-            else:
-                cmd = ['osmosis']
+            tasks.add(asyncio.create_task(self.invoke_merge_tile_linux(semaphore, process_border_countries, contour, tile, land_files, elevation_files, out_tile_dir, out_file_merged)))
 
-            loop = 0
-            # loop through all countries of tile, if border-countries should be processed.
-            # if border-countries should not be processed, only process the "entered" country
-            for country in tile['countries']:
-                if process_border_countries or country in self.o_osm_data.border_countries:
-                    cmd.append('--rbf')
-                    cmd.append(os.path.join(
-                        out_tile_dir, f'split-{country}.osm.pbf'))
-                    cmd.append('workers=' + self.workers)
-                    if loop > 0:
-                        cmd.append('--merge')
-
-                    cmd.append('--rbf')
-                    cmd.append(os.path.join(
-                        out_tile_dir, f'split-{country}-names.osm.pbf'))
-                    cmd.append('workers=' + self.workers)
-                    cmd.append('--merge')
-
-                    loop += 1
-
-            for land in land_files:
-                cmd.extend(
-                    ['--rx', 'file='+land, '--s', '--m'])
-
-            if contour:
-                for elevation in elevation_files:
-                    cmd.extend(
-                        ['--rx', 'file='+elevation, '--s', '--m'])
-
-            cmd.extend(
-                ['--rx', 'file='+os.path.join(out_tile_dir, 'sea.osm'), '--s', '--m'])
-            cmd.extend(['--tag-transform', 'file=' + os.path.join(RESOURCES_DIR,
-                                                                  'tunnel-transform.xml'), '--wb', out_file_merged, 'omitmetadata=true'])
-
-            run_subprocess_and_log_output(
-                cmd, f'! Error in Osmosis with tile: {tile["x"]},{tile["y"]}')
-
-            self.log_tile_debug(tile["x"], tile["y"], tile_count, timings_tile.stop_and_return())
+#            self.log_tile_debug(tile["x"], tile["y"], tile_count, timings_tile.stop_and_return())
             tile_count += 1
 
+        await asyncio.gather(*tasks)
+
         log.info('+ Merge splitted tiles with land, elevation, and sea: OK, %s', timings.stop_and_return())
+
+    async def invoke_merge_tile_linux(self, semaphore, process_border_countries, contour, tile, land_files, elevation_files, out_tile_dir, out_file_merged):
+        if platform.system() == "Windows":
+            cmd = OSMOSIS_WIN_FILE_PATH
+        # Non-Windows
+        else:
+            cmd = 'osmosis'
+
+        loop = 0
+        args = []
+        # loop through all countries of tile, if border-countries should be processed.
+        # if border-countries should not be processed, only process the "entered" country
+        for country in tile['countries']:
+            if process_border_countries or country in self.o_osm_data.border_countries:
+                args.append('--rbf')
+                args.append(os.path.join(out_tile_dir, f'split-{country}.osm.pbf'))
+                args.append('workers=' + self.workers)
+                if loop > 0:
+                    args.append('--merge')
+
+                args.append('--rbf')
+                args.append(os.path.join(out_tile_dir, f'split-{country}-names.osm.pbf'))
+                args.append('workers=' + self.workers)
+                args.append('--merge')
+
+                loop += 1
+
+        for land in land_files:
+            args.extend(
+                ['--rx', 'file='+land, '--s', '--m'])
+
+        if contour:
+            for elevation in elevation_files:
+                args.extend(
+                    ['--rx', 'file='+elevation, '--s', '--m'])
+
+        args.extend(['--rx', 'file='+os.path.join(out_tile_dir, 'sea.osm'), '--s', '--m'])
+        args.extend(['--tag-transform', 'file=' + os.path.join(RESOURCES_DIR,
+                                                                  'tunnel-transform.xml'), '--wb', out_file_merged, 'omitmetadata=true'])
+        await run_async_subprocess_and_log_output(semaphore, cmd, args, f'! Error in Osmium with tile: {tile["x"]},{tile["y"]}')
 
     def sort_osm_files(self, tile):
         """

@@ -96,11 +96,11 @@ def run(run_level):
         # Split filtered country files to tiles
         asyncio.run(o_osm_maps.split_filtered_country_files_to_tiles())
 
-        exit(0)
 
         # Merge splitted tiles with land and sea
-        o_osm_maps.merge_splitted_tiles_with_land_and_sea(
-            o_input_data.process_border_countries, o_input_data.contour)
+        asyncio.run(o_osm_maps.merge_splitted_tiles_with_land_and_sea(o_input_data.process_border_countries, o_input_data.contour))
+
+        exit(0)
 
         # Creating .map files
         o_osm_maps.create_map_files(o_input_data.save_cruiser,
