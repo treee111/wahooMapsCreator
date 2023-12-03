@@ -106,15 +106,16 @@ def download_url_to_file(url, map_file_path):
 def download_tooling():
     """
     Windows
-    - check for Windows tooling
+    - check for Windows tooling (osmosis, osmfilter)
     - download if Windows tooling is not available
     --> this is done to bring down the filesize of the python module
+    - check for mapwriter plugin and download if not existing
 
     macOS
     - check for mapwriter plugin and download if not existing
     """
-
-    mapwriter_plugin_url = 'https://search.maven.org/remotecontent?filepath=org/mapsforge/mapsforge-map-writer/0.18.0/mapsforge-map-writer-0.18.0-jar-with-dependencies.jar'
+    map_writer_filename = 'mapsforge-map-writer-0.20.0-jar-with-dependencies.jar'
+    mapwriter_plugin_url = os.path.join('https://search.maven.org/remotecontent?filepath=org/mapsforge/mapsforge-map-writer/0.20.0', map_writer_filename)
 
     # Windows
     if platform.system() == "Windows":
@@ -123,7 +124,7 @@ def download_tooling():
         if not os.path.isfile(OSMOSIS_WIN_FILE_PATH):
             log.info('# Need to download Osmosis application for Windows')
             download_file(OSMOSIS_WIN_FILE_PATH,
-                          'https://github.com/openstreetmap/osmosis/releases/download/0.48.3/osmosis-0.48.3.zip',
+                          'https://github.com/openstreetmap/osmosis/releases/download/0.49.2/osmosis-0.49.2.zip',
                           get_tooling_win_path('Osmosis', in_user_dir=True))
 
         if not os.path.isfile(get_tooling_win_path('osmfilter.exe', in_user_dir=True)):
@@ -133,12 +134,12 @@ def download_tooling():
                           'http://m.m.i24.cc/osmfilter.exe')
 
         mapwriter_plugin_path = os.path.join(USER_TOOLING_WIN_DIR,
-                                             'Osmosis', 'lib', 'default', 'mapsforge-map-writer-0.18.0-jar-with-dependencies.jar')
+                                             'Osmosis', 'lib', 'default', map_writer_filename)
 
     # Non-Windows
     else:
         mapwriter_plugin_path = os.path.join(
-            str(USER_DIR), '.openstreetmap', 'osmosis', 'plugins', 'mapsforge-map-writer-0.18.0-jar-with-dependencies.jar')
+            str(USER_DIR), '.openstreetmap', 'osmosis', 'plugins', map_writer_filename)
 
     if not os.path.isfile(mapwriter_plugin_path):
         log.info('# Need to download Osmosis mapwriter plugin')

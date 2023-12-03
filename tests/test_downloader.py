@@ -185,7 +185,7 @@ class TestDownloader(unittest.TestCase):
         """
         if platform.system() != "Windows":
             path = os.path.join(str(constants.USER_DIR), '.openstreetmap', 'osmosis',
-                                'plugins', 'mapsforge-map-writer-0.18.0-jar-with-dependencies.jar')
+                                'plugins', 'mapsforge-map-writer-0.20.0-jar-with-dependencies.jar')
 
             if os.path.exists(path):
                 os.remove(path)
@@ -195,6 +195,19 @@ class TestDownloader(unittest.TestCase):
             download_tooling()
 
             self.assertTrue(os.path.exists(path))
+
+    def test_map_writer_url_calculation(self):
+        """
+        Test if joining mapwriter filename to base path is the same as the full path
+        """
+        map_writer_filename = 'mapsforge-map-writer-0.18.0-jar-with-dependencies.jar'
+        mapwriter_plugin_url = 'https://search.maven.org/remotecontent?filepath=org/mapsforge/mapsforge-map-writer/0.18.0/mapsforge-map-writer-0.18.0-jar-with-dependencies.jar'
+
+        mapwriter_plugin_url_base = 'https://search.maven.org/remotecontent?filepath=org/mapsforge/mapsforge-map-writer/0.18.0'
+        mapwriter_plugin_url_join = os.path.join(mapwriter_plugin_url_base, map_writer_filename)
+
+        self.assertEqual(mapwriter_plugin_url_join, mapwriter_plugin_url)
+
 
     def check_exp_agains_composed_map_file_path(self, country, country_map_file_path):
         """

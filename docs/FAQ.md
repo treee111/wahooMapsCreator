@@ -3,6 +3,7 @@
 - [Usage of wahooMapsCreator](#usage-of-wahoomapscreator)
   - [The tool stops but does not output an error](#the-tool-stops-but-does-not-output-an-error)
   - [I have a Java error. "Java heap space - out of memory"](#i-have-a-java-error-java-heap-space---out-of-memory)
+  - [I have a Osmosis error. "Task type mw doesn't exist"](#i-have-a-osmosis-error-task-type-mw-doesnt-exist)
   - [How can I migrate from v3.x.x to v4.x.x?](#how-can-i-migrate-from-v3xx-to-v4xx)
 - [Generated maps](#generated-maps)
   - [Where on my Wahoo device do I have to copy the maps?](#where-on-my-wahoo-device-do-i-have-to-copy-the-maps)
@@ -33,6 +34,24 @@ There are some possible workarounds:
 set JAVACMD_OPTIONS=-server -Xmx3G
 ```
 3. A permanent workaround (in opposite to 2.) is making changes from this PR https://github.com/treee111/wahooMapsCreator/pull/171/files in the osmosis.bat file on your computer. This file located here: `wahooMapsCreatorData\_download\tooling_win\Osmosis\bin\osmosis.bat`.
+
+### I have a Osmosis error. "Task type mw doesn't exist" 
+You might have osmosis installed in version 0.49.0 or 0.49.1 and might be using macOS or Linux. If yes, this error occurs during creation of the .map files: 
+```
+org.openstreetmap.osmosis.core.OsmosisRuntimeException: Task type mw doesn't exist.
+```
+
+In these two versions 0.49.0 and 0.49.1, the feature we use for loading the mapwriter plugin was removed and just brought back in version 0.49.2.
+
+You can list your version of osmosis on macOS/Linux with:
+```
+brew list osmosis
+```
+
+You can upgrade osmosis on macOS/Linux with:
+```
+brew upgrade osmosis
+```
 
 ### How can I migrate from v3.x.x to v4.x.x?
 You have to remove your existing environment:
