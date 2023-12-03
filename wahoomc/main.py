@@ -100,11 +100,8 @@ def run(run_level):
         # Merge splitted tiles with land and sea
         asyncio.run(o_osm_maps.merge_splitted_tiles_with_land_and_sea(o_input_data.process_border_countries, o_input_data.contour))
 
-        exit(0)
-
         # Creating .map files
-        o_osm_maps.create_map_files(o_input_data.save_cruiser,
-                                    o_input_data.tag_wahoo_xml)
+        asyncio.run(o_osm_maps.create_map_files(o_input_data.save_cruiser, o_input_data.tag_wahoo_xml))
 
         # Zip .map.lzma files
         o_osm_maps.make_and_zip_files('.map.lzma', o_input_data.zip_folder)
