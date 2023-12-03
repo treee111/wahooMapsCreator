@@ -480,6 +480,14 @@ class OsmMaps:
         timings = Timings()
         tile_count = 1
         for tile in self.o_osm_data.tiles:  # pylint: disable=too-many-nested-blocks
+            # sort land* osm files
+            tasks.add(asyncio.create_task(self.sort_osm_files(semaphore, tile)))
+
+        await asyncio.gather(*tasks)
+        log.info('+ Sorted: OK, %s', timings.stop_and_return())
+
+        tasks = set()
+        for tile in self.o_osm_data.tiles:  # pylint: disable=too-many-nested-blocks
  #           self.log_tile_info(tile["x"], tile["y"], tile_count)
             timings_tile = Timings()
 
@@ -493,8 +501,6 @@ class OsmMaps:
                 os.path.join(out_tile_dir, 'elevation*.osm'))
 
             # merge splitted tiles with land and sea every time because the result is different per constants (user input)
-            # sort land* osm files
-            self.sort_osm_files(tile, verbose)
 
             tasks.add(asyncio.create_task(self.invoke_merge_tile_linux(semaphore, process_border_countries, contour, tile, land_files, elevation_files, out_tile_dir, out_file_merged)))
 
@@ -545,7 +551,7 @@ class OsmMaps:
                                                                   'tunnel-transform.xml'), '--wb', out_file_merged, 'omitmetadata=true'])
         await run_async_subprocess_and_log_output(semaphore, cmd, args, f'! Error in Osmium with tile: {tile["x"]},{tile["y"]}')
 
-    def sort_osm_files(self, tile, verbose):
+    async def sort_osm_files(self, semaphore, tile):
         """
         sort land*.osm files to be in this order: nodes, then ways, then relations.
         this is mandatory for osmium-merge since:
@@ -559,26 +565,24 @@ class OsmMaps:
         land_files = glob.glob(os.path.join(USER_OUTPUT_DIR,
                                             f'{tile["x"]}', f'{tile["y"]}', 'land*.osm'))
 
+        tasks = set()
         for land in land_files:
-            if platform.system() == "Windows":
-                cmd = [OSMOSIS_WIN_FILE_PATH]
-            else:
-                cmd = ['osmosis']
+            tasks.add(asyncio.create_task(self.invoke_sort_land_files_linux(semaphore, tile, land)))
 
-            cmd.extend(['--read-xml', 'file='+land])
-            cmd.append('--sort')
-            cmd.extend(['--write-xml', 'file='+land])
-
-        if verbose:
-            result = subprocess.run(cmd, check=False)
-            if result.returncode != 0:
-                log.error('Error in Osmosis with sorting land* osm files of tile: %s,%s', tile["x"], tile["y"])
-                sys.exit(result.returncode)
-        else:
-            run_subprocess_and_log_output(
-                cmd, f'Error in Osmosis with sorting land* osm files of tile: {tile["x"]},{tile["y"]}')
-
+        await asyncio.gather(*tasks)
         log.debug('+ Sorting land* osm files: OK')
+
+    async def invoke_sort_land_files_linux(self, semaphore, tile, land):
+        if platform.system() == "Windows":
+            cmd = OSMOSIS_WIN_FILE_PATH
+        else:
+            cmd = 'osmosis'
+
+        args = ['--read-xml', 'file='+land]
+        args.append('--sort')
+        args.extend(['--write-xml', 'file='+land])
+
+        await run_async_subprocess_and_log_output(semaphore, cmd, args, f'! Error in Osmosis with sorting land* osm files of tile: {tile["x"]},{tile["y"]}')
 
     def create_map_files(self, save_cruiser, tag_wahoo_xml, hdd_mode, verbose):
         """
