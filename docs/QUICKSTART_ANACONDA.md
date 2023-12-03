@@ -70,7 +70,7 @@ https://brew.sh/
 ```
 brew install osmium-tool
 ```
-2. Download **Osmosis** latest version from Github
+2. Install **Osmosis** using homebrew in terminal:
 ```
 brew install osmosis
 ```

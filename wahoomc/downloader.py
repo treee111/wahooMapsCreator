@@ -124,7 +124,7 @@ def download_tooling():
         if not os.path.isfile(OSMOSIS_WIN_FILE_PATH):
             log.info('# Need to download Osmosis application for Windows')
             download_file(OSMOSIS_WIN_FILE_PATH,
-                          'https://github.com/openstreetmap/osmosis/releases/download/0.48.3/osmosis-0.48.3.zip',
+                          'https://github.com/openstreetmap/osmosis/releases/download/0.49.2/osmosis-0.49.2.zip',
                           get_tooling_win_path('Osmosis', in_user_dir=True))
 
         if not os.path.isfile(get_tooling_win_path('osmfilter.exe', in_user_dir=True)):
