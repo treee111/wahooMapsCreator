@@ -621,6 +621,9 @@ class OsmMaps:
         tile_count = 1
         for tile in self.o_osm_data.tiles:
             timings_tile = Timings()
+
+            out_file_map = os.path.join(USER_OUTPUT_DIR, f'{tile["x"]}', f'{tile["y"]}.map')
+
             # Create "tile present" file
             with open(out_file_map + '.lzma.17', mode='wb') as tile_present_file:
                 tile_present_file.close()
