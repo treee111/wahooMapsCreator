@@ -78,17 +78,15 @@ def run(run_level):
         # Filter tags from country osm.pbf files'
         asyncio.run(o_osm_maps.filter_tags_from_country_osm_pbf_files())
         
-
         # Generate land
         asyncio.run(o_osm_maps.generate_land())
-
 
         # Generate sea
         o_osm_maps.generate_sea()
 
         # Generate elevation
         if o_input_data.contour:
-            o_osm_maps.generate_elevation(o_input_data.use_srtm1)
+            asyncio.run(o_osm_maps.generate_elevation(o_input_data.use_srtm1))
 
         # Split filtered country files to tiles
         asyncio.run(o_osm_maps.split_filtered_country_files_to_tiles())
