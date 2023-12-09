@@ -670,7 +670,7 @@ class OsmMaps:
 
             # --keep: do not delete source file
             if save_cruiser:
-                cmd.append('--keep')
+                args.append('--keep')
 
         await run_async_subprocess_and_log_output(semaphore, cmd, args, f'! Error creating map files for tile: {tile["x"]},{tile["y"]}')
 
