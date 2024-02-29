@@ -331,7 +331,7 @@ class XYGeofabrik(InformalGeofabrikInterface):
 
         geofabrik_regions = self.o_geofabrik_json.geofabrik_regions
 
-        log.info('Searching for needed maps, this can take a while.')
+        log.info('+ Searching for needed maps, this can take a while.')
 
         # itterate through tiles and find Geofabrik regions that are in the tiles
         counter = 1
