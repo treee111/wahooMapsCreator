@@ -578,7 +578,7 @@ class OsmMaps:
             # Non-Windows
             else:
                 cmd = ['osmosis', '--rb', merged_file,
-                       '--mw', 'file='+out_file_map]
+                       '--mw', 'file='+out_file_map, 'type=hd']
 
             cmd.append(
                 f'bbox={tile["bottom"]:.6f},{tile["left"]:.6f},{tile["top"]:.6f},{tile["right"]:.6f}')
