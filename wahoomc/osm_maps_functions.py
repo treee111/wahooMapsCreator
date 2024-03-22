@@ -475,7 +475,7 @@ class OsmMaps:
 
         log.info('+ Split filtered country files to tiles: OK, %s', timings.stop_and_return())
 
-    def merge_splitted_tiles_with_land_and_sea(self, process_border_countries, contour): # pylint: disable=too-many-locals
+    async def merge_splitted_tiles_with_land_and_sea(self, process_border_countries, contour): # pylint: disable=too-many-locals
         """
         Merge splitted tiles with land elevation and sea
         - elevation data only if requested
@@ -483,10 +483,19 @@ class OsmMaps:
 
         log.info('-' * 80)
         log.info('# Merge splitted tiles with land, elevation, and sea')
+        semaphore = asyncio.Semaphore(30)
+        tasks = set()
         timings = Timings()
         tile_count = 1
         for tile in self.o_osm_data.tiles:  # pylint: disable=too-many-nested-blocks
-            self.log_tile_info(tile["x"], tile["y"], tile_count)
+            # sort land* osm files
+            tasks.add(asyncio.create_task(self.sort_osm_files(semaphore, tile)))
+
+        await asyncio.gather(*tasks)
+        log.info('+ Sorted: OK, %s', timings.stop_and_return())
+
+        tasks = set()
+        for tile in self.o_osm_data.tiles:  # pylint: disable=too-many-nested-blocks
             timings_tile = Timings()
 
             out_tile_dir = os.path.join(USER_OUTPUT_DIR,
@@ -499,59 +508,56 @@ class OsmMaps:
                 os.path.join(out_tile_dir, 'elevation*.osm'))
 
             # merge splitted tiles with land and sea every time because the result is different per constants (user input)
-            # sort land* osm files
-            self.sort_osm_files(tile)
 
-            # Windows
-            if platform.system() == "Windows":
-                cmd = [OSMOSIS_WIN_FILE_PATH]
-            # Non-Windows
-            else:
-                cmd = ['osmosis']
+            tasks.add(asyncio.create_task(self.invoke_merge_tile_linux(semaphore, process_border_countries, contour, tile, land_files, elevation_files, out_tile_dir, out_file_merged)))
 
-            loop = 0
-            # loop through all countries of tile, if border-countries should be processed.
-            # if border-countries should not be processed, only process the "entered" country
-            for country in tile['countries']:
-                if process_border_countries or country in self.o_osm_data.border_countries:
-                    cmd.append('--rbf')
-                    cmd.append(os.path.join(
-                        out_tile_dir, f'split-{country}.osm.pbf'))
-                    cmd.append('workers=' + self.workers)
-                    if loop > 0:
-                        cmd.append('--merge')
-
-                    cmd.append('--rbf')
-                    cmd.append(os.path.join(
-                        out_tile_dir, f'split-{country}-names.osm.pbf'))
-                    cmd.append('workers=' + self.workers)
-                    cmd.append('--merge')
-
-                    loop += 1
-
-            for land in land_files:
-                cmd.extend(
-                    ['--rx', 'file='+land, '--s', '--m'])
-
-            if contour:
-                for elevation in elevation_files:
-                    cmd.extend(
-                        ['--rx', 'file='+elevation, '--s', '--m'])
-
-            cmd.extend(
-                ['--rx', 'file='+os.path.join(out_tile_dir, 'sea.osm'), '--s', '--m'])
-            cmd.extend(['--tag-transform', 'file=' + os.path.join(RESOURCES_DIR,
-                                                                  'tunnel-transform.xml'), '--wb', out_file_merged, 'omitmetadata=true'])
-
-            run_subprocess_and_log_output(
-                cmd, f'! Error in Osmosis with tile: {tile["x"]},{tile["y"]}')
-
-            self.log_tile_debug(tile["x"], tile["y"], tile_count, timings_tile.stop_and_return())
             tile_count += 1
+
+        await asyncio.gather(*tasks)
 
         log.info('+ Merge splitted tiles with land, elevation, and sea: OK, %s', timings.stop_and_return())
 
-    def sort_osm_files(self, tile):
+    async def invoke_merge_tile_linux(self, semaphore, process_border_countries, contour, tile, land_files, elevation_files, out_tile_dir, out_file_merged):
+        if platform.system() == "Windows":
+            cmd = OSMOSIS_WIN_FILE_PATH
+        # Non-Windows
+        else:
+            cmd = 'osmosis'
+
+        loop = 0
+        args = []
+        # loop through all countries of tile, if border-countries should be processed.
+        # if border-countries should not be processed, only process the "entered" country
+        for country in tile['countries']:
+            if process_border_countries or country in self.o_osm_data.border_countries:
+                args.append('--rbf')
+                args.append(os.path.join(out_tile_dir, f'split-{country}.osm.pbf'))
+                args.append('workers=' + self.workers)
+                if loop > 0:
+                    args.append('--merge')
+
+                args.append('--rbf')
+                args.append(os.path.join(out_tile_dir, f'split-{country}-names.osm.pbf'))
+                args.append('workers=' + self.workers)
+                args.append('--merge')
+
+                loop += 1
+
+        for land in land_files:
+            args.extend(
+                ['--rx', 'file='+land, '--s', '--m'])
+
+        if contour:
+            for elevation in elevation_files:
+                args.extend(
+                    ['--rx', 'file='+elevation, '--s', '--m'])
+
+        args.extend(['--rx', 'file='+os.path.join(out_tile_dir, 'sea.osm'), '--s', '--m'])
+        args.extend(['--tag-transform', 'file=' + os.path.join(RESOURCES_DIR,
+                                                                  'tunnel-transform.xml'), '--wb', out_file_merged, 'omitmetadata=true'])
+        await run_async_subprocess_and_log_output(semaphore, cmd, args, f'! Error in Osmium with tile: {tile["x"]},{tile["y"]}')
+
+    async def sort_osm_files(self, semaphore, tile):
         """
         sort land*.osm files to be in this order: nodes, then ways, then relations.
         this is mandatory for osmium-merge since:
@@ -565,22 +571,26 @@ class OsmMaps:
         land_files = glob.glob(os.path.join(USER_OUTPUT_DIR,
                                             f'{tile["x"]}', f'{tile["y"]}', 'land*.osm'))
 
+        tasks = set()
         for land in land_files:
-            if platform.system() == "Windows":
-                cmd = [OSMOSIS_WIN_FILE_PATH]
-            else:
-                cmd = ['osmosis']
+            tasks.add(asyncio.create_task(self.invoke_sort_land_files_linux(semaphore, tile, land)))
 
-            cmd.extend(['--read-xml', 'file='+land])
-            cmd.append('--sort')
-            cmd.extend(['--write-xml', 'file='+land])
-
-        run_subprocess_and_log_output(
-            cmd, f'Error in Osmosis with sorting land* osm files of tile: {tile["x"]},{tile["y"]}')
-
+        await asyncio.gather(*tasks)
         log.debug('+ Sorting land* osm files: OK')
 
-    def create_map_files(self, save_cruiser, tag_wahoo_xml):
+    async def invoke_sort_land_files_linux(self, semaphore, tile, land):
+        if platform.system() == "Windows":
+            cmd = OSMOSIS_WIN_FILE_PATH
+        else:
+            cmd = 'osmosis'
+
+        args = ['--read-xml', 'file='+land]
+        args.append('--sort')
+        args.extend(['--write-xml', 'file='+land])
+
+        await run_async_subprocess_and_log_output(semaphore, cmd, args, f'! Error in Osmosis with sorting land* osm files of tile: {tile["x"]},{tile["y"]}')
+
+    async def create_map_files(self, save_cruiser, tag_wahoo_xml):
         """
         Creating .map files
         """
