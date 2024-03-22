@@ -5,6 +5,7 @@ functions and object for managing OSM maps
 
 # import official python packages
 from datetime import datetime
+import asyncio
 import glob
 import multiprocessing
 import os
@@ -58,6 +59,32 @@ def run_subprocess_and_log_output(cmd, error_message, cwd=""):
     elif process.stdout:
         log.debug('subprocess debug output:')
         log.debug(process.stdout)
+
+async def run_async_subprocess_and_log_output(semaphore, cmd, args, error_message, cwd=""):
+    """
+    run given cmd-subprocess and issue error message if wished
+    """
+    async with semaphore:
+        process = await asyncio.create_subprocess_exec(
+#        create_subprocess_shell,
+            cmd,
+            *args,
+            stdout=asyncio.subprocess.PIPE,
+            stderr=asyncio.subprocess.PIPE)
+
+        stdout, stderr = await process.communicate()
+
+        if error_message and process.returncode != 0:  # 0 means success
+            log.error('subprocess error output:')
+            if process.stderr:
+                log.error(process.stderr)
+
+            log.error(error_message)
+            sys.exit()
+
+        elif process.stdout:
+            log.debug('subprocess debug output:')
+            log.debug(process.stdout)
 
 
 def get_timestamp_last_changed(file_path):
@@ -202,7 +229,7 @@ class OsmMaps:
 
         log.info('+ Filter tags from country osm.pbf files: OK, %s', timings.stop_and_return())
 
-    def generate_land(self):
+    async def generate_land(self):
         """
         Generate land for all tiles
         """
@@ -211,6 +238,9 @@ class OsmMaps:
         log.info('# Generate land for each coordinate')
         timings = Timings()
         tile_count = 1
+        semaphore = asyncio.Semaphore(60)
+        land_sea_tasks = []
+        land1_tasks = []
         for tile in self.o_osm_data.tiles:
             land_file = os.path.join(USER_OUTPUT_DIR,
                                      f'{tile["x"]}', f'{tile["y"]}', 'land.shp')
@@ -220,43 +250,48 @@ class OsmMaps:
 
             # create land.dbf, land.prj, land.shp, land.shx
             if not os.path.isfile(land_file) or self.o_osm_data.force_processing is True:
-                self.log_tile_info(tile["x"], tile["y"], tile_count)
-                cmd = ['ogr2ogr', '-overwrite', '-skipfailures']
                 # Try to prevent getting outside of the +/-180 and +/- 90 degrees borders. Normally the +/- 0.1 are there to prevent white lines at border borders.
+                correction = 0.1
                 if tile["x"] == 255 or tile["y"] == 255 or tile["x"] == 0 or tile["y"] == 0:
-                    cmd.extend(['-spat', f'{tile["left"]:.6f}',
-                                f'{tile["bottom"]:.6f}',
-                                f'{tile["right"]:.6f}',
-                                f'{tile["top"]:.6f}'])
-                else:
-                    cmd.extend(['-spat', f'{tile["left"]-0.1:.6f}',
-                                f'{tile["bottom"]-0.1:.6f}',
-                                f'{tile["right"]+0.1:.6f}',
-                                f'{tile["top"]+0.1:.6f}'])
-                cmd.append(land_file)
-                cmd.append(LAND_POLYGONS_PATH)
+                    correction = 0.0
 
-                run_subprocess_and_log_output(
-                    cmd, f'! Error generating land for tile: {tile["x"]},{tile["y"]}')
+                spatLeft = f'{tile["left"]-correction:.6f}'
+                spatBottom = f'{tile["bottom"]-correction:.6f}'
+                spatRight = f'{tile["right"]+correction:.6f}'
+                spatTop = f'{tile["top"]+correction:.6f}'
+                                
+                task1 = asyncio.create_task(self.invoke_create_land_and_sea_ogr2ogr_linux(semaphore, tile["x"], tile["y"], spatLeft, spatBottom, spatRight, spatTop, land_file, LAND_POLYGONS_PATH))
+                land_sea_tasks.append(task1)
 
             # create land1.osm
             if not os.path.isfile(out_file_land1+'1.osm') or self.o_osm_data.force_processing is True:
-                # Windows
-                if platform.system() == "Windows":
-                    cmd = ['python', os.path.join(RESOURCES_DIR,
-                                                  'shape2osm.py'), '-l', out_file_land1, land_file]
-
-                # Non-Windows
-                else:
-                    cmd = ['python', os.path.join(RESOURCES_DIR,
-                                                  'shape2osm.py'), '-l', out_file_land1, land_file]
-
-                run_subprocess_and_log_output(
-                    cmd, f'! Error creating land.osm for tile: {tile["x"]},{tile["y"]}')
+                task2 = asyncio.create_task(self.invoke_create_land1_python_linux(semaphore, tile["x"], tile["y"], land_file, out_file_land1))
+                land1_tasks.append(task2)
             self.log_tile_debug(tile["x"], tile["y"], tile_count, timings_tile.stop_and_return())
             tile_count += 1
 
+        log.info('start land sea')
+        await asyncio.gather(*land_sea_tasks)
+        log.info('start land1')
+        await asyncio.gather(*land1_tasks)
+
         log.info('+ Generate land for each coordinate: OK, %s', timings.stop_and_return())
+
+    async def invoke_create_land_and_sea_ogr2ogr_linux(self, semaphore, tileX, tileY, spatLeft, spatBottom, spatRight, spatTop, land_file, land_polygon_path):
+        cmd = 'ogr2ogr'
+        args = ['-overwrite', '-skipfailures']
+        args.extend(['-spat', f'{spatLeft}', f'{spatBottom}', f'{spatRight}', f'{spatTop}'])
+        args.append(land_file)
+        args.append(land_polygon_path)
+
+        await run_async_subprocess_and_log_output(semaphore, cmd, args, f'! Error generating land for tile: {tileX},{tileY}')
+
+    async def invoke_create_land1_python_linux(self, semaphore, tileX, tileY, land_file, out_land_file):
+        cmd = 'python'
+        args = [os.path.join(RESOURCES_DIR, 'shape2osm.py'), '-l', out_land_file, land_file]
+
+        await run_async_subprocess_and_log_output(semaphore, cmd, args, f'! Error creating land1.osm for tile: {tileX},{tileY}')
+
 
     def generate_sea(self):
         """
