@@ -345,13 +345,16 @@ class OsmMaps:
 
         log.info('+ Generate contour lines for each coordinate: OK, %s', timings.stop_and_return())
 
-    def split_filtered_country_files_to_tiles(self):
+
+    async def split_filtered_country_files_to_tiles(self):
         """
         Split filtered country files to tiles
         """
 
         log.info('-' * 80)
         log.info('# Split filtered country files to tiles')
+        semaphore = asyncio.Semaphore(6)
+        tasks = set()
         timings = Timings()
         tile_count = 1
         for tile in self.o_osm_data.tiles:
@@ -359,7 +362,6 @@ class OsmMaps:
             for country, val in self.o_osm_data.border_countries.items():
                 if country not in tile['countries']:
                     continue
-                self.log_tile_info(tile["x"], tile["y"], tile_count, country)
                 timings_tile = Timings()
                 out_file = os.path.join(USER_OUTPUT_DIR,
                                         f'{tile["x"]}', f'{tile["y"]}', f'split-{country}.osm.pbf')
@@ -395,33 +397,28 @@ class OsmMaps:
 
                 # Non-Windows
                 else:
-                    cmd = ['osmium', 'extract']
-                    cmd.extend(
-                        ['-b', f'{tile["left"]},{tile["bottom"]},{tile["right"]},{tile["top"]}'])
-                    cmd.append(val['filtered_file'])
-                    cmd.extend(['-s', 'smart'])
-                    cmd.extend(['-o', out_file])
-                    cmd.extend(['--overwrite'])
-
-                    run_subprocess_and_log_output(
-                        cmd, '! Error in Osmium with country: {country}. macOS/out_file')
-
-                    cmd = ['osmium', 'extract']
-                    cmd.extend(
-                        ['-b', f'{tile["left"]},{tile["bottom"]},{tile["right"]},{tile["top"]}'])
-                    cmd.append(val['filtered_file_names'])
-                    cmd.extend(['-s', 'smart'])
-                    cmd.extend(['-o', out_file_names])
-                    cmd.extend(['--overwrite'])
-
-                    run_subprocess_and_log_output(
-                        cmd, '! Error in Osmium with country: {country}. macOS/out_file_names')
+                    tasks.add(asyncio.create_task(self.invoke_split_country_to_tile_linux(semaphore, country, tile, val['filtered_file'], out_file)))
+                    tasks.add(asyncio.create_task(self.invoke_split_country_to_tile_linux(semaphore, country, tile, val['filtered_file_names'], out_file_names)))
 
                 self.log_tile_debug(tile["x"], tile["y"], tile_count, f'{country} {timings_tile.stop_and_return()}')
 
             tile_count += 1
 
+        await asyncio.gather(*tasks)
+
         log.info('+ Split filtered country files to tiles: OK, %s', timings.stop_and_return())
+
+    async def invoke_split_country_to_tile_linux(self, semaphore, country, tile, input_file, out_file):
+        cmd = 'osmium'
+        args = ['extract']
+
+        args.extend(['-b', f'{tile["left"]},{tile["bottom"]},{tile["right"]},{tile["top"]}'])
+        args.append(input_file)
+        args.extend(['-s', 'smart'])
+        args.extend(['-o', out_file])
+        args.extend(['--overwrite'])
+
+        await run_async_subprocess_and_log_output(semaphore, cmd, args, f'! Error in Osmium with country: {country}. {out_file}')
 
     async def merge_splitted_tiles_with_land_and_sea(self, process_border_countries, contour): # pylint: disable=too-many-locals
         """
