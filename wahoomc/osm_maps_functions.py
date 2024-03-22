@@ -599,14 +599,15 @@ class OsmMaps:
         log.info('# Creating .map files for tiles')
 
         # Number of threads to use in the mapwriter plug-in
-        threads = multiprocessing.cpu_count() - 1
-        if int(threads) < 1:
-            threads = 1
+#        threads = multiprocessing.cpu_count() - 1
+#        if int(threads) < 1:
+#            threads = 1
 
+        semaphore = asyncio.Semaphore(12)
+        tasks = set()
         timings = Timings()
         tile_count = 1
         for tile in self.o_osm_data.tiles:
-            self.log_tile_info(tile["x"], tile["y"], tile_count)
             timings_tile = Timings()
 
             out_file_map = os.path.join(USER_OUTPUT_DIR,
@@ -616,46 +617,32 @@ class OsmMaps:
             merged_file = os.path.join(USER_OUTPUT_DIR,
                                        f'{tile["x"]}', f'{tile["y"]}', 'merged.osm.pbf')
 
-            # Windows
-            if platform.system() == "Windows":
-                cmd = [OSMOSIS_WIN_FILE_PATH, '--rbf', merged_file,
-                       'workers=' + self.workers, '--mw', 'file='+out_file_map]
-            # Non-Windows
-            else:
-                cmd = ['osmosis', '--rb', merged_file,
-                       '--mw', 'file='+out_file_map]
+            tasks.add(asyncio.create_task(self.invoke_create_map_file_linux(semaphore, tile, tag_wahoo_xml, merged_file, out_file_map)))
+            tile_count += 1
 
-            cmd.append(
-                f'bbox={tile["bottom"]:.6f},{tile["left"]:.6f},{tile["top"]:.6f},{tile["right"]:.6f}')
-            cmd.append('zoom-interval-conf=10,0,17')
-            cmd.append(f'threads={threads}')
-            # add path to tag-wahoo xml file
-            try:
-                cmd.append(
-                    f'tag-conf-file={get_tag_wahoo_xml_path(tag_wahoo_xml)}')
-            except TagWahooXmlNotFoundError:
-                log.error(
-                    'The tag-wahoo xml file was not found: ˚%s˚. Does the file exist and is your input correct?', tag_wahoo_xml)
-                sys.exit()
+        await asyncio.gather(*tasks)
 
-            run_subprocess_and_log_output(
-                cmd, f'Error in creating map file via Osmosis with tile: {tile["x"]},{tile["y"]}. mapwriter plugin installed?')
+        log.info('+ Created .map files for tiles: OK, %s', timings.stop_and_return())
 
-            # Windows
-            if platform.system() == "Windows":
-                cmd = [get_tooling_win_path('lzma'), 'e', out_file_map,
-                       out_file_map+'.lzma', f'-mt{threads}', '-d27', '-fb273', '-eos']
-            # Non-Windows
-            else:
-                # force overwrite of output file and (de)compress links
-                cmd = ['lzma', out_file_map, '-f']
+        semaphore = asyncio.Semaphore(30)
+        tasks = set()
+        tile_count = 1
+        for tile in self.o_osm_data.tiles:
+            timings_tile = Timings()
 
-                # --keep: do not delete source file
-                if save_cruiser:
-                    cmd.append('--keep')
+            out_file_map = os.path.join(USER_OUTPUT_DIR, f'{tile["x"]}', f'{tile["y"]}.map')
 
-            run_subprocess_and_log_output(
-                cmd, f'! Error creating map files for tile: {tile["x"]},{tile["y"]}')
+            tasks.add(asyncio.create_task(self.invoke_compress_map_file_linux(semaphore, tile, save_cruiser, out_file_map)))
+
+        await asyncio.gather(*tasks)
+
+        log.info('+ Compressed .map files for tiles: OK, %s', timings.stop_and_return())
+
+        tile_count = 1
+        for tile in self.o_osm_data.tiles:
+            timings_tile = Timings()
+
+            out_file_map = os.path.join(USER_OUTPUT_DIR, f'{tile["x"]}', f'{tile["y"]}.map')
 
             # Create "tile present" file
             with open(out_file_map + '.lzma.17', mode='wb') as tile_present_file:
@@ -665,6 +652,45 @@ class OsmMaps:
             tile_count += 1
 
         log.info('+ Creating .map files for tiles: OK, %s', timings.stop_and_return())
+
+    async def invoke_create_map_file_linux(self, semaphore, tile, tag_wahoo_xml, merged_file, out_file_map):
+        # Windows
+        if platform.system() == "Windows":
+            cmd = OSMOSIS_WIN_FILE_PATH
+            args = ['--rbf', merged_file, 'workers=1', '--mw', 'file='+out_file_map]
+        # Non-Windows
+        else:
+            cmd = 'osmosis'
+            args = ['--rb', merged_file, '--mw', 'file='+out_file_map]
+
+        args.append(f'bbox={tile["bottom"]:.6f},{tile["left"]:.6f},{tile["top"]:.6f},{tile["right"]:.6f}')
+        args.append('zoom-interval-conf=10,0,17')
+        args.append(f'threads=1')
+        # add path to tag-wahoo xml file
+        try:
+            args.append(f'tag-conf-file={get_tag_wahoo_xml_path(tag_wahoo_xml)}')
+        except TagWahooXmlNotFoundError:
+            log.error('The tag-wahoo xml file was not found: ˚%s˚. Does the file exist and is your input correct?', tag_wahoo_xml)
+            sys.exit()
+
+        await run_async_subprocess_and_log_output(semaphore, cmd, args, f'! Error in creating map file via Osmosis with tile: {tile["x"]},{tile["y"]}. mapwriter plugin installed?')
+
+    async def invoke_compress_map_file_linux(self, semaphore, tile, save_cruiser, out_file_map):
+        # Windows
+        if platform.system() == "Windows":
+            cmd = get_tooling_win_path('lzma')
+            args = ['e', out_file_map, out_file_map+'.lzma', f'-mt1', '-d27', '-fb273', '-eos']
+        # Non-Windows
+        else:
+            # force overwrite of output file and (de)compress links
+            cmd = 'lzma'
+            args = [out_file_map, '-f']
+
+            # --keep: do not delete source file
+            if save_cruiser:
+                cmd.append('--keep')
+
+        await run_async_subprocess_and_log_output(semaphore, cmd, args, f'! Error creating map files for tile: {tile["x"]},{tile["y"]}')
 
     def make_and_zip_files(self, extension, zip_folder):
         """
@@ -697,7 +723,7 @@ class OsmMaps:
                 f'{USER_WAHOO_MC}', folder_name, f'{tile["x"]}', f'{tile["y"]}') + extension
             self.copy_to_dst(extension, src, dst)
 
-            if extension == '.map.lzma':
+                cmd.append('--keep')
                 src = src + '.17'
                 dst = dst + '.17'
                 self.copy_to_dst(extension, src, dst)
