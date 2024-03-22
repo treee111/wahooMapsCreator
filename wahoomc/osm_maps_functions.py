@@ -286,7 +286,7 @@ class OsmMaps:
 
         log.info('+ Generate sea for each coordinate: OK, %s', timings.stop_and_return())
 
-    def generate_elevation(self, use_srtm1):
+    async def generate_elevation(self, use_srtm1):
         """
         Generate contour lines for all tiles
         """
@@ -297,6 +297,8 @@ class OsmMaps:
 
         hgt_path = os.path.join(USER_DL_DIR, 'hgt')
 
+        semaphore = asyncio.Semaphore(28)
+        tasks = set()
         timings = Timings()
         tile_count = 1
         for tile in self.o_osm_data.tiles:
@@ -316,35 +318,35 @@ class OsmMaps:
                 # 2) set source
                 elevation_source = '--source=srtm1,view1,view3,srtm3'
             else:
-                # 1) search vor view1 elevation files
+                # 1) search for view1 elevation files
                 out_file_elevation_existing = glob.glob(os.path.join(
                     USER_OUTPUT_DIR, str(tile["x"]), str(tile["y"]), 'elevation*view1*.osm'))
                 # 2) set source
-                elevation_source = '--source=view1,view3,srtm3'
+                elevation_source = '--source=view1,view3'
 
             # check for already existing elevation .osm file (the ones matched via glob)
             if not (len(out_file_elevation_existing) == 1 and os.path.isfile(out_file_elevation_existing[0])) \
                     or self.o_osm_data.force_processing is True:
-                self.log_tile_info(tile["x"], tile["y"], tile_count)
-                timings_tile = Timings()
-                cmd = ['phyghtmap']
-                cmd.append('-a ' + f'{tile["left"]}' + ':' + f'{tile["bottom"]}' +
-                           ':' + f'{tile["right"]}' + ':' + f'{tile["top"]}')
-                cmd.extend(['-o', f'{out_file_elevation}', '-s 10', '-c 100,50', elevation_source,
-                            '--jobs=8', '--viewfinder-mask=1', '--start-node-id=20000000000',
-                            '--max-nodes-per-tile=0', '--start-way-id=2000000000', '--write-timestamp',
-                            '--no-zero-contour', '--hgtdir=' + hgt_path])
-                cmd.append('--earthexplorer-user=' + username)
-                cmd.append('--earthexplorer-password=' + password)
-
-                run_subprocess_and_log_output(
-                    cmd, f'! Error in phyghtmap with tile: {tile["x"]},{tile["y"]}. Win_macOS/elevation')
-                self.log_tile_debug(tile["x"], tile["y"], tile_count, timings_tile.stop_and_return())
+#                self.log_tile_info(tile["x"], tile["y"], tile_count)
+                tasks.add(asyncio.create_task(self.invoke_generate_elevation_for_tile(semaphore, tile, elevation_source, hgt_path, username, password, out_file_elevation)))
 
             tile_count += 1
 
+        await asyncio.gather(*tasks)
+
         log.info('+ Generate contour lines for each coordinate: OK, %s', timings.stop_and_return())
 
+    async def invoke_generate_elevation_for_tile(self, semaphore, tile, elevation_source, hgt_path, username, password, out_file_elevation):
+        cmd = 'pyhgtmap'
+        args = ['-a ' + f'{tile["left"]}' + ':' + f'{tile["bottom"]}' + ':' + f'{tile["right"]}' + ':' + f'{tile["top"]}']
+        args.extend(['-o', f'{out_file_elevation}', '-s 10', '-c 100,50', elevation_source,
+                            '--jobs=1', '--viewfinder-mask=1', '--start-node-id=20000000000',
+                            '--max-nodes-per-tile=0', '--start-way-id=2000000000', '--write-timestamp',
+                            '--no-zero-contour', '--hgtdir=' + hgt_path])
+        args.append('--earthexplorer-user=' + username)
+        args.append('--earthexplorer-password=' + password)
+
+        await run_async_subprocess_and_log_output(semaphore, cmd, args, f'! Error in phyghtmap with tile: {tile["x"]},{tile["y"]}')
 
     async def split_filtered_country_files_to_tiles(self):
         """
