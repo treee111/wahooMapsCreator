@@ -82,7 +82,7 @@
 
    <style-line id="roam-track-raw-cycle" use="roam-track-raw" stroke="#0000FF" />
    <style-line id="bolt-track-raw-cycle" use="bolt-track-raw" />
-   <style-line id="bolt2-track-raw-cycle" cat="bolt2" stroke="#CCCCCC" dasharray="6,3"/>
+   <style-line id="bolt2-track-raw-cycle" cat="bolt2" stroke="#000000" dasharray="6,3"/>
    <style-line id="bolt2-track-raw-cycle-dark" use="bolt2-track-raw-dark" stroke="#00AAFF" />
 
    <!-- Tracks that don't have other info -->
