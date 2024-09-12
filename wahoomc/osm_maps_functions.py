@@ -53,7 +53,7 @@ def run_subprocess_and_log_output(cmd, error_message, cwd=""):
             log.error(process.stderr)
 
         log.error(error_message)
-        sys.exit()
+        sys.exit(process.returncode)
 
     elif process.stdout:
         log.debug('subprocess debug output:')
