@@ -8,7 +8,7 @@ dependencies:
   - pylint=2.15.*
   - geojson=2.5.*
   - shapely=1.8.*
-  - osmium-tool=1.15.*
+  - osmium-tool=1.16.*
   - bs4=4.11.*
   - lxml=4.9.*
   - matplotlib=3.4.3
