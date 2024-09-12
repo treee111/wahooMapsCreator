@@ -113,9 +113,11 @@ def download_tooling():
 
     macOS
     - check for mapwriter plugin and download if not existing
+
+    check here for new mapwriter plugin version: https://github.com/mapsforge/mapsforge
     """
-    map_writer_filename = 'mapsforge-map-writer-0.20.0-jar-with-dependencies.jar'
-    mapwriter_plugin_url = os.path.join('https://search.maven.org/remotecontent?filepath=org/mapsforge/mapsforge-map-writer/0.20.0', map_writer_filename)
+    map_writer_filename = 'mapsforge-map-writer-0.21.0-jar-with-dependencies.jar'
+    mapwriter_plugin_url = os.path.join('https://search.maven.org/remotecontent?filepath=org/mapsforge/mapsforge-map-writer/0.21.0', map_writer_filename)
 
     # Windows
     if platform.system() == "Windows":
