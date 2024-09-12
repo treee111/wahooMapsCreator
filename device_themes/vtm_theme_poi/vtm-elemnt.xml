@@ -401,74 +401,6 @@
          </m>
          <!-- endregion -->
 
-         <!-- region not bridges -->
-         <m k="bridge" v="~|no|false">
-
-            <m e="way" k="highway" v="bridleway" zoom-min="14">
-               <line cat="bolt" outline="highway-bolt" stroke="#FFFFFF" width="1.2" dasharray="10,12" cap="round" />
-               <line cat="roam" outline="highway-roam" stroke="#FFFFFF" width="1.2" dasharray="10,12" cap="round" />
-               <line cat="bolt2" stroke="#FFFFFF" width="1.2" dasharray="10,12" cap="round" />
-               <line cat="bolt2-dark" stroke="#AAAAAA" width="1.2" dasharray="10,12" cap="round" />
-            </m>
-            <m e="way" k="highway" v="service" zoom-min="13">
-               <line cat="bolt" outline="highway-bolt" stroke="#FFFFFF" width="1.3" />
-               <line cat="roam" outline="highway-roam" stroke="#FFFFFF" width="1.3" />
-               <line cat="bolt2" stroke="#FFFFFF" outline="bolt2-minor-roads" width="1.3" />
-               <line cat="bolt2-dark" stroke="#AAAAAA" width="1.3" />
-            </m>
-            <m e="way" k="highway" v="construction" zoom-min="10">
-               <line cat="bolt" outline="highway-bolt" stroke="#FFFFFF" width="1.3" dasharray="15,2" cap="butt" />
-               <line cat="roam" outline="highway-roam" stroke="#FFFFFF" width="1.3" dasharray="15,2" cap="butt" />
-               <line cat="bolt2" stroke="#FF0000" width="2" dasharray="15,2" cap="butt" />
-               <line cat="bolt2-dark" stroke="#AAAAAA" width="1.3" dasharray="15,2" cap="butt" />
-            </m>
-            <m e="way" k="highway" v="residential|living_street|road|unclassified" zoom-min="13">
-               <line cat="bolt" outline="highway-bolt" stroke="#FFFFFF" width="2" />
-               <line cat="roam" outline="highway-roam" stroke="#FFFFFF" width="2" />
-               <line cat="bolt2" stroke="#FFFFFF" outline="bolt2-major-roads" width="1.3" />
-               <line cat="bolt2-dark" stroke="#AAAAAA" width="2" />
-            </m>
-            <m e="way" k="highway" v="residential|living_street|road|unclassified" zoom-min="10" zoom-max="12">
-               <line cat="bolt" stroke="#000000" width="1" />
-               <line cat="roam" stroke="#555555" width="3" />
-               <line cat="bolt2" stroke="#FFFFFF" outline="bolt2-major-roads" width="1.5" />
-               <line cat="bolt2-dark" stroke="#AAAAAA" width="1" />
-            </m>
-            <m e="way" k="highway" v="tertiary|tertiary_link|secondary_link|secondary" zoom-min="9">
-               <pathText display="always" cat="bolt2-disabled" fill="#000000" k="name" font-family="sans_serif" font-style="bold" priority="2" size="16" stroke="#ffffff" stroke-width="2.0" zoom-min="14" />
-               <pathText display="always" cat="bolt2-dark-disabled" fill="#000000" k="name" font-family="sans_serif" font-style="bold" priority="2" size="16" stroke="#ffffff" stroke-width="2.0" zoom-min="14" />
-               <line cat="bolt" outline="highway-bolt" stroke="#000000" width="1.5" />
-               <line cat="roam" outline="highway-roam" stroke="#FFFF00" width="3.5" />
-               <line cat="bolt2" outline="bolt2-major-roads" stroke="#FFFF00" width="2.5" />
-               <line cat="bolt2-dark" outline="bolt2-major-roads-dark" stroke="#FFFF00" width="2.5" />
-            </m>
-            <m e="way" k="highway" v="primary_link|trunk_link|motorway_link|primary|trunk" zoom-min="9">
-               <pathText display="always" cat="bolt2" fill="#000000" k="ref" font-family="sans_serif" font-style="bold" priority="2" size="16" stroke="#ffffff" stroke-width="4.0" />
-               <pathText display="always" cat="bolt2-dark-disabled" fill="#000000" k="name" font-family="sans_serif" font-style="bold" priority="2" size="16" stroke="#ffffff" stroke-width="2.0" />
-               <line cat="bolt" outline="highway-bolt" stroke="#000000" width="1.5" />
-               <line cat="roam" outline="highway-roam" stroke="#FFFF00" width="3.5" />
-               <line cat="bolt2" outline="bolt2-major-roads" stroke="#FFAA00" width="2.5" />
-               <line cat="bolt2-dark" outline="bolt2-major-roads-dark" stroke="#FFAA00" width="2.5" />
-            </m>
-            <m e="way" k="highway" v="motorway" zoom-min="12">
-               <pathText display="always" cat="bolt2" fill="#000000" k="ref" font-family="sans_serif" font-style="bold" priority="2" size="16" stroke="#ffffff" stroke-width="4.0" />
-               <pathText display="always" cat="bolt2-dark-disabled" fill="#000000" k="name" font-family="sans_serif" font-style="bold" priority="2" size="16" stroke="#ffffff" stroke-width="2.0" />
-               <line cat="bolt" outline="highway-bolt" stroke="#FFFFFF" width="4" />
-               <line cat="roam" outline="highway-roam" stroke="#FFFF00" width="4" />
-               <line cat="bolt2" outline="bolt2-highway" stroke="#AA5500" width="3.5"/>
-               <line cat="bolt2-dark" outline="bolt2-major-roads-dark" stroke="#AA5500" width="3.5" />
-            </m>
-            <m e="way" k="highway" v="motorway" zoom-min="8" zoom-max="11">
-               <pathText display="always" cat="bolt2" fill="#000000" k="ref" font-family="sans_serif" font-style="bold" priority="2" size="16" stroke="#ffffff" stroke-width="4.0" />
-               <pathText display="always" cat="bolt2-dark-disabled" fill="#000000" k="name" font-family="sans_serif" font-style="bold" priority="2" size="16" stroke="#ffffff" stroke-width="2.0" />
-               <line cat="bolt" outline="highway-bolt" stroke="#FFFFFF" width="4" />
-               <line cat="roam" outline="highway-roam" stroke="#FFFF00" width="4" />
-               <line cat="bolt2" outline="bolt2-highway" stroke="#AA5500" width="4"/>
-               <line cat="bolt2-dark" outline="bolt2-major-roads-dark" stroke="#AA5500" width="4" />
-            </m>
-         </m>
-         <!-- endregion -->
-
          <!-- region tracks -->
          <m cat="trails-osm" k="access" v="-|private">
 
@@ -730,6 +662,74 @@
                <line stroke="#999999" width="1.0" />
             </m>
 
+         </m>
+         <!-- endregion -->
+
+         <!-- region not bridges -->
+         <m k="bridge" v="~|no|false">
+
+            <m e="way" k="highway" v="bridleway" zoom-min="14">
+               <line cat="bolt" outline="highway-bolt" stroke="#FFFFFF" width="1.2" dasharray="10,12" cap="round" />
+               <line cat="roam" outline="highway-roam" stroke="#FFFFFF" width="1.2" dasharray="10,12" cap="round" />
+               <line cat="bolt2" stroke="#FFFFFF" width="1.2" dasharray="10,12" cap="round" />
+               <line cat="bolt2-dark" stroke="#AAAAAA" width="1.2" dasharray="10,12" cap="round" />
+            </m>
+            <m e="way" k="highway" v="service" zoom-min="13">
+               <line cat="bolt" outline="highway-bolt" stroke="#FFFFFF" width="1.3" />
+               <line cat="roam" outline="highway-roam" stroke="#FFFFFF" width="1.3" />
+               <line cat="bolt2" stroke="#FFFFFF" outline="bolt2-minor-roads" width="1.3" />
+               <line cat="bolt2-dark" stroke="#AAAAAA" width="1.3" />
+            </m>
+            <m e="way" k="highway" v="construction" zoom-min="10">
+               <line cat="bolt" outline="highway-bolt" stroke="#FFFFFF" width="1.3" dasharray="15,2" cap="butt" />
+               <line cat="roam" outline="highway-roam" stroke="#FFFFFF" width="1.3" dasharray="15,2" cap="butt" />
+               <line cat="bolt2" stroke="#FF0000" width="2" dasharray="15,2" cap="butt" />
+               <line cat="bolt2-dark" stroke="#AAAAAA" width="1.3" dasharray="15,2" cap="butt" />
+            </m>
+            <m e="way" k="highway" v="residential|living_street|road|unclassified" zoom-min="13">
+               <line cat="bolt" outline="highway-bolt" stroke="#FFFFFF" width="2" />
+               <line cat="roam" outline="highway-roam" stroke="#FFFFFF" width="2" />
+               <line cat="bolt2" stroke="#FFFFFF" outline="bolt2-major-roads" width="1.3" />
+               <line cat="bolt2-dark" stroke="#AAAAAA" width="2" />
+            </m>
+            <m e="way" k="highway" v="residential|living_street|road|unclassified" zoom-min="10" zoom-max="12">
+               <line cat="bolt" stroke="#000000" width="1" />
+               <line cat="roam" stroke="#555555" width="3" />
+               <line cat="bolt2" stroke="#FFFFFF" outline="bolt2-major-roads" width="1.5" />
+               <line cat="bolt2-dark" stroke="#AAAAAA" width="1" />
+            </m>
+            <m e="way" k="highway" v="tertiary|tertiary_link|secondary_link|secondary" zoom-min="9">
+               <pathText display="always" cat="bolt2-disabled" fill="#000000" k="name" font-family="sans_serif" font-style="bold" priority="2" size="16" stroke="#ffffff" stroke-width="2.0" zoom-min="14" />
+               <pathText display="always" cat="bolt2-dark-disabled" fill="#000000" k="name" font-family="sans_serif" font-style="bold" priority="2" size="16" stroke="#ffffff" stroke-width="2.0" zoom-min="14" />
+               <line cat="bolt" outline="highway-bolt" stroke="#000000" width="1.5" />
+               <line cat="roam" outline="highway-roam" stroke="#FFFF00" width="3.5" />
+               <line cat="bolt2" outline="bolt2-major-roads" stroke="#FFFF00" width="2.5" />
+               <line cat="bolt2-dark" outline="bolt2-major-roads-dark" stroke="#FFFF00" width="2.5" />
+            </m>
+            <m e="way" k="highway" v="primary_link|trunk_link|motorway_link|primary|trunk" zoom-min="9">
+               <pathText display="always" cat="bolt2" fill="#000000" k="ref" font-family="sans_serif" font-style="bold" priority="2" size="16" stroke="#ffffff" stroke-width="4.0" />
+               <pathText display="always" cat="bolt2-dark-disabled" fill="#000000" k="name" font-family="sans_serif" font-style="bold" priority="2" size="16" stroke="#ffffff" stroke-width="2.0" />
+               <line cat="bolt" outline="highway-bolt" stroke="#000000" width="1.5" />
+               <line cat="roam" outline="highway-roam" stroke="#FFFF00" width="3.5" />
+               <line cat="bolt2" outline="bolt2-major-roads" stroke="#FFAA00" width="2.5" />
+               <line cat="bolt2-dark" outline="bolt2-major-roads-dark" stroke="#FFAA00" width="2.5" />
+            </m>
+            <m e="way" k="highway" v="motorway" zoom-min="12">
+               <pathText display="always" cat="bolt2" fill="#000000" k="ref" font-family="sans_serif" font-style="bold" priority="2" size="16" stroke="#ffffff" stroke-width="4.0" />
+               <pathText display="always" cat="bolt2-dark-disabled" fill="#000000" k="name" font-family="sans_serif" font-style="bold" priority="2" size="16" stroke="#ffffff" stroke-width="2.0" />
+               <line cat="bolt" outline="highway-bolt" stroke="#FFFFFF" width="4" />
+               <line cat="roam" outline="highway-roam" stroke="#FFFF00" width="4" />
+               <line cat="bolt2" outline="bolt2-highway" stroke="#AA5500" width="3.5"/>
+               <line cat="bolt2-dark" outline="bolt2-major-roads-dark" stroke="#AA5500" width="3.5" />
+            </m>
+            <m e="way" k="highway" v="motorway" zoom-min="8" zoom-max="11">
+               <pathText display="always" cat="bolt2" fill="#000000" k="ref" font-family="sans_serif" font-style="bold" priority="2" size="16" stroke="#ffffff" stroke-width="4.0" />
+               <pathText display="always" cat="bolt2-dark-disabled" fill="#000000" k="name" font-family="sans_serif" font-style="bold" priority="2" size="16" stroke="#ffffff" stroke-width="2.0" />
+               <line cat="bolt" outline="highway-bolt" stroke="#FFFFFF" width="4" />
+               <line cat="roam" outline="highway-roam" stroke="#FFFF00" width="4" />
+               <line cat="bolt2" outline="bolt2-highway" stroke="#AA5500" width="4"/>
+               <line cat="bolt2-dark" outline="bolt2-major-roads-dark" stroke="#AA5500" width="4" />
+            </m>
          </m>
          <!-- endregion -->
 
