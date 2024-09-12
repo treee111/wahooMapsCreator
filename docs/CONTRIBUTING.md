@@ -138,10 +138,10 @@ git-chglog -o CHANGELOG.md --next-tag v0.10.0
 ```
 
 ### PyPI commands
-1. Change the version in setup.cfg and gdal-user.yml
+1. Change the version in `setup.cfg`, `constants.py` and `gdal-user.yml`
 2. Build a new release to publish to PyPI:  
 ```
-py -m build
+python -m build
 ```
 3. Publish these files to PyPI:  
 ```
