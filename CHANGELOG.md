@@ -4,7 +4,29 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-A list of unreleased changes can be found [here](https://github.com/treee111/wahooMapsCreator/compare/v4.1.1...HEAD).
+A list of unreleased changes can be found [here](https://github.com/treee111/wahooMapsCreator/compare/v4.2.0...HEAD).
+
+<a name="4.2.0"></a>
+## [4.2.0] - 2024-09-12
+### Features
+- Add logging of timing for total time, each main section and for each tile generation step ([#225](https://github.com/treee111/wahooMapsCreator/issues/225)) [`e5baae0`](https://github.com/treee111/wahooMapsCreator/commit/e5baae02758f16588fb3ced857dec1928120c149)
+- Use proper tool name in error message, reference Osmium or osmconvert ([#232](https://github.com/treee111/wahooMapsCreator/issues/232)) [`41fdbf7`](https://github.com/treee111/wahooMapsCreator/commit/41fdbf7be4e18d923258b8796d16707de211e675)
+
+### Bug Fixes
+- include elevation data only if requested by the user, i.e. if `-con` is given ([#223](https://github.com/treee111/wahooMapsCreator/issues/223)) [`4b53962`](https://github.com/treee111/wahooMapsCreator/commit/4b53962cddbd3a3aa2ed1d312e3a396ff9a93489)
+- Return error code of failed subprocess instead of success (which is the default) ([#254](https://github.com/treee111/wahooMapsCreator/issues/254)) [`85b8617`](https://github.com/treee111/wahooMapsCreator/commit/85b86176c7b74f5ef35ef6e147eeb2106b9c9b84)
+- Draw highways/streets over paths in VTM theme ([#250](https://github.com/treee111/wahooMapsCreator/issues/250)) [`083f247`](https://github.com/treee111/wahooMapsCreator/commit/083f247ba23bfa0dfb4d283ffb3f177e87130faf)
+- Fix invalid color for bolt2-track-raw-cycle ways in VTM theme ([#242](https://github.com/treee111/wahooMapsCreator/issues/242)) [`494b772`](https://github.com/treee111/wahooMapsCreator/commit/494b7728dfdc8bdce71cc7e938cb5936e0b28083)
+
+### Development/Infrastructure/Test/CI
+- Fix unittests ([#222](https://github.com/treee111/wahooMapsCreator/issues/222)) [`04f09ac`](https://github.com/treee111/wahooMapsCreator/commit/04f09ac4dcd24c26e27bba278196e66ed4918b35)
+- remove deprecated linting settings ([#226](https://github.com/treee111/wahooMapsCreator/issues/226)) [`199a13e`](https://github.com/treee111/wahooMapsCreator/commit/199a13ee9cb9d5216f9bca6594d457fda9090b2a)
+- move OsmData classes from osm_maps_functions.py to osm_data.py ([#233](https://github.com/treee111/wahooMapsCreator/issues/233)) [`ad2828e`](https://github.com/treee111/wahooMapsCreator/commit/ad2828edbad9e21288f8b1fc7c5edb4a5add45ec)
+- Update dependencies osmosis and mapwriter plugin incl. documenation ([#236](https://github.com/treee111/wahooMapsCreator/issues/236)) [`f15aa86`](https://github.com/treee111/wahooMapsCreator/commit/f15aa860050a5d3f77af75904b20ee9ee01f56e4)
+- unify logging of searching for needed maps [`26a7eaf`](https://github.com/treee111/wahooMapsCreator/commit/26a7eaf19fb4821d096464584285c3bee22ac751)
+- update dependency mapwriter plugin from 0.20.0 to 0.21.0 ([#255](https://github.com/treee111/wahooMapsCreator/issues/255)) [`c39294f`](https://github.com/treee111/wahooMapsCreator/commit/c39294fe7bcf2b9c2160e16ff94b37b305b87013)
+- Update osmium-tool in developer env [`d817bc7`](https://github.com/treee111/wahooMapsCreator/commit/d817bc7e54f48bd059baca977d9b4bcf1233f0ba)
+
 
 <a name="4.1.1"></a>
 ## [4.1.1] - 2023-11-17
@@ -451,6 +473,7 @@ wahooMapsCreator can now be used much quicker and easier!
     - Windows:    `tooling_windows/Windows-Wahoo-Map-Creator-Osmosis/wahoo-map-creator-osmosis.py`
 
 
+[4.2.0]: https://github.com/treee111/wahooMapsCreator/compare/v4.1.1...v4.2.0
 [4.1.1]: https://github.com/treee111/wahooMapsCreator/compare/v4.1.0...v4.1.1
 [4.1.0]: https://github.com/treee111/wahooMapsCreator/compare/v4.0.2...v4.1.0
 [4.0.2]: https://github.com/treee111/wahooMapsCreator/compare/v4.0.1...v4.0.2
