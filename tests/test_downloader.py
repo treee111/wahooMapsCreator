@@ -185,7 +185,7 @@ class TestDownloader(unittest.TestCase):
         """
         if platform.system() != "Windows":
             path = os.path.join(str(constants.USER_DIR), '.openstreetmap', 'osmosis',
-                                'plugins', 'mapsforge-map-writer-0.20.0-jar-with-dependencies.jar')
+                                'plugins', 'mapsforge-map-writer-0.21.0-jar-with-dependencies.jar')
 
             if os.path.exists(path):
                 os.remove(path)
