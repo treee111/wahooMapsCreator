@@ -13,8 +13,8 @@ import sys
 import pkg_resources
 
 # import custom python packages
-from wahoomc.file_directory_functions import move_content, write_json_file_generic, \
-    read_json_file_generic, delete_o5m_pbf_files_in_folder, copy_or_move_files_and_folder
+from wahoomc.file_directory_functions import write_json_file_generic, \
+    read_json_file_generic, copy_or_move_files_and_folder
 from wahoomc.constants_functions import get_tooling_win_path, get_absolute_dir_user_or_repo
 from wahoomc.downloader import get_latest_pypi_version
 
@@ -43,9 +43,9 @@ def initialize_work_directories():
 
 def adjustments_due_to_breaking_changes():
     """
-    copy files from download- and output- directory of earlier version to the new folders
+    handle breaking changes
     """
-    version_last_run = read_version_last_run()
+    version_last_run = read_version_last_run() # pylint: disable=unused-variable
 
 
 def check_installation_of_required_programs():
