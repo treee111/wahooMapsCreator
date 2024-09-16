@@ -13,8 +13,8 @@ import sys
 import pkg_resources
 
 # import custom python packages
-from wahoomc.file_directory_functions import move_content, write_json_file_generic, \
-    read_json_file_generic, delete_o5m_pbf_files_in_folder, copy_or_move_files_and_folder
+from wahoomc.file_directory_functions import write_json_file_generic, \
+    read_json_file_generic, copy_or_move_files_and_folder
 from wahoomc.constants_functions import get_tooling_win_path, get_absolute_dir_user_or_repo
 from wahoomc.downloader import get_latest_pypi_version
 
@@ -41,43 +41,11 @@ def initialize_work_directories():
     os.makedirs(USER_CONFIG_DIR, exist_ok=True)
 
 
-def move_old_content_into_new_dirs():
-    """
-    copy files from download- and output- directory of earlier version to the new folders
-    delete directory from earlier versions afterwards
-
-    having folder on the same level as the wahooMapsCreator was introduces in release v1.1.0 with PR #93.
-    This coding is only valid/needed when using the cloned version or .zip version.
-    If working with a installed version via PyPI, nothing will be done because folders to copy do not exist
-    """
-    move_content('wahooMapsCreator_download', USER_DL_DIR)
-    move_content('wahooMapsCreator_output', USER_OUTPUT_DIR)
-
-
 def adjustments_due_to_breaking_changes():
     """
-    copy files from download- and output- directory of earlier version to the new folders
+    handle breaking changes
     """
-    version_last_run = read_version_last_run()
-
-    # file-names of filteres country files were uniformed in #153.
-    # due to that old files are sometimes no longer accessed and files in the _tiles folder are deleted here.
-    if version_last_run is None or \
-            pkg_resources.parse_version(VERSION) <= pkg_resources.parse_version('2.0.2'):
-        log.info(
-            'Last run was with version %s, deleting files of %s directory due to breaking changes.', version_last_run, USER_OUTPUT_DIR)
-        delete_o5m_pbf_files_in_folder(USER_OUTPUT_DIR)
-
-    # file-names of downloaded .osm.pbf raw mapfiles was adjusted in #182 to focus on geofabrik naming
-    # other existing files may therefor not be accessed anymore in the future and therefore deleted
-    if version_last_run is None or \
-            pkg_resources.parse_version(VERSION) < pkg_resources.parse_version('4.0.0a0'):
-        log.info(
-            'Last run was with version %s, deleting files of %s directory due to breaking changes.', version_last_run, USER_MAPS_DIR)
-        delete_o5m_pbf_files_in_folder(USER_MAPS_DIR)
-        log.info(
-            'Last run was with version %s, deleting files of %s directory due to breaking changes.', version_last_run, USER_OUTPUT_DIR)
-        delete_o5m_pbf_files_in_folder(USER_OUTPUT_DIR)
+    version_last_run = read_version_last_run() # pylint: disable=unused-variable
 
 
 def check_installation_of_required_programs():
