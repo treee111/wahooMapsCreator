@@ -102,9 +102,9 @@ def check_installation_of_programs_credentials_for_contour_lines():
                     \nPlease refer to the Quickstart Guide of wahooMapsCreator for instructions:\n- https://github.com/treee111/wahooMapsCreator/blob/develop/docs/QUICKSTART_ANACONDA.md#additional-programs-for-generating-contour-lines \
                     \nor create an issue:\n- https://github.com/treee111/wahooMapsCreator/issues"
 
-    if not is_program_installed("phyghtmap"):
+    if not is_program_installed("pyhgtmap"):
         sys.exit(
-            f"phyghtmap is not installed. {text_to_docu}")
+            f"pyhgtmap is not installed. {text_to_docu}")
 
     username, password = read_earthexplorer_credentials()
 
