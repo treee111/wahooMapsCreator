@@ -131,6 +131,19 @@ def delete_o5m_pbf_files_in_folder(folder):
                 pass
 
 
+def delete_all_files_in_folder(folder):
+    """
+    delete all files ald directories of given folder
+    """
+    files_and_folders = list(os.listdir(folder)) # [f for f in os.listdir(folder)]
+
+    for file in files_and_folders:
+        try:
+            os.remove(os.path.join(folder, file))
+        except OSError:
+            pass
+
+
 def copy_or_move_files_and_folder(from_path, to_path, delete_from_dir=False):
     """
     copy content from source directory to destination directory
