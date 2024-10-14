@@ -44,9 +44,9 @@ https://www.java.com/de/download/
 2. Install `Java Runtime Environment` with default settings
 
 ### OpenJDK:
-1. Download `OpenJDK` build file for your OS and unzip
+1. Download latest `OpenJDK` build file for your OS and unzip
 
-https://jdk.java.net/19/
+https://jdk.java.net
 
 2. Move the folder to the appropriate directory
 * macOS: `/Library/Java/JavaVirtualMachines/`
