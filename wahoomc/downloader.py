@@ -138,8 +138,12 @@ def download_tooling():
             download_file(get_tooling_win_path('osmfilter.exe', in_user_dir=True),
                           'http://m.m.i24.cc/osmfilter.exe')
 
-        mapwriter_plugin_path = os.path.join(USER_TOOLING_WIN_DIR,
-                                             'Osmosis', 'lib', 'default', map_writer_filename)
+        # it seams, that as of Osmosis version 0.49.0 or at least in 0.49.2
+        # the old mapwriter plugin location does not work anymore.
+        # until v0.48.3, the location c:\Users\<username>\wahooMapsCreatorData\Osmosis\lib\default worked
+        # since v0.49.0, the location c:\Users\<username>\AppData\Roaming\Openstreetmap\Osmosis\Plugins\ works
+        mapwriter_plugin_path = os.path.join(
+            str(USER_DIR), 'AppData', 'Roaming', 'Openstreetmap', 'Osmosis', 'Plugins', map_writer_filename)
 
     # Non-Windows
     else:
