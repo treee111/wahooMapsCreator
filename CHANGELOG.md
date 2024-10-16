@@ -4,7 +4,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-A list of unreleased changes can be found [here](https://github.com/treee111/wahooMapsCreator/compare/v4.2.0...HEAD).
+A list of unreleased changes can be found [here](https://github.com/treee111/wahooMapsCreator/compare/v4.3.0...HEAD).
+
+<a name="4.3.0"></a>
+## [4.3.0] - 2024-10-16
+### Features
+- remove coding handling breaking changes and unused function ([#256](https://github.com/treee111/wahooMapsCreator/issues/256)) [`43e07b4`](https://github.com/treee111/wahooMapsCreator/commit/43e07b4ffb0517eed5d53b9177c0d7dd76b8e8a3)
+
+### Bug Fixes
+- make mapwriter download URL OS independent [`e5d19bd`](https://github.com/treee111/wahooMapsCreator/commit/e5d19bdc52c322910635dfb55bb6a19040cc3e63)
+- **Windows:** Download Osmosis into in `Osmosis` and not into subfolder, example `Osmosis/osmosis-0.49.2` ([#261](https://github.com/treee111/wahooMapsCreator/issues/261)) [`913d12d`](https://github.com/treee111/wahooMapsCreator/commit/913d12d1248c50348543646db63abf2b2cf061e3)
+- **Windows:** adjust location of mapwriter plugin ([#262](https://github.com/treee111/wahooMapsCreator/issues/262)) [`cebf925`](https://github.com/treee111/wahooMapsCreator/commit/cebf92573c429f52ee0684e06f93a29010c36b21)
+
+### Development/Infrastructure/Test/CI
+- Create LICENSE file ([#257](https://github.com/treee111/wahooMapsCreator/issues/257)) [`827f464`](https://github.com/treee111/wahooMapsCreator/commit/827f464c60652d2f3c11f47236703a9cea4f44ee)
+
 
 <a name="4.2.0"></a>
 ## [4.2.0] - 2024-09-12
@@ -473,6 +487,7 @@ wahooMapsCreator can now be used much quicker and easier!
     - Windows:    `tooling_windows/Windows-Wahoo-Map-Creator-Osmosis/wahoo-map-creator-osmosis.py`
 
 
+[4.3.0]: https://github.com/treee111/wahooMapsCreator/compare/v4.2.0...v4.3.0
 [4.2.0]: https://github.com/treee111/wahooMapsCreator/compare/v4.1.1...v4.2.0
 [4.1.1]: https://github.com/treee111/wahooMapsCreator/compare/v4.1.0...v4.1.1
 [4.1.0]: https://github.com/treee111/wahooMapsCreator/compare/v4.0.2...v4.1.0
