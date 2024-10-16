@@ -133,7 +133,7 @@ def delete_o5m_pbf_files_in_folder(folder):
 
 def delete_everything_in_folder(folder):
     """
-    delete all files ald directories of given folder
+    delete all files and directories of given folder
     """
     files_and_folders = list(os.listdir(folder)) # [f for f in os.listdir(folder)]
 

@@ -47,12 +47,10 @@ def adjustments_due_to_breaking_changes():
     """
     version_last_run = read_version_last_run() # pylint: disable=unused-variable
 
-    # Osmosis in v.0.49.2 seams not to be working on WINDOWS since now
+    # Osmosis in v.0.49.2 seams not to be working on WINDOWS since the upgrade to v0.49.2
     # - due to the path into it was downloaded, 'tooling_win/Osmosis/osmosis-0.49.2'
     #                                   and not 'tooling_win/Osmosis'
-    # - due to behaviour of reading/using plugins in v0.49.2 that seams not to be compatible
-    #   of using any plugins and in particular the mapwriter plugin
-    # due to that all Windows tooling files deleted here.
+    # - to cleanup, tooling_win/ dir files and folders are deleted here.
     if (version_last_run is None or \
             pkg_resources.parse_version(VERSION) <= pkg_resources.parse_version('4.2.1')) and \
             platform.system() == "Windows":
