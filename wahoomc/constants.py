@@ -26,7 +26,7 @@ RESOURCES_DIR = os.path.join(WAHOO_MC_DIR, 'resources')
 TOOLING_WIN_DIR = os.path.join(WAHOO_MC_DIR, 'tooling_win')
 # location of repo / python installation - not used
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
-VERSION = '4.2.1a1'
+VERSION = '4.2.1a4'
 
 
 block_download = ['dach', 'alps', 'britain-and-ireland', 'south-africa-and-lesotho',
