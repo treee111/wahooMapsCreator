@@ -13,7 +13,7 @@ import sys
 import pkg_resources
 
 # import custom python packages
-from wahoomc.file_directory_functions import delete_all_files_in_folder, write_json_file_generic, \
+from wahoomc.file_directory_functions import delete_everything_in_folder, write_json_file_generic, \
     read_json_file_generic, copy_or_move_files_and_folder
 from wahoomc.constants_functions import get_tooling_win_path, get_absolute_dir_user_or_repo
 from wahoomc.downloader import get_latest_pypi_version
@@ -58,7 +58,7 @@ def adjustments_due_to_breaking_changes():
             platform.system() == "Windows":
         log.info(
             'Last run was with version %s, deleting Windows Tooling files of %s directory due to possible bad files.', version_last_run, USER_TOOLING_WIN_DIR)
-        delete_all_files_in_folder(USER_TOOLING_WIN_DIR)
+        delete_everything_in_folder(USER_TOOLING_WIN_DIR)
 
 
 def check_installation_of_required_programs():
