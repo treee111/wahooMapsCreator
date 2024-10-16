@@ -131,7 +131,7 @@ def delete_o5m_pbf_files_in_folder(folder):
                 pass
 
 
-def delete_all_files_in_folder(folder):
+def delete_everything_in_folder(folder):
     """
     delete all files ald directories of given folder
     """
@@ -139,7 +139,14 @@ def delete_all_files_in_folder(folder):
 
     for file in files_and_folders:
         try:
-            os.remove(os.path.join(folder, file))
+            file_or_dir = os.path.join(folder, file)
+            # file or dir?
+            if os.path.isfile(file_or_dir):
+                # delete file
+                os.remove(file_or_dir)
+            else:
+                # delete directory if exists. copytree fails if dir exists already
+                shutil.rmtree(file_or_dir)
         except OSError:
             pass
 
