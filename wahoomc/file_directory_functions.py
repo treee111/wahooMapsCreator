@@ -131,6 +131,26 @@ def delete_o5m_pbf_files_in_folder(folder):
                 pass
 
 
+def delete_everything_in_folder(folder):
+    """
+    delete all files and directories of given folder
+    """
+    files_and_folders = list(os.listdir(folder)) # [f for f in os.listdir(folder)]
+
+    for file in files_and_folders:
+        try:
+            file_or_dir = os.path.join(folder, file)
+            # file or dir?
+            if os.path.isfile(file_or_dir):
+                # delete file
+                os.remove(file_or_dir)
+            else:
+                # delete directory if exists. copytree fails if dir exists already
+                shutil.rmtree(file_or_dir)
+        except OSError:
+            pass
+
+
 def copy_or_move_files_and_folder(from_path, to_path, delete_from_dir=False):
     """
     copy content from source directory to destination directory

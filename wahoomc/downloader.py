@@ -61,7 +61,10 @@ def download_file(target_filepath, url, target_dir=""):
             target_path = USER_DL_DIR
 
         # unpack it
-        unzip(dl_file_path, target_path)
+        if os.path.basename(target_dir) == 'Osmosis':
+            unzip_ignore_first_dir(dl_file_path, target_path)
+        else:
+            unzip(dl_file_path, target_path)
 
         os.remove(dl_file_path)
     else:
@@ -192,6 +195,27 @@ def unzip(source_filename, dest_dir):
     """
     with zipfile.ZipFile(source_filename, 'r') as zip_ref:
         zip_ref.extractall(dest_dir)
+
+
+def unzip_ignore_first_dir(source_filename, dest_dir):
+    """
+    unzip the given file into the given directory without the first directory.
+    made because of Osmosis was unzipped to Osmosis/osmosis-0.49.2
+    """
+    first_dir_processed = False
+    with zipfile.ZipFile(source_filename) as zip_file:
+        for zip_info in zip_file.infolist():
+            if zip_info.is_dir() and not first_dir_processed:
+                # ignore first dir in zip. for osmosis, this is 'osmosis-0.49.2' as of 14.10.2024
+                first_dir_processed = True
+                continue
+
+            # cut out first part of the dir. for osmosis, this is 'osmosis-0.49.2' as of 14.10.2024
+            dir_without_first_part = zip_info.filename.split('/', 1)[1]
+
+            # set name where to save to the newly created dir name
+            zip_info.filename = dir_without_first_part
+            zip_file.extract(zip_info, dest_dir)
 
 
 class Downloader:
