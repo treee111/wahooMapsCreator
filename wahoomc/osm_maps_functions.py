@@ -493,15 +493,18 @@ class OsmMaps:
                     cmd.append('--merge')
 
                     loop += 1
-
+            
+            loop = 0
             for land in land_files:
                 cmd.extend(
                     ['--rx', 'file='+land, '--s'])
-
+                if loop > 0:
+                       cmd.append('--m')
+                loop += 1
             if contour:
                 for elevation in elevation_files:
                     cmd.extend(
-                        ['--rx', 'file='+elevation, '--s'])
+                        ['--rx', 'file='+elevation, '--s', '--m'])
 
             cmd.extend(
                 ['--rx', 'file='+os.path.join(out_tile_dir, 'sea.osm'), '--s', '--m'])
