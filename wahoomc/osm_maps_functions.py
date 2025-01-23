@@ -493,13 +493,13 @@ class OsmMaps:
                     cmd.append('--merge')
 
                     loop += 1
-            
+
             loop = 0
             for land in land_files:
                 cmd.extend(
                     ['--rx', 'file='+land, '--s'])
                 if loop > 0:
-                       cmd.append('--m')
+                    cmd.append('--m')
                 loop += 1
             if contour:
                 for elevation in elevation_files:
