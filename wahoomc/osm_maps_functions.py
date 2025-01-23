@@ -496,12 +496,12 @@ class OsmMaps:
 
             for land in land_files:
                 cmd.extend(
-                    ['--rx', 'file='+land, '--s', '--m'])
+                    ['--rx', 'file='+land, '--s'])
 
             if contour:
                 for elevation in elevation_files:
                     cmd.extend(
-                        ['--rx', 'file='+elevation, '--s', '--m'])
+                        ['--rx', 'file='+elevation, '--s'])
 
             cmd.extend(
                 ['--rx', 'file='+os.path.join(out_tile_dir, 'sea.osm'), '--s', '--m'])
