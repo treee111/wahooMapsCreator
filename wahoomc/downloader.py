@@ -332,7 +332,9 @@ class Downloader:
         for country in self.border_countries:
             # check for already existing .osm.pbf file
             map_file_path = glob.glob(
-                f'{USER_MAPS_DIR}/{country}-latest.osm.pbf')
+                build_osm_pbf_filepath(country))
+            log.debug(
+                ' Checking for map at filepath: %s',map_file_path[0])
             if len(map_file_path) != 1:
                 map_file_path = glob.glob(
                     f'{USER_MAPS_DIR}/**/{country}-latest.osm.pbf')
