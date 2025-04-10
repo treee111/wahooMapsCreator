@@ -37,6 +37,7 @@ https://developer.android.com/studio/releases/platform-tools
 ## Authorize Wahoo device
 The Wahoo device must be authorized for ADB to be reachable from Windows and macOS. ADB authorization works different per Wahoo device and is decribed now.
 
+**BOLT v1, ROAMv1, ELEMNT, BOLT v2, ROAMv2**
 1. disconnect device from your computer
 2. turn the device on
 3. press keys on device
@@ -46,6 +47,13 @@ The Wahoo device must be authorized for ADB to be reachable from Windows and mac
    * **BOLT v2, ROAMv2**
      * press the power, up and down buttons at the same time
 4. connect the device to your pc
+
+**ACE**
+1. connect device to your computer with usb cable
+2. press keys on device
+   * press the power button and the volume down at the same time, do it a couple of times to make sure
+3. unplug the usb cable from your computer
+4. connect the usb cable to your computer again
 
 Successful authorization can be tested via terminal / cmd:
 ```
