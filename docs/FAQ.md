@@ -5,6 +5,7 @@
   - [I have a Java error. "Java heap space - out of memory"](#i-have-a-java-error-java-heap-space---out-of-memory)
   - [I have a Osmosis error. "Task type mw doesn't exist"](#i-have-a-osmosis-error-task-type-mw-doesnt-exist)
   - [How can I migrate from v3.x.x to v4.x.x?](#how-can-i-migrate-from-v3xx-to-v4xx)
+  - [Is there a way to use wahooMapsCreator without installing Anaconda and the other software directly on OS level?](#is-there-a-way-to-use-wahoomapscreator-without-installing-anaconda-and-the-other-software-directly-on-os-level)
 - [Generated maps](#generated-maps)
   - [Where on my Wahoo device do I have to copy the maps?](#where-on-my-wahoo-device-do-i-have-to-copy-the-maps)
   - [How can I restore original maps?](#how-can-i-restore-original-maps)
@@ -64,6 +65,11 @@ conda create -n gdal-user python=3.10 geojson=2.5 gdal=3.6 requests=2.28 shapely
 conda activate gdal-user
 pip install wahoomc
 ```
+
+### Is there a way to use wahooMapsCreator without installing Anaconda and the other software directly on OS level?
+The process of setting up the environment for creating your individual maps with wahooMapsCreator is way easier as it was before. Before, many manual steps have been involved, taking care of certain versions of tools to be OK with each other and configs around the OS.
+
+You can give the docker version of wahooMapsCreator a try: https://github.com/vti/wahooMapsCreator-docker, it is kind of a A standalone package without having to install stuff on OS level.
 
 ## Generated maps
 ### Where on my Wahoo device do I have to copy the maps?
