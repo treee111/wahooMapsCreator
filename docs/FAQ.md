@@ -105,15 +105,16 @@ Generating Routing tiles are not covered in this repo.
 ### Are there already generated maps available for download?
 On this OneDrive, you'll find already generated maps for download: http://wahoomaps.higli.de/ .
 
-The content of these maps are slightly different from what you create with the default settings of wahooMapsCreator. Other than that this might be a good starting point to tryout and get them on your device. By customizing the settings you can then create your individual maps with wahooMapsCreator.
+The content of these maps are slightly different from what you create with the default settings of wahooMapsCreator. Other than that this might be a good starting point to tryout and get them on your device and see what can be achieved.
 
-Base map tiles could also be downloaded from Wahoo update server (url: https://cdn.wahooligan.com/wahoo-maps/{version}/tiles/{zoom}/{x}/{y}.map.lzma; latest map version = 12, zoom level =8, x, y = map tile index/coordinates) but these might be outdated.
+By customizing the wahooMapsCreator settings and configuration you can than create your individual maps with wahooMapsCreator.
+
+Base map tiles could also be downloaded from Wahoo update server (url: https://cdn.wahooligan.com/wahoo-maps/{version}/tiles/{zoom}/{x}/{y}.map.lzma; latest map version = 12, zoom level =8, x, y = map tile index/coordinates) but these are relatively old.
 
 ### Are there already generated routing tiles available for download?
-Routing tiles can be downloaded from http://wahoomaps.higli.de/ . Download the <country>-routing.zip file for the countries of your choice and copy the content under the `maps/routing` directory on your wahoo device.
+Current routing tiles can be downloaded from http://wahoomaps.higli.de/. Download the <country>-routing.zip file for the countries of your choice and copy the content under the `maps/routing` directory on your wahoo device.
 
-Rouging tiles could also be downloaded from Wahoo update server, see [documentation](./HOWTO_ADD_ROUTING_TILES_MANUALLY.MD#option-c-download-from-wahoo-update-server) but these might be outdated.
-
+Routing tiles could also be downloaded from Wahoo update server, see [documentation](./HOWTO_ADD_ROUTING_TILES_MANUALLY.MD#option-c-download-from-wahoo-update-server) but these are relatively old.
 
 Examplary the germany routing tiles would be stored in `maps/routing/2/000/...`. More details can be accessed [here](./HOWTO_ADD_ROUTING_TILES_MANUALLY.MD#directory-hierarchy-in-wahoo-elelmnt-roam-device)
 
