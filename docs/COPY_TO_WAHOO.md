@@ -6,6 +6,8 @@
   - [Tools to copy maps onto your Wahoo](#tools-to-copy-maps-onto-your-wahoo)
   - [Install ADB](#install-adb)
   - [Authorize Wahoo device](#authorize-wahoo-device)
+    - [BOLT v1, ROAMv1, ELEMNT, BOLT v2, ROAMv2](#bolt-v1-roamv1-elemnt-bolt-v2-roamv2)
+    - [ACE](#ace)
   - [Copy map files](#copy-map-files)
   - [Copy device theme](#copy-device-theme)
 - [POIs](#pois)
@@ -37,6 +39,7 @@ https://developer.android.com/studio/releases/platform-tools
 ## Authorize Wahoo device
 The Wahoo device must be authorized for ADB to be reachable from Windows and macOS. ADB authorization works different per Wahoo device and is decribed now.
 
+### BOLT v1, ROAMv1, ELEMNT, BOLT v2, ROAMv2
 1. disconnect device from your computer
 2. turn the device on
 3. press keys on device
@@ -46,6 +49,15 @@ The Wahoo device must be authorized for ADB to be reachable from Windows and mac
    * **BOLT v2, ROAMv2**
      * press the power, up and down buttons at the same time
 4. connect the device to your pc
+
+### ACE
+1. connect device to your computer with usb cable
+2. press keys on device
+   * press and hold the zoom out (lower) button and repeatedly shortly press the power button
+   * release both buttons
+3. Do 2. a couple of times for a greater chance of success
+4. unplug the usb cable from your computer
+5. connect the usb cable to your computer again
 
 Successful authorization can be tested via terminal / cmd:
 ```
