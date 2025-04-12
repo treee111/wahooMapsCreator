@@ -12,6 +12,7 @@
   - [Can I preview my generated maps before putting them onto the Wahoo device?](#can-i-preview-my-generated-maps-before-putting-them-onto-the-wahoo-device)
   - [Does device/offline routing functionality use the new roads?](#does-deviceoffline-routing-functionality-use-the-new-roads)
   - [Are there already generated maps available for download?](#are-there-already-generated-maps-available-for-download)
+  - [Are there already generated routing tiles available for download?](#are-there-already-generated-routing-tiles-available-for-download)
 - [Device theme](#device-theme)
   - [How can I restore original rendering layout?](#how-can-i-restore-original-rendering-layout)
 - [Connection from Wahoo device to computer](#connection-from-wahoo-device-to-computer)
@@ -99,14 +100,23 @@ The device routing (synonym: offline routing) functionality is provided through 
 
 Without updating the routing tiles in addition to updating the generated map files, device routing of your device will not route you over the newly added roads in the maps. The reason is: The old routing tiles simply do not know about there existence.
 
-Routing tiles are not covered in this repo for self generation but can be downloaded from http://wahoomaps.higli.de/ . Download the <country>-routing.zip file for the countries of your choice and copy the content under the `maps/routing` directory on your wahoo device.
-
-Examplary the germany routing tiles would be stored in `maps/routing/2/000/...` .
+Generating Routing tiles are not covered in this repo.
 
 ### Are there already generated maps available for download?
 On this OneDrive, you'll find already generated maps for download: http://wahoomaps.higli.de/ .
 
-The content of these maps are slightly different from what you create with the default settings of wahooMapsCreator. Other than that this might be a good starting point to tryout and get them on your device. By customizing the settings you can then create your individual maps with wahooMapsCreator. 
+The content of these maps are slightly different from what you create with the default settings of wahooMapsCreator. Other than that this might be a good starting point to tryout and get them on your device and see what can be achieved.
+
+By customizing the wahooMapsCreator settings and configuration you can than create your individual maps with wahooMapsCreator.
+
+Base map tiles could also be downloaded from Wahoo update server (url: https://cdn.wahooligan.com/wahoo-maps/{version}/tiles/{zoom}/{x}/{y}.map.lzma; latest map version = 12, zoom level =8, x, y = map tile index/coordinates) but these are relatively old.
+
+### Are there already generated routing tiles available for download?
+Current routing tiles can be downloaded from http://wahoomaps.higli.de/. Download the <country>-routing.zip file for the countries of your choice and copy the content under the `maps/routing` directory on your wahoo device.
+
+Routing tiles could also be downloaded from Wahoo update server, see [documentation](./HOWTO_ADD_ROUTING_TILES_MANUALLY.MD#option-c-download-from-wahoo-update-server) but these are relatively old.
+
+Examplary the germany routing tiles would be stored in `maps/routing/2/000/...`. More details can be accessed [here](./HOWTO_ADD_ROUTING_TILES_MANUALLY.MD#directory-hierarchy-in-wahoo-elelmnt-roam-device)
 
 ## Device theme
 ### How can I restore original rendering layout?
