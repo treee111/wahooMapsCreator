@@ -73,10 +73,10 @@ class GeofabrikJson:
                     'pbf_url': pbf_url}
                 geofabrik_regions.append(id_no)
 
-        
+
         geofabrik_regions = list(dict.fromkeys(geofabrik_regions))
         try:
-            geofabrik_regions.remove('us/california')        
+            geofabrik_regions.remove('us/california')
         except ValueError:
             pass
         geofabrik_regions.sort()
