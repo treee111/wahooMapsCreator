@@ -63,6 +63,8 @@ class GeofabrikJson:
                     'parent': parent,
                     'pbf_url': pbf_url,
                     'geometry': feature.geometry}
+                # Add the parent region of every map/region to the list of regions
+                geofabrik_regions.append(parent)
             except KeyError:
                 geofabrik_overview[id_no] = {
                     'pbf_url': pbf_url,
@@ -70,6 +72,14 @@ class GeofabrikJson:
                 geofabrik_region_overview[id_no] = {
                     'pbf_url': pbf_url}
                 geofabrik_regions.append(id_no)
+
+        
+        geofabrik_regions = list(dict.fromkeys(geofabrik_regions))
+        try:
+            geofabrik_regions.remove('us/california')        
+        except ValueError:
+            pass
+        geofabrik_regions.sort()
 
         return raw_json, geofabrik_overview, geofabrik_region_overview, geofabrik_regions
 

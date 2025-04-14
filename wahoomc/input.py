@@ -339,9 +339,9 @@ class ComboboxesEntryField(tk.Frame):  # pylint: disable=too-many-instance-attri
 
         # Labels
         self.lab_top = tk.Label(
-            self, text="Select continent and country to create a map")
-        self.lab_continent = tk.Label(self, text="Select continent:")
-        self.lab_country = tk.Label(self, text='Select country:')
+            self, text="Select continent/country and country/region to create a map")
+        self.lab_continent = tk.Label(self, text="Select continent/country:")
+        self.lab_country = tk.Label(self, text='Select country/region:')
 
         # Comboboxes
         self.cb_continent = ttk.Combobox(
