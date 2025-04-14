@@ -5,6 +5,7 @@ functions and object for managing OSM maps
 
 # import official python packages
 from datetime import datetime
+import asyncio
 import glob
 import multiprocessing
 import os
@@ -59,6 +60,41 @@ def run_subprocess_and_log_output(cmd, error_message, cwd=""):
         log.debug('subprocess debug output:')
         log.debug(process.stdout)
 
+async def run_async_subprocess_and_log_output(semaphore, cmd, args, error_message, cwd=""):
+    """
+    run given cmd-subprocess and issue error message if wished
+    """
+    async with semaphore:
+        process = await asyncio.create_subprocess_exec(
+#        create_subprocess_shell,
+            cmd,
+            *args,
+            stdout=asyncio.subprocess.PIPE,
+            stderr=asyncio.subprocess.PIPE)
+
+        stdout, stderr = await process.communicate()
+
+#    if not cwd:
+#        process = subprocess.run(
+#            cmd, capture_output=True, text=True, encoding="utf-8", check=False)
+#
+#    else:
+#        process = subprocess.run(  # pylint: disable=consider-using-with
+#            cmd, capture_output=True, cwd=cwd, text=True, encoding="utf-8", check=False)
+
+
+        if error_message and process.returncode != 0:  # 0 means success
+            log.error('subprocess error output:')
+            if process.stderr:
+                log.error(process.stderr)
+
+            log.error(error_message)
+            sys.exit()
+
+        elif process.stdout:
+            log.debug('subprocess debug output:')
+            log.debug(process.stdout)
+
 
 def get_timestamp_last_changed(file_path):
     """
@@ -84,125 +120,71 @@ class OsmMaps:
         create_empty_directories(
             USER_OUTPUT_DIR, self.o_osm_data.tiles, self.o_osm_data.border_countries)
 
-    def filter_tags_from_country_osm_pbf_files(self):  # pylint: disable=too-many-statements
+    async def filter_tags_from_country_osm_pbf_files(self):  # pylint: disable=too-many-statements
         """
         Filter tags from country osm.pbf files
         """
 
         log.info('-' * 80)
         log.info('# Filter tags from country osm.pbf files')
+        tasks = set()
         timings = Timings()
+        semaphore = asyncio.Semaphore(31)
         for key, val in self.o_osm_data.border_countries.items():
             # evaluate contry directory, create if not exists
             country_dir = os.path.join(USER_OUTPUT_DIR, key)
 
             # set names for filtered files for WIN, later on add ".pbf" for macOS/Linux
-            out_file_o5m_filtered_win = os.path.join(country_dir,
-                                                     'filtered.o5m')
-            out_file_o5m_filtered_names_win = os.path.join(country_dir,
-                                                           'filtered_names.o5m')
+            out_file_o5m_filtered_win = os.path.join(country_dir, 'filtered.o5m')
+            out_file_o5m_filtered_names_win = os.path.join(country_dir, 'filtered_names.o5m')
 
-            # Windows
-            if platform.system() == "Windows":
-                out_file_o5m = os.path.join(country_dir, 'outFile.o5m')
-                # only create o5m file if not there already or force processing (no user input possible)
-                # --> speeds up processing if one only wants to test tags / POIs
-                if not os.path.isfile(out_file_o5m) or self.o_osm_data.force_processing is True \
-                        or self.last_changed_is_identical_to_last_run(key) is False:
-                    log.info('+ Converting map of %s to o5m format', key)
-                    cmd = [self.osmconvert_path]
-                    cmd.extend(['-v', '--hash-memory=2500', '--complete-ways',
-                                '--complete-multipolygons', '--complete-boundaries',
-                                '--drop-author', '--drop-version'])
-                    cmd.append(val['map_file'])
-                    cmd.append('-o='+out_file_o5m)
+            out_file_pbf_filtered_mac = f'{out_file_o5m_filtered_win}.pbf'
+            out_file_pbf_filtered_names_mac = f'{out_file_o5m_filtered_names_win}.pbf'
 
-                    run_subprocess_and_log_output(
-                        cmd, f'! Error in OSMConvert with country: {key}')
-                else:
-                    log.info('+ Map of %s already in o5m format', key)
+            # filter out tags:
+            # - if no filtered files exist
+            # - force processing is set (this is also when new map files were dowwnloaded)
+            # - the defined TAGS_TO_KEEP_UNIVERSAL constants have changed are changed (user input or new release)
+            if not os.path.isfile(out_file_pbf_filtered_mac) or not os.path.isfile(out_file_pbf_filtered_names_mac) \
+                     or self.o_osm_data.force_processing is True or self.tags_are_identical_to_last_run(key) is False \
+                     or self.last_changed_is_identical_to_last_run(key) is False:
+                log.info('+ Filtering unwanted map objects out of map of %s', key)
+                        
+                tags_to_keep = translate_tags_to_keep(sys_platform=platform.system())
+                tags_to_keep_names = translate_tags_to_keep(name_tags=True, sys_platform=platform.system())
 
-                # filter out tags:
-                # - if no filtered files exist
-                # - force processing is set (this is also when new map files were dowwnloaded)
-                # - the defined TAGS_TO_KEEP_UNIVERSAL constants have changed are changed (user input or new release)
-                if not os.path.isfile(out_file_o5m_filtered_win) or not os.path.isfile(out_file_o5m_filtered_names_win) \
-                        or self.o_osm_data.force_processing is True or self.tags_are_identical_to_last_run(key) is False \
-                        or self.last_changed_is_identical_to_last_run(key) is False:
-                    log.info(
-                        '+ Filtering unwanted map objects out of map of %s', key)
-                    cmd = [get_tooling_win_path('osmfilter', in_user_dir=True)]
-                    cmd.append(out_file_o5m)
-                    cmd.append(
-                        '--keep="' + translate_tags_to_keep(sys_platform=platform.system()) + '"')
-                    cmd.append('--keep-tags="all type= layer= ' +
-                               translate_tags_to_keep(sys_platform=platform.system()) + '"')
-                    cmd.append('-o=' + out_file_o5m_filtered_win)
+#                    async with asyncio.TaskGroup() as tg:                    
+                log.debug('start run filtered')
+                tasks.add(asyncio.create_task(self.invoke_filter_tags_osmium_linux(semaphore, key, val['map_file'], tags_to_keep, out_file_pbf_filtered_mac)))
+#                        tg.create_task(self.invoke_filter_tags_osmium_linux(key, val['map_file'], tags_to_keep, out_file_pbf_filtered_mac))
 
-                    run_subprocess_and_log_output(
-                        cmd, f'! Error in OSMFilter with country: {key}')
+                log.debug('start run filtered names')
+                tasks.add(asyncio.create_task(self.invoke_filter_tags_osmium_linux(semaphore, key, val['map_file'], tags_to_keep_names, out_file_pbf_filtered_names_mac)))
+#                        tg.create_task(self.invoke_filter_tags_osmium_linux(key, val['map_file'], tags_to_keep_names, out_file_pbf_filtered_names_mac))
 
-                    cmd = [get_tooling_win_path('osmfilter', in_user_dir=True)]
-                    cmd.append(out_file_o5m)
-                    cmd.append(
-                        '--keep="' + translate_tags_to_keep(
-                            name_tags=True, sys_platform=platform.system()) + '"')
-                    cmd.append('--keep-tags="all type= name= layer= ' +
-                               translate_tags_to_keep(
-                                   name_tags=True, sys_platform=platform.system()) + '"')
-                    cmd.append('-o=' + out_file_o5m_filtered_names_win)
-
-                    run_subprocess_and_log_output(
-                        cmd, f'! Error in OSMFilter with country: {key}')
-
-                val['filtered_file'] = out_file_o5m_filtered_win
-                val['filtered_file_names'] = out_file_o5m_filtered_names_win
-
-            # Non-Windows
-            else:
-                out_file_pbf_filtered_mac = f'{out_file_o5m_filtered_win}.pbf'
-                out_file_pbf_filtered_names_mac = f'{out_file_o5m_filtered_names_win}.pbf'
-
-                # filter out tags:
-                # - if no filtered files exist
-                # - force processing is set (this is also when new map files were dowwnloaded)
-                # - the defined TAGS_TO_KEEP_UNIVERSAL constants have changed are changed (user input or new release)
-                if not os.path.isfile(out_file_pbf_filtered_mac) or not os.path.isfile(out_file_pbf_filtered_names_mac) \
-                        or self.o_osm_data.force_processing is True or self.tags_are_identical_to_last_run(key) is False \
-                        or self.last_changed_is_identical_to_last_run(key) is False:
-                    log.info(
-                        '+ Filtering unwanted map objects out of map of %s', key)
-
-                    # https://docs.osmcode.org/osmium/latest/osmium-tags-filter.html
-                    cmd = ['osmium', 'tags-filter', '--remove-tags']
-                    cmd.append(val['map_file'])
-                    cmd.extend(translate_tags_to_keep(
-                        sys_platform=platform.system()))
-                    cmd.extend(['-o', out_file_pbf_filtered_mac])
-                    cmd.append('--overwrite')
-
-                    run_subprocess_and_log_output(
-                        cmd, f'! Error in Osmium with country: {key}')
-
-                    cmd = ['osmium', 'tags-filter', '--remove-tags']
-                    cmd.append(val['map_file'])
-                    cmd.extend(translate_tags_to_keep(
-                        name_tags=True, sys_platform=platform.system()))
-                    cmd.extend(['-o', out_file_pbf_filtered_names_mac])
-                    cmd.append('--overwrite')
-
-                    run_subprocess_and_log_output(
-                        cmd, f'! Error in Osmium with country: {key}')
-
-                val['filtered_file'] = out_file_pbf_filtered_mac
-                val['filtered_file_names'] = out_file_pbf_filtered_names_mac
+            val['filtered_file'] = out_file_pbf_filtered_mac
+            val['filtered_file_names'] = out_file_pbf_filtered_names_mac
 
             # write config file for country
             self.write_country_config_file(key)
+            
+        await asyncio.gather(*tasks)
 
         log.info('+ Filter tags from country osm.pbf files: OK, %s', timings.stop_and_return())
 
-    def generate_land(self):
+    async def invoke_filter_tags_osmium_linux(self, semaphore, country, map_file, tags_to_keep, out_filename):
+        # https://docs.osmcode.org/osmium/latest/osmium-tags-filter.html
+        cmd = 'osmium'
+        args = ['tags-filter', '--remove-tags']
+        args.append(map_file)
+        args.extend(tags_to_keep)
+        args.extend(['-o', out_filename])
+        args.append('--overwrite')
+
+#        log.info('osmium filter tags, %s', out_filename)
+        await run_async_subprocess_and_log_output(semaphore, cmd, args, f'! Error in Osmium with country: {country}')
+
+    async def generate_land(self):
         """
         Generate land for all tiles
         """
@@ -211,52 +193,86 @@ class OsmMaps:
         log.info('# Generate land for each coordinate')
         timings = Timings()
         tile_count = 1
+        semaphore = asyncio.Semaphore(60)
+        land_sea_tasks = []
+        land1_tasks = []
         for tile in self.o_osm_data.tiles:
-            land_file = os.path.join(USER_OUTPUT_DIR,
-                                     f'{tile["x"]}', f'{tile["y"]}', 'land.shp')
-            out_file_land1 = os.path.join(USER_OUTPUT_DIR,
-                                          f'{tile["x"]}', f'{tile["y"]}', 'land')
+            land_file = os.path.join(USER_OUTPUT_DIR, f'{tile["x"]}', f'{tile["y"]}', 'land.shp')
+            out_file_land1 = os.path.join(USER_OUTPUT_DIR, f'{tile["x"]}', f'{tile["y"]}', 'land')
             timings_tile = Timings()
 
             # create land.dbf, land.prj, land.shp, land.shx
             if not os.path.isfile(land_file) or self.o_osm_data.force_processing is True:
-                self.log_tile_info(tile["x"], tile["y"], tile_count)
-                cmd = ['ogr2ogr', '-overwrite', '-skipfailures']
+#                self.log_tile_info(tile["x"], tile["y"], tile_count)
+#                cmd = ['ogr2ogr', '-overwrite', '-skipfailures']
                 # Try to prevent getting outside of the +/-180 and +/- 90 degrees borders. Normally the +/- 0.1 are there to prevent white lines at border borders.
+                correction = 0.1
                 if tile["x"] == 255 or tile["y"] == 255 or tile["x"] == 0 or tile["y"] == 0:
-                    cmd.extend(['-spat', f'{tile["left"]:.6f}',
-                                f'{tile["bottom"]:.6f}',
-                                f'{tile["right"]:.6f}',
-                                f'{tile["top"]:.6f}'])
-                else:
-                    cmd.extend(['-spat', f'{tile["left"]-0.1:.6f}',
-                                f'{tile["bottom"]-0.1:.6f}',
-                                f'{tile["right"]+0.1:.6f}',
-                                f'{tile["top"]+0.1:.6f}'])
-                cmd.append(land_file)
-                cmd.append(LAND_POLYGONS_PATH)
+                    correction = 0.0
 
-                run_subprocess_and_log_output(
-                    cmd, f'! Error generating land for tile: {tile["x"]},{tile["y"]}')
+                spatLeft = f'{tile["left"]-correction:.6f}'
+                spatBottom = f'{tile["bottom"]-correction:.6f}'
+                spatRight = f'{tile["right"]+correction:.6f}'
+                spatTop = f'{tile["top"]+correction:.6f}'
+                                
+                task1 = asyncio.create_task(self.invoke_create_land_and_sea_ogr2ogr_linux(semaphore, tile["x"], tile["y"], spatLeft, spatBottom, spatRight, spatTop, land_file, LAND_POLYGONS_PATH))
+                land_sea_tasks.append(task1)
+#                await asyncio.gather(task1)
+                                
+#                cmd.append(land_file)
+#                cmd.append(LAND_POLYGONS_PATH)
+
+#                run_subprocess_and_log_output(
+#                    cmd, f'! Error generating land for tile: {tile["x"]},{tile["y"]}')
 
             # create land1.osm
             if not os.path.isfile(out_file_land1+'1.osm') or self.o_osm_data.force_processing is True:
-                # Windows
-                if platform.system() == "Windows":
-                    cmd = ['python', os.path.join(RESOURCES_DIR,
-                                                  'shape2osm.py'), '-l', out_file_land1, land_file]
+#                # Windows
+#                if platform.system() == "Windows":
+#                    cmd = ['python', os.path.join(RESOURCES_DIR,
+#                                                  'shape2osm.py'), '-l', out_file_land1, land_file]
+#
+#                # Non-Windows
+#                else:
+#                    cmd = ['python', os.path.join(RESOURCES_DIR,
+#                                                  'shape2osm.py'), '-l', out_file_land1, land_file]
 
-                # Non-Windows
-                else:
-                    cmd = ['python', os.path.join(RESOURCES_DIR,
-                                                  'shape2osm.py'), '-l', out_file_land1, land_file]
-
-                run_subprocess_and_log_output(
-                    cmd, f'! Error creating land.osm for tile: {tile["x"]},{tile["y"]}')
+#               run_subprocess_and_log_output(
+#                    cmd, f'! Error creating land.osm for tile: {tile["x"]},{tile["y"]}')
+                task2 = asyncio.create_task(self.invoke_create_land1_python_linux(semaphore, tile["x"], tile["y"], land_file, out_file_land1))
+                land1_tasks.append(task2)
+                    
+                    
             self.log_tile_debug(tile["x"], tile["y"], tile_count, timings_tile.stop_and_return())
             tile_count += 1
 
+        log.info('start land sea')
+    #    semaphore = asyncio.Semaphore(4)
+#        async with semaphore:       
+        await asyncio.gather(*land_sea_tasks)
+        log.info('start land1')
+#        async with semaphore:       
+        await asyncio.gather(*land1_tasks)
+
         log.info('+ Generate land for each coordinate: OK, %s', timings.stop_and_return())
+
+    async def invoke_create_land_and_sea_ogr2ogr_linux(self, semaphore, tileX, tileY, spatLeft, spatBottom, spatRight, spatTop, land_file, land_polygon_path):
+        cmd = 'ogr2ogr'
+        args = ['-overwrite', '-skipfailures']
+        args.extend(['-spat', f'{spatLeft}', f'{spatBottom}', f'{spatRight}', f'{spatTop}'])
+        args.append(land_file)
+        args.append(land_polygon_path)
+
+#        log.info('+ Generate land for each coordinate: OK, %s, %s', tileX, tileY)
+
+        await run_async_subprocess_and_log_output(semaphore, cmd, args, f'! Error generating land for tile: {tileX},{tileY}')
+
+    async def invoke_create_land1_python_linux(self, semaphore, tileX, tileY, land_file, out_land_file):
+        cmd = 'python'
+        args = [os.path.join(RESOURCES_DIR, 'shape2osm.py'), '-l', out_land_file, land_file]
+
+        await run_async_subprocess_and_log_output(semaphore, cmd, args, f'! Error creating land1.osm for tile: {tileX},{tileY}')
+
 
     def generate_sea(self):
         """
@@ -272,7 +288,7 @@ class OsmMaps:
                                         f'{tile["x"]}', f'{tile["y"]}', 'sea.osm')
             timings_tile = Timings()
             if not os.path.isfile(out_file_sea) or self.o_osm_data.force_processing is True:
-                self.log_tile_info(tile["x"], tile["y"], tile_count)
+#                self.log_tile_info(tile["x"], tile["y"], tile_count)
                 with open(os.path.join(RESOURCES_DIR, 'sea.osm'), encoding="utf-8") as sea_file:
                     sea_data = sea_file.read()
 
@@ -303,7 +319,7 @@ class OsmMaps:
 
         log.info('+ Generate sea for each coordinate: OK, %s', timings.stop_and_return())
 
-    def generate_elevation(self, use_srtm1):
+    async def generate_elevation(self, use_srtm1):
         """
         Generate contour lines for all tiles
         """
@@ -314,6 +330,8 @@ class OsmMaps:
 
         hgt_path = os.path.join(USER_DL_DIR, 'hgt')
 
+        semaphore = asyncio.Semaphore(28)
+        tasks = set()
         timings = Timings()
         tile_count = 1
         for tile in self.o_osm_data.tiles:
@@ -333,42 +351,45 @@ class OsmMaps:
                 # 2) set source
                 elevation_source = '--source=srtm1,view1,view3,srtm3'
             else:
-                # 1) search vor view1 elevation files
+                # 1) search for view1 elevation files
                 out_file_elevation_existing = glob.glob(os.path.join(
                     USER_OUTPUT_DIR, str(tile["x"]), str(tile["y"]), 'elevation*view1*.osm'))
                 # 2) set source
-                elevation_source = '--source=view1,view3,srtm3'
+                elevation_source = '--source=view1,view3'
 
             # check for already existing elevation .osm file (the ones matched via glob)
             if not (len(out_file_elevation_existing) == 1 and os.path.isfile(out_file_elevation_existing[0])) \
                     or self.o_osm_data.force_processing is True:
-                self.log_tile_info(tile["x"], tile["y"], tile_count)
-                timings_tile = Timings()
-                cmd = ['phyghtmap']
-                cmd.append('-a ' + f'{tile["left"]}' + ':' + f'{tile["bottom"]}' +
-                           ':' + f'{tile["right"]}' + ':' + f'{tile["top"]}')
-                cmd.extend(['-o', f'{out_file_elevation}', '-s 10', '-c 100,50', elevation_source,
-                            '--jobs=8', '--viewfinder-mask=1', '--start-node-id=20000000000',
-                            '--max-nodes-per-tile=0', '--start-way-id=2000000000', '--write-timestamp',
-                            '--no-zero-contour', '--hgtdir=' + hgt_path])
-                cmd.append('--earthexplorer-user=' + username)
-                cmd.append('--earthexplorer-password=' + password)
-
-                run_subprocess_and_log_output(
-                    cmd, f'! Error in phyghtmap with tile: {tile["x"]},{tile["y"]}. Win_macOS/elevation')
-                self.log_tile_debug(tile["x"], tile["y"], tile_count, timings_tile.stop_and_return())
+#                self.log_tile_info(tile["x"], tile["y"], tile_count)
+                tasks.add(asyncio.create_task(self.invoke_generate_elevation_for_tile(semaphore, tile, elevation_source, hgt_path, username, password, out_file_elevation)))
 
             tile_count += 1
 
+        await asyncio.gather(*tasks)
+
         log.info('+ Generate contour lines for each coordinate: OK, %s', timings.stop_and_return())
 
-    def split_filtered_country_files_to_tiles(self):
+    async def invoke_generate_elevation_for_tile(self, semaphore, tile, elevation_source, hgt_path, username, password, out_file_elevation):
+        cmd = 'pyhgtmap'
+        args = ['-a ' + f'{tile["left"]}' + ':' + f'{tile["bottom"]}' + ':' + f'{tile["right"]}' + ':' + f'{tile["top"]}']
+        args.extend(['-o', f'{out_file_elevation}', '-s 10', '-c 100,50', elevation_source,
+                            '--jobs=1', '--viewfinder-mask=1', '--start-node-id=20000000000',
+                            '--max-nodes-per-tile=0', '--start-way-id=2000000000', '--write-timestamp',
+                            '--no-zero-contour', '--hgtdir=' + hgt_path])
+        args.append('--earthexplorer-user=' + username)
+        args.append('--earthexplorer-password=' + password)
+
+        await run_async_subprocess_and_log_output(semaphore, cmd, args, f'! Error in phyghtmap with tile: {tile["x"]},{tile["y"]}')
+
+    async def split_filtered_country_files_to_tiles(self):
         """
         Split filtered country files to tiles
         """
 
         log.info('-' * 80)
         log.info('# Split filtered country files to tiles')
+        semaphore = asyncio.Semaphore(6)
+        tasks = set()
         timings = Timings()
         tile_count = 1
         for tile in self.o_osm_data.tiles:
@@ -376,7 +397,7 @@ class OsmMaps:
             for country, val in self.o_osm_data.border_countries.items():
                 if country not in tile['countries']:
                     continue
-                self.log_tile_info(tile["x"], tile["y"], tile_count, country)
+#                self.log_tile_info(tile["x"], tile["y"], tile_count, country)
                 timings_tile = Timings()
                 out_file = os.path.join(USER_OUTPUT_DIR,
                                         f'{tile["x"]}', f'{tile["y"]}', f'split-{country}.osm.pbf')
@@ -412,35 +433,30 @@ class OsmMaps:
 
                 # Non-Windows
                 else:
-                    cmd = ['osmium', 'extract']
-                    cmd.extend(
-                        ['-b', f'{tile["left"]},{tile["bottom"]},{tile["right"]},{tile["top"]}'])
-                    cmd.append(val['filtered_file'])
-                    cmd.extend(['-s', 'smart'])
-                    cmd.extend(['-o', out_file])
-                    cmd.extend(['--overwrite'])
-
-                    run_subprocess_and_log_output(
-                        cmd, '! Error in Osmium with country: {country}. macOS/out_file')
-
-                    cmd = ['osmium', 'extract']
-                    cmd.extend(
-                        ['-b', f'{tile["left"]},{tile["bottom"]},{tile["right"]},{tile["top"]}'])
-                    cmd.append(val['filtered_file_names'])
-                    cmd.extend(['-s', 'smart'])
-                    cmd.extend(['-o', out_file_names])
-                    cmd.extend(['--overwrite'])
-
-                    run_subprocess_and_log_output(
-                        cmd, '! Error in Osmium with country: {country}. macOS/out_file_names')
+                    tasks.add(asyncio.create_task(self.invoke_split_country_to_tile_linux(semaphore, country, tile, val['filtered_file'], out_file)))
+                    tasks.add(asyncio.create_task(self.invoke_split_country_to_tile_linux(semaphore, country, tile, val['filtered_file_names'], out_file_names)))
 
                 self.log_tile_debug(tile["x"], tile["y"], tile_count, f'{country} {timings_tile.stop_and_return()}')
 
             tile_count += 1
 
+        await asyncio.gather(*tasks)
+
         log.info('+ Split filtered country files to tiles: OK, %s', timings.stop_and_return())
 
-    def merge_splitted_tiles_with_land_and_sea(self, process_border_countries, contour): # pylint: disable=too-many-locals
+    async def invoke_split_country_to_tile_linux(self, semaphore, country, tile, input_file, out_file):
+        cmd = 'osmium'
+        args = ['extract']
+
+        args.extend(['-b', f'{tile["left"]},{tile["bottom"]},{tile["right"]},{tile["top"]}'])
+        args.append(input_file)
+        args.extend(['-s', 'smart'])
+        args.extend(['-o', out_file])
+        args.extend(['--overwrite'])
+
+        await run_async_subprocess_and_log_output(semaphore, cmd, args, f'! Error in Osmium with country: {country}. {out_file}')
+
+    async def merge_splitted_tiles_with_land_and_sea(self, process_border_countries, contour): # pylint: disable=too-many-locals
         """
         Merge splitted tiles with land elevation and sea
         - elevation data only if requested
@@ -448,10 +464,20 @@ class OsmMaps:
 
         log.info('-' * 80)
         log.info('# Merge splitted tiles with land, elevation, and sea')
+        semaphore = asyncio.Semaphore(30)
+        tasks = set()
         timings = Timings()
         tile_count = 1
         for tile in self.o_osm_data.tiles:  # pylint: disable=too-many-nested-blocks
-            self.log_tile_info(tile["x"], tile["y"], tile_count)
+            # sort land* osm files
+            tasks.add(asyncio.create_task(self.sort_osm_files(semaphore, tile)))
+
+        await asyncio.gather(*tasks)
+        log.info('+ Sorted: OK, %s', timings.stop_and_return())
+
+        tasks = set()
+        for tile in self.o_osm_data.tiles:  # pylint: disable=too-many-nested-blocks
+ #           self.log_tile_info(tile["x"], tile["y"], tile_count)
             timings_tile = Timings()
 
             out_tile_dir = os.path.join(USER_OUTPUT_DIR,
@@ -464,59 +490,57 @@ class OsmMaps:
                 os.path.join(out_tile_dir, 'elevation*.osm'))
 
             # merge splitted tiles with land and sea every time because the result is different per constants (user input)
-            # sort land* osm files
-            self.sort_osm_files(tile)
 
-            # Windows
-            if platform.system() == "Windows":
-                cmd = [OSMOSIS_WIN_FILE_PATH]
-            # Non-Windows
-            else:
-                cmd = ['osmosis']
+            tasks.add(asyncio.create_task(self.invoke_merge_tile_linux(semaphore, process_border_countries, contour, tile, land_files, elevation_files, out_tile_dir, out_file_merged)))
 
-            loop = 0
-            # loop through all countries of tile, if border-countries should be processed.
-            # if border-countries should not be processed, only process the "entered" country
-            for country in tile['countries']:
-                if process_border_countries or country in self.o_osm_data.border_countries:
-                    cmd.append('--rbf')
-                    cmd.append(os.path.join(
-                        out_tile_dir, f'split-{country}.osm.pbf'))
-                    cmd.append('workers=' + self.workers)
-                    if loop > 0:
-                        cmd.append('--merge')
-
-                    cmd.append('--rbf')
-                    cmd.append(os.path.join(
-                        out_tile_dir, f'split-{country}-names.osm.pbf'))
-                    cmd.append('workers=' + self.workers)
-                    cmd.append('--merge')
-
-                    loop += 1
-
-            for land in land_files:
-                cmd.extend(
-                    ['--rx', 'file='+land, '--s', '--m'])
-
-            if contour:
-                for elevation in elevation_files:
-                    cmd.extend(
-                        ['--rx', 'file='+elevation, '--s', '--m'])
-
-            cmd.extend(
-                ['--rx', 'file='+os.path.join(out_tile_dir, 'sea.osm'), '--s', '--m'])
-            cmd.extend(['--tag-transform', 'file=' + os.path.join(RESOURCES_DIR,
-                                                                  'tunnel-transform.xml'), '--wb', out_file_merged, 'omitmetadata=true'])
-
-            run_subprocess_and_log_output(
-                cmd, f'! Error in Osmosis with tile: {tile["x"]},{tile["y"]}')
-
-            self.log_tile_debug(tile["x"], tile["y"], tile_count, timings_tile.stop_and_return())
+#            self.log_tile_debug(tile["x"], tile["y"], tile_count, timings_tile.stop_and_return())
             tile_count += 1
+
+        await asyncio.gather(*tasks)
 
         log.info('+ Merge splitted tiles with land, elevation, and sea: OK, %s', timings.stop_and_return())
 
-    def sort_osm_files(self, tile):
+    async def invoke_merge_tile_linux(self, semaphore, process_border_countries, contour, tile, land_files, elevation_files, out_tile_dir, out_file_merged):
+        if platform.system() == "Windows":
+            cmd = OSMOSIS_WIN_FILE_PATH
+        # Non-Windows
+        else:
+            cmd = 'osmosis'
+
+        loop = 0
+        args = []
+        # loop through all countries of tile, if border-countries should be processed.
+        # if border-countries should not be processed, only process the "entered" country
+        for country in tile['countries']:
+            if process_border_countries or country in self.o_osm_data.border_countries:
+                args.append('--rbf')
+                args.append(os.path.join(out_tile_dir, f'split-{country}.osm.pbf'))
+                args.append('workers=' + self.workers)
+                if loop > 0:
+                    args.append('--merge')
+
+                args.append('--rbf')
+                args.append(os.path.join(out_tile_dir, f'split-{country}-names.osm.pbf'))
+                args.append('workers=' + self.workers)
+                args.append('--merge')
+
+                loop += 1
+
+        for land in land_files:
+            args.extend(
+                ['--rx', 'file='+land, '--s', '--m'])
+
+        if contour:
+            for elevation in elevation_files:
+                args.extend(
+                    ['--rx', 'file='+elevation, '--s', '--m'])
+
+        args.extend(['--rx', 'file='+os.path.join(out_tile_dir, 'sea.osm'), '--s', '--m'])
+        args.extend(['--tag-transform', 'file=' + os.path.join(RESOURCES_DIR,
+                                                                  'tunnel-transform.xml'), '--wb', out_file_merged, 'omitmetadata=true'])
+        await run_async_subprocess_and_log_output(semaphore, cmd, args, f'! Error in Osmium with tile: {tile["x"]},{tile["y"]}')
+
+    async def sort_osm_files(self, semaphore, tile):
         """
         sort land*.osm files to be in this order: nodes, then ways, then relations.
         this is mandatory for osmium-merge since:
@@ -530,22 +554,26 @@ class OsmMaps:
         land_files = glob.glob(os.path.join(USER_OUTPUT_DIR,
                                             f'{tile["x"]}', f'{tile["y"]}', 'land*.osm'))
 
+        tasks = set()
         for land in land_files:
-            if platform.system() == "Windows":
-                cmd = [OSMOSIS_WIN_FILE_PATH]
-            else:
-                cmd = ['osmosis']
+            tasks.add(asyncio.create_task(self.invoke_sort_land_files_linux(semaphore, tile, land)))
 
-            cmd.extend(['--read-xml', 'file='+land])
-            cmd.append('--sort')
-            cmd.extend(['--write-xml', 'file='+land])
-
-        run_subprocess_and_log_output(
-            cmd, f'Error in Osmosis with sorting land* osm files of tile: {tile["x"]},{tile["y"]}')
-
+        await asyncio.gather(*tasks)
         log.debug('+ Sorting land* osm files: OK')
 
-    def create_map_files(self, save_cruiser, tag_wahoo_xml):
+    async def invoke_sort_land_files_linux(self, semaphore, tile, land):
+        if platform.system() == "Windows":
+            cmd = OSMOSIS_WIN_FILE_PATH
+        else:
+            cmd = 'osmosis'
+
+        args = ['--read-xml', 'file='+land]
+        args.append('--sort')
+        args.extend(['--write-xml', 'file='+land])
+
+        await run_async_subprocess_and_log_output(semaphore, cmd, args, f'! Error in Osmosis with sorting land* osm files of tile: {tile["x"]},{tile["y"]}')
+
+    async def create_map_files(self, save_cruiser, tag_wahoo_xml):
         """
         Creating .map files
         """
@@ -554,63 +582,49 @@ class OsmMaps:
         log.info('# Creating .map files for tiles')
 
         # Number of threads to use in the mapwriter plug-in
-        threads = multiprocessing.cpu_count() - 1
-        if int(threads) < 1:
-            threads = 1
+#        threads = multiprocessing.cpu_count() - 1
+#        if int(threads) < 1:
+#            threads = 1
 
+        semaphore = asyncio.Semaphore(12)
+        tasks = set()
         timings = Timings()
         tile_count = 1
         for tile in self.o_osm_data.tiles:
-            self.log_tile_info(tile["x"], tile["y"], tile_count)
+#            self.log_tile_info(tile["x"], tile["y"], tile_count)
             timings_tile = Timings()
 
-            out_file_map = os.path.join(USER_OUTPUT_DIR,
-                                        f'{tile["x"]}', f'{tile["y"]}.map')
+            out_file_map = os.path.join(USER_OUTPUT_DIR, f'{tile["x"]}', f'{tile["y"]}.map')
 
             # apply tag-wahoo xml every time because the result is different per .xml file (user input)
-            merged_file = os.path.join(USER_OUTPUT_DIR,
-                                       f'{tile["x"]}', f'{tile["y"]}', 'merged.osm.pbf')
+            merged_file = os.path.join(USER_OUTPUT_DIR, f'{tile["x"]}', f'{tile["y"]}', 'merged.osm.pbf')
 
-            # Windows
-            if platform.system() == "Windows":
-                cmd = [OSMOSIS_WIN_FILE_PATH, '--rbf', merged_file,
-                       'workers=' + self.workers, '--mw', 'file='+out_file_map]
-            # Non-Windows
-            else:
-                cmd = ['osmosis', '--rb', merged_file,
-                       '--mw', 'file='+out_file_map]
+            tasks.add(asyncio.create_task(self.invoke_create_map_file_linux(semaphore, tile, tag_wahoo_xml, merged_file, out_file_map)))
+            tile_count += 1
 
-            cmd.append(
-                f'bbox={tile["bottom"]:.6f},{tile["left"]:.6f},{tile["top"]:.6f},{tile["right"]:.6f}')
-            cmd.append('zoom-interval-conf=10,0,17')
-            cmd.append(f'threads={threads}')
-            # add path to tag-wahoo xml file
-            try:
-                cmd.append(
-                    f'tag-conf-file={get_tag_wahoo_xml_path(tag_wahoo_xml)}')
-            except TagWahooXmlNotFoundError:
-                log.error(
-                    'The tag-wahoo xml file was not found: ˚%s˚. Does the file exist and is your input correct?', tag_wahoo_xml)
-                sys.exit()
+        await asyncio.gather(*tasks)
 
-            run_subprocess_and_log_output(
-                cmd, f'Error in creating map file via Osmosis with tile: {tile["x"]},{tile["y"]}. mapwriter plugin installed?')
+        log.info('+ Created .map files for tiles: OK, %s', timings.stop_and_return())
 
-            # Windows
-            if platform.system() == "Windows":
-                cmd = [get_tooling_win_path('lzma'), 'e', out_file_map,
-                       out_file_map+'.lzma', f'-mt{threads}', '-d27', '-fb273', '-eos']
-            # Non-Windows
-            else:
-                # force overwrite of output file and (de)compress links
-                cmd = ['lzma', out_file_map, '-f']
+        semaphore = asyncio.Semaphore(30)
+        tasks = set()
+        tile_count = 1
+        for tile in self.o_osm_data.tiles:
+            timings_tile = Timings()
 
-                # --keep: do not delete source file
-                if save_cruiser:
-                    cmd.append('--keep')
+            out_file_map = os.path.join(USER_OUTPUT_DIR, f'{tile["x"]}', f'{tile["y"]}.map')
 
-            run_subprocess_and_log_output(
-                cmd, f'! Error creating map files for tile: {tile["x"]},{tile["y"]}')
+            tasks.add(asyncio.create_task(self.invoke_compress_map_file_linux(semaphore, tile, save_cruiser, out_file_map)))
+
+        await asyncio.gather(*tasks)
+
+        log.info('+ Compressed .map files for tiles: OK, %s', timings.stop_and_return())
+
+        tile_count = 1
+        for tile in self.o_osm_data.tiles:
+            timings_tile = Timings()
+
+            out_file_map = os.path.join(USER_OUTPUT_DIR, f'{tile["x"]}', f'{tile["y"]}.map')
 
             # Create "tile present" file
             with open(out_file_map + '.lzma.17', mode='wb') as tile_present_file:
@@ -620,6 +634,45 @@ class OsmMaps:
             tile_count += 1
 
         log.info('+ Creating .map files for tiles: OK, %s', timings.stop_and_return())
+
+    async def invoke_create_map_file_linux(self, semaphore, tile, tag_wahoo_xml, merged_file, out_file_map):
+        # Windows
+        if platform.system() == "Windows":
+            cmd = OSMOSIS_WIN_FILE_PATH
+            args = ['--rbf', merged_file, 'workers=1', '--mw', 'file='+out_file_map]
+        # Non-Windows
+        else:
+            cmd = 'osmosis'
+            args = ['--rb', merged_file, '--mw', 'file='+out_file_map]
+
+        args.append(f'bbox={tile["bottom"]:.6f},{tile["left"]:.6f},{tile["top"]:.6f},{tile["right"]:.6f}')
+        args.append('zoom-interval-conf=10,0,17')
+        args.append(f'threads=1')
+        # add path to tag-wahoo xml file
+        try:
+            args.append(f'tag-conf-file={get_tag_wahoo_xml_path(tag_wahoo_xml)}')
+        except TagWahooXmlNotFoundError:
+            log.error('The tag-wahoo xml file was not found: ˚%s˚. Does the file exist and is your input correct?', tag_wahoo_xml)
+            sys.exit()
+
+        await run_async_subprocess_and_log_output(semaphore, cmd, args, f'! Error in creating map file via Osmosis with tile: {tile["x"]},{tile["y"]}. mapwriter plugin installed?')
+
+    async def invoke_compress_map_file_linux(self, semaphore, tile, save_cruiser, out_file_map):
+        # Windows
+        if platform.system() == "Windows":
+            cmd = get_tooling_win_path('lzma')
+            args = ['e', out_file_map, out_file_map+'.lzma', f'-mt1', '-d27', '-fb273', '-eos']
+        # Non-Windows
+        else:
+            # force overwrite of output file and (de)compress links
+            cmd = 'lzma'
+            args = [out_file_map, '-f']
+
+            # --keep: do not delete source file
+            if save_cruiser:
+                args.append('--keep')
+
+        await run_async_subprocess_and_log_output(semaphore, cmd, args, f'! Error creating map files for tile: {tile["x"]},{tile["y"]}')
 
     def make_and_zip_files(self, extension, zip_folder):
         """
