@@ -230,6 +230,19 @@ class TestGeofabrik(unittest.TestCase):
     #     with self.assertRaises(TileNotFoundError):
     #         o_geofabrik.get_tiles_of_wanted_map()
 
+    def test_get_geofabrik_url_country_with_slash(self):
+        """
+        check the generation of URL's if the country is not identical with the spelling in the geofabrik area
+        i.e. geofabrik has a slash in US-regions: us/new-york
+        but we have replaced / with _ in the beginning of the whole program
+        """
+
+        o_geofabrik_json = GeofabrikJson()
+
+        self.assertEqual(o_geofabrik_json.get_geofabrik_url('us_connecticut'), o_geofabrik_json.get_geofabrik_url('us/connecticut'))
+        self.assertEqual(o_geofabrik_json.get_geofabrik_url('us_new-jersey'), o_geofabrik_json.get_geofabrik_url('us/new-jersey'))
+        self.assertEqual(o_geofabrik_json.get_geofabrik_url('us_new-york'), o_geofabrik_json.get_geofabrik_url('us/new-york'))
+
 
 if __name__ == '__main__':
     unittest.main()
