@@ -318,6 +318,18 @@
                 "-con"
                 // "-srtm1"
             ]
+        },
+        {
+            "name": "xy: 75/96 - US splitted download #260",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "wahoomc",
+            "console": "integratedTerminal",
+            "args": [
+                "cli",
+                "-xy",
+                "75/96"
+            ]
         }
     ]
 }
