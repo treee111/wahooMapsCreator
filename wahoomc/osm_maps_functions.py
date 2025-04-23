@@ -582,7 +582,7 @@ class OsmMaps:
 
             cmd.append(
                 f'bbox={tile["bottom"]:.6f},{tile["left"]:.6f},{tile["top"]:.6f},{tile["right"]:.6f}')
-            cmd.append('zoom-interval-conf=12,0,17')
+            cmd.append('zoom-interval-conf=10,0,17')
             cmd.append(f'threads={threads}')
             # add path to tag-wahoo xml file
             try:
