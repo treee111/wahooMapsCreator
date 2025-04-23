@@ -39,6 +39,7 @@ def initialize_work_directories():
     os.makedirs(USER_MAPS_DIR, exist_ok=True)
     os.makedirs(USER_OUTPUT_DIR, exist_ok=True)
     os.makedirs(USER_CONFIG_DIR, exist_ok=True)
+    os.makedirs(USER_TOOLING_WIN_DIR, exist_ok=True)
 
 
 def adjustments_due_to_breaking_changes():
