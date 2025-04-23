@@ -30,19 +30,40 @@ class TestOsmMapsCalculation(unittest.TestCase):
 
         # malta
         self.process_and_check_border_countries(
-            'malta', True, {'italy': {}, 'malta': {}}, 'country')
+            'malta', True, {'isole': {}, 'malta': {}}, 'country')
 
         # germany
-        expected_result = {'czech-republic': {}, 'germany': {}, 'austria': {}, 'liechtenstein': {},
-                           'switzerland': {}, 'italy': {}, 'netherlands': {}, 'belgium': {},
-                           'luxembourg': {}, 'france': {}, 'poland': {}, 'denmark': {}, 'sweden': {}}
+        expected_result = {'friesland': {}, 'groningen': {}, 'niedersachsen': {}, 'drenthe': {}, 'flevoland': {},
+                            'gelderland': {}, 'overijssel': {}, 'duesseldorf-regbez': {}, 'limburg': {},
+                            'muenster-regbez': {}, 'noord-brabant': {}, 'utrecht': {}, 'belgium': {},
+                            'koeln-regbez': {}, 'luxembourg': {}, 'rheinland-pfalz': {}, 'alsace': {},
+                            'lorraine': {}, 'saarland': {}, 'denmark': {}, 'schleswig-holstein': {},
+                            'hamburg': {}, 'arnsberg-regbez': {}, 'detmold-regbez': {}, 'hessen': {},
+                            'karlsruhe-regbez': {}, 'freiburg-regbez': {}, 'franche-comte': {}, 'switzerland': {},
+                            'bremen': {}, 'unterfranken': {}, 'stuttgart-regbez': {}, 'tuebingen-regbez': {},
+                            'austria': {}, 'liechtenstein': {}, 'schwaben': {}, 'mecklenburg-vorpommern': {},
+                            'brandenburg': {}, 'sachsen-anhalt': {}, 'thueringen': {}, 'oberfranken': {},
+                            'mittelfranken': {}, 'oberbayern': {}, 'oberpfalz': {}, 'sachsen': {},
+                            'czech-republic': {}, 'niederbayern': {}, 'nord-est': {}, 'sweden': {},
+                            'zachodniopomorskie': {}, 'berlin': {}, 'lubuskie': {}, 'dolnoslaskie': {}}
         self.process_and_check_border_countries(
             'germany', True, expected_result, 'country')
 
         # germany,malta
-        expected_result = {'czech-republic': {}, 'germany': {}, 'austria': {}, 'liechtenstein': {},
-                           'switzerland': {}, 'italy': {}, 'netherlands': {}, 'belgium': {},
-                           'luxembourg': {}, 'france': {}, 'poland': {}, 'denmark': {}, 'sweden': {}, 'malta': {}}
+        expected_result = {'friesland': {}, 'groningen': {}, 'niedersachsen': {}, 'drenthe': {}, 'flevoland': {},
+                            'gelderland': {}, 'overijssel': {}, 'duesseldorf-regbez': {}, 'limburg': {},
+                            'muenster-regbez': {}, 'noord-brabant': {}, 'utrecht': {}, 'belgium': {},
+                            'koeln-regbez': {}, 'luxembourg': {}, 'rheinland-pfalz': {}, 'alsace': {},
+                            'lorraine': {}, 'saarland': {}, 'denmark': {}, 'schleswig-holstein': {},
+                            'hamburg': {}, 'arnsberg-regbez': {}, 'detmold-regbez': {}, 'hessen': {},
+                            'karlsruhe-regbez': {}, 'freiburg-regbez': {}, 'franche-comte': {}, 'switzerland': {},
+                            'bremen': {}, 'unterfranken': {}, 'stuttgart-regbez': {}, 'tuebingen-regbez': {},
+                            'austria': {}, 'liechtenstein': {}, 'schwaben': {}, 'mecklenburg-vorpommern': {},
+                            'brandenburg': {}, 'sachsen-anhalt': {}, 'thueringen': {}, 'oberfranken': {},
+                            'mittelfranken': {}, 'oberbayern': {}, 'oberpfalz': {}, 'sachsen': {},
+                            'czech-republic': {}, 'niederbayern': {}, 'nord-est': {}, 'sweden': {},
+                            'zachodniopomorskie': {}, 'berlin': {}, 'lubuskie': {}, 'dolnoslaskie': {},
+                            'isole' : {}, 'malta' : {} }
         self.process_and_check_border_countries(
             'germany,malta', True, expected_result, 'country')
 
@@ -53,7 +74,7 @@ class TestOsmMapsCalculation(unittest.TestCase):
         """
 
         # one tile - france and germany
-        expected_result = {'france': {}, 'germany': {}}
+        expected_result = {'alsace': {}, 'freiburg-regbez': {}, 'karlsruhe-regbez': {}, 'lorraine': {}}
         self.process_and_check_border_countries(
             "133/88", True, expected_result, 'xy_coordinate')
 
@@ -64,7 +85,8 @@ class TestOsmMapsCalculation(unittest.TestCase):
         """
 
         # two tiles - germany
-        expected_result = {'germany': {}}
+        expected_result = {'freiburg-regbez': {}, 'hessen': {}, 'karlsruhe-regbez': {}, 'rheinland-pfalz': {},
+                           'stuttgart-regbez': {}, 'tuebingen-regbez': {}, 'unterfranken': {} }
         self.process_and_check_border_countries(
             "134/87,134/88", True, expected_result, 'xy_coordinate')
 
@@ -99,7 +121,7 @@ class TestOsmMapsCalculation(unittest.TestCase):
         """
 
         # one tile - france and germany
-        expected_result = {'france': {}, 'germany': {}}
+        expected_result = {'alsace': {}, 'freiburg-regbez': {}, 'karlsruhe-regbez': {}, 'lorraine': {}}
         self.process_and_check_border_countries(
             "133/88", False, expected_result, 'xy_coordinate')
 
@@ -110,7 +132,8 @@ class TestOsmMapsCalculation(unittest.TestCase):
         """
 
         # two tiles - germany
-        expected_result = {'germany': {}}
+        expected_result = {'freiburg-regbez': {}, 'hessen': {}, 'karlsruhe-regbez': {}, 'rheinland-pfalz': {},
+                           'stuttgart-regbez': {}, 'tuebingen-regbez': {}, 'unterfranken': {} }
         self.process_and_check_border_countries(
             "134/87,134/88", False, expected_result, 'xy_coordinate')
 

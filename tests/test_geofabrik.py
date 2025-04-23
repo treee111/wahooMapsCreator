@@ -53,12 +53,12 @@ class TestGeofabrik(unittest.TestCase):
         Test the retrieval of tiles via geofabrik URL against hardcoded data
         """
         item_0 = {'x': 137, 'y': 100, 'left': 12.65625, 'top': 36.59788913307021,
-                  'right': 14.0625, 'bottom': 35.4606699514953, 'countries': ['italy', 'malta'],
-                  'urls': ['https://download.geofabrik.de/europe/italy-latest.osm.pbf',
+                  'right': 14.0625, 'bottom': 35.4606699514953, 'countries': ['isole', 'malta'],
+                  'urls': ['https://download.geofabrik.de/europe/italy/isole-latest.osm.pbf',
                            'https://download.geofabrik.de/europe/malta-latest.osm.pbf']}
         item_1 = {'x': 138, 'y': 100, 'left': 14.0625, 'top': 36.59788913307021,
-                  'right': 15.46875, 'bottom': 35.4606699514953, 'countries': ['italy', 'malta'],
-                  'urls': ['https://download.geofabrik.de/europe/italy-latest.osm.pbf',
+                  'right': 15.46875, 'bottom': 35.4606699514953, 'countries': ['isole', 'malta'],
+                  'urls': ['https://download.geofabrik.de/europe/italy/isole-latest.osm.pbf',
                            'https://download.geofabrik.de/europe/malta-latest.osm.pbf']}
 
         geofabrik_tiles = calc_tiles_via_geofabrik_json('malta')
@@ -71,7 +71,7 @@ class TestGeofabrik(unittest.TestCase):
         Test the retrieval of tiles via geofabrik URL against hardcoded data
         """
         item_0 = [{'x': 138, 'y': 100, 'left': 14.0625, 'top': 36.59788913307021, 'right': 15.46875, 'bottom': 35.4606699514953, 'countries': [
-            'italy', 'malta'], 'urls': ['https://download.geofabrik.de/europe/italy-latest.osm.pbf', 'https://download.geofabrik.de/europe/malta-latest.osm.pbf']}]
+            'isole', 'malta'], 'urls': ['https://download.geofabrik.de/europe/italy/isole-latest.osm.pbf', 'https://download.geofabrik.de/europe/malta-latest.osm.pbf']}]
 
         geofabrik_tiles = calc_tiles_via_geofabrik_json_xy('138/100')
 
@@ -89,11 +89,15 @@ class TestGeofabrik(unittest.TestCase):
             "right": 8.4375,
             "bottom": 47.98992166741417,
             "countries": [
-                "france",
-                "germany"
+                "alsace",
+                "freiburg-regbez",
+                "karlsruhe-regbez",
+                "lorraine"
             ],
-            'urls': ['https://download.geofabrik.de/europe/france-latest.osm.pbf',
-                     'https://download.geofabrik.de/europe/germany-latest.osm.pbf']
+            'urls': ['https://download.geofabrik.de/europe/france/alsace-latest.osm.pbf',
+                      'https://download.geofabrik.de/europe/germany/baden-wuerttemberg/freiburg-regbez-latest.osm.pbf',
+                      'https://download.geofabrik.de/europe/germany/baden-wuerttemberg/karlsruhe-regbez-latest.osm.pbf',
+                      'https://download.geofabrik.de/europe/france/lorraine-latest.osm.pbf']
         }]
 
         geofabrik_tiles = calc_tiles_via_geofabrik_json_xy('133/88')
@@ -111,8 +115,8 @@ class TestGeofabrik(unittest.TestCase):
         bbox_tiles_exp = [{'x': 137, 'y': 100, 'tile_left': 12.65625, 'tile_top': 36.59788913307021, 'tile_right': 14.0625, 'tile_bottom': 35.4606699514953}, {
             'x': 138, 'y': 100, 'tile_left': 14.0625, 'tile_top': 36.59788913307021, 'tile_right': 15.46875, 'tile_bottom': 35.4606699514953}]
 
-        tiles_exp = [{'x': 137, 'y': 100, 'left': 12.65625, 'top': 36.59788913307021, 'right': 14.0625, 'bottom': 35.4606699514953, 'countries': ['italy', 'malta'], 'urls': ['https://download.geofabrik.de/europe/italy-latest.osm.pbf', 'https://download.geofabrik.de/europe/malta-latest.osm.pbf']},
-                     {'x': 138, 'y': 100, 'left': 14.0625, 'top': 36.59788913307021, 'right': 15.46875, 'bottom': 35.4606699514953, 'countries': ['italy', 'malta'], 'urls': ['https://download.geofabrik.de/europe/italy-latest.osm.pbf', 'https://download.geofabrik.de/europe/malta-latest.osm.pbf']}]
+        tiles_exp = [{'x': 137, 'y': 100, 'left': 12.65625, 'top': 36.59788913307021, 'right': 14.0625, 'bottom': 35.4606699514953, 'countries': ['isole', 'malta'], 'urls': ['https://download.geofabrik.de/europe/italy/isole-latest.osm.pbf', 'https://download.geofabrik.de/europe/malta-latest.osm.pbf']},
+                     {'x': 138, 'y': 100, 'left': 14.0625, 'top': 36.59788913307021, 'right': 15.46875, 'bottom': 35.4606699514953, 'countries': ['isole', 'malta'], 'urls': ['https://download.geofabrik.de/europe/italy/isole-latest.osm.pbf', 'https://download.geofabrik.de/europe/malta-latest.osm.pbf']}]
 
         wanted_region_exp = 'MULTIPOLYGON (((14 35.7517, 14 36.26791, 14.07957 36.33296, 14.39231 36.29082, 14.8561 35.98808, 14.84002 35.7246, 14.50306 35.51985, 14 35.7517)))'
 
