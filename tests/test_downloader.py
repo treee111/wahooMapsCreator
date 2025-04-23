@@ -3,6 +3,7 @@ tests for the downloader file
 """
 import os
 # import sys
+import posixpath
 import unittest
 import time
 import shutil
@@ -204,7 +205,7 @@ class TestDownloader(unittest.TestCase):
         mapwriter_plugin_url = 'https://search.maven.org/remotecontent?filepath=org/mapsforge/mapsforge-map-writer/0.18.0/mapsforge-map-writer-0.18.0-jar-with-dependencies.jar'
 
         mapwriter_plugin_url_base = 'https://search.maven.org/remotecontent?filepath=org/mapsforge/mapsforge-map-writer/0.18.0'
-        mapwriter_plugin_url_join = os.path.join(mapwriter_plugin_url_base, map_writer_filename)
+        mapwriter_plugin_url_join = posixpath.join(mapwriter_plugin_url_base, map_writer_filename)
 
         self.assertEqual(mapwriter_plugin_url_join, mapwriter_plugin_url)
 
