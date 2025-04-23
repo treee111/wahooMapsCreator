@@ -89,13 +89,15 @@ class GeofabrikJson:
     def get_geofabrik_url(self, id_no):
         """
         Get the map download url from a country/region with the already loaded json data
+        if no URL found, try with / instead of _
         """
         try:
             entry = self.geofabrik_overview[id_no]
-            if 'pbf_url' in entry:
-                return entry['pbf_url']
         except KeyError:
-            pass
+            id_with_slash = id_no.replace('_', '/')
+            entry = self.geofabrik_overview[id_with_slash]
+        if 'pbf_url' in entry:
+            return entry['pbf_url']
 
         return None
 
