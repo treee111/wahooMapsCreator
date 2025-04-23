@@ -29,8 +29,10 @@ ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
 VERSION = '4.3.0'
 
 
-block_download = ['dach', 'alps', 'britain-and-ireland', 'south-africa-and-lesotho',
-                  'us-midwest', 'us-northeast', 'us-pacific', 'us-south', 'us-west']
+block_download = ['africa', 'alps', 'asia', 'australia-oceania', 'britain-and-ireland',
+                    'canada', 'dach', 'europe', 'great-britain' , 'norcal' ,'north-america',
+                    'russia','socal', 'south-africa-and-lesotho', 'south-america', 'us',
+                    'us-midwest', 'us-northeast', 'us-pacific', 'us-south', 'us-west']
 
 # Special_regions like (former) colonies where the map of the wanted region is not present in the map of the parent country.
 # example Guadeloupe, it's Geofabrik parent country is France but Guadeloupe is not located within the region covered by the map of France.

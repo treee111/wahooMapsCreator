@@ -163,42 +163,9 @@ class CountryGeofabrik(InformalGeofabrikInterface):
                 if regionname == wanted_map:
                     # Check if it is part of the tile we are processing
                     if rshape.intersects(poly):  # if so
-                        # catch special_regions like (former) colonies where the map of the region is not fysically in the map of the parent country.
-                        # example Guadeloupe, it's parent country is France but Guadeloupe is not located within the region covered by the map of France
-                        if wanted_map not in special_regions:
-                            # If we are proseccing a sub-region add the parent of this sub-region
-                            # to the must download list.
-                            # This to prevent downloading several small regions AND it's containing region
-                            # we are processing a sub-regiongo find the parent region:
-                            if parent not in geofabrik_regions and regionname not in geofabrik_regions:
-                                # we are processing a sub-regiongo find the parent region
-                                x_value = 0
-                                # handle sub-sub-regions like unterfranken->bayern->germany
-                                while parent not in geofabrik_regions:
-                                    parent, child = self.o_geofabrik_json.get_geofabrik_parent_country(
-                                        parent)
-                                    if parent in geofabrik_regions:
-                                        parent = child
-                                        break
-                                    if x_value > 10:  # prevent endless loop
-                                        log.error(
-                                            'Can not find parent map of region: %s', regionname)
-                                        sys.exit()
-                                    x_value += 1
-                                if parent not in must_download_maps:
-                                    must_download_maps.append(parent)
-                                    must_download_urls.append(
-                                        self.o_geofabrik_json.get_geofabrik_url(parent))
-                                    # parent_added = 1
-                            else:
-                                if regionname not in must_download_maps:
-                                    must_download_maps.append(regionname)
-                                    must_download_urls.append(rurl)
-                        else:
-                            # wanted_map is a special region like Guadeloupe, France
-                            if regionname not in must_download_maps:
-                                must_download_maps.append(regionname)
-                                must_download_urls.append(rurl)
+                        if regionname not in must_download_maps and regionname not in geofabrik_regions:
+                            must_download_maps.append(regionname)
+                            must_download_urls.append(rurl)
                         # if there is an intersect, force the tile to be put in the output
                         force_added = 1
                     else:  # currently processing tile does not contain, a part of, the desired region
@@ -207,22 +174,9 @@ class CountryGeofabrik(InformalGeofabrikInterface):
                 # currently processing country/region is NOT the desired country/region but might be
                 # in the tile (neighbouring country)
                 if regionname != wanted_map:
-                    # check if we are processing a country or a sub-region.
-                    # For countries only process other countries. also block special geofabrik sub regions
-                    if parent in geofabrik_regions and regionname not in block_download:
-                        # processing a country and no special sub-region
-                        # check if rshape is subset of desired region. If so discard it
-                        if wanted_region_polygon.contains(rshape):
-                            # print (f'\t{regionname} is a subset of {wanted_map}, discard it')
-                            continue
-                        # check if rshape is a superset of desired region. if so discard it
-                        if rshape.contains(wanted_region_polygon):
-                            # print (f'\t{regionname} is a superset of {wanted_map}, discard it')
-                            # if regionname not in must_download_maps:
-                            #    must_download_maps.append (regionname)
-                            #    must_download_urls.append (rurl)
-                            #    parent_added = 1
-                            continue
+                    # Check if the map being processed intersects with the wanted area while checking if it is actually needed.
+                    # processing a country and no special sub-region
+                    if parent in geofabrik_regions and regionname not in block_download and regionname not in geofabrik_regions:
                         # Check if rshape is a part of the tile
                         if rshape.intersects(poly):
                             # print(f'\tintersecting tile: {regionname} tile={tile}')
@@ -366,16 +320,7 @@ class XYGeofabrik(InformalGeofabrikInterface):
                 rurl = value['pbf_url']
                 rshape = shape(value['geometry'])
 
-                if parent in geofabrik_regions and regionname not in block_download:
-                    # processing a country and no special sub-region
-                    # check if rshape is subset of desired region. If so discard it
-                    if wanted_region_polygon.contains(rshape):
-                        # print (f'\t{regionname} is a subset of {wanted_map}, discard it')
-                        continue
-                    # check if rshape is a superset of desired region. if so discard it
-                    if rshape.contains(wanted_region_polygon):
-                        # print (f'\t{regionname} is a superset of {wanted_map}, discard it')
-                        continue
+                if parent in geofabrik_regions and regionname not in block_download and regionname not in geofabrik_regions:
                     # Check if rshape is a part of the tile / XY
                     if rshape.intersects(poly):
                         # print(f'\tintersecting tile: {regionname} tile={tile}')
