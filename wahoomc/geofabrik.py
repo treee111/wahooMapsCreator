@@ -174,7 +174,7 @@ class CountryGeofabrik(InformalGeofabrikInterface):
                 # currently processing country/region is NOT the desired country/region but might be
                 # in the tile (neighbouring country)
                 if regionname != wanted_map:
-                    # check if we are processing a country or a sub-region. For countries only process other countries. also block special geofabrik sub regions
+                    # Check if the map being processed intersects with the wanted area while checking if it is actually needed.
                     # processing a country and no special sub-region
                     if parent in geofabrik_regions and regionname not in block_download and regionname not in geofabrik_regions:
                         # Check if rshape is a part of the tile
