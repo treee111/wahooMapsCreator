@@ -108,8 +108,7 @@ class CountryGeofabrik(InformalGeofabrikInterface):
         # get all infos of these bounding box tiles
         tiles_of_input = self.find_needed_countries(
             bbox_tiles, wanted_map, wanted_region)
-        #print (f'Country= {tiles_of_input}')
-        #sys.exit()
+
         return tiles_of_input
 
     def find_needed_countries(self, bbox_tiles, wanted_map, wanted_region_polygon) -> list:
@@ -273,8 +272,7 @@ class XYGeofabrik(InformalGeofabrikInterface):
         # get all infos of these bounding box tiles
         tiles_of_input = self.find_needed_countries(
             bbox_tiles, wanted_map, wanted_region)
-         #print (f'Country= {tiles_of_input}')
-        #sys.exit()
+
         if len(tiles_of_input[0]['countries']) == 0:
             raise XYCombinationHasNoCountries(
                 f'{wanted_map["x"]}/{wanted_map["y"]}')
