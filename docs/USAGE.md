@@ -79,6 +79,7 @@ If you like to run wahooMapsCreator with another value than the default, use the
 | -tag   | File with tags to keep in the output.                                                                            | `tag-wahoo-poi.xml` |
 | -z     | Zip the country (and country-maps) folder.                                                                       | false               |
 | -v     | Output debug logger messages.                                                                                    | false               |
+| -hdd   | Use mapwriters hdd mode, 'type=hd' parameter. Slower processing, but good for low memory systems.                | false               |
 
 ### Main arguments
 **Create maps for a country**
