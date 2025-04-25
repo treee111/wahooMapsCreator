@@ -86,7 +86,7 @@ def process_call_of_the_tool():
                               help="zip the country (and country-maps) folder")
     options_args.add_argument('-v', '--verbose', action='store_true',
                               help="output debug logger messages")
-    options_args.add_argument('-hd', '--mwhddmode', action='store_true',
+    options_args.add_argument('-hdd', '--hdd_mode', action='store_true',
                               help="use mapwriter hdd mode")
 
     args = parser_top.parse_args()
@@ -119,7 +119,7 @@ def process_call_of_the_tool():
     o_input_data.zip_folder = args.zip
 
     o_input_data.verbose = args.verbose
-    o_input_data.hdd_mode = args.mwhddmode
+    o_input_data.hdd_mode = args.hdd_mode
 
     return o_input_data
 
