@@ -86,6 +86,8 @@ def process_call_of_the_tool():
                               help="zip the country (and country-maps) folder")
     options_args.add_argument('-v', '--verbose', action='store_true',
                               help="output debug logger messages")
+    options_args.add_argument('-hdd', '--hdd_mode', action='store_true',
+                              help="use mapwriter hdd mode")
 
     args = parser_top.parse_args()
 
@@ -117,6 +119,7 @@ def process_call_of_the_tool():
     o_input_data.zip_folder = args.zip
 
     o_input_data.verbose = args.verbose
+    o_input_data.hdd_mode = args.hdd_mode
 
     return o_input_data
 
@@ -194,6 +197,7 @@ class InputData():  # pylint: disable=too-many-instance-attributes,too-few-publi
         self.tag_wahoo_xml = "tag-wahoo-poi.xml"
         self.zip_folder = False
         self.save_cruiser = False
+        self.hdd_mode = False
 
         self.verbose = False
 
@@ -311,6 +315,7 @@ class GuiInput(tk.Tk):
         self.o_input_data.save_cruiser = tab2.first.checkb_save_cruiser_val.get()
         self.o_input_data.zip_folder = tab2.first.checkb_zip_folder_val.get()
         self.o_input_data.verbose = tab2.first.checkb_verbose_val.get()
+        self.o_input_data.hdd_mode = tab2.first.checkb_mapwriter_ram_hdd_val.get()
 
         # get text without \n in the end
         self.o_input_data.tag_wahoo_xml = tab2.second.input_tag_wahoo_xml.get()
@@ -467,3 +472,5 @@ class CheckbuttonsTab2(tk.Frame):
                                                      "Zip folder with generated files", 3)
         self.checkb_verbose_val = create_checkbox(self, oInputData.verbose,
                                                   "output debug logger messages", 4)
+        self.checkb_mapwriter_ram_hdd_val = create_checkbox(self, oInputData.verbose,
+                                                  "Use mapwriter HDD mode", 5)

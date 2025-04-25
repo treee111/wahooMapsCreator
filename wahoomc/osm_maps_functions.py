@@ -545,7 +545,7 @@ class OsmMaps:
 
         log.debug('+ Sorting land* osm files: OK')
 
-    def create_map_files(self, save_cruiser, tag_wahoo_xml):
+    def create_map_files(self, save_cruiser, tag_wahoo_xml, hdd_mode):
         """
         Creating .map files
         """
@@ -584,6 +584,8 @@ class OsmMaps:
                 f'bbox={tile["bottom"]:.6f},{tile["left"]:.6f},{tile["top"]:.6f},{tile["right"]:.6f}')
             cmd.append('zoom-interval-conf=12,0,17')
             cmd.append(f'threads={threads}')
+            if hdd_mode:
+                cmd.append('type=hd')
             # add path to tag-wahoo xml file
             try:
                 cmd.append(

@@ -172,6 +172,18 @@ class TestGeneratedFiles(unittest.TestCase):
         self.compare_dir_sub_test_resource_and_output('138', 'malta')
         self.compare_dir_sub_test_resource_and_output('137', 'malta')
 
+    def test_calc_output_malta_and_compare_hdd_mode(self):
+        """
+        Test output of countries without border countries and WITH mapwriter HDD mode
+        - of malta
+        """
+        # run tool for country in mapwriter hd mode
+        self.run_wahoomapscreator_cli('malta', hdd_mode=True)
+
+        # compare generated given merged.osm.pbf-file with reference-file
+        self.compare_dir_sub_test_resource_and_output('138', 'malta')
+        self.compare_dir_sub_test_resource_and_output('137', 'malta')
+
     def test_calc_output_liechtenstein_and_compare(self):
         """
         Test output of countries without border countries
@@ -183,14 +195,30 @@ class TestGeneratedFiles(unittest.TestCase):
         # compare generated given merged.osm.pbf-file with reference-file
         self.compare_dir_sub_test_resource_and_output('134', 'liechtenstein')
 
-    def run_wahoomapscreator_cli(self, country):
+    def test_calc_output_liechtenstein_and_compare_hdd_mode(self):
+        """
+        Test output of countries without border countries and WITH mapwriter HDD mode
+        - of liechtenstein
+        """
+        # run tool for country in mapwriter hd mode
+        self.run_wahoomapscreator_cli('liechtenstein', hdd_mode=True)
+
+        # compare generated given merged.osm.pbf-file with reference-file
+        self.compare_dir_sub_test_resource_and_output('134', 'liechtenstein')
+
+    def run_wahoomapscreator_cli(self, country, hdd_mode=False):
         """
         runs wahooMapsCreator for given country and static osm.pbf file via CLI
         - without border countries
         """
-        # run processing of input-country via CLI
-        result = os.system(
-            f'python -m wahoomc cli -co {country} -tag tag-wahoo.xml -fp -c -md 9999 -nbc')
+        if not hdd_mode:
+            # run processing of input-country via CLI in standard mode
+            result = os.system(
+                f'python -m wahoomc cli -co {country} -tag tag-wahoo.xml -fp -c -md 9999 -nbc')
+        else:
+            # run processing of input-country via CLI in mapwriter hdd mode
+            result = os.system(
+                f'python -m wahoomc cli -co {country} -tag tag-wahoo.xml -fp -c -md 9999 -nbc -hd')
 
         # check if run was successful
         self.assertEqual(result, 0)

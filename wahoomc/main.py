@@ -96,7 +96,8 @@ def run(run_level):
 
         # Creating .map files
         o_osm_maps.create_map_files(o_input_data.save_cruiser,
-                                    o_input_data.tag_wahoo_xml)
+                                    o_input_data.tag_wahoo_xml,
+                                    o_input_data.hdd_mode)
 
         # Zip .map.lzma files
         o_osm_maps.make_and_zip_files('.map.lzma', o_input_data.zip_folder)
