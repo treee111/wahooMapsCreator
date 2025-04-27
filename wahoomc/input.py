@@ -378,6 +378,9 @@ class ComboboxesEntryField(tk.Frame):  # pylint: disable=too-many-instance-attri
             column=0, row=3, sticky=tk.E, padx=5, pady=2)
         self.en_max_days_old.grid(column=1, row=3, sticky=tk.W, padx=10)
 
+        # trigger event to set value-list of countries at the end of GUI initialization
+        self.cb_continent.event_generate("<<ComboboxSelected>>")
+
     def callback_continent(self, event):  # pylint: disable=unused-argument
         """
         set value-list of countries after changing continent
