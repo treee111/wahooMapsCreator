@@ -85,16 +85,16 @@ class OsmMaps:
         create_empty_directories(
             USER_OUTPUT_DIR, self.o_osm_data.tiles, self.o_osm_data.border_countries)
 
-    def prepare_wandrer_data(self):
+    def prepare_wandrer_data(self): # pylint: disable=too-many-statements
         """_
-        Find Wandrer KMZ and convert them 
+        Find Wandrer KMZ and convert them
         """
-       
+
         log.info('-' * 80)
         log.info('# Convert Wandrer file(s) to osm.pbf files')
         timings = Timings()
-       
-        if platform.system() == "Windows": 
+
+        if platform.system() == "Windows":
             # Check for new Wandrer kmz files in the maps directory. Format must be wandrer*.kmz
             wandrerkmz_files = glob.glob(f'{USER_MAPS_DIR}/wandrer*.kmz')
             if wandrerkmz_files:
@@ -103,7 +103,7 @@ class OsmMaps:
                     cmd = [get_tooling_win_path('7za'), 'e', '-y', file]
                     run_subprocess_and_log_output(
                         cmd, f'! Error unzipping KMZ file: {file}', cwd=USER_MAPS_DIR)
-                
+
                 # Find KML files (could be more then one in a KMZ?)
                 wandrerkml_files = glob.glob(f'{USER_MAPS_DIR}/wandrer*.kml')
                 if wandrerkml_files:
@@ -122,15 +122,15 @@ class OsmMaps:
                     for file in wandrerosm_files:
                         log.info('+ Replacing negative ID\'s with Large positive ones in %s and converting to .osm.pbf.', file)
                         start_way_id_str = f"{start_way_id}"
-                        with open(file, encoding='utf8') as f:
-                            osm_data = f.read()
-                            f.close()
+                        with open(file, encoding='utf8') as fhandle:
+                            osm_data = fhandle.read()
+                            fhandle.close()
 
                             osm_data = osm_data.replace("\"-", "\"" + start_way_id_str)
 
-                            with open(file, 'w', encoding='utf8') as of:
-                                of.write(osm_data)
-                                of.close()
+                            with open(file, 'w', encoding='utf8') as ofhandle:
+                                ofhandle.write(osm_data)
+                                ofhandle.close()
 
                         # Increase way counter for the next file. No duplicate way numbers allowed!
                         start_way_id = start_way_id + 10000000
@@ -158,7 +158,7 @@ class OsmMaps:
                         os.remove(file)
                 except:
                     pass
-                
+
         # Non-Windows
         else:
            # Check for new Wandrer kmz files in the maps directory. Format must be wandrer*.kmz
@@ -169,7 +169,7 @@ class OsmMaps:
                     cmd = ['unzip', '-o', file]
                     run_subprocess_and_log_output(
                         cmd, f'! Error unzipping KMZ file: {file}', cwd=USER_MAPS_DIR)
-                    
+
                 # Find KML files (could be more then one in a KMZ?)
                 wandrerkml_files = glob.glob(f'{USER_MAPS_DIR}/wandrer*.kml')
                 if wandrerkml_files:
@@ -188,15 +188,15 @@ class OsmMaps:
                     for file in wandrerosm_files:
                         log.info('+ Replacing negative ID\'s with Large positive ones in %s and converting to .osm.pbf.', file)
                         start_way_id_str = f"{start_way_id}"
-                        with open(file, encoding='utf8') as f:
-                            osm_data = f.read()
-                            f.close()
+                        with open(file, encoding='utf8') as fhandle:
+                            osm_data = fhandle.read()
+                            fhandle.close()
 
                             osm_data = osm_data.replace("\"-", "\"" + start_way_id_str)
 
-                            with open(file, 'w', encoding='utf8') as of:
-                                of.write(osm_data)
-                                of.close()
+                            with open(file, 'w', encoding='utf8') as ofhandle:
+                                ofhandle.write(osm_data)
+                                ofhandle.close()
 
                         # Increase way counter for the next file. No duplicate way numbers allowed!
                         start_way_id = start_way_id + 10000000
@@ -207,7 +207,7 @@ class OsmMaps:
                         cmd.append('-o'+file.replace(".osm", ".osm.pbf"))
                         run_subprocess_and_log_output(
                             cmd, f'! Error converting OSM file: {file} to OSM.PBF.')
-                        
+
                 try:
                     log.info('+ Removing intermediate files and renaming processed input files')
                     for file in wandrerkmz_files:
@@ -503,7 +503,7 @@ class OsmMaps:
 
         log.info('+ Generate contour lines for each coordinate: OK, %s', timings.stop_and_return())
 
-    def split_filtered_country_files_to_tiles(self,process_wandrer):
+    def split_filtered_country_files_to_tiles(self,process_wandrer): # pylint: disable=too-many-statements
         """
         Split filtered country files to tiles
         """
@@ -550,21 +550,21 @@ class OsmMaps:
 
                     run_subprocess_and_log_output(
                         cmd, '! Error in osmconvert with country: {country}. Win/out_file_names')
-                    
+
                     if process_wandrer:
-                        inWandrer_files = list()
-                        inWandrer_files = glob.glob(os.path.join(USER_MAPS_DIR, 'wandrer*.osm.pbf'))
-                        for wandrer_map in inWandrer_files:
-                            outWandrer = os.path.join(
+                        in_wandrer_files = list()
+                        in_wandrer_files = glob.glob(os.path.join(USER_MAPS_DIR, 'wandrer*.osm.pbf'))
+                        for wandrer_map in in_wandrer_files:
+                            out_wandrer = os.path.join(
                                 USER_OUTPUT_DIR, f'{tile["x"]}', f'{tile["y"]}', f'split-{os.path.basename(wandrer_map)}')
-                            if not os.path.isfile(outWandrer):
+                            if not os.path.isfile(out_wandrer):
                                 cmd = [self.osmconvert_path, '--hash-memory=2500']
                                 cmd.append('-b='+f'{tile["left"]}' + ',' + f'{tile["bottom"]}' +
                                         ',' + f'{tile["right"]}' + ',' + f'{tile["top"]}')
                                 cmd.extend(
                                     ['--complete-ways', '--complete-multipolygons', '--complete-boundaries'])
                                 cmd.append(wandrer_map)
-                                cmd.append('-o='+outWandrer)
+                                cmd.append('-o='+out_wandrer)
                                 #print(cmd)
                                 run_subprocess_and_log_output(
                                     cmd, '! Error in osmconvert while processing Wandrer file: {wandrer_map}.')
@@ -592,19 +592,19 @@ class OsmMaps:
 
                     run_subprocess_and_log_output(
                         cmd, '! Error in Osmium with country: {country}. macOS/out_file_names')
-                    
+
                     if process_wandrer:
-                        inWandrer_files = list()
-                        inWandrer_files = glob.glob(os.path.join(USER_MAPS_DIR, 'wandrer*.osm.pbf'))
-                        for wandrer_map in inWandrer_files:
-                            outWandrer = os.path.join(
+                        in_wandrer_files = list()
+                        in_wandrer_files = glob.glob(os.path.join(USER_MAPS_DIR, 'wandrer*.osm.pbf'))
+                        for wandrer_map in in_wandrer_files:
+                            out_wandrer = os.path.join(
                                 USER_OUTPUT_DIR, f'{tile["x"]}', f'{tile["y"]}', f'split-{os.path.basename(wandrer_map)}')
-                            if not os.path.isfile(outWandrer):
+                            if not os.path.isfile(out_wandrer):
                                 cmd = ['osmium', 'extract']
                                 cmd.extend(
                                     ['-b', f'{tile["left"]},{tile["bottom"]},{tile["right"]},{tile["top"]}'])
                                 cmd.append(wandrer_map)
-                                cmd.append('-o'+outWandrer)
+                                cmd.append('-o'+out_wandrer)
                                 run_subprocess_and_log_output(
                                     cmd, '! Error in osmconvert while processing Wandrer file: {wandrer_map}.')
 
@@ -636,7 +636,7 @@ class OsmMaps:
 
             elevation_files = glob.glob(
                 os.path.join(out_tile_dir, 'elevation*.osm'))
-            
+
             wandrer_files = glob.glob(
                 os.path.join(out_tile_dir, 'split-wandrer*.osm.pbf'))
 
@@ -679,7 +679,7 @@ class OsmMaps:
                 for elevation in elevation_files:
                     cmd.extend(
                         ['--rx', 'file='+elevation, '--s', '--m'])
-                    
+
             if process_wandrer:
                 for wandrer in wandrer_files:
                     cmd.append('--rbf')

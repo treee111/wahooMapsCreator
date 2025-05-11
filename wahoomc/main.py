@@ -73,9 +73,9 @@ def run(run_level):
         o_downloader.download_files_if_needed()
 
         o_osm_maps = OsmMaps(o_osm_data)
-        
+
         if o_input_data.integrate_wandrer:
-            o_osm_maps.prepare_wandrer_data()        
+            o_osm_maps.prepare_wandrer_data()
 
         # Filter tags from country osm.pbf files'
         o_osm_maps.filter_tags_from_country_osm_pbf_files()
