@@ -16,21 +16,21 @@ Better yet, you can still compete against others through the leaderbord system b
 Here you have a Cruiser screenshot of a map without Wandrer integration
 <div align="center">
     <p>
-    <img src="./docs/pictures/Cruiser-without-Wandrer-Screenshot.png" alt="Screenshot of map without Wandrer integration" width=80%>
+    <img src="./pictures/Cruiser-without-Wandrer-Screenshot.png" alt="Screenshot of map without Wandrer integration" width=80%>
     </p>
 </div>
 
 With Wandrer integration the same map can look like this (depending on the theme used) Untraveled roads are show as red stippled. As you can see most of the roads on the upper side of this image are 'untraveled'.
 <div align="center">
     <p>
-    <img src="./docs/pictures/Cruiser-with-Wandrer-Screenshot.png" alt="Screenshot of map with Wandrer integration" width=80%>
+    <img src="./pictures/Cruiser-with-Wandrer-Screenshot.png" alt="Screenshot of map with Wandrer integration" width=80%>
     </p>
 </div>
 
 An actual on device screenshot can look like this. Again untraveled roads in a red stipple.
 <div align="center">
     <p>
-    <img src="./docs/pictures/Wahoo-Ace-Wandrer-Screenshot.png " alt="Ace screenshot of map with Wandrer integration" width=50%>
+    <img src="./pictures/Wahoo-Ace-Wandrer-Screenshot.png " alt="Ace screenshot of map with Wandrer integration" width=50%>
     </p>
 </div>
 
@@ -46,7 +46,7 @@ If it is greyed out, zoom in until it turns solid. If needed you can integrate m
 Now press the download icon the pointer in the next image is pointing at and take over the settings show.
 <div align="center">
     <p>
-    <img src="./docs/pictures/Wandrer-download-screen.png " alt="Screenshot showing how to download the Wandrer data" width=80%>
+    <img src="./pictures/Wandrer-download-screen.png " alt="Screenshot showing how to download the Wandrer data" width=80%>
     </p>
 </div>
 After pressing 'Continue' the Wandrer site will start creating your download file. When it is ready you will get an email with a download link and some additional information.
