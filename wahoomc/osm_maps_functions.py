@@ -85,7 +85,7 @@ class OsmMaps:
         create_empty_directories(
             USER_OUTPUT_DIR, self.o_osm_data.tiles, self.o_osm_data.border_countries)
 
-    def prepare_wandrer_data(self): # pylint: disable=too-many-statements, too-many-branches
+    def prepare_wandrer_data(self): # pylint: disable=too-many-statements,too-many-branches
         """_
         Find Wandrer KMZ and convert them
         """
@@ -156,7 +156,7 @@ class OsmMaps:
 
                     for file in wandrerosm_files:
                         os.remove(file)
-                except:
+                except: # pylint: disable=bare-except
                     pass
 
         # Non-Windows
@@ -220,7 +220,7 @@ class OsmMaps:
 
                     for file in wandrerosm_files:
                         os.remove(file)
-                except:
+                except: # pylint: disable=bare-except
                     pass
 
         log.info('+ End Convert Wandrer file(s) to osm.pbf files: OK, %s', timings.stop_and_return())
@@ -503,7 +503,7 @@ class OsmMaps:
 
         log.info('+ Generate contour lines for each coordinate: OK, %s', timings.stop_and_return())
 
-    def split_filtered_country_files_to_tiles(self,process_wandrer): # pylint: disable=too-many-statements, too-many-nested-blocks
+    def split_filtered_country_files_to_tiles(self,process_wandrer): # pylint: disable=too-many-statements
         """
         Split filtered country files to tiles
         """
@@ -512,7 +512,7 @@ class OsmMaps:
         log.info('# Split filtered country files to tiles')
         timings = Timings()
         tile_count = 1
-        for tile in self.o_osm_data.tiles:
+        for tile in self.o_osm_data.tiles: # pylint: disable=too-many-nested-blocks
             for country, val in self.o_osm_data.border_countries.items():
                 if country not in tile['countries']:
                     continue
@@ -551,7 +551,7 @@ class OsmMaps:
                         cmd, '! Error in osmconvert with country: {country}. Win/out_file_names')
 
                     if process_wandrer:
-                        in_wandrer_files = list()
+                        in_wandrer_files = []
                         in_wandrer_files = glob.glob(os.path.join(USER_MAPS_DIR, 'wandrer*.osm.pbf'))
                         for wandrer_map in in_wandrer_files:
                             out_wandrer = os.path.join(
@@ -593,7 +593,7 @@ class OsmMaps:
                         cmd, '! Error in Osmium with country: {country}. macOS/out_file_names')
 
                     if process_wandrer:
-                        in_wandrer_files = list()
+                        in_wandrer_files = []
                         in_wandrer_files = glob.glob(os.path.join(USER_MAPS_DIR, 'wandrer*.osm.pbf'))
                         for wandrer_map in in_wandrer_files:
                             out_wandrer = os.path.join(
