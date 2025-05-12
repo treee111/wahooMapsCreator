@@ -13,6 +13,7 @@
   - [Create Anaconda environment](#create-anaconda-environment)
   - [Install wahooMapsCreator into Anaconda environment](#install-wahoomapscreator-into-anaconda-environment)
     - [Update wahooMapsCreator](#update-wahoomapscreator)
+  - [Additional programs for integrating Wandrer data](#additional-programs-to-integrate-wandrer-files)
   - [Additional programs for generating contour lines](#additional-programs-for-generating-contour-lines)
     - [Install phyghtmap](#install-phyghtmap)
     - [Verify phyghtmap](#verify-phyghtmap)
@@ -102,6 +103,17 @@ If you want to upgrade to a version other than the release actual one, use this 
 ```
 pip install wahoomc==2.0.0a5 --upgrade 
 ```
+
+## Additional programs to integrate Wandrer files
+To integrate your progress in Wandrer to the generated maps you will need to install GPSBabel
+
+Windows
+Download and install from https://www.gpsbabel.org/download.html
+Don't forget to add the path to gpsbabel.exe to the path environment variable!
+
+macOS / Linux
+Download and install from the same link as the Windows version or use the homebrew install here
+https://formulae.brew.sh/formula/gpsbabel
 
 ## Additional programs for generating contour lines
 For integrating contour lines into the generated maps, some additional steps need to be taken.

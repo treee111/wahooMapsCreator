@@ -10,5 +10,11 @@
     // "python.testing.nosetestsEnabled": false,
     "python.testing.unittestEnabled": true,
     "editor.formatOnSave": true,
-    "python.analysis.indexing": true
+    "python.analysis.indexing": true,
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    }
 }

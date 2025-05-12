@@ -466,13 +466,7 @@
                </m>
             </m>
 
-
             <m e="way" k="highway" v="track|byway" zoom-min="13" select="first">
-
-
-
-
-
                <m k="tracktype" v="grade1">
                   <!-- Solid. Usually a paved or sealed surface-->
                   <m k="bicycle" v="bic_yes|bic_designated">
@@ -729,6 +723,9 @@
                <line cat="roam" outline="highway-roam" stroke="#FFFF00" width="4" />
                <line cat="bolt2" outline="bolt2-highway" stroke="#AA5500" width="4"/>
                <line cat="bolt2-dark" outline="bolt2-major-roads-dark" stroke="#AA5500" width="4" />
+            </m>
+            <m e="way" k="wandrer" v="untraveled" zoom-min="14">
+               <line stroke="#FF0000" outline="major-roads" width="1.5" dasharray="10,12"/>
             </m>
          </m>
          <!-- endregion -->

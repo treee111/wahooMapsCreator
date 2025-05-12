@@ -10,6 +10,7 @@
     - [Main arguments](#main-arguments)
     - [Examples](#examples)
   - [POIs - Points of Interest](#pois---points-of-interest)
+  - [Wandrer integration](#wandrer-integration)
   - [Contour lines](#contour-lines)
   - [User specific configuration](#user-specific-configuration)
 
@@ -80,6 +81,7 @@ If you like to run wahooMapsCreator with another value than the default, use the
 | -z     | Zip the country (and country-maps) folder.                                                                       | false               |
 | -v     | Output debug logger messages.                                                                                    | false               |
 | -hdd   | Use mapwriters hdd mode, 'type=hd' parameter. Slower processing, but good for low memory systems.                | false               |
+| -dw    | Integrate your Wandrer files to the maps generated.                                                              | false               |
 
 ### Main arguments
 **Create maps for a country**
@@ -114,6 +116,12 @@ Actually, wahooMapsCreator includes fuel stations, backeries, cafes and railway 
 3. Activate VTM rendering if needed
 - [see here](COPY_TO_WAHOO.md#activate-vtm-rendering)
 - see also: https://github.com/treee111/wahooMapsCreator/wiki/Enable-hidden-features
+
+## Wandrer integration
+For creating maps that contain your traveled roads progress as recorded on the Wandrer site (https://wandrer.earth) do the following:
+1. Enhance your Anaconda environment using [these steps](./QUICKSTART_ANACONDA.md#additional-programs-to-integrate-wandrer-files)
+2. Create custom maps with the argument `-dw` like [normally](#run-wahoomapscreator-for-your-country). You will have to provide your Wandrer files in the Maps directory of your install.
+3. Use a theme that renders untraveled roads.
 
 ## Contour lines
 For creating maps which include contour lines and have them displayed on your Wahoo device, these steps need to be done:

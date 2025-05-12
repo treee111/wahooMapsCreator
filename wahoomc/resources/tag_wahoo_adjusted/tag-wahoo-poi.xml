@@ -85,6 +85,10 @@
     <osm-tag key="ele" value="4800" zoom-appear="14"/>
     <osm-tag key="ele" value="4900" zoom-appear="14"/>
     <osm-tag key="ele" value="5000" zoom-appear="14"/>
+    <osm-tag key="wandrer" value="untraveled" zoom-appear="13"/>
+    <osm-tag key="wandrer" value="untraveledunpaved" zoom-appear="13"/>
+    <osm-tag key="wandrer" value="traveled" zoom-appear="13"/>
+    <osm-tag key="wandrer" value="achievementboundary" zoom-appear="8"/>
   </ways>
   <!-- PLACES TAGS -->
   <pois>
