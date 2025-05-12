@@ -85,7 +85,7 @@ class OsmMaps:
         create_empty_directories(
             USER_OUTPUT_DIR, self.o_osm_data.tiles, self.o_osm_data.border_countries)
 
-    def prepare_wandrer_data(self): # pylint: disable=too-many-statements
+    def prepare_wandrer_data(self): # pylint: disable=too-many-statements, too-many-branches
         """_
         Find Wandrer KMZ and convert them
         """
@@ -503,7 +503,7 @@ class OsmMaps:
 
         log.info('+ Generate contour lines for each coordinate: OK, %s', timings.stop_and_return())
 
-    def split_filtered_country_files_to_tiles(self,process_wandrer): # pylint: disable=too-many-statements
+    def split_filtered_country_files_to_tiles(self,process_wandrer): # pylint: disable=too-many-statements, too-many-nested-blocks
         """
         Split filtered country files to tiles
         """
@@ -513,7 +513,6 @@ class OsmMaps:
         timings = Timings()
         tile_count = 1
         for tile in self.o_osm_data.tiles:
-
             for country, val in self.o_osm_data.border_countries.items():
                 if country not in tile['countries']:
                     continue
