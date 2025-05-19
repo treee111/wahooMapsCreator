@@ -7,6 +7,7 @@ import os
 from os import walk
 import platform
 import shutil
+import sys
 import unittest
 import subprocess
 
@@ -214,11 +215,11 @@ class TestGeneratedFiles(unittest.TestCase):
         if not hdd_mode:
             # run processing of input-country via CLI in standard mode
             result = os.system(
-                f'python -m wahoomc cli -co {country} -tag tag-wahoo.xml -fp -c -md 9999 -nbc')
+                f'{sys.executable} -m wahoomc cli -co {country} -tag tag-wahoo.xml -fp -c -md 9999 -nbc')
         else:
             # run processing of input-country via CLI in mapwriter hdd mode
             result = os.system(
-                f'python -m wahoomc cli -co {country} -tag tag-wahoo.xml -fp -c -md 9999 -nbc -hdd')
+                f'{sys.executable} -m wahoomc cli -co {country} -tag tag-wahoo.xml -fp -c -md 9999 -nbc -hdd')
 
         # check if run was successful
         self.assertEqual(result, 0)

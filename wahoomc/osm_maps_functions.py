@@ -253,16 +253,8 @@ class OsmMaps:
 
             # create land1.osm
             if not os.path.isfile(out_file_land1+'1.osm') or self.o_osm_data.force_processing is True:
-                # Windows
-                if platform.system() == "Windows":
-                    cmd = ['python', os.path.join(RESOURCES_DIR,
-                                                  'shape2osm.py'), '-l', out_file_land1, land_file]
-
-                # Non-Windows
-                else:
-                    cmd = ['python', os.path.join(RESOURCES_DIR,
-                                                  'shape2osm.py'), '-l', out_file_land1, land_file]
-
+                cmd = [sys.executable, os.path.join(RESOURCES_DIR,
+                                                   'shape2osm.py'), '-l', out_file_land1, land_file]
                 run_subprocess_and_log_output(
                     cmd, f'! Error creating land.osm for tile: {tile["x"]},{tile["y"]}')
             self.log_tile_debug(tile["x"], tile["y"], tile_count, timings_tile.stop_and_return())
