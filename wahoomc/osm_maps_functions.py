@@ -453,7 +453,7 @@ class OsmMaps:
 
         log.info('+ Split filtered country files to tiles: OK, %s', timings.stop_and_return())
 
-    def merge_splitted_tiles_with_land_and_sea(self, process_border_countries, contour): # pylint: disable=too-many-locals
+    def merge_splitted_tiles_with_land_and_sea(self, process_border_countries, contour, verbose_debug): # pylint: disable=too-many-locals
         """
         Merge splitted tiles with land elevation and sea
         - elevation data only if requested
@@ -521,8 +521,14 @@ class OsmMaps:
             cmd.extend(['--tag-transform', 'file=' + os.path.join(RESOURCES_DIR,
                                                                   'tunnel-transform.xml'), '--wb', out_file_merged, 'omitmetadata=true'])
 
-            run_subprocess_and_log_output(
-                cmd, f'! Error in Osmosis with tile: {tile["x"]},{tile["y"]}')
+            if platform.system() == "Windows" and verbose_debug:
+                result = subprocess.run(cmd, check=False)
+                if result.returncode != 0:
+                    print(f'! Error in Osmosis with tile: {tile["x"]},{tile["y"]}')
+                    sys.exit()
+            else:
+                run_subprocess_and_log_output(
+                    cmd, f'! Error in Osmosis with tile: {tile["x"]},{tile["y"]}')
 
             self.log_tile_debug(tile["x"], tile["y"], tile_count, timings_tile.stop_and_return())
             tile_count += 1
@@ -558,7 +564,7 @@ class OsmMaps:
 
         log.debug('+ Sorting land* osm files: OK')
 
-    def create_map_files(self, save_cruiser, tag_wahoo_xml, hdd_mode):
+    def create_map_files(self, save_cruiser, tag_wahoo_xml, hdd_mode, verbose_debug):
         """
         Creating .map files
         """
@@ -608,8 +614,14 @@ class OsmMaps:
                     'The tag-wahoo xml file was not found: ˚%s˚. Does the file exist and is your input correct?', tag_wahoo_xml)
                 sys.exit()
 
-            run_subprocess_and_log_output(
-                cmd, f'Error in creating map file via Osmosis with tile: {tile["x"]},{tile["y"]}. mapwriter plugin installed?')
+            if platform.system() == "Windows" and verbose_debug:
+                result = subprocess.run(cmd, check=False)
+                if result.returncode != 0:
+                    print(f'Error in creating map file via Osmosis with tile: {tile["x"]},{tile["y"]}. mapwriter plugin installed?')
+                    sys.exit()
+            else:
+                run_subprocess_and_log_output(
+                    cmd, f'Error in creating map file via Osmosis with tile: {tile["x"]},{tile["y"]}. mapwriter plugin installed?')
 
             # Windows
             if platform.system() == "Windows":
