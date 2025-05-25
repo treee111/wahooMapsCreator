@@ -180,7 +180,7 @@ def get_latest_pypi_version():
         response = requests.get(
             'https://pypi.org/pypi/wahoomc/json', timeout=1)
         return response.json()['info']['version']
-    except (requests.ConnectionError, requests.Timeout):
+    except (requests.ConnectionError, requests.Timeout, requests.exceptions.JSONDecodeError):
         return None
 
 
