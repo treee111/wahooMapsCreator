@@ -593,6 +593,7 @@ class OsmMaps:
                 f'bbox={tile["bottom"]:.6f},{tile["left"]:.6f},{tile["top"]:.6f},{tile["right"]:.6f}')
             cmd.append('zoom-interval-conf=12,0,17')
             cmd.append(f'threads={threads}')
+            cmd.append('tag-values=true')
             if hdd_mode:
                 cmd.append('type=hd')
             cmd.append(f'tag-conf-file={tag_conf_file}')

@@ -171,11 +171,6 @@
 
   <!-- NOT TO RENDER -->
   <ways>
-    <osm-tag key="id" renderable="false" value="%f" />
-
-    <osm-tag key="ref" renderable="false" value="%s" />
-    <osm-tag key="name" renderable="false" value="%s" />
-
     <osm-tag key="access" value="destination" renderable="false"/>
     <osm-tag key="access" value="private" renderable="false"/>
 
