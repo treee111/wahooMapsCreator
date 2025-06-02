@@ -38,6 +38,7 @@ def run_subprocess_and_log_output(cmd, error_message, cwd=""):
     """
     run given cmd-subprocess and issue error message if wished
     """
+    log.debug('running subprocess: %s', str(cmd))
     if not cwd:
         process = subprocess.run(
             cmd,
