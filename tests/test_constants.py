@@ -51,7 +51,7 @@ class TestTranslateTags(unittest.TestCase):
         tags_win = 'access= area=yes'
         mock_json_load.return_value = tags_universal_simple
 
-        transl_tags = translate_tags_to_keep(sys_platform='Windows')
+        transl_tags = translate_tags_to_keep(osmium=False)
         self.assertEqual(tags_win, transl_tags)
 
     @ mock.patch("wahoomc.file_directory_functions.json.load")
@@ -76,7 +76,7 @@ class TestTranslateTags(unittest.TestCase):
         tags_win = 'access= area=yes bicycle= bridge= foot=ft_yes =foot_designated'
         mock_json_load.return_value = tags_universal_adv
 
-        transl_tags = translate_tags_to_keep(sys_platform='Windows')
+        transl_tags = translate_tags_to_keep(osmium=False)
         self.assertEqual(tags_win, transl_tags)
 
     def test_translate_tags_to_keep_full_macos(self):
@@ -100,8 +100,7 @@ class TestTranslateTags(unittest.TestCase):
         """
         tags_win = 'access= area=yes bicycle= bridge= foot=ft_yes =foot_designated amenity=fuel =cafe =drinking_water =shelter shop=bakery =bicycle highway=abandoned =bus_guideway =disused =bridleway =byway =construction =cycleway =footway =living_street =motorway =motorway_link =path =pedestrian =primary =primary_link =residential =road =secondary =secondary_link =service =steps =tertiary =tertiary_link =track =trunk =trunk_link =unclassified natural=coastline =nosea =sea =beach =land =scrub =water =wetland =wood landuse=forest =commercial =industrial =residential =retail leisure=park =nature_reserve railway=rail =tram =station =stop surface= tracktype= tunnel= waterway=canal =drain =river =riverbank =stream wood=deciduous tourism=alpine_hut'
 
-        transl_tags = translate_tags_to_keep(
-            sys_platform='Windows', use_repo=True)
+        transl_tags = translate_tags_to_keep(osmium=False, use_repo=True)
         self.assertEqual(tags_win, transl_tags)
 
     def test_translate_name_tags_to_keep_full_macos(self):
@@ -121,8 +120,7 @@ class TestTranslateTags(unittest.TestCase):
 
         names_tags_win = 'admin_level=2 area=yes mountain_pass= natural= place=city =hamlet =island =isolated_dwelling =islet =locality =suburb =town =village =country'
 
-        transl_tags = translate_tags_to_keep(
-            name_tags=True, sys_platform='Windows', use_repo=True)
+        transl_tags = translate_tags_to_keep(name_tags=True, osmium=False, use_repo=True)
         self.assertEqual(names_tags_win, transl_tags)
 
 

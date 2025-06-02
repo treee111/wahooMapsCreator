@@ -26,16 +26,10 @@ class TagsToKeepNotFoundError(Exception):
     """Raised when the specified tags to keep .json file does not exist"""
 
 
-def translate_tags_to_keep(name_tags=False, sys_platform='', use_repo=False):
+def translate_tags_to_keep(name_tags=False, osmium=True, use_repo=False):
     """
     translates the given tags to format of the operating system.
     """
-
-    if sys_platform == "Windows":
-        separator = ' ='
-    else:
-        separator = ', '
-
     tags_modif = []
 
     # read tags-to-keep .json from user-dir in favor of python installation
@@ -61,21 +55,22 @@ def translate_tags_to_keep(name_tags=False, sys_platform='', use_repo=False):
         universal_tags = tags_from_json['NAME_TAGS_TO_KEEP_UNIVERSAL']
 
     for tag, value in universal_tags.items():
-        to_append = transl_tag_value(sys_platform, separator, tag, value)
+        to_append = transl_tag_value(osmium, tag, value)
 
         tags_modif.append(to_append)
 
-    if sys_platform == "Windows":
+    if not osmium:
         tags_modif = ' '.join(tags_modif)
 
     return tags_modif
 
 
-def transl_tag_value(sys_platform, separator, tag, value):
+def transl_tag_value(osmium, tag, value):
     """
     translates one tag with value(s) to a "common" format
     """
     if isinstance(value, list):
+        separator = ', ' if osmium else ' ='
         for iteration, sing_val in enumerate(value):
             if iteration == 0:
                 to_append = f'{tag}={sing_val}'
@@ -84,10 +79,7 @@ def transl_tag_value(sys_platform, separator, tag, value):
     elif value:
         to_append = f'{tag}={value}'
     else:
-        if sys_platform == "Windows":
-            to_append = f'{tag}='
-        else:
-            to_append = tag
+        to_append = tag if osmium else f'{tag}='
 
     return to_append
 
