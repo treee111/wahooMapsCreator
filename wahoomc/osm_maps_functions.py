@@ -16,8 +16,7 @@ import logging
 
 # import custom python packages
 from wahoomc.file_directory_functions import read_json_file_country_config, create_empty_directories, write_json_file_generic
-from wahoomc.constants_functions import translate_tags_to_keep, \
-    get_tooling_win_path, get_tag_wahoo_xml_path, TagWahooXmlNotFoundError
+from wahoomc.constants_functions import translate_tags_to_keep, get_tooling_win_path
 
 from wahoomc.setup_functions import read_earthexplorer_credentials
 
@@ -554,7 +553,7 @@ class OsmMaps:
 
         log.debug('+ Sorting land* osm files: OK')
 
-    def create_map_files(self, save_cruiser, tag_wahoo_xml, hdd_mode, verbose):
+    def create_map_files(self, save_cruiser, tag_conf_file, hdd_mode, verbose):
         """
         Creating .map files
         """
@@ -595,14 +594,7 @@ class OsmMaps:
             cmd.append(f'threads={threads}')
             if hdd_mode:
                 cmd.append('type=hd')
-            # add path to tag-wahoo xml file
-            try:
-                cmd.append(
-                    f'tag-conf-file={get_tag_wahoo_xml_path(tag_wahoo_xml)}')
-            except TagWahooXmlNotFoundError:
-                log.error(
-                    'The tag-wahoo xml file was not found: ˚%s˚. Does the file exist and is your input correct?', tag_wahoo_xml)
-                sys.exit()
+            cmd.append(f'tag-conf-file={tag_conf_file}')
 
             if verbose:
                 result = subprocess.run(cmd, check=False)

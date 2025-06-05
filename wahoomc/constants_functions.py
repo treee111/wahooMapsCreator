@@ -18,10 +18,6 @@ from wahoomc.file_directory_functions import read_json_file_generic
 log = logging.getLogger('main-logger')
 
 
-class TagWahooXmlNotFoundError(Exception):
-    """Raised when the specified tag-wahoo xml file does not exist"""
-
-
 class TagsToKeepNotFoundError(Exception):
     """Raised when the specified tags to keep .json file does not exist"""
 
@@ -103,21 +99,6 @@ def get_tooling_win_path(path_in_tooling_win, in_user_dir=False):
 
     # all other "toolings": concatenate with win tooling dir
     return os.path.join(tooling_dir, path_in_tooling_win)
-
-
-def get_tag_wahoo_xml_path(tag_wahoo_xml):
-    """
-    return path to tag-wahoo xml file if the file exists
-    - from the user directory "USER_WAHOO_MC/_config/tag_wahoo_adjusted/tag_wahoo_xml"
-    - 2ndly from the PyPI installation: "RESOURCES_DIR/tag_wahoo_adjusted/tag_wahoo_xml"
-    """
-
-    for path in get_absolute_dir_user_or_repo("tag_wahoo_adjusted", tag_wahoo_xml):
-        if os.path.exists(path):
-            return path
-
-    raise TagWahooXmlNotFoundError
-
 
 def get_absolute_dir_user_or_repo(folder, file=''):
     """

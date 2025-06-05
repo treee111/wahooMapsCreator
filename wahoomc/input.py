@@ -5,6 +5,7 @@ functions and object for processing input via CLI and GUI
 
 # import official python packages
 import argparse
+import os
 import sys
 
 # for gui
@@ -12,6 +13,7 @@ import tkinter as tk
 from tkinter import ttk
 
 # import custom python packages
+from wahoomc.constants_functions import get_absolute_dir_user_or_repo
 from wahoomc.geofabrik_json import GeofabrikJson
 from wahoomc.geofabrik_json import CountyIsNoGeofabrikCountry
 from wahoomc.geofabrik import CountryGeofabrik
@@ -77,7 +79,7 @@ def process_call_of_the_tool():
     # Save uncompressed maps for Cruiser if True
     options_args.add_argument('-c', '--cruiser', action='store_true',
                               help="save uncompressed maps for Cruiser")
-    # specify the file with tags to keep in the output // file needs to be in wahoo_mc/resources/tag_wahoo_adjusted
+    # specify the file with tags to keep in the output
     options_args.add_argument('-tag', '--tag_wahoo_xml', default=InputData().tag_wahoo_xml,
                               help="file with tags to keep in the output")
     # zip the country (and country-maps) folder
@@ -218,6 +220,15 @@ class InputData():  # pylint: disable=too-many-instance-attributes,too-few-publi
                 CountryGeofabrik.split_input_to_list(self.country)
             except CountyIsNoGeofabrikCountry as exception:
                 sys.exit(exception)
+
+        if not os.path.exists(self.tag_wahoo_xml):
+            for path in get_absolute_dir_user_or_repo("tag_wahoo_adjusted", self.tag_wahoo_xml):
+                if os.path.exists(path):
+                    self.tag_wahoo_xml = path
+                    break
+
+        if not os.path.exists(self.tag_wahoo_xml):
+            sys.exit(f'The tag-wahoo xml file was not found: \"{self.tag_wahoo_xml}\"')
 
         return True
 
