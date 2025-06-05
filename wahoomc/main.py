@@ -62,6 +62,7 @@ def run(run_level):
             check_installation_of_programs_credentials_for_contour_lines()
 
         log.info('# Used configuration')
+        log.info('+ tags-to-keep file: %s', o_input_data.tags_to_keep)
         log.info('+ map-writer tag-conf file: %s', o_input_data.tag_wahoo_xml)
 
         if o_input_data.country:
@@ -77,7 +78,7 @@ def run(run_level):
         # Download files marked for download
         o_downloader.download_files_if_needed()
 
-        o_osm_maps = OsmMaps(o_osm_data)
+        o_osm_maps = OsmMaps(o_osm_data, o_input_data.tags_to_keep)
 
         # Filter tags from country osm.pbf files'
         o_osm_maps.filter_tags_from_country_osm_pbf_files()

@@ -1,10 +1,12 @@
 """
 tests for the downloader file
 """
+import os
 import unittest
 import mock
 
 
+from wahoomc.constants import RESOURCES_DIR
 from wahoomc.constants_functions import translate_tags_to_keep
 
 
@@ -27,6 +29,9 @@ class TestTranslateTags(unittest.TestCase):
     tests for translating tags-constants between the universal format and OS-specific formats
     """
 
+    def setUp(self):
+        self.tags_to_keep = os.path.join(RESOURCES_DIR, 'tags-to-keep.json')
+
     @ mock.patch("wahoomc.file_directory_functions.json.load")
     @ mock.patch("wahoomc.open")
     def test_translate_tags_to_keep_simple_macos(self, mock_open, mock_json_load):  # pylint: disable=unused-argument
@@ -36,7 +41,7 @@ class TestTranslateTags(unittest.TestCase):
         tags = ['access', 'area=yes']
         mock_json_load.return_value = tags_universal_simple
 
-        transl_tags = translate_tags_to_keep()
+        transl_tags = translate_tags_to_keep('nonexistant.json')
         self.assertEqual(tags, transl_tags)
 
     @ mock.patch("wahoomc.file_directory_functions.json.load")
@@ -48,7 +53,7 @@ class TestTranslateTags(unittest.TestCase):
         tags_win = 'access= area=yes'
         mock_json_load.return_value = tags_universal_simple
 
-        transl_tags = translate_tags_to_keep(osmium=False)
+        transl_tags = translate_tags_to_keep('nonexistant.json', osmium=False)
         self.assertEqual(tags_win, transl_tags)
 
     @ mock.patch("wahoomc.file_directory_functions.json.load")
@@ -61,7 +66,7 @@ class TestTranslateTags(unittest.TestCase):
                 'bridge', 'foot=ft_yes, foot_designated']
         mock_json_load.return_value = tags_universal_adv
 
-        transl_tags = translate_tags_to_keep()
+        transl_tags = translate_tags_to_keep('nonexistant.json')
         self.assertEqual(tags, transl_tags)
 
     @ mock.patch("wahoomc.file_directory_functions.json.load")
@@ -73,7 +78,7 @@ class TestTranslateTags(unittest.TestCase):
         tags_win = 'access= area=yes bicycle= bridge= foot=ft_yes =foot_designated'
         mock_json_load.return_value = tags_universal_adv
 
-        transl_tags = translate_tags_to_keep(osmium=False)
+        transl_tags = translate_tags_to_keep('nonexistant.json', osmium=False)
         self.assertEqual(tags_win, transl_tags)
 
     def test_translate_tags_to_keep_full_macos(self):
@@ -88,7 +93,7 @@ class TestTranslateTags(unittest.TestCase):
                 'leisure=park, nature_reserve', 'railway=rail, tram, station, stop',
                 'surface', 'tracktype', 'tunnel', 'waterway=canal, drain, river, riverbank, stream', 'wood=deciduous', 'tourism=alpine_hut']
 
-        transl_tags = translate_tags_to_keep(use_repo=True)
+        transl_tags = translate_tags_to_keep(self.tags_to_keep)
         self.assertEqual(tags, transl_tags)
 
     def test_translate_tags_to_keep_full_win(self):
@@ -97,7 +102,7 @@ class TestTranslateTags(unittest.TestCase):
         """
         tags_win = 'access= area=yes bicycle= bridge= foot=ft_yes =foot_designated amenity=fuel =cafe =drinking_water =shelter shop=bakery =bicycle highway=abandoned =bus_guideway =disused =bridleway =byway =construction =cycleway =footway =living_street =motorway =motorway_link =path =pedestrian =primary =primary_link =residential =road =secondary =secondary_link =service =steps =tertiary =tertiary_link =track =trunk =trunk_link =unclassified natural=coastline =nosea =sea =beach =land =scrub =water =wetland =wood landuse=forest =commercial =industrial =residential =retail leisure=park =nature_reserve railway=rail =tram =station =stop surface= tracktype= tunnel= waterway=canal =drain =river =riverbank =stream wood=deciduous tourism=alpine_hut'
 
-        transl_tags = translate_tags_to_keep(osmium=False, use_repo=True)
+        transl_tags = translate_tags_to_keep(self.tags_to_keep, osmium=False)
         self.assertEqual(tags_win, transl_tags)
 
     def test_translate_name_tags_to_keep_full_macos(self):
@@ -107,7 +112,7 @@ class TestTranslateTags(unittest.TestCase):
         names_tags = ['admin_level=2', 'area=yes', 'mountain_pass', 'natural',
                       'place=city, hamlet, island, isolated_dwelling, islet, locality, suburb, town, village, country']
 
-        transl_tags = translate_tags_to_keep(name_tags=True, use_repo=True)
+        transl_tags = translate_tags_to_keep(self.tags_to_keep, name_tags=True)
         self.assertEqual(names_tags, transl_tags)
 
     def test_translate_name_tags_to_keep_full_win(self):
@@ -117,7 +122,7 @@ class TestTranslateTags(unittest.TestCase):
 
         names_tags_win = 'admin_level=2 area=yes mountain_pass= natural= place=city =hamlet =island =isolated_dwelling =islet =locality =suburb =town =village =country'
 
-        transl_tags = translate_tags_to_keep(name_tags=True, osmium=False, use_repo=True)
+        transl_tags = translate_tags_to_keep(self.tags_to_keep, name_tags=True, osmium=False)
         self.assertEqual(names_tags_win, transl_tags)
 
 

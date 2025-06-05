@@ -89,8 +89,9 @@ class OsmMaps:
     # Number of workers for the Osmosis read binary fast function
     workers = '1'
 
-    def __init__(self, o_osm_data):
+    def __init__(self, o_osm_data, tags_to_keep):
         self.o_osm_data = o_osm_data
+        self.tags_to_keep = tags_to_keep
         self.osmconvert_path = get_tooling_win_path('osmconvert')
 
         create_empty_directories(
@@ -145,8 +146,8 @@ class OsmMaps:
                         '+ Filtering unwanted map objects out of map of %s', key)
                     cmd = [get_tooling_win_path('osmfilter', in_user_dir=True)]
                     cmd.append(out_file_o5m)
-                    cmd.append('--keep="' + translate_tags_to_keep(osmium=False) + '"')
-                    cmd.append('--keep-tags="all type= layer= ' + translate_tags_to_keep(osmium=False) + '"')
+                    cmd.append('--keep="' + translate_tags_to_keep(self.tags_to_keep, osmium=False) + '"')
+                    cmd.append('--keep-tags="all type= layer= ' + translate_tags_to_keep(self.tags_to_keep, osmium=False) + '"')
                     cmd.append('-o=' + out_file_o5m_filtered_win)
 
                     run_subprocess_and_log_output(
@@ -154,8 +155,8 @@ class OsmMaps:
 
                     cmd = [get_tooling_win_path('osmfilter', in_user_dir=True)]
                     cmd.append(out_file_o5m)
-                    cmd.append('--keep="' + translate_tags_to_keep(name_tags=True, osmium=False) + '"')
-                    cmd.append('--keep-tags="all type= name= layer= ' + translate_tags_to_keep(name_tags=True, osmium=False) + '"')
+                    cmd.append('--keep="' + translate_tags_to_keep(self.tags_to_keep, name_tags=True, osmium=False) + '"')
+                    cmd.append('--keep-tags="all type= name= layer= ' + translate_tags_to_keep(self.tags_to_keep, name_tags=True, osmium=False) + '"')
                     cmd.append('-o=' + out_file_o5m_filtered_names_win)
 
                     run_subprocess_and_log_output(
@@ -182,7 +183,7 @@ class OsmMaps:
                     # https://docs.osmcode.org/osmium/latest/osmium-tags-filter.html
                     cmd = ['osmium', 'tags-filter', '--remove-tags']
                     cmd.append(val['map_file'])
-                    cmd.extend(translate_tags_to_keep())
+                    cmd.extend(translate_tags_to_keep(self.tags_to_keep))
                     cmd.extend(['-o', out_file_pbf_filtered_mac])
                     cmd.append('--overwrite')
 
@@ -191,7 +192,7 @@ class OsmMaps:
 
                     cmd = ['osmium', 'tags-filter', '--remove-tags']
                     cmd.append(val['map_file'])
-                    cmd.extend(translate_tags_to_keep(name_tags=True))
+                    cmd.extend(translate_tags_to_keep(self.tags_to_keep, name_tags=True))
                     cmd.extend(['-o', out_file_pbf_filtered_names_mac])
                     cmd.append('--overwrite')
 
@@ -740,8 +741,8 @@ class OsmMaps:
         configuration = {
             "version_last_run": VERSION,
             "changed_ts_map_last_run": get_timestamp_last_changed(self.o_osm_data.border_countries[country]['map_file']),
-            "tags_last_run": translate_tags_to_keep(),
-            "name_tags_last_run": translate_tags_to_keep(name_tags=True)
+            "tags_last_run": translate_tags_to_keep(self.tags_to_keep),
+            "name_tags_last_run": translate_tags_to_keep(self.tags_to_keep, name_tags=True)
         }
 
         write_json_file_generic(os.path.join(
@@ -756,8 +757,8 @@ class OsmMaps:
         try:
             country_config = read_json_file_country_config(os.path.join(
                 USER_OUTPUT_DIR, country, ".config.json"))
-            if not country_config["tags_last_run"] == translate_tags_to_keep() \
-                    or not country_config["name_tags_last_run"] == translate_tags_to_keep(name_tags=True):
+            if not country_config["tags_last_run"] == translate_tags_to_keep(self.tags_to_keep) \
+                    or not country_config["name_tags_last_run"] == translate_tags_to_keep(self.tags_to_keep, name_tags=True):
                 tags_are_identical = False
         except (FileNotFoundError, KeyError):
             tags_are_identical = False

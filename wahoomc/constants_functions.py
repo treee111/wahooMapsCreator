@@ -22,25 +22,14 @@ class TagsToKeepNotFoundError(Exception):
     """Raised when the specified tags to keep .json file does not exist"""
 
 
-def translate_tags_to_keep(name_tags=False, osmium=True, use_repo=False):
+def translate_tags_to_keep(tags_to_keep, name_tags=False, osmium=True):
     """
     translates the given tags to format of the operating system.
     """
     tags_modif = []
 
-    # read tags-to-keep .json from user-dir in favor of python installation
-    # evaluate path first: user-dir in favor of PyPI installation
-    if not use_repo:
-        for path in get_absolute_dir_user_or_repo('', file='tags-to-keep.json'):
-            if os.path.exists(path):
-                break
-    # force using file from repo - used in unittests for equal output
-    else:
-        path = get_absolute_dir_user_or_repo(
-            '', file='tags-to-keep.json')[1]
-
-    # read the tags from the evaluated path above
-    tags_from_json = read_json_file_generic(path)
+    # read the tags from the passed tags_to_keep path
+    tags_from_json = read_json_file_generic(tags_to_keep)
 
     if not tags_from_json:
         raise TagsToKeepNotFoundError

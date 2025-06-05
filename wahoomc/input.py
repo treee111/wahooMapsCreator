@@ -79,6 +79,9 @@ def process_call_of_the_tool():
     # Save uncompressed maps for Cruiser if True
     options_args.add_argument('-c', '--cruiser', action='store_true',
                               help="save uncompressed maps for Cruiser")
+    # specify the file with tags to keep when filtering
+    options_args.add_argument('--tags_to_keep', default=InputData().tags_to_keep,
+                              help="file with tags to keep when filtering")
     # specify the file with tags to keep in the output
     options_args.add_argument('-tag', '--tag_wahoo_xml', default=InputData().tag_wahoo_xml,
                               help="file with tags to keep in the output")
@@ -111,6 +114,7 @@ def process_call_of_the_tool():
     o_input_data.force_download = args.forcedownload
     o_input_data.force_processing = args.forceprocessing
 
+    o_input_data.tags_to_keep = args.tags_to_keep
     o_input_data.tag_wahoo_xml = args.tag_wahoo_xml
     o_input_data.save_cruiser = args.cruiser
     o_input_data.zip_folder = args.zip
@@ -191,6 +195,7 @@ class InputData():  # pylint: disable=too-many-instance-attributes,too-few-publi
         self.contour = False
         self.use_srtm1 = False
 
+        self.tags_to_keep = "tags-to-keep.json"
         self.tag_wahoo_xml = "tag-wahoo-poi.xml"
         self.zip_folder = False
         self.save_cruiser = False
@@ -220,6 +225,15 @@ class InputData():  # pylint: disable=too-many-instance-attributes,too-few-publi
                 CountryGeofabrik.split_input_to_list(self.country)
             except CountyIsNoGeofabrikCountry as exception:
                 sys.exit(exception)
+
+        if not os.path.exists(self.tags_to_keep):
+            for path in get_absolute_dir_user_or_repo("", self.tags_to_keep):
+                if os.path.exists(path):
+                    self.tags_to_keep = path
+                    break
+
+        if not os.path.exists(self.tags_to_keep):
+            sys.exit(f'The tags-to-keep json file was not found: \"{self.tags_to_keep}\"')
 
         if not os.path.exists(self.tag_wahoo_xml):
             for path in get_absolute_dir_user_or_repo("tag_wahoo_adjusted", self.tag_wahoo_xml):

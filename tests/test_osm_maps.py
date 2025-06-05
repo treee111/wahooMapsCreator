@@ -62,7 +62,16 @@ class TestSubprocessOutput(unittest.TestCase):
         )
 
 
-class TestOsmMapsCalculation(unittest.TestCase):
+class TestOsmMaps(unittest.TestCase):
+    """
+    base test class
+    """
+
+    def setUp(self):
+        self.tags_to_keep = os.path.join(constants.RESOURCES_DIR, 'tags-to-keep.json')
+
+
+class TestOsmMapsCalculation(TestOsmMaps):
     """
     tests for the OSM maps file
     """
@@ -220,7 +229,7 @@ class TestOsmMapsCalculation(unittest.TestCase):
         self.assertEqual(result, exp_result)
 
 
-class TestOSMMapsInput(unittest.TestCase):
+class TestOSMMapsInput(TestOsmMaps):
     """
     tests for input of OsmData
     """
@@ -241,7 +250,7 @@ class TestOSMMapsInput(unittest.TestCase):
         """
         o_osm_data = self.get_osm_data_instance('albania,alps,andorra,austria,azores,belarus,belgium,bosnia-herzegovina,britain-and-ireland,bulgaria,croatia,cyprus,czech-republic,dach,denmark,estonia,faroe-islands,finland,france,georgia,germany,great-britain,greece,guernsey-jersey,hungary,iceland,ireland-and-northern-ireland,isle-of-man,italy,kosovo,latvia,liechtenstein,lithuania,luxembourg,macedonia,malta,moldova,monaco,montenegro,netherlands,norway,poland,portugal,romania,serbia,slovakia,slovenia,spain,sweden,switzerland,turkey,ukraine')
 
-        o_osm_maps = OsmMaps(o_osm_data)
+        o_osm_maps = OsmMaps(o_osm_data, self.tags_to_keep)
         folder_name = o_osm_maps.calculate_folder_name('.map.lzma')
         folder_name_maps = o_osm_maps.calculate_folder_name('.map')
 
@@ -272,7 +281,7 @@ class TestOSMMapsInput(unittest.TestCase):
 
         return o_osm_data
 
-class TestConfigFile(unittest.TestCase):
+class TestConfigFile(TestOsmMaps):
     """
     tests for the config .json file in the "wahooMapsCreatorData/_tiles/{country}" directory
     """
@@ -295,7 +304,7 @@ class TestConfigFile(unittest.TestCase):
         # download files marked for download to fill up map_file per country to write to config
         o_downloader.download_files_if_needed()
 
-        o_osm_maps = OsmMaps(o_osm_data)
+        o_osm_maps = OsmMaps(o_osm_data, self.tags_to_keep)
 
         o_osm_maps.write_country_config_file(o_input_data.country)
 
