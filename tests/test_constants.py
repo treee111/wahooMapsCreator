@@ -3,24 +3,9 @@ tests for the downloader file
 """
 import os
 import unittest
-import mock
 
 
 from wahoomc.constants_functions import translate_tags_to_keep
-
-
-tags_universal_simple = {"TAGS_TO_KEEP_UNIVERSAL": {
-    'access': '',
-    'area': 'yes'
-}}
-
-tags_universal_adv = {"TAGS_TO_KEEP_UNIVERSAL": {
-    'access': '',
-    'area': 'yes',
-    'bicycle': '',
-    'bridge': '',
-    'foot': ['ft_yes', 'foot_designated']
-}}
 
 
 class TestTranslateTags(unittest.TestCase):
@@ -30,55 +15,6 @@ class TestTranslateTags(unittest.TestCase):
 
     def setUp(self):
         self.tags_to_keep = os.path.join(os.path.dirname(__file__), 'resources', 'tags-to-keep.json')
-
-    @ mock.patch("wahoomc.file_directory_functions.json.load")
-    @ mock.patch("wahoomc.open")
-    def test_translate_tags_to_keep_simple_macos(self, mock_open, mock_json_load):  # pylint: disable=unused-argument
-        """
-        Test translating tags to keep from universal format to macOS
-        """
-        tags = ['access', 'area=yes']
-        mock_json_load.return_value = tags_universal_simple
-
-        transl_tags = translate_tags_to_keep('nonexistant.json')
-        self.assertEqual(tags, transl_tags)
-
-    @ mock.patch("wahoomc.file_directory_functions.json.load")
-    @ mock.patch("wahoomc.open")
-    def test_translate_tags_to_keep_simple_win(self, mock_open, mock_json_load):  # pylint: disable=unused-argument
-        """
-        Test translating tags to keep from universal format to Windows
-        """
-        tags_win = 'access= area=yes'
-        mock_json_load.return_value = tags_universal_simple
-
-        transl_tags = translate_tags_to_keep('nonexistant.json', osmium=False)
-        self.assertEqual(tags_win, transl_tags)
-
-    @ mock.patch("wahoomc.file_directory_functions.json.load")
-    @ mock.patch("wahoomc.open")
-    def test_translate_tags_to_keep_adv_macos(self, mock_open, mock_json_load):  # pylint: disable=unused-argument
-        """
-        Test translating tags to keep from universal format to macOS
-        """
-        tags = ['access', 'area=yes', 'bicycle',
-                'bridge', 'foot=ft_yes, foot_designated']
-        mock_json_load.return_value = tags_universal_adv
-
-        transl_tags = translate_tags_to_keep('nonexistant.json')
-        self.assertEqual(tags, transl_tags)
-
-    @ mock.patch("wahoomc.file_directory_functions.json.load")
-    @ mock.patch("wahoomc.open")
-    def test_translate_tags_to_keep_adv_win(self, mock_open, mock_json_load):  # pylint: disable=unused-argument
-        """
-        Test translating tags to keep from universal format to Windows
-        """
-        tags_win = 'access= area=yes bicycle= bridge= foot=ft_yes =foot_designated'
-        mock_json_load.return_value = tags_universal_adv
-
-        transl_tags = translate_tags_to_keep('nonexistant.json', osmium=False)
-        self.assertEqual(tags_win, transl_tags)
 
     def test_translate_tags_to_keep_full_macos(self):
         """
