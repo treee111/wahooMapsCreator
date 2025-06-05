@@ -45,7 +45,7 @@ def adjustments_due_to_breaking_changes():
     """
     handle breaking changes
     """
-    version_last_run = read_version_last_run() # pylint: disable=unused-variable
+    version_last_run = read_version_last_run()
 
     # Osmosis in v.0.49.2 seams not to be working on WINDOWS since the upgrade to v0.49.2
     # - due to the path into it was downloaded, 'tooling_win/Osmosis/osmosis-0.49.2'

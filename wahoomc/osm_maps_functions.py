@@ -49,7 +49,7 @@ def run_subprocess_and_log_output(cmd, error_message, cwd=""):
         )
 
     else:
-        process = subprocess.run(  # pylint: disable=consider-using-with
+        process = subprocess.run(
             cmd,
             capture_output=True,
             cwd=cwd,
@@ -58,7 +58,6 @@ def run_subprocess_and_log_output(cmd, error_message, cwd=""):
             errors="backslashreplace",
             check=False,
         )
-
 
     if error_message and process.returncode != 0:  # 0 means success
         log.error('subprocess error output:')
@@ -463,7 +462,7 @@ class OsmMaps:
         log.info('# Merge splitted tiles with land, elevation, and sea')
         timings = Timings()
         tile_count = 1
-        for tile in self.o_osm_data.tiles:  # pylint: disable=too-many-nested-blocks
+        for tile in self.o_osm_data.tiles:
             self.log_tile_info(tile["x"], tile["y"], tile_count)
             timings_tile = Timings()
 
@@ -816,7 +815,7 @@ class OsmMaps:
         """
         self.log_tile(tile_x, tile_y, tile_count, True, additional_info)
 
-    def log_tile(self, tile_x, tile_y, tile_count, log_level_debug, additional_info=''):  # pylint: disable=too-many-arguments
+    def log_tile(self, tile_x, tile_y, tile_count, log_level_debug, additional_info=''):  # pylint: disable=too-many-arguments,too-many-positional-arguments
         """
         unified status logging for this class
         """
