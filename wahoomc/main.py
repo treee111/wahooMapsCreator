@@ -54,7 +54,7 @@ def run(run_level):
         copy_jsons_from_repo_to_user('.', 'tags-to-keep.json')
     else:
         # Is there something to do?
-        o_input_data.is_required_input_given_or_exit(issue_message=True)
+        o_input_data.is_required_input_given_or_exit()
 
         if o_input_data.contour:
             check_installation_of_programs_credentials_for_contour_lines()

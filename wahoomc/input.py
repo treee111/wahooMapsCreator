@@ -196,7 +196,7 @@ class InputData():  # pylint: disable=too-many-instance-attributes,too-few-publi
 
         self.verbose = False
 
-    def is_required_input_given_or_exit(self, issue_message):
+    def is_required_input_given_or_exit(self):
         """
         check, if the minimal required arguments is given:
         - country
@@ -205,11 +205,8 @@ class InputData():  # pylint: disable=too-many-instance-attributes,too-few-publi
         If not, depending on the import parameter, the
         """
         if (self.country in ('None', '') and self.xy_coordinates in ('None', '')):
-            if issue_message:
-                sys.exit("Nothing to do. Start with -h or --help to see command line options."
-                         "Or in the GUI select a country to create maps for.")
-            else:
-                sys.exit()
+            sys.exit("Nothing to do. Start with -h or --help to see command line options."
+                     "Or in the GUI select a country to create maps for.")
         elif self.country and self.xy_coordinates:
             sys.exit(
                 "Country and X/Y coordinates are given. Only one of both is allowed!")
@@ -245,7 +242,7 @@ class GuiInput(tk.Tk):
         # start GUI
         self.mainloop()
 
-        self.o_input_data.is_required_input_given_or_exit(issue_message=True)
+        self.o_input_data.is_required_input_given_or_exit()
         return self.o_input_data
 
     def build_gui(self):
