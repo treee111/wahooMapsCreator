@@ -196,7 +196,8 @@ class InputData():  # pylint: disable=too-many-instance-attributes,too-few-publi
 
         self.verbose = False
 
-    def is_required_input_given_or_exit(self):
+
+    def is_required_input_given_or_exit(self): # pylint: disable=too-many-branches
         """
         check, if the minimal required arguments is given:
         - country
@@ -207,20 +208,18 @@ class InputData():  # pylint: disable=too-many-instance-attributes,too-few-publi
         if (self.country in ('None', '') and self.xy_coordinates in ('None', '')):
             sys.exit("Nothing to do. Start with -h or --help to see command line options."
                      "Or in the GUI select a country to create maps for.")
-        elif self.country and self.xy_coordinates:
-            sys.exit(
-                "Country and X/Y coordinates are given. Only one of both is allowed!")
-        elif self.country:
+
+        if self.country and self.xy_coordinates:
+            sys.exit("Country and X/Y coordinates are given. Only one of both is allowed!")
+
+        if self.country:
             # countries =
             try:
                 CountryGeofabrik.split_input_to_list(self.country)
             except CountyIsNoGeofabrikCountry as exception:
                 sys.exit(exception)
 
-            # if we made it until here, sys.exit() was not called and therefore all countries OK ;-)
-            return True
-        else:
-            return True
+        return True
 
 
 class GuiInput(tk.Tk):
