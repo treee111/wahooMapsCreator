@@ -6,7 +6,6 @@ import unittest
 import mock
 
 
-from wahoomc.constants import RESOURCES_DIR
 from wahoomc.constants_functions import translate_tags_to_keep
 
 
@@ -30,7 +29,7 @@ class TestTranslateTags(unittest.TestCase):
     """
 
     def setUp(self):
-        self.tags_to_keep = os.path.join(RESOURCES_DIR, 'tags-to-keep.json')
+        self.tags_to_keep = os.path.join(os.path.dirname(__file__), 'resources', 'tags-to-keep.json')
 
     @ mock.patch("wahoomc.file_directory_functions.json.load")
     @ mock.patch("wahoomc.open")
