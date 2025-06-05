@@ -18,6 +18,8 @@ from wahoomc.timings import Timings
 from wahoomc.osm_maps_functions import OsmMaps
 from wahoomc.osm_data import CountryOsmData, XYOsmData
 
+log = logging.getLogger('main-logger')
+
 # logging used in the terminal output:
 # # means top-level command
 # ! means error
@@ -47,7 +49,7 @@ def run(run_level):
         o_input_data = process_call_of_the_tool()
 
     if o_input_data.verbose:
-        logging.getLogger().setLevel(logging.DEBUG)
+        log.setLevel(logging.DEBUG)
 
     if run_level == 'init':
         copy_jsons_from_repo_to_user('tag_wahoo_adjusted')
@@ -58,6 +60,9 @@ def run(run_level):
 
         if o_input_data.contour:
             check_installation_of_programs_credentials_for_contour_lines()
+
+        log.info('# Used configuration')
+        log.info('+ map-writer tag-conf file: %s', o_input_data.tag_wahoo_xml)
 
         if o_input_data.country:
             o_osm_data = CountryOsmData(o_input_data)
