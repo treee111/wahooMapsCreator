@@ -89,9 +89,10 @@ class OsmMaps:
     # Number of workers for the Osmosis read binary fast function
     workers = '1'
 
-    def __init__(self, o_osm_data, tags_to_keep):
+    def __init__(self, o_osm_data, tags_to_keep, tag_transform):
         self.o_osm_data = o_osm_data
         self.tags_to_keep = tags_to_keep
+        self.tag_transform = tag_transform
         self.osmconvert_path = get_tooling_win_path('osmconvert')
 
         create_empty_directories(
@@ -502,8 +503,7 @@ class OsmMaps:
 
             cmd.extend(
                 ['--rx', 'file='+os.path.join(out_tile_dir, 'sea.osm'), '--s', '--m'])
-            cmd.extend(['--tag-transform', 'file=' + os.path.join(RESOURCES_DIR,
-                                                                  'tunnel-transform.xml'), '--wb', out_file_merged, 'omitmetadata=true'])
+            cmd.extend(['--tag-transform', 'file=' + self.tag_transform, '--wb', out_file_merged, 'omitmetadata=true'])
 
             if verbose:
                 result = subprocess.run(cmd, check=False)

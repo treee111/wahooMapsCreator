@@ -69,6 +69,7 @@ class TestOsmMaps(unittest.TestCase):
 
     def setUp(self):
         self.tags_to_keep = os.path.join(constants.RESOURCES_DIR, 'tags-to-keep.json')
+        self.tag_transform = os.path.join(constants.RESOURCES_DIR, 'tunnel-transform.xml')
 
 
 class TestOsmMapsCalculation(TestOsmMaps):
@@ -250,7 +251,7 @@ class TestOSMMapsInput(TestOsmMaps):
         """
         o_osm_data = self.get_osm_data_instance('albania,alps,andorra,austria,azores,belarus,belgium,bosnia-herzegovina,britain-and-ireland,bulgaria,croatia,cyprus,czech-republic,dach,denmark,estonia,faroe-islands,finland,france,georgia,germany,great-britain,greece,guernsey-jersey,hungary,iceland,ireland-and-northern-ireland,isle-of-man,italy,kosovo,latvia,liechtenstein,lithuania,luxembourg,macedonia,malta,moldova,monaco,montenegro,netherlands,norway,poland,portugal,romania,serbia,slovakia,slovenia,spain,sweden,switzerland,turkey,ukraine')
 
-        o_osm_maps = OsmMaps(o_osm_data, self.tags_to_keep)
+        o_osm_maps = OsmMaps(o_osm_data, self.tags_to_keep, self.tag_transform)
         folder_name = o_osm_maps.calculate_folder_name('.map.lzma')
         folder_name_maps = o_osm_maps.calculate_folder_name('.map')
 
@@ -304,7 +305,7 @@ class TestConfigFile(TestOsmMaps):
         # download files marked for download to fill up map_file per country to write to config
         o_downloader.download_files_if_needed()
 
-        o_osm_maps = OsmMaps(o_osm_data, self.tags_to_keep)
+        o_osm_maps = OsmMaps(o_osm_data, self.tags_to_keep, self.tag_transform)
 
         o_osm_maps.write_country_config_file(o_input_data.country)
 
