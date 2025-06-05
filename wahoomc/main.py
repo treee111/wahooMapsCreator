@@ -61,7 +61,7 @@ def run(run_level):
 
         if o_input_data.country:
             o_osm_data = CountryOsmData(o_input_data)
-        elif o_input_data.xy_coordinates:
+        else:
             o_osm_data = XYOsmData(o_input_data)
 
         timings = Timings()

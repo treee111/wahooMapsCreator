@@ -204,7 +204,8 @@ class TestOsmMapsCalculation(unittest.TestCase):
         if inp_mode == 'country':
             o_input_data.country = inp_val
             o_osm_data = CountryOsmData(o_input_data)
-        elif inp_mode == 'xy_coordinate':
+        else:
+            self.assertEqual(inp_mode, 'xy_coordinate')
             o_input_data.xy_coordinates = inp_val
             o_osm_data = XYOsmData(o_input_data)
 
