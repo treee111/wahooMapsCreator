@@ -88,6 +88,8 @@ def process_call_of_the_tool():
                               help="output debug logger messages")
     options_args.add_argument('-hdd', '--hdd_mode', action='store_true',
                               help="use mapwriter hdd mode")
+    options_args.add_argument('-ds', '--do_squadrats', action='store_true',
+                              help="integrate squadrats data into map files")
 
     args = parser_top.parse_args()
 
@@ -120,6 +122,7 @@ def process_call_of_the_tool():
 
     o_input_data.verbose = args.verbose
     o_input_data.hdd_mode = args.hdd_mode
+    o_input_data.integrate_squadrats = args.do_squadrats
 
     return o_input_data
 
@@ -198,6 +201,7 @@ class InputData():  # pylint: disable=too-many-instance-attributes,too-few-publi
         self.zip_folder = False
         self.save_cruiser = False
         self.hdd_mode = False
+        self.integrate_squadrats = False
 
         self.verbose = False
 
@@ -316,6 +320,7 @@ class GuiInput(tk.Tk):
         self.o_input_data.zip_folder = tab2.first.checkb_zip_folder_val.get()
         self.o_input_data.verbose = tab2.first.checkb_verbose_val.get()
         self.o_input_data.hdd_mode = tab2.first.checkb_mapwriter_ram_hdd_val.get()
+        self.o_input_data.integrate_squadrats = tab2.first.checkb_integrate_squadrats_val.get()
 
         # get text without \n in the end
         self.o_input_data.tag_wahoo_xml = tab2.second.input_tag_wahoo_xml.get()
@@ -477,3 +482,5 @@ class CheckbuttonsTab2(tk.Frame):
                                                   "output debug logger messages", 4)
         self.checkb_mapwriter_ram_hdd_val = create_checkbox(self, oInputData.verbose,
                                                   "Use mapwriter HDD mode", 5)
+        self.checkb_integrate_squadrats_val = create_checkbox(self, oInputData.verbose,
+                                                  "Integrate Squadrats files", 6)

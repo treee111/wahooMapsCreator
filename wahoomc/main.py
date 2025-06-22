@@ -74,6 +74,9 @@ def run(run_level):
 
         o_osm_maps = OsmMaps(o_osm_data)
 
+        if o_input_data.integrate_squadrats:
+            o_osm_maps.prepare_squadrats_data()
+
         # Filter tags from country osm.pbf files'
         o_osm_maps.filter_tags_from_country_osm_pbf_files()
 
@@ -88,11 +91,11 @@ def run(run_level):
             o_osm_maps.generate_elevation(o_input_data.use_srtm1)
 
         # Split filtered country files to tiles
-        o_osm_maps.split_filtered_country_files_to_tiles()
+        o_osm_maps.split_filtered_country_files_to_tiles(o_input_data.integrate_squadrats)
 
         # Merge splitted tiles with land and sea
         o_osm_maps.merge_splitted_tiles_with_land_and_sea(
-            o_input_data.process_border_countries, o_input_data.contour)
+            o_input_data.process_border_countries, o_input_data.contour,o_input_data.integrate_squadrats)
 
         # Creating .map files
         o_osm_maps.create_map_files(o_input_data.save_cruiser,
