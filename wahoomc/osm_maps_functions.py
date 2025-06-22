@@ -28,6 +28,7 @@ from wahoomc.constants import LAND_POLYGONS_PATH
 from wahoomc.constants import VERSION
 from wahoomc.constants import OSMOSIS_WIN_FILE_PATH
 from wahoomc.constants import USER_DL_DIR
+from wahoomc.constants import USER_MAPS_DIR
 
 from wahoomc.timings import Timings
 
@@ -83,6 +84,122 @@ class OsmMaps:
 
         create_empty_directories(
             USER_OUTPUT_DIR, self.o_osm_data.tiles, self.o_osm_data.border_countries)
+
+    def prepare_squadrats_data(self): # pylint: disable=too-many-statements,too-many-branches
+        """_
+        Find Squadrats KML and convert
+        """
+
+        log.info('-' * 80)
+        log.info('# Convert Squatrats files to osm.pbf files')
+        timings = Timings()
+
+        if platform.system() == "Windows":
+            # Check for new Squadrat kml file in the maps directory. Format must be squadrats*.km
+            squadratskml_files = glob.glob(f'{USER_MAPS_DIR}/squadrats*.kml')
+            if squadratskml_files:
+                for file in squadratskml_files:
+                    log.info('+ Converting Squadrats KML file %s to OSM.', file)
+                    # Call gpsbabel to convert to osm example gpsbabel -w -r -t -i kml -f file-in -o osm,tag=wandrer:untraveled,tagnd=wandrer:untraveled -F file-out
+                    cmd = ['gpsbabel', '-w', '-r', '-t', '-i', 'kml', '-f', file, '-o',
+                        'osm,tag=squadrats:complete,tagnd=squadrats:complete', '-F', file.replace(".kml", ".osm")]
+                    #subprocess.run(cmd, check=True, cwd=USER_MAPS_DIR)
+                    run_subprocess_and_log_output(
+                    cmd, f'! Error converting KML file: {file} to OSM. Is GPSBabel installed and in the path?', cwd=USER_MAPS_DIR)
+
+                squadratsosm_files = glob.glob(f'{USER_MAPS_DIR}/squadrats*.osm')
+                if squadratsosm_files:
+                    start_way_id = 30000000000
+                    for file in squadratsosm_files:
+                        log.info('+ Replacing negative ID\'s with Large positive ones in %s and converting to .osm.pbf.', file)
+                        start_way_id_str = f"{start_way_id}"
+                        with open(file, encoding='utf8') as fhandle:
+                            osm_data = fhandle.read()
+                            fhandle.close()
+
+                            osm_data = osm_data.replace("\"-", "\"" + start_way_id_str)
+
+                            with open(file, 'w', encoding='utf8') as ofhandle:
+                                ofhandle.write(osm_data)
+                                ofhandle.close()
+
+                        # Increase way counter for the next file. No duplicate way numbers allowed!
+                        start_way_id = start_way_id + 10000000
+
+                        # Convert to osm.pbf
+                        cmd = [self.osmconvert_path]
+                        cmd.extend(['-v', '--hash-memory=2500', '--complete-ways', '--complete-multipolygons',
+                               '--complete-boundaries', '--drop-author', '--drop-version'])
+                        cmd.append(file)
+                        cmd.append('-o='+file.replace(".osm", ".osm.pbf"))
+                        run_subprocess_and_log_output(
+                            cmd, f'! Error converting OSM file: {file} to OSM.PBF.')
+
+                try:
+                    log.info('+ Removing intermediate files and renaming processed input files')
+                    for file in squadratskml_files:
+                        oldbasename = os.path.basename(file)
+                        os.rename(file, file.replace(
+                            oldbasename, "Processed-"+oldbasename))
+
+                    for file in squadratsosm_files:
+                        os.remove(file)
+                except: # pylint: disable=bare-except
+                    pass
+
+        # Non-Windows
+        else:
+           # Check for new Squadrats kml files in the maps directory. Format must be squadrats*.kmz
+            squadratskml_files = glob.glob(f'{USER_MAPS_DIR}/squadrats*.kml')
+            if squadratskml_files:
+                for file in squadratskml_files:
+                    log.info('+ Converting Squadrats KML file %s to OSM.', file)
+                    # Call gpsbabel to convert to osm example gpsbabel -w -r -t -i kml -f file-in -o osm,tag=wandrer:untraveled,tagnd=wandrer:untraveled -F file-out
+                    cmd = ['gpsbabel', '-w', '-r', '-t', '-i', 'kml', '-f', file, '-o',
+                        'osm,tag=squadrats:complete,tagnd=squadrats:complete', '-F', file.replace(".kml", ".osm")]
+                    #subprocess.run(cmd, check=True, cwd=USER_MAPS_DIR)
+                    run_subprocess_and_log_output(
+                        cmd, f'! Error converting KML file: {file} to OSM. Is GPSBabel installed?', cwd=USER_MAPS_DIR)
+
+                squadratsosm_files = glob.glob(f'{USER_MAPS_DIR}/squadrats*.osm')
+                if squadratsosm_files:
+                    start_way_id = 30000000000
+                    for file in squadratsosm_files:
+                        log.info('+ Replacing negative ID\'s with Large positive ones in %s and converting to .osm.pbf.', file)
+                        start_way_id_str = f"{start_way_id}"
+                        with open(file, encoding='utf8') as fhandle:
+                            osm_data = fhandle.read()
+                            fhandle.close()
+
+                            osm_data = osm_data.replace("\"-", "\"" + start_way_id_str)
+
+                            with open(file, 'w', encoding='utf8') as ofhandle:
+                                ofhandle.write(osm_data)
+                                ofhandle.close()
+
+                        # Increase way counter for the next file. No duplicate way numbers allowed!
+                        start_way_id = start_way_id + 10000000
+
+                        # Convert to osm.pbf
+                        cmd = ['osmium', 'cat']
+                        cmd.append(file)
+                        cmd.append('-o'+file.replace(".osm", ".osm.pbf"))
+                        run_subprocess_and_log_output(
+                            cmd, f'! Error converting OSM file: {file} to OSM.PBF.')
+
+                try:
+                    log.info('+ Removing intermediate files and renaming processed input files')
+                    for file in squadratskml_files:
+                        oldbasename = os.path.basename(file)
+                        os.rename(file, file.replace(
+                            oldbasename, "Processed-"+oldbasename))
+
+                    for file in squadratsosm_files:
+                        os.remove(file)
+                except: # pylint: disable=bare-except
+                    pass
+
+        log.info('+ End Convert Squadrats file(s) to osm.pbf files: OK, %s', timings.stop_and_return())
 
     def filter_tags_from_country_osm_pbf_files(self):  # pylint: disable=too-many-statements
         """
@@ -362,7 +479,7 @@ class OsmMaps:
 
         log.info('+ Generate contour lines for each coordinate: OK, %s', timings.stop_and_return())
 
-    def split_filtered_country_files_to_tiles(self):
+    def split_filtered_country_files_to_tiles(self,process_squadrats): # pylint: disable=too-many-statements
         """
         Split filtered country files to tiles
         """
@@ -371,7 +488,7 @@ class OsmMaps:
         log.info('# Split filtered country files to tiles')
         timings = Timings()
         tile_count = 1
-        for tile in self.o_osm_data.tiles:
+        for tile in self.o_osm_data.tiles: # pylint: disable=too-many-nested-blocks
 
             for country, val in self.o_osm_data.border_countries.items():
                 if country not in tile['countries']:
@@ -410,6 +527,24 @@ class OsmMaps:
                     run_subprocess_and_log_output(
                         cmd, '! Error in osmconvert with country: {country}. Win/out_file_names')
 
+                    if process_squadrats:
+                        in_squadrats_files = []
+                        in_squadrats_files = glob.glob(os.path.join(USER_MAPS_DIR, 'squadrats*.osm.pbf'))
+                        for squadrats_map in in_squadrats_files:
+                            out_squadrats = os.path.join(
+                                USER_OUTPUT_DIR, f'{tile["x"]}', f'{tile["y"]}', f'split-{os.path.basename(squadrats_map)}')
+                            if not os.path.isfile(out_squadrats):
+                                cmd = [self.osmconvert_path, '--hash-memory=2500']
+                                cmd.append('-b='+f'{tile["left"]}' + ',' + f'{tile["bottom"]}' +
+                                        ',' + f'{tile["right"]}' + ',' + f'{tile["top"]}')
+                                cmd.extend(
+                                    ['--complete-ways', '--complete-multipolygons', '--complete-boundaries'])
+                                cmd.append(squadrats_map)
+                                cmd.append('-o='+out_squadrats)
+                                #print(cmd)
+                                run_subprocess_and_log_output(
+                                    cmd, '! Error in osmconvert while processing Squadrats file: {squadrats_map}.')
+
                 # Non-Windows
                 else:
                     cmd = ['osmium', 'extract']
@@ -434,13 +569,28 @@ class OsmMaps:
                     run_subprocess_and_log_output(
                         cmd, '! Error in Osmium with country: {country}. macOS/out_file_names')
 
+                    if process_squadrats:
+                        in_squadrats_files = []
+                        in_squadrats_files = glob.glob(os.path.join(USER_MAPS_DIR, 'squadrats*.osm.pbf'))
+                        for squadrats_map in in_squadrats_files:
+                            out_squadrats = os.path.join(
+                                USER_OUTPUT_DIR, f'{tile["x"]}', f'{tile["y"]}', f'split-{os.path.basename(squadrats_map)}')
+                            if not os.path.isfile(out_squadrats):
+                                cmd = ['osmium', 'extract']
+                                cmd.extend(
+                                    ['-b', f'{tile["left"]},{tile["bottom"]},{tile["right"]},{tile["top"]}'])
+                                cmd.append(squadrats_map)
+                                cmd.append('-o'+out_squadrats)
+                                run_subprocess_and_log_output(
+                                    cmd, '! Error in osmconvert while processing Squadrats file: {squadrats_map}.')
+
                 self.log_tile_debug(tile["x"], tile["y"], tile_count, f'{country} {timings_tile.stop_and_return()}')
 
             tile_count += 1
 
         log.info('+ Split filtered country files to tiles: OK, %s', timings.stop_and_return())
 
-    def merge_splitted_tiles_with_land_and_sea(self, process_border_countries, contour): # pylint: disable=too-many-locals
+    def merge_splitted_tiles_with_land_and_sea(self, process_border_countries, contour, process_squadrats): # pylint: disable=too-many-locals
         """
         Merge splitted tiles with land elevation and sea
         - elevation data only if requested
@@ -462,6 +612,9 @@ class OsmMaps:
 
             elevation_files = glob.glob(
                 os.path.join(out_tile_dir, 'elevation*.osm'))
+
+            squadrats_files = glob.glob(
+                os.path.join(out_tile_dir, 'split-squadrats*.osm.pbf'))
 
             # merge splitted tiles with land and sea every time because the result is different per constants (user input)
             # sort land* osm files
@@ -502,6 +655,14 @@ class OsmMaps:
                 for elevation in elevation_files:
                     cmd.extend(
                         ['--rx', 'file='+elevation, '--s', '--m'])
+
+            if process_squadrats:
+                for squadrats in squadrats_files:
+                    cmd.append('--rbf')
+                    cmd.append(os.path.join(
+                        out_tile_dir, f'{tile["x"]}', f'{tile["y"]}', f'{squadrats}'))
+                    cmd.append('workers=' + self.workers)
+                    cmd.append('--merge')
 
             cmd.extend(
                 ['--rx', 'file='+os.path.join(out_tile_dir, 'sea.osm'), '--s', '--m'])

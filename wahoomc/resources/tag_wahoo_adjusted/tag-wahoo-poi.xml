@@ -85,6 +85,11 @@
     <osm-tag key="ele" value="4800" zoom-appear="14"/>
     <osm-tag key="ele" value="4900" zoom-appear="14"/>
     <osm-tag key="ele" value="5000" zoom-appear="14"/>
+    <osm-tag key="squadrats" value="complete" zoom-appear="10"/>
+		<osm-tag key="squadrats_type" value="squadrats" zoom-appear="10"/>
+		<osm-tag key="squadrats_type" value="squadratinhos" zoom-appear="10"/>
+		<osm-tag key="squadrats_type" value="ubersquadrat" zoom-appear="10"/>
+		<osm-tag key="squadrats_type" value="ubersquadratinho" zoom-appear="10"/>
   </ways>
   <!-- PLACES TAGS -->
   <pois>

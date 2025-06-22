@@ -172,6 +172,25 @@
       <area cat="bolt2-dark" fill="#005555"/>
    </m>
 
+   <!-- region SquadRats -->
+   <m e="way" k="squadrats" v="complete" zoom-min="10">
+      <m e="way" k="squadrats_type" v="squadrats">
+         <line width="1" stroke="#FF0000"/>
+         <area src="icons/stripesup-r.svg" symbol-height="32"/>
+      </m>
+      <m e="way" k="squadrats_type" v="squadratinhos">
+         <line width="1" stroke="#0000FF"/>
+         <area src="icons/stripesdown-b.svg" symbol-height="32"/>
+      </m>
+      <m e="way" k="squadrats_type" v="ubersquadrat">
+         <line width="5" stroke="#FF0000"/>
+         <!--<area src="icons/hatch-r.svg" symbol-height="32"/>-->
+      </m>
+      <m e="way" k="squadrats_type" v="ubersquadratinho">
+         <line width="5" stroke="#0000FF"/>
+         <!--<area src="icons/hatch-b.svg" symbol-height="32"/>-->
+      </m>
+   </m>
    <!-- endregion land/sea/waterways -->
 
 

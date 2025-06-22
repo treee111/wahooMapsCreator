@@ -18,4 +18,16 @@
       <tag k="layer" v="0"/>
     </output>
   </translation>
+
+  <translation>
+    <name>Squadrats Name tag</name>
+    <match type="way" mode="and">
+      <tag k="squadrats" v="complete"/>
+      <tag k="name" match_id="_type" v="(\w+['s]*).*"/>
+    </match>
+    <output>
+      <copy-all/>
+      <tag k="squadrats_type" from_match="_type" v="{1}"/>
+    </output>
+  </translation>
 </translations>
