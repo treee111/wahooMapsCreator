@@ -24,6 +24,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install pylint==2.15.*
           pip install mock
+          pip install packaging
           pip install requests==2.28.*
       - name: Analysing the code with pylint
         run: |

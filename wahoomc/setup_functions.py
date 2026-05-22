@@ -10,7 +10,7 @@ import platform
 import shutil
 from pathlib import Path
 import sys
-import pkg_resources
+from packaging.version import parse as parse_version
 
 # import custom python packages
 from wahoomc.file_directory_functions import delete_everything_in_folder, write_json_file_generic, \
@@ -52,7 +52,7 @@ def adjustments_due_to_breaking_changes():
     #                                   and not 'tooling_win/Osmosis'
     # - to cleanup, tooling_win/ dir files and folders are deleted here.
     if (version_last_run is None or \
-            pkg_resources.parse_version(VERSION) <= pkg_resources.parse_version('4.2.1')) and \
+            parse_version(VERSION) <= parse_version('4.2.1')) and \
             platform.system() == "Windows":
         log.info(
             'Last run was with version %s, deleting Windows Tooling files of %s directory due to possible bad files.', version_last_run, USER_TOOLING_WIN_DIR)
@@ -254,7 +254,7 @@ def check_installed_version_against_latest_pypi():
 
     # compare installed version against latest and issue a info if a new version is available
     if latest_version \
-            and pkg_resources.parse_version(VERSION) < pkg_resources.parse_version(latest_version):
+            and parse_version(VERSION) < parse_version(latest_version):
         log.info('\n\nUpdate available! \
                 \nA new version of wahoomc is available: "%s". You have installed version "%s". \
                 \nUpgrade wahoomc with "pip install wahoomc --upgrade". \
