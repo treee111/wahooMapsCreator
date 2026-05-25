@@ -150,7 +150,7 @@ class CountryOsmData(InformalOsmDataInterface):
         # set the to-be-processed country as border country
         else:
             for country in self.o_geofabrik.wanted_maps:
-                self.border_countries[country] = {}
+                self.border_countries[country.replace('/', '_')] = {}
 
     def calc_country_name(self):
         """
