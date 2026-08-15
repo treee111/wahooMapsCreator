@@ -15,8 +15,8 @@
 
 # Usage of wahooMapsCreator
 wahooMapsCreator can be used in two different ways:
-- as [graphical window](#gui-graphical-user-interface) programm
-- as [command line](#cli-command-line-interface) programm
+- as [graphical window](#gui-graphical-user-interface) program
+- as [command line](#cli-command-line-interface) program
 
 Both ways support the same arguments to be used for the map-creation process. You can choose the arguments via GUI or as [CLI-arguments](#advanced-cli-usage).
 
@@ -72,7 +72,7 @@ If you like to run wahooMapsCreator with another value than the default, use the
 | -md    | Maximum age of source maps and other files in days.                                                              | 24                  |
 | -nbc   | Do not process border countries of tiles involving more than one country. Only useful when processing a country. | false               |
 | -con   | Calculate contour lines (elevation) and integrate into generated maps (using view1 as data source).              | false               |
-| -srtm1 | Use SRTM1 data as source for calculating contour lines (elevation) maps. Has only affect togester with -con.     | false               |
+| -srtm1 | Use SRTM1 data as source for calculating contour lines (elevation) maps. Has only affect together with -con.     | false               |
 | -fd    | Force download of files. Download all files new.                                                                 | false               |
 | -fp    | Force processing of files. Create all files new.                                                                 | false               |
 | -c     | Save uncompressed maps for Cruiser.                                                                              | false               |
@@ -98,7 +98,7 @@ To create maps for only one tile and not a whole country, one can use the X/Y co
 - for Malta, download new maps if existing maps are older than 100 days and process files even if files exist
   - `python -m wahoomc cli -co malta -md 100 -fp`
 - for Germany, download and process whole tiles which involves other countries than the given
-  - `python -m wahoomc cli -co germany -bc`
+  - `python -m wahoomc cli -co germany`
 - to create maps for only one tile
   - `python -m wahoomc cli -xy 134/88`
 - for multiple tiles
@@ -108,7 +108,7 @@ To create maps for only one tile and not a whole country, one can use the X/Y co
 For creating maps which include POIs and have them displayed on your Wahoo device, these steps need to be done:
 1. Create custom maps including POIs like [normally](#run-wahoomapscreator-for-your-country), POI's are included per default.
 
-Actually, wahooMapsCreator includes fuel stations, backeries, cafes and railway stations POI's into the generated maps. 
+Actually, wahooMapsCreator includes fuel stations, bakeries, cafes and railway stations POI's into the generated maps. 
 
 2. Copy POIs relevant files to your device
 - [:floppy_disk: docu](COPY_TO_WAHOO.md#copy-relevant-files-for-pois)
@@ -119,7 +119,7 @@ Actually, wahooMapsCreator includes fuel stations, backeries, cafes and railway 
 
 ## Contour lines
 For creating maps which include contour lines and have them displayed on your Wahoo device, these steps need to be done:
-1. Enhance your Anaconda environment using [these steps](./QUICKSTART_ANACONDA.md#additions-for--generating-contour-lines)
+1. Enhance your Anaconda environment using [these steps](./QUICKSTART_ANACONDA.md#additional-programs-for-generating-contour-lines)
 2. Create custom maps with the argument `-con` like [normally](#run-wahoomapscreator-for-your-country). You will be asked for username/password on first run generating contour lines.
 3. Use a theme that renders contour lines
 
@@ -132,4 +132,4 @@ You can start the tool with `python -m wahoomc.init` to copy the files from the 
 
 The tool searches for configuration in your home directory first and secondly (fallback) in the python installation. If a file is in both directories with the same name, the file of the user directory will be used.
 
-The structure of `~/wahooMapsCreatorData/_config/tag_wahoo_adjusted/` is analogue to the one in the repo: `wahooMapsCreatorwahoomc/resources`.
+The structure of `~/wahooMapsCreatorData/_config/tag_wahoo_adjusted/` is analogue to the one in the repo: `wahooMapsCreator/wahoomc/resources`.

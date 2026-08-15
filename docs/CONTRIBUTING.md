@@ -26,7 +26,7 @@
 4. Run Pylint with 10.00/10
 5. Run unittests successfully
 6. Create a pull request.
-    - 👉 **Please follow the [Git Guidlines](#Git-Guidelines).**
+    - 👉 **Please follow the [Git Guidelines](#Git-Guidelines).**
 7. Wait for our code review and approval, possibly enhancing your change on request.
     - Note that the wahooMapsCreator maintainers have many duties. So, depending on the required effort for reviewing, testing, and clarification, this may take a while.
 8. Once the change has been approved and merged, we will inform you in a comment.
@@ -67,8 +67,8 @@ They can be started via "Testing" pane from VSCode or via terminal in the root o
 python -m unittest
 ```
 
-For the `test_generated_files.py` unittests to run successful, static land-poligons-file and static country files are needed to ensure equal results. The country files are included in the repo in `tests/resources`, the land-poligons-file needs to be downloaded from https://1drv.ms/u/s!AnpNcYd7Zz7TnXorg_zZuvsbMGsJ?e=fL6zvM and extracted to `~/wahooMapsCreatorData/_unittest/` like this:
-<img src="./pictures/unittest-land-poligons.png" alt="land-poligons extracted for unittests" width=50%>
+For the `test_generated_files.py` unittests to run successful, static land-polygons-file and static country files are needed to ensure equal results. The country files are included in the repo in `tests/resources`, the land-polygons-file needs to be downloaded from https://1drv.ms/u/s!AnpNcYd7Zz7TnXorg_zZuvsbMGsJ?e=fL6zvM and extracted to `~/wahooMapsCreatorData/_unittest/` like this:
+<img src="./pictures/unittest-land-polygons.png" alt="land-polygons extracted for unittests" width=50%>
 
 More information about Python unittest can be read here: https://docs.python.org/3/library/unittest.html.
 
@@ -82,7 +82,7 @@ The folders in the repo have the following purposes:
 - `tooling` - programs, scripts used by Windows and macOS to test and check the generated maps
 
 ## User directory
-Files which are processed through the tool are stored in the user directory to be release-independent. The name of the directory is: `$user_directory/wahooMapsCreatorData` and has the follwing folders:
+Files which are processed through the tool are stored in the user directory to be release-independent. The name of the directory is: `$user_directory/wahooMapsCreatorData` and has the following folders:
 - root - generated files are saved here
 - `_download` - all downloaded files are saved and extracted here
 - `_tiles` - intermediate files per tile are stored here
@@ -94,7 +94,7 @@ Please use [rebase instead of merge](https://www.atlassian.com/git/tutorials/mer
 ### Pull Requests
 #### Pull Request Title
 The pull request title is a short description of the change to be introduced in the repository.  
-The pull request tilte will later on be used for the squash commit summary and then appear in the CHANGELOG.
+The pull request title will later on be used for the squash commit summary and then appear in the CHANGELOG.
 - The title should be 50-70 characters long.
 - The commit summary must be **prefixed** by one of the following types.
 

@@ -24,12 +24,12 @@ You can generate maps for the countries you like with latest OSM data and you ca
 ## Get it running
 The instructions are intended to be suitable for beginners.
 
-If anything is unclear or seams wrong, write an [:pencil2: issue](https://github.com/treee111/wahooMapsCreator/issues)
+If anything is unclear or seems wrong, write an [:pencil2: issue](https://github.com/treee111/wahooMapsCreator/issues)
 
 ## To start with...
 1. [:rocket: Quick Start Guide to download and install required programs](docs/QUICKSTART_ANACONDA.md#download-and-install-required-programs)
 
-2. [:computer: Run wahooMapsCreator - detailled usage description](docs/USAGE.md#usage-of-wahoomapscreator)
+2. [:computer: Run wahooMapsCreator - detailed usage description](docs/USAGE.md#usage-of-wahoomapscreator)
 
 > In short: activate Anaconda environment, run wahooMapsCreator via CLI or via GUI.
 ```
@@ -43,7 +43,7 @@ python -m wahoomc gui
 ## To further adjust...
 * [:cookie: Get POIs displayed on your Wahoo](docs/USAGE.md#pois---points-of-interest)
 
-* [:mount_fuji: Integrate contour lines into the generated maps](docs/USAGE.md#pois---points-of-interest)
+* [:mount_fuji: Integrate contour lines into the generated maps](docs/USAGE.md#contour-lines)
 
 * [:wrench: Control OSM tags to be included in your maps ](docs/USAGE.md#user-specific-configuration)
 
