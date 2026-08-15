@@ -89,8 +89,10 @@ If you like to run wahooMapsCreator with another value than the default, use the
 
 In particular for testing adjustments in configuration-files or coding it is helpful to create maps for only one tile or a handful of tiles!
 
-To create maps for only one tile and not a whole country, one can use the X/Y coordinates of that tile. X/Y coordinates can be retrieved from this in zoom-level 8: [link](http://tools.geofabrik.de/map/#8/50.3079/8.8026&type=Geofabrik_Standard&grid=1). 
-- `python -m wahoomc cli -xy <xy_coordinate,xy_coordinate>`
+To create maps for only one tile and not a whole country, one can use the X/Y coordinates of that tile. X/Y coordinates can be retrieved from this in zoom-level 8: [link](https://tools.geofabrik.de/map/#Geofabrik%20Standard/8/47.441122/3.834229&overlays=tile%20grid). 
+- `python -m wahoomc cli -xy <xy_coordinate>`
+  - one combination is separated by slash: `134/88`
+  - multiple combinations are separated by comma: `134/88,134/89`
 
 ### Examples
 - for Malta, download new maps if existing maps are older than 100 days and process files even if files exist
