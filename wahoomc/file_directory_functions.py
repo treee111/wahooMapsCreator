@@ -135,7 +135,7 @@ def delete_everything_in_folder(folder):
     """
     delete all files and directories of given folder
     """
-    files_and_folders = list(os.listdir(folder)) # [f for f in os.listdir(folder)]
+    files_and_folders = list(os.listdir(folder)) if os.path.exists(folder) else [] # [f for f in os.listdir(folder)]
 
     for file in files_and_folders:
         try:
