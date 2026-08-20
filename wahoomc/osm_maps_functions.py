@@ -524,8 +524,8 @@ class OsmMaps:
             if platform.system() == "Windows" and verbose_debug:
                 result = subprocess.run(cmd, check=False)
                 if result.returncode != 0:
-                    print(f'! Error in Osmosis with tile: {tile["x"]},{tile["y"]}')
-                    sys.exit()
+                    log.error('! Error in Osmosis with tile: %s,%s', tile["x"], tile["y"])
+                    sys.exit(result.returncode)
             else:
                 run_subprocess_and_log_output(
                     cmd, f'! Error in Osmosis with tile: {tile["x"]},{tile["y"]}')
@@ -617,8 +617,8 @@ class OsmMaps:
             if platform.system() == "Windows" and verbose_debug:
                 result = subprocess.run(cmd, check=False)
                 if result.returncode != 0:
-                    print(f'Error in creating map file via Osmosis with tile: {tile["x"]},{tile["y"]}. mapwriter plugin installed?')
-                    sys.exit()
+                    log.error('Error in creating map file via Osmosis with tile: %s,%s. mapwriter plugin installed?', tile["x"], tile["y"])
+                    sys.exit(result.returncode)
             else:
                 run_subprocess_and_log_output(
                     cmd, f'Error in creating map file via Osmosis with tile: {tile["x"]},{tile["y"]}. mapwriter plugin installed?')
