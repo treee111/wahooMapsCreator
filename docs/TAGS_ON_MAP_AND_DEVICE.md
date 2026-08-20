@@ -44,10 +44,10 @@ That information was derived from Wahoo BOLTv1. It might be different on differe
 
 # Files used in map processing
 ## File tags-to-keep.json
-The `tags-to-keep.json` file controls which tags and name-tags will stay on the map. This happens to keep the file of the generated maps low by filtering out out all other information from the downloaded OSM maps.
+The `tags-to-keep.json` file controls which tags and name-tags will stay on the map. This happens to keep the file size of the generated maps low by filtering out all other information from the downloaded OSM maps.
 
 ## File tag-wahoo.xml
-The `tag-wahoo.xml` files defines how to proceed wit OSM-elements during map generation.
+The `tag-wahoo.xml` files defines how to proceed with OSM-elements during map generation.
 The OSM-tags defined in the tag-wahoo.xml are stored in the map file.
 
 E.g. roads, locations, ...
@@ -56,7 +56,7 @@ E.g. roads, locations, ...
 Each entry has a "zoom-appear" attribute, which defines from which zoom level onwards the element will be stored in the map. If zoom-appear is set to 13, the OSM-tag will be stored in the 500m, 200m and 100m zoom levels and therefore could be rendered.
 
 ### Combination of tags-to-keep.json and tag-wahoo.xml
-To bring a certain OSM tag to your generated maps they have to be included in both files. You can have a look at existing OSM tags to get 
+To bring a certain OSM tag to your generated maps they have to be included in both files. You can have a look at existing OSM tags to get an idea of the format. Both of the following files need to include a tag for it to appear on the map:
 1. `tags-to-keep.json` to not be filtered out
 2. `tag-wahoo.xml` to be included in the generated maps
 
@@ -91,7 +91,7 @@ You should always use the corresponding theme in cruiser if you preview generate
 Because the theme kind of determines what you're gonna see, you want to preview what later on will be visible on the device.
 
 ## Combination of tag-wahoo.xml and device-theme
-This zoom-appear in combination with the settings in the theme on the device (which can also be applied in cruiser) controls when certain elements are shown on our your Wahoo device etc (zoom-min).
+This zoom-appear in combination with the settings in the theme on the device (which can also be applied in cruiser) controls when certain elements are shown on your Wahoo device etc (zoom-min).
 
 If a element is included in the map beginning from zoom level 10 (zoom-appear in tag-wahoo.xml) but on the device only displayed beginning with zoom level 12 (zoom-min in mapsforge-bolt.xml), the element is only displayed beginning zoom level 12.
 

@@ -77,7 +77,7 @@ You can give the docker version of wahooMapsCreator a try: https://github.com/vt
 There is a directory named like the country or X/Y coordinates you processed in the `wahooMapsCreatorData` directory (see [docs](https://github.com/treee111/wahooMapsCreator/blob/develop/docs/COPY_TO_WAHOO.md#location-of-the-generated-maps)).
 The content of this folder is relevant.
 
-As an example, lets assume, we want to copy the maps of american_samoa
+As an example, let's assume, we want to copy the maps of american_samoa
 
 <img src="./pictures/maps-american_samoa-generated.png" alt="generated maps after generation" width=50%>
 
@@ -96,16 +96,16 @@ Delete all content from `maps/tiles/8` on your Wahoo device. After that, you can
 Read [usage of cruiser](USAGE_CRUISER.md#usage-of-cruiser)
 
 ### Does device/offline routing functionality use the new roads?
-The device routing (synonym: offline routing) functionality is provided through routing tiles and available on newer models e.g. BOLTv2/ROAMv2. The routing tiles are stored in the directory `maps/routing` and contain all know roads which can be used to route over. This is something different then routes synced from Komoot, Stava, ... or planned via the ELEMNT Companion mobile app. In this case you follow a track, but on device routing will be used when you wonder off that track.
+The device routing (synonym: offline routing) functionality is provided through routing tiles and available on newer models e.g. BOLTv2/ROAMv2. The routing tiles are stored in the directory `maps/routing` and contain all know roads which can be used to route over. This is something different than routes synced from Komoot, Stava, ... or planned via the ELEMNT Companion mobile app. In this case you follow a track, but on device routing will be used when you wonder off that track.
 
-Without updating the routing tiles in addition to updating the generated map files, device routing of your device will not route you over the newly added roads in the maps. The reason is: The old routing tiles simply do not know about there existence.
+Without updating the routing tiles in addition to updating the generated map files, device routing of your device will not route you over the newly added roads in the maps. The reason is: The old routing tiles simply do not know about their existence.
 
 Generating Routing tiles are not covered in this repo.
 
 ### Are there already generated maps available for download?
 On this OneDrive, you'll find already generated maps for download: http://wahoomaps.higli.de/ .
 
-The content of these maps are slightly different from what you create with the default settings of wahooMapsCreator. Other than that this might be a good starting point to tryout and get them on your device and see what can be achieved.
+The content of these maps are slightly different from what you create with the default settings of wahooMapsCreator. Other than that this might be a good starting point to try out and get them on your device and see what can be achieved.
 
 By customizing the wahooMapsCreator settings and configuration you can than create your individual maps with wahooMapsCreator.
 
@@ -116,11 +116,11 @@ Current routing tiles can be downloaded from http://wahoomaps.higli.de/. Downloa
 
 Routing tiles could also be downloaded from Wahoo update server, see [documentation](./HOWTO_ADD_ROUTING_TILES_MANUALLY.MD#option-c-download-from-wahoo-update-server) but these are relatively old.
 
-Examplary the germany routing tiles would be stored in `maps/routing/2/000/...`. More details can be accessed [here](./HOWTO_ADD_ROUTING_TILES_MANUALLY.MD#directory-hierarchy-in-wahoo-elelmnt-roam-device)
+Examplary the germany routing tiles would be stored in `maps/routing/2/000/...`. More details can be accessed [here](./HOWTO_ADD_ROUTING_TILES_MANUALLY.MD#directory-hierarchy-in-wahoo-elemnt-roam-device)
 
 ## Device theme
 ### How can I restore original rendering layout?
-If you render using VTM, delete this folder on your Wahoo device:  `maps/vtm-elemnt/vtm-elemnt.xml`.
+If you render using VTM, delete this file on your Wahoo device: `maps/vtm-elemnt/vtm-elemnt.xml`.
 
 If you do not render using VTM, delete this file `maps/mapsforge-roam/mapsforge-roam.xml` or `maps/mapsforge-bolt/mapsforge-bolt.xml`. Depending on which exists.
 
@@ -128,7 +128,7 @@ In addition, delete the empty file `cfg_BHomeActivity_VtmMaps` in the root direc
 
 ## Connection from Wahoo device to computer
 ### I can't see my Wahoo device on my computer
-If ADB does not seam to work with your PC and Wahoo:
+If ADB does not seem to work with your PC and Wahoo:
 - try to do the [Authorization](COPY_TO_WAHOO.md#authorize-wahoo-device) multiple times
 - try another USB cable. Some cables do not support adb / file transfer
 

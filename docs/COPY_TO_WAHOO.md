@@ -28,16 +28,16 @@ You always have to first [authorize to your Wahoo device](#authorize-wahoo-devic
 - The most easy to use toll with a GUI would be the Elemntary app: https://github.com/vti/elemntary
 - Windows
   - Copy via Windows built in MTP protocol . On windows you can navigate to the maps folder and drag new map files onto the folder called `maps/8` ([the Wahoo documentation](https://support.wahoofitness.com/hc/en-us/articles/115000127910-Connecting-ELEMNT-BOLT-ROAM-to-Desktop-or-Laptop-Computers))
-  - GIU tool: https://github.com/hexadezi/adbGUI
+  - GUI tool: https://github.com/hexadezi/adbGUI
 - macOS
   - GUI tool: https://www.android.com/filetransfer/
 
 ## Install ADB
-You can download the lates ADB-tools (included in the SDK Platform Tools) for your OS here:
+You can download the latest ADB-tools (included in the SDK Platform Tools) for your OS here:
 https://developer.android.com/studio/releases/platform-tools
 
 ## Authorize Wahoo device
-The Wahoo device must be authorized for ADB to be reachable from Windows and macOS. ADB authorization works different per Wahoo device and is decribed now.
+The Wahoo device must be authorized for ADB to be reachable from Windows and macOS. ADB authorization works different per Wahoo device and is described now.
 
 ### BOLT v1, ROAMv1, ELEMNT, BOLT v2, ROAMv2
 1. disconnect device from your computer
@@ -67,7 +67,7 @@ adb devices
 ## Copy map files
 The generated maps are stored in a folder per country or processed X/Y coordinates in this folder in your user account: `wahooMapsCreatorData`.
 
-Copy the the whole content of the country- or X/Y folder or just the content of the containing X-folders (if the X-folder exists already) to `/ELEMNT-BOLT/maps/tiles/8` with a tool of your [choice](#tools-to-copy-maps-onto-your-wahoo).
+Copy the whole content of the country- or X/Y folder or just the content of the containing X-folders (if the X-folder exists already) to `/ELEMNT-BOLT/maps/tiles/8` with a tool of your [choice](#tools-to-copy-maps-onto-your-wahoo).
 
 After copying, it should look like that:
 
@@ -98,13 +98,13 @@ These are the steps to follow:
 
 ## Activate VTM rendering
 If you have a ROAM or BOLTv2, VTM is already the default rendering theme.
-For e.g. a BOLTv1, you need to activete VTM rendering first.
+For e.g. a BOLTv1, you need to activate VTM rendering first.
 
 - Create a empty file with this name `cfg_BHomeActivity_VtmMaps`
 - Copy that file to the root-folder. It should be on the same level as the `maps` and `factory` folder.
 
 # Delete temp-files and Clear Cache
 - delete all files from \ELEMNT-BOLT\USB storage\maps\temp\
-- to clear the cache and load the new maps on your Wahooo device:
+- to clear the cache and load the new maps on your Wahoo device:
 1. `adb shell am broadcast -a com.wahoofitness.bolt.service.BMapManager.PURGE`
 2. `adb shell am broadcast -a com.wahoofitness.bolt.service.BMapManager.RELOAD_MAP`
