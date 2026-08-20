@@ -12,6 +12,7 @@ dependencies:
   - bs4=4.11.*
   - lxml=4.9.*
   - matplotlib=3.4.3
+  - packaging
   - autopep8=2.0.*
   - mock
   - twine

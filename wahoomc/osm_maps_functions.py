@@ -40,11 +40,24 @@ def run_subprocess_and_log_output(cmd, error_message, cwd=""):
     """
     if not cwd:
         process = subprocess.run(
-            cmd, capture_output=True, text=True, encoding="utf-8", check=False)
+            cmd,
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            errors="backslashreplace",
+            check=False,
+        )
 
     else:
         process = subprocess.run(  # pylint: disable=consider-using-with
-            cmd, capture_output=True, cwd=cwd, text=True, encoding="utf-8", check=False)
+            cmd,
+            capture_output=True,
+            cwd=cwd,
+            text=True,
+            encoding="utf-8",
+            errors="backslashreplace",
+            check=False,
+        )
 
 
     if error_message and process.returncode != 0:  # 0 means success
@@ -408,7 +421,7 @@ class OsmMaps:
                     cmd.append('-o='+out_file_names)
 
                     run_subprocess_and_log_output(
-                        cmd, '! Error in osmconvert with country: {country}. Win/out_file_names')
+                        cmd, f'! Error in osmconvert with country: {country}. Win/out_file_names')
 
                 # Non-Windows
                 else:
@@ -421,7 +434,7 @@ class OsmMaps:
                     cmd.extend(['--overwrite'])
 
                     run_subprocess_and_log_output(
-                        cmd, '! Error in Osmium with country: {country}. macOS/out_file')
+                        cmd, f'! Error in Osmium with country: {country}. macOS/out_file')
 
                     cmd = ['osmium', 'extract']
                     cmd.extend(
@@ -432,7 +445,7 @@ class OsmMaps:
                     cmd.extend(['--overwrite'])
 
                     run_subprocess_and_log_output(
-                        cmd, '! Error in Osmium with country: {country}. macOS/out_file_names')
+                        cmd, f'! Error in Osmium with country: {country}. macOS/out_file_names')
 
                 self.log_tile_debug(tile["x"], tile["y"], tile_count, f'{country} {timings_tile.stop_and_return()}')
 
@@ -440,7 +453,7 @@ class OsmMaps:
 
         log.info('+ Split filtered country files to tiles: OK, %s', timings.stop_and_return())
 
-    def merge_splitted_tiles_with_land_and_sea(self, process_border_countries, contour): # pylint: disable=too-many-locals
+    def merge_splitted_tiles_with_land_and_sea(self, process_border_countries, contour, verbose): # pylint: disable=too-many-locals
         """
         Merge splitted tiles with land elevation and sea
         - elevation data only if requested
@@ -465,7 +478,7 @@ class OsmMaps:
 
             # merge splitted tiles with land and sea every time because the result is different per constants (user input)
             # sort land* osm files
-            self.sort_osm_files(tile)
+            self.sort_osm_files(tile, verbose)
 
             # Windows
             if platform.system() == "Windows":
@@ -508,15 +521,21 @@ class OsmMaps:
             cmd.extend(['--tag-transform', 'file=' + os.path.join(RESOURCES_DIR,
                                                                   'tunnel-transform.xml'), '--wb', out_file_merged, 'omitmetadata=true'])
 
-            run_subprocess_and_log_output(
-                cmd, f'! Error in Osmosis with tile: {tile["x"]},{tile["y"]}')
+            if verbose:
+                result = subprocess.run(cmd, check=False)
+                if result.returncode != 0:
+                    log.error('! Error in Osmosis with tile: %s,%s', tile["x"], tile["y"])
+                    sys.exit(result.returncode)
+            else:
+                run_subprocess_and_log_output(
+                    cmd, f'! Error in Osmosis with tile: {tile["x"]},{tile["y"]}')
 
             self.log_tile_debug(tile["x"], tile["y"], tile_count, timings_tile.stop_and_return())
             tile_count += 1
 
         log.info('+ Merge splitted tiles with land, elevation, and sea: OK, %s', timings.stop_and_return())
 
-    def sort_osm_files(self, tile):
+    def sort_osm_files(self, tile, verbose):
         """
         sort land*.osm files to be in this order: nodes, then ways, then relations.
         this is mandatory for osmium-merge since:
@@ -540,12 +559,18 @@ class OsmMaps:
             cmd.append('--sort')
             cmd.extend(['--write-xml', 'file='+land])
 
-        run_subprocess_and_log_output(
-            cmd, f'Error in Osmosis with sorting land* osm files of tile: {tile["x"]},{tile["y"]}')
+        if verbose:
+            result = subprocess.run(cmd, check=False)
+            if result.returncode != 0:
+                log.error('Error in Osmosis with sorting land* osm files of tile: %s,%s', tile["x"], tile["y"])
+                sys.exit(result.returncode)
+        else:
+            run_subprocess_and_log_output(
+                cmd, f'Error in Osmosis with sorting land* osm files of tile: {tile["x"]},{tile["y"]}')
 
         log.debug('+ Sorting land* osm files: OK')
 
-    def create_map_files(self, save_cruiser, tag_wahoo_xml, hdd_mode):
+    def create_map_files(self, save_cruiser, tag_wahoo_xml, hdd_mode, verbose):
         """
         Creating .map files
         """
@@ -595,8 +620,14 @@ class OsmMaps:
                     'The tag-wahoo xml file was not found: ˚%s˚. Does the file exist and is your input correct?', tag_wahoo_xml)
                 sys.exit()
 
-            run_subprocess_and_log_output(
-                cmd, f'Error in creating map file via Osmosis with tile: {tile["x"]},{tile["y"]}. mapwriter plugin installed?')
+            if verbose:
+                result = subprocess.run(cmd, check=False)
+                if result.returncode != 0:
+                    log.error('Error in creating map file via Osmosis with tile: %s,%s. mapwriter plugin installed?', tile["x"], tile["y"])
+                    sys.exit(result.returncode)
+            else:
+                run_subprocess_and_log_output(
+                    cmd, f'Error in creating map file via Osmosis with tile: {tile["x"]},{tile["y"]}. mapwriter plugin installed?')
 
             # Windows
             if platform.system() == "Windows":

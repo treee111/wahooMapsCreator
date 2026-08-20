@@ -105,7 +105,7 @@ pip install wahoomc==2.0.0a5 --upgrade
 
 ## Additional programs for generating contour lines
 For integrating contour lines into the generated maps, some additional steps need to be taken.
-An additional Python packages has to be installed and you need an free account for USGS to query contour lines from.
+An additional Python package has to be installed and you need a free account for USGS to query contour lines from.
 
 ### Install phyghtmap
 1. Download and unpack http://katze.tfiu.de/projects/phyghtmap/phyghtmap_2.23.orig.tar.gz
@@ -135,7 +135,7 @@ If there is a output, phyghtmap was installed and recognized successfully
 2. Remember your username and password.
 
 # Run wahooMapsCreator
-Run wahooMapsCreater as described in the [README](../README.md/#Run-wahooMapsCreator)
+Run wahooMapsCreator as described in the [README](../README.md#to-start-with)
 
 # Additional information
 Additional information: https://opensourceoptions.com/blog/how-to-install-gdal-with-anaconda/

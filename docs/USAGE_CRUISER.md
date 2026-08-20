@@ -19,7 +19,7 @@ By doing so, you can check if the wanted OSM elements are in your generated map 
 Either use `-c` CLI argument or set the checkbox in the Advanced settings when running the GUI.
 
 ## Run cruiser
-Running cruiser is most simly by running `cruiser.jar`. Running the other files via command line is also possible
+Running cruiser is most simply by running `cruiser.jar`. Running the other files via command line is also possible
 
 ## UI Elements
 You select maps and device themes with the Map menuitem `(1)`. Selecting the rendering engine can be established with Settings->Rendering engine `(2)`.
@@ -41,7 +41,7 @@ Choose a device theme of your choice.
 - from the downloaded device_themes.zip file
 - on your computer adjusted to your needs
 
-Depending of which rendering engine you use you need the vtm-element.xml or a non-VTM device theme.
+Depending of which rendering engine you use you need the vtm-elemnt.xml or a non-VTM device theme.
 
 This screenshot is for a non-VTM theme.
 <img src="./pictures/cruiser-theme-selection.png" alt="Choose a device theme" width=50%>
