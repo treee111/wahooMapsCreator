@@ -44,7 +44,9 @@ class TestOsmMapsCalculation(unittest.TestCase):
                             'austria': {}, 'liechtenstein': {}, 'schwaben': {}, 'mecklenburg-vorpommern': {},
                             'brandenburg': {}, 'sachsen-anhalt': {}, 'thueringen': {}, 'oberfranken': {},
                             'mittelfranken': {}, 'oberbayern': {}, 'oberpfalz': {}, 'sachsen': {},
-                            'czech-republic': {}, 'niederbayern': {}, 'nord-est': {}, 'sweden': {},
+                            'jihocesky': {}, 'karlovarsky': {}, 'liberecky': {}, 'plzensky': {},
+                            'stredocesky': {}, 'ustecky': {},
+                            'niederbayern': {}, 'nord-est': {}, 'sweden': {},
                             'zachodniopomorskie': {}, 'berlin': {}, 'lubuskie': {}, 'dolnoslaskie': {}}
         self.process_and_check_border_countries(
             'germany', True, expected_result, 'country')
@@ -61,7 +63,9 @@ class TestOsmMapsCalculation(unittest.TestCase):
                             'austria': {}, 'liechtenstein': {}, 'schwaben': {}, 'mecklenburg-vorpommern': {},
                             'brandenburg': {}, 'sachsen-anhalt': {}, 'thueringen': {}, 'oberfranken': {},
                             'mittelfranken': {}, 'oberbayern': {}, 'oberpfalz': {}, 'sachsen': {},
-                            'czech-republic': {}, 'niederbayern': {}, 'nord-est': {}, 'sweden': {},
+                            'jihocesky': {}, 'karlovarsky': {}, 'liberecky': {}, 'plzensky': {},
+                            'stredocesky': {}, 'ustecky': {},
+                            'niederbayern': {}, 'nord-est': {}, 'sweden': {},
                             'zachodniopomorskie': {}, 'berlin': {}, 'lubuskie': {}, 'dolnoslaskie': {},
                             'isole' : {}, 'malta' : {} }
         self.process_and_check_border_countries(
