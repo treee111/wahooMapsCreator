@@ -110,6 +110,10 @@ class TestOsmMapsCalculation(unittest.TestCase):
         self.process_and_check_border_countries(
             'china', False, {'china': {}}, 'country')
 
+        # US regions
+        self.process_and_check_border_countries(
+            'us/texas', False, {'us_texas': {}}, 'country')
+
         # malta,liechtenstein
         self.process_and_check_border_countries(
             'malta,liechtenstein', False, {'malta': {}, 'liechtenstein': {}}, 'country')
