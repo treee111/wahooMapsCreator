@@ -8,6 +8,7 @@ dependencies:
   - bs4=4.11.*
   - lxml=4.9.*
   - matplotlib=3.4.3
+  - packaging
   - pip
   - pip:
       - wahoomc==4.3.0

@@ -4,7 +4,7 @@ tests for setup functions
 import unittest
 import platform
 import os
-import pkg_resources
+from packaging.version import parse as parse_version
 
 # import custom python packages
 from wahoomc.setup_functions import is_program_installed, is_map_writer_plugin_installed, \
@@ -97,7 +97,7 @@ class TestConfigFile(unittest.TestCase):
         """
         tests, if the version of constants.py is equal to the latest available version on PyPI
         """
-        latest_version = pkg_resources.parse_version(
+        latest_version = parse_version(
             get_latest_pypi_version()).public
 
         self.assertEqual(
