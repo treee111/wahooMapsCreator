@@ -6,7 +6,6 @@ functions and object for processing input via CLI and GUI
 # import official python packages
 import argparse
 import sys
-from platform import uname
 
 # for gui
 import tkinter as tk
@@ -94,10 +93,6 @@ def process_call_of_the_tool():
     # process depending on GUI or CLI processing.
     # returns the input parameters in both cases
     if args.subparser_name == 'gui':
-        # Prevents the initialisation of the graphical GUI on WSL.
-        if 'microsoft' in uname().release:
-            sys.exit("GUI can not be startet because no graphical interface is available. Start with 'python -m wahoo_mc cli -h' or 'python -m wahoo_mc -h' to see command line options.")
-
         o_input_data = GuiInput().start_gui()
         return o_input_data
 
