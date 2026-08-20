@@ -158,10 +158,11 @@ class CountryOsmData(InformalOsmDataInterface):
         >1 countries are separated by underscore
         """
         for country in self.o_geofabrik.wanted_maps:
+            normalized = country.replace('/', '_')
             if not self.country_name:
-                self.country_name = country
+                self.country_name = normalized
             else:
-                self.country_name = f'{self.country_name}_{country}'
+                self.country_name = f'{self.country_name}_{normalized}'
 
 
 class XYOsmData(InformalOsmDataInterface):
