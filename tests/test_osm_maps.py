@@ -4,14 +4,62 @@ tests for the osm maps file
 import os
 # import sys
 import unittest
+from unittest import mock
 
 # import custom python packages
 from wahoomc.osm_data import CountryOsmData, XYOsmData
-from wahoomc.osm_maps_functions import OsmMaps
+from wahoomc.osm_maps_functions import OsmMaps, run_subprocess_and_log_output
 # from wahoomc.osm_maps_functions import TileNotFoundError
 from wahoomc.input import InputData
 from wahoomc import file_directory_functions as fd_fct
 from wahoomc import constants
+
+
+class TestSubprocessOutput(unittest.TestCase):
+    """
+    tests for launching external tooling
+    """
+
+    @ mock.patch("wahoomc.osm_maps_functions.subprocess.run")
+    def test_subprocess_output_uses_utf8_decode_error_handler(self, mock_run):
+        """
+        Decode non-UTF-8 output bytes without raising from the reader thread.
+        """
+        mock_run.return_value.returncode = 0
+        mock_run.return_value.stdout = ""
+        mock_run.return_value.stderr = ""
+
+        run_subprocess_and_log_output(["tool"], "error")
+
+        mock_run.assert_called_once_with(
+            ["tool"],
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            errors="backslashreplace",
+            check=False,
+        )
+
+    @ mock.patch("wahoomc.osm_maps_functions.subprocess.run")
+    def test_subprocess_output_decode_error_handler_with_cwd(self, mock_run):
+        """
+        Keep the same decode behavior when running in a specific directory.
+        """
+        mock_run.return_value.returncode = 0
+        mock_run.return_value.stdout = ""
+        mock_run.return_value.stderr = ""
+
+        run_subprocess_and_log_output(["tool"], "error", cwd="working-dir")
+
+        mock_run.assert_called_once_with(
+            ["tool"],
+            capture_output=True,
+            cwd="working-dir",
+            text=True,
+            encoding="utf-8",
+            errors="backslashreplace",
+            check=False,
+        )
 
 
 class TestOsmMapsCalculation(unittest.TestCase):

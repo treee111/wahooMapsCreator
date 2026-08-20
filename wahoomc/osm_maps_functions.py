@@ -40,11 +40,24 @@ def run_subprocess_and_log_output(cmd, error_message, cwd=""):
     """
     if not cwd:
         process = subprocess.run(
-            cmd, capture_output=True, text=True, encoding="utf-8", check=False)
+            cmd,
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            errors="backslashreplace",
+            check=False,
+        )
 
     else:
         process = subprocess.run(  # pylint: disable=consider-using-with
-            cmd, capture_output=True, cwd=cwd, text=True, encoding="utf-8", check=False)
+            cmd,
+            capture_output=True,
+            cwd=cwd,
+            text=True,
+            encoding="utf-8",
+            errors="backslashreplace",
+            check=False,
+        )
 
 
     if error_message and process.returncode != 0:  # 0 means success
