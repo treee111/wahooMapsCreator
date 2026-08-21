@@ -635,7 +635,7 @@ class OsmMaps:
             args = ['--rb', merged_file, '--mw', 'file='+out_file_map]
 
         args.append(f'bbox={tile["bottom"]:.6f},{tile["left"]:.6f},{tile["top"]:.6f},{tile["right"]:.6f}')
-        args.append('zoom-interval-conf=10,0,17')
+        args.append('zoom-interval-conf=12,0,17')
         args.append(f'threads=1')
         if hdd_mode:
             args.append('type=hd')
