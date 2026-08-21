@@ -34,6 +34,11 @@ from wahoomc.timings import Timings
 
 log = logging.getLogger('main-logger')
 
+# Concurrency limit derived from available CPU cores.
+# Used to size asyncio semaphores so subprocess pools don't oversubscribe
+# the CPU or fight over shared file handles.
+_CPU = os.cpu_count() or 4
+
 
 def run_subprocess_and_log_output(cmd, error_message, cwd=""):
     """
@@ -134,7 +139,7 @@ class OsmMaps:
         log.info('# Filter tags from country osm.pbf files')
         tasks = set()
         timings = Timings()
-        semaphore = asyncio.Semaphore(31)
+        semaphore = asyncio.Semaphore(_CPU)
         for key, val in self.o_osm_data.border_countries.items():
             # evaluate contry directory, create if not exists
             country_dir = os.path.join(USER_OUTPUT_DIR, key)
@@ -197,7 +202,7 @@ class OsmMaps:
         log.info('-' * 80)
         log.info('# Generate land for each coordinate')
         timings = Timings()
-        semaphore = asyncio.Semaphore(60)
+        semaphore = asyncio.Semaphore(_CPU * 2)
 
         # Pass 1: create land.shp files in parallel via ogr2ogr
         land_sea_tasks = []
@@ -311,7 +316,7 @@ class OsmMaps:
 
         hgt_path = os.path.join(USER_DL_DIR, 'hgt')
 
-        semaphore = asyncio.Semaphore(28)
+        semaphore = asyncio.Semaphore(_CPU)
         tasks = set()
         timings = Timings()
         tile_count = 1
@@ -369,7 +374,7 @@ class OsmMaps:
 
         log.info('-' * 80)
         log.info('# Split filtered country files to tiles')
-        semaphore = asyncio.Semaphore(6)
+        semaphore = asyncio.Semaphore(max(2, _CPU // 4))
         tasks = set()
         timings = Timings()
         tile_count = 1
@@ -445,7 +450,7 @@ class OsmMaps:
 
         log.info('-' * 80)
         log.info('# Merge splitted tiles with land, elevation, and sea')
-        semaphore = asyncio.Semaphore(30)
+        semaphore = asyncio.Semaphore(_CPU)
         tasks = set()
         timings = Timings()
         tile_count = 1
@@ -567,7 +572,7 @@ class OsmMaps:
 #        if int(threads) < 1:
 #            threads = 1
 
-        semaphore = asyncio.Semaphore(12)
+        semaphore = asyncio.Semaphore(max(1, _CPU // 2))
         tasks = set()
         timings = Timings()
         tile_count = 1
@@ -587,7 +592,7 @@ class OsmMaps:
 
         log.info('+ Created .map files for tiles: OK, %s', timings.stop_and_return())
 
-        semaphore = asyncio.Semaphore(30)
+        semaphore = asyncio.Semaphore(_CPU)
         tasks = set()
         tile_count = 1
         for tile in self.o_osm_data.tiles:
