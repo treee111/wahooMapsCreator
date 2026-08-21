@@ -73,40 +73,32 @@ def run_subprocess_and_log_output(cmd, error_message, cwd=""):
         log.debug('subprocess debug output:')
         log.debug(process.stdout)
 
-async def run_async_subprocess_and_log_output(semaphore, cmd, args, error_message, cwd=""):
+async def run_async_subprocess_and_log_output(semaphore, cmd, args, error_message, verbose=False):
     """
     run given cmd-subprocess and issue error message if wished
     """
     async with semaphore:
-        process = await asyncio.create_subprocess_exec(
-#        create_subprocess_shell,
-            cmd,
-            *args,
-            stdout=asyncio.subprocess.PIPE,
-            stderr=asyncio.subprocess.PIPE)
+        if verbose:
+            process = await asyncio.create_subprocess_exec(cmd, *args)
+        else:
+            process = await asyncio.create_subprocess_exec(
+                cmd, *args,
+                stdout=asyncio.subprocess.PIPE,
+                stderr=asyncio.subprocess.PIPE)
 
         stdout, stderr = await process.communicate()
 
-#    if not cwd:
-#        process = subprocess.run(
-#            cmd, capture_output=True, text=True, encoding="utf-8", check=False)
-#
-#    else:
-#        process = subprocess.run(  # pylint: disable=consider-using-with
-#            cmd, capture_output=True, cwd=cwd, text=True, encoding="utf-8", check=False)
-
-
         if error_message and process.returncode != 0:  # 0 means success
-            log.error('subprocess error output:')
-            if process.stderr:
-                log.error(process.stderr)
-
+            if not verbose:
+                log.error('subprocess error output:')
+                if stderr:
+                    log.error(stderr)
             log.error(error_message)
-            sys.exit()
+            sys.exit(process.returncode)
 
-        elif process.stdout:
+        elif stdout:
             log.debug('subprocess debug output:')
-            log.debug(process.stdout)
+            log.debug(stdout)
 
 
 def get_timestamp_last_changed(file_path):
@@ -459,7 +451,7 @@ class OsmMaps:
         tile_count = 1
         for tile in self.o_osm_data.tiles:  # pylint: disable=too-many-nested-blocks
             # sort land* osm files
-            tasks.add(asyncio.create_task(self.sort_osm_files(semaphore, tile)))
+            tasks.add(asyncio.create_task(self.sort_osm_files(semaphore, tile, verbose)))
 
         await asyncio.gather(*tasks)
         log.info('+ Sorted: OK, %s', timings.stop_and_return())
@@ -480,7 +472,7 @@ class OsmMaps:
 
             # merge splitted tiles with land and sea every time because the result is different per constants (user input)
 
-            tasks.add(asyncio.create_task(self.invoke_merge_tile_linux(semaphore, process_border_countries, contour, tile, land_files, elevation_files, out_tile_dir, out_file_merged)))
+            tasks.add(asyncio.create_task(self.invoke_merge_tile_linux(semaphore, process_border_countries, contour, tile, land_files, elevation_files, out_tile_dir, out_file_merged, verbose)))
 
 #            self.log_tile_debug(tile["x"], tile["y"], tile_count, timings_tile.stop_and_return())
             tile_count += 1
@@ -489,7 +481,7 @@ class OsmMaps:
 
         log.info('+ Merge splitted tiles with land, elevation, and sea: OK, %s', timings.stop_and_return())
 
-    async def invoke_merge_tile_linux(self, semaphore, process_border_countries, contour, tile, land_files, elevation_files, out_tile_dir, out_file_merged):
+    async def invoke_merge_tile_linux(self, semaphore, process_border_countries, contour, tile, land_files, elevation_files, out_tile_dir, out_file_merged, verbose=False):
         if platform.system() == "Windows":
             cmd = OSMOSIS_WIN_FILE_PATH
         # Non-Windows
@@ -527,9 +519,9 @@ class OsmMaps:
         args.extend(['--rx', 'file='+os.path.join(out_tile_dir, 'sea.osm'), '--s', '--m'])
         args.extend(['--tag-transform', 'file=' + os.path.join(RESOURCES_DIR,
                                                                   'tunnel-transform.xml'), '--wb', out_file_merged, 'omitmetadata=true'])
-        await run_async_subprocess_and_log_output(semaphore, cmd, args, f'! Error in Osmium with tile: {tile["x"]},{tile["y"]}')
+        await run_async_subprocess_and_log_output(semaphore, cmd, args, f'! Error in Osmium with tile: {tile["x"]},{tile["y"]}', verbose=verbose)
 
-    async def sort_osm_files(self, semaphore, tile):
+    async def sort_osm_files(self, semaphore, tile, verbose=False):
         """
         sort land*.osm files to be in this order: nodes, then ways, then relations.
         this is mandatory for osmium-merge since:
@@ -545,12 +537,12 @@ class OsmMaps:
 
         tasks = set()
         for land in land_files:
-            tasks.add(asyncio.create_task(self.invoke_sort_land_files_linux(semaphore, tile, land)))
+            tasks.add(asyncio.create_task(self.invoke_sort_land_files_linux(semaphore, tile, land, verbose)))
 
         await asyncio.gather(*tasks)
         log.debug('+ Sorting land* osm files: OK')
 
-    async def invoke_sort_land_files_linux(self, semaphore, tile, land):
+    async def invoke_sort_land_files_linux(self, semaphore, tile, land, verbose=False):
         if platform.system() == "Windows":
             cmd = OSMOSIS_WIN_FILE_PATH
         else:
@@ -560,7 +552,7 @@ class OsmMaps:
         args.append('--sort')
         args.extend(['--write-xml', 'file='+land])
 
-        await run_async_subprocess_and_log_output(semaphore, cmd, args, f'! Error in Osmosis with sorting land* osm files of tile: {tile["x"]},{tile["y"]}')
+        await run_async_subprocess_and_log_output(semaphore, cmd, args, f'! Error in Osmosis with sorting land* osm files of tile: {tile["x"]},{tile["y"]}', verbose=verbose)
 
     async def create_map_files(self, save_cruiser, tag_wahoo_xml, hdd_mode, verbose):
         """
@@ -588,7 +580,7 @@ class OsmMaps:
             # apply tag-wahoo xml every time because the result is different per .xml file (user input)
             merged_file = os.path.join(USER_OUTPUT_DIR, f'{tile["x"]}', f'{tile["y"]}', 'merged.osm.pbf')
 
-            tasks.add(asyncio.create_task(self.invoke_create_map_file_linux(semaphore, tile, tag_wahoo_xml, merged_file, out_file_map, hdd_mode)))
+            tasks.add(asyncio.create_task(self.invoke_create_map_file_linux(semaphore, tile, tag_wahoo_xml, merged_file, out_file_map, hdd_mode, verbose)))
             tile_count += 1
 
         await asyncio.gather(*tasks)
@@ -603,7 +595,7 @@ class OsmMaps:
 
             out_file_map = os.path.join(USER_OUTPUT_DIR, f'{tile["x"]}', f'{tile["y"]}.map')
 
-            tasks.add(asyncio.create_task(self.invoke_compress_map_file_linux(semaphore, tile, save_cruiser, out_file_map)))
+            tasks.add(asyncio.create_task(self.invoke_compress_map_file_linux(semaphore, tile, save_cruiser, out_file_map, verbose)))
 
         await asyncio.gather(*tasks)
 
@@ -624,7 +616,7 @@ class OsmMaps:
 
         log.info('+ Creating .map files for tiles: OK, %s', timings.stop_and_return())
 
-    async def invoke_create_map_file_linux(self, semaphore, tile, tag_wahoo_xml, merged_file, out_file_map, hdd_mode):
+    async def invoke_create_map_file_linux(self, semaphore, tile, tag_wahoo_xml, merged_file, out_file_map, hdd_mode, verbose=False):
         # Windows
         if platform.system() == "Windows":
             cmd = OSMOSIS_WIN_FILE_PATH
@@ -646,9 +638,9 @@ class OsmMaps:
             log.error('The tag-wahoo xml file was not found: ˚%s˚. Does the file exist and is your input correct?', tag_wahoo_xml)
             sys.exit()
 
-        await run_async_subprocess_and_log_output(semaphore, cmd, args, f'! Error in creating map file via Osmosis with tile: {tile["x"]},{tile["y"]}. mapwriter plugin installed?')
+        await run_async_subprocess_and_log_output(semaphore, cmd, args, f'! Error in creating map file via Osmosis with tile: {tile["x"]},{tile["y"]}. mapwriter plugin installed?', verbose=verbose)
 
-    async def invoke_compress_map_file_linux(self, semaphore, tile, save_cruiser, out_file_map):
+    async def invoke_compress_map_file_linux(self, semaphore, tile, save_cruiser, out_file_map, verbose=False):
         # Windows
         if platform.system() == "Windows":
             cmd = get_tooling_win_path('lzma')
@@ -663,7 +655,7 @@ class OsmMaps:
             if save_cruiser:
                 args.append('--keep')
 
-        await run_async_subprocess_and_log_output(semaphore, cmd, args, f'! Error creating map files for tile: {tile["x"]},{tile["y"]}')
+        await run_async_subprocess_and_log_output(semaphore, cmd, args, f'! Error creating map files for tile: {tile["x"]},{tile["y"]}', verbose=verbose)
 
     def make_and_zip_files(self, extension, zip_folder):
         """
