@@ -360,8 +360,8 @@ class OsmMaps:
 
     async def invoke_generate_elevation_for_tile(self, semaphore, tile, elevation_source, hgt_path, username, password, out_file_elevation):
         cmd = 'pyhgtmap'
-        args = ['-a ' + f'{tile["left"]}' + ':' + f'{tile["bottom"]}' + ':' + f'{tile["right"]}' + ':' + f'{tile["top"]}']
-        args.extend(['-o', f'{out_file_elevation}', '-s 10', '-c 100,50', elevation_source,
+        args = ['-a', f'{tile["left"]}:{tile["bottom"]}:{tile["right"]}:{tile["top"]}']
+        args.extend(['-o', f'{out_file_elevation}', '-s', '10', '-c', '100,50', elevation_source,
                             '--jobs=1', '--viewfinder-mask=1', '--start-node-id=20000000000',
                             '--max-nodes-per-tile=0', '--start-way-id=2000000000', '--write-timestamp',
                             '--no-zero-contour', '--hgtdir=' + hgt_path])
