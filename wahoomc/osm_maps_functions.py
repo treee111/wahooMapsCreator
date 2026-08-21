@@ -588,7 +588,7 @@ class OsmMaps:
             # apply tag-wahoo xml every time because the result is different per .xml file (user input)
             merged_file = os.path.join(USER_OUTPUT_DIR, f'{tile["x"]}', f'{tile["y"]}', 'merged.osm.pbf')
 
-            tasks.add(asyncio.create_task(self.invoke_create_map_file_linux(semaphore, tile, tag_wahoo_xml, merged_file, out_file_map)))
+            tasks.add(asyncio.create_task(self.invoke_create_map_file_linux(semaphore, tile, tag_wahoo_xml, merged_file, out_file_map, hdd_mode)))
             tile_count += 1
 
         await asyncio.gather(*tasks)
@@ -624,7 +624,7 @@ class OsmMaps:
 
         log.info('+ Creating .map files for tiles: OK, %s', timings.stop_and_return())
 
-    async def invoke_create_map_file_linux(self, semaphore, tile, tag_wahoo_xml, merged_file, out_file_map):
+    async def invoke_create_map_file_linux(self, semaphore, tile, tag_wahoo_xml, merged_file, out_file_map, hdd_mode):
         # Windows
         if platform.system() == "Windows":
             cmd = OSMOSIS_WIN_FILE_PATH
@@ -637,6 +637,8 @@ class OsmMaps:
         args.append(f'bbox={tile["bottom"]:.6f},{tile["left"]:.6f},{tile["top"]:.6f},{tile["right"]:.6f}')
         args.append('zoom-interval-conf=10,0,17')
         args.append(f'threads=1')
+        if hdd_mode:
+            args.append('type=hd')
         # add path to tag-wahoo xml file
         try:
             args.append(f'tag-conf-file={get_tag_wahoo_xml_path(tag_wahoo_xml)}')
