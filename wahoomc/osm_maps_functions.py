@@ -205,20 +205,14 @@ class OsmMaps:
         log.info('-' * 80)
         log.info('# Generate land for each coordinate')
         timings = Timings()
-        tile_count = 1
         semaphore = asyncio.Semaphore(60)
+
+        # Pass 1: create land.shp files in parallel via ogr2ogr
         land_sea_tasks = []
-        land1_tasks = []
         for tile in self.o_osm_data.tiles:
             land_file = os.path.join(USER_OUTPUT_DIR, f'{tile["x"]}', f'{tile["y"]}', 'land.shp')
-            out_file_land1 = os.path.join(USER_OUTPUT_DIR, f'{tile["x"]}', f'{tile["y"]}', 'land')
-            timings_tile = Timings()
 
-            # create land.dbf, land.prj, land.shp, land.shx
             if not os.path.isfile(land_file) or self.o_osm_data.force_processing is True:
-#                self.log_tile_info(tile["x"], tile["y"], tile_count)
-#                cmd = ['ogr2ogr', '-overwrite', '-skipfailures']
-                # Try to prevent getting outside of the +/-180 and +/- 90 degrees borders. Normally the +/- 0.1 are there to prevent white lines at border borders.
                 correction = 0.1
                 if tile["x"] == 255 or tile["y"] == 255 or tile["x"] == 0 or tile["y"] == 0:
                     correction = 0.0
@@ -227,44 +221,26 @@ class OsmMaps:
                 spatBottom = f'{tile["bottom"]-correction:.6f}'
                 spatRight = f'{tile["right"]+correction:.6f}'
                 spatTop = f'{tile["top"]+correction:.6f}'
-                                
-                task1 = asyncio.create_task(self.invoke_create_land_and_sea_ogr2ogr_linux(semaphore, tile["x"], tile["y"], spatLeft, spatBottom, spatRight, spatTop, land_file, LAND_POLYGONS_PATH))
-                land_sea_tasks.append(task1)
-#                await asyncio.gather(task1)
-                                
-#                cmd.append(land_file)
-#                cmd.append(LAND_POLYGONS_PATH)
 
-#                run_subprocess_and_log_output(
-#                    cmd, f'! Error generating land for tile: {tile["x"]},{tile["y"]}')
+                land_sea_tasks.append(asyncio.create_task(
+                    self.invoke_create_land_and_sea_ogr2ogr_linux(
+                        semaphore, tile["x"], tile["y"],
+                        spatLeft, spatBottom, spatRight, spatTop,
+                        land_file, LAND_POLYGONS_PATH)))
 
-            # create land1.osm
-            if not os.path.isfile(out_file_land1+'1.osm') or self.o_osm_data.force_processing is True:
-#                # Windows
-#                if platform.system() == "Windows":
-#                    cmd = ['python', os.path.join(RESOURCES_DIR,
-#                                                  'shape2osm.py'), '-l', out_file_land1, land_file]
-#
-#                # Non-Windows
-#                else:
-#                    cmd = ['python', os.path.join(RESOURCES_DIR,
-#                                                  'shape2osm.py'), '-l', out_file_land1, land_file]
-
-#               run_subprocess_and_log_output(
-#                    cmd, f'! Error creating land.osm for tile: {tile["x"]},{tile["y"]}')
-                task2 = asyncio.create_task(self.invoke_create_land1_python_linux(semaphore, tile["x"], tile["y"], land_file, out_file_land1))
-                land1_tasks.append(task2)
-                    
-                    
-            self.log_tile_debug(tile["x"], tile["y"], tile_count, timings_tile.stop_and_return())
-            tile_count += 1
-
-        log.info('start land sea')
-    #    semaphore = asyncio.Semaphore(4)
-#        async with semaphore:       
         await asyncio.gather(*land_sea_tasks)
-        log.info('start land1')
-#        async with semaphore:       
+
+        # Pass 2: convert land.shp → land1.osm in parallel (needs pass 1 done first)
+        land1_tasks = []
+        for tile in self.o_osm_data.tiles:
+            land_file = os.path.join(USER_OUTPUT_DIR, f'{tile["x"]}', f'{tile["y"]}', 'land.shp')
+            out_file_land1 = os.path.join(USER_OUTPUT_DIR, f'{tile["x"]}', f'{tile["y"]}', 'land')
+
+            if not os.path.isfile(out_file_land1+'1.osm') or self.o_osm_data.force_processing is True:
+                land1_tasks.append(asyncio.create_task(
+                    self.invoke_create_land1_python_linux(
+                        semaphore, tile["x"], tile["y"], land_file, out_file_land1)))
+
         await asyncio.gather(*land1_tasks)
 
         log.info('+ Generate land for each coordinate: OK, %s', timings.stop_and_return())
