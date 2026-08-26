@@ -11,4 +11,4 @@ dependencies:
   - packaging
   - pip
   - pip:
-      - wahoomc==4.3.0
+      - wahoomc==4.4.0a0
