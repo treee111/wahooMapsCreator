@@ -77,6 +77,31 @@ class TestConstantsGeofabrik(unittest.TestCase):
         self.assertCountEqual(geofabrik_regions,
                               regions_geofabrik)
 
+    def test_continents_of_geofabrik(self):
+        """
+        the continent selection must only contain the continents - the geofabrik
+        entries without a parent. Countries like 'germany' and sub-regions of a
+        country like 'baden-wuerttemberg' are part of geofabrik_regions but must
+        not show up here
+        """
+        continents = self.o_geofabrik_json.get_continents()
+
+        self.assertCountEqual(continents,
+                              ['africa', 'antarctica', 'asia', 'australia-oceania',
+                               'central-america', 'europe', 'north-america',
+                               'south-america', 'russia'])
+
+        # no returned entry has a parent
+        for continent in continents:
+            self.assertNotIn(
+                'parent', self.o_geofabrik_json.geofabrik_overview[continent])
+
+        # countries and their sub-regions are regions but no continents
+        for entry in ['germany', 'france', 'united-kingdom', 'canada',
+                      'baden-wuerttemberg', 'bayern', 'england', 'nunavut']:
+            self.assertIn(entry, self.o_geofabrik_json.geofabrik_regions)
+            self.assertNotIn(entry, continents)
+
     def test_reading_geofabrik_parent(self):
         """
         go through all files in the wahoo_mc/resources/json directory
