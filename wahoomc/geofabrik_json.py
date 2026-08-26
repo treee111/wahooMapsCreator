@@ -80,6 +80,16 @@ class GeofabrikJson:
 
         return raw_json, geofabrik_overview, geofabrik_region_overview, geofabrik_regions
 
+    def get_continents(self):
+        """
+        return the continents - the geofabrik entries without a parent
+
+        geofabrik_regions can not be used for this because it holds every map
+        having children. Besides the continents these are countries like
+        'germany' and even sub-regions of a country like 'baden-wuerttemberg'
+        """
+        return sorted(self.geofabrik_region_overview)
+
     def get_geofabrik_parent_country(self, id_no):
         """
         Get the parent map/region of a country from the already loaded json data

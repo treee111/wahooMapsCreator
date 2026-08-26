@@ -339,13 +339,13 @@ class ComboboxesEntryField(tk.Frame):  # pylint: disable=too-many-instance-attri
 
         # Labels
         self.lab_top = tk.Label(
-            self, text="Select continent/country and country/region to create a map")
-        self.lab_continent = tk.Label(self, text="Select continent/country:")
-        self.lab_country = tk.Label(self, text='Select country/region:')
+            self, text="Select continent and country to create a map")
+        self.lab_continent = tk.Label(self, text="Select continent:")
+        self.lab_country = tk.Label(self, text='Select country:')
 
         # Comboboxes
         self.cb_continent = ttk.Combobox(
-            self, values=GeofabrikJson().geofabrik_regions, state="readonly")
+            self, values=GeofabrikJson().get_continents(), state="readonly")
         self.cb_continent.current(0)  # pre-select first entry in combobox
         self.cb_continent.bind("<<ComboboxSelected>>", self.callback_continent)
 
