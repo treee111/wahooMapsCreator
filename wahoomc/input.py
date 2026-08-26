@@ -339,13 +339,13 @@ class ComboboxesEntryField(tk.Frame):  # pylint: disable=too-many-instance-attri
 
         # Labels
         self.lab_top = tk.Label(
-            self, text="Select continent/country and country/region to create a map")
-        self.lab_continent = tk.Label(self, text="Select continent/country:")
-        self.lab_country = tk.Label(self, text='Select country/region:')
+            self, text="Select continent and country to create a map")
+        self.lab_continent = tk.Label(self, text="Select continent:")
+        self.lab_country = tk.Label(self, text='Select country:')
 
         # Comboboxes
         self.cb_continent = ttk.Combobox(
-            self, values=GeofabrikJson().geofabrik_regions, state="readonly")
+            self, values=GeofabrikJson().get_continents(), state="readonly")
         self.cb_continent.current(0)  # pre-select first entry in combobox
         self.cb_continent.bind("<<ComboboxSelected>>", self.callback_continent)
 
@@ -470,5 +470,5 @@ class CheckbuttonsTab2(tk.Frame):
                                                      "Zip folder with generated files", 3)
         self.checkb_verbose_val = create_checkbox(self, oInputData.verbose,
                                                   "output debug logger messages", 4)
-        self.checkb_mapwriter_ram_hdd_val = create_checkbox(self, oInputData.verbose,
-                                                  "Use mapwriter HDD mode", 5)
+        self.checkb_mapwriter_ram_hdd_val = create_checkbox(self, oInputData.hdd_mode,
+                                                            "Use mapwriter HDD mode", 5)

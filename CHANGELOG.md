@@ -4,7 +4,38 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-A list of unreleased changes can be found [here](https://github.com/treee111/wahooMapsCreator/compare/v4.3.0...HEAD).
+A list of unreleased changes can be found [here](https://github.com/treee111/wahooMapsCreator/compare/v4.4.0...HEAD).
+
+<a name="4.4.0"></a>
+## [4.4.0] - 2026-08-26
+### Features
+- Document Wahoo ACE authorization ([#273](https://github.com/treee111/wahooMapsCreator/issues/273)) [`020719b`](https://github.com/treee111/wahooMapsCreator/commit/020719b99a9d618ad2fa89d010af5aa5a40c07ab)
+- document different ways to get routing tiles and harmonize documentation in the area of pre-generated files ([#274](https://github.com/treee111/wahooMapsCreator/issues/274)) [`c7866c3`](https://github.com/treee111/wahooMapsCreator/commit/c7866c368fc6f9a8971a68299893118cd279960c)
+- Unify method for generating filepath to check map existance and print out the filepath ([#267](https://github.com/treee111/wahooMapsCreator/issues/267)) [`94e042b`](https://github.com/treee111/wahooMapsCreator/commit/94e042b20cfbd9948adb975275716338fdb9e27d)
+- **Minimalistic raw maps:** Download regions instead of countries ([#275](https://github.com/treee111/wahooMapsCreator/issues/275)) [`28f999c`](https://github.com/treee111/wahooMapsCreator/commit/28f999cab329158d5a297713a65130c8421d6939)
+- Change zoom-interval-conf from 10,0,17 to 12,0,17 for smaller sub-files in map files ([#277](https://github.com/treee111/wahooMapsCreator/issues/277)) [`c119e5e`](https://github.com/treee111/wahooMapsCreator/commit/c119e5ecf6567cc72fda0be120ff26f6c0736231)
+- Add GUI & CLI switch for mapwriter hdd mode ([#280](https://github.com/treee111/wahooMapsCreator/issues/280)) [`72b3903`](https://github.com/treee111/wahooMapsCreator/commit/72b3903ed3566553badf74cd21dbd2b617f55aaa)
+- Update documentation USAGE.md with CLI -hdd parameter ([#281](https://github.com/treee111/wahooMapsCreator/issues/281)) [`c41a926`](https://github.com/treee111/wahooMapsCreator/commit/c41a926902a16cb7f838eb2353a06efc966af187)
+- fix documentation - typos, harmonization, correct geofabrik URL ([#300](https://github.com/treee111/wahooMapsCreator/issues/300)) [`693c5e7`](https://github.com/treee111/wahooMapsCreator/commit/693c5e7741f62d3f72d04c72fb7719c1b86e82ec)
+- Enhance map creation functions with verbose debugging option ([#287](https://github.com/treee111/wahooMapsCreator/issues/287)) [`e7f415c`](https://github.com/treee111/wahooMapsCreator/commit/e7f415c3ba7868ce63c045fcc00ee5707f4183a7)
+- Enable GUI on Windows WSL ([#286](https://github.com/treee111/wahooMapsCreator/issues/286)) [`148066e`](https://github.com/treee111/wahooMapsCreator/commit/148066e4263610384ae2a2a6ea575078de5c6df4)
+
+### Bug Fixes
+- Replace pkg_resources version parsing ([#296](https://github.com/treee111/wahooMapsCreator/issues/296)) [`5ce6e6b`](https://github.com/treee111/wahooMapsCreator/commit/5ce6e6b51c4f2790aeec540d7cb2e9cbc6c6d3bd)
+
+### Bug Fixes
+- Get download URL for US regions with slash (us/new-york etc.) ([#276](https://github.com/treee111/wahooMapsCreator/issues/276)) [`9893d3b`](https://github.com/treee111/wahooMapsCreator/commit/9893d3bd2e6ea0d64ac2b03921ce62cf761362cf)
+- trigger event to set value-list of countries at the end of GUI initialization ([#283](https://github.com/treee111/wahooMapsCreator/issues/283)) [`a798a5e`](https://github.com/treee111/wahooMapsCreator/commit/a798a5e9d3d28b03a5eaf9efa1d33fdc0b63a708)
+- Process US regions without border countries ([#297](https://github.com/treee111/wahooMapsCreator/issues/297)) [`dd7cb03`](https://github.com/treee111/wahooMapsCreator/commit/dd7cb0375ca06f9973cf1df68000b7955cc3bf59)
+- Handle non-UTF-8 output from subprocess tools ([#298](https://github.com/treee111/wahooMapsCreator/issues/298)) [`830ecdf`](https://github.com/treee111/wahooMapsCreator/commit/830ecdfc61914c365a591863483c38108906118a)
+- three lines where a print was used without the "f'" ([#290](https://github.com/treee111/wahooMapsCreator/issues/290)) [`f105178`](https://github.com/treee111/wahooMapsCreator/commit/f10517894d1b2b589c642c909de523eb63efdd6f)
+- Fixes the crash when the folder doesn't exist ([#294](https://github.com/treee111/wahooMapsCreator/issues/294)) [`2eccf21`](https://github.com/treee111/wahooMapsCreator/commit/2eccf21d007125d53fdafd2aac2ecce7061d97f6)
+- **GUI:** HDD mode checkbox reads its default from verbose ([#301](https://github.com/treee111/wahooMapsCreator/issues/301)) [`39b7885`](https://github.com/treee111/wahooMapsCreator/commit/39b7885a45e85f70580e87cf920c8267be23eccb)
+- **GUI:** show only continents in the continent combobox ([#302](https://github.com/treee111/wahooMapsCreator/issues/302)) [`6f44d85`](https://github.com/treee111/wahooMapsCreator/commit/6f44d85b37ea6e616eaf9a1b848c0f9cce5019e9)
+
+### Development/Infrastructure/Test/CI
+- repair failing unit tests ([#299](https://github.com/treee111/wahooMapsCreator/issues/299)) [`2b78290`](https://github.com/treee111/wahooMapsCreator/commit/2b78290bacd345abf5b7a6c8669fd65304bb7caa)
+
 
 <a name="4.3.0"></a>
 ## [4.3.0] - 2024-10-16
@@ -487,6 +518,7 @@ wahooMapsCreator can now be used much quicker and easier!
     - Windows:    `tooling_windows/Windows-Wahoo-Map-Creator-Osmosis/wahoo-map-creator-osmosis.py`
 
 
+[4.4.0]: https://github.com/treee111/wahooMapsCreator/compare/v4.3.0...v4.4.0
 [4.3.0]: https://github.com/treee111/wahooMapsCreator/compare/v4.2.0...v4.3.0
 [4.2.0]: https://github.com/treee111/wahooMapsCreator/compare/v4.1.1...v4.2.0
 [4.1.1]: https://github.com/treee111/wahooMapsCreator/compare/v4.1.0...v4.1.1
