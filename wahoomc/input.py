@@ -470,5 +470,5 @@ class CheckbuttonsTab2(tk.Frame):
                                                      "Zip folder with generated files", 3)
         self.checkb_verbose_val = create_checkbox(self, oInputData.verbose,
                                                   "output debug logger messages", 4)
-        self.checkb_mapwriter_ram_hdd_val = create_checkbox(self, oInputData.verbose,
-                                                  "Use mapwriter HDD mode", 5)
+        self.checkb_mapwriter_ram_hdd_val = create_checkbox(self, oInputData.hdd_mode,
+                                                            "Use mapwriter HDD mode", 5)
