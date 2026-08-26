@@ -11,15 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
-      - name: Set output
-        id: vars
-        run: echo ::set-output name=tag::${GITHUB_REF#refs/*/}
+        uses: actions/checkout@v7
       - name: Moving build to dist-directory
         run: ./copyFilesToDist.sh
         shell: bash
         env:
-          GITHUB_REF_VARIABLE: ${{ steps.vars.outputs.tag }}
+          GITHUB_REF_VARIABLE: ${{ github.ref_name }}
       - name: Release
         uses: docker://antonyurchenko/git-release:latest
         env:
