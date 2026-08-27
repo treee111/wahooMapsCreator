@@ -5,7 +5,7 @@ dependencies:
   - python=3.10
   - gdal=3.6.*
   - requests=2.28.*
-  - pylint=2.15.*
+  - pylint=3.3.*
   - geojson=2.5.*
   - shapely=1.8.*
   - osmium-tool=1.16.*
@@ -14,7 +14,6 @@ dependencies:
   - matplotlib=3.4.3
   - packaging
   - autopep8=2.0.*
-  - mock
   - twine
   - pip
   - vulture

@@ -16,8 +16,7 @@ import logging
 
 # import custom python packages
 from wahoomc.file_directory_functions import read_json_file_country_config, create_empty_directories, write_json_file_generic
-from wahoomc.constants_functions import translate_tags_to_keep, \
-    get_tooling_win_path, get_tag_wahoo_xml_path, TagWahooXmlNotFoundError
+from wahoomc.constants_functions import translate_tags_to_keep, get_tooling_win_path
 
 from wahoomc.setup_functions import read_earthexplorer_credentials
 
@@ -38,6 +37,7 @@ def run_subprocess_and_log_output(cmd, error_message, cwd=""):
     """
     run given cmd-subprocess and issue error message if wished
     """
+    log.debug('running subprocess: %s', str(cmd))
     if not cwd:
         process = subprocess.run(
             cmd,
@@ -49,7 +49,7 @@ def run_subprocess_and_log_output(cmd, error_message, cwd=""):
         )
 
     else:
-        process = subprocess.run(  # pylint: disable=consider-using-with
+        process = subprocess.run(
             cmd,
             capture_output=True,
             cwd=cwd,
@@ -58,7 +58,6 @@ def run_subprocess_and_log_output(cmd, error_message, cwd=""):
             errors="backslashreplace",
             check=False,
         )
-
 
     if error_message and process.returncode != 0:  # 0 means success
         log.error('subprocess error output:')
@@ -90,8 +89,10 @@ class OsmMaps:
     # Number of workers for the Osmosis read binary fast function
     workers = '1'
 
-    def __init__(self, o_osm_data):
+    def __init__(self, o_osm_data, tags_to_keep, tag_transform):
         self.o_osm_data = o_osm_data
+        self.tags_to_keep = tags_to_keep
+        self.tag_transform = tag_transform
         self.osmconvert_path = get_tooling_win_path('osmconvert')
 
         create_empty_directories(
@@ -146,10 +147,8 @@ class OsmMaps:
                         '+ Filtering unwanted map objects out of map of %s', key)
                     cmd = [get_tooling_win_path('osmfilter', in_user_dir=True)]
                     cmd.append(out_file_o5m)
-                    cmd.append(
-                        '--keep="' + translate_tags_to_keep(sys_platform=platform.system()) + '"')
-                    cmd.append('--keep-tags="all type= layer= ' +
-                               translate_tags_to_keep(sys_platform=platform.system()) + '"')
+                    cmd.append('--keep="' + translate_tags_to_keep(self.tags_to_keep, osmium=False) + '"')
+                    cmd.append('--keep-tags="all type= layer= ' + translate_tags_to_keep(self.tags_to_keep, osmium=False) + '"')
                     cmd.append('-o=' + out_file_o5m_filtered_win)
 
                     run_subprocess_and_log_output(
@@ -157,12 +156,8 @@ class OsmMaps:
 
                     cmd = [get_tooling_win_path('osmfilter', in_user_dir=True)]
                     cmd.append(out_file_o5m)
-                    cmd.append(
-                        '--keep="' + translate_tags_to_keep(
-                            name_tags=True, sys_platform=platform.system()) + '"')
-                    cmd.append('--keep-tags="all type= name= layer= ' +
-                               translate_tags_to_keep(
-                                   name_tags=True, sys_platform=platform.system()) + '"')
+                    cmd.append('--keep="' + translate_tags_to_keep(self.tags_to_keep, name_tags=True, osmium=False) + '"')
+                    cmd.append('--keep-tags="all type= name= layer= ' + translate_tags_to_keep(self.tags_to_keep, name_tags=True, osmium=False) + '"')
                     cmd.append('-o=' + out_file_o5m_filtered_names_win)
 
                     run_subprocess_and_log_output(
@@ -189,8 +184,7 @@ class OsmMaps:
                     # https://docs.osmcode.org/osmium/latest/osmium-tags-filter.html
                     cmd = ['osmium', 'tags-filter', '--remove-tags']
                     cmd.append(val['map_file'])
-                    cmd.extend(translate_tags_to_keep(
-                        sys_platform=platform.system()))
+                    cmd.extend(translate_tags_to_keep(self.tags_to_keep))
                     cmd.extend(['-o', out_file_pbf_filtered_mac])
                     cmd.append('--overwrite')
 
@@ -199,8 +193,7 @@ class OsmMaps:
 
                     cmd = ['osmium', 'tags-filter', '--remove-tags']
                     cmd.append(val['map_file'])
-                    cmd.extend(translate_tags_to_keep(
-                        name_tags=True, sys_platform=platform.system()))
+                    cmd.extend(translate_tags_to_keep(self.tags_to_keep, name_tags=True))
                     cmd.extend(['-o', out_file_pbf_filtered_names_mac])
                     cmd.append('--overwrite')
 
@@ -254,16 +247,8 @@ class OsmMaps:
 
             # create land1.osm
             if not os.path.isfile(out_file_land1+'1.osm') or self.o_osm_data.force_processing is True:
-                # Windows
-                if platform.system() == "Windows":
-                    cmd = ['python', os.path.join(RESOURCES_DIR,
-                                                  'shape2osm.py'), '-l', out_file_land1, land_file]
-
-                # Non-Windows
-                else:
-                    cmd = ['python', os.path.join(RESOURCES_DIR,
-                                                  'shape2osm.py'), '-l', out_file_land1, land_file]
-
+                cmd = [sys.executable, os.path.join(RESOURCES_DIR,
+                                                   'shape2osm.py'), '-l', out_file_land1, land_file]
                 run_subprocess_and_log_output(
                     cmd, f'! Error creating land.osm for tile: {tile["x"]},{tile["y"]}')
             self.log_tile_debug(tile["x"], tile["y"], tile_count, timings_tile.stop_and_return())
@@ -463,7 +448,7 @@ class OsmMaps:
         log.info('# Merge splitted tiles with land, elevation, and sea')
         timings = Timings()
         tile_count = 1
-        for tile in self.o_osm_data.tiles:  # pylint: disable=too-many-nested-blocks
+        for tile in self.o_osm_data.tiles:
             self.log_tile_info(tile["x"], tile["y"], tile_count)
             timings_tile = Timings()
 
@@ -518,8 +503,7 @@ class OsmMaps:
 
             cmd.extend(
                 ['--rx', 'file='+os.path.join(out_tile_dir, 'sea.osm'), '--s', '--m'])
-            cmd.extend(['--tag-transform', 'file=' + os.path.join(RESOURCES_DIR,
-                                                                  'tunnel-transform.xml'), '--wb', out_file_merged, 'omitmetadata=true'])
+            cmd.extend(['--tag-transform', 'file=' + self.tag_transform, '--wb', out_file_merged, 'omitmetadata=true'])
 
             if verbose:
                 result = subprocess.run(cmd, check=False)
@@ -570,7 +554,7 @@ class OsmMaps:
 
         log.debug('+ Sorting land* osm files: OK')
 
-    def create_map_files(self, save_cruiser, tag_wahoo_xml, hdd_mode, verbose):
+    def create_map_files(self, save_cruiser, tag_conf_file, hdd_mode, verbose):
         """
         Creating .map files
         """
@@ -609,16 +593,10 @@ class OsmMaps:
                 f'bbox={tile["bottom"]:.6f},{tile["left"]:.6f},{tile["top"]:.6f},{tile["right"]:.6f}')
             cmd.append('zoom-interval-conf=12,0,17')
             cmd.append(f'threads={threads}')
+            cmd.append('tag-values=true')
             if hdd_mode:
                 cmd.append('type=hd')
-            # add path to tag-wahoo xml file
-            try:
-                cmd.append(
-                    f'tag-conf-file={get_tag_wahoo_xml_path(tag_wahoo_xml)}')
-            except TagWahooXmlNotFoundError:
-                log.error(
-                    'The tag-wahoo xml file was not found: ˚%s˚. Does the file exist and is your input correct?', tag_wahoo_xml)
-                sys.exit()
+            cmd.append(f'tag-conf-file={tag_conf_file}')
 
             if verbose:
                 result = subprocess.run(cmd, check=False)
@@ -764,8 +742,8 @@ class OsmMaps:
         configuration = {
             "version_last_run": VERSION,
             "changed_ts_map_last_run": get_timestamp_last_changed(self.o_osm_data.border_countries[country]['map_file']),
-            "tags_last_run": translate_tags_to_keep(sys_platform=platform.system()),
-            "name_tags_last_run": translate_tags_to_keep(name_tags=True, sys_platform=platform.system())
+            "tags_last_run": translate_tags_to_keep(self.tags_to_keep),
+            "name_tags_last_run": translate_tags_to_keep(self.tags_to_keep, name_tags=True)
         }
 
         write_json_file_generic(os.path.join(
@@ -780,8 +758,8 @@ class OsmMaps:
         try:
             country_config = read_json_file_country_config(os.path.join(
                 USER_OUTPUT_DIR, country, ".config.json"))
-            if not country_config["tags_last_run"] == translate_tags_to_keep(sys_platform=platform.system()) \
-                    or not country_config["name_tags_last_run"] == translate_tags_to_keep(name_tags=True, sys_platform=platform.system()):
+            if not country_config["tags_last_run"] == translate_tags_to_keep(self.tags_to_keep) \
+                    or not country_config["name_tags_last_run"] == translate_tags_to_keep(self.tags_to_keep, name_tags=True):
                 tags_are_identical = False
         except (FileNotFoundError, KeyError):
             tags_are_identical = False
@@ -816,7 +794,7 @@ class OsmMaps:
         """
         self.log_tile(tile_x, tile_y, tile_count, True, additional_info)
 
-    def log_tile(self, tile_x, tile_y, tile_count, log_level_debug, additional_info=''):  # pylint: disable=too-many-arguments
+    def log_tile(self, tile_x, tile_y, tile_count, log_level_debug, additional_info=''):  # pylint: disable=too-many-arguments,too-many-positional-arguments
         """
         unified status logging for this class
         """

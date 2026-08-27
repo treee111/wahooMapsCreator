@@ -5,6 +5,7 @@ functions and object for processing input via CLI and GUI
 
 # import official python packages
 import argparse
+import os
 import sys
 
 # for gui
@@ -12,6 +13,7 @@ import tkinter as tk
 from tkinter import ttk
 
 # import custom python packages
+from wahoomc.constants_functions import get_absolute_dir_user_or_repo
 from wahoomc.geofabrik_json import GeofabrikJson
 from wahoomc.geofabrik_json import CountyIsNoGeofabrikCountry
 from wahoomc.geofabrik import CountryGeofabrik
@@ -77,7 +79,13 @@ def process_call_of_the_tool():
     # Save uncompressed maps for Cruiser if True
     options_args.add_argument('-c', '--cruiser', action='store_true',
                               help="save uncompressed maps for Cruiser")
-    # specify the file with tags to keep in the output // file needs to be in wahoo_mc/resources/tag_wahoo_adjusted
+    # specify the file with tags to keep when filtering
+    options_args.add_argument('--tags_to_keep', default=InputData().tags_to_keep,
+                              help="file with tags to keep when filtering")
+    # specify the file with tag-transform rules
+    options_args.add_argument('--tag_transform', default=InputData().tag_transform,
+                              help="file with tag-transform rules")
+    # specify the file with tags to keep in the output
     options_args.add_argument('-tag', '--tag_wahoo_xml', default=InputData().tag_wahoo_xml,
                               help="file with tags to keep in the output")
     # zip the country (and country-maps) folder
@@ -109,6 +117,8 @@ def process_call_of_the_tool():
     o_input_data.force_download = args.forcedownload
     o_input_data.force_processing = args.forceprocessing
 
+    o_input_data.tags_to_keep = args.tags_to_keep
+    o_input_data.tag_transform = args.tag_transform
     o_input_data.tag_wahoo_xml = args.tag_wahoo_xml
     o_input_data.save_cruiser = args.cruiser
     o_input_data.zip_folder = args.zip
@@ -189,6 +199,8 @@ class InputData():  # pylint: disable=too-many-instance-attributes,too-few-publi
         self.contour = False
         self.use_srtm1 = False
 
+        self.tags_to_keep = "tags-to-keep.json"
+        self.tag_transform = "tunnel-transform.xml"
         self.tag_wahoo_xml = "tag-wahoo-poi.xml"
         self.zip_folder = False
         self.save_cruiser = False
@@ -196,7 +208,8 @@ class InputData():  # pylint: disable=too-many-instance-attributes,too-few-publi
 
         self.verbose = False
 
-    def is_required_input_given_or_exit(self, issue_message):
+
+    def is_required_input_given_or_exit(self): # pylint: disable=too-many-branches
         """
         check, if the minimal required arguments is given:
         - country
@@ -205,25 +218,47 @@ class InputData():  # pylint: disable=too-many-instance-attributes,too-few-publi
         If not, depending on the import parameter, the
         """
         if (self.country in ('None', '') and self.xy_coordinates in ('None', '')):
-            if issue_message:
-                sys.exit("Nothing to do. Start with -h or --help to see command line options."
-                         "Or in the GUI select a country to create maps for.")
-            else:
-                sys.exit()
-        elif self.country and self.xy_coordinates:
-            sys.exit(
-                "Country and X/Y coordinates are given. Only one of both is allowed!")
-        elif self.country:
+            sys.exit("Nothing to do. Start with -h or --help to see command line options."
+                     "Or in the GUI select a country to create maps for.")
+
+        if self.country and self.xy_coordinates:
+            sys.exit("Country and X/Y coordinates are given. Only one of both is allowed!")
+
+        if self.country:
             # countries =
             try:
                 CountryGeofabrik.split_input_to_list(self.country)
             except CountyIsNoGeofabrikCountry as exception:
                 sys.exit(exception)
 
-            # if we made it until here, sys.exit() was not called and therefore all countries OK ;-)
-            return True
-        else:
-            return True
+        if not os.path.exists(self.tags_to_keep):
+            for path in get_absolute_dir_user_or_repo("", self.tags_to_keep):
+                if os.path.exists(path):
+                    self.tags_to_keep = path
+                    break
+
+        if not os.path.exists(self.tags_to_keep):
+            sys.exit(f'The tags-to-keep json file was not found: \"{self.tags_to_keep}\"')
+
+        if not os.path.exists(self.tag_transform):
+            for path in get_absolute_dir_user_or_repo("", self.tag_transform):
+                if os.path.exists(path):
+                    self.tag_transform = path
+                    break
+
+        if not os.path.exists(self.tag_transform):
+            sys.exit(f'The tag-transform xml file was not found: \"{self.tag_transform}\"')
+
+        if not os.path.exists(self.tag_wahoo_xml):
+            for path in get_absolute_dir_user_or_repo("tag_wahoo_adjusted", self.tag_wahoo_xml):
+                if os.path.exists(path):
+                    self.tag_wahoo_xml = path
+                    break
+
+        if not os.path.exists(self.tag_wahoo_xml):
+            sys.exit(f'The tag-wahoo xml file was not found: \"{self.tag_wahoo_xml}\"')
+
+        return True
 
 
 class GuiInput(tk.Tk):
@@ -245,7 +280,7 @@ class GuiInput(tk.Tk):
         # start GUI
         self.mainloop()
 
-        self.o_input_data.is_required_input_given_or_exit(issue_message=True)
+        self.o_input_data.is_required_input_given_or_exit()
         return self.o_input_data
 
     def build_gui(self):

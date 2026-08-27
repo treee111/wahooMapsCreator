@@ -18,6 +18,8 @@ from wahoomc.timings import Timings
 from wahoomc.osm_maps_functions import OsmMaps
 from wahoomc.osm_data import CountryOsmData, XYOsmData
 
+log = logging.getLogger('main-logger')
+
 # logging used in the terminal output:
 # # means top-level command
 # ! means error
@@ -47,21 +49,26 @@ def run(run_level):
         o_input_data = process_call_of_the_tool()
 
     if o_input_data.verbose:
-        logging.getLogger().setLevel(logging.DEBUG)
+        log.setLevel(logging.DEBUG)
 
     if run_level == 'init':
         copy_jsons_from_repo_to_user('tag_wahoo_adjusted')
         copy_jsons_from_repo_to_user('.', 'tags-to-keep.json')
     else:
         # Is there something to do?
-        o_input_data.is_required_input_given_or_exit(issue_message=True)
+        o_input_data.is_required_input_given_or_exit()
 
         if o_input_data.contour:
             check_installation_of_programs_credentials_for_contour_lines()
 
+        log.info('# Used configuration')
+        log.info('+ tags-to-keep file: %s', o_input_data.tags_to_keep)
+        log.info('+ tag-transform file: %s', o_input_data.tag_transform)
+        log.info('+ map-writer tag-conf file: %s', o_input_data.tag_wahoo_xml)
+
         if o_input_data.country:
             o_osm_data = CountryOsmData(o_input_data)
-        elif o_input_data.xy_coordinates:
+        else:
             o_osm_data = XYOsmData(o_input_data)
 
         timings = Timings()
@@ -72,7 +79,7 @@ def run(run_level):
         # Download files marked for download
         o_downloader.download_files_if_needed()
 
-        o_osm_maps = OsmMaps(o_osm_data)
+        o_osm_maps = OsmMaps(o_osm_data, o_input_data.tags_to_keep, o_input_data.tag_transform)
 
         # Filter tags from country osm.pbf files'
         o_osm_maps.filter_tags_from_country_osm_pbf_files()

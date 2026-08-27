@@ -2,6 +2,7 @@
 tests for the python file
 """
 import os
+import sys
 import unittest
 
 # import custom python packages
@@ -17,7 +18,7 @@ class TestCli(unittest.TestCase):
         tests, if help of top parser can be called
         """
 
-        result = os.system("python -m wahoomc -h")
+        result = os.system(sys.executable + " -m wahoomc -h")
 
         self.assertEqual(result, 0)
 
@@ -26,7 +27,7 @@ class TestCli(unittest.TestCase):
         tests, if CLI help can be called
         """
 
-        result = os.system("python -m wahoomc cli -h")
+        result = os.system(sys.executable + " -m wahoomc cli -h")
 
         self.assertEqual(result, 0)
 
@@ -35,7 +36,7 @@ class TestCli(unittest.TestCase):
         tests, if GUI help can be called
         """
 
-        result = os.system("python -m wahoomc gui -h")
+        result = os.system(sys.executable + " -m wahoomc gui -h")
 
         self.assertEqual(result, 0)
 
