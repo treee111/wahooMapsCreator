@@ -507,9 +507,15 @@ class OsmMaps:
 
                     loop += 1
 
+            loop = 0
+            # loop through all land* osm files, merge only if more than one file is involved.
             for land in land_files:
                 cmd.extend(
-                    ['--rx', 'file='+land, '--s', '--m'])
+                    ['--rx', 'file='+land, '--s'])
+                if loop > 0:
+                    cmd.append('--m')
+
+                loop += 1
 
             if contour:
                 for elevation in elevation_files:
