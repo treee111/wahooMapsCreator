@@ -107,7 +107,7 @@ def get_tooling_win_path(path_in_tooling_win, in_user_dir=False):
         if 8 * struct.calcsize("P") == 32:
             return os.path.join(tooling_dir, path_in_tooling_win)
         # 64 bit: replace with 64 in the end
-        return os.path.join(tooling_dir, path_in_tooling_win.replace("osmconvert", "osmconvert64-0.8.8p"))
+        return os.path.join(tooling_dir, path_in_tooling_win.replace("osmconvert", "osmconvert_OAM_x64-0.8.10"))
 
     # all other "toolings": concatenate with win tooling dir
     return os.path.join(tooling_dir, path_in_tooling_win)
